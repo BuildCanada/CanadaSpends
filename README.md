@@ -66,6 +66,32 @@ pnpm install
 pnpm run dev
 ```
 
+## Large Binaries/PDFs
+
+This repo uses [Git LFS](https://git-lfs.com/) to version control large binaries. This helps ensure cloning and fetching is performant. To use this, you must install git-lfs locally.
+
+In the event that you do not have Git LFS installed. When the repository is cloned, any files that it is tracking will not be usable or viewable locally. The files instead will show as a pointer to the file only. The rest of the source code, and git operations will work as expected. If you have no need for any of the files tracked by Git LFS (See .gitattributes), then in this way the Git LFS extension is optional.
+
+### Installing
+
+For macOS, via brew ` brew install git-lfs`
+
+For Linux, [straightforward steps here](https://github.com/git-lfs/git-lfs/blob/main/INSTALLING.md)
+
+For Windows, Git LFS is included with the [Git for Windows distribution](https://gitforwindows.org/).
+
+[Alternative installation options (https://github.com/git-lfs/git-lfs/wiki/Installation) exist as well.
+
+### Using
+
+Once installed, run `git lfs install`
+
+Yes, even though it was installed above, this is the command to _ensure_ it's installed and conifured to work.
+
+That is it. It should work seamlessly with `git` for all binaries that Git LFS is currently tracking.
+
+For how to add and remove (ie. 'track', and 'untrack') files from Git LFS, advanced commands to inspect and configure lfs - it is all covered in this [brief tutorial](https://github.com/git-lfs/git-lfs/wiki/Tutorial#git-lfs-tutorial).
+
 ## Linting
 
 This project uses ESLint with Next.js configuration. Run linting with:
