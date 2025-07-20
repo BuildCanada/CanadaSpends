@@ -13,6 +13,7 @@ export type SankeyNode = {
 	name?: string        // Optional: for backward compatibility
 	amount: number
 	children?: SankeyNode[]
+	link?: string        // Optional: URL link for clickable nodes
 }
 
 export type SankeyData = {
@@ -45,6 +46,7 @@ export type SankeyChartD3Props = {
 	amountScalingFactor?: number
 	onMouseOver?: (node: any) => void
 	onMouseOut?: (node: any) => void
+	onClick?: (node: any) => void
 }
 export class SankeyChartD3 {
 	params: SankeyChartD3Props
@@ -72,7 +74,8 @@ export class SankeyChartD3 {
 				differenceLabel: 'Deficit',
 				amountScalingFactor: 1e9,
 				onMouseOver: () => {},
-				onMouseOut: () => {}
+				onMouseOut: () => {},
+				onClick: () => {}
 			},
 			props
 		)
@@ -114,17 +117,16 @@ export class SankeyChartD3 {
 
 	// Calculates dimensions and sets up the scaling function
 	setChartDimensions() {
-		let { width, height, margin } = this.params
+		const { width, height, margin } = this.params
 
 		if (!width) {
 			const w = this.container.node().getBoundingClientRect().width
 			if (w) {
-				width = w
 				this.params.width = w
 			}
 		}
 
-		this.chartWidth = width - margin.left - margin.right
+		this.chartWidth = (this.params.width || width) - margin.left - margin.right
 		this.chartHeight = height - margin.top - margin.bottom
 
 		this.scale = scaleLinear()
@@ -209,6 +211,13 @@ export class SankeyChartD3 {
 			.attr('class', 'block')
 			.style('position', 'relative')
 			.classed('fake', d => d.fake)
+			.classed('clickable', d => {
+				const hasLink = !!d.link
+				if (hasLink) {
+					console.log('Block with clickable class:', d.displayName, 'link:', d.link)
+				}
+				return hasLink
+			})
 			.classed(
 				'with-background',
 				d => d.amount < 0 || this.scale(d.value) < this.params.shortBlockHeight
@@ -238,6 +247,9 @@ export class SankeyChartD3 {
 			.on('mouseout', (e, d) => {
 				this.highlightNode(null)
 				this.params.onMouseOut(d)
+			})
+			.on('click', (e, d) => {
+				this.params.onClick(d)
 			})
 
 		blocks
@@ -351,7 +363,7 @@ export class SankeyChartD3 {
 			.selectAll('.block:not(.fake)')
 			.classed('highlight', function (x) {
 				if (nodesToHighlight.includes(x.id)) {
-					// @ts-ignore
+					// @ts-expect-error: D3 element typing complexity
 					highlightedNodeElements.push(this.querySelector('.label'))
 					return true
 				}

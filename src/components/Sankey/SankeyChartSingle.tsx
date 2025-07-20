@@ -17,7 +17,8 @@ export function SankeyChartSingle(props: SankeyChartProps) {
 		height = 760,
 		amountScalingFactor = 1e9,
 		onMouseOver = () => { },
-		onMouseOut = () => { }
+		onMouseOut = () => { },
+		onClick = () => { }
 	} = props;
 
 	const chartRef = useRef(null)
@@ -37,7 +38,8 @@ export function SankeyChartSingle(props: SankeyChartProps) {
 				amountScalingFactor,
 				colors,
 				onMouseOver,
-				onMouseOut
+				onMouseOut,
+				onClick
 			})
 		},
 		// No need to add other dependencies because the chart is only rendered once
