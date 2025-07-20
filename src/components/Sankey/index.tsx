@@ -9,8 +9,131 @@ export function Sankey() {
 	const { t } = useLingui()
 
 	const data = useMemo(() => {
+		// Helper function to add links to nodes based on their names
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
+		const addLinksToNodes = (node: any): any => {
+			const getDepartmentLink = (nodeName: string): string | undefined => {
+				const normalizedName = nodeName.toLowerCase()
+				
+				// Department mappings based on spending categories
+				const departmentMappings: Record<string, string> = {
+					// Health related - exact matches
+					'health research': '/spending/health-canada',
+					'health care systems + protection': '/spending/health-canada',
+					'food safety': '/spending/health-canada',
+					'public health + disease prevention': '/spending/health-canada',
+					'health': '/spending/health-canada',
+					
+					// Veterans - exact matches
+					'support for veterans': '/spending/veterans-affairs',
+					'veteran pensions': '/spending/veterans-affairs',
+					'veteran benefits': '/spending/veterans-affairs',
+					'veterans': '/spending/veterans-affairs',
+					
+					// Revenue Agency - exact matches
+					'revenue canada': '/spending/canada-revenue-agency',
+					'taxation': '/spending/canada-revenue-agency',
+					'tax collection': '/spending/canada-revenue-agency',
+					
+					// Employment and Social Development - exact matches
+					'employment + training': '/spending/employment-and-social-development-canada',
+					'employment insurance': '/spending/employment-and-social-development-canada',
+					'old age security': '/spending/employment-and-social-development-canada',
+					'canada pension plan': '/spending/employment-and-social-development-canada',
+					'employment': '/spending/employment-and-social-development-canada',
+					
+					// Housing and Infrastructure - exact matches
+					'housing assistance': '/spending/housing-infrastructure-communities',
+					'housing': '/spending/housing-infrastructure-communities',
+					'infrastructure': '/spending/housing-infrastructure-communities',
+					'communities': '/spending/housing-infrastructure-communities',
+					
+					// Innovation, Science and Industry - exact matches
+					'innovation + research': '/spending/innovation-science-and-industry',
+					'investment, growth and commercialization': '/spending/innovation-science-and-industry',
+					'research': '/spending/innovation-science-and-industry',
+					'statistics canada': '/spending/innovation-science-and-industry',
+					'innovation': '/spending/innovation-science-and-industry',
+					'science': '/spending/innovation-science-and-industry',
+					'industry': '/spending/innovation-science-and-industry',
+					
+					// Transport - exact matches
+					'aviation': '/spending/transport-canada',
+					'marine': '/spending/transport-canada',
+					'rail': '/spending/transport-canada',
+					'transport': '/spending/transport-canada',
+					'transportation': '/spending/transport-canada',
+					
+					// Global Affairs - exact matches
+					'international': '/spending/global-affairs-canada',
+					'foreign affairs': '/spending/global-affairs-canada',
+					'diplomatic': '/spending/global-affairs-canada',
+					'global affairs': '/spending/global-affairs-canada',
+					
+					// Public Safety - exact matches
+					'public safety': '/spending/public-safety-canada',
+					'policing': '/spending/public-safety-canada',
+					'security': '/spending/public-safety-canada',
+					'corrections': '/spending/public-safety-canada',
+					
+					// Indigenous Services - exact matches
+					'indigenous': '/spending/indigenous-services-and-northern-affairs',
+					'first nations': '/spending/indigenous-services-and-northern-affairs',
+					'northern affairs': '/spending/indigenous-services-and-northern-affairs',
+					
+					// Immigration - exact matches
+					'immigration': '/spending/immigration-refugees-and-citizenship',
+					'refugees': '/spending/immigration-refugees-and-citizenship',
+					'citizenship': '/spending/immigration-refugees-and-citizenship',
+					
+					// Public Services and Procurement - exact matches
+					'procurement': '/spending/public-services-and-procurement-canada',
+					'public services': '/spending/public-services-and-procurement-canada',
+					
+					// Finance - exact matches
+					'finance': '/spending/department-of-finance',
+					'financial': '/spending/department-of-finance',
+					'fiscal': '/spending/department-of-finance',
+					
+					// National Defence - exact matches
+					'national defence': '/spending/national-defence',
+					'defence': '/spending/national-defence',
+					'military': '/spending/national-defence'
+				}
 
-		return JSON.parse(JSON.stringify({
+				// Check for exact matches first
+				if (departmentMappings[normalizedName]) {
+					return departmentMappings[normalizedName]
+				}
+				
+				// Check for partial matches (contains)
+				for (const [key, url] of Object.entries(departmentMappings)) {
+					if (normalizedName.includes(key)) {
+						return url
+					}
+				}
+				
+				return undefined
+			}
+
+			const processedNode = { ...node }
+			
+			// Add link if this node corresponds to a department
+			const link = getDepartmentLink(node.name || '')
+			if (link) {
+				processedNode.link = link
+				console.log(`Added link to node "${node.name}": ${link}`)
+			}
+
+			// Recursively process children
+			if (node.children) {
+				processedNode.children = node.children.map(addLinksToNodes)
+			}
+
+			return processedNode
+		}
+
+		const rawData = {
 			"total": 513.94,
 			"spending": 513.94,
 			"revenue": 459.53,
@@ -795,9 +918,16 @@ export function Sankey() {
 					}
 				]
 			}
-		}))
+		}
 
-	}, [])
+		// Process the data to add links
+		const processedData = JSON.parse(JSON.stringify(rawData))
+		processedData.spending_data = addLinksToNodes(processedData.spending_data)
+		processedData.revenue_data = addLinksToNodes(processedData.revenue_data)
+		
+		return processedData
+
+	}, [t])
 
 
 	return (

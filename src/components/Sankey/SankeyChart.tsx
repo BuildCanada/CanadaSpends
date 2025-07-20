@@ -1,25 +1,12 @@
 import { hierarchy } from 'd3'
+import { useRouter } from 'next/navigation'
 import { useCallback, useEffect, useState } from 'react'
 import Select from 'react-select'
 import './SankeyChart.css'
 import { SankeyData } from './SankeyChartD3'
 import { SankeyChartSingle } from './SankeyChartSingle'
-import { formatNumber, sortNodesByAmount, transformToIdBased } from './utils'
-
-type FlatDataNodes = ReturnType<typeof getFlatData>['nodes']
-type Node = FlatDataNodes[number] & {
-	realValue?: number
-}
-
-interface HoverNodeType extends Node {
-	percent: number;
-	blockRect?: DOMRect;
-}
-
-interface SearchOptionType {
-	value: string;
-	label: string;
-}
+import { formatNumber, transformToIdBased } from './utils'
+import { departmentNames, departmentMappings } from './departmentMap'
 
 const getFlatData = (data: SankeyData) => {
 	const revenueRoot = hierarchy(data.revenue_data).sum(d => {
@@ -44,135 +31,167 @@ const getFlatData = (data: SankeyData) => {
 				value: d.value,
 				type: 'spending'
 			}))
-		].sort((a, b) => {
-			return (a.displayName || a.name || "").localeCompare(b.displayName || b.name || "");
-		}),
-		revenueTotal: revenueRoot.value ?? 0,
-		spendingTotal: spendingRoot.value ?? 0
+		]
 	}
 }
 
-const chartHeight = 760
-const amountScalingFactor = 1e9
+type FlatDataNodes = ReturnType<typeof getFlatData>['nodes']
+type Node = FlatDataNodes[number] & {
+	realValue?: number
+}
 
-const chartConfig = {
-	revenue: {
-		id: 'revenue-chart-root',
-		colors: {
-			primary: '#249EDC'
-		},
-		direction: 'right-to-left',
-		differenceLabel: 'Deficit'
-	},
-	spending: {
-		id: 'spending-chart-root',
-		colors: {
-			primary: '#E3007D'
-		},
-		direction: 'left-to-right',
-		differenceLabel: 'Surplus'
-	}
-} as const
+interface HoverNodeType extends Node {
+	percent: number;
+	blockRect?: DOMRect;
+}
 
-type SankeyChartProps = {
+interface SearchOptionType {
+	value: string;
+	label: string;
+}
+
+export function SankeyChart({ 
+	data,
+	shouldIncludeNode = () => true,
+	displayName = {}
+}: {
 	data: SankeyData
-}
-
-export function SankeyChart(props: SankeyChartProps) {
-	const [chartData, setChartData] = useState<SankeyData | null>(null)
-	const [flatData, setFlatData] = useState<FlatDataNodes | null>(null)
-
-	const [searchedNode, setSearchedNode] = useState<SearchOptionType | null>(null)
-	const [searchResult, setSearchResult] = useState<Node | null>(null)
+	shouldIncludeNode?: (node: Node) => boolean
+	displayName?: { [nodeId: string]: string }
+}) {
+	const router = useRouter()
 	const [hoverNode, setHoverNode] = useState<HoverNodeType | null>(null)
-	// Mouse position as fallback - ensures tooltip still works if blockRect is missing
 	const [mousePosition, setMousePosition] = useState<{ x: number; y: number } | null>(null)
-	const [totalAmount, setTotalAmount] = useState(0)
+	const [searchOptions, setSearchOptions] = useState<SearchOptionType[]>([])
+	const [tooltipTimeout, setTooltipTimeout] = useState<NodeJS.Timeout | null>(null)
 
+	const { nodes } = getFlatData(data)
+
+	// Process nodes for search options
 	useEffect(() => {
-		// Transform the data to use ID-based structure
-		const transformedData = {
-			...props.data,
-			revenue_data: transformToIdBased(props.data.revenue_data),
-			spending_data: transformToIdBased(props.data.spending_data)
-		}
-		
-		setChartData(transformedData)
-		const { nodes, revenueTotal, spendingTotal } = getFlatData(transformedData)
-
-		setFlatData(nodes)
-		setTotalAmount(Math.max(revenueTotal, spendingTotal))
-	}, [props.data])
-
-	const handleSearch = (selected: SearchOptionType | null) => {
-		setSearchedNode(selected)
-
-		if (!selected) {
-			return setSearchResult(null)
-		}
-
-		let node = flatData?.find(d => d.id === selected.value)
-
-		// If it's a leaf node, we need to find the parent node
-		if (!node?.children) {
-			node = flatData?.find(d => d.id === node?.parent)
-		}
-
-		setSearchResult(node ?? null)
-	}
-
-	const handleMouseOver = useCallback((totalAmount: number) => {
-		return (node: Node, event?: MouseEvent) => {
-			const percent = (node.realValue! / totalAmount) * 100
-			setHoverNode({
-				...node,
-				percent,
+		const options = nodes
+			.filter(node => shouldIncludeNode(node) && node.type === 'spending')
+			.sort((a, b) => {
+				const aValue = (a as any).realValue || a.value || 0
+				const bValue = (b as any).realValue || b.value || 0
+				return bValue - aValue
 			})
-			// Store mouse position as fallback for tooltip positioning
-			if (event) {
-				setMousePosition({ x: event.clientX, y: event.clientY })
-			}
+			.slice(0, 10) // Top 10 spending items
+			.map(node => ({
+				value: node.id,
+				label: `${displayName[node.id] || node.name} (${formatNumber((node as any).realValue || node.value || 0)})`
+			}))
+		
+		setSearchOptions(options)
+	}, [nodes, shouldIncludeNode, displayName])
+
+	const handleDepartmentSelect = useCallback((option: SearchOptionType | null) => {
+		if (option) {
+			// Navigate to the department's first matching node
+			console.log('Selected department:', option.value)
 		}
 	}, [])
 
-	const handleMouseOut = useCallback(() => {
+	const handleNodeHover = useCallback((node: Node | null, event?: MouseEvent) => {
+		if (node) {
+			const blockRect = (event?.target as HTMLElement)?.getBoundingClientRect()
+			const totalSpending = getFlatData(data).nodes
+				.filter(n => n.type === 'spending' && (n.value || 0) > 0)
+				.reduce((sum, n) => sum + ((n as any).realValue || n.value || 0), 0)
+			
+			setHoverNode({
+				...node,
+				percent: (((node as any).realValue || node.value || 0) / totalSpending) * 100,
+				blockRect: blockRect
+			})
+			
+			if (event) {
+				setMousePosition({ x: event.clientX, y: event.clientY })
+			}
+		} else {
+			// Delayed hide to allow mouse to move to tooltip
+			const timeout = setTimeout(() => {
+				setHoverNode(null)
+				setMousePosition(null)
+			}, 300) // 300ms delay
+			
+			setTooltipTimeout(timeout)
+		}
+	}, [data])
+
+	const handleTooltipMouseEnter = useCallback(() => {
+		// Cancel hiding tooltip when mouse enters tooltip
+		if (tooltipTimeout) {
+			clearTimeout(tooltipTimeout)
+			setTooltipTimeout(null)
+		}
+	}, [tooltipTimeout])
+
+	const handleTooltipMouseLeave = useCallback(() => {
+		// Hide tooltip immediately when mouse leaves tooltip area
 		setHoverNode(null)
 		setMousePosition(null)
+		if (tooltipTimeout) {
+			clearTimeout(tooltipTimeout)
+			setTooltipTimeout(null)
+		}
+	}, [tooltipTimeout])
+
+	const getDepartmentName = (url: string): string => {
+		return departmentNames[url] || 'Government Department'
+	}
+
+	const getDepartmentUrl = (nodeName: string): string | undefined => {
+		const normalizedName = (nodeName || '').toLowerCase()
+		for (const [key, url] of Object.entries(departmentMappings)) {
+			if (normalizedName.includes(key)) {
+				return url
+			}
+		}
+		return undefined
+	}
+
+	const handleClick = useCallback(() => {
+		// Click functionality removed - links are now only in tooltips
+		return
 	}, [])
 
 	return (
 		<div className='sankey-chart-wrapper'>
-			<div className='sankey-chart-header'>
-				<div className='search-container'>
-				<Select
-					instanceId="sankey-search"
-					inputId="sankey-search-input"
-					value={searchedNode}
-					options={flatData?.map(d => ({
-						value: d.id!,
-						label: d.displayName || d.name || 'Unknown'
-					})).filter(d => d.value && d.label)}
-					onChange={handleSearch}
-					isClearable={true}
-					placeholder='Search...'
-					className='search-select'
-					styles={{
-						input: base => ({
-							...base,
-							color: '#fff'
-						}),
-						singleValue: base => ({
-							...base,
-							color: '#fff'
-						}),
-						control: (base) => ({
-							...base,
-							color: '#fff',
-							backgroundColor: '#000',
-							borderColor: '#444'
-						})
-					}}
-				/>
+			<div className='sankey-controls'>
+				<div>
+					<h3>Department Exploration</h3>
+					<label htmlFor='department-search'>
+						<p style={{ color: 'white' }}>🔍 Jump to department:</p>
+					</label>
+					<Select
+						inputId='department-search'
+						value={null}
+						options={searchOptions}
+						onChange={handleDepartmentSelect}
+						placeholder="Search departments..."
+						isClearable
+						styles={{
+							option: (base) => ({
+								...base,
+								color: '#000'
+							}),
+							input: base => ({
+								...base,
+								color: '#fff'
+							}),
+							singleValue: base => ({
+								...base,
+								color: '#fff'
+							}),
+							control: (base) => ({
+								...base,
+								color: '#fff',
+								backgroundColor: '#000',
+								borderColor: '#444'
+							})
+						}}
+					/>
 				</div>
 			</div>
 
@@ -180,6 +199,8 @@ export function SankeyChart(props: SankeyChartProps) {
 				{hoverNode && (
 				<div 
 					className='node-tooltip'
+					onMouseEnter={handleTooltipMouseEnter}
+					onMouseLeave={handleTooltipMouseLeave}
 					style={{
 						// Horizontal: right of the block, constrained to viewport
 						left: hoverNode.blockRect 
@@ -189,64 +210,59 @@ export function SankeyChart(props: SankeyChartProps) {
 						// Math.max ensures tooltip stays within viewport (min 10px from top)
 						top: hoverNode.blockRect 
 							? `${Math.max(10, hoverNode.blockRect.top - 40)}px`
-							: `${(mousePosition?.y || 0) + 10}px`
+							: `${(mousePosition?.y || 0) + 10}px`,
+						pointerEvents: 'auto', // Enable mouse events on tooltip
+						cursor: 'default'
 					}}
 				>
-					<p className='node-tooltip-name'>{hoverNode.displayName || hoverNode.name}</p>
-					<div className='node-tooltip-amount'>
-						<span>{formatNumber(hoverNode.realValue ?? 0, amountScalingFactor)}</span>
-						<span className='node-tooltip-amount-divider'>&#8226;</span>
-						<span>{hoverNode.percent.toFixed(1)}%</span>
+					<div className='tooltip-content'>
+						<div className='tooltip-header'>
+							<h4>{displayName[hoverNode.id] || hoverNode.displayName || hoverNode.name || 'Unknown'}</h4>
+						</div>
+						<div className='tooltip-body'>
+							<p><strong>Amount:</strong> 
+								<span>{formatNumber((hoverNode as any).realValue ?? 0, 1e9)}</span>
+							</p>
+							<p><strong>Percentage:</strong> {hoverNode.percent.toFixed(2)}%</p>
+							
+							{(() => {
+								const url = getDepartmentUrl(hoverNode.displayName || hoverNode.name || '')
+								if (url) {
+									const departmentName = getDepartmentName(url)
+									return (
+										<div className='tooltip-link'>
+											<p><strong>Related Ministry:</strong></p>
+											<a 
+												href={url}
+												className='department-link'
+												onClick={(e) => {
+													e.preventDefault()
+													router.push(url)
+												}}
+											>
+												{departmentName} →
+											</a>
+										</div>
+									)
+								}
+								return null
+							})()}
+						</div>
 					</div>
 				</div>
-			)}
+				)}
 
-			{chartData && !searchResult && (
-				<div className='charts'>
-					<SankeyChartSingle
-						{...chartConfig.revenue}
-						data={sortNodesByAmount(chartData.revenue_data)}
-						totalAmount={totalAmount}
-						difference={chartData.total - chartData.revenue}
-						height={chartHeight}
-						amountScalingFactor={amountScalingFactor}
-						onMouseOver={handleMouseOver(chartData.revenue)}
-						onMouseOut={handleMouseOut}
-					/>
-
-					<SankeyChartSingle
-						{...chartConfig.spending}
-						data={sortNodesByAmount(chartData.spending_data)}
-						totalAmount={totalAmount}
-						difference={chartData.total - chartData.spending}
-						height={chartHeight}
-						amountScalingFactor={amountScalingFactor}
-						onMouseOver={handleMouseOver(chartData.spending)}
-						onMouseOut={handleMouseOut}
-					/>
-				</div>
-			)}
-
-			{searchResult && (
-				<div className='chart search-results'>
-					<SankeyChartSingle
-						id='search-results-root'
-						data={searchResult}
-						// @ts-expect-error: fix type here
-						colors={chartConfig[searchResult.type].colors}
-						// @ts-expect-error: fix type here
-						direction={chartConfig[searchResult.type].direction}
-						totalAmount={searchResult.value ?? 0}
-						height={chartHeight}
-						amountScalingFactor={amountScalingFactor}
-						difference={0}
-						differenceLabel=''
-					/>
-				</div>
-			)}
+				<SankeyChartSingle
+					id='sankey-chart'
+					data={transformToIdBased(data)}
+					onClick={handleClick}
+					onMouseOver={handleNodeHover}
+					onMouseOut={handleNodeHover}
+					height={600}
+					direction="left-to-right"
+					totalAmount={1e12}
+				/>
 			</div>
 		</div>
 	)
 }
-
-
