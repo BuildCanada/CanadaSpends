@@ -4,10 +4,11 @@ import { useState, useMemo } from "react";
 import { useLingui, Trans } from "@lingui/react/macro";
 import { H1, H2, PageContent, Section } from "@/components/Layout";
 import { StatCard } from "@/components/StatCard";
-import { CombinedSpendingChart } from "@/components/CombinedSpendingChart";
 import { calculateTotalTax, formatCurrency } from "@/lib/taxCalculator";
 import { calculatePersonalTaxBreakdown } from "@/lib/personalTaxBreakdown";
-
+import PieChart from "@/components/PieChart";
+import { CombinedSpendingItem } from "@/components/CombinedSpendingChart";
+import { PieChartDataArray } from "@/components/PieChart";
 interface TaxCalculatorFormProps {
   income: number;
   setIncome: (income: number) => void;
@@ -15,16 +16,24 @@ interface TaxCalculatorFormProps {
   setProvince: (province: string) => void;
 }
 
-function TaxCalculatorForm({ income, setIncome, province, setProvince }: TaxCalculatorFormProps) {
+function TaxCalculatorForm({
+  income,
+  setIncome,
+  province,
+  setProvince,
+}: TaxCalculatorFormProps) {
   const { t } = useLingui();
 
   return (
     <div className="bg-white p-6 rounded-lg shadow-sm border">
       <H2>{t`Calculate Your Tax Contribution`}</H2>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
         <div>
-          <label htmlFor="income" className="block text-sm font-medium text-gray-700 mb-2">
+          <label
+            htmlFor="income"
+            className="block text-sm font-medium text-gray-700 mb-2"
+          >
             {t`Annual Income (CAD)`}
           </label>
           <input
@@ -32,9 +41,9 @@ function TaxCalculatorForm({ income, setIncome, province, setProvince }: TaxCalc
             id="income"
             value={income ? income.toLocaleString() : ""}
             onChange={(e) => {
-              const value = e.target.value.replace(/,/g, '');
+              const value = e.target.value.replace(/,/g, "");
               const numericValue = Number(value);
-              if (!isNaN(numericValue) || value === '') {
+              if (!isNaN(numericValue) || value === "") {
                 setIncome(numericValue);
               }
             }}
@@ -42,9 +51,12 @@ function TaxCalculatorForm({ income, setIncome, province, setProvince }: TaxCalc
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
-        
+
         <div>
-          <label htmlFor="province" className="block text-sm font-medium text-gray-700 mb-2">
+          <label
+            htmlFor="province"
+            className="block text-sm font-medium text-gray-700 mb-2"
+          >
             {t`Province/Territory`}
           </label>
           <select
@@ -100,8 +112,12 @@ function TaxSummary({ taxCalculation }: TaxSummaryProps) {
 function TaxBracketsTable() {
   return (
     <div className="mt-16">
-      <h2 className="text-2xl font-bold text-center mb-2">Ontario Provincial and Federal tax brackets</h2>
-      <p className="text-center text-gray-600 mb-8">Your taxable income is taxed at the following rates.</p>
+      <h2 className="text-2xl font-bold text-center mb-2">
+        Ontario Provincial and Federal tax brackets
+      </h2>
+      <p className="text-center text-gray-600 mb-8">
+        Your taxable income is taxed at the following rates.
+      </p>
       <div className="flex flex-col md:flex-row gap-8 justify-center">
         {/* Federal Tax Brackets */}
         <div className="bg-white rounded-lg shadow-sm border p-6 flex-1 min-w-[320px] max-w-md">
@@ -170,28 +186,113 @@ function TaxBracketsTable() {
           </table>
         </div>
       </div>
-      <p className="text-center text-xs text-gray-600 mt-8">Basic personal amount of $15,705 for federal and $12,399 for Ontario have been deducted.</p>
+      <p className="text-center text-xs text-gray-600 mt-8">
+        Basic personal amount of $15,705 for federal and $12,399 for Ontario
+        have been deducted.
+      </p>
     </div>
   );
 }
 
 // Remove the old SpendingVisualization component since we're using the combined chart
 
+const PIE_COLORS = [
+  "#2563eb", // blue
+  "#f97316", // orange
+  "#10b981", // green
+  "#f59e42", // yellow
+  "#e11d48", // red
+  "#6366f1", // indigo
+  "#14b8a6", // teal
+  "#f43f5e", // pink
+  "#a21caf", // purple
+  "#64748b", // slate
+  "#eab308", // amber
+  "#0ea5e9", // sky
+  "#22d3ee", // cyan
+  "#84cc16", // lime
+  "#facc15", // gold
+  "#d97706", // brown
+  "#7c3aed", // violet
+  "#f472b6", // rose
+  "#6d28d9", // deep purple
+  "#b91c1c", // dark red
+];
+
+const TRUNCATE_LABEL = (label: string, max = 22) =>
+  label.length > max ? label.slice(0, max - 1) + "…" : label;
+
+const formatCombinedSpendingItemToPieChartData = (
+  chartData: CombinedSpendingItem[],
+  totalAmount: number,
+): PieChartDataArray => {
+  if (!Array.isArray(chartData) || !totalAmount) return { data: [] };
+  // Sort by totalAmount descending
+  const sorted = [...chartData].sort((a, b) => b.totalAmount - a.totalAmount);
+  const top15 = sorted.slice(0, 12);
+  const rest = sorted.slice(12);
+  const otherTotal = rest.reduce((sum, item) => sum + item.totalAmount, 0);
+  const data = top15.map((item, idx) => {
+    const percent = totalAmount > 0 ? item.totalAmount / totalAmount : 0;
+    return {
+      id: item.name,
+      label: TRUNCATE_LABEL(item.name), // legend label
+      value: item.totalAmount,
+      color: PIE_COLORS[idx % PIE_COLORS.length],
+      arcLabel: `${item.totalAmount.toFixed(1)} (${(percent * 100).toFixed(1)}%)`, // arc label
+    };
+  });
+  // Only add 'Other' if there are items to group
+  if (
+    rest.length > 0 &&
+    otherTotal > 0 &&
+    !data.some((d) => d.id === "Other")
+  ) {
+    const percent = totalAmount > 0 ? otherTotal / totalAmount : 0;
+    data.push({
+      id: "Other",
+      label: "Other",
+      value: otherTotal,
+      color: "#888888",
+      arcLabel: `${otherTotal.toFixed(1)} (${(percent * 100).toFixed(1)}%)`,
+    });
+  }
+  return { data };
+};
+
 export default function TaxCalculatorPage() {
   const { t } = useLingui();
   const [income, setIncome] = useState<number>(100000);
   const [province, setProvince] = useState<string>("ontario");
-  
+
   const taxCalculation = useMemo(() => {
     if (income <= 0) return null;
     return calculateTotalTax(income, province);
   }, [income, province]);
-  
+
   const breakdown = useMemo(() => {
     if (!taxCalculation) return null;
     return calculatePersonalTaxBreakdown(taxCalculation);
   }, [taxCalculation]);
 
+  // export interface CombinedSpendingItem {
+  //   name: string;
+  //   federalAmount: number;
+  //   provincialAmount: number;
+  //   totalAmount: number;
+  //   formattedTotal: string;
+  // }
+
+  const formattedPieChartData = useMemo(
+    () =>
+      breakdown
+        ? formatCombinedSpendingItemToPieChartData(
+            breakdown.combinedChartData,
+            breakdown.taxCalculation.totalTax,
+          )
+        : { data: [] },
+    [breakdown],
+  );
   return (
     <PageContent>
       <Section>
@@ -215,13 +316,16 @@ export default function TaxCalculatorPage() {
               <TaxSummary taxCalculation={taxCalculation} />
             </div>
 
-            <div className="mt-12">
+            <div className="text-center mb-8 h-100">
+              <PieChart data={formattedPieChartData.data} />
+            </div>
+            {/* <div className="mt-12">
               <CombinedSpendingChart
                 data={breakdown.combinedChartData}
                 title={t`Where Your Tax Dollars Go`}
                 totalAmount={breakdown.taxCalculation.totalTax}
               />
-            </div>
+            </div> */}
 
             <div className="mt-12 bg-blue-50 p-6 rounded-lg">
               <H2>{t`Understanding Your Tax Contribution`}</H2>
@@ -237,7 +341,15 @@ export default function TaxCalculatorPage() {
                 </p>
                 <p>
                   <Trans>
-                    For further breakdowns of spending, see <a href="/spending" className="underline">Federal</a> and <a href="/ontario" className="underline">Provincial</a> spending pages.
+                    For further breakdowns of spending, see{" "}
+                    <a href="/spending" className="underline">
+                      Federal
+                    </a>{" "}
+                    and{" "}
+                    <a href="/ontario" className="underline">
+                      Provincial
+                    </a>{" "}
+                    spending pages.
                   </Trans>
                 </p>
               </div>
@@ -248,7 +360,16 @@ export default function TaxCalculatorPage() {
       <TaxBracketsTable />
       <Section>
         <hr></hr>
-        <p className="mt-6 text-center text-sm text-gray-600">Built by <a href="https://www.linkedin.com/in/ruchishshah/" target="_blank" className="underline">Ru</a></p>
+        <p className="mt-6 text-center text-sm text-gray-600">
+          Built by{" "}
+          <a
+            href="https://www.linkedin.com/in/ruchishshah/"
+            target="_blank"
+            className="underline"
+          >
+            Ru
+          </a>
+        </p>
       </Section>
     </PageContent>
   );
