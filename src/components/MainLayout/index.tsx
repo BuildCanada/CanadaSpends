@@ -44,6 +44,9 @@ export const MainLayout = ({ children }: { children: React.ReactNode }) => {
   const spendingActive =
     pathname.startsWith(`/${i18n.locale}/spending`) ||
     pathname.startsWith("/ontario");
+  const visualizerActive =
+    pathname === `/${i18n.locale}/tax-visualizer` ||
+    pathname === `/${i18n.locale}/data-visualizer`;
 
   return (
     <>
@@ -104,12 +107,39 @@ export const MainLayout = ({ children }: { children: React.ReactNode }) => {
                   </DropdownMenu.Content>
                 </DropdownMenu.Portal>
               </DropdownMenu.Root>
-              <NavLink
-                href={`/${i18n.locale}/tax-visualizer`}
-                active={pathname === `/${i18n.locale}/tax-visualizer`}
-              >
-                <Trans>Tax Visualizer</Trans>
-              </NavLink>
+              <DropdownMenu.Root>
+                <DropdownMenu.Trigger asChild>
+                  <button
+                    className={`relative py-2 text-sm font-medium flex items-center gap-1 ${
+                      visualizerActive
+                        ? "text-black after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-black"
+                        : "text-gray-600 hover:text-black"
+                    }`}
+                  >
+                    <Trans>Visualizer</Trans>
+                    <ChevronDown className="w-4 h-4" />
+                  </button>
+                </DropdownMenu.Trigger>
+                <DropdownMenu.Portal>
+                  <DropdownMenu.Content
+                    className="bg-white rounded-md shadow-lg p-1 flex flex-col min-w-[150px] z-[200]"
+                    sideOffset={4}
+                  >
+                    <Link
+                      href={`/${i18n.locale}/tax-visualizer`}
+                      className="px-3 py-2 text-sm hover:bg-gray-100 rounded"
+                    >
+                      <Trans>Tax Visualizer</Trans>
+                    </Link>
+                    <Link
+                      href={`/${i18n.locale}/data-visualizer`}
+                      className="px-3 py-2 text-sm hover:bg-gray-100 rounded"
+                    >
+                      <Trans>Data Visualizer</Trans>
+                    </Link>
+                  </DropdownMenu.Content>
+                </DropdownMenu.Portal>
+              </DropdownMenu.Root>
               <NavLink
                 href={`/${i18n.locale}/search`}
                 active={pathname === `/${i18n.locale}/search`}
@@ -175,12 +205,26 @@ export const MainLayout = ({ children }: { children: React.ReactNode }) => {
                 <Trans>Ontario</Trans>
               </span>
             </MobileNavLink>
+            {/* Visualizer Submenu */}
+            <p className="px-3 pt-3 text-base font-medium text-gray-500">
+              <Trans>Visualizer</Trans>
+            </p>
             <MobileNavLink
               href={`/${i18n.locale}/tax-visualizer`}
               active={pathname === `/${i18n.locale}/tax-visualizer`}
               onClick={() => setIsMenuOpen(false)}
             >
-              <Trans>Tax Calculator</Trans>
+              <span className="pl-4 inline-block">
+                <Trans>Tax Visualizer</Trans>
+              </span>
+            </MobileNavLink>
+            <MobileNavLink
+              href={`/${i18n.locale}/data-visualizer`}
+              active={pathname === `/${i18n.locale}/data-visualizer`}
+            >
+              <span className="pl-4 inline-block">
+                <Trans>Data Visualizer</Trans>
+              </span>
             </MobileNavLink>
             <MobileNavLink
               href={`/${i18n.locale}/search`}

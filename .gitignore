@@ -1,6 +1,7 @@
 venv
 .env
 __pycache__
+**/development/**
 
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
@@ -48,3 +49,6 @@ next-env.d.ts
 scrapers/*/data/**
 .idea/
 scrapers/data
+
+# Claude context files
+CLAUDE.local.md
