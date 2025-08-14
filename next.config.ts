@@ -38,6 +38,10 @@ const nextConfig: NextConfig = {
   async rewrites() {
     return [
       {
+        source: "/:locale/api/:path*",
+        destination: "/api/:path*",
+      },
+      {
         source: "/ph/static/:path*",
         destination: "https://us-assets.i.posthog.com/static/:path*",
       },

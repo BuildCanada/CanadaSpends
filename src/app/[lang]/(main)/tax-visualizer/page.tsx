@@ -2,11 +2,14 @@
 
 import { useState, useMemo } from "react";
 import { useLingui, Trans } from "@lingui/react/macro";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { H1, H2, PageContent, Section } from "@/components/Layout";
 import { StatCard } from "@/components/StatCard";
 import { CombinedSpendingChart } from "@/components/CombinedSpendingChart";
 import { calculateTotalTax, formatCurrency } from "@/lib/taxCalculator";
 import { calculatePersonalTaxBreakdown } from "@/lib/personalTaxBreakdown";
+import { TaxContributionShareButton } from "@/components/TaxContributionShareButton";
+import { viralShares } from "@/lib/viralShares";
 
 interface TaxCalculatorFormProps {
   income: number;
@@ -195,10 +198,15 @@ function TaxBracketsTable() {
 
 // Remove the old SpendingVisualization component since we're using the combined chart
 
-export default function TaxCalculatorPage() {
+export default function TaxCalculatorPage({
+  params,
+}: {
+  params: { lang: string };
+}) {
   const { t } = useLingui();
   const [income, setIncome] = useState<number>(100000);
   const [province, setProvince] = useState<string>("ontario");
+  const [currentShareIndex, setCurrentShareIndex] = useState<number>(0);
 
   const taxCalculation = useMemo(() => {
     if (income <= 0) return null;
@@ -209,6 +217,28 @@ export default function TaxCalculatorPage() {
     if (!taxCalculation) return null;
     return calculatePersonalTaxBreakdown(taxCalculation);
   }, [taxCalculation]);
+
+  const currentShareItem = useMemo(() => {
+    if (!breakdown) return null;
+    return {
+      item: viralShares[currentShareIndex].item,
+      amount:
+        viralShares[currentShareIndex].amount /
+        breakdown.taxCalculation.totalTax,
+    };
+  }, [breakdown, currentShareIndex]);
+
+  const handlePreviousItem = () => {
+    setCurrentShareIndex((prev) =>
+      prev === 0 ? viralShares.length - 1 : prev - 1,
+    );
+  };
+
+  const handleNextItem = () => {
+    setCurrentShareIndex((prev) =>
+      prev === viralShares.length - 1 ? 0 : prev + 1,
+    );
+  };
 
   return (
     <PageContent>
@@ -241,7 +271,59 @@ export default function TaxCalculatorPage() {
               />
             </div>
 
-            <div className="mt-12 bg-blue-50 p-6 rounded-lg">
+            <div className="mt-12 bg-blue-50 p-6 rounded-lg text-center">
+              <H2>{t`Share Your Contribution`}</H2>
+              <p className="text-md text-gray-700 mt-2 mb-6">
+                {t`You're making a real difference! Share it on social to inspire others.`}
+              </p>
+              <div className="mt-4 flex flex-col items-center space-y-4">
+                <div className="flex items-center justify-center space-x-4">
+                  <button
+                    onClick={handlePreviousItem}
+                    className="p-3 rounded-full bg-white hover:bg-gray-50 transition-colors duration-200 text-gray-700 shadow-sm border"
+                    aria-label="Previous contribution"
+                  >
+                    <ChevronLeft size={24} />
+                  </button>
+                  <div className="flex-shrink-0">
+                    <TaxContributionShareButton
+                      contributionIndex={currentShareIndex}
+                      amount={currentShareItem?.amount || 0}
+                      item={currentShareItem?.item || ""}
+                      lang={params.lang}
+                    />
+                  </div>
+                  <button
+                    onClick={handleNextItem}
+                    className="p-3 rounded-full bg-white hover:bg-gray-50 transition-colors duration-200 text-gray-700 shadow-sm border"
+                    aria-label="Next contribution"
+                  >
+                    <ChevronRight size={24} />
+                  </button>
+                </div>
+
+                <div className="flex justify-center space-x-2 mt-4">
+                  {viralShares.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentShareIndex(index)}
+                      className={`w-3 h-3 rounded-full transition-colors duration-200 ${
+                        index === currentShareIndex
+                          ? "bg-blue-500"
+                          : "bg-gray-300 hover:bg-gray-400"
+                      }`}
+                      aria-label={`Go to contribution ${index + 1}`}
+                    />
+                  ))}
+                </div>
+
+                <p className="text-sm text-gray-700 text-center">
+                  {t`Thank you for your contribution to building a better Canada.`}
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-12 bg-gray-50 p-6 rounded-lg">
               <H2>{t`Understanding Your Tax Contribution`}</H2>
               <div className="mt-4 space-y-3 text-sm text-gray-700">
                 <p>
