@@ -45,23 +45,38 @@ export default async function Page(props: PageLangParam) {
                   </p>
                 </div>
                 <div className="flex gap-4">
+                  {/* Federal */}
                   <Link
                     className="text-white bg-indigo-950 hover:bg-indigo-900 items-center font-medium justify-center py-2 px-4 relative flex w-auto min-w-[7.00rem] max-w-full overflow-hidden"
                     href="/spending"
                   >
                     <div className="items-center cursor-pointer justify-center relative flex overflow-hidden">
                       <div className="items-center justify-center flex p-1">
-                        <Trans>Explore federal data</Trans>
+                        <Trans>Explore Federal Data</Trans>
                       </div>
                     </div>
                   </Link>
+
+                  {/* Provincial (generic entry point for any province) */}
                   <Link
                     className="text-indigo-950 bg-white border-indigo-950 border-2 hover:bg-gray-100 items-center font-medium justify-center py-2 px-4 relative flex w-auto min-w-[7.00rem] max-w-full overflow-hidden"
-                    href="/ontario"
+                    href="/ontario"  // temporary until a /provincial hub exists
                   >
                     <div className="items-center cursor-pointer justify-center relative flex overflow-hidden">
                       <div className="items-center justify-center flex p-1">
-                        <Trans>Explore Ontario data</Trans>
+                        <Trans>Explore Provincial Data</Trans>
+                      </div>
+                    </div>
+                  </Link>
+
+                  {/* Municipal (Toronto as the first/only option for now) */}
+                  <Link
+                    className="text-indigo-950 bg-white border-indigo-950 border-2 hover:bg-gray-100 items-center font-medium justify-center py-2 px-4 relative flex w-auto min-w-[7.00rem] max-w-full overflow-hidden"
+                    href="/toronto"
+                  >
+                    <div className="items-center cursor-pointer justify-center relative flex overflow-hidden">
+                      <div className="items-center justify-center flex p-1">
+                        <Trans>Explore Municipal Data</Trans>
                       </div>
                     </div>
                   </Link>
