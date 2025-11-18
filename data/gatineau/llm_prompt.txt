@@ -1,0 +1,43 @@
+The attached document is the City of Gatineau budget. Extract the information for the target financial year only (ignore other years). Output MUST follow this structure:
+
+## Key Metrics – <year>
+* Population – **<number of residents>** (or omit if not available)
+* Total employees – **<number of employees>** (or omit if not available)
+* Net debt – **<amount in k$>** (or omit if not available)
+* Total debt – **<amount in k$>** (or omit if not available)
+* Debt interest – **<amount in k$>** (or omit if not available)
+* Property tax revenue – **<amount in k$>** (or omit if not available)
+
+- Use plain numbers for population/employees (no commas or units).
+- Monetary values MUST be in thousands of dollars and suffixed with `k$`.
+- If a figure is not available in the source document, omit that line entirely (do not write `0`).
+
+## Revenues – <year>
+* **Category Name** (top-level category, no amount on this line)
+  * Sub-category – **123,456 k$** (sub-item with amount)
+  * Sub-category with children (sub-item that has children):
+    * Sub-sub-category – **50,000 k$**
+    * Sub-sub-category – **30,000 k$**
+    * **Total Sub-category – 80,000 k$** (total for this sub-category)
+  * Another sub-category – **40,000 k$**
+  * **Total Category Name – 120,000 k$** (total for the top-level category)
+- Format rules:
+  * Top-level categories: `* **Category Name**` (bold, no amount, no dash)
+  * Sub-items with amounts: `  * Item Name – **amount k$**` (2 spaces indent, dash separator)
+  * Sub-items with children: `  * Item Name` (2 spaces indent, no amount, no dash)
+  * Totals: `  * **Total Item Name – amount k$**` (bold, includes dash and amount)
+  * Use 2 spaces per indentation level
+  * Subchildren can have further subchildren - go as deep as the document provides
+  * Always include a total line for each category/subcategory that has children
+
+## Expenses – <year>
+* Follow the exact same format as Revenues above.
+* Preserve all levels of hierarchy from the source document.
+* Each category must have a total line if it has sub-items.
+
+Rules:
+1. Only include numbers for the requested year.
+2. Sub-bullets must never sum to more than their parent (call out rounding differences if needed).
+3. Be precise: double-check math, preserve signage, and format every monetary amount as `123,456 k$`.
+4. Do not add commentary outside the structure above.
+
