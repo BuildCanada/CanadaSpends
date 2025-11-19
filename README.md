@@ -53,3 +53,19 @@ npx simple-git-hooks
 ```
 
 If linting fails, the commit will be blocked until issues are resolved.
+
+## Toronto data conversion
+
+The Toronto Sankey data is generated via `data/toronto/scripts/convert_toronto_sankey.py`. The
+script supports both the original dataset (`legacy`) and the new 2024 operating budget dataset:
+
+```bash
+# Legacy dataset (writes to data/toronto)
+python3 data/toronto/scripts/convert_toronto_sankey.py --dataset legacy
+
+# 2024 Operating Budget dataset (writes to data/toronto-operating)
+python3 data/toronto/scripts/convert_toronto_sankey.py --dataset operating
+```
+
+Use `--output-dir` to override the destination or pass custom spreadsheet paths if the files live
+elsewhere.
