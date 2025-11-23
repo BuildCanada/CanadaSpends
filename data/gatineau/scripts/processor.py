@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Convert Gatineau markdown summary into sankey.json and summary.json."""
+"""Convert Gatineau financial actuals markdown summary into sankey.json and summary.json."""
 
 from __future__ import annotations
 
@@ -17,81 +17,91 @@ from pathlib import Path
 from typing import Dict, List, Optional
 from urllib.request import urlretrieve
 
-OPENAI_MODEL = "gpt-4o"  # Model must support file attachments
-
+OPENAI_MODEL = "gpt-4o"
 
 NUMBER_SPLIT_PATTERN = re.compile(r"\s[–-]\s")
 LEADING_BULLET_PATTERN = re.compile(r"^(\s*)[*-]\s+")
 LEADING_HEADER_PATTERN = re.compile(r"^###\s+\*\*(.+?)\*\*")
 METRIC_SECTION_KEYWORDS = ("key metrics", "overview", "summary", "key facts")
 METRIC_SPECS = [
-    {
-        "field": "population",
-        "aliases": ("population",),
-        "type": "integer",
-    },
-    {
-        "field": "totalEmployees",
-        "aliases": ("total employees", "public service employees"),
-        "type": "integer",
-    },
-    {
-        "field": "netDebt",
-        "aliases": ("net debt",),
-        "type": "currency",
-    },
-    {
-        "field": "totalDebt",
-        "aliases": ("total debt",),
-        "type": "currency",
-    },
-    {
-        "field": "debtInterest",
-        "aliases": ("debt interest", "interest on debt", "annual interest on debt"),
-        "type": "currency",
-    },
-    {
-        "field": "propertyTaxRevenue",
-        "aliases": ("property tax revenue", "property taxes revenue"),
-        "type": "currency",
-    },
+    {"field": "population", "aliases": ("population",), "type": "integer"},
+    {"field": "totalEmployees", "aliases": ("total employees", "public service employees"), "type": "integer"},
+    {"field": "netDebt", "aliases": ("net debt",), "type": "currency"},
+    {"field": "totalDebt", "aliases": ("total debt",), "type": "currency"},
+    {"field": "debtInterest", "aliases": ("debt interest", "interest on debt", "annual interest on debt"), "type": "currency"},
+    {"field": "propertyTaxRevenue", "aliases": ("property tax revenue", "property taxes revenue"), "type": "currency"},
 ]
 
 
 @dataclass
 class Entry:
     name: str
-    amount: Optional[float] = None  # Stored in billions of dollars
+    amount: Optional[float] = None
     children: List["Entry"] = field(default_factory=list)
 
     def to_sankey_node(self) -> dict:
+        """
+        Convert Entry to sankey node format.
+        
+        If a category has exactly one child, collapse it into a single element
+        with the format "parent - child". This simplifies the visualization
+        while preserving the information.
+        """
         node: dict = {"name": self.name}
         if self.children:
-            node["children"] = [child.to_sankey_node() for child in self.children]
+            # Collapse single-child categories into "parent - child" format
+            if len(self.children) == 1:
+                child = self.children[0]
+                child_node = child.to_sankey_node()
+                # If the child has children (multiple or already collapsed), preserve its structure
+                if "children" in child_node:
+                    node["children"] = [child_node]
+                else:
+                    # Collapse: combine parent and child names
+                    # Check if child name already contains " – " to avoid double-collapsing
+                    if " – " in child_node["name"]:
+                        # Child was already collapsed, preserve it as a child
+                        node["children"] = [child_node]
+                    else:
+                        # Collapse: combine parent and child names
+                        node["name"] = f"{self.name} – {child_node['name']}"
+                        node["amount"] = child_node.get("amount")
+            else:
+                # Multiple children: preserve the hierarchy
+                node["children"] = [child.to_sankey_node() for child in self.children]
         else:
             node["amount"] = self.amount
         return node
 
 
 def parse_amount(text: str) -> Optional[float]:
-    """Convert a '123,456 k$' or '123 456 k$' string into billions of dollars."""
-    # Remove formatting characters (lenient)
+    """Convert '$123,456,789' or '($123,456,789)' string to billions of dollars.
+    
+    Negative values are indicated by parentheses: ($123) = -$123
+    """
+    # Check if the value is negative (wrapped in parentheses)
+    # Handle cases like "**($1,732)**" or "($1,732)"
+    cleaned_for_check = text.replace("**", "").strip()
+    is_negative = cleaned_for_check.startswith("(") and cleaned_for_check.endswith(")")
+    
     cleaned = (
         text.replace("**", "")
-        .replace("k$", "")
-        .replace("K$", "")
+        .replace("≈", "")
         .replace("$", "")
-        .replace(",", "")  # Remove commas
-        .replace(" ", "")  # Remove spaces (handles "123 456" format)
+        .replace(",", "")
+        .replace(" ", "")
     )
+    # Remove parentheses but preserve the negative indicator
+    cleaned = re.sub(r"[()]", "", cleaned).strip()
+    
     if not cleaned or cleaned in {"-", "–"}:
         return None
     try:
-        value_as_thousands = float(cleaned)
+        value = float(cleaned) / 1_000_000_000
+        # Apply negative sign if parentheses were present
+        return -value if is_negative else value
     except ValueError:
         return None
-    # Convert thousands of dollars to billions (divide by 1_000_000)
-    return round(value_as_thousands / 1_000_000, 6)
 
 
 def clean_name(text: str) -> str:
@@ -102,11 +112,26 @@ def clean_name(text: str) -> str:
 
 
 def split_name_and_value(raw: str) -> tuple[str, Optional[str]]:
-    parts = NUMBER_SPLIT_PATTERN.split(raw.replace("**", ""), maxsplit=1)
-    if len(parts) == 2:
-        name, value_text = parts
-        return name.strip(" -*"), value_text.strip()
-    return clean_name(raw), None
+    """Split line into name and value, handling multiple dashes."""
+    cleaned = raw.replace("**", "")
+    parts = re.split(r"\s[–-]\s+", cleaned)
+    
+    if len(parts) < 2:
+        return clean_name(cleaned), None
+    
+    amount_pattern = re.compile(r"^[\d\s,]+(?:\s*\$?)?$")
+    
+    for i in range(len(parts) - 1, 0, -1):
+        potential_amount = parts[i].strip()
+        if amount_pattern.match(potential_amount) or re.search(r"\d", potential_amount):
+            name = " – ".join(parts[:i]).strip(" -*")
+            return name, potential_amount
+    
+    if len(parts) >= 2:
+        name = " – ".join(parts[:-1]).strip(" -*")
+        return name, parts[-1].strip()
+    
+    return clean_name(cleaned), None
 
 
 def extract_name_and_amount(raw: str) -> tuple[str, Optional[float]]:
@@ -130,20 +155,18 @@ def parse_metric_value(value_text: str, value_type: str) -> Optional[float]:
     if value_type == "integer":
         return int(numeric)
     if value_type == "currency":
-        return round(numeric / 1_000_000, 6)
+        return numeric / 1_000_000_000
     return numeric
 
 
 def parse_markdown(filepath: Path) -> dict:
     sections = {"revenues": [], "expenses": []}
     totals = {"revenues": None, "expenses": None}
-    metrics: Dict[str, Optional[float]] = {
-        spec["field"]: None for spec in METRIC_SPECS
-    }
+    metrics: Dict[str, Optional[float]] = {spec["field"]: None for spec in METRIC_SPECS}
 
     current_section: Optional[str] = None
     current_parent: Optional[Entry] = None
-    parent_stack: List[tuple[int, Entry]] = []  # (indent_level, entry) pairs
+    parent_stack: List[tuple[int, Entry]] = []
 
     with filepath.open("r", encoding="utf-8") as f:
         for raw_line in f:
@@ -160,15 +183,13 @@ def parse_markdown(filepath: Path) -> dict:
                 current_parent = None
                 parent_stack = []
                 continue
-            # Handle ### headers as top-level categories
+            
             header_match = LEADING_HEADER_PATTERN.match(stripped)
             if header_match and current_section in ("revenues", "expenses"):
                 category_name = header_match.group(1).strip()
-                # Handle "Grand Total" entries - extract amount from next line if available
                 if "grand total" in category_name.lower() or "total" in category_name.lower():
                     current_parent = None
                     parent_stack = []
-                    # Try to extract amount from the category name itself
                     if "–" in category_name or "-" in category_name:
                         parts = NUMBER_SPLIT_PATTERN.split(category_name, maxsplit=1)
                         if len(parts) == 2:
@@ -179,7 +200,7 @@ def parse_markdown(filepath: Path) -> dict:
                 entry = Entry(name=category_name, amount=None)
                 sections[current_section].append(entry)
                 current_parent = entry
-                parent_stack = [(0, entry)]  # Reset stack with new category
+                parent_stack = [(0, entry)]
                 continue
             
             if stripped.startswith("##"):
@@ -193,9 +214,7 @@ def parse_markdown(filepath: Path) -> dict:
             if stripped in {"", "---"}:
                 continue
             if stripped.startswith(("(", "(All figures")):
-                # Comment or note line
                 continue
-            # Skip lines that are just headers or notes
             if stripped.startswith("(") and stripped.endswith(")"):
                 continue
             
@@ -209,18 +228,12 @@ def parse_markdown(filepath: Path) -> dict:
             if not content:
                 continue
 
-            # Handle * **Category** as top-level category (lenient: allow variations)
-            # Check for bold-only content (category header) at top level
             if indent_level == 0 and current_section in ("revenues", "expenses"):
-                # Try to match bold-only pattern (more lenient)
                 bold_match = re.match(r"^\*\*(.+?)\*\*\s*$", content)
                 if bold_match:
                     category_name = bold_match.group(1).strip()
-                    # Skip if it's a total line (has "total" and a dash/amount)
                     if "total" in category_name.lower():
-                        # Check if it has an amount (has dash or number)
                         if "–" in category_name or "-" in category_name or re.search(r'\d', category_name):
-                            # Extract total amount
                             parts = NUMBER_SPLIT_PATTERN.split(category_name, maxsplit=1)
                             if len(parts) == 2:
                                 amount = parse_amount(parts[1].strip())
@@ -229,7 +242,6 @@ def parse_markdown(filepath: Path) -> dict:
                             current_parent = None
                             parent_stack = []
                             continue
-                    # Create new top-level category
                     entry = Entry(name=category_name, amount=None)
                     sections[current_section].append(entry)
                     current_parent = entry
@@ -238,7 +250,6 @@ def parse_markdown(filepath: Path) -> dict:
 
             name, amount = extract_name_and_amount(content)
 
-            # Skip calculation check bullets or narration
             if name.lower().startswith("calcul") or name.lower().startswith("note"):
                 continue
 
@@ -251,47 +262,32 @@ def parse_markdown(filepath: Path) -> dict:
                 lowered = metric_name.lower()
                 for spec in METRIC_SPECS:
                     if any(alias in lowered for alias in spec["aliases"]):
-                        parsed_value = parse_metric_value(
-                            metric_value_text, spec["type"]
-                        )
-                        # Only set if we got a valid parsed value, otherwise leave as None
+                        parsed_value = parse_metric_value(metric_value_text, spec["type"])
                         if parsed_value is not None:
                             metrics[spec["field"]] = parsed_value
                         break
                 continue
 
-            # Handle nested structure - track parent chain based on indent level
             if current_parent is not None:
                 if name.lower().startswith("total"):
-                    # Set parent's total
                     current_parent.amount = amount
-                    # Clear parent stack when we hit a total
                     parent_stack = []
                     continue
                 
-                # Find the correct parent based on indent level
-                # Remove parents from stack that are at same or deeper indent
                 while parent_stack and parent_stack[-1][0] >= indent_level:
                     parent_stack.pop()
                 
-                # Get the appropriate parent (deepest one at shallower indent)
-                if parent_stack:
-                    actual_parent = parent_stack[-1][1]
-                else:
-                    actual_parent = current_parent
+                actual_parent = parent_stack[-1][1] if parent_stack else current_parent
                 
-                # Add as child
+                # Add children (will be collapsed later if single-child in to_sankey_node)
                 child = Entry(name=name, amount=amount)
                 actual_parent.children.append(child)
                 
-                # If this child might have children (no amount yet), add to stack
                 if amount is None:
                     parent_stack.append((indent_level, child))
                 continue
 
-            # No current parent - this is a top-level entry
             if indent_level == 0:
-                # Top-level bullet
                 if name.lower().startswith("total "):
                     totals[current_section] = amount
                     current_parent = None
@@ -305,16 +301,27 @@ def parse_markdown(filepath: Path) -> dict:
                 else:
                     parent_stack = []
             else:
-                # Indented bullet but no parent - skip
                 continue
 
-    # Backfill missing totals from child sums
+    def backfill_entry(entry: Entry) -> None:
+        """
+        Backfill missing amounts by summing children.
+        Note: Single-child categories will be collapsed in to_sankey_node().
+        """
+        for child in entry.children:
+            backfill_entry(child)
+        if entry.amount is None and entry.children:
+            entry.amount = sum(child.amount or 0 for child in entry.children)
+    
     for category in sections.values():
         for entry in category:
-            if entry.amount is None and entry.children:
-                entry.amount = round(
-                    sum(child.amount or 0 for child in entry.children), 6
-                )
+            backfill_entry(entry)
+
+    for section_name in ("revenues", "expenses"):
+        if totals[section_name] is None and sections[section_name]:
+            grand_total = sum(entry.amount or 0 for entry in sections[section_name])
+            if grand_total > 0:
+                totals[section_name] = grand_total
 
     return {"sections": sections, "totals": totals, "metrics": metrics}
 
@@ -352,9 +359,8 @@ def build_sankey_data(parsed: dict, city_name: str) -> dict:
     total_revenue = totals["revenues"]
     total_spending = totals["expenses"]
     budget_balance = (
-        None
-        if total_revenue is None or total_spending is None
-        else round(total_revenue - total_spending, 6)
+        None if total_revenue is None or total_spending is None
+        else total_revenue - total_spending
     )
 
     property_tax_revenue = metrics.get("propertyTaxRevenue")
@@ -378,7 +384,7 @@ def build_sankey_data(parsed: dict, city_name: str) -> dict:
         else None
     )
 
-    sankey = {
+    return {
         "city": city_name,
         "total": total_revenue,
         "spending": total_spending,
@@ -397,7 +403,6 @@ def build_sankey_data(parsed: dict, city_name: str) -> dict:
         "property_tax_per_capita": property_tax_per_capita,
         "property_tax_revenue": property_tax_revenue,
     }
-    return sankey
 
 
 def build_summary_data(parsed: dict, city_name: str, year: str, source: str, pdf_url: Optional[str] = None) -> dict:
@@ -407,9 +412,8 @@ def build_summary_data(parsed: dict, city_name: str, year: str, source: str, pdf
     metrics = parsed.get("metrics", {})
     total_revenue = totals["revenues"]
     budget_balance = (
-        None
-        if total_revenue is None or total_spending is None
-        else round(total_revenue - total_spending, 6)
+        None if total_revenue is None or total_spending is None
+        else total_revenue - total_spending
     )
     population = metrics.get("population")
     property_tax_revenue = metrics.get("propertyTaxRevenue")
@@ -434,21 +438,17 @@ def build_summary_data(parsed: dict, city_name: str, year: str, source: str, pdf
     ministries = []
     if total_spending and not math.isclose(total_spending, 0):
         for entry in sections["expenses"]:
-            percentage = (
-                (entry.amount or 0) / total_spending * 100 if total_spending else 0
-            )
-            ministries.append(
-                {
-                    "name": entry.name,
-                    "slug": slugify(entry.name),
-                    "totalSpending": entry.amount,
-                    "totalSpendingFormatted": format_currency(entry.amount),
-                    "percentage": round(percentage, 6),
-                    "percentageFormatted": f"{round(percentage, 1)}%",
-                }
-            )
+            percentage = (entry.amount or 0) / total_spending * 100 if total_spending else 0
+            ministries.append({
+                "name": entry.name,
+                "slug": slugify(entry.name),
+                "totalSpending": entry.amount,
+                "totalSpendingFormatted": format_currency(entry.amount),
+                "percentage": round(percentage, 6),
+                "percentageFormatted": f"{round(percentage, 1)}%",
+            })
 
-    summary = {
+    return {
         "name": city_name,
         "financialYear": year,
         "source": source,
@@ -469,7 +469,6 @@ def build_summary_data(parsed: dict, city_name: str, year: str, source: str, pdf
         "ministries": ministries,
         "generatedAt": datetime.now(timezone.utc).isoformat(),
     }
-    return summary
 
 
 def write_json(data: dict, output_path: Path) -> None:
@@ -480,7 +479,6 @@ def write_json(data: dict, output_path: Path) -> None:
 
 
 def download_pdf(url: str, output_path: Path) -> None:
-    """Download PDF from URL to the specified path."""
     output_path.parent.mkdir(parents=True, exist_ok=True)
     try:
         urlretrieve(url, output_path)
@@ -489,16 +487,13 @@ def download_pdf(url: str, output_path: Path) -> None:
 
 
 def load_prompt_template(prompt_file: Path) -> str:
-    """Load the prompt template from file."""
     if not prompt_file.exists():
         raise FileNotFoundError(f"Prompt file not found: {prompt_file}")
     with prompt_file.open("r", encoding="utf-8") as f:
         content = f.read()
-    # Remove the "Model: ..." line if present
     lines = content.split("\n")
     if lines[0].startswith("Model:"):
-        content = "\n".join(lines[2:])  # Skip model line and blank line
-    # Extract just the prompt content (between ``` markers if present)
+        content = "\n".join(lines[2:])
     if "```" in content:
         parts = content.split("```")
         if len(parts) >= 3:
@@ -506,10 +501,7 @@ def load_prompt_template(prompt_file: Path) -> str:
     return content.strip()
 
 
-def call_openai_api(
-    pdf_path: Path, prompt_template: str, year: str, model: str
-) -> str:
-    """Extract data from PDF using OpenAI Chat Completions API with file upload."""
+def call_openai_api(pdf_path: Path, prompt_template: str, year: str, model: str) -> str:
     api_key = os.getenv("OPENAI_API_KEY")
     if not api_key:
         raise ValueError(
@@ -526,12 +518,11 @@ def call_openai_api(
         )
 
     client = OpenAI(api_key=api_key)
-    prompt = prompt_template.replace("<year>", year)
+    prompt = prompt_template.replace("{{YEAR}}", year).replace("<year>", year)
 
     print(f"Uploading PDF and calling {model}...")
     file_obj = None
     try:
-        # Upload and process file
         with pdf_path.open("rb") as pdf_file:
             file_obj = client.files.create(file=pdf_file, purpose="assistants")
         
@@ -541,21 +532,18 @@ def call_openai_api(
             time.sleep(1)
             file_obj = client.files.retrieve(file_obj.id)
 
-        # Call API with file attachment
         response = client.chat.completions.create(
             model=model,
-            messages=[
-                {
-                    "role": "user",
-                    "content": [
-                        {
-                            "type": "text",
-                            "text": f"{prompt}\n\nExtract the budget data from the attached PDF for year {year}. Follow the instructions exactly."
-                        },
-                        {"type": "file", "file_id": file_obj.id}
-                    ]
-                }
-            ],
+            messages=[{
+                "role": "user",
+                "content": [
+                    {
+                        "type": "text",
+                        "text": f"{prompt}\n\nExtract the financial actuals data from the attached PDF for year {year}. Follow the instructions exactly."
+                    },
+                    {"type": "file", "file_id": file_obj.id}
+                ]
+            }],
             temperature=0,
         )
 
@@ -573,10 +561,7 @@ def call_openai_api(
                 pass
 
 
-def extract_with_openai(
-    pdf_path: Path, prompt_file: Path, output_markdown: Path, year: str, model: str
-) -> None:
-    """Extract data from PDF using OpenAI API."""
+def extract_with_openai(pdf_path: Path, prompt_file: Path, output_markdown: Path, year: str, model: str) -> None:
     prompt_template = load_prompt_template(prompt_file)
     extracted_text = call_openai_api(pdf_path, prompt_template, year, model)
     output_markdown.parent.mkdir(parents=True, exist_ok=True)
@@ -585,93 +570,47 @@ def extract_with_openai(
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Download, extract, and convert Gatineau budget data into structured JSON.",
+        description="Convert Gatineau financial actuals markdown to JSON.",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  # Full workflow: download, extract, and convert
-  python3 processor.py --year 2025 --pdf-url <url>
-
-  # Just extract and convert (PDF already downloaded)
-  python3 processor.py --year 2025 --extract
-
-  # Just convert (markdown already exists)
-  python3 processor.py --year 2025
+  python3 processor.py --year 2024 --pdf-url <url> --extract
+  python3 processor.py --year 2024 --extract
+  python3 processor.py --year 2024
         """,
     )
-    parser.add_argument(
-        "--year",
-        required=True,
-        help="Financial year to process (e.g. 2025).",
-    )
-    parser.add_argument(
-        "--pdf-url",
-        default=None,
-        help="URL to download the budget PDF from. If provided, PDF will be downloaded.",
-    )
-    parser.add_argument(
-        "--extract",
-        action="store_true",
-        help="Extract data from PDF using OpenAI API. Requires OPENAI_API_KEY env var.",
-    )
-    parser.add_argument(
-        "--input-markdown",
-        default=None,
-        help=(
-            "Markdown file containing the revenue and expense summary. "
-            "Defaults to data/gatineau/extracted/<year>/llm_extracted.md."
-        ),
-    )
-    parser.add_argument(
-        "--output-dir",
-        default="data/gatineau",
-        help="Directory where sankey.json and summary.json will be written.",
-    )
+    parser.add_argument("--year", required=True, help="Financial year (e.g. 2024)")
+    parser.add_argument("--pdf-url", default=None, help="URL to download PDF from")
+    parser.add_argument("--extract", action="store_true", help="Extract from PDF using OpenAI API")
+    parser.add_argument("--input-markdown", default=None, help="Markdown file path")
+    parser.add_argument("--output-dir", default="data/gatineau", help="Output directory")
     parser.add_argument("--city-name", default="Gatineau")
-    parser.add_argument(
-        "--source",
-        default=None,
-        help=(
-            "Source reference for the summary metadata. "
-            "Defaults to data/gatineau/raw/Gatineau Budget <year>.pdf."
-        ),
-    )
-    parser.add_argument(
-        "--model",
-        default=OPENAI_MODEL,
-        help=f"OpenAI model to use for extraction. Defaults to {OPENAI_MODEL}.",
-    )
-    parser.add_argument(
-        "--prompt-file",
-        default="data/gatineau/llm_prompt.txt",
-        help="Path to the prompt template file. Defaults to data/gatineau/llm_prompt.txt.",
-    )
+    parser.add_argument("--source", default=None, help="Source reference")
+    parser.add_argument("--model", default=OPENAI_MODEL, help=f"OpenAI model (default: {OPENAI_MODEL})")
+    parser.add_argument("--prompt-file", default="data/gatineau/llm_prompt.txt", help="Prompt template file")
     args = parser.parse_args()
 
     base_dir = Path("data/gatineau")
     year = args.year
     city_name = args.city_name
 
-    # Step 1: Download PDF if needed
-    pdf_path = base_dir / "raw" / f"{city_name} Budget {year}.pdf"
-    pdf_url = args.pdf_url
-    if pdf_url and not pdf_path.exists():
-        print(f"Step 1: Downloading PDF...")
-        download_pdf(pdf_url, pdf_path)
+    pdf_path = base_dir / "raw" / f"{city_name} Consolidated Financial Report {year}.pdf"
+    if args.pdf_url and not pdf_path.exists():
+        print("Step 1: Downloading PDF...")
+        download_pdf(args.pdf_url, pdf_path)
     elif args.extract and not pdf_path.exists():
         print(f"Error: PDF not found at {pdf_path}. Provide --pdf-url to download it.")
         sys.exit(1)
 
-    # Step 2: Extract with OpenAI if requested
     markdown_path = (
         Path(args.input_markdown)
         if args.input_markdown
-        else base_dir / "extracted" / year / "llm_extracted.md"
+        else base_dir / "extracted" / year / "llm_extracted_en.md"
     )
     prompt_file = Path(args.prompt_file)
 
     if args.extract:
-        print(f"Step 2: Extracting data from PDF...")
+        print("Step 2: Extracting data from PDF...")
         try:
             extract_with_openai(pdf_path, prompt_file, markdown_path, year, args.model)
         except ValueError as e:
@@ -686,30 +625,25 @@ Examples:
         print("Run with --extract to extract from PDF, or provide --input-markdown")
         sys.exit(1)
 
-    # Step 3: Convert markdown to JSON
-    print(f"Step 3: Converting markdown to JSON...")
+    print("Step 3: Converting markdown to JSON...")
     parsed = parse_markdown(markdown_path)
     
     output_dir = Path(args.output_dir)
     sankey_path = output_dir / "sankey.json"
     summary_path = output_dir / "summary.json"
     
-    # Preserve existing PDF URL from summary.json if no new URL provided
     existing_pdf_url = None
     if summary_path.exists():
         try:
             existing_data = json.loads(summary_path.read_text())
-            # Check both pdfUrl and source fields (source may contain URL)
             existing_pdf_url = existing_data.get("pdfUrl")
             if not existing_pdf_url and existing_data.get("source", "").startswith("http"):
                 existing_pdf_url = existing_data.get("source")
         except Exception:
             pass
     
-    # Use provided URL, or preserve existing, or None
-    final_pdf_url = pdf_url or existing_pdf_url
-    
-    source = args.source or pdf_url or f"data/gatineau/raw/{city_name} Budget {year}.pdf"
+    final_pdf_url = args.pdf_url or existing_pdf_url
+    source = args.source or args.pdf_url or f"data/gatineau/raw/{city_name} Consolidated Financial Report {year}.pdf"
     write_json(build_sankey_data(parsed, city_name), sankey_path)
     write_json(build_summary_data(parsed, city_name, year, source, final_pdf_url), summary_path)
     
@@ -718,4 +652,3 @@ Examples:
 
 if __name__ == "__main__":
     main()
-

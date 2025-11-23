@@ -1,6 +1,6 @@
-# Gatineau Budget Data
+# Gatineau Financial Actuals Data
 
-Scripts and data for extracting and processing Gatineau's municipal budget data.
+Extract and process Gatineau's municipal financial actuals (consolidated accounting actuals, not budgeted projections).
 
 ## Setup
 
@@ -12,54 +12,44 @@ pip install -r data/gatineau/scripts/requirements.txt
 
 ## Usage
 
-### Full Workflow
+**Full workflow:**
 
 ```bash
 export OPENAI_API_KEY='your-key-here'
-python3 data/gatineau/scripts/processor.py \
-  --year 2025 \
-  --pdf-url "https://www.gatineau.ca/..." \
-  --extract
+python3 data/gatineau/scripts/processor.py --year 2024 --pdf-url "https://..." --extract
 ```
 
-### Step-by-Step
-
-**Download PDF:**
-
-```bash
-python3 data/gatineau/scripts/processor.py --year 2025 --pdf-url "https://..."
-```
-
-**Extract Data (requires API key):**
+**Extract only (PDF already downloaded):**
 
 ```bash
 export OPENAI_API_KEY='your-key-here'
-python3 data/gatineau/scripts/processor.py --year 2025 --extract
+python3 data/gatineau/scripts/processor.py --year 2024 --extract
 ```
 
-**Or Extract Manually:**
+**Convert only (markdown already exists):**
 
-1. Open `raw/Gatineau Budget <year>.pdf`
+```bash
+python3 data/gatineau/scripts/processor.py --year 2024
+```
+
+**Manual extraction:**
+
+1. Open `raw/Gatineau Consolidated Financial Report <year>.pdf`
 2. Use prompt from `llm_prompt.txt` with your LLM
 3. Save output to `extracted/<year>/llm_extracted.md`
-
-**Convert to JSON:**
-
-```bash
-python3 data/gatineau/scripts/processor.py --year 2025
-```
+4. Run converter: `python3 data/gatineau/scripts/processor.py --year 2024`
 
 ## Output
 
-- `sankey.json` - Hierarchical budget data for visualization
+- `sankey.json` - Hierarchical financial data for visualization
 - `summary.json` - Metadata, metrics, and ministry breakdowns
 
 ## Data Format
 
-Extracted markdown must include:
+Markdown must include:
 
-- `## Key Metrics – <year>` section (population, employees, debt, property tax)
-- `## Revenues – <year>` section with nested bullets
-- `## Expenses – <year>` section with nested bullets
+- `## Key Metrics – <year>` (population, employees, debt, property tax)
+- `## Revenues – <year>` (nested bullets with amounts)
+- `## Expenses – <year>` (nested bullets with amounts)
 
-All amounts in thousands of dollars (`k$`). See `llm_prompt.txt` for full specification.
+All amounts must be in full dollars (e.g., `$123,456,789`), not thousands. See `llm_prompt.txt` for full specification.
