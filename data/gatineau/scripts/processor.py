@@ -40,47 +40,28 @@ class Entry:
     children: List["Entry"] = field(default_factory=list)
 
     def to_sankey_node(self) -> dict:
-        """
-        Convert Entry to sankey node format.
-        
-        If a category has exactly one child, collapse it into a single element
-        with the format "parent - child". This simplifies the visualization
-        while preserving the information.
-        """
+        """Convert Entry to sankey node format. Collapses single-child categories into "parent – child"."""
         node: dict = {"name": self.name}
-        if self.children:
-            # Collapse single-child categories into "parent - child" format
-            if len(self.children) == 1:
-                child = self.children[0]
-                child_node = child.to_sankey_node()
-                # If the child has children (multiple or already collapsed), preserve its structure
-                if "children" in child_node:
-                    node["children"] = [child_node]
-                else:
-                    # Collapse: combine parent and child names
-                    # Check if child name already contains " – " to avoid double-collapsing
-                    if " – " in child_node["name"]:
-                        # Child was already collapsed, preserve it as a child
-                        node["children"] = [child_node]
-                    else:
-                        # Collapse: combine parent and child names
-                        node["name"] = f"{self.name} – {child_node['name']}"
-                        node["amount"] = child_node.get("amount")
-            else:
-                # Multiple children: preserve the hierarchy
-                node["children"] = [child.to_sankey_node() for child in self.children]
-        else:
+        if not self.children:
             node["amount"] = self.amount
+            return node
+        
+        if len(self.children) == 1:
+            child_node = self.children[0].to_sankey_node()
+            if "children" in child_node or " – " in child_node["name"]:
+                node["children"] = [child_node]
+            else:
+                node["name"] = f"{self.name} – {child_node['name']}"
+                node["amount"] = child_node.get("amount")
+        else:
+            node["children"] = [child.to_sankey_node() for child in self.children]
         return node
 
 
 def parse_amount(text: str) -> Optional[float]:
     """Convert '$123,456,789' or '($123,456,789)' string to billions of dollars.
-    
     Negative values are indicated by parentheses: ($123) = -$123
     """
-    # Check if the value is negative (wrapped in parentheses)
-    # Handle cases like "**($1,732)**" or "($1,732)"
     cleaned_for_check = text.replace("**", "").strip()
     is_negative = cleaned_for_check.startswith("(") and cleaned_for_check.endswith(")")
     
@@ -91,14 +72,12 @@ def parse_amount(text: str) -> Optional[float]:
         .replace(",", "")
         .replace(" ", "")
     )
-    # Remove parentheses but preserve the negative indicator
     cleaned = re.sub(r"[()]", "", cleaned).strip()
     
     if not cleaned or cleaned in {"-", "–"}:
         return None
     try:
         value = float(cleaned) / 1_000_000_000
-        # Apply negative sign if parentheses were present
         return -value if is_negative else value
     except ValueError:
         return None
@@ -187,7 +166,7 @@ def parse_markdown(filepath: Path) -> dict:
             header_match = LEADING_HEADER_PATTERN.match(stripped)
             if header_match and current_section in ("revenues", "expenses"):
                 category_name = header_match.group(1).strip()
-                if "grand total" in category_name.lower() or "total" in category_name.lower():
+                if "total" in category_name.lower():
                     current_parent = None
                     parent_stack = []
                     if "–" in category_name or "-" in category_name:
@@ -211,11 +190,7 @@ def parse_markdown(filepath: Path) -> dict:
                     continue
             if current_section is None:
                 continue
-            if stripped in {"", "---"}:
-                continue
-            if stripped.startswith(("(", "(All figures")):
-                continue
-            if stripped.startswith("(") and stripped.endswith(")"):
+            if stripped in {"", "---"} or (stripped.startswith("(") and stripped.endswith(")")):
                 continue
             
             bullet_match = LEADING_BULLET_PATTERN.match(line)
@@ -278,8 +253,6 @@ def parse_markdown(filepath: Path) -> dict:
                     parent_stack.pop()
                 
                 actual_parent = parent_stack[-1][1] if parent_stack else current_parent
-                
-                # Add children (will be collapsed later if single-child in to_sankey_node)
                 child = Entry(name=name, amount=amount)
                 actual_parent.children.append(child)
                 
@@ -304,10 +277,7 @@ def parse_markdown(filepath: Path) -> dict:
                 continue
 
     def backfill_entry(entry: Entry) -> None:
-        """
-        Backfill missing amounts by summing children.
-        Note: Single-child categories will be collapsed in to_sankey_node().
-        """
+        """Backfill missing amounts by summing children."""
         for child in entry.children:
             backfill_entry(child)
         if entry.amount is None and entry.children:
@@ -351,6 +321,26 @@ def format_signed_currency(amount: Optional[float]) -> Optional[str]:
     return f"-{formatted}" if amount < 0 else formatted
 
 
+def _get_property_tax_revenue(metrics: dict, sections: dict) -> Optional[float]:
+    """Get property tax revenue from metrics or find it in revenue sections."""
+    revenue = metrics.get("propertyTaxRevenue")
+    if revenue is None:
+        tax_entry = next(
+            (entry for entry in sections["revenues"] if "tax" in entry.name.lower()),
+            None,
+        )
+        if tax_entry:
+            revenue = tax_entry.amount
+    return revenue
+
+
+def _calculate_per_capita(amount: Optional[float], population: Optional[int]) -> Optional[int]:
+    """Calculate per capita amount in dollars."""
+    if population and amount:
+        return int(round((amount * 1_000_000_000) / population))
+    return None
+
+
 def build_sankey_data(parsed: dict, city_name: str) -> dict:
     totals = parsed["totals"]
     sections = parsed["sections"]
@@ -363,26 +353,10 @@ def build_sankey_data(parsed: dict, city_name: str) -> dict:
         else total_revenue - total_spending
     )
 
-    property_tax_revenue = metrics.get("propertyTaxRevenue")
-    if property_tax_revenue is None:
-        property_tax_entry = next(
-            (entry for entry in sections["revenues"] if "tax" in entry.name.lower()),
-            None,
-        )
-        if property_tax_entry:
-            property_tax_revenue = property_tax_entry.amount
-
+    property_tax_revenue = _get_property_tax_revenue(metrics, sections)
     population = metrics.get("population")
-    per_capita_spending = (
-        int(round((total_spending * 1_000_000_000) / population))
-        if population and total_spending
-        else None
-    )
-    property_tax_per_capita = (
-        int(round((property_tax_revenue * 1_000_000_000) / population))
-        if population and property_tax_revenue is not None
-        else None
-    )
+    per_capita_spending = _calculate_per_capita(total_spending, population)
+    property_tax_per_capita = _calculate_per_capita(property_tax_revenue, population)
 
     return {
         "city": city_name,
@@ -408,32 +382,19 @@ def build_sankey_data(parsed: dict, city_name: str) -> dict:
 def build_summary_data(parsed: dict, city_name: str, year: str, source: str, pdf_url: Optional[str] = None) -> dict:
     totals = parsed["totals"]
     total_spending = totals["expenses"]
+    total_revenue = totals["revenues"]
     sections = parsed["sections"]
     metrics = parsed.get("metrics", {})
-    total_revenue = totals["revenues"]
+    
     budget_balance = (
         None if total_revenue is None or total_spending is None
         else total_revenue - total_spending
     )
+    
     population = metrics.get("population")
-    property_tax_revenue = metrics.get("propertyTaxRevenue")
-    if property_tax_revenue is None:
-        property_tax_entry = next(
-            (entry for entry in sections["revenues"] if "tax" in entry.name.lower()),
-            None,
-        )
-        if property_tax_entry:
-            property_tax_revenue = property_tax_entry.amount
-    property_tax_per_capita = (
-        int(round((property_tax_revenue * 1_000_000_000) / population))
-        if property_tax_revenue is not None and population
-        else None
-    )
-    per_capita_spending = (
-        int(round((total_spending * 1_000_000_000) / population))
-        if population and total_spending
-        else None
-    )
+    property_tax_revenue = _get_property_tax_revenue(metrics, sections)
+    property_tax_per_capita = _calculate_per_capita(property_tax_revenue, population)
+    per_capita_spending = _calculate_per_capita(total_spending, population)
 
     ministries = []
     if total_spending and not math.isclose(total_spending, 0):

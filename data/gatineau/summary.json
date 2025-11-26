@@ -82,5 +82,7 @@
       "percentageFormatted": "3.2%"
     }
   ],
+  "credits": "Built by [Jonathan Clarkin](https://www.linkedin.com/in/jonathanclarkin/)",
+  "methodology": "Financial data is extracted from Gatineau's [Consolidated Financial Report](https://www.gatineau.ca/docs/rapports-financiers/rapport-financier-consolide-2024.pdf) using LLM-assisted extraction. All values are taken from the \"Données consolidées - Réalisations 2024\" column in the \"Analyse des revenus consolidés\" and \"Analyse des charges consolidées\" sections, which represent actual consolidated accounting values (operating + capital combined). All values were manually validated against the source document and programmatically transformed into the Sankey diagram structure.",
   "generatedAt": "2025-11-26T02:33:36.084231+00:00"
 }

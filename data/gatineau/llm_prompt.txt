@@ -1,49 +1,16 @@
 ## ✅ **Prompt Template**
 
-**Extract the consolidated accounting ACTUALS for the fiscal year {{YEAR}} from this financial report.
-Use only the detailed functional breakdown pages (“Analysis of consolidated revenues” and “Analysis of consolidated expenses”).
-Do NOT use fiscal reconciliation pages, affectations, amortization reversals, or charges-by-object pages.
-Ignore budgeted/projected amounts entirely.
-Use only the FINAL consolidated realized values for {{YEAR}}.**
+**Extract consolidated accounting ACTUALS for fiscal year {{YEAR}} from "Analyse des revenus consolidés" and "Analyse des charges consolidées" pages only.
+Ignore: fiscal reconciliation, affectations, amortization, charges-by-object, budgets, prior-year columns.**
 
 ### **Data selection rules (critical):**
 
-1. **Use the Accounting Consolidated view (operating + capital combined).**
-   This must include ALL consolidated revenue and ALL consolidated spending for the year — no exclusions.
+1. **Column:** Use ONLY "Données consolidées - Réalisations {{YEAR}}" column.
+   ❌ DO NOT use "Administration municipale" or "Réalisations {{YEAR-1}}" columns.
 
-2. **Extract the full functional hierarchy (2–4 levels deep)** exactly as presented in:
+2. **Scope:** Extract ALL consolidated revenue and spending (operating + capital combined).
 
-   * Analyse des revenus consolidés
-   * Analyse des charges consolidées
-     (These are usually the S-pages at the end of the report.)
-   
-   **CRITICAL:** Preserve the EXACT hierarchical structure from the PDF. Do NOT roll up subcategories into parent categories.
-   
-   * If the PDF shows "Transport" → "Réseau routier" → "Voirie municipale", extract all three levels
-   * If the PDF shows "Hygiène du milieu" → "Eau et égout" → multiple sub-items, extract all sub-items with their parent
-   * Do NOT combine "Transport régulier" and "Transport adapté" into a single "Transport en commun" line
-   * Do NOT combine "Industries et commerces" and "Tourisme" into a single "Promotion et développement économique" line
-   * Always maintain the parent-child relationships exactly as shown in the PDF
-
-3. **Ignore the following sections:**
-
-   * Fiscal reconciliation (“conciliation à des fins fiscales”)
-   * Affectations to/from reserves
-   * Charges par objets (salaries, services, amortization)
-   * Any budget columns
-   * Any prior-year comparative columns
-   * Any adjustments or footnotes that are *not actual consolidated values*
-
-4. **Use the 'Total consolidated – ACTUAL {{YEAR}}' column only.**
-   
-   **CRITICAL:** The PDF has multiple columns. You MUST use ONLY the "Données consolidées - Réalisations {{YEAR}}" column.
-   
-   **DO NOT use:**
-   * "Administration municipale Réalisations {{YEAR}}" column (this is NOT the consolidated value)
-   * "Données consolidées Réalisations {{YEAR-1}}" column (this is the prior year, NOT {{YEAR}})
-   * Any "Sans ventilation" or "Ventilation" columns
-   
-   **ALWAYS use:** "Données consolidées - Réalisations {{YEAR}}" column (the rightmost 2024 column in consolidated data tables)
+3. **Hierarchy:** Preserve EXACT structure — extract all levels, do NOT roll up or combine siblings.
 
 ---
 
@@ -58,93 +25,24 @@ Use only the FINAL consolidated realized values for {{YEAR}}.**
 * Debt interest – **$<amount>**
 * Property tax revenue – **$<amount>**
 
-(Money must be in **actual dollars** (full precision), with `$` prefix. Do NOT use "k$" or thousands notation.)
+### **## Revenues – {{YEAR}}** / **## Expenses – {{YEAR}}**
 
----
-
-### **## Revenues – {{YEAR}}**
-
-Follow this exact structure:
-
-* **Category (no amount)**
-
-  * Subcategory – **$123,456,789**
-  * Subcategory with children:
-
-    * Sub-subcategory – **$50,000,000**
-    * Sub-subcategory – **$30,000,000**
-    * **Total Subcategory – $80,000,000**
-  * Another subcategory – **$40,000,000**
-  * **Total Category – $120,000,000**
-
-**Indentation rules:**
-
-* Top level: `* **Category**`
-* 2 spaces indent for sub-items
-* 4 spaces indent if deeper levels exist
-* Always include **Total** lines for any category with children
-* Use dashes between label and number: `Name – **$amount**`
-* Use full precision: actual dollar amounts with commas (e.g., **$123,456,789**), NOT thousands notation (no "k$")
-
-**CRITICAL formatting rules:**
-
-* **Negative values:** If a value is negative in the PDF, use parentheses: `**($123,456)**` NOT `**-$123,456**`
-* **Section order:** Maintain the EXACT order of sections as they appear in the PDF pages (do not reorder)
-* **Subcategory preservation:** If the PDF shows a parent category with multiple subcategories, extract ALL subcategories, not just the parent total
-* **"Autres" items:** If "Autres" appears under a parent category (e.g., "Sécurité incendie" → "Autres"), preserve that hierarchy - do NOT flatten it
-
----
-
-### **## Expenses – {{YEAR}}**
-
-Use **the same structure as revenues**, fully respecting the functional hierarchy:
-
-* Administration
-* Police
-* Fire
-* Roads
-* Water
-* Waste
-* Recreation
-* Culture
-* Planning
-* Electricity
-* Etc.
-
-**Go as deep as the PDF allows (2–4 levels).**
+**Format:**
+* Structure: `* **Category**` → `  * Subcategory – **$123,456,789**` → `    * Sub-subcategory – **$50,000,000**` → `    * **Total Subcategory – $80,000,000**`
+* Amounts: Full dollars `**$123,456,789**` (NOT "k$"); negatives: `**($123)**` NOT `**-$123**`
+* Totals: Include **Total** line for categories with children
+* Order & Hierarchy: Maintain EXACT PDF page order; extract all levels, do NOT roll up
 
 ---
 
 ## ⚠️ Precision Rules
 
-* Do not invent categories; only use what is in the "Analyse des revenus/charges" tables.
-* Totals must match the PDF exactly.
-* Sub-items must never exceed parent totals (flag if PDF has rounding differences).
-* Exclude amortization, fiscal adjustments, reconciliation entries, or affectations — these only apply to legal fiscal statements, not accounting consolidated totals.
-* Extract actuals only, no budgets.
-
-**Common mistakes to avoid:**
-
-* ❌ Using "Réalisations 2023" values instead of "Réalisations {{YEAR}}" values
-* ❌ Using "Administration municipale" column instead of "Données consolidées" column
-* ❌ Rolling up subcategories (e.g., combining "Transport régulier" + "Transport adapté" into one line)
-* ❌ Missing negative signs for negative values
-* ❌ Reordering sections (maintain PDF page order)
-* ❌ Flattening hierarchy (e.g., "Sécurité incendie" → "Autres" should be nested, not flat)
-
-**Verification checklist:**
-
-* ✅ Every value comes from "Données consolidées - Réalisations {{YEAR}}" column
-* ✅ No values from "Réalisations {{YEAR-1}}" (prior year) column
-* ✅ Hierarchy matches PDF structure exactly (2-4 levels deep)
-* ✅ Negative values are shown in parentheses
-* ✅ Section order matches PDF page order
-* ✅ All subcategories are preserved, not rolled up
+* Use only categories from "Analyse des revenus/charges" tables — do not invent categories
+* Totals must match PDF exactly; flag rounding differences if sub-items exceed parent totals
+* Extract actuals only (no budgets, amortization, fiscal adjustments, reconciliation entries)
 
 ---
 
 ## 🧩 **Surplus/Deficit Calculation**
-
-At the end, compute:
 
 **Total Surplus = Total Revenues – Total Expenses**
