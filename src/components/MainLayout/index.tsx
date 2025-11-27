@@ -20,6 +20,7 @@ const provinces = [
 ];
 
 const municipalities = [
+  { slug: "montreal", name: "Montreal" },
   { slug: "toronto", name: "Toronto" },
   { slug: "vancouver", name: "Vancouver" },
 ];
