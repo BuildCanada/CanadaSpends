@@ -72,8 +72,10 @@ export const MainLayout = ({
     pathSegments[0] === i18n.locale ? pathSegments[1] : pathSegments[0];
 
   const spendingActive =
-    pathname.startsWith(`/${i18n.locale}/spending`) ||
-    pathname.startsWith(`/${i18n.locale}/budget`) ||
+    pathname.startsWith(`/${i18n.locale}/federal/spending`) ||
+    pathname.startsWith(`/${i18n.locale}/federal/budget`) ||
+    pathname.startsWith(`/${i18n.locale}/provincial/`) ||
+    pathname.startsWith(`/${i18n.locale}/municipal/`) ||
     (firstSegment ? jurisdictionSlugsSet.has(firstSegment) : false);
 
   return (
@@ -119,7 +121,7 @@ export const MainLayout = ({
                   >
                     <DropdownMenu.Item asChild>
                       <Link
-                        href={`/${i18n.locale}/spending`}
+                        href={`/${i18n.locale}/federal/spending`}
                         className="px-3 py-2 text-sm hover:bg-gray-100 rounded cursor-pointer"
                       >
                         <Trans>Federal</Trans>
@@ -128,7 +130,7 @@ export const MainLayout = ({
 
                     <DropdownMenu.Item asChild>
                       <Link
-                        href={`/${i18n.locale}/budget`}
+                        href={`/${i18n.locale}/federal/budget`}
                         className="px-3 py-2 text-sm hover:bg-gray-100 rounded cursor-pointer"
                       >
                         <Trans>Budget</Trans>
@@ -148,7 +150,7 @@ export const MainLayout = ({
                           {provinces.map((provinceSlug) => (
                             <DropdownMenu.Item key={provinceSlug} asChild>
                               <Link
-                                href={`/${i18n.locale}/${provinceSlug}`}
+                                href={`/${i18n.locale}/provincial/${provinceSlug}`}
                                 className="px-3 py-2 text-sm hover:bg-gray-100 rounded cursor-pointer"
                               >
                                 {provinceNames[provinceSlug]}
@@ -187,7 +189,7 @@ export const MainLayout = ({
                                         asChild
                                       >
                                         <Link
-                                          href={`/${i18n.locale}/${municipality.slug}`}
+                                          href={`/${i18n.locale}/municipal/${province}/${municipality.slug}`}
                                           className="px-3 py-2 text-sm hover:bg-gray-100 rounded cursor-pointer"
                                         >
                                           {municipality.name}
@@ -294,8 +296,8 @@ export const MainLayout = ({
               <Trans>Government Spending</Trans>
             </p>
             <MobileNavLink
-              href={`/${i18n.locale}/spending`}
-              active={pathname.startsWith(`/${i18n.locale}/spending`)}
+              href={`/${i18n.locale}/federal/spending`}
+              active={pathname.startsWith(`/${i18n.locale}/federal/spending`)}
               onClick={() => setIsMenuOpen(false)}
             >
               <span className="pl-4 inline-block">
@@ -304,8 +306,8 @@ export const MainLayout = ({
             </MobileNavLink>
 
             <MobileNavLink
-              href={`/${i18n.locale}/budget`}
-              active={pathname.startsWith(`/${i18n.locale}/budget`)}
+              href={`/${i18n.locale}/federal/budget`}
+              active={pathname.startsWith(`/${i18n.locale}/federal/budget`)}
               onClick={() => setIsMenuOpen(false)}
             >
               <span className="pl-4 inline-block">
@@ -320,8 +322,10 @@ export const MainLayout = ({
             {provinces.map((provinceSlug) => (
               <MobileNavLink
                 key={provinceSlug}
-                href={`/${i18n.locale}/${provinceSlug}`}
-                active={pathname.startsWith(`/${i18n.locale}/${provinceSlug}`)}
+                href={`/${i18n.locale}/provincial/${provinceSlug}`}
+                active={pathname.startsWith(
+                  `/${i18n.locale}/provincial/${provinceSlug}`,
+                )}
                 onClick={() => setIsMenuOpen(false)}
               >
                 <span className="pl-8 inline-block">
@@ -342,9 +346,9 @@ export const MainLayout = ({
                 {municipalities.map((municipality) => (
                   <MobileNavLink
                     key={municipality.slug}
-                    href={`/${i18n.locale}/${municipality.slug}`}
+                    href={`/${i18n.locale}/municipal/${province}/${municipality.slug}`}
                     active={pathname.startsWith(
-                      `/${i18n.locale}/${municipality.slug}`,
+                      `/${i18n.locale}/municipal/${province}/${municipality.slug}`,
                     )}
                     onClick={() => setIsMenuOpen(false)}
                   >

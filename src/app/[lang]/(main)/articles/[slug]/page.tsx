@@ -10,6 +10,7 @@ import {
 } from "@/lib/articles";
 import { initLingui } from "@/initLingui";
 import { generateHreflangAlternates } from "@/lib/utils";
+import { locales } from "@/lib/constants";
 import { Trans } from "@lingui/react/macro";
 import { notFound } from "next/navigation";
 import { FiClock, FiCalendar } from "react-icons/fi";
@@ -24,7 +25,6 @@ interface ArticlePageProps {
 
 // Generate static params for all articles (for static site generation)
 export async function generateStaticParams() {
-  const locales = ["en", "fr"];
   const paths: { lang: string; slug: string }[] = [];
 
   for (const lang of locales) {

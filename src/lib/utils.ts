@@ -96,7 +96,6 @@ export function localizedPath(path: string, locale: string): string {
   const cleanPath = path.startsWith("/") ? path.slice(1) : path;
 
   // Check if path already starts with a locale
-  const locales = ["en", "fr"];
   const pathParts = cleanPath.split("/");
   const firstPart = pathParts[0];
 

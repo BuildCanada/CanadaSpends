@@ -16,7 +16,7 @@ const DepartmentItem = ({ name, slug }: DepartmentProps) => {
   return (
     <div className="py-3 border-b border-gray-200">
       <InternalLink
-        href={`/${i18n.locale}/spending/${slug}`}
+        href={`/${i18n.locale}/federal/spending/${slug}`}
         className="font-medium text-gray-600"
       >
         {name}
@@ -52,19 +52,22 @@ interface JurisdictionDepartmentProps {
   jurisdiction: Jurisdiction;
   department: Department;
   lang: string;
+  basePath?: string;
 }
 
 const JurisdictionDepartmentItem = ({
   lang,
   jurisdiction,
   department,
+  basePath,
 }: JurisdictionDepartmentProps) => {
+  const href = basePath
+    ? `${basePath}/departments/${department.slug}`
+    : `/${lang}/${jurisdiction.slug}/${department.slug}`;
+
   return (
     <div className="py-3 border-b border-gray-200">
-      <InternalLink
-        href={`/${lang}/${jurisdiction.slug}/${department.slug}`}
-        className="font-medium text-gray-600"
-      >
+      <InternalLink href={href} className="font-medium text-gray-600">
         <Trans>{department.name}</Trans>
       </InternalLink>
     </div>
@@ -76,6 +79,7 @@ export const JurisdictionDepartmentList = (props: {
   jurisdiction: Jurisdiction;
   departments: Department[];
   current?: string;
+  basePath?: string;
 }) => {
   const BrowsableDepartment = props.departments
     .filter((d) => !!d.slug && !!d.name)
@@ -91,6 +95,7 @@ export const JurisdictionDepartmentList = (props: {
           lang={props.lang}
           jurisdiction={props.jurisdiction}
           department={department}
+          basePath={props.basePath}
         />
       ))}
     </div>

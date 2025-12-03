@@ -12,12 +12,8 @@ import {
 } from "@/components/Layout";
 import { JurisdictionSankey } from "@/components/Sankey/JurisdictionSankey";
 import { Tooltip } from "@/components/Tooltip";
-import { initLingui } from "@/initLingui";
-import {
-  getExpandedDepartments,
-  getJurisdictionData,
-  getJurisdictionSlugs,
-} from "@/lib/jurisdictions";
+import { Jurisdiction, Department } from "@/lib/jurisdictions";
+import { SankeyData } from "@/components/Sankey/SankeyChartD3";
 import { localizedPath } from "@/lib/utils";
 import { Trans } from "@lingui/react/macro";
 
@@ -46,31 +42,23 @@ type SankeyNode = {
   children?: SankeyNode[];
 };
 
-export const dynamicParams = false;
-
-export function generateStaticParams() {
-  const jurisdictions = getJurisdictionSlugs();
-  const languages = ["en", "fr"]; // or import { locales } from '@/locales';
-
-  const all = languages.flatMap((lang) =>
-    jurisdictions.map((jurisdiction) => ({ lang, jurisdiction })),
-  );
-
-  return all;
+interface JurisdictionPageContentProps {
+  jurisdiction: Jurisdiction;
+  sankey: SankeyData;
+  departments: Department[];
+  lang: string;
+  basePath: string;
+  fullScreenPath: string;
 }
 
-export default async function ProvinceIndex({
-  params,
-}: {
-  params: Promise<{ jurisdiction: string; lang: string }>;
-}) {
-  const { jurisdiction: slug, lang } = await params;
-  initLingui(lang);
-
-  const { jurisdiction, sankey } = getJurisdictionData(slug);
-
-  const departments = getExpandedDepartments(jurisdiction.slug);
-
+export function JurisdictionPageContent({
+  jurisdiction,
+  sankey,
+  departments,
+  lang,
+  basePath,
+  fullScreenPath,
+}: JurisdictionPageContentProps) {
   const ministriesArray = (jurisdiction as { ministries?: unknown[] })
     .ministries;
   const ministriesCount = Array.isArray(ministriesArray)
@@ -330,10 +318,7 @@ export default async function ProvinceIndex({
           <div className="absolute top-0 left-0 w-[100vw] h-full  backdrop-blur-sm z-10 text-white md:hidden flex items-center justify-center">
             <ExternalLink
               className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              href={localizedPath(
-                `/${jurisdiction.slug}/spending-full-screen`,
-                lang,
-              )}
+              href={localizedPath(fullScreenPath, lang)}
             >
               <Trans>View this chart in full screen</Trans>
             </ExternalLink>
@@ -394,6 +379,7 @@ export default async function ProvinceIndex({
               jurisdiction={jurisdiction}
               lang={lang}
               departments={departments}
+              basePath={basePath}
             />
           </Section>
         )}

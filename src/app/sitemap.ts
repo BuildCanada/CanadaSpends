@@ -1,36 +1,13 @@
 import { MetadataRoute } from "next";
 import { BASE_URL, locales } from "@/lib/constants";
 import path from "path";
-import fs from "fs";
-
-interface StaticData {
-  fileStats: Record<string, string | null>;
-  structure: {
-    provincial: Record<string, { years: string[] }>;
-    municipal: Record<string, Record<string, { years: string[] }>>;
-    articles: Record<string, string[]>;
-  };
-}
-
-// Load static data once at module level
-const staticData = ((): StaticData | null => {
-  const dataPath = path.join(process.cwd(), "data", "static-data.json");
-  try {
-    if (fs.existsSync(dataPath)) {
-      return JSON.parse(fs.readFileSync(dataPath, "utf8")) as StaticData;
-    }
-  } catch (error) {
-    console.warn("Failed to load static data:", error);
-  }
-  return null;
-})();
-
-const getFileLastModified = (filePath: string): Date | undefined => {
-  // Convert absolute path to relative path for lookup
-  const relativePath = path.relative(process.cwd(), filePath);
-  const isoString = staticData?.fileStats[relativePath];
-  return isoString ? new Date(isoString) : undefined;
-};
+import {
+  getProvincialSlugs,
+  getMunicipalitiesByProvince,
+  getAvailableYearsForJurisdiction,
+  getFileLastModified,
+} from "@/lib/jurisdictions";
+import { getArticleSlugs } from "@/lib/articles";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const urls: MetadataRoute.Sitemap = [];
@@ -38,12 +15,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const addUrl = (
     url: string,
     changeFreq: MetadataRoute.Sitemap[number]["changeFrequency"] = "yearly",
-    dataFilePath?: string,
+    relativeFilePath?: string,
   ) => {
     urls.push({
       url: `${BASE_URL}${url}`,
-      lastModified: dataFilePath
-        ? getFileLastModified(dataFilePath)
+      lastModified: relativeFilePath
+        ? getFileLastModified(relativeFilePath)
         : new Date(),
       changeFrequency: changeFreq,
     });
@@ -61,62 +38,82 @@ export default function sitemap(): MetadataRoute.Sitemap {
     addUrl(`/${lang}/articles`);
 
     // Articles
-    for (const slug of staticData?.structure.articles[lang] || []) {
-      const articlePath = path.join(
-        process.cwd(),
-        "articles",
-        lang,
-        slug,
-        "metadata.json",
-      );
+    for (const slug of getArticleSlugs(lang)) {
+      const articlePath = path.join("articles", lang, slug, "metadata.json");
       addUrl(`/${lang}/articles/${slug}`, "yearly", articlePath);
     }
   }
 
-  // Provincial and municipal pages (non-year only)
-  if (staticData) {
-    const dataDir = path.join(process.cwd(), "data");
+  // Provincial and municipal pages (non-year and year-specific)
+  for (const lang of locales) {
+    // Provincial
+    for (const province of getProvincialSlugs()) {
+      const years = getAvailableYearsForJurisdiction(province);
+      if (years.length === 0) continue;
 
-    for (const lang of locales) {
-      // Provincial
-      for (const [province, { years }] of Object.entries(
-        staticData.structure.provincial,
-      )) {
+      // Add non-year URL (renders latest year)
+      const latestYear = years[0];
+      const latestYearFilePath = latestYear
+        ? path.join("data", "provincial", province, latestYear, "summary.json")
+        : undefined;
+      addUrl(`/${lang}/provincial/${province}`, "yearly", latestYearFilePath);
+
+      // Add year-specific URLs
+      for (const year of years) {
+        const yearFilePath = path.join(
+          "data",
+          "provincial",
+          province,
+          year,
+          "summary.json",
+        );
+        addUrl(
+          `/${lang}/provincial/${province}/${year}`,
+          "yearly",
+          yearFilePath,
+        );
+      }
+    }
+
+    // Municipal
+    for (const { province, municipalities } of getMunicipalitiesByProvince()) {
+      for (const municipality of municipalities) {
+        const jurisdiction = `${province}/${municipality.slug}`;
+        const years = getAvailableYearsForJurisdiction(jurisdiction);
+        if (years.length === 0) continue;
+
+        // Add non-year URL (renders latest year)
         const latestYear = years[0];
-        const filePath = latestYear
+        const latestYearFilePath = latestYear
           ? path.join(
-              dataDir,
-              "provincial",
+              "data",
+              "municipal",
               province,
+              municipality.slug,
               latestYear,
               "summary.json",
             )
           : undefined;
-        addUrl(`/${lang}/provincial/${province}`, "yearly", filePath);
-      }
+        addUrl(
+          `/${lang}/municipal/${province}/${municipality.slug}`,
+          "yearly",
+          latestYearFilePath,
+        );
 
-      // Municipal
-      for (const [province, municipalities] of Object.entries(
-        staticData.structure.municipal,
-      )) {
-        for (const [municipality, { years }] of Object.entries(
-          municipalities,
-        )) {
-          const latestYear = years[0];
-          const filePath = latestYear
-            ? path.join(
-                dataDir,
-                "municipal",
-                province,
-                municipality,
-                latestYear,
-                "summary.json",
-              )
-            : undefined;
+        // Add year-specific URLs
+        for (const year of years) {
+          const yearFilePath = path.join(
+            "data",
+            "municipal",
+            province,
+            municipality.slug,
+            year,
+            "summary.json",
+          );
           addUrl(
-            `/${lang}/municipal/${province}/${municipality}`,
+            `/${lang}/municipal/${province}/${municipality.slug}/${year}`,
             "yearly",
-            filePath,
+            yearFilePath,
           );
         }
       }

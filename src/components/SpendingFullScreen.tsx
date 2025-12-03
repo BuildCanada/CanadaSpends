@@ -1,21 +1,17 @@
 import { ExternalLink } from "@/components/Layout";
 import { JurisdictionSankey } from "@/components/Sankey/JurisdictionSankey";
-import { getJurisdictionData, getJurisdictionSlugs } from "@/lib/jurisdictions";
+import { Jurisdiction } from "@/lib/jurisdictions";
+import { SankeyData } from "@/components/Sankey/SankeyChartD3";
 
-export function generateStaticParams() {
-  const slugs = getJurisdictionSlugs();
-
-  return slugs.map((slug) => ({ jurisdiction: slug }));
+interface SpendingFullScreenProps {
+  jurisdiction: Jurisdiction;
+  sankey: SankeyData;
 }
 
-export default async function FullPageSpending({
-  params,
-}: {
-  params: Promise<{ jurisdiction: string }>;
-}) {
-  const { jurisdiction: slug } = await params;
-  const { jurisdiction, sankey } = getJurisdictionData(slug);
-
+export function SpendingFullScreen({
+  jurisdiction,
+  sankey,
+}: SpendingFullScreenProps) {
   return (
     <div className="min-h-screen bg-white">
       <div className="sankey-chart-container relative overflow-hidden min-h-screen min-w-[1280px]">

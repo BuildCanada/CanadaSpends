@@ -5,33 +5,79 @@ import { provinceNames } from "./provinceNames";
 
 const dataDir = path.join(process.cwd(), "data");
 
+// ============================================================================
+// STATIC DATA LOADING (Internal)
+// ============================================================================
+
+/**
+ * Type definition for the static data structure
+ */
+type StaticData = {
+  _disclaimer: string;
+  fileStats: Record<string, string>;
+  structure: {
+    provincial: Record<
+      string,
+      { years: string[]; departmentsByYear: Record<string, string[]> }
+    >;
+    municipal: Record<
+      string,
+      Record<
+        string,
+        { years: string[]; departmentsByYear: Record<string, string[]> }
+      >
+    >;
+    articles: {
+      en: string[];
+      fr: string[];
+    };
+  };
+};
+
+/**
+ * Cached static data to avoid repeated file reads
+ */
+let cachedStaticData: StaticData | null = null;
+
+/**
+ * Load and cache static data from data/static-data.json
+ * Internal function - consumers should use the public API functions below
+ */
+function loadStaticData(): StaticData {
+  if (!cachedStaticData) {
+    const staticDataPath = path.join(process.cwd(), "data", "static-data.json");
+    if (fs.existsSync(staticDataPath)) {
+      cachedStaticData = JSON.parse(
+        fs.readFileSync(staticDataPath, "utf8"),
+      ) as StaticData;
+    } else {
+      // Fallback to empty structure if file doesn't exist
+      cachedStaticData = {
+        _disclaimer: "",
+        fileStats: {},
+        structure: {
+          provincial: {},
+          municipal: {},
+          articles: { en: [], fr: [] },
+        },
+      };
+    }
+  }
+  return cachedStaticData;
+}
+
+// ============================================================================
+// PUBLIC API - JURISDICTION QUERIES
+// ============================================================================
+
 /**
  * Find the latest year folder in a jurisdiction directory that contains summary.json.
+ * Uses static-data.json for faster performance.
  * Returns the year string (e.g., "2024") or null if no valid year folders found.
  */
 function findLatestYear(jurisdictionPath: string): string | null {
-  if (!fs.existsSync(jurisdictionPath)) {
-    return null;
-  }
-
-  const entries = fs.readdirSync(jurisdictionPath);
-  const yearFolders = entries
-    .filter((entry) => {
-      const fullPath = path.join(jurisdictionPath, entry);
-      return (
-        fs.statSync(fullPath).isDirectory() &&
-        /^\d{4}$/.test(entry) && // Matches 4-digit year folders
-        fs.existsSync(path.join(fullPath, "summary.json")) // Must have summary.json
-      );
-    })
-    .map((year) => parseInt(year, 10))
-    .sort((a, b) => b - a); // Sort descending (latest first)
-
-  if (yearFolders.length === 0) {
-    return null;
-  }
-
-  return yearFolders[0].toString();
+  const years = getAvailableYears(jurisdictionPath);
+  return years.length > 0 ? years[0] : null;
 }
 
 /**
@@ -48,45 +94,92 @@ function getJurisdictionDataPath(jurisdictionPath: string): string {
 }
 
 /**
- * Find the data path for a jurisdiction slug.
- * Handles both provincial and municipal jurisdictions, with optional explicit province.
+ * Get available years for a jurisdiction path.
+ * Uses static-data.json for faster performance instead of filesystem lookups.
+ * Returns an array of year strings (e.g., ["2024", "2023"]) sorted descending.
+ *
+ * @internal Used by generateStaticParams in page components
+ */
+export function getAvailableYears(jurisdictionPath: string): string[] {
+  const staticData = loadStaticData();
+
+  // Parse the jurisdiction path to extract province/municipality
+  // Path format: data/provincial/{province} or data/municipal/{province}/{municipality}
+  const normalizedPath = path.normalize(jurisdictionPath);
+  const pathParts = normalizedPath.split(path.sep);
+
+  // Find the index of "provincial" or "municipal" in the path
+  const provincialIndex = pathParts.indexOf("provincial");
+  const municipalIndex = pathParts.indexOf("municipal");
+
+  if (provincialIndex !== -1 && provincialIndex + 1 < pathParts.length) {
+    // Provincial jurisdiction
+    const province = pathParts[provincialIndex + 1];
+    const provinceData = staticData.structure.provincial[province];
+    if (provinceData?.years) {
+      // Return years sorted descending (they should already be sorted, but ensure it)
+      return [...provinceData.years].sort(
+        (a, b) => parseInt(b, 10) - parseInt(a, 10),
+      );
+    }
+  } else if (municipalIndex !== -1 && municipalIndex + 2 < pathParts.length) {
+    // Municipal jurisdiction
+    const province = pathParts[municipalIndex + 1];
+    const municipality = pathParts[municipalIndex + 2];
+    const municipalityData =
+      staticData.structure.municipal[province]?.[municipality];
+    if (municipalityData?.years) {
+      // Return years sorted descending
+      return [...municipalityData.years].sort(
+        (a, b) => parseInt(b, 10) - parseInt(a, 10),
+      );
+    }
+  }
+
+  // Fallback to empty array if not found in static data
+  return [];
+}
+
+/**
+ * Find the data path for a jurisdiction slug with optional year.
  * @param jurisdiction - Slug in format "province" (provincial), "province/municipality" (municipal), or just "municipality" (will search)
+ * @param year - Optional year string (e.g., "2024") or null for latest
  * @returns The data path to the jurisdiction's data folder, or null if not found
  */
-function findJurisdictionDataPath(jurisdiction: string): string | null {
+function findJurisdictionDataPathWithYear(
+  jurisdiction: string,
+  year: string | null = null,
+): string | null {
   const parts = jurisdiction.split("/");
+  let basePath: string | null = null;
 
   if (parts.length === 1) {
     // Could be a province or a municipality - check both
     const provincialPath = path.join(dataDir, "provincial", jurisdiction);
-    const provincialDataPath = getJurisdictionDataPath(provincialPath);
-    const provincialSummaryPath = path.join(provincialDataPath, "summary.json");
+    if (fs.existsSync(provincialPath)) {
+      basePath = provincialPath;
+    } else {
+      // It's likely a municipality - search for it
+      const municipalDir = path.join(dataDir, "municipal");
+      if (fs.existsSync(municipalDir)) {
+        const provinces = fs.readdirSync(municipalDir).filter((f) => {
+          const provincePath = path.join(municipalDir, f);
+          return fs.statSync(provincePath).isDirectory();
+        });
 
-    if (fs.existsSync(provincialSummaryPath)) {
-      return provincialDataPath;
-    }
-
-    // It's likely a municipality - search for it
-    const municipalDir = path.join(dataDir, "municipal");
-    if (!fs.existsSync(municipalDir)) {
-      return null;
-    }
-
-    const provinces = fs.readdirSync(municipalDir).filter((f) => {
-      const provincePath = path.join(municipalDir, f);
-      return fs.statSync(provincePath).isDirectory();
-    });
-
-    for (const province of provinces) {
-      const municipalityPath = path.join(municipalDir, province, jurisdiction);
-      const municipalityDataPath = getJurisdictionDataPath(municipalityPath);
-      const summaryPath = path.join(municipalityDataPath, "summary.json");
-      if (fs.existsSync(summaryPath)) {
-        return municipalityDataPath;
+        for (const province of provinces) {
+          const municipalityPath = path.join(
+            municipalDir,
+            province,
+            jurisdiction,
+          );
+          if (fs.existsSync(municipalityPath)) {
+            basePath = municipalityPath;
+            break;
+          }
+        }
       }
     }
-
-    return null;
   } else if (parts.length === 2) {
     // Municipal jurisdiction with explicit province
     const [province, municipality] = parts;
@@ -96,15 +189,82 @@ function findJurisdictionDataPath(jurisdiction: string): string | null {
       province,
       municipality,
     );
-    const municipalityDataPath = getJurisdictionDataPath(municipalityPath);
-    const summaryPath = path.join(municipalityDataPath, "summary.json");
-    if (fs.existsSync(summaryPath)) {
-      return municipalityDataPath;
+    if (fs.existsSync(municipalityPath)) {
+      basePath = municipalityPath;
+    }
+  }
+
+  if (!basePath) {
+    return null;
+  }
+
+  // If year is specified, use it; otherwise use latest year
+  if (year) {
+    const yearPath = path.join(basePath, year);
+    if (fs.existsSync(path.join(yearPath, "summary.json"))) {
+      return yearPath;
     }
     return null;
   }
 
-  return null;
+  // Use latest year
+  return getJurisdictionDataPath(basePath);
+}
+
+/**
+ * Get available years for a jurisdiction slug.
+ * Uses static-data.json for faster performance.
+ * Returns an array of year strings (e.g., ["2024", "2023"]) sorted descending.
+ *
+ * @param jurisdiction - Slug in format "province" (provincial), "province/municipality" (municipal), or just "municipality" (will search)
+ * @returns Array of year strings, sorted descending, or empty array if not found
+ */
+export function getAvailableYearsForJurisdiction(
+  jurisdiction: string,
+): string[] {
+  const staticData = loadStaticData();
+  const parts = jurisdiction.split("/");
+
+  if (parts.length === 1) {
+    // Check if it's a province
+    const provinceData = staticData.structure.provincial[jurisdiction];
+    if (provinceData?.years?.length > 0) {
+      // Years are already sorted descending in static data
+      return [...provinceData.years];
+    }
+
+    // Check if it's a municipality (search across all provinces)
+    for (const province of Object.keys(staticData.structure.municipal)) {
+      const municipalityData =
+        staticData.structure.municipal[province]?.[jurisdiction];
+      if (municipalityData?.years?.length > 0) {
+        return [...municipalityData.years];
+      }
+    }
+  } else if (parts.length === 2) {
+    // Municipal jurisdiction with explicit province
+    const [province, municipality] = parts;
+    const municipalityData =
+      staticData.structure.municipal[province]?.[municipality];
+    if (municipalityData?.years?.length > 0) {
+      return [...municipalityData.years];
+    }
+  }
+
+  return [];
+}
+
+/**
+ * Get the latest year for a jurisdiction.
+ * Uses static-data.json for faster performance.
+ *
+ * @param jurisdiction - Slug in format "province" (provincial), "province/municipality" (municipal), or just "municipality" (will search)
+ * @returns The latest year string or null if not found
+ * @internal Used internally by non-year jurisdiction pages
+ */
+function getLatestYearForJurisdiction(jurisdiction: string): string | null {
+  const years = getAvailableYearsForJurisdiction(jurisdiction);
+  return years.length > 0 ? years[0] : null;
 }
 
 export type Jurisdiction = {
@@ -165,61 +325,56 @@ type Data = {
 };
 
 /**
- * Get provincial jurisdiction slugs (provinces with provincial-level data).
+ * Get all provincial jurisdiction slugs.
+ * Returns provinces that have data available, sorted alphabetically.
+ * Uses static-data.json internally for faster performance.
+ *
+ * @example
+ * const provinces = getProvincialSlugs();
+ * // ["alberta", "british-columbia", "ontario"]
  */
 export function getProvincialSlugs(): string[] {
-  const provincialDir = path.join(dataDir, "provincial");
-  if (!fs.existsSync(provincialDir)) {
-    return [];
-  }
-  return fs.readdirSync(provincialDir).filter((f) => {
-    const fullPath = path.join(provincialDir, f);
-    if (!fs.statSync(fullPath).isDirectory()) {
-      return false;
-    }
-    const dataPath = getJurisdictionDataPath(fullPath);
-    return fs.existsSync(path.join(dataPath, "summary.json"));
-  });
+  const staticData = loadStaticData();
+  return Object.keys(staticData.structure.provincial).sort();
 }
 
 /**
- * Get municipalities grouped by province.
- * Returns array of { province: string, municipalities: Array<{ slug: string, name: string }> }
+ * Get all municipalities grouped by their province.
+ * Each municipality includes its slug and display name.
+ * Uses static-data.json internally for structure, reads summary.json for names.
+ *
+ * @returns Array of provinces with their municipalities
+ * @example
+ * const data = getMunicipalitiesByProvince();
+ * // [
+ * //   { province: "ontario", municipalities: [{ slug: "toronto", name: "Toronto" }] },
+ * //   { province: "british-columbia", municipalities: [{ slug: "vancouver", name: "Vancouver" }] }
+ * // ]
  */
 export function getMunicipalitiesByProvince(): Array<{
   province: string;
   municipalities: Array<{ slug: string; name: string }>;
 }> {
-  const municipalDir = path.join(dataDir, "municipal");
-  if (!fs.existsSync(municipalDir)) {
-    return [];
-  }
-
-  const provinces = fs.readdirSync(municipalDir).filter((f) => {
-    const provincePath = path.join(municipalDir, f);
-    return fs.statSync(provincePath).isDirectory();
-  });
-
+  const staticData = loadStaticData();
   const result: Array<{
     province: string;
     municipalities: Array<{ slug: string; name: string }>;
   }> = [];
 
-  for (const province of provinces) {
-    const provincePath = path.join(municipalDir, province);
-    const municipalities = fs
-      .readdirSync(provincePath)
-      .filter((f) => {
-        const municipalityPath = path.join(provincePath, f);
-        if (!fs.statSync(municipalityPath).isDirectory()) {
-          return false;
-        }
-        const dataPath = getJurisdictionDataPath(municipalityPath);
-        return fs.existsSync(path.join(dataPath, "summary.json"));
-      })
+  for (const province of Object.keys(staticData.structure.municipal)) {
+    const municipalitySlugs = Object.keys(
+      staticData.structure.municipal[province] || {},
+    );
+
+    const municipalities = municipalitySlugs
       .map((slug) => {
         // Try to get the name from summary.json, fallback to slug
-        const municipalityPath = path.join(provincePath, slug);
+        const municipalityPath = path.join(
+          dataDir,
+          "municipal",
+          province,
+          slug,
+        );
         const dataPath = getJurisdictionDataPath(municipalityPath);
         const summaryPath = path.join(dataPath, "summary.json");
         let name = slug;
@@ -231,7 +386,7 @@ export function getMunicipalitiesByProvince(): Array<{
         }
         return { slug, name };
       })
-      .sort((a, b) => a.name.localeCompare(b.name)); // Sort municipalities alphabetically
+      .sort((a, b) => a.name.localeCompare(b.name));
 
     if (municipalities.length > 0) {
       result.push({ province, municipalities });
@@ -247,56 +402,22 @@ export function getMunicipalitiesByProvince(): Array<{
 }
 
 /**
- * Get all jurisdiction slugs, including both provincial and municipal jurisdictions.
- * Returns slugs in format "province" for provincial or just "municipality" for municipal
- * (municipalities use simple slugs, not nested paths, to match URL structure)
- */
-export function getJurisdictionSlugs(): string[] {
-  const slugs: string[] = [];
-
-  // Get provincial jurisdictions
-  slugs.push(...getProvincialSlugs());
-
-  // Get municipal jurisdictions (return just municipality name, not nested path)
-  const municipalDir = path.join(dataDir, "municipal");
-  if (fs.existsSync(municipalDir)) {
-    const provinces = fs.readdirSync(municipalDir).filter((f) => {
-      const provincePath = path.join(municipalDir, f);
-      return fs.statSync(provincePath).isDirectory();
-    });
-
-    for (const province of provinces) {
-      const provincePath = path.join(municipalDir, province);
-      const municipalities = fs.readdirSync(provincePath).filter((f) => {
-        const municipalityPath = path.join(provincePath, f);
-        if (!fs.statSync(municipalityPath).isDirectory()) {
-          return false;
-        }
-        const dataPath = getJurisdictionDataPath(municipalityPath);
-        return fs.existsSync(path.join(dataPath, "summary.json"));
-      });
-
-      // Return just the municipality slug, not the nested path
-      for (const municipality of municipalities) {
-        slugs.push(municipality);
-      }
-    }
-  }
-
-  return slugs;
-}
-
-/**
  * Get jurisdiction data, supporting both provincial and municipal paths.
  * @param jurisdiction - Slug in format "province" (provincial), "province/municipality" (municipal), or just "municipality" (will search)
+ * @param year - Optional year string (e.g., "2024") or null for latest
  * @throws Error if jurisdiction data is not found
  */
-export function getJurisdictionData(jurisdiction: string): Data {
+export function getJurisdictionData(
+  jurisdiction: string,
+  year: string | null = null,
+): Data {
   const parts = jurisdiction.split("/");
-  const jurisdictionPath = findJurisdictionDataPath(jurisdiction);
+  const jurisdictionPath = findJurisdictionDataPathWithYear(jurisdiction, year);
 
   if (!jurisdictionPath) {
-    throw new Error(`Jurisdiction data not found: ${jurisdiction}`);
+    throw new Error(
+      `Jurisdiction data not found: ${jurisdiction}${year ? ` for year ${year}` : ""}`,
+    );
   }
 
   const summaryPath = path.join(jurisdictionPath, "summary.json");
@@ -329,13 +450,15 @@ export function getJurisdictionData(jurisdiction: string): Data {
  * Get department data for a specific jurisdiction and department.
  * @param jurisdiction - Slug in format "province" (provincial), "province/municipality" (municipal), or just "municipality" (will search)
  * @param department - Department slug
+ * @param year - Optional year string (e.g., "2024") or null for latest
  * @throws Error if jurisdiction or department data is not found
  */
 export function getDepartmentData(
   jurisdiction: string,
   department: string,
+  year: string | null = null,
 ): Department {
-  const jurisdictionPath = findJurisdictionDataPath(jurisdiction);
+  const jurisdictionPath = findJurisdictionDataPathWithYear(jurisdiction, year);
 
   if (!jurisdictionPath) {
     throw new Error(`Jurisdiction data not found: ${jurisdiction}`);
@@ -371,13 +494,56 @@ export function getDepartmentData(
 
 /**
  * Get list of department slugs for a jurisdiction.
+ * Uses static-data.json for faster performance when year is provided.
  * Returns empty array if jurisdiction not found or has no departments (non-throwing).
  * @param jurisdiction - Slug in format "province" (provincial), "province/municipality" (municipal), or just "municipality" (will search)
+ * @param year - Optional year string (e.g., "2024") or null for latest
  * @returns Array of department slugs, or empty array if none found
  */
-export function getDepartmentsForJurisdiction(jurisdiction: string): string[] {
-  const jurisdictionPath = findJurisdictionDataPath(jurisdiction);
+export function getDepartmentsForJurisdiction(
+  jurisdiction: string,
+  year: string | null = null,
+): string[] {
+  const staticData = loadStaticData();
+  const parts = jurisdiction.split("/");
 
+  // Determine the year to use
+  const targetYear = year || getLatestYearForJurisdiction(jurisdiction);
+  if (!targetYear) {
+    return [];
+  }
+
+  // Try to get departments from static data
+  if (parts.length === 1) {
+    // Check provincial first
+    const provinceData = staticData.structure.provincial[jurisdiction];
+    if (provinceData?.departmentsByYear?.[targetYear]) {
+      return provinceData.departmentsByYear[targetYear];
+    }
+
+    // Check if it's a municipality (search across all provinces)
+    for (const province of Object.keys(staticData.structure.municipal)) {
+      const municipalityData =
+        staticData.structure.municipal[province]?.[jurisdiction];
+      if (municipalityData?.departmentsByYear?.[targetYear]) {
+        return municipalityData.departmentsByYear[targetYear];
+      }
+    }
+  } else if (parts.length === 2) {
+    // Municipal jurisdiction with explicit province
+    const [province, municipality] = parts;
+    const municipalityData =
+      staticData.structure.municipal[province]?.[municipality];
+    if (municipalityData?.departmentsByYear?.[targetYear]) {
+      return municipalityData.departmentsByYear[targetYear];
+    }
+  }
+
+  // Fallback to filesystem if not in static data (shouldn't happen in production)
+  const jurisdictionPath = findJurisdictionDataPathWithYear(
+    jurisdiction,
+    targetYear,
+  );
   if (!jurisdictionPath) {
     return [];
   }
@@ -397,16 +563,31 @@ export function getDepartmentsForJurisdiction(jurisdiction: string): string[] {
   }
 }
 
-export function getExpandedDepartments(jurisdiction: string): Department[] {
-  const slugs = getDepartmentsForJurisdiction(jurisdiction);
-  return slugs.map((slug) => getDepartmentData(jurisdiction, slug));
+/**
+ * Get expanded department data for all departments in a jurisdiction.
+ * Returns full department objects with all their data.
+ *
+ * @param jurisdiction - Slug in format "province" or "province/municipality"
+ * @param year - Optional year string (e.g., "2024") or null for latest
+ * @returns Array of full Department objects
+ */
+export function getExpandedDepartments(
+  jurisdiction: string,
+  year: string | null = null,
+): Department[] {
+  const slugs = getDepartmentsForJurisdiction(jurisdiction, year);
+  return slugs.map((slug) => getDepartmentData(jurisdiction, slug, year));
 }
 
-export function departmentHref(
-  jurisdiction: string,
-  department: string,
-  locale?: string,
-): string {
-  const path = `/${jurisdiction}/departments/${department}`;
-  return locale ? `/${locale}${path}` : path;
+/**
+ * Get the last modified date for a file path from static data.
+ * The file path should be relative to the project root.
+ *
+ * @param relativePath - File path relative to project root (e.g., "data/provincial/ontario/2024/summary.json")
+ * @returns Date object if found in static data, undefined otherwise
+ */
+export function getFileLastModified(relativePath: string): Date | undefined {
+  const staticData = loadStaticData();
+  const isoString = staticData.fileStats[relativePath];
+  return isoString ? new Date(isoString) : undefined;
 }

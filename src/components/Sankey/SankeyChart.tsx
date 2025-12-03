@@ -287,7 +287,7 @@ export function SankeyChart(props: SankeyChartProps) {
             {hoverNode.departmentSlug && props.showDepartmentLinks && (
               <div className="node-tooltip-department">
                 <a
-                  href={`/${i18n.locale}/spending/${hoverNode.departmentSlug}`}
+                  href={`/${i18n.locale}/federal/spending/${hoverNode.departmentSlug}`}
                   className="node-tooltip-link"
                 >
                   Learn more

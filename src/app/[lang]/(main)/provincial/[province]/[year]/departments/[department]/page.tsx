@@ -3,27 +3,30 @@ import {
   getDepartmentsForJurisdiction,
   getExpandedDepartments,
   getJurisdictionData,
-  getJurisdictionSlugs,
+  getProvincialSlugs,
+  getAvailableYearsForJurisdiction,
 } from "@/lib/jurisdictions";
+import { locales } from "@/lib/constants";
 
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  const jurisdictions = getJurisdictionSlugs();
-  const languages = ["en", "fr"]; // or import from your locales
+  const provinces = getProvincialSlugs();
 
-  const all = languages.flatMap((lang) =>
-    jurisdictions.flatMap((jurisdiction) => {
-      const departments = getDepartmentsForJurisdiction(jurisdiction);
-      return departments.map((department) => ({
-        lang,
-        jurisdiction,
-        department,
-      }));
+  return locales.flatMap((lang) =>
+    provinces.flatMap((province) => {
+      const years = getAvailableYearsForJurisdiction(province);
+      return years.flatMap((year) => {
+        const departments = getDepartmentsForJurisdiction(province, year);
+        return departments.map((department) => ({
+          lang,
+          province,
+          year,
+          department,
+        }));
+      });
     }),
   );
-
-  return all;
 }
 
 import {
@@ -45,20 +48,21 @@ import { JurisdictionDepartmentList } from "@/components/DepartmentList";
 export default async function DepartmentPage({
   params,
 }: {
-  params: Promise<{ lang: string; jurisdiction: string; department: string }>;
+  params: Promise<{
+    lang: string;
+    province: string;
+    year: string;
+    department: string;
+  }>;
 }) {
-  const {
-    lang,
-    jurisdiction: jurisdictionSlug,
-    department: departmentSlug,
-  } = await params;
+  const { lang, province, year, department: departmentSlug } = await params;
 
   initLingui(lang);
 
-  const { jurisdiction } = getJurisdictionData(jurisdictionSlug);
-  const departments = getExpandedDepartments(jurisdiction.slug);
+  const { jurisdiction } = getJurisdictionData(province, year);
+  const departments = getExpandedDepartments(province, year);
 
-  const department = getDepartmentData(jurisdictionSlug, departmentSlug);
+  const department = getDepartmentData(province, departmentSlug, year);
 
   return (
     <Page>
@@ -400,6 +404,7 @@ export default async function DepartmentPage({
               lang={lang}
               departments={departments}
               current={department.slug}
+              basePath={`/${lang}/provincial/${province}/${year}`}
             />
           </Section>
         </Section>

@@ -1,14 +1,7 @@
-import { allMessages } from "@/appRouterI18n";
-import { LinguiClientProvider } from "@/components/LinguiClientProvider";
 import { initLingui, PageLangParam } from "@/initLingui";
-import { cn, generateHreflangAlternates } from "@/lib/utils";
+import { generateHreflangAlternates } from "@/lib/utils";
 import { useLingui } from "@lingui/react/macro";
-import { Analytics } from "@vercel/analytics/next";
-import { Plus_Jakarta_Sans } from "next/font/google";
 import { PropsWithChildren } from "react";
-import { Toaster } from "sonner";
-import "./globals.css";
-import { PostHogProvider } from "./providers";
 
 export async function generateMetadata(
   props: PropsWithChildren<PageLangParam>,
@@ -60,45 +53,13 @@ export async function generateMetadata(
   };
 }
 
-const plusJakartaSans = Plus_Jakarta_Sans({
-  weight: ["600", "700"],
-  subsets: ["latin"],
-});
-
-export default async function RootLayout({
+export default async function LangLayout({
   children,
   params,
 }: PropsWithChildren<PageLangParam>) {
   const lang = (await params).lang;
   initLingui(lang);
 
-  return (
-    <html lang={lang}>
-      <body className={cn("antialiased", plusJakartaSans.className)}>
-        <PostHogProvider>
-          <LinguiClientProvider
-            initialLocale={lang}
-            initialMessages={allMessages[lang]!}
-          >
-            {children}
-            <Toaster position="top-right" richColors />
-          </LinguiClientProvider>
-        </PostHogProvider>
-        <Analytics />
-        {/* Simple Analytics Script */}
-        <script
-          async
-          defer
-          src="https://scripts.simpleanalyticscdn.com/latest.js"
-        ></script>
-        <noscript>
-          <img
-            src="https://queue.simpleanalyticscdn.com/noscript.gif"
-            alt=""
-            referrerPolicy="no-referrer-when-downgrade"
-          />
-        </noscript>
-      </body>
-    </html>
-  );
+  // Root layout provides <html> and <body>, so this nested layout just wraps content
+  return <>{children}</>;
 }
