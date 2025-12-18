@@ -38,6 +38,19 @@ const PROVINCE_DATA: Record<string, ProvinceData> = {
       { range: "More than $220,000", rate: "13.16%" },
     ],
   },
+  "british-columbia": {
+    name: "British Columbia",
+    bpa: "$12,932",
+    brackets: [
+      { range: "First $49,279", rate: "5.06%" },
+      { range: "$49,279 - $98,560", rate: "7.70%" },
+      { range: "$98,560 - $113,158", rate: "10.50%" },
+      { range: "$113,158 - $137,407", rate: "12.29%" },
+      { range: "$137,407 - $186,306", rate: "14.70%" },
+      { range: "$186,306 - $259,829", rate: "16.80%" },
+      { range: "More than $259,829", rate: "20.50%" },
+    ],
+  },
 };
 
 interface TaxCalculatorFormProps {
@@ -98,6 +111,7 @@ function TaxCalculatorForm({
           >
             <option value="ontario">{t`Ontario`}</option>
             <option value="alberta">{t`Alberta`}</option>
+            <option value="british-columbia">{t`British Columbia`}</option>
           </select>
           <p className="text-sm text-gray-500 mt-1">
             {t`More provinces coming soon.`}
@@ -293,7 +307,11 @@ export default function TaxCalculatorPage() {
                     and{" "}
                     <a
                       href={localizedPath(
-                        province === "alberta" ? "/alberta" : "/ontario",
+                        province === "alberta" 
+                          ? "/alberta" 
+                          : province === "british-columbia"
+                          ? "/british-columbia"
+                          : "/ontario",
                         i18n.locale,
                       )}
                       className="underline"

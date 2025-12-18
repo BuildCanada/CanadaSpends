@@ -22,6 +22,9 @@ export const ONTARIO_BASIC_PERSONAL_AMOUNT = 12399;
 // 2024 Alberta basic personal amount
 export const ALBERTA_BASIC_PERSONAL_AMOUNT = 21885;
 
+// 2025 British Columbia basic personal amount
+export const BC_BASIC_PERSONAL_AMOUNT = 12932;
+
 // 2025 Federal tax brackets
 export const FEDERAL_TAX_BRACKETS: TaxBracket[] = [
   { min: 0, max: 57375, rate: 0.145 },
@@ -47,6 +50,17 @@ export const ALBERTA_TAX_BRACKETS: TaxBracket[] = [
   { min: 177922, max: 237230, rate: 0.13 },
   { min: 237230, max: 355845, rate: 0.14 },
   { min: 355845, max: null, rate: 0.15 },
+];
+
+// 2025 British Columbia provincial tax brackets
+export const BC_TAX_BRACKETS: TaxBracket[] = [
+  { min: 0, max: 49279, rate: 0.0506 },
+  { min: 49279, max: 98560, rate: 0.077 },
+  { min: 98560, max: 113158, rate: 0.105 },
+  { min: 113158, max: 137407, rate: 0.1229 },
+  { min: 137407, max: 186306, rate: 0.147 },
+  { min: 186306, max: 259829, rate: 0.168 },
+  { min: 259829, max: null, rate: 0.205 },
 ];
 
 export function calculateTaxFromBrackets(
@@ -145,6 +159,17 @@ export function calculateAlbertaTax(income: number): number {
   return Math.max(0, taxOnFullIncome - bpaCredit);
 }
 
+export function calculateBCTax(income: number): number {
+  // Step 1: Calculate tax on full income using progressive brackets
+  const taxOnFullIncome = calculateTaxFromBrackets(income, BC_TAX_BRACKETS);
+
+  // Step 2: Apply BPA as a credit (5.06% of BPA - lowest provincial rate)
+  const bpaCredit = BC_BASIC_PERSONAL_AMOUNT * 0.0506;
+
+  // Step 3: Subtract the credit from the calculated tax
+  return Math.max(0, taxOnFullIncome - bpaCredit);
+}
+
 export function calculateTotalTax(
   income: number,
   province: string = "ontario",
@@ -160,6 +185,11 @@ export function calculateTotalTax(
       break;
     case "alberta":
       provincialTax = calculateAlbertaTax(income);
+      break;
+    case "british-columbia":
+    case "british columbia":
+    case "bc":
+      provincialTax = calculateBCTax(income);
       break;
     default:
       provincialTax = calculateOntarioTax(income); // Default to Ontario for now

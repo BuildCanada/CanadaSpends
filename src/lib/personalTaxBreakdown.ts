@@ -18,14 +18,15 @@ export interface PersonalTaxBreakdown {
 }
 
 // Federal spending categories with percentages (from existing Sankey data)
-// Transfer to Ontario: 6.02%, Transfer to Alberta: 2.30%, Other Provinces: 11.18% (reduced from 13.48)
+// Transfer to Ontario: 6.02%, Transfer to Alberta: 2.30%, Transfer to BC: 2.80%, Other Provinces: 8.38% (reduced from 11.18)
 const FEDERAL_SPENDING_CATEGORIES = [
   { name: "Retirement Benefits", percentage: 14.8 },
   { name: "Children, Community and Social Services", percentage: 5.1 },
   { name: "Employment Insurance", percentage: 4.5 },
   { name: "Transfer to Ontario", percentage: 6.02 },
   { name: "Transfer to Alberta", percentage: 2.3 },
-  { name: "Transfers to Other Provinces", percentage: 11.18 },
+  { name: "Transfer to British Columbia", percentage: 2.8 },
+  { name: "Transfers to Other Provinces", percentage: 8.38 },
   { name: "Interest on Debt", percentage: 9.2 },
   { name: "Indigenous Priorities", percentage: 8.3 },
   { name: "Defence", percentage: 6.7 },
@@ -90,6 +91,32 @@ const ALBERTA_SPENDING_CATEGORIES = [
   { name: "Other", percentage: 8.7 },
 ];
 
+const BC_SPENDING_CATEGORIES = [
+  { name: "Health", percentage: 43.2 },
+  { name: "K-12 Education", percentage: 12.7 },
+  { name: "Other Appropriations", percentage: 9.7 },
+  { name: "Children, Community and Social Services", percentage: 6.7 },
+  { name: "Colleges and Universities", percentage: 4.5 },
+  { name: "Finance and Debt", percentage: 3.4 },
+  { name: "Children and Family Development", percentage: 3.1 },
+  { name: "Interest on Debt", percentage: 3.0 },
+  { name: "Municipal Affairs and Housing", percentage: 2.3 },
+  { name: "Transportation", percentage: 1.9 },
+  { name: "Forestry and Parks", percentage: 1.8 },
+  { name: "Public Safety", percentage: 1.5 },
+  { name: "Attorney and Solicitor General", percentage: 1.1 },
+  { name: "Citizens' Services", percentage: 1.0 },
+  { name: "Energy", percentage: 0.7 },
+  { name: "Emergency Management", percentage: 0.6 },
+  { name: "Water and Resource Stewardship", percentage: 0.4 },
+  { name: "Fisheries and Agriculture", percentage: 0.4 },
+  { name: "Indigenous Priorities", percentage: 0.4 },
+  { name: "Environment", percentage: 0.3 },
+  { name: "Tourism, Culture, and Sport", percentage: 0.3 },
+  { name: "Economic Development and Trade", percentage: 0.3 },
+  { name: "Other", percentage: 5.8 },
+];
+
 // Consolidated province configuration
 const PROVINCE_DATA: Record<
   string,
@@ -105,6 +132,10 @@ const PROVINCE_DATA: Record<
   alberta: {
     federalTransferName: "Transfer to Alberta",
     spendingCategories: ALBERTA_SPENDING_CATEGORIES,
+  },
+  "british-columbia": {
+    federalTransferName: "Transfer to British Columbia",
+    spendingCategories: BC_SPENDING_CATEGORIES,
   },
 };
 
