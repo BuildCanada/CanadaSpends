@@ -9,7 +9,10 @@ const dataDir = path.join(process.cwd(), "data");
  * Find the latest year folder in a jurisdiction directory that contains summary.json.
  * Returns the year string (e.g., "2024") or null if no valid year folders found.
  */
-function findLatestYear(jurisdictionPath: string): string | null {
+function findLatestYear(
+  jurisdictionPath: string,
+  language?: string,
+): string | null {
   if (!fs.existsSync(jurisdictionPath)) {
     return null;
   }
@@ -21,7 +24,9 @@ function findLatestYear(jurisdictionPath: string): string | null {
       return (
         fs.statSync(fullPath).isDirectory() &&
         /^\d{4}$/.test(entry) && // Matches 4-digit year folders
-        fs.existsSync(path.join(fullPath, "summary.json")) // Must have summary.json
+        (fs.existsSync(path.join(fullPath, "summary.json")) || // Must have summary.json in root dir
+          (language &&
+            fs.existsSync(path.join(fullPath, language, "summary.json")))) // or sub language directory if language is defined
       );
     })
     .map((year) => parseInt(year, 10))
@@ -34,32 +39,70 @@ function findLatestYear(jurisdictionPath: string): string | null {
   return yearFolders[0].toString();
 }
 
+function findLocalizedJurisdictionData(
+  jurisdictionPath: string,
+  language: string,
+): string | null {
+  if (!fs.existsSync(jurisdictionPath)) {
+    return null;
+  }
+
+  const fullPath = path.join(jurisdictionPath, language);
+
+  if (
+    fs.existsSync(fullPath) &&
+    fs.statSync(fullPath).isDirectory() &&
+    fs.existsSync(path.join(fullPath, "summary.json")) // Must have summary.json
+  ) {
+    return fullPath;
+  }
+
+  // Fallback: return the jurisdiction path directly (for backward compatibility)
+  return jurisdictionPath;
+}
+
 /**
  * Get the path to the data files for a jurisdiction (in the latest year folder).
  * Falls back to the jurisdiction path directly if no year folders exist (backward compatibility).
  */
-function getJurisdictionDataPath(jurisdictionPath: string): string {
-  const latestYear = findLatestYear(jurisdictionPath);
+function getJurisdictionDataPath(
+  jurisdictionPath: string,
+  language?: string,
+): string {
+  const latestYear = findLatestYear(jurisdictionPath, language);
+  let updatedPath = jurisdictionPath;
   if (latestYear) {
-    return path.join(jurisdictionPath, latestYear);
+    updatedPath = path.join(updatedPath, latestYear);
+  }
+
+  if (language) {
+    updatedPath =
+      findLocalizedJurisdictionData(updatedPath, language) ?? updatedPath;
   }
   // Fallback: return the jurisdiction path directly (for backward compatibility)
-  return jurisdictionPath;
+  return updatedPath;
 }
 
 /**
  * Find the data path for a jurisdiction slug.
  * Handles both provincial and municipal jurisdictions, with optional explicit province.
  * @param jurisdiction - Slug in format "province" (provincial), "province/municipality" (municipal), or just "municipality" (will search)
+ * @param language - the language in which Jurisdiction data should be present in - default to undefined for backward compatibility
  * @returns The data path to the jurisdiction's data folder, or null if not found
  */
-function findJurisdictionDataPath(jurisdiction: string): string | null {
+function findJurisdictionDataPath(
+  jurisdiction: string,
+  language?: string,
+): string | null {
   const parts = jurisdiction.split("/");
 
   if (parts.length === 1) {
     // Could be a province or a municipality - check both
     const provincialPath = path.join(dataDir, "provincial", jurisdiction);
-    const provincialDataPath = getJurisdictionDataPath(provincialPath);
+    const provincialDataPath = getJurisdictionDataPath(
+      provincialPath,
+      language,
+    );
     const provincialSummaryPath = path.join(provincialDataPath, "summary.json");
 
     if (fs.existsSync(provincialSummaryPath)) {
@@ -79,7 +122,10 @@ function findJurisdictionDataPath(jurisdiction: string): string | null {
 
     for (const province of provinces) {
       const municipalityPath = path.join(municipalDir, province, jurisdiction);
-      const municipalityDataPath = getJurisdictionDataPath(municipalityPath);
+      const municipalityDataPath = getJurisdictionDataPath(
+        municipalityPath,
+        language,
+      );
       const summaryPath = path.join(municipalityDataPath, "summary.json");
       if (fs.existsSync(summaryPath)) {
         return municipalityDataPath;
@@ -96,7 +142,10 @@ function findJurisdictionDataPath(jurisdiction: string): string | null {
       province,
       municipality,
     );
-    const municipalityDataPath = getJurisdictionDataPath(municipalityPath);
+    const municipalityDataPath = getJurisdictionDataPath(
+      municipalityPath,
+      language,
+    );
     const summaryPath = path.join(municipalityDataPath, "summary.json");
     if (fs.existsSync(summaryPath)) {
       return municipalityDataPath;
@@ -295,11 +344,16 @@ export function getJurisdictionSlugs(): string[] {
 /**
  * Get jurisdiction data, supporting both provincial and municipal paths.
  * @param jurisdiction - Slug in format "province" (provincial), "province/municipality" (municipal), or just "municipality" (will search)
+ * @param language - the language in which Jurisdiction data should be present in - default to undefined for backward compatibility
+ *
  * @throws Error if jurisdiction data is not found
  */
-export function getJurisdictionData(jurisdiction: string): Data {
+export function getJurisdictionData(
+  jurisdiction: string,
+  language?: string,
+): Data {
   const parts = jurisdiction.split("/");
-  const jurisdictionPath = findJurisdictionDataPath(jurisdiction);
+  const jurisdictionPath = findJurisdictionDataPath(jurisdiction, language);
 
   if (!jurisdictionPath) {
     throw new Error(`Jurisdiction data not found: ${jurisdiction}`);

@@ -55,7 +55,7 @@ export default async function DepartmentPage({
 
   initLingui(lang);
 
-  const { jurisdiction } = getJurisdictionData(jurisdictionSlug);
+  const { jurisdiction } = getJurisdictionData(jurisdictionSlug, lang);
   const departments = getExpandedDepartments(jurisdiction.slug);
 
   const department = getDepartmentData(jurisdictionSlug, departmentSlug);

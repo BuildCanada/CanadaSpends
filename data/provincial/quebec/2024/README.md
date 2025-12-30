@@ -30,9 +30,5 @@ Official URL: [https://www.finances.gouv.qc.ca/department/public_finance/public_
 
 _Authored by:_ **`<Quan Nguyen>`** (GitHub: `@<https://github.com/nguyenquannnn/`>). Powered by Gemini 3 and Kiro.
 
-_TODO:_
-
-- [ ] Setup rounting to the French version of the Sankey from the main page structure. Currently displaying english by default
-
 _Have questions or spot an issue?_
 Please open an issue or pull request and reference the specific CSV line or screenshot — every figure is traceable.
