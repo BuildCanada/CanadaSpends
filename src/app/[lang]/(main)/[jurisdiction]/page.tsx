@@ -67,7 +67,7 @@ export default async function ProvinceIndex({
   const { jurisdiction: slug, lang } = await params;
   initLingui(lang);
 
-  const { jurisdiction, sankey } = getJurisdictionData(slug);
+  const { jurisdiction, sankey } = getJurisdictionData(slug, lang);
 
   const departments = getExpandedDepartments(jurisdiction.slug);
 

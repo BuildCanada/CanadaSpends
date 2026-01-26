@@ -11,17 +11,17 @@ export function generateStaticParams() {
 export default async function FullPageSpending({
   params,
 }: {
-  params: Promise<{ jurisdiction: string }>;
+  params: Promise<{ jurisdiction: string; lang: string }>;
 }) {
-  const { jurisdiction: slug } = await params;
-  const { jurisdiction, sankey } = getJurisdictionData(slug);
+  const { jurisdiction: slug, lang } = await params;
+  const { jurisdiction, sankey } = getJurisdictionData(slug, lang);
 
   return (
     <div className="min-h-screen bg-white">
       <div className="sankey-chart-container relative overflow-hidden min-h-screen min-w-[1280px]">
         <JurisdictionSankey
           data={sankey}
-          jurisdictionSlug={jurisdiction.slug}
+          // jurisdictionSlug={jurisdiction.slug}
         />
         <div className="absolute bottom-3 left-6">
           <ExternalLink
