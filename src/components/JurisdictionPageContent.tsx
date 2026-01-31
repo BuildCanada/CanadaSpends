@@ -414,11 +414,13 @@ export function JurisdictionPageContent({
             <Trans>{jurisdiction.name} Government Workforce</Trans>
           </H2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <StatBox
-              title={<Trans>Public Service Employees</Trans>}
-              value={jurisdiction.totalEmployees.toLocaleString("en-CA")}
-              description={<Trans>Estimated public service workforce</Trans>}
-            />
+            {jurisdiction.totalEmployees != null && (
+              <StatBox
+                title={<Trans>Public Service Employees</Trans>}
+                value={jurisdiction.totalEmployees.toLocaleString("en-CA")}
+                description={<Trans>Estimated public service workforce</Trans>}
+              />
+            )}
 
             <StatBox
               title={<Trans>Ministries + Agencies</Trans>}
