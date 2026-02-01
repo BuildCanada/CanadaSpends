@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { Trans } from "@lingui/react/macro";
 import { DetailsPage } from "./DetailsPage";
 import { ContractsOver10k } from "./Contracts";
+import { generateMetadata } from "./metadata";
 
 interface Props {
   id: string;
@@ -17,12 +18,15 @@ function jsonFetcher(url: string) {
   );
 }
 
+// Re-export generateMetadata from metadata.ts
+export { generateMetadata };
+
 // ... KeyValueTable, NSERCGrants, CIHRGrants, etc. ...
 
 export default async function Page({
   params,
 }: {
-  params: { id: string; database: string };
+  params: Promise<{ id: string; database: string; lang: string }>;
 }) {
   const { id, database } = await params;
 
