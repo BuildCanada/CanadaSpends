@@ -34,19 +34,26 @@ function PostHogPageView() {
   const searchParams = useSearchParams();
   const posthog = usePostHog();
 
-  // Capture put_me_in_coach query parameter as a person property
+  // Capture put_me_in_coach_* query parameters as person properties
   useEffect(() => {
     if (!posthog) return;
 
-    const putMeInCoach = searchParams.get("put_me_in_coach");
-    if (putMeInCoach !== null) {
-      posthog.setPersonProperties({
-        put_me_in_coach: putMeInCoach,
-      });
+    const personProperties: Record<string, string> = {};
+    const keysToRemove: string[] = [];
 
-      // Remove the query parameter from the URL without triggering a page reload
+    searchParams.forEach((value, key) => {
+      if (key.startsWith("put_me_in_coach_")) {
+        personProperties[key] = value;
+        keysToRemove.push(key);
+      }
+    });
+
+    if (keysToRemove.length > 0) {
+      posthog.setPersonProperties(personProperties);
+
+      // Remove the query parameters from the URL without triggering a page reload
       const newSearchParams = new URLSearchParams(searchParams.toString());
-      newSearchParams.delete("put_me_in_coach");
+      keysToRemove.forEach((key) => newSearchParams.delete(key));
       const newUrl =
         window.origin +
         pathname +
