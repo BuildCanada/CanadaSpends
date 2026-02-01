@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { SankeyNode } from "./SankeyChartD3";
 
 export const formatNumber = (amount: number, scalingFactor = 1e9) => {

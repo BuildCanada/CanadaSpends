@@ -107,11 +107,11 @@ export default async function Page(props: PageLangParam) {
             </H2>
             <Intro>
               <Trans id="facts-1">
-                Government spending shouldn't be a black box. Every year, the
-                federal government spends hundreds of billions of dollars but
-                most Canadians have no clue where it all goes. The data is
-                available, but it's buried on obscure websites and impossible to
-                navigate.
+                Government spending shouldn&apos;t be a black box. Every year,
+                the federal government spends hundreds of billions of dollars
+                but most Canadians have no clue where it all goes. The data is
+                available, but it&apos;s buried on obscure websites and
+                impossible to navigate.
               </Trans>
             </Intro>
             <Intro>
@@ -167,10 +167,10 @@ export default async function Page(props: PageLangParam) {
                 </H3>
                 <P>
                   <Trans>
-                    We're strictly non-partisan—we don't judge policies or
-                    debate spending decisions. Our only goal is to ensure that
-                    every Canadian understands how the federal government spends
-                    money.
+                    We&apos;re strictly non-partisan—we don&apos;t judge
+                    policies or debate spending decisions. Our only goal is to
+                    ensure that every Canadian understands how the federal
+                    government spends money.
                   </Trans>
                 </P>
               </div>

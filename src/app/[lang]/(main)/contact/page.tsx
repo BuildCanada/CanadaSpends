@@ -50,7 +50,7 @@ export default async function Contact(props: PropsWithChildren<PageLangParam>) {
               <ExternalLink href="https://x.com/canada_spends">
                 @canada_spends
               </ExternalLink>{" "}
-              and we'll get back to you as soon as we can.
+              and we&apos;ll get back to you as soon as we can.
             </Trans>
           </Intro>
         </Section>

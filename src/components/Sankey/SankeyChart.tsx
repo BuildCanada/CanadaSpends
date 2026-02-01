@@ -2,7 +2,7 @@ import { hierarchy } from "d3";
 import { useCallback, useEffect, useState, useRef } from "react";
 import dynamic from "next/dynamic";
 import { useLingui } from "@lingui/react/macro";
-/* @ts-ignore CSS exports no types */
+/* @ts-expect-error CSS exports no types */
 import "./SankeyChart.css";
 import { SankeyData } from "./SankeyChartD3";
 import { SankeyChartSingle } from "./SankeyChartSingle";
@@ -17,6 +17,7 @@ import { colours } from "@/styles/colours";
 const Select = dynamic(() => import("react-select"), {
   ssr: false,
   loading: () => <div className="search-select-placeholder">Loading...</div>,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
 }) as any;
 
 type FlatDataNodes = ReturnType<typeof getFlatData>["nodes"];
@@ -227,14 +228,17 @@ export function SankeyChart(props: SankeyChartProps) {
             placeholder="Search..."
             className="search-select"
             styles={{
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
               input: (base: any) => ({
                 ...base,
                 color: "#f6ebe3",
               }),
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
               singleValue: (base: any) => ({
                 ...base,
                 color: "#f6ebe3",
               }),
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
               control: (base: any) => ({
                 ...base,
                 color: "#f6ebe3",

@@ -1,5 +1,6 @@
 import type { SearchResult } from "../types/search"; // Import SearchResult if needed for types within utils
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const escapeCsvField = (field: any): string => {
   const stringField = String(field ?? "");
   if (

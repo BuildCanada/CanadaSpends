@@ -89,6 +89,7 @@ export function DownloadResultsButton() {
           query_by_weights: "4,2,1",
         };
 
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const searchResponse: any = await searchClient.search([
           { indexName: mainIndexName, params: searchParams },
         ]);

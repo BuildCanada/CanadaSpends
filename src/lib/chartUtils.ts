@@ -96,9 +96,11 @@ export const getYAxisDomain = (
 // Tremor Raw hasOnlyOneValueForKey [v0.1.0]
 
 export function hasOnlyOneValueForKey(
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   array: any[],
   keyToCheck: string,
 ): boolean {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const val: any[] = [];
 
   for (const obj of array) {

@@ -8,7 +8,7 @@ import {
   useInstantSearch,
   SortBy,
 } from "react-instantsearch";
-/* @ts-ignore CSS doesn't export types */
+/* @ts-expect-error CSS doesn't export types */
 import "./search.css"; // Make sure this path is correct
 import TypesenseInstantSearchAdapter from "typesense-instantsearch-adapter";
 import { useMemo, useState, useCallback } from "react"; // Ensure useCallback and useState are imported
@@ -414,11 +414,11 @@ function SearchControls() {
                   className="underline link"
                   href="?records%5Bquery%5D=Management%20Consulting&records%5BrefinementList%5D%5Bfiscal_year%5D%5B0%5D=2024-2025&records%5BrefinementList%5D%5Bfiscal_year%5D%5B1%5D=2020-2021&records%5BrefinementList%5D%5Bfiscal_year%5D%5B2%5D=2023-2024&records%5BrefinementList%5D%5Bfiscal_year%5D%5B3%5D=2021-2022&records%5BrefinementList%5D%5Bfiscal_year%5D%5B4%5D=2022-2023"
                 >
-                  'Management Consulting' since 2020
+                  &apos;Management Consulting&apos; since 2020
                 </a>{" "}
                 or{" "}
                 <a href="?records%5Bquery%5D=Wine" className="underline link">
-                  'Wine'
+                  &apos;Wine&apos;
                 </a>
               </H3>
             </div>

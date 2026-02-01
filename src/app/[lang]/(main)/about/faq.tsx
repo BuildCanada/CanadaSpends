@@ -27,8 +27,8 @@ export default function FAQ() {
               Public Accounts of Canada
             </ExternalLink>{" "}
             data as the primary data source. While we strive to provide
-            accurate, up-to-date information, we cannot guarantee the data's
-            completeness, reliability, or timeliness. We assume no
+            accurate, up-to-date information, we cannot guarantee the
+            data&apos;s completeness, reliability, or timeliness. We assume no
             responsibility for any errors, omissions, or outcomes resulting from
             the use of this information. Please consult the original government
             sources for official and verified data.
@@ -83,7 +83,7 @@ export default function FAQ() {
           <ExternalLink href="https://www.x.com/canada_spends">X</ExternalLink>{" "}
           <Trans>or subscribe to</Trans>{" "}
           <ExternalLink href="https://buildcanada.substack.com/subscribe">
-            Build Canada's newsletter
+            Build Canada&apos;s newsletter
           </ExternalLink>
           .
         </P>
@@ -95,8 +95,9 @@ export default function FAQ() {
         <P>
           <Trans>
             We welcome passionate individuals who want to help make a
-            difference. Whether it's by contributing your skills, helping with
-            outreach, or amplifying our work, we'd love to hear from you
+            difference. Whether it&apos;s by contributing your skills, helping
+            with outreach, or amplifying our work, we&apos;d love to hear from
+            you
           </Trans>{" "}
           <ExternalLink href="https://buildcanada.com/get-involved">
             here
@@ -110,7 +111,9 @@ export default function FAQ() {
       answer: (
         <>
           <P>
-            <Trans>No, we're not copying the DOGE playbook from the US.</Trans>
+            <Trans>
+              No, we&apos;re not copying the DOGE playbook from the US.
+            </Trans>
           </P>
           <P>
             <Trans>
@@ -121,7 +124,7 @@ export default function FAQ() {
           <P>
             <Trans>
               Our government is going to have to make hard choices about our
-              nation's spending to ensure we can invest in creating a
+              nation&apos;s spending to ensure we can invest in creating a
               competitive, resilient, and independent nation. We care about
               giving Canadians the facts about spending so they can engage in
               this conversation with elected officials.

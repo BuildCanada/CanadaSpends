@@ -833,9 +833,9 @@ export async function ContractsOver10k({
       <Detail label={"rowid"} value={contract.rowid} />
       {Object.entries(fieldMapping).map(
         ([key, { human_name, info, mapping }]) => {
-          // @ts-ignore
-          const mapper = mapping || ((v: any) => v);
-          // @ts-ignore
+          // @ts-expect-error - dynamic key access
+          const mapper = mapping || ((v: unknown) => v);
+          // @ts-expect-error - dynamic key access
           const value = mapper(contract[key as keyof ContractInfo]);
 
           return (

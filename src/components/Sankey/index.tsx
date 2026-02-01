@@ -797,6 +797,7 @@ export function Sankey() {
         },
       }),
     );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return <SankeyChart data={data as SankeyData} showDepartmentLinks={true} />;

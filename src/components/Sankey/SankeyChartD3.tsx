@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment, @typescript-eslint/no-explicit-any, prefer-const */
 // @ts-nocheck: too complex to type for now... one day. Inputs are good enough
 
 import { select } from "d3-selection";
@@ -352,7 +353,7 @@ export class SankeyChartD3 {
       .selectAll(".block:not(.fake)")
       .classed("highlight", function (x) {
         if (nodesToHighlight.includes(x.id)) {
-          // @ts-ignore
+          // @ts-expect-error - this refers to DOM element in D3 callback
           highlightedNodeElements.push(this.querySelector(".label"));
           return true;
         }

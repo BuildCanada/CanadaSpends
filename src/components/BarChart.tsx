@@ -54,7 +54,9 @@ function deepEqual<T>(obj1: T, obj2: T): boolean {
 }
 
 const renderShape = (
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   props: any,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   activeBar: any | undefined,
   activeLegend: string | undefined,
   layout: string,
@@ -392,6 +394,7 @@ const Legend = React.forwardRef<HTMLOListElement, LegendProps>((props, ref) => {
 Legend.displayName = "Legend";
 
 const ChartLegend = (
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   { payload }: any,
   categoryColors: Map<string, AvailableChartColorsKeys>,
   setLegendHeight: React.Dispatch<React.SetStateAction<number>>,
@@ -411,6 +414,7 @@ const ChartLegend = (
   });
 
   const filteredPayload = [
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     ...payload.filter((item: any) => item.type !== "none"),
     ...(referenceLines?.map((line) => ({
       value: line.label,
@@ -436,13 +440,16 @@ const ChartLegend = (
       )}
     >
       <Legend
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         categories={filteredPayload.map((entry: any) => entry.value)}
         colors={filteredPayload.map(
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           (entry: any) => entry.color || categoryColors.get(entry.value),
         )}
         onClickLegendItem={onClick}
         activeLegend={activeLegend}
         enableLegendSlider={enableLegendSlider}
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         types={filteredPayload.map((entry: any) => entry.type || "rect")}
       />
     </div>
@@ -459,6 +466,7 @@ type PayloadItem = {
   index: string;
   color: AvailableChartColorsKeys;
   type?: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   payload: any;
 };
 
@@ -561,6 +569,7 @@ export type ReferenceLineConfig = {
 };
 
 interface BarChartProps extends React.HTMLAttributes<HTMLDivElement> {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   data: Record<string, any>[];
   index: string;
   categories: string[];
@@ -635,6 +644,7 @@ const BarChart = React.forwardRef<HTMLDivElement, BarChartProps>(
       undefined,
     );
     const categoryColors = constructCategoryColors(categories, colors);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const [activeBar, setActiveBar] = React.useState<any | undefined>(
       undefined,
     );
@@ -649,6 +659,7 @@ const BarChart = React.forwardRef<HTMLDivElement, BarChartProps>(
       return `${(value * 100).toFixed(0)}%`;
     }
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     function onBarClick(data: any, _: any, event: React.MouseEvent) {
       event.stopPropagation();
       if (!onValueChange) return;
@@ -829,7 +840,8 @@ const BarChart = React.forwardRef<HTMLDivElement, BarChartProps>(
               }}
               content={({ active, payload, label }) => {
                 const cleanPayload: TooltipProps["payload"] = payload
-                  ? payload.map((item: any) => ({
+                  ? // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                    payload.map((item: any) => ({
                       category: item.dataKey,
                       value: item.value,
                       index: item.payload[index],
@@ -909,6 +921,7 @@ const BarChart = React.forwardRef<HTMLDivElement, BarChartProps>(
                 animationDuration={500}
                 animationEasing="ease-out"
                 fill=""
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 shape={(props: any) =>
                   renderShape(props, activeBar, activeLegend, layout)
                 }

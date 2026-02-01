@@ -8,9 +8,11 @@ export function DepartmentSpendingChart(props: {
   department: string | string[];
 }) {
   const departments = useDepartments();
-  const deps = Array.isArray(props.department)
-    ? props.department
-    : [props.department];
+  const deps = useMemo(
+    () =>
+      Array.isArray(props.department) ? props.department : [props.department],
+    [props.department],
+  );
   const data = useMemo(() => {
     return departments.slice(0, 10).map((item) => ({
       name: item.name,
@@ -21,7 +23,7 @@ export function DepartmentSpendingChart(props: {
           ? "bg-pine-300"
           : "",
     }));
-  }, [departments]);
+  }, [departments, deps]);
 
   return (
     <BarList

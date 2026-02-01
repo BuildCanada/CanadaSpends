@@ -35,21 +35,22 @@ export default async function About(props: PropsWithChildren<PageLangParam>) {
           <Intro>
             <Trans>
               Every year, hundreds of billions of dollars move through the
-              Government of Canada's budget. This data is technically available
-              but the information is difficult to understand and spread across
-              PDFs and databases that most Canadians don't know about.
+              Government of Canada&apos;s budget. This data is technically
+              available but the information is difficult to understand and
+              spread across PDFs and databases that most Canadians don&apos;t
+              know about.
             </Trans>
           </Intro>
           <Intro>
-            <Trans>It doesn't have to be this way.</Trans>
+            <Trans>It doesn&apos;t have to be this way.</Trans>
           </Intro>
           <Intro>
             <Trans>
               Canada Spends is a platform to make government spending more
               transparent. We take raw data and transform it into easy to
-              understand facts for Canadians. We don't tell you what to think.
-              We don't weigh in on whether spending is good or bad. We give you
-              the facts so you can decide for yourself.
+              understand facts for Canadians. We don&apos;t tell you what to
+              think. We don&apos;t weigh in on whether spending is good or bad.
+              We give you the facts so you can decide for yourself.
             </Trans>
           </Intro>
           <Intro>

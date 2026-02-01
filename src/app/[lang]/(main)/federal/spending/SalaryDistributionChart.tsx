@@ -36,7 +36,10 @@ export const SalaryDistributionChart = () => {
   const [selectedGroup, setSelectedGroup] = useState("All");
   const [showInflationAdjusted, setShowInflationAdjusted] = useState(false);
 
-  const currentData = salaryData[selectedYear]?.[selectedGroup] || [];
+  const currentData = useMemo(
+    () => salaryData[selectedYear]?.[selectedGroup] || [],
+    [selectedYear, selectedGroup],
+  );
 
   // Calculate the median bucket
   const medianBucket = useMemo(

@@ -213,7 +213,7 @@ export function JurisdictionPageContent({
                 <Trans>
                   Net Debt is what remains after subtracting financial assets
                   (like cash and investments) from the Total Debt. It represents
-                  the debt that isn't immediately covered by liquid assets.
+                  the debt that isn&apos;t immediately covered by liquid assets.
                 </Trans>
               }
             >
@@ -234,8 +234,8 @@ export function JurisdictionPageContent({
             <Tooltip
               text={
                 <Trans>
-                  Total Debt is the government's complete outstanding debt. This
-                  is the figure on which interest payments are calculated.
+                  Total Debt is the government&apos;s complete outstanding debt.
+                  This is the figure on which interest payments are calculated.
                 </Trans>
               }
             >
@@ -257,7 +257,7 @@ export function JurisdictionPageContent({
               text={
                 <Trans>
                   Annual interest payments on outstanding debt. This represents
-                  the cost of servicing the province's debt obligations.
+                  the cost of servicing the province&apos;s debt obligations.
                 </Trans>
               }
             >
@@ -355,13 +355,14 @@ export function JurisdictionPageContent({
         <Section>
           <H2>
             <Trans>
-              {jurisdiction.name}'s Revenue and Spending in Financial Year{" "}
+              {jurisdiction.name}&apos;s Revenue and Spending in Financial Year{" "}
               {jurisdiction.financialYear}
             </Trans>
           </H2>
           <P>
             <Trans>
-              Look back at what {jurisdiction.name}'s government made and spent.{" "}
+              Look back at what {jurisdiction.name}&apos;s government made and
+              spent.{" "}
               {["Toronto", "Vancouver"].includes(jurisdiction.name) && (
                 <Trans>Numbers are reported on an accrual basis.</Trans>
               )}

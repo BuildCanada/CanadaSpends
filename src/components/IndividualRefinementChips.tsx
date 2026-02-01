@@ -42,7 +42,8 @@ export function IndividualRefinementChips() {
     <div className="px-4 mt-3 mb-3 flex items-center gap-2 flex-wrap">
       {allRefinements.map(
         (
-          refinement: any, // Keep `any` for now or refine if possible
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          refinement: any,
         ) => (
           <div
             key={`${refinement.attribute}-${refinement.value}`}
