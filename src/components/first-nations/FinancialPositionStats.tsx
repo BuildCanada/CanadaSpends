@@ -48,9 +48,14 @@ function formatCurrency(value: number): string {
  * Get the value for a specific year from line item values
  */
 function getValue(
-  values: Record<string, number | null | undefined>,
+  values: Record<string, number | null | undefined> | null | undefined,
   year: number,
 ): number {
+  // Return 0 if values is null or undefined
+  if (!values) {
+    return 0;
+  }
+
   // Try to find the value for the specific year
   const yearKey = String(year);
   if (values[yearKey] !== null && values[yearKey] !== undefined) {
