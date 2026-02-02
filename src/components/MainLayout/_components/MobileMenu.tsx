@@ -134,6 +134,18 @@ export function MobileMenu(props: MobileMenuProps) {
             ))}
           </div>
         ))}
+
+        {/* First Nations */}
+        <MobileNavLink
+          href={`/${i18n.locale}/first-nations`}
+          active={pathname.startsWith(`/${i18n.locale}/first-nations`)}
+          onClick={() => setIsMenuOpen(false)}
+        >
+          <span className="pl-4 inline-block">
+            <Trans>First Nations</Trans>
+          </span>
+        </MobileNavLink>
+
         <MobileNavLink
           href={`/${i18n.locale}/tax-visualizer`}
           active={pathname === `/${i18n.locale}/tax-visualizer`}

@@ -70,7 +70,7 @@ const getFlatData = (data: SankeyData) => {
 };
 
 const chartHeight = 760;
-const amountScalingFactor = 1e9;
+const DEFAULT_AMOUNT_SCALING_FACTOR = 1e9;
 
 const chartConfig = {
   revenue: {
@@ -100,9 +100,13 @@ const chartConfig = {
 export type SankeyChartProps = {
   data: SankeyData;
   showDepartmentLinks?: boolean;
+  // Scaling factor for amounts. Use 1e9 (default) for data in billions,
+  // 1e6 for millions, or 1 for raw values (no scaling).
+  amountScalingFactor?: number;
 };
 
 export function SankeyChart(props: SankeyChartProps) {
+  const { amountScalingFactor = DEFAULT_AMOUNT_SCALING_FACTOR } = props;
   const { i18n } = useLingui();
   const [chartData, setChartData] = useState<SankeyData | null>(null);
   const [flatData, setFlatData] = useState<FlatDataNodes | null>(null);

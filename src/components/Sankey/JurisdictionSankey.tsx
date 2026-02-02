@@ -4,10 +4,14 @@ import { SankeyData } from "./SankeyChartD3";
 
 export function JurisdictionSankey({
   data,
-  // jurisdictionSlug,
+  amountScalingFactor,
 }: {
   data: SankeyData;
-  // jurisdictionSlug?: string;
+  // Scaling factor for amounts. Use 1e9 (default) for data in billions,
+  // 1e6 for millions, or 1 for raw values (no scaling).
+  amountScalingFactor?: number;
+  // Kept for backwards compatibility - not currently used
+  jurisdictionSlug?: string;
 }) {
-  return <SankeyChart data={data} />;
+  return <SankeyChart data={data} amountScalingFactor={amountScalingFactor} />;
 }

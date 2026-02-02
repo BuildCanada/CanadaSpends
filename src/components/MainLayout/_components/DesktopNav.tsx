@@ -62,6 +62,7 @@ export default function DesktopNav(props: DesktopNavProps) {
   const spendingActive =
     pathname.startsWith(`/${i18n.locale}/spending`) ||
     pathname.startsWith(`/${i18n.locale}/budget`) ||
+    pathname.startsWith(`/${i18n.locale}/first-nations`) ||
     (firstSegment ? jurisdictionSlugsSet.has(firstSegment) : false);
 
   return (
@@ -169,6 +170,15 @@ export default function DesktopNav(props: DesktopNavProps) {
                 </DropdownMenu.SubContent>
               </DropdownMenu.Portal>
             </DropdownMenu.Sub>
+
+            <DropdownMenu.Item asChild>
+              <Link
+                href={`/${i18n.locale}/first-nations`}
+                className="px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground rounded cursor-pointer"
+              >
+                <Trans>First Nations</Trans>
+              </Link>
+            </DropdownMenu.Item>
           </DropdownMenu.Content>
         </DropdownMenu.Portal>
       </DropdownMenu.Root>
