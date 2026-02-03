@@ -7,6 +7,7 @@
 
 import fs from "fs";
 import path from "path";
+import { execSync } from "child_process";
 import {
   getProvincialSlugs,
   getMunicipalitiesByProvince,
@@ -253,7 +254,21 @@ if (!fs.existsSync(dataDirPath)) {
   fs.mkdirSync(dataDirPath, { recursive: true });
 }
 
+// Write JSON file with basic formatting
 fs.writeFileSync(outputPath, JSON.stringify(outputData, null, 2));
+
+// Format with Prettier to match CI formatting rules
+try {
+  execSync(`npx prettier --write "${outputPath}"`, {
+    stdio: "inherit",
+    cwd: projectRoot,
+  });
+} catch {
+  console.warn(
+    "Warning: Failed to format with Prettier. File written but may not match CI formatting.",
+  );
+}
+
 console.log(
   `✓ Generated static data: ${Object.keys(staticData.fileStats).length} file stats, ${Object.keys(staticData.structure.provincial).length} provinces, ${Object.values(staticData.structure.municipal).flatMap((p) => Object.keys(p)).length} municipalities`,
 );

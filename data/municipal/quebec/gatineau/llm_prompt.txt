@@ -1,0 +1,48 @@
+## ✅ **Prompt Template**
+
+**Extract consolidated accounting ACTUALS for fiscal year {{YEAR}} from "Analyse des revenus consolidés" and "Analyse des charges consolidées" pages only.
+Ignore: fiscal reconciliation, affectations, amortization, charges-by-object, budgets, prior-year columns.**
+
+### **Data selection rules (critical):**
+
+1. **Column:** Use ONLY "Données consolidées - Réalisations {{YEAR}}" column.
+   ❌ DO NOT use "Administration municipale" or "Réalisations {{YEAR-1}}" columns.
+
+2. **Scope:** Extract ALL consolidated revenue and spending (operating + capital combined).
+
+3. **Hierarchy:** Preserve EXACT structure — extract all levels, do NOT roll up or combine siblings.
+
+---
+
+## 📘 **Output Format**
+
+### **## Key Metrics – {{YEAR}}**
+
+* Population – **<number>** (if available)
+* Total employees – **<number>**
+* Net debt – **$<amount>**
+* Total debt – **$<amount>**
+* Debt interest – **$<amount>**
+* Property tax revenue – **$<amount>**
+
+### **## Revenues – {{YEAR}}** / **## Expenses – {{YEAR}}**
+
+**Format:**
+* Structure: `* **Category**` → `  * Subcategory – **$123,456,789**` → `    * Sub-subcategory – **$50,000,000**` → `    * **Total Subcategory – $80,000,000**`
+* Amounts: Full dollars `**$123,456,789**` (NOT "k$"); negatives: `**($123)**` NOT `**-$123**`
+* Totals: Include **Total** line for categories with children
+* Order & Hierarchy: Maintain EXACT PDF page order; extract all levels, do NOT roll up
+
+---
+
+## ⚠️ Precision Rules
+
+* Use only categories from "Analyse des revenus/charges" tables — do not invent categories
+* Totals must match PDF exactly; flag rounding differences if sub-items exceed parent totals
+* Extract actuals only (no budgets, amortization, fiscal adjustments, reconciliation entries)
+
+---
+
+## 🧩 **Surplus/Deficit Calculation**
+
+**Total Surplus = Total Revenues – Total Expenses**

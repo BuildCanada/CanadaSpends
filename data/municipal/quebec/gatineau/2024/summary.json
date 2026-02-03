@@ -1,0 +1,88 @@
+{
+  "name": "Gatineau",
+  "financialYear": "2024",
+  "source": "https://www.gatineau.ca/upload/documents/f3a6fcef-e2f6-47cb-a69d-ff562317ad4b.pdf",
+  "pdfUrl": "https://www.gatineau.ca/upload/documents/f3a6fcef-e2f6-47cb-a69d-ff562317ad4b.pdf",
+  "totalProvincialSpending": 0.899589453,
+  "totalProvincialSpendingFormatted": "$900M",
+  "totalEmployees": 2988,
+  "netDebt": 0.183329026,
+  "totalDebt": 0.801035832,
+  "debtInterest": 0.028845149,
+  "population": null,
+  "budgetBalance": 0.16363834099999985,
+  "budgetBalanceFormatted": "$164M",
+  "perCapitaSpending": null,
+  "propertyTaxPerCapita": null,
+  "propertyTaxRevenue": 0.552969088,
+  "propertyTaxRevenueFormatted": "$553M",
+  "ministries": [
+    {
+      "name": "General administration",
+      "slug": "general-administration",
+      "totalSpending": 0.134373485,
+      "totalSpendingFormatted": "$134M",
+      "percentage": 14.937201,
+      "percentageFormatted": "14.9%"
+    },
+    {
+      "name": "Public safety",
+      "slug": "public-safety",
+      "totalSpending": 0.168454406,
+      "totalSpendingFormatted": "$168M",
+      "percentage": 18.725698,
+      "percentageFormatted": "18.7%"
+    },
+    {
+      "name": "Transportation",
+      "slug": "transportation",
+      "totalSpending": 0.253916564,
+      "totalSpendingFormatted": "$254M",
+      "percentage": 28.225827,
+      "percentageFormatted": "28.2%"
+    },
+    {
+      "name": "Environmental health",
+      "slug": "environmental-health",
+      "totalSpending": 0.145717181,
+      "totalSpendingFormatted": "$146M",
+      "percentage": 16.198187,
+      "percentageFormatted": "16.2%"
+    },
+    {
+      "name": "Health and well-being",
+      "slug": "health-and-well-being",
+      "totalSpending": 0.007799543,
+      "totalSpendingFormatted": "$8M",
+      "percentage": 0.867011,
+      "percentageFormatted": "0.9%"
+    },
+    {
+      "name": "Planning, urbanism and development",
+      "slug": "planning-urbanism-and-development",
+      "totalSpending": 0.037594001,
+      "totalSpendingFormatted": "$38M",
+      "percentage": 4.179018,
+      "percentageFormatted": "4.2%"
+    },
+    {
+      "name": "Recreation and culture",
+      "slug": "recreation-and-culture",
+      "totalSpending": 0.122889124,
+      "totalSpendingFormatted": "$123M",
+      "percentage": 13.660579,
+      "percentageFormatted": "13.7%"
+    },
+    {
+      "name": "Financing costs",
+      "slug": "financing-costs",
+      "totalSpending": 0.028845149,
+      "totalSpendingFormatted": "$29M",
+      "percentage": 3.206479,
+      "percentageFormatted": "3.2%"
+    }
+  ],
+  "credits": "Built by [Jonathan Clarkin](https://www.linkedin.com/in/jonathanclarkin/)",
+  "methodology": "Financial data is extracted from Gatineau's [Consolidated Financial Report](https://www.gatineau.ca/portail/default.aspx?p=publications_cartes_statistiques_donnees_ouvertes/etats_financiers_consolides) using LLM-assisted extraction. All values are taken from the \"Données consolidées - Réalisations 2024\" column in the \"Analyse des revenus consolidés\" and \"Analyse des charges consolidées\" sections, which represent actual consolidated accounting values (operating + capital combined). All values were manually validated against the source document and programmatically transformed into the Sankey diagram structure.",
+  "generatedAt": "2025-11-26T02:33:36.084231+00:00"
+}
