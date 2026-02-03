@@ -520,7 +520,12 @@ export default async function ProvinceIndex({
             <Trans>
               Certain government transfers, both federal and provincial, 
               are locked and exclusively used for target projects, i.e. 
-              Gardiner and DVP construction. 
+              Gardiner and DVP construction. Details: {" "}
+              <ExternalLink href="https://news.ontario.ca/en/release/1003888/ontario-and-toronto-reach-a-new-deal">
+                <Trans>
+                  Deal Between Ontario and Toronto
+                </Trans>
+              </ExternalLink>
             </Trans>
           </P>
           <P>
