@@ -407,30 +407,21 @@
                 "name": "Transportation",
                 "children": [
                   {
-                    "name": "Road network",
-                    "children": [
-                      {
-                        "name": "Municipal roads",
-                        "amount": 0.000469281
-                      },
-                      {
-                        "name": "Snow removal",
-                        "amount": 9.6622e-5
-                      }
-                    ]
+                    "name": "Municipal roads",
+                    "amount": 0.000469281
                   },
                   {
-                    "name": "Public transit",
-                    "children": [
-                      {
-                        "name": "Public transit – regular",
-                        "amount": 0.032794916
-                      },
-                      {
-                        "name": "Public transit – adapted",
-                        "amount": 0.003614299
-                      }
-                    ]
+                    "name": "Snow removal",
+                    "amount": 9.6622e-5
+                  },
+
+                  {
+                    "name": "Public transit – regular",
+                    "amount": 0.032794916
+                  },
+                  {
+                    "name": "Public transit – adapted",
+                    "amount": 0.003614299
                   }
                 ]
               },
@@ -438,25 +429,20 @@
                 "name": "Environmental health",
                 "children": [
                   {
-                    "name": "Water and sewer",
-                    "children": [
-                      {
-                        "name": "Water supply and treatment",
-                        "amount": 0.001050408
-                      },
-                      {
-                        "name": "Drinking water distribution network",
-                        "amount": 0.000308282
-                      },
-                      {
-                        "name": "Wastewater treatment",
-                        "amount": 0.001421049
-                      },
-                      {
-                        "name": "Sewer networks",
-                        "amount": 0.001895978
-                      }
-                    ]
+                    "name": "Water supply and treatment",
+                    "amount": 0.001050408
+                  },
+                  {
+                    "name": "Drinking water distribution network",
+                    "amount": 0.000308282
+                  },
+                  {
+                    "name": "Wastewater treatment",
+                    "amount": 0.001421049
+                  },
+                  {
+                    "name": "Sewer networks",
+                    "amount": 0.001895978
                   }
                 ]
               }
@@ -545,45 +531,26 @@
               },
               {
                 "name": "Transportation",
-                "children": [
-                  {
-                    "name": "Road network – Other",
-                    "amount": -0.000692293
-                  },
-                  {
-                    "name": "Public transit",
-                    "children": [
-                      {
-                        "name": "Public transit – regular",
-                        "amount": 0.030894166
-                      }
-                    ]
-                  }
-                ]
+                "amount": 0.030201873
               },
               {
                 "name": "Environmental health",
                 "children": [
                   {
-                    "name": "Water and sewer",
-                    "children": [
-                      {
-                        "name": "Water supply and treatment",
-                        "amount": 0.016354902
-                      },
-                      {
-                        "name": "Drinking water distribution network",
-                        "amount": 0.006585695
-                      },
-                      {
-                        "name": "Wastewater treatment",
-                        "amount": 0.022097568
-                      },
-                      {
-                        "name": "Sewer networks",
-                        "amount": 0.006585695
-                      }
-                    ]
+                    "name": "Water supply and treatment",
+                    "amount": 0.016354902
+                  },
+                  {
+                    "name": "Drinking water distribution network",
+                    "amount": 0.006585695
+                  },
+                  {
+                    "name": "Wastewater treatment",
+                    "amount": 0.022097568
+                  },
+                  {
+                    "name": "Sewer networks",
+                    "amount": 0.006585695
                   },
                   {
                     "name": "Residual materials – Domestic and assimilated waste",
@@ -602,18 +569,14 @@
                     "name": "Recreational activities",
                     "amount": 0.003432427
                   },
+
                   {
-                    "name": "Cultural activities",
-                    "children": [
-                      {
-                        "name": "Libraries",
-                        "amount": 0.002094935
-                      },
-                      {
-                        "name": "Other",
-                        "amount": 0.004122008
-                      }
-                    ]
+                    "name": "Libraries - Cultural activities",
+                    "amount": 0.002094935
+                  },
+                  {
+                    "name": "Other - Cultural activities",
+                    "amount": 0.004122008
                   }
                 ]
               }
@@ -677,30 +640,20 @@
                 "name": "Transportation",
                 "children": [
                   {
-                    "name": "Road network",
-                    "children": [
-                      {
-                        "name": "Municipal roads",
-                        "amount": 0.001797023
-                      },
-                      {
-                        "name": "Snow removal",
-                        "amount": 0.000113618
-                      }
-                    ]
+                    "name": "Municipal roads",
+                    "amount": 0.001797023
                   },
                   {
-                    "name": "Public transit",
-                    "children": [
-                      {
-                        "name": "Regular",
-                        "amount": 0.033987254
-                      },
-                      {
-                        "name": "Adapted",
-                        "amount": 0.000574679
-                      }
-                    ]
+                    "name": "Snow removal",
+                    "amount": 0.000113618
+                  },
+                  {
+                    "name": "Regular public transit",
+                    "amount": 0.033987254
+                  },
+                  {
+                    "name": "Adapted public transit",
+                    "amount": 0.000574679
                   },
                   {
                     "name": "Other",
