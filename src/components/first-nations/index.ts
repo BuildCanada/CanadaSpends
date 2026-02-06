@@ -5,6 +5,7 @@ export { FirstNationsNotes } from "./FirstNationsNotes";
 export { FirstNationsPageContent } from "./FirstNationsPageContent";
 export { FirstNationsSearch } from "./FirstNationsSearch";
 export { FirstNationsYearSelector } from "./FirstNationsYearSelector";
+export { RemunerationBreakdown } from "./RemunerationBreakdown";
 export { RemunerationOverview } from "./RemunerationOverview";
 export { RemunerationTable } from "./RemunerationTable";
 export {

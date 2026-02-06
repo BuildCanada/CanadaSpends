@@ -91,3 +91,25 @@ export async function getRemunerationEntries(
     `remuneration_entries?bcid=eq.${encodeURIComponent(bcid)}&fiscal_year_end=eq.${year}&order=entry_index.asc`,
   );
 }
+
+/**
+ * Get all remuneration entries for a specific band across all years.
+ */
+export async function getRemunerationEntriesByBand(
+  bcid: string,
+): Promise<RemunerationEntryRow[]> {
+  return supabaseFetch<RemunerationEntryRow[]>(
+    `remuneration_entries?bcid=eq.${encodeURIComponent(bcid)}&order=fiscal_year_end.desc,entry_index.asc`,
+  );
+}
+
+/**
+ * Get remuneration summary rows for a specific band across all years.
+ */
+export async function getBandRemunerationSummaryByBcid(
+  bcid: string,
+): Promise<BandRemunerationSummary[]> {
+  return supabaseFetch<BandRemunerationSummary[]>(
+    `band_remuneration_summary?bcid=eq.${encodeURIComponent(bcid)}&order=fiscal_year_end.desc`,
+  );
+}
