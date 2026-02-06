@@ -296,7 +296,7 @@ export function SpendingPageContent({
 export default function Spending() {
   return (
     <SpendingPageContent
-      fullScreenPath="/federal/spending-full-screen"
+      fullScreenPath="/spending-full-screen"
       contactPath="/contact"
     />
   );

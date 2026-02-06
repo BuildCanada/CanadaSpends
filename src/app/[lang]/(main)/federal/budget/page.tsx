@@ -328,7 +328,7 @@ export default function Budget() {
   return (
     <BudgetPageContent
       budgetPath="/federal/budget"
-      fullScreenPath="/federal/budget-full-screen"
+      fullScreenPath="/budget-full-screen"
       contactPath="/contact"
     />
   );

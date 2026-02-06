@@ -85,16 +85,6 @@ const nextConfig: NextConfig = {
         destination: "/:locale/federal/budget",
         permanent: true,
       },
-      {
-        source: "/:locale/spending-full-screen",
-        destination: "/:locale/federal/spending-full-screen",
-        permanent: true,
-      },
-      {
-        source: "/:locale/budget-full-screen",
-        destination: "/:locale/federal/budget-full-screen",
-        permanent: true,
-      },
     );
 
     // Add redirects for old provincial URLs
