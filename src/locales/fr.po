@@ -76,6 +76,17 @@ msgstr "{0} est une Première Nation{1}."
 msgid "{0} of federal income tax"
 msgstr "{0} de l'impôt fédéral sur le revenu"
 
+#. placeholder {0}: entries.length
+#. placeholder {1}: availableYears.length
+#: src/components/first-nations/RemunerationBreakdown.tsx:286
+msgid "{0} remuneration entries across {1} year(s)"
+msgstr ""
+
+#. placeholder {0}: firstNation.name
+#: src/app/[lang]/(main)/first-nations/remuneration/[bcid]/page.tsx:133
+msgid "{0} Remuneration{provinceSuffix}"
+msgstr ""
+
 #. placeholder {0}: jurisdiction.name
 #. placeholder {1}: jurisdiction.financialYear
 #: src/components/JurisdictionPageContent.tsx:357
@@ -336,6 +347,12 @@ msgstr "Toutes les informations que nous utilisons proviennent des bases de donn
 #: src/components/JurisdictionPageContent.tsx:183
 msgid "All program and operating spending recorded for the fiscal year."
 msgstr "Toutes les dépenses de programmes et d'exploitation enregistrées pour l'exercice financier."
+
+#. placeholder {0}: firstNation.name
+#. placeholder {1}: summaries.length
+#: src/app/[lang]/(main)/first-nations/remuneration/[bcid]/page.tsx:138
+msgid "All remuneration entries for {0} across {1} available fiscal year(s). Data is extracted from remuneration schedules published under the First Nations Financial Transparency Act (FNFTA)."
+msgstr ""
 
 #: src/components/JurisdictionPageContent.tsx:163
 msgid "All revenue collected during the fiscal year, including taxes, transfers, and other sources."
@@ -598,6 +615,7 @@ msgstr "Taxes sur le carbone"
 msgid "Cash, investments, accounts receivable, and other assets that can be converted to cash."
 msgstr "Encaisse, placements, comptes débiteurs et autres actifs pouvant être convertis en espèces."
 
+#: src/components/first-nations/RemunerationBreakdown.tsx:240
 #: src/components/first-nations/RemunerationOverview.tsx:401
 msgid "Chief"
 msgstr "Chef"
@@ -667,6 +685,9 @@ msgstr "Comparez les données de rémunération des Premières Nations. Consulte
 msgid "Compare your total tax burden across all Canadian provinces and territories"
 msgstr "Comparez votre fardeau fiscal total dans toutes les provinces et territoires canadiens"
 
+#: src/components/first-nations/RemunerationBreakdown.tsx:325
+#: src/components/first-nations/RemunerationBreakdown.tsx:398
+#: src/components/first-nations/RemunerationBreakdown.tsx:532
 #: src/components/first-nations/RemunerationOverview.tsx:425
 #: src/components/first-nations/RemunerationOverview.tsx:570
 #: src/components/first-nations/RemunerationOverview.tsx:647
@@ -1064,6 +1085,9 @@ msgstr "Agence/Partenaire d'exécution"
 msgid "Expected Results"
 msgstr "Résultats attendus"
 
+#: src/components/first-nations/RemunerationBreakdown.tsx:333
+#: src/components/first-nations/RemunerationBreakdown.tsx:410
+#: src/components/first-nations/RemunerationBreakdown.tsx:540
 #: src/components/first-nations/RemunerationOverview.tsx:437
 #: src/components/first-nations/RemunerationOverview.tsx:578
 #: src/components/first-nations/RemunerationOverview.tsx:651
@@ -1363,6 +1387,8 @@ msgid "First Nation"
 msgstr "Première Nation"
 
 #: src/app/[lang]/(main)/first-nations/[bcid]/page.tsx:59
+#: src/app/[lang]/(main)/first-nations/remuneration/[bcid]/page.tsx:117
+#: src/components/MainLayout/_components/DesktopNav.tsx:186
 #: src/components/MainLayout/_components/DesktopNav.tsx:188
 #: src/components/MainLayout/_components/MobileMenu.tsx:147
 msgid "First Nations"
@@ -2158,6 +2184,7 @@ msgstr "Ministère"
 msgid "Miscellaneous revenues"
 msgstr "Revenus divers"
 
+#: src/components/first-nations/RemunerationBreakdown.tsx:434
 #: src/components/first-nations/RemunerationOverview.tsx:655
 #: src/components/first-nations/RemunerationOverview.tsx:803
 #: src/components/first-nations/RemunerationTable.tsx:122
@@ -2188,6 +2215,7 @@ msgstr "La plupart des dépenses fédérales peuvent être classées comme direc
 msgid "Municipal"
 msgstr "Municipal"
 
+#: src/components/first-nations/RemunerationBreakdown.tsx:374
 #: src/components/first-nations/RemunerationOverview.tsx:788
 #: src/components/first-nations/RemunerationTable.tsx:114
 msgid "Name"
@@ -2298,6 +2326,10 @@ msgstr "Aucun article disponible pour le moment sur Canada Spends. Revenez bient
 #: src/components/first-nations/FirstNationsNotes.tsx:50
 msgid "No content available."
 msgstr "Aucun contenu disponible."
+
+#: src/components/first-nations/RemunerationBreakdown.tsx:299
+msgid "No entries found matching your search."
+msgstr ""
 
 #. placeholder {0}: firstNation.name
 #: src/app/[lang]/(main)/first-nations/[bcid]/page.tsx:117
@@ -2501,6 +2533,10 @@ msgstr "Publication du budget fédéral officiel de l'automne 2025"
 #: src/components/Sankey/index.tsx:67
 msgid "Official Languages + Culture"
 msgstr "Langues officielles + Culture"
+
+#: src/components/first-nations/RemunerationBreakdown.tsx:236
+msgid "officials"
+msgstr ""
 
 #: src/components/first-nations/RemunerationOverview.tsx:413
 msgid "Officials"
@@ -2759,6 +2795,7 @@ msgstr "Tarification de la pollution"
 msgid "Pollution pricing proceeds"
 msgstr "Produits de la tarification de la pollution"
 
+#: src/components/first-nations/RemunerationBreakdown.tsx:386
 #: src/components/first-nations/RemunerationOverview.tsx:791
 #: src/components/first-nations/RemunerationTable.tsx:107
 msgid "Position"
@@ -3005,6 +3042,7 @@ msgstr "Classe de bénéficiaire"
 msgid "Regions"
 msgstr "Régions"
 
+#: src/app/[lang]/(main)/first-nations/remuneration/[bcid]/page.tsx:129
 #: src/components/first-nations/RemunerationTable.tsx:233
 #: src/components/MainLayout/_components/DesktopNav.tsx:210
 #: src/components/MainLayout/_components/MobileMenu.tsx:166
@@ -3173,6 +3211,12 @@ msgstr "Afficher les entrées individuelles"
 msgid "Show more ({0} remaining)"
 msgstr "Afficher plus ({0} restants)"
 
+#. placeholder {0}: filtered.length
+#. placeholder {1}: entries.length
+#: src/components/first-nations/RemunerationBreakdown.tsx:282
+msgid "Showing {0} of {1} entries"
+msgstr ""
+
 #. placeholder {0}: filteredFirstNations.length
 #. placeholder {1}: firstNations.length
 #: src/components/first-nations/FirstNationsSearch.tsx:217
@@ -3215,6 +3259,7 @@ msgstr "Sécurité sociale"
 msgid "Social Transfer to Provinces"
 msgstr "Transfert social aux provinces"
 
+#: src/components/first-nations/RemunerationBreakdown.tsx:445
 #: src/components/first-nations/RemunerationOverview.tsx:460
 #: src/components/JurisdictionPageContent.tsx:385
 msgid "Source"
@@ -3625,6 +3670,10 @@ msgstr "Outils"
 #: src/app/[lang]/(main)/tax-visualizer/page.tsx:398
 #: src/app/[lang]/(main)/tax-visualizer/page.tsx:509
 #: src/components/first-nations/ClaimsTable.tsx:300
+#: src/components/first-nations/RemunerationBreakdown.tsx:341
+#: src/components/first-nations/RemunerationBreakdown.tsx:422
+#: src/components/first-nations/RemunerationBreakdown.tsx:502
+#: src/components/first-nations/RemunerationBreakdown.tsx:548
 #: src/components/first-nations/RemunerationOverview.tsx:800
 #: src/components/first-nations/RemunerationTable.tsx:139
 #: src/components/first-nations/RemunerationTable.tsx:208
@@ -3740,6 +3789,10 @@ msgstr "Impôt total"
 #: src/app/[lang]/(main)/spending/page.tsx:174
 msgid "Total Wages"
 msgstr "Salaires totaux"
+
+#: src/components/first-nations/RemunerationBreakdown.tsx:527
+msgid "Totals"
+msgstr ""
 
 #: src/components/Sankey/index.tsx:692
 msgid "Trade and Investment"
@@ -3884,6 +3937,11 @@ msgstr "Anciens Combattants Canada | Canada Dépense"
 #: src/app/[lang]/(main)/first-nations/[bcid]/[year]/page.tsx:59
 msgid "View {year} financial statements for {0}{provinceSuffix}. Includes statement of operations, financial position, and remuneration data from the First Nations Financial Transparency Act annual report."
 msgstr "Consultez les états financiers {year} pour {0}{provinceSuffix}. Comprend l'état des résultats, la situation financière et les données de rémunération du rapport annuel de la Loi sur la transparence financière des Premières Nations."
+
+#. placeholder {0}: firstNation.name
+#: src/app/[lang]/(main)/first-nations/remuneration/[bcid]/page.tsx:63
+msgid "View all remuneration data for {0}{provinceSuffix} across all available years. Includes compensation and expenses for elected officials and staff from annual reports published under the FNFTA."
+msgstr ""
 
 #: src/app/[lang]/(main)/tax-visualizer/page.tsx:744
 #: src/components/TaxBreakdownAccordion.tsx:100
@@ -4155,6 +4213,7 @@ msgid "Why Submit a Tip?"
 msgstr "Pourquoi soumettre une information?"
 
 #: src/app/[lang]/(main)/federal/spending/SalaryDistributionChart.tsx:80
+#: src/components/first-nations/RemunerationBreakdown.tsx:362
 #: src/components/first-nations/RemunerationOverview.tsx:365
 msgid "Year"
 msgstr "Année"
