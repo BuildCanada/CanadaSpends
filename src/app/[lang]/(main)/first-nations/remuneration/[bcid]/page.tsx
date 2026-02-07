@@ -23,14 +23,18 @@ export const revalidate = 3600;
 export const dynamicParams = true;
 
 export async function generateStaticParams() {
-  const firstNations = await getAllFirstNations();
+  try {
+    const firstNations = await getAllFirstNations();
 
-  return locales.flatMap((lang) =>
-    firstNations.map((firstNation) => ({
-      lang,
-      bcid: firstNation.bcid,
-    })),
-  );
+    return locales.flatMap((lang) =>
+      firstNations.map((firstNation) => ({
+        lang,
+        bcid: firstNation.bcid,
+      })),
+    );
+  } catch {
+    return [];
+  }
 }
 
 export async function generateMetadata({
