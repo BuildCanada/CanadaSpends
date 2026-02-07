@@ -61,3 +61,4 @@ export * from "./first-nations";
 export * from "./claims";
 export * from "./remuneration";
 export * from "./sankey-transform";
+export * from "./statscan";
