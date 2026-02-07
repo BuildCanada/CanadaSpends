@@ -18,6 +18,7 @@ import {
 import NoSSR from "@/components/NoSSR";
 import { Sankey } from "@/components/Sankey";
 import { Trans, useLingui } from "@lingui/react/macro";
+import { localizedPath } from "@/lib/utils";
 
 const StatBox = ({
   title,
@@ -111,7 +112,7 @@ export function SpendingPageContent({
   contactPath,
   locale,
 }: SpendingPageContentProps) {
-  const { t } = useLingui();
+  const { t, i18n } = useLingui();
   return (
     <Page>
       <PageContent>
@@ -153,7 +154,7 @@ export function SpendingPageContent({
         <div className="absolute top-0 left-0 w-[100vw] h-full  backdrop-blur-sm z-10 text-white md:hidden flex items-center justify-center">
           <ExternalLink
             className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            href={fullScreenPath}
+            href={localizedPath(fullScreenPath, i18n.locale)}
           >
             <Trans>View this chart in full screen</Trans>
           </ExternalLink>

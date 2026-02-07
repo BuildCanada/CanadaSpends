@@ -83,8 +83,8 @@ export function MobileMenu(props: MobileMenuProps) {
           <Trans>Spending</Trans>
         </p>
         <MobileNavLink
-          href={`/${i18n.locale}/spending`}
-          active={pathname.startsWith(`/${i18n.locale}/spending`)}
+          href={`/${i18n.locale}/federal/spending`}
+          active={pathname.startsWith(`/${i18n.locale}/federal/spending`)}
           onClick={() => setIsMenuOpen(false)}
         >
           <span className="pl-4 inline-block">
@@ -93,8 +93,8 @@ export function MobileMenu(props: MobileMenuProps) {
         </MobileNavLink>
 
         <MobileNavLink
-          href={`/${i18n.locale}/budget`}
-          active={pathname.startsWith(`/${i18n.locale}/budget`)}
+          href={`/${i18n.locale}/federal/budget`}
+          active={pathname.startsWith(`/${i18n.locale}/federal/budget`)}
           onClick={() => setIsMenuOpen(false)}
         >
           <span className="pl-4 inline-block">

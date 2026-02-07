@@ -81,6 +81,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/:locale/spending/:path*",
+        destination: "/:locale/federal/spending/:path*",
+        permanent: true,
+      },
+      {
         source: "/:locale/budget",
         destination: "/:locale/federal/budget",
         permanent: true,

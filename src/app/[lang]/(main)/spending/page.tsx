@@ -144,7 +144,7 @@ export default function Spending() {
         <div className="absolute top-0 left-0 w-100 h-full  backdrop-blur-sm z-10 text-card md:hidden flex items-center justify-center">
           <ExternalLink
             className="rounded-md bg-link px-3.5 py-2.5 text-sm font-semibold text-card shadow-sm hover:bg-link-hover focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-primary"
-            href={localizedPath("/spending-full-screen", i18n.locale)}
+            href={localizedPath("/federal/spending-full-screen", i18n.locale)}
           >
             <Trans>View this chart in full screen</Trans>
           </ExternalLink>

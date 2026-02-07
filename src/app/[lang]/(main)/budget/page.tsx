@@ -237,7 +237,7 @@ export default function Budget() {
           <div className="absolute top-0 left-0 w-100 h-full  backdrop-blur-sm z-10 text-background md:hidden flex items-center justify-center">
             <ExternalLink
               className="rounded-md bg-maritime-700 px-3.5 py-2.5 text-sm font-semibold text-background shadow-sm hover:bg-maritime-800 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-ring"
-              href={localizedPath("/budget-full-screen", i18n.locale)}
+              href={localizedPath("/federal/budget-full-screen", i18n.locale)}
             >
               <Trans>View this chart in full screen</Trans>
             </ExternalLink>

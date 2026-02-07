@@ -788,7 +788,7 @@ export default function TaxCalculatorPage() {
                       <Trans>
                         For further breakdowns of spending, see{" "}
                         <a
-                          href={localizedPath("/spending", i18n.locale)}
+                          href={localizedPath("/federal/spending", i18n.locale)}
                           className="underline"
                         >
                           Federal

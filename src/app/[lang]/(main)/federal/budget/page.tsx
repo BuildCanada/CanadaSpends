@@ -14,7 +14,8 @@ import {
 } from "@/components/Layout";
 import NoSSR from "@/components/NoSSR";
 import { BudgetSankey } from "@/components/Sankey/BudgetSankey";
-import { Trans } from "@lingui/react/macro";
+import { Trans, useLingui } from "@lingui/react/macro";
+import { localizedPath } from "@/lib/utils";
 import { useState, useCallback } from "react";
 import { NewsItem, budgetNewsData } from "@/lib/budgetNewsData";
 import { IS_BUDGET_2025_LIVE } from "@/lib/featureFlags";
@@ -121,6 +122,7 @@ export function BudgetPageContent({
   contactPath,
   locale,
 }: BudgetPageContentProps) {
+  const { i18n } = useLingui();
   const [budgetData, setBudgetData] = useState({
     spending: 513.9,
     revenue: 459.5,
@@ -274,7 +276,7 @@ export function BudgetPageContent({
           <div className="absolute top-0 left-0 w-[100vw] h-full  backdrop-blur-sm z-10 text-white md:hidden flex items-center justify-center">
             <ExternalLink
               className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              href={fullScreenPath}
+              href={localizedPath(fullScreenPath, i18n.locale)}
             >
               <Trans>View this chart in full screen</Trans>
             </ExternalLink>

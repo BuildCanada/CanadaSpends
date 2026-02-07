@@ -535,7 +535,7 @@ const BandCard = memo(function BandCard({
       <div className="flex justify-between items-start mb-2">
         <div className="flex-1 min-w-0">
           <Link
-            href={`/${lang}/first-nations/${band.bcid}`}
+            href={`/${lang}/first-nations/remuneration/${band.bcid}`}
             className="text-base font-medium text-auburn-700 hover:text-auburn-900 hover:underline block"
           >
             {band.band_name}
@@ -722,7 +722,7 @@ const ExpandableRow = memo(function ExpandableRow({
               <ChevronRight className="w-4 h-4 text-gray-400 flex-shrink-0" />
             )}
             <Link
-              href={`/${lang}/first-nations/${band.bcid}`}
+              href={`/${lang}/first-nations/remuneration/${band.bcid}`}
               className="font-medium text-auburn-700 hover:text-auburn-900 hover:underline"
               onClick={(e) => e.stopPropagation()}
             >

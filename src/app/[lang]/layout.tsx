@@ -3,7 +3,6 @@ import { LinguiClientProvider } from "@/components/LinguiClientProvider";
 import { initLingui, PageLangParam } from "@/initLingui";
 import { generateHreflangAlternates } from "@/lib/utils";
 import { useLingui } from "@lingui/react/macro";
-import { Analytics } from "@vercel/analytics/next";
 import { PropsWithChildren } from "react";
 import { Toaster } from "sonner";
 import "./globals.css";
@@ -78,7 +77,6 @@ export default async function RootLayout({
             <Toaster position="top-right" richColors />
           </LinguiClientProvider>
         </PostHogProvider>
-        <Analytics />
         {/* Simple Analytics Script */}
         <script
           async

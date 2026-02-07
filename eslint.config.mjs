@@ -13,6 +13,7 @@ const eslintConfig = [
       ".next/**",
       "node_modules/**",
       "**/(main)/spending/**",
+      "**/(main)/federal/spending/**",
     ],
   },
 

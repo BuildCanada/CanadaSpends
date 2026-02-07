@@ -1,7 +1,6 @@
 import { allMessages } from "@/appRouterI18n";
 import { LinguiClientProvider } from "@/components/LinguiClientProvider";
 import { initLingui } from "@/initLingui";
-import { Analytics } from "@vercel/analytics/next";
 import { ReactNode } from "react";
 import { Toaster } from "sonner";
 import "./[lang]/globals.css";
@@ -24,7 +23,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <Toaster position="top-right" richColors />
           </LinguiClientProvider>
         </PostHogProvider>
-        <Analytics />
         {/* Simple Analytics Script */}
         <script
           async

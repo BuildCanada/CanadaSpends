@@ -62,8 +62,10 @@ export default function DesktopNav(props: DesktopNavProps) {
     pathSegments[0] === i18n.locale ? pathSegments[1] : pathSegments[0];
 
   const spendingActive =
-    pathname.startsWith(`/${i18n.locale}/spending`) ||
-    pathname.startsWith(`/${i18n.locale}/budget`) ||
+    pathname.startsWith(`/${i18n.locale}/federal/spending`) ||
+    pathname.startsWith(`/${i18n.locale}/federal/budget`) ||
+    pathname.startsWith(`/${i18n.locale}/provincial/`) ||
+    pathname.startsWith(`/${i18n.locale}/municipal/`) ||
     (firstSegment ? jurisdictionSlugsSet.has(firstSegment) : false);
 
   return (
@@ -88,7 +90,7 @@ export default function DesktopNav(props: DesktopNavProps) {
           >
             <DropdownMenu.Item asChild>
               <Link
-                href={`/${i18n.locale}/spending`}
+                href={`/${i18n.locale}/federal/spending`}
                 className="px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground rounded cursor-pointer"
               >
                 <Trans>Federal</Trans>
@@ -97,7 +99,7 @@ export default function DesktopNav(props: DesktopNavProps) {
 
             <DropdownMenu.Item asChild>
               <Link
-                href={`/${i18n.locale}/budget`}
+                href={`/${i18n.locale}/federal/budget`}
                 className="px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground rounded cursor-pointer"
               >
                 <Trans>Budget</Trans>

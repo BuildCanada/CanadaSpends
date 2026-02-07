@@ -28,7 +28,10 @@ export function HeroButtons({
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-2xl">
       {/* Federal Spending */}
-      <Link className={primaryButtonClass} href={`/${i18n.locale}/spending`}>
+      <Link
+        className={primaryButtonClass}
+        href={`/${i18n.locale}/federal/spending`}
+      >
         <div className="items-center cursor-pointer justify-center relative flex overflow-hidden">
           <div className="items-center justify-center flex p-1">
             <Trans>Explore Federal Spending</Trans>
