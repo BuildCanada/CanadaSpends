@@ -4,6 +4,7 @@ import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import { Trans, useLingui } from "@lingui/react/macro";
 import { ChevronDown, ChevronRight } from "lucide-react";
 import { provinceNames } from "@/lib/provinceNames";
+import { UserMenu } from "@/components/UserMenu";
 
 // Memoize NavLink
 const NavLink = memo(
@@ -321,6 +322,7 @@ export default function DesktopNav(props: DesktopNavProps) {
           </DropdownMenu.Content>
         </DropdownMenu.Portal>
       </DropdownMenu.Root>
+      <UserMenu />
       <a
         href="https://buildcanada.com/get-involved?utm_source=canadaspends&utm_medium=header"
         target="_blank"

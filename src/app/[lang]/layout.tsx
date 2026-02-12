@@ -1,4 +1,5 @@
 import { allMessages } from "@/appRouterI18n";
+import { AuthListener } from "@/components/AuthListener";
 import { LinguiClientProvider } from "@/components/LinguiClientProvider";
 import { initLingui, PageLangParam } from "@/initLingui";
 import { generateHreflangAlternates } from "@/lib/utils";
@@ -69,6 +70,7 @@ export default async function RootLayout({
     <html lang={lang}>
       <body className="antialiased">
         <PostHogProvider>
+          <AuthListener />
           <LinguiClientProvider
             initialLocale={lang}
             initialMessages={allMessages[lang]!}

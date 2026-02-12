@@ -4,6 +4,7 @@ import { Trans, useLingui } from "@lingui/react/macro";
 import { memo } from "react";
 import Link from "next/link";
 import { provinceNames } from "@/lib/provinceNames";
+import { UserMenu } from "@/components/UserMenu";
 
 interface MobileMenuButtonProps {
   isMenuOpen: boolean;
@@ -201,6 +202,9 @@ export function MobileMenu(props: MobileMenuProps) {
         >
           <Trans>Whistleblowers</Trans>
         </MobileNavLink>
+        <div className="px-3 pt-3">
+          <UserMenu />
+        </div>
         <a
           href="https://buildcanada.com/get-involved?utm_source=canadaspends&utm_medium=header_mobile_menu&utm_campaign=transparency"
           target="_blank"
