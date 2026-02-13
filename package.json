@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "dev:ntp": "next dev",
-    "build": "pnpm extract && pnpm generate-statics && next build",
+    "build": "pnpm extract && pnpm generate-statics && opennextjs-cloudflare build",
     "generate-statics": "tsx scripts/generate-statics.ts",
     "start": "next start",
     "lint": "next lint",
