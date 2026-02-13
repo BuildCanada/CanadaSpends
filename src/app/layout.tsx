@@ -1,4 +1,5 @@
 import { allMessages } from "@/appRouterI18n";
+import { AuthListener } from "@/components/AuthListener";
 import { LinguiClientProvider } from "@/components/LinguiClientProvider";
 import { initLingui } from "@/initLingui";
 import { ReactNode } from "react";
@@ -15,6 +16,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <body className="antialiased">
         <PostHogProvider>
+          <AuthListener />
           <LinguiClientProvider
             initialLocale="en"
             initialMessages={allMessages["en"]!}

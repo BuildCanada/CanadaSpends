@@ -5,6 +5,9 @@ import {
   getProvincialSlugs,
   getMunicipalitiesByProvince,
 } from "./src/lib/jurisdictions";
+import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
+
+initOpenNextCloudflareForDev();
 
 const nextConfig: NextConfig = {
   /* config options here */
