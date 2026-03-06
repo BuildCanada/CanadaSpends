@@ -16,6 +16,8 @@ import { Metadata } from "next";
 
 export const revalidate = 3600;
 export const dynamicParams = true;
+// Render at request time to avoid build failure when api.buildcanada.com is unreachable
+export const dynamic = "force-dynamic";
 
 export async function generateStaticParams() {
   const firstNations = await getAllFirstNations();
