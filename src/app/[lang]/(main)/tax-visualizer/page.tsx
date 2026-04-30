@@ -292,10 +292,16 @@ function FederalTaxCard({
   );
   const incomeTaxAmount = Math.max(0, incomeTaxBeforeCredit - bpaCredit);
 
+  // Resolve province-level overrides for pension and EI (e.g., Quebec QPP, reduced Quebec EI)
+  const pensionConfig = provincialConfig.pensionPlanOverride ?? config.cpp;
+  const pensionAdditionalConfig =
+    provincialConfig.pensionPlanAdditionalOverride ?? config.cpp2;
+  const eiConfig = provincialConfig.eiOverride ?? config.ei;
+
   // Calculate payroll contributions
-  const cppAmount = calculateCappedContribution(income, config.cpp);
-  const cpp2Amount = calculateCpp2Contribution(income, config.cpp2);
-  const eiAmount = calculateCappedContribution(income, config.ei);
+  const cppAmount = calculateCappedContribution(income, pensionConfig);
+  const cpp2Amount = calculateCpp2Contribution(income, pensionAdditionalConfig);
+  const eiAmount = calculateCappedContribution(income, eiConfig);
   const payrollTotal = cppAmount + cpp2Amount + eiAmount;
 
   // Calculate federal abatement (Quebec Abatement)
@@ -351,14 +357,14 @@ function FederalTaxCard({
             <tbody>
               <tr>
                 <td className="py-1 text-muted-foreground">
-                  <div>{config.cpp.shortName}</div>
+                  <div>{pensionConfig.shortName}</div>
                   <div className="text-xs text-muted-foreground/70">
-                    {formatAmount(config.cpp.exemption)} -{" "}
-                    {formatAmount(config.cpp.maxEarnings)}
+                    {formatAmount(pensionConfig.exemption)} -{" "}
+                    {formatAmount(pensionConfig.maxEarnings)}
                   </div>
                 </td>
                 <td className="py-1 text-right align-top w-20">
-                  {formatPercent(config.cpp.rate)}
+                  {formatPercent(pensionConfig.rate)}
                 </td>
                 <td className="py-1 text-right font-medium align-top w-20">
                   {formatAmount(cppAmount)}
@@ -366,14 +372,14 @@ function FederalTaxCard({
               </tr>
               <tr className={cpp2Amount === 0 ? "opacity-40" : ""}>
                 <td className="py-1 text-muted-foreground">
-                  <div>{config.cpp2.shortName}</div>
+                  <div>{pensionAdditionalConfig.shortName}</div>
                   <div className="text-xs text-muted-foreground/70">
-                    {formatAmount(config.cpp2.ympe)} -{" "}
-                    {formatAmount(config.cpp2.yampe)}
+                    {formatAmount(pensionAdditionalConfig.ympe)} -{" "}
+                    {formatAmount(pensionAdditionalConfig.yampe)}
                   </div>
                 </td>
                 <td className="py-1 text-right align-top w-20">
-                  {formatPercent(config.cpp2.rate)}
+                  {formatPercent(pensionAdditionalConfig.rate)}
                 </td>
                 <td className="py-1 text-right font-medium align-top w-20">
                   {formatAmount(cpp2Amount)}
@@ -381,13 +387,13 @@ function FederalTaxCard({
               </tr>
               <tr>
                 <td className="py-1 text-muted-foreground">
-                  <div>{config.ei.shortName}</div>
+                  <div>{eiConfig.shortName}</div>
                   <div className="text-xs text-muted-foreground/70">
-                    <Trans>First</Trans> {formatAmount(config.ei.maxEarnings)}
+                    <Trans>First</Trans> {formatAmount(eiConfig.maxEarnings)}
                   </div>
                 </td>
                 <td className="py-1 text-right align-top w-20">
-                  {formatPercent(config.ei.rate)}
+                  {formatPercent(eiConfig.rate)}
                 </td>
                 <td className="py-1 text-right font-medium align-top w-20">
                   {formatAmount(eiAmount)}
@@ -447,9 +453,16 @@ function ProvincialTaxCard({
   const healthPremiumAmount = config.healthPremium
     ? calculateHealthPremium(income, config.healthPremium)
     : 0;
+  const parentalInsuranceAmount = config.parentalInsurance
+    ? calculateCappedContribution(income, config.parentalInsurance)
+    : 0;
 
   // Overall total
-  const totalProvincialTax = provincialTax + surtaxAmount + healthPremiumAmount;
+  const totalProvincialTax =
+    provincialTax +
+    surtaxAmount +
+    healthPremiumAmount +
+    parentalInsuranceAmount;
 
   return (
     <div className="bg-card rounded-lg shadow-sm border p-6 flex flex-col">
@@ -531,6 +544,34 @@ function ProvincialTaxCard({
                 {formatAmount(healthPremiumAmount)}
               </span>
             </div>
+          </div>
+        )}
+
+        {/* Provincial parental insurance (e.g., Quebec QPIP) */}
+        {config.parentalInsurance && (
+          <div className="mt-6 pt-4 border-t border-border">
+            <h4 className="font-semibold text-base mb-3">
+              {config.parentalInsurance.name}
+            </h4>
+            <table className="w-full text-left text-sm">
+              <tbody>
+                <tr>
+                  <td className="py-1 text-muted-foreground">
+                    <div>{config.parentalInsurance.shortName}</div>
+                    <div className="text-xs text-muted-foreground/70">
+                      <Trans>First</Trans>{" "}
+                      {formatAmount(config.parentalInsurance.maxEarnings)}
+                    </div>
+                  </td>
+                  <td className="py-1 text-right align-top w-20">
+                    {formatPercent(config.parentalInsurance.rate)}
+                  </td>
+                  <td className="py-1 text-right font-medium align-top w-20">
+                    {formatAmount(parentalInsuranceAmount)}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         )}
       </div>

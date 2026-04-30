@@ -42,6 +42,16 @@ function calculateWithConfig(
 ): DetailedTaxCalculation {
   const lineItems: TaxLineItem[] = [];
 
+  // Resolve province-level overrides for pension plan and EI
+  // (e.g., Quebec residents pay QPP instead of CPP, and a reduced EI rate
+  // because Quebec administers QPIP).
+  const pensionConfig =
+    config.provincial.pensionPlanOverride ?? config.federal.cpp;
+  const pensionAdditionalConfig =
+    config.provincial.pensionPlanAdditionalOverride ?? config.federal.cpp2;
+  const eiConfig = config.provincial.eiOverride ?? config.federal.ei;
+  const parentalInsuranceConfig = config.provincial.parentalInsurance;
+
   // Federal income tax
   const federalIncomeTax = calculateBracketTax(
     income,
@@ -56,45 +66,62 @@ function calculateWithConfig(
     category: "incomeTax",
   });
 
-  // EI contribution
-  const eiContribution = calculateCappedContribution(income, config.federal.ei);
+  // EI contribution (Quebec residents pay a reduced rate; see eiConfig)
+  const eiContribution = calculateCappedContribution(income, eiConfig);
   lineItems.push({
     id: "ei-contribution",
-    name: "Employment Insurance",
+    name: eiConfig.name,
     level: "federal",
     amount: eiContribution,
     effectiveRate: income > 0 ? (eiContribution / income) * 100 : 0,
     category: "ei",
   });
 
-  // CPP contribution
-  const cppContribution = calculateCappedContribution(
-    income,
-    config.federal.cpp,
-  );
+  // Pension plan contribution (CPP for most provinces, QPP for Quebec)
+  const cppContribution = calculateCappedContribution(income, pensionConfig);
   lineItems.push({
     id: "cpp-contribution",
-    name: "Canada Pension Plan",
+    name: pensionConfig.name,
     level: "federal",
     amount: cppContribution,
     effectiveRate: income > 0 ? (cppContribution / income) * 100 : 0,
     category: "cpp",
   });
 
-  // CPP2 contribution (second additional CPP)
+  // Second additional pension contribution (CPP2 / QPP2)
   const cpp2Contribution = calculateCpp2Contribution(
     income,
-    config.federal.cpp2,
+    pensionAdditionalConfig,
   );
   if (cpp2Contribution > 0) {
     lineItems.push({
       id: "cpp2-contribution",
-      name: "CPP Second Additional",
+      name: pensionAdditionalConfig.name,
       level: "federal",
       amount: cpp2Contribution,
       effectiveRate: income > 0 ? (cpp2Contribution / income) * 100 : 0,
       category: "cpp2",
     });
+  }
+
+  // Provincial parental insurance (Quebec QPIP)
+  let parentalInsuranceContribution = 0;
+  if (parentalInsuranceConfig) {
+    parentalInsuranceContribution = calculateCappedContribution(
+      income,
+      parentalInsuranceConfig,
+    );
+    if (parentalInsuranceContribution > 0) {
+      lineItems.push({
+        id: "parental-insurance-contribution",
+        name: parentalInsuranceConfig.name,
+        level: "provincial",
+        amount: parentalInsuranceContribution,
+        effectiveRate:
+          income > 0 ? (parentalInsuranceContribution / income) * 100 : 0,
+        category: "parentalInsurance",
+      });
+    }
   }
 
   // Provincial income tax
@@ -174,7 +201,11 @@ function calculateWithConfig(
     cppContribution +
     cpp2Contribution -
     federalAbatement;
-  const provincialTax = provincialIncomeTax + surtax + healthPremium;
+  const provincialTax =
+    provincialIncomeTax +
+    surtax +
+    healthPremium +
+    parentalInsuranceContribution;
   const totalTax = federalTax + provincialTax;
   const netIncome = income - totalTax;
   const effectiveTaxRate = income > 0 ? (totalTax / income) * 100 : 0;
@@ -197,6 +228,7 @@ function calculateWithConfig(
     eiContribution,
     cppContribution,
     cpp2Contribution,
+    parentalInsuranceContribution,
     surtax,
     healthPremium,
     federalAbatement,
