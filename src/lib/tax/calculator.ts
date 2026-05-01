@@ -51,6 +51,12 @@ function calculateWithConfig(
     config.provincial.pensionPlanAdditionalOverride ?? config.federal.cpp2;
   const eiConfig = config.provincial.eiOverride ?? config.federal.ei;
   const parentalInsuranceConfig = config.provincial.parentalInsurance;
+  // The pension plan is a provincial program when the province administers
+  // its own (e.g., Quebec's QPP via Retraite Québec).
+  const pensionLevel: "federal" | "provincial" = config.provincial
+    .pensionPlanOverride
+    ? "provincial"
+    : "federal";
 
   // Federal income tax
   const federalIncomeTax = calculateBracketTax(
@@ -82,7 +88,7 @@ function calculateWithConfig(
   lineItems.push({
     id: "cpp-contribution",
     name: pensionConfig.name,
-    level: "federal",
+    level: pensionLevel,
     amount: cppContribution,
     effectiveRate: income > 0 ? (cppContribution / income) * 100 : 0,
     category: "cpp",
@@ -97,7 +103,7 @@ function calculateWithConfig(
     lineItems.push({
       id: "cpp2-contribution",
       name: pensionAdditionalConfig.name,
-      level: "federal",
+      level: pensionLevel,
       amount: cpp2Contribution,
       effectiveRate: income > 0 ? (cpp2Contribution / income) * 100 : 0,
       category: "cpp2",
@@ -194,18 +200,21 @@ function calculateWithConfig(
     }
   }
 
-  // Calculate totals
+  // Calculate totals. Pension contributions count toward provincial tax
+  // when the province administers its own plan (e.g., Quebec QPP/QPP2),
+  // and toward federal tax otherwise (CPP/CPP2).
+  const pensionFederalAmount =
+    pensionLevel === "federal" ? cppContribution + cpp2Contribution : 0;
+  const pensionProvincialAmount =
+    pensionLevel === "provincial" ? cppContribution + cpp2Contribution : 0;
   const federalTax =
-    federalIncomeTax +
-    eiContribution +
-    cppContribution +
-    cpp2Contribution -
-    federalAbatement;
+    federalIncomeTax + eiContribution + pensionFederalAmount - federalAbatement;
   const provincialTax =
     provincialIncomeTax +
     surtax +
     healthPremium +
-    parentalInsuranceContribution;
+    parentalInsuranceContribution +
+    pensionProvincialAmount;
   const totalTax = federalTax + provincialTax;
   const netIncome = income - totalTax;
   const effectiveTaxRate = income > 0 ? (totalTax / income) * 100 : 0;

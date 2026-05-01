@@ -88,6 +88,40 @@ describe("Quebec calculator overrides", () => {
     });
   });
 
+  it("counts QPP/QPP2 as provincial, not federal", () => {
+    // Quebec QPP is administered by Retraite Québec (provincial program), so
+    // QPP and QPP2 contributions belong in provincialTax, not federalTax.
+    const detailed = calculateDetailedTax(80000, "quebec", "2024");
+    const cppLine = detailed.lineItems.find((l) => l.id === "cpp-contribution");
+    const cpp2Line = detailed.lineItems.find(
+      (l) => l.id === "cpp2-contribution",
+    );
+    expect(cppLine?.level).toBe("provincial");
+    expect(cpp2Line?.level).toBe("provincial");
+
+    // Federal total excludes QPP/QPP2; provincial total includes them.
+    // Federal: federal income tax + Quebec EI − Quebec abatement
+    // Provincial: Quebec income tax + QPP + QPP2 + QPIP
+    const expectedFederal =
+      detailed.federalIncomeTax +
+      detailed.eiContribution -
+      detailed.federalAbatement;
+    expect(detailed.federalTax).toBeCloseTo(expectedFederal, 2);
+
+    const expectedProvincial =
+      detailed.provincialIncomeTax +
+      detailed.cppContribution +
+      detailed.cpp2Contribution +
+      detailed.parentalInsuranceContribution;
+    expect(detailed.provincialTax).toBeCloseTo(expectedProvincial, 2);
+  });
+
+  it("counts CPP/CPP2 as federal for non-Quebec provinces", () => {
+    const detailed = calculateDetailedTax(80000, "ontario", "2024");
+    const cppLine = detailed.lineItems.find((l) => l.id === "cpp-contribution");
+    expect(cppLine?.level).toBe("federal");
+  });
+
   it("low income only pays the rated portion (proportional)", () => {
     // At $30,000 income for Quebec 2024:
     // QPP = ($30,000 - $3,500) * 6.40% = $1,696.00
