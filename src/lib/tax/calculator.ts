@@ -58,20 +58,6 @@ function calculateWithConfig(
     ? "provincial"
     : "federal";
 
-  // Federal income tax
-  const federalIncomeTax = calculateBracketTax(
-    income,
-    config.federal.incomeTax,
-  );
-  lineItems.push({
-    id: "federal-income-tax",
-    name: "Federal Income Tax",
-    level: "federal",
-    amount: federalIncomeTax,
-    effectiveRate: income > 0 ? (federalIncomeTax / income) * 100 : 0,
-    category: "incomeTax",
-  });
-
   // EI contribution (Quebec residents pay a reduced rate; see eiConfig)
   const eiContribution = calculateCappedContribution(income, eiConfig);
   lineItems.push({
@@ -130,9 +116,49 @@ function calculateWithConfig(
     }
   }
 
-  // Provincial income tax
+  // CRA line 22215: deduction for the "enhanced" portion of CPP/QPP
+  // contributions on employment income. The first-additional enhancement
+  // (rate above pre-2019 baseRate) and the entire second-additional
+  // contribution (CPP2/QPP2) are deductible from taxable income.
+  const cppEnhancedRate =
+    pensionConfig.baseRate !== undefined
+      ? Math.max(0, pensionConfig.rate - pensionConfig.baseRate)
+      : 0;
+  const cppEnhancedPortion =
+    pensionConfig.rate > 0
+      ? cppContribution * (cppEnhancedRate / pensionConfig.rate)
+      : 0;
+  const cppQppEnhancedDeduction = cppEnhancedPortion + cpp2Contribution;
+  const taxableIncome = Math.max(0, income - cppQppEnhancedDeduction);
+  if (cppQppEnhancedDeduction > 0) {
+    lineItems.push({
+      id: "cpp-qpp-enhanced-deduction",
+      name: "Deduction for CPP/QPP Enhanced Contributions",
+      level: pensionLevel,
+      amount: -cppQppEnhancedDeduction,
+      effectiveRate: income > 0 ? (-cppQppEnhancedDeduction / income) * 100 : 0,
+      category: "cppQppEnhancedDeduction",
+    });
+  }
+
+  // Federal income tax (computed on taxable income after the line 22215
+  // deduction).
+  const federalIncomeTax = calculateBracketTax(
+    taxableIncome,
+    config.federal.incomeTax,
+  );
+  lineItems.push({
+    id: "federal-income-tax",
+    name: "Federal Income Tax",
+    level: "federal",
+    amount: federalIncomeTax,
+    effectiveRate: income > 0 ? (federalIncomeTax / income) * 100 : 0,
+    category: "incomeTax",
+  });
+
+  // Provincial income tax (also on taxable income after the deduction).
   const provincialIncomeTax = calculateBracketTax(
-    income,
+    taxableIncome,
     config.provincial.incomeTax,
   );
   const provinceName =
@@ -241,6 +267,7 @@ function calculateWithConfig(
     surtax,
     healthPremium,
     federalAbatement,
+    cppQppEnhancedDeduction,
 
     // Metadata
     year: config.year,

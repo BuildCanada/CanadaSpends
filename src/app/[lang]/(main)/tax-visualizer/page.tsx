@@ -193,6 +193,8 @@ function IncomeTaxBracketsSection({
   title,
   config,
   income,
+  deduction = 0,
+  deductionLabel,
 }: {
   title: string;
   config: {
@@ -200,8 +202,11 @@ function IncomeTaxBracketsSection({
     basicPersonalAmount: number;
   };
   income: number;
+  deduction?: number;
+  deductionLabel?: string;
 }) {
-  const breakdown = getBracketTaxBreakdown(income, config.brackets);
+  const taxableIncome = Math.max(0, income - deduction);
+  const breakdown = getBracketTaxBreakdown(taxableIncome, config.brackets);
   const lowestRate = config.brackets[0]?.rate ?? 0;
   const bpaCredit = config.basicPersonalAmount * lowestRate;
   const totalBeforeCredit = breakdown.reduce((sum, b) => sum + b.taxAmount, 0);
@@ -210,6 +215,15 @@ function IncomeTaxBracketsSection({
   return (
     <div>
       <h4 className="font-semibold text-base mb-3">{title}</h4>
+      {deduction > 0 && (
+        <p className="text-xs text-muted-foreground mb-2">
+          <Trans>
+            Brackets applied to taxable income {formatAmount(taxableIncome)} (
+            {formatAmount(income)} less {formatAmount(deduction)}
+            {deductionLabel ? ` ${deductionLabel}` : ""})
+          </Trans>
+        </p>
+      )}
       <table className="w-full text-left">
         <thead>
           <tr>
@@ -282,16 +296,6 @@ function FederalTaxCard({
   provincialConfig,
   income,
 }: FederalTaxCardProps) {
-  // Calculate income tax
-  const breakdown = getBracketTaxBreakdown(income, config.incomeTax.brackets);
-  const lowestRate = config.incomeTax.brackets[0]?.rate ?? 0;
-  const bpaCredit = config.incomeTax.basicPersonalAmount * lowestRate;
-  const incomeTaxBeforeCredit = breakdown.reduce(
-    (sum, b) => sum + b.taxAmount,
-    0,
-  );
-  const incomeTaxAmount = Math.max(0, incomeTaxBeforeCredit - bpaCredit);
-
   // Resolve EI override (Quebec residents pay a reduced rate). The pension
   // plan, when overridden, is administered provincially (Retraite Québec)
   // and is rendered in the Provincial card instead.
@@ -305,6 +309,36 @@ function FederalTaxCard({
     : calculateCpp2Contribution(income, config.cpp2);
   const eiAmount = calculateCappedContribution(income, eiConfig);
   const payrollTotal = cppAmount + cpp2Amount + eiAmount;
+
+  // Line 22215 deduction is applied at the provincial level when the
+  // province administers its own pension plan (e.g., Quebec QPP), and at
+  // the federal level otherwise. This card reduces taxable income for the
+  // federal income tax bracket calculation only when CPP applies.
+  const cppEnhancedRate =
+    config.cpp.baseRate !== undefined
+      ? Math.max(0, config.cpp.rate - config.cpp.baseRate)
+      : 0;
+  const cppEnhancedPortion =
+    !hasProvincialPension && config.cpp.rate > 0
+      ? cppAmount * (cppEnhancedRate / config.cpp.rate)
+      : 0;
+  const cppQppEnhancedDeduction = hasProvincialPension
+    ? 0
+    : cppEnhancedPortion + cpp2Amount;
+
+  // Calculate income tax on taxable income (after the line 22215 deduction).
+  const taxableIncome = Math.max(0, income - cppQppEnhancedDeduction);
+  const breakdown = getBracketTaxBreakdown(
+    taxableIncome,
+    config.incomeTax.brackets,
+  );
+  const lowestRate = config.incomeTax.brackets[0]?.rate ?? 0;
+  const bpaCredit = config.incomeTax.basicPersonalAmount * lowestRate;
+  const incomeTaxBeforeCredit = breakdown.reduce(
+    (sum, b) => sum + b.taxAmount,
+    0,
+  );
+  const incomeTaxAmount = Math.max(0, incomeTaxBeforeCredit - bpaCredit);
 
   // Calculate federal abatement (Quebec Abatement)
   const federalAbatementConfig = provincialConfig.federalAbatement;
@@ -328,7 +362,61 @@ function FederalTaxCard({
           title={config.incomeTax.name}
           config={config.incomeTax}
           income={income}
+          deduction={cppQppEnhancedDeduction}
+          deductionLabel="CPP/CPP2 enhanced deduction (line 22215)"
         />
+
+        {/* CPP/CPP2 Enhanced Deduction (Line 22215) */}
+        {cppQppEnhancedDeduction > 0 && (
+          <div className="mt-6 pt-4 border-t border-border">
+            <h4 className="font-semibold text-base mb-2">
+              <Trans>
+                Deduction for CPP enhanced contributions (Line 22215)
+              </Trans>
+            </h4>
+            <table className="w-full text-left text-sm">
+              <tbody>
+                {cppEnhancedPortion > 0 && (
+                  <tr>
+                    <td className="py-1 text-muted-foreground">
+                      <div>
+                        <Trans>{config.cpp.shortName} enhanced portion</Trans>
+                      </div>
+                      <div className="text-xs text-muted-foreground/70">
+                        {formatPercent(cppEnhancedRate)} of pensionable earnings
+                      </div>
+                    </td>
+                    <td className="py-1 text-right font-medium align-top w-20 text-red-600">
+                      -{formatAmount(cppEnhancedPortion)}
+                    </td>
+                  </tr>
+                )}
+                {cpp2Amount > 0 && (
+                  <tr>
+                    <td className="py-1 text-muted-foreground">
+                      <div>
+                        <Trans>
+                          {config.cpp2.shortName} (fully deductible)
+                        </Trans>
+                      </div>
+                    </td>
+                    <td className="py-1 text-right font-medium align-top w-20 text-red-600">
+                      -{formatAmount(cpp2Amount)}
+                    </td>
+                  </tr>
+                )}
+                <tr className="font-semibold border-t border-border">
+                  <td className="py-1">
+                    <Trans>Total deduction from taxable income</Trans>
+                  </td>
+                  <td className="py-1 text-right w-20 text-red-600">
+                    -{formatAmount(cppQppEnhancedDeduction)}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        )}
 
         {/* Federal Abatement (if applicable) */}
         {federalAbatementConfig && federalAbatementAmount > 0 && (
@@ -443,19 +531,6 @@ function ProvincialTaxCard({
   config,
   income,
 }: ProvincialTaxCardProps) {
-  // Calculate provincial income tax for surtax calculation
-  const breakdown = getBracketTaxBreakdown(income, config.incomeTax.brackets);
-  const lowestRate = config.incomeTax.brackets[0]?.rate ?? 0;
-  const bpaCredit = config.incomeTax.basicPersonalAmount * lowestRate;
-  const provincialTaxBeforeCredit = breakdown.reduce(
-    (sum, b) => sum + b.taxAmount,
-    0,
-  );
-  const provincialTax = Math.max(0, provincialTaxBeforeCredit - bpaCredit);
-
-  const surtaxAmount = config.surtax
-    ? calculateSurtax(provincialTax, config.surtax)
-    : 0;
   const healthPremiumAmount = config.healthPremium
     ? calculateHealthPremium(income, config.healthPremium)
     : 0;
@@ -468,6 +543,44 @@ function ProvincialTaxCard({
     : 0;
   const provincialPensionAdditionalAmount = config.pensionPlanAdditionalOverride
     ? calculateCpp2Contribution(income, config.pensionPlanAdditionalOverride)
+    : 0;
+
+  // QPP enhanced deduction (line 22215) — applies when the province has its
+  // own pension plan (e.g., Quebec QPP). For provinces that use the federal
+  // CPP, the deduction is shown on the federal card.
+  const qppEnhancedRate =
+    config.pensionPlanOverride?.baseRate !== undefined
+      ? Math.max(
+          0,
+          config.pensionPlanOverride.rate - config.pensionPlanOverride.baseRate,
+        )
+      : 0;
+  const qppEnhancedPortion =
+    config.pensionPlanOverride && config.pensionPlanOverride.rate > 0
+      ? provincialPensionAmount *
+        (qppEnhancedRate / config.pensionPlanOverride.rate)
+      : 0;
+  const qppEnhancedDeduction = config.pensionPlanOverride
+    ? qppEnhancedPortion + provincialPensionAdditionalAmount
+    : 0;
+
+  // Calculate provincial income tax on taxable income (after line 22215
+  // deduction when applicable).
+  const taxableIncome = Math.max(0, income - qppEnhancedDeduction);
+  const breakdown = getBracketTaxBreakdown(
+    taxableIncome,
+    config.incomeTax.brackets,
+  );
+  const lowestRate = config.incomeTax.brackets[0]?.rate ?? 0;
+  const bpaCredit = config.incomeTax.basicPersonalAmount * lowestRate;
+  const provincialTaxBeforeCredit = breakdown.reduce(
+    (sum, b) => sum + b.taxAmount,
+    0,
+  );
+  const provincialTax = Math.max(0, provincialTaxBeforeCredit - bpaCredit);
+
+  const surtaxAmount = config.surtax
+    ? calculateSurtax(provincialTax, config.surtax)
     : 0;
 
   // Overall total
@@ -491,7 +604,66 @@ function ProvincialTaxCard({
           title={config.incomeTax.name}
           config={config.incomeTax}
           income={income}
+          deduction={qppEnhancedDeduction}
+          deductionLabel="QPP/QPP2 enhanced deduction (line 22215)"
         />
+
+        {/* QPP/QPP2 Enhanced Deduction (Line 22215) */}
+        {qppEnhancedDeduction > 0 && config.pensionPlanOverride && (
+          <div className="mt-6 pt-4 border-t border-border">
+            <h4 className="font-semibold text-base mb-2">
+              <Trans>
+                Deduction for QPP enhanced contributions (Line 22215)
+              </Trans>
+            </h4>
+            <table className="w-full text-left text-sm">
+              <tbody>
+                {qppEnhancedPortion > 0 && (
+                  <tr>
+                    <td className="py-1 text-muted-foreground">
+                      <div>
+                        <Trans>
+                          {config.pensionPlanOverride.shortName} enhanced
+                          portion
+                        </Trans>
+                      </div>
+                      <div className="text-xs text-muted-foreground/70">
+                        {formatPercent(qppEnhancedRate)} of pensionable earnings
+                      </div>
+                    </td>
+                    <td className="py-1 text-right font-medium align-top w-20 text-red-600">
+                      -{formatAmount(qppEnhancedPortion)}
+                    </td>
+                  </tr>
+                )}
+                {provincialPensionAdditionalAmount > 0 &&
+                  config.pensionPlanAdditionalOverride && (
+                    <tr>
+                      <td className="py-1 text-muted-foreground">
+                        <div>
+                          <Trans>
+                            {config.pensionPlanAdditionalOverride.shortName}{" "}
+                            (fully deductible)
+                          </Trans>
+                        </div>
+                      </td>
+                      <td className="py-1 text-right font-medium align-top w-20 text-red-600">
+                        -{formatAmount(provincialPensionAdditionalAmount)}
+                      </td>
+                    </tr>
+                  )}
+                <tr className="font-semibold border-t border-border">
+                  <td className="py-1">
+                    <Trans>Total deduction from taxable income</Trans>
+                  </td>
+                  <td className="py-1 text-right w-20 text-red-600">
+                    -{formatAmount(qppEnhancedDeduction)}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        )}
 
         {/* Surtax (if applicable) */}
         {config.surtax && (
