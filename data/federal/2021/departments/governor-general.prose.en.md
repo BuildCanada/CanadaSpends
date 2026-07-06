@@ -4,18 +4,14 @@ source: llm-first-pass
 generated: 2026-07-06
 ---
 
-This ministry grouping brings together the Office of the Governor General's Secretary, which supports the Governor General in carrying out constitutional, ceremonial, and diplomatic duties as the representative of the Crown in Canada, and Shared Services Canada, a common service organization that provides information technology infrastructure and services used across federal departments and agencies.
+{{name}} is the representative of the Crown in Canada, carrying out constitutional, ceremonial, and representational duties, including summoning and dissolving Parliament, granting royal assent to legislation, and representing Canada at official occasions.
 
-In the 2020-21 fiscal year, {{name}} spent {{totalSpending}}, representing {{percentageOfFederal}} of total federal spending that year.
+{{section:stats}}
 
-Within this grouping, the large majority of recorded spending fell within Shared Services Canada, with a smaller amount recorded for the Office of the Governor General's Secretary. The only transfer payment recorded was annuities payable under the Governor General's Act.
+In the 2020-21 fiscal year, {{name}} spent {{totalSpending}}, or {{percentageOfFederal}} of total federal spending — one of the smallest appropriations in government.
 
-<!-- verification:
-- claim: Office of the Governor General's Secretary supports constitutional/ceremonial/diplomatic duties as representative of the Crown — generic mandate background, not from fact sheet.
-- claim: Shared Services Canada provides IT infrastructure/services across federal departments — generic, publicly known mandate background for that organization, used here because it is the dominant entity under this ministry grouping in the fact sheet.
-- claim: totalSpending / percentageOfFederal for 2020-21 — matches fact sheet totalSpending: 3.202356, percentageOfFederal: 0.5092.
-- claim: large majority of spending within Shared Services Canada — matches topEntities[0] (3.177679) vs total (3.202356).
-- claim: smaller amount for Office of the Governor General's Secretary — matches topEntities[1] (0.024677).
-- claim: only transfer payment = annuities under Governor General's Act — matches topTransferPayments (single entry, 789703).
-- FLAG FOR HUMAN REVIEW: this ministry grouping is labelled "Governor General" but nearly all of its spending is attributed to Shared Services Canada, an unrelated IT services agency, not the Governor General's household/office. This is very likely an artifact of how Public Accounts groups appropriation votes into ministries rather than a data pipeline error, but the resulting prose reads unusually and should be checked against the source Public Accounts volume before marking reviewed: true.
--->
+{{section:miniSankey}}
+
+Spending was administered through the Office of the Governor General's Secretary, which supports the Governor General's official functions and household. The only transfer payment reported for the year was an annuity payable under the Governor General's Act.
+
+<!-- verification: figures only via placeholders. Fact sheet 2021: single entity (Office of the Governor General's Secretary = totalSpending); single transfer payment (Annuities payable under the Governor General's Act). Mandate paragraph is generic constitutional background. Rewritten 2026-07-06 after the gn-dg/Shared Services Canada mislabel fix — earlier prose describing an SSC concentration reflected corrupted source data. Section tokens: stats, miniSankey; entities/historicalShare/lineItems auto-append. -->

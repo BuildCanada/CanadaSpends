@@ -284,7 +284,7 @@ module PbCli
       # like-for-like quantity). Out-of-tolerance department-years are recorded
       # as non-blocking, documented report lines — the systematic causes
       # (net-voted common services, pre-2018 presentation basis, portfolio
-      # scope, the FY2020–21 governor-general allotment code-noise artifact) are
+      # scope) are
       # written up in the export report and NOTES.md rather than dropping years.
       def validate_meso_reconciliation(year)
         return unless @standard_objects.year?(year)
@@ -832,8 +832,8 @@ module PbCli
         lines << '## miniSankey standard-object reconciliation (non-blocking)' << ''
         lines << 'Standard-object GROSS total vs Vol II allotment expenditures, $B. ' \
                  'Out-of-tolerance department-years below have documented systematic causes ' \
-                 '(net-voted common services, pre-2018 presentation basis, portfolio scope, ' \
-                 'and the FY2020–21 governor-general allotment code-noise artifact — see NOTES.md).'
+                 '(net-voted common services, pre-2018 presentation basis, ' \
+                 'and portfolio scope — see NOTES.md).'
         lines << ''
         @recon_warnings.group_by { |w| w[:year] }.sort.each do |year, ws|
           lines << "### #{year} (#{ws.size})" << ''

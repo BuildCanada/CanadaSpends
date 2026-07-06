@@ -246,7 +246,7 @@ portfolios:
     ministries:
       - Governor General
       - Office of the Governor General's Secretary
-    codes: [gg, bsgg-oggs, gn-dg]
+    codes: [gg, bsgg-oggs]
 
   - slug: women-and-gender-equality
     existing_page: false
@@ -302,6 +302,10 @@ portfolios:
 # ministry reports them in a given year (highest precedence). Currently the
 # regional development agencies, whose host portfolio varies by year.
 organization_overrides:
+  # SSC belongs to the Public Services and Procurement portfolio in every
+  # edition; this also corrects the 2020–2021 gn-dg mislabel (see overrides).
+  - organization: Shared Services Canada
+    slug: public-services-and-procurement-canada
   - organization: Atlantic Canada Opportunities Agency
     slug: regional-economic-development
   - organization: Economic Development Agency of Canada for the Regions of Quebec
@@ -387,8 +391,12 @@ overrides:
     slug: governor-general
   - code: bsgg-oggs
     slug: governor-general
+  # gn-dg is extraction noise ("Public Accounts of Canada", 2020–2021) that
+  # carries ONLY Shared Services Canada rows — SSC sits under spac-pspc in
+  # every other year, and Vol II Table 3 (standard objects) confirms the
+  # Governor General portfolio is ~$25M those years, not ~$3B. Route to PSPC.
   - code: gn-dg
-    slug: governor-general                   # "Public Accounts of Canada" noise, 2020–2021
+    slug: public-services-and-procurement-canada
   - code: edip-ewddi
     slug: employment-and-social-development-canada   # noise, 2021–2022
   - code: ic

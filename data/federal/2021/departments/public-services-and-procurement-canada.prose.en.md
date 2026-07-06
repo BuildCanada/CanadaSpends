@@ -4,23 +4,14 @@ source: llm-first-pass
 generated: 2026-07-06
 ---
 
-Public Services and Procurement Canada acts as the federal government's central purchasing agent, real property manager, and receiver general. It manages procurement of goods and services on behalf of other departments, oversees federal office buildings and other real property, administers pay and pension services for public servants, and provides translation and other common services across government.
+{{name}} is the federal government's central purchasing agent, real property manager, treasurer, and pay and pension administrator, providing common services that other departments rely on to deliver their programs.
 
-{{name}} spent {{totalSpending}} in fiscal year 2020-21, representing {{percentageOfFederal}} of total federal spending that year.
+{{section:stats}}
 
-The large majority of the department's spending flowed through the Department of Public Works and Government Services, its core operating entity, with smaller amounts attributed to the National Capital Commission and Canada Post Corporation. Among transfer payments, the largest was a grant covering payment in lieu of taxes to municipalities and other taxing authorities, reflecting the department's role as custodian of federal real property; a related recoveries line offset payments in lieu of taxes from custodian departments.
+In the 2020-21 fiscal year, the portfolio spent {{totalSpending}}, or {{percentageOfFederal}} of total federal spending, on a Volume II appropriations basis.
 
-<!-- verification:
-- claim: PSPC is the government's central purchasing agent, real property manager, and receiver general, administers pay/pension and translation/common services
-  check: generic, well-established mandate description; not sourced from fact sheet (permitted exception)
-- claim: {{totalSpending}} and {{percentageOfFederal}} for fiscal year 2020-21
-  check: matches fact sheet totalSpending=6.026643, percentageOfFederal=0.9583
-- claim: largest entity is Department of Public Works and Government Services
-  check: matches topEntities[0], value 5.85072 (highest by far)
-- claim: smaller amounts to National Capital Commission and Canada Post Corporation
-  check: matches topEntities[1] (0.153713) and topEntities[2] (0.02221)
-- claim: largest transfer payment is grant for payment in lieu of taxes to municipalities and other taxing authorities
-  check: matches topTransferPayments[0], used=557833452, category Grants
-- claim: recoveries line offsets payment in lieu of taxes from custodian departments
-  check: matches topTransferPayments[1], description "Recoveries of payment in lieu of taxes from custodian departments", used=0 -- UNCERTAIN whether used=0 means no effect in FY2020-21; described qualitatively without a figure so this is safe
--->
+{{section:miniSankey}}
+
+The largest share of spending flowed through the Department of Public Works and Government Services itself, with Shared Services Canada — the agency that operates the government's information technology infrastructure, including data centres, networks, and email — accounting for most of the remainder. The National Capital Commission and a small payment related to Canada Post made up the balance. The portfolio's largest transfer payments were payments in lieu of taxes to municipalities and other taxing authorities, partly offset by recoveries from custodian departments.
+
+<!-- verification: figures only via placeholders. Fact sheet 2021: entities = Department of Public Works and Government Services, Shared Services Canada, National Capital Commission, Canada Post Corporation; top transfers = payments in lieu of taxes + recoveries (negative). Rewritten 2026-07-06 after the gn-dg fix moved Shared Services Canada into this portfolio for 2021 (it was mislabeled in the source those years). Section tokens: stats, miniSankey; entities/historicalShare/lineItems auto-append. -->

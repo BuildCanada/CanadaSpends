@@ -135,6 +135,19 @@ class TestExport < Minitest::Test
                     'standard-object gross reconciles to allotment total within 2%'
   end
 
+  # 2020-2021 editions mislabel Shared Services Canada under a gn-dg noise
+  # code; it must land in the PSPC portfolio, leaving the Governor General
+  # page at its true ~$25M scale (confirmed by Vol II Table 3).
+  def test_shared_services_gn_dg_noise_routes_to_pspc
+    @command.call(['--year', '2021'])
+    gg = JSON.parse(File.read(File.join(@out, '2021', 'departments', 'governor-general.json')))
+    pspc = JSON.parse(File.read(File.join(@out, '2021', 'departments', 'public-services-and-procurement-canada.json')))
+
+    assert_operator gg['totalSpending'], :<, 0.05, 'GG stays at office scale, not $3B'
+    refute(gg['entities'].any? { |e| e['name'] =~ /Shared Services/ })
+    assert(pspc['entities'].any? { |e| e['name'] =~ /Shared Services/ }, 'SSC lands in PSPC')
+  end
+
   def test_output_is_deterministic
     @command.call(['--year', '2024'])
     first = File.read(File.join(@out, '2024', 'sankey.json'))

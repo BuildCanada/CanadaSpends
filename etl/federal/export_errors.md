@@ -1,6 +1,6 @@
 # Federal export report
 
-Generated: fixed
+Generated: 2026-07-06T16:03:36Z
 
 Shipped years: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025
 
@@ -81,19 +81,17 @@ Standard-object GROSS total vs Vol II allotment expenditures, $B. Out-of-toleran
 - **innovation-science-and-industry**: allotment 6.695, standard-object gross 6.954, Δ +0.259 (tol ±0.134)
 - **public-services-and-procurement-canada**: allotment 7.755, standard-object gross 10.098, Δ +2.342 (tol ±0.155)
 
-### 2020 (5)
+### 2020 (4)
 
 - **agriculture-and-agri-food**: allotment 2.619, standard-object gross 2.687, Δ +0.068 (tol ±0.052)
-- **governor-general**: allotment 2.728, standard-object gross 0.023, Δ -2.705 (tol ±0.055)
 - **immigration-refugees-and-citizenship**: allotment 3.270, standard-object gross 3.545, Δ +0.275 (tol ±0.065)
 - **innovation-science-and-industry**: allotment 7.126, standard-object gross 7.295, Δ +0.169 (tol ±0.143)
-- **public-services-and-procurement-canada**: allotment 5.254, standard-object gross 7.631, Δ +2.377 (tol ±0.105)
+- **public-services-and-procurement-canada**: allotment 7.959, standard-object gross 10.336, Δ +2.377 (tol ±0.159)
 
-### 2021 (3)
+### 2021 (2)
 
 - **agriculture-and-agri-food**: allotment 3.090, standard-object gross 3.158, Δ +0.068 (tol ±0.062)
-- **governor-general**: allotment 3.202, standard-object gross 0.025, Δ -3.178 (tol ±0.064)
-- **public-services-and-procurement-canada**: allotment 6.027, standard-object gross 8.279, Δ +2.253 (tol ±0.121)
+- **public-services-and-procurement-canada**: allotment 9.204, standard-object gross 11.457, Δ +2.253 (tol ±0.184)
 
 ### 2022 (3)
 

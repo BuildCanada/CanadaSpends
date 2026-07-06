@@ -2,10 +2,10 @@
   "name": "Public Services and Procurement",
   "slug": "public-services-and-procurement-canada",
   "financialYearEnding": 2020,
-  "reportedAs": null,
+  "reportedAs": "Public Accounts of Canada; Public Services and Procurement",
   "basis": "vol2_appropriations",
-  "totalSpending": 5.253848,
-  "percentageOfFederal": 1.4477,
+  "totalSpending": 7.958943,
+  "percentageOfFederal": 2.1931,
   "historicalShare": [
     {
       "year": 2014,
@@ -33,11 +33,11 @@
     },
     {
       "year": 2020,
-      "percentage": 1.4477
+      "percentage": 2.1931
     },
     {
       "year": 2021,
-      "percentage": 0.9583
+      "percentage": 1.4636
     },
     {
       "year": 2022,
@@ -131,6 +131,74 @@
           ]
         },
         {
+          "id": "public-services-and-procurement-canada-2020-shared-services-canada",
+          "name": "Shared Services Canada",
+          "children": [
+            {
+              "id": "public-services-and-procurement-canada-2020-shared-services-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.75667
+            },
+            {
+              "id": "public-services-and-procurement-canada-2020-shared-services-canada-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.72737
+            },
+            {
+              "id": "public-services-and-procurement-canada-2020-shared-services-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.509899
+            },
+            {
+              "id": "public-services-and-procurement-canada-2020-shared-services-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.469553
+            },
+            {
+              "id": "public-services-and-procurement-canada-2020-shared-services-canada-obj-5",
+              "name": "Rentals",
+              "amount": 0.402285
+            },
+            {
+              "id": "public-services-and-procurement-canada-2020-shared-services-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.300926
+            },
+            {
+              "id": "public-services-and-procurement-canada-2020-shared-services-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.226873
+            },
+            {
+              "id": "public-services-and-procurement-canada-2020-shared-services-canada-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.016394
+            },
+            {
+              "id": "public-services-and-procurement-canada-2020-shared-services-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.007809
+            },
+            {
+              "id": "public-services-and-procurement-canada-2020-shared-services-canada-obj-11",
+              "name": "Public debt charges",
+              "amount": 0.007785
+            },
+            {
+              "name": "Other",
+              "id": "public-services-and-procurement-canada-2020-shared-services-canada-other",
+              "amount": 0.0069,
+              "isAggregate": true,
+              "count": 2
+            },
+            {
+              "id": "public-services-and-procurement-canada-2020-shared-services-canada-external-revenues",
+              "name": "External revenues",
+              "amount": -0.004128
+            }
+          ]
+        },
+        {
           "id": "public-services-and-procurement-canada-2020-national-capital-commission",
           "name": "National Capital Commission",
           "children": [
@@ -160,6 +228,11 @@
       "id": "public-services-and-procurement-canada-2020-entity-department-of-public-works-and-government-services",
       "name": "Department of Public Works and Government Services",
       "value": 5.188416
+    },
+    {
+      "id": "public-services-and-procurement-canada-2020-entity-shared-services-canada",
+      "name": "Shared Services Canada",
+      "value": 2.705095
     },
     {
       "id": "public-services-and-procurement-canada-2020-entity-national-capital-commission",
@@ -259,6 +332,38 @@
       "description": "Payments to the Commission for capital expenditures",
       "totalAvailable": 17602963,
       "used": 17602963,
+      "lapsed": 0
+    },
+    {
+      "id": "public-services-and-procurement-canada-2020-shared-services-canada-vote1",
+      "vote": "Vote 1",
+      "description": "Operating expenditures",
+      "totalAvailable": 2378351985,
+      "used": 2202305582,
+      "lapsed": 176046403
+    },
+    {
+      "id": "public-services-and-procurement-canada-2020-shared-services-canada-vote10",
+      "vote": "Vote 10",
+      "description": "Making Federal Government Workplaces More Accessible",
+      "totalAvailable": 240554,
+      "used": 0,
+      "lapsed": 240554
+    },
+    {
+      "id": "public-services-and-procurement-canada-2020-shared-services-canada-vote5",
+      "vote": "Vote 5",
+      "description": "Capital expenditures",
+      "totalAvailable": 502101538,
+      "used": 407019703,
+      "lapsed": 95081835
+    },
+    {
+      "id": "public-services-and-procurement-canada-2020-shared-services-canada-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 95769540,
+      "used": 95769540,
       "lapsed": 0
     }
   ],

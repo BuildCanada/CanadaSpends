@@ -4,24 +4,14 @@ source: llm-first-pass
 generated: 2026-07-06
 ---
 
-Services publics et Approvisionnement Canada agit à titre d'agent d'achat central du gouvernement fédéral, de gestionnaire des biens immobiliers et de receveur général. Le ministère gère l'approvisionnement en biens et services pour le compte d'autres ministères, supervise les immeubles fédéraux et d'autres biens immobiliers, administre la paye et les pensions des fonctionnaires, et fournit des services de traduction ainsi que d'autres services communs à l'échelle du gouvernement.
+{{name}} est l'acheteur central du gouvernement fédéral, son gestionnaire des biens immobiliers, son trésorier et l'administrateur de la paye et des pensions; il fournit des services communs sur lesquels les autres ministères comptent pour exécuter leurs programmes.
 
-{{name}} a dépensé {{totalSpending}} au cours de l'exercice 2020-2021, ce qui représente {{percentageOfFederal}} des dépenses fédérales totales de cette année-là.
+{{section:stats}}
 
-La grande majorité des dépenses du ministère est passée par le ministère des Travaux publics et des Services gouvernementaux, son entité opérationnelle principale, des montants plus modestes étant attribués à la Commission de la capitale nationale et à la Société canadienne des postes. Parmi les paiements de transfert, le plus important était une subvention couvrant les paiements versés en remplacement d'impôts aux municipalités et à d'autres autorités taxatrices, ce qui reflète le rôle du ministère à titre de gardien des biens immobiliers fédéraux; un poste connexe de recouvrement compensait les paiements versés en remplacement d'impôts par des ministères gardiens.
+Au cours de l'exercice 2020-21, le portefeuille a dépensé {{totalSpending}}, soit {{percentageOfFederal}} des dépenses fédérales totales, selon les autorisations du volume II.
 
-<!-- verification:
-- claim: PSPC is the government's central purchasing agent, real property manager, and receiver general, administers pay/pension and translation/common services
-  check: generic, well-established mandate description; not sourced from fact sheet (permitted exception)
-- claim: {{totalSpending}} and {{percentageOfFederal}} for fiscal year 2020-21
-  check: matches fact sheet totalSpending=6.026643, percentageOfFederal=0.9583
-- claim: largest entity is Department of Public Works and Government Services
-  check: matches topEntities[0], value 5.85072 (highest by far)
-- claim: smaller amounts to National Capital Commission and Canada Post Corporation
-  check: matches topEntities[1] (0.153713) and topEntities[2] (0.02221)
-- claim: largest transfer payment is grant for payment in lieu of taxes to municipalities and other taxing authorities
-  check: matches topTransferPayments[0], used=557833452, category Grants
-- claim: recoveries line offsets payment in lieu of taxes from custodian departments
-  check: matches topTransferPayments[1], used=0 -- described qualitatively without a figure, safe
-- note: faithful French translation of the English version; placeholders kept verbatim in English as interpolation tokens
--->
+{{section:miniSankey}}
+
+La plus grande part des dépenses est passée par le ministère des Travaux publics et des Services gouvernementaux lui-même, Services partagés Canada — l'organisme qui exploite l'infrastructure de technologie de l'information du gouvernement, y compris les centres de données, les réseaux et le courriel — représentant l'essentiel du reste. La Commission de la capitale nationale et un petit paiement lié à Postes Canada complètent le tableau. Les principaux paiements de transfert du portefeuille sont des paiements versés en remplacement d'impôts aux municipalités et à d'autres autorités taxatrices, en partie compensés par des recouvrements auprès des ministères gardiens.
+
+<!-- verification: voir le fichier anglais; réécrit le 2026-07-06 après la correction gn-dg (Services partagés Canada rattaché à ce portefeuille pour 2021). Jetons de section : stats, miniSankey. -->
