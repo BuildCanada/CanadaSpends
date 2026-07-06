@@ -32,14 +32,15 @@ interface SearchOptionType {
   label: string;
 }
 
-const getFlatData = (data: SankeyData) => {
-  const revenueRoot = hierarchy(data.revenue_data).sum((d) => {
-    return d.amount;
-  });
+// D3's sum() adds a node's own amount plus its descendants', so a parent
+// carrying its subtotal would be double-counted — count leaf amounts only.
+const leafAmount = (d: { amount?: number; children?: unknown[] }) =>
+  d.children && d.children.length ? 0 : d.amount || 0;
 
-  const spendingRoot = hierarchy(data.spending_data).sum((d) => {
-    return d.amount;
-  });
+const getFlatData = (data: SankeyData) => {
+  const revenueRoot = hierarchy(data.revenue_data).sum(leafAmount);
+
+  const spendingRoot = hierarchy(data.spending_data).sum(leafAmount);
 
   return {
     nodes: [

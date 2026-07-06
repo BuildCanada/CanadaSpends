@@ -588,10 +588,13 @@ export class SankeyChartD3 {
   transformData() {
     const clonedData = structuredClone(this.params.data);
 
+    // D3's sum() adds a node's own amount plus its descendants', so parents
+    // carrying subtotals would be double-counted — count leaf amounts only.
+    const leafAmount = (d: SankeyNode) =>
+      d.children && d.children.length ? 0 : d.amount || 0;
+
     // Compute the real sum of the data
-    const realSum = hierarchy(clonedData).sum((d) => {
-      return d.amount;
-    });
+    const realSum = hierarchy(clonedData).sum(leafAmount);
 
     // Create a lookup table for the values of the data
     const valueLookup = new Map(
@@ -599,9 +602,7 @@ export class SankeyChartD3 {
     );
 
     // Compute the sum of the data treating negatives as positives
-    const root = hierarchy(clonedData).sum((d) => {
-      return d.amount;
-    });
+    const root = hierarchy(clonedData).sum(leafAmount);
 
     const links = root.links();
 

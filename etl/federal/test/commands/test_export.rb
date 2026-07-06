@@ -37,14 +37,19 @@ class TestExport < Minitest::Test
     assert_equal 2025, summary['inflation']['baseYear']
   end
 
-  def test_sankey_nodes_are_internally_balanced
+  def test_sankey_amounts_are_leaf_only_and_sum_to_declared_totals
     @command.call(['--year', '2024'])
     data = JSON.parse(File.read(File.join(@out, '2024', 'sankey.full.json')))
 
     assert_equal 'spending', data['spending_data']['id']
     assert_equal 'revenue', data['revenue_data']['id']
-    assert_balanced(data['spending_data'])
-    assert_balanced(data['revenue_data'])
+    # D3 hierarchy().sum() adds a parent's own amount to its descendants', so
+    # emitted parents must carry no amount and leaf sums must equal the
+    # declared totals (the provincial sankey.json contract).
+    assert_no_parent_amounts(data['spending_data'])
+    assert_no_parent_amounts(data['revenue_data'])
+    assert_in_delta data['spending'], leaf_sum(data['spending_data']), 0.001
+    assert_in_delta data['revenue'], leaf_sum(data['revenue_data']), 0.001
   end
 
   def test_department_shapes_and_units
@@ -78,19 +83,18 @@ class TestExport < Minitest::Test
     @command.call(['--year', '2024'])
     tree = JSON.parse(File.read(File.join(@out, '2024', 'sankey.full.json')))['spending_data']
 
-    assert_in_delta 76.036, node(tree, 'retirement-benefits')['amount'], 0.01, 'OAS/GIS from Vol I'
-    assert_in_delta 47.273, node(tree, 'net-interest-on-debt')['amount'], 0.01, 'public debt charges from Vol I'
+    assert_in_delta 76.036, leaf_sum(node(tree, 'retirement-benefits')), 0.01, 'OAS/GIS from Vol I'
+    assert_in_delta 47.273, leaf_sum(node(tree, 'net-interest-on-debt')), 0.01, 'public debt charges from Vol I'
 
     cht = node(tree, 'health-transfer')
-    assert_in_delta 49.431, cht['amount'], 0.01, 'CHT scaled to the statement line'
+    assert_in_delta 49.431, leaf_sum(cht), 0.01, 'CHT scaled to the statement line'
     assert_operator cht['children'].length, :>=, 10, 'province children emitted'
-    assert_in_delta cht['amount'], cht['children'].sum { |c| c['amount'] }, 0.001
 
-    residual = node(tree, 'other-major-transfers')['amount']
+    residual = leaf_sum(node(tree, 'other-major-transfers'))
     assert_operator residual, :>, 0, 'Finance catch-all must stay positive after offsets'
     assert_operator residual, :<, 20, 'Finance catch-all is a residual, not the full lump'
 
-    actuarial = node(tree, 'net-actuarial-losses')['amount']
+    actuarial = leaf_sum(node(tree, 'net-actuarial-losses'))
     assert_in_delta(-7.489, actuarial, 0.01, 'actuarial sign follows the statement (gain year)')
   end
 
@@ -98,8 +102,8 @@ class TestExport < Minitest::Test
     @command.call(['--year', '2024'])
     tree = JSON.parse(File.read(File.join(@out, '2024', 'sankey.full.json')))['spending_data']
 
-    assert_in_delta 120.24, node(tree, 'social-security')['amount'], 0.5
-    assert_in_delta 47.27, node(tree, 'obligations')['amount'], 0.1
+    assert_in_delta 120.24, leaf_sum(node(tree, 'social-security')), 0.5
+    assert_in_delta 47.27, leaf_sum(node(tree, 'obligations')), 0.1
   end
 
   def test_excluded_year_reported_and_others_ship
@@ -123,12 +127,19 @@ class TestExport < Minitest::Test
     nil
   end
 
-  def assert_balanced(node)
+  # Subtotal as the D3 renderer computes it: sum of leaf amounts.
+  def leaf_sum(node)
+    children = node['children']
+    return node['amount'] || 0 if children.nil? || children.empty?
+
+    children.sum { |c| leaf_sum(c) }
+  end
+
+  def assert_no_parent_amounts(node)
     children = node['children']
     return if children.nil? || children.empty?
 
-    child_sum = children.sum { |c| c['amount'] || 0 }
-    assert_in_delta node['amount'], child_sum, 0.001, "node #{node['id']} unbalanced"
-    children.each { |c| assert_balanced(c) }
+    refute node.key?('amount'), "parent #{node['id']} must not carry an amount"
+    children.each { |c| assert_no_parent_amounts(c) }
   end
 end

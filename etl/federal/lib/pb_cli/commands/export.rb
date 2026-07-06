@@ -368,9 +368,25 @@ module PbCli
           'total' => spending['amount'],
           'spending' => spending['amount'],
           'revenue' => revenue['amount'],
-          'spending_data' => spending,
-          'revenue_data' => revenue
+          'spending_data' => strip_parent_amounts(spending),
+          'revenue_data' => strip_parent_amounts(revenue)
         }
+      end
+
+      # The site sums trees with D3 hierarchy().sum(), which adds a node's own
+      # amount PLUS its descendants' — serialized parent subtotals would be
+      # double-counted at every level (~3.7x at the root). Emit amounts on
+      # leaves only, matching the provincial sankey.json contract. Internal
+      # trees keep parent subtotals for validation and truncation; this strips
+      # copies at serialization time without mutating the originals.
+      def strip_parent_amounts(node)
+        copy = node.dup
+        children = node['children']
+        if children && !children.empty?
+          copy.delete('amount')
+          copy['children'] = children.map { |c| strip_parent_amounts(c) }
+        end
+        copy
       end
 
       # --- summary ---------------------------------------------------------
@@ -464,7 +480,7 @@ module PbCli
           'totalSpending' => total,
           'percentageOfFederal' => pct(total, vol1_total),
           'historicalShare' => historical_share(slug),
-          'miniSankey' => { 'spending_data' => mini_sankey(year, slug, rows) },
+          'miniSankey' => { 'spending_data' => strip_parent_amounts(mini_sankey(year, slug, rows)) },
           'entities' => entities(slug, year, rows),
           'votes' => votes(slug, year, rows),
           'transferPayments' => transfer_payments(slug, year),
