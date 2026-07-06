@@ -68,21 +68,41 @@
             {
               "id": "department-of-finance-department-of-finance-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 93.988739
             },
             {
               "id": "department-of-finance-department-of-finance-vote1",
-              "name": "Vote 1",
-              "amount": 0.108972
-            },
-            {
-              "id": "department-of-finance-department-of-finance-vote10",
-              "name": "Vote 10",
-              "amount": 0.0
+              "name": "Program expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "department-of-finance-department-of-finance-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.106302
+                },
+                {
+                  "id": "department-of-finance-department-of-finance-vote1-canada-s-2018-g7-presidency",
+                  "name": "Canada's 2018 G7 Presidency",
+                  "amount": 0.001724
+                },
+                {
+                  "id": "department-of-finance-department-of-finance-vote1-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 0.000946
+                }
+              ]
             },
             {
               "id": "department-of-finance-department-of-finance-vote5",
-              "name": "Vote 5",
+              "name": "Authority for amount by way of direct payments to the International Development Association pursuant to Bretton Woods and Related Agreements Act",
+              "vote": "Vote 5",
+              "amount": 0.0
+            },
+            {
+              "id": "department-of-finance-department-of-finance-vote10",
+              "name": "Canadian Securities Regulation Regime Transition Office (Canadian Securities Regulation Regime Transition Office Act)",
+              "vote": "Vote 10",
               "amount": 0.0
             }
           ]
@@ -94,11 +114,13 @@
             {
               "id": "department-of-finance-office-of-the-superintendent-of-financial-institutions-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.166972
             },
             {
               "id": "department-of-finance-office-of-the-superintendent-of-financial-institutions-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.001311
             }
           ]
@@ -109,12 +131,14 @@
           "children": [
             {
               "id": "department-of-finance-office-of-the-auditor-general-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.079477
             },
             {
               "id": "department-of-finance-office-of-the-auditor-general-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.008904
             }
           ]
@@ -125,12 +149,14 @@
           "children": [
             {
               "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.046465
             },
             {
               "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.004926
             }
           ]
@@ -142,6 +168,7 @@
             {
               "id": "department-of-finance-financial-consumer-agency-of-canada-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.025545
             }
           ]

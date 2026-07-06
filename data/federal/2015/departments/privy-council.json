@@ -68,11 +68,13 @@
             {
               "id": "privy-council-office-of-the-chief-electoral-officer-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.120622
             },
             {
               "id": "privy-council-office-of-the-chief-electoral-officer-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.030144
             }
           ]
@@ -83,12 +85,14 @@
           "children": [
             {
               "id": "privy-council-privy-council-office-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.109882
             },
             {
               "id": "privy-council-privy-council-office-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.013459
             }
           ]
@@ -99,12 +103,25 @@
           "children": [
             {
               "id": "privy-council-canadian-transportation-accident-investigation-and-safety-board-vote1",
-              "name": "Vote 1",
-              "amount": 0.028656
+              "name": "Program expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "privy-council-canadian-transportation-accident-investigation-and-safety-board-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.028347
+                },
+                {
+                  "id": "privy-council-canadian-transportation-accident-investigation-and-safety-board-vote1-lac-m-gantic-investigation",
+                  "name": "Lac‑Mégantic investigation",
+                  "amount": 0.000308
+                }
+              ]
             },
             {
               "id": "privy-council-canadian-transportation-accident-investigation-and-safety-board-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.003564
             }
           ]
@@ -115,12 +132,14 @@
           "children": [
             {
               "id": "privy-council-office-of-the-commissioner-of-official-languages-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.020066
             },
             {
               "id": "privy-council-office-of-the-commissioner-of-official-languages-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.00235
             }
           ]
@@ -131,12 +150,14 @@
           "children": [
             {
               "id": "privy-council-canadian-intergovernmental-conference-secretariat-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.004851
             },
             {
               "id": "privy-council-canadian-intergovernmental-conference-secretariat-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.000318
             }
           ]
@@ -147,12 +168,14 @@
           "children": [
             {
               "id": "privy-council-security-intelligence-review-committee-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.0027
             },
             {
               "id": "privy-council-security-intelligence-review-committee-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.00028
             }
           ]

@@ -67,8 +67,50 @@
           "children": [
             {
               "id": "canada-revenue-agency-national-revenue-vote",
-              "name": "All votes",
-              "amount": 4.791796
+              "name": "Total appropriations (vote-level detail not published for this edition)",
+              "vote": "All votes",
+              "children": [
+                {
+                  "id": "canada-revenue-agency-national-revenue-vote-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 2.884224
+                },
+                {
+                  "id": "canada-revenue-agency-national-revenue-vote-statutory-amounts",
+                  "name": "Statutory amounts",
+                  "amount": 1.03415
+                },
+                {
+                  "id": "canada-revenue-agency-national-revenue-vote-less-revenues-netted-against-expenditures",
+                  "name": "Less: revenues netted against expenditures",
+                  "amount": 0.322404
+                },
+                {
+                  "id": "canada-revenue-agency-national-revenue-vote-real-property-accommodation-and-services",
+                  "name": "Real property accommodation and services",
+                  "amount": 0.312833
+                },
+                {
+                  "id": "canada-revenue-agency-national-revenue-vote-payments-to-quebec-for-gst-administration",
+                  "name": "Payments to Quebec for GST administration",
+                  "amount": 0.142275
+                },
+                {
+                  "id": "canada-revenue-agency-national-revenue-vote-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.076133
+                },
+                {
+                  "id": "canada-revenue-agency-national-revenue-vote-foreign-investment-entities-and-non-resident-trusts",
+                  "name": "Foreign investment entities and non-resident trusts",
+                  "amount": 0.017904
+                },
+                {
+                  "id": "canada-revenue-agency-national-revenue-vote-advertising-initiatives",
+                  "name": "Advertising initiatives",
+                  "amount": 0.001873
+                }
+              ]
             }
           ]
         }

@@ -127,6 +127,7 @@ export type FederalSankeyNode = {
   id?: string;
   name?: string;
   displayName?: string;
+  vote?: string;
   amount?: number;
   isAggregate?: boolean;
   count?: number;

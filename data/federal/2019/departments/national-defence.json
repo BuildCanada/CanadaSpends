@@ -67,32 +67,54 @@
           "children": [
             {
               "id": "national-defence-department-of-national-defence-vote1",
-              "name": "Vote 1",
-              "amount": 16.120356
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "national-defence-department-of-national-defence-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 16.050279
+                },
+                {
+                  "id": "national-defence-department-of-national-defence-vote1-lesbian-gay-bisexual-and-transgender-purge-class-action-settlement",
+                  "name": "Lesbian, Gay, Bisexual and Transgender Purge Class Action Settlement",
+                  "amount": 0.056292
+                },
+                {
+                  "id": "national-defence-department-of-national-defence-vote1-canada-s-2018-g7-presidency",
+                  "name": "Canada's 2018 G7 Presidency",
+                  "amount": 0.013785
+                }
+              ]
             },
             {
               "id": "national-defence-department-of-national-defence-vote5",
-              "name": "Vote 5",
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
               "amount": 4.072189
             },
             {
               "id": "national-defence-department-of-national-defence-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 1.596143
             },
             {
               "id": "national-defence-department-of-national-defence-vote10",
-              "name": "Vote 10",
+              "name": "Grants and contributions",
+              "vote": "Vote 10",
               "amount": 0.207705
             },
             {
-              "id": "national-defence-department-of-national-defence-vote15",
-              "name": "Vote 15",
+              "id": "national-defence-department-of-national-defence-vote20",
+              "name": "Debt forgiveness",
+              "vote": "Vote 20",
               "amount": 0.0
             },
             {
-              "id": "national-defence-department-of-national-defence-vote20",
-              "name": "Vote 20",
+              "id": "national-defence-department-of-national-defence-vote15",
+              "name": "Debt write-off",
+              "vote": "Vote 15",
               "amount": 0.0
             }
           ]
@@ -103,12 +125,30 @@
           "children": [
             {
               "id": "national-defence-communications-security-establishment-vote1",
-              "name": "Vote 1",
-              "amount": 0.654801
+              "name": "Program expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "national-defence-communications-security-establishment-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.524342
+                },
+                {
+                  "id": "national-defence-communications-security-establishment-vote1-communications-security-establishment-long-term-accommodation-project",
+                  "name": "Communications Security Establishment long-term accommodation project",
+                  "amount": 0.127894
+                },
+                {
+                  "id": "national-defence-communications-security-establishment-vote1-support-for-privy-council-office",
+                  "name": "Support for Privy Council Office",
+                  "amount": 0.002565
+                }
+              ]
             },
             {
               "id": "national-defence-communications-security-establishment-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.038451
             }
           ]
@@ -119,12 +159,14 @@
           "children": [
             {
               "id": "national-defence-military-grievances-external-review-committee-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.00571
             },
             {
               "id": "national-defence-military-grievances-external-review-committee-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.0006
             }
           ]
@@ -135,12 +177,14 @@
           "children": [
             {
               "id": "national-defence-military-police-complaints-commission-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.004373
             },
             {
               "id": "national-defence-military-police-complaints-commission-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.000402
             }
           ]
@@ -151,12 +195,14 @@
           "children": [
             {
               "id": "national-defence-office-of-the-communications-security-establishment-commissioner-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.001956
             },
             {
               "id": "national-defence-office-of-the-communications-security-establishment-commissioner-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.000167
             }
           ]

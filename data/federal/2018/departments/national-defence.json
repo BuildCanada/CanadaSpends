@@ -67,8 +67,40 @@
           "children": [
             {
               "id": "national-defence-national-defence-vote",
-              "name": "All votes",
-              "amount": 23.907205
+              "name": "Total appropriations (vote-level detail not published for this edition)",
+              "vote": "All votes",
+              "children": [
+                {
+                  "id": "national-defence-national-defence-vote-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 16.444376
+                },
+                {
+                  "id": "national-defence-national-defence-vote-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 3.722931
+                },
+                {
+                  "id": "national-defence-national-defence-vote-statutory-amounts",
+                  "name": "Statutory amounts",
+                  "amount": 3.474886
+                },
+                {
+                  "id": "national-defence-national-defence-vote-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 0.15282
+                },
+                {
+                  "id": "national-defence-national-defence-vote-communications-security-establishment-long-term-accommodation-project",
+                  "name": "Communications Security Establishment long-term accommodation project",
+                  "amount": 0.109638
+                },
+                {
+                  "id": "national-defence-national-defence-vote-canada-s-2018-g7-presidency",
+                  "name": "Canada's 2018 G7 Presidency",
+                  "amount": 0.002553
+                }
+              ]
             }
           ]
         }

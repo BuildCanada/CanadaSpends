@@ -67,42 +67,92 @@
           "children": [
             {
               "id": "immigration-refugees-and-citizenship-department-of-citizenship-and-immigration-vote10",
-              "name": "Vote 10",
-              "amount": 1.827665
+              "name": "Grants and contributions",
+              "vote": "Vote 10",
+              "children": [
+                {
+                  "id": "immigration-refugees-and-citizenship-department-of-citizenship-and-immigration-vote10-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 1.794262
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-department-of-citizenship-and-immigration-vote10-resettlement-of-syrian-refugees",
+                  "name": "Resettlement of Syrian refugees",
+                  "amount": 0.032061
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-department-of-citizenship-and-immigration-vote10-global-assistance-for-irregular-migrants",
+                  "name": "Global assistance for irregular migrants",
+                  "amount": 0.001342
+                }
+              ]
             },
             {
               "id": "immigration-refugees-and-citizenship-department-of-citizenship-and-immigration-vote1",
-              "name": "Vote 1",
-              "amount": 1.036617
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "immigration-refugees-and-citizenship-department-of-citizenship-and-immigration-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.807393
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-department-of-citizenship-and-immigration-vote1-interim-federal-health-program",
+                  "name": "Interim federal health program",
+                  "amount": 0.226455
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-department-of-citizenship-and-immigration-vote1-immigration-and-refugee-protection-act",
+                  "name": "Immigration and Refugee Protection Act",
+                  "amount": 0.001953
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-department-of-citizenship-and-immigration-vote1-advertising-initiatives",
+                  "name": "Advertising initiatives",
+                  "amount": 0.000492
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-department-of-citizenship-and-immigration-vote1-resettlement-of-syrian-refugees",
+                  "name": "Resettlement of Syrian refugees",
+                  "amount": 0.000323
+                }
+              ]
             },
             {
               "id": "immigration-refugees-and-citizenship-department-of-citizenship-and-immigration-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.188791
             },
             {
               "id": "immigration-refugees-and-citizenship-department-of-citizenship-and-immigration-vote5",
-              "name": "Vote 5",
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
               "amount": 0.016313
             },
             {
               "id": "immigration-refugees-and-citizenship-department-of-citizenship-and-immigration-vote15",
-              "name": "Vote 15",
-              "amount": 0.0
-            },
-            {
-              "id": "immigration-refugees-and-citizenship-department-of-citizenship-and-immigration-vote20",
-              "name": "Vote 20",
+              "name": "Enhancing the Integrity of Canada's Borders and Asylum System",
+              "vote": "Vote 15",
               "amount": 0.0
             },
             {
               "id": "immigration-refugees-and-citizenship-department-of-citizenship-and-immigration-vote25",
-              "name": "Vote 25",
+              "name": "Helping Travellers Visit Canada",
+              "vote": "Vote 25",
+              "amount": 0.0
+            },
+            {
+              "id": "immigration-refugees-and-citizenship-department-of-citizenship-and-immigration-vote20",
+              "name": "Improving Immigration Client Service",
+              "vote": "Vote 20",
               "amount": 0.0
             },
             {
               "id": "immigration-refugees-and-citizenship-department-of-citizenship-and-immigration-vote30",
-              "name": "Vote 30",
+              "name": "Protecting People from Unscrupulous Immigration Consultants",
+              "vote": "Vote 30",
               "amount": 0.0
             }
           ]
@@ -113,17 +163,36 @@
           "children": [
             {
               "id": "immigration-refugees-and-citizenship-immigration-and-refugee-board-vote1",
-              "name": "Vote 1",
-              "amount": 0.181258
+              "name": "Program expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "immigration-refugees-and-citizenship-immigration-and-refugee-board-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.172225
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-immigration-and-refugee-board-vote1-translation-costs-devinat-case",
+                  "name": "Translation costs (Devinat case)",
+                  "amount": 0.007908
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-immigration-and-refugee-board-vote1-immigration-and-refugee-protection-act",
+                  "name": "Immigration and Refugee Protection Act",
+                  "amount": 0.001124
+                }
+              ]
             },
             {
               "id": "immigration-refugees-and-citizenship-immigration-and-refugee-board-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.019149
             },
             {
               "id": "immigration-refugees-and-citizenship-immigration-and-refugee-board-vote5",
-              "name": "Vote 5",
+              "name": "Enhancing the Integrity of Canada's Borders and Asylum System",
+              "vote": "Vote 5",
               "amount": 0.0
             }
           ]

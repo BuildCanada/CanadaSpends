@@ -67,17 +67,66 @@
           "children": [
             {
               "id": "public-services-and-procurement-canada-public-works-and-government-services-vote1",
-              "name": "Vote 1",
-              "amount": 5.152318
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "public-services-and-procurement-canada-public-works-and-government-services-vote1-real-property-services",
+                  "name": "Real property services",
+                  "amount": 2.453781
+                },
+                {
+                  "id": "public-services-and-procurement-canada-public-works-and-government-services-vote1-less-revenues-netted-against-expenditures",
+                  "name": "Less: revenues netted against expenditures",
+                  "amount": 1.533514
+                },
+                {
+                  "id": "public-services-and-procurement-canada-public-works-and-government-services-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.961165
+                },
+                {
+                  "id": "public-services-and-procurement-canada-public-works-and-government-services-vote1-receiver-general-and-central-compensation-administration-function",
+                  "name": "Receiver General and Central Compensation Administration function",
+                  "amount": 0.104458
+                },
+                {
+                  "id": "public-services-and-procurement-canada-public-works-and-government-services-vote1-sydney-tar-ponds-project",
+                  "name": "Sydney Tar Ponds project",
+                  "amount": 0.057375
+                },
+                {
+                  "id": "public-services-and-procurement-canada-public-works-and-government-services-vote1-linguistic-services",
+                  "name": "Linguistic services",
+                  "amount": 0.032136
+                },
+                {
+                  "id": "public-services-and-procurement-canada-public-works-and-government-services-vote1-build-in-canada-innovation-program",
+                  "name": "Build in Canada Innovation Program",
+                  "amount": 0.0054
+                },
+                {
+                  "id": "public-services-and-procurement-canada-public-works-and-government-services-vote1-cost-and-profit-assurance-program",
+                  "name": "Cost and profit assurance program",
+                  "amount": 0.002394
+                },
+                {
+                  "id": "public-services-and-procurement-canada-public-works-and-government-services-vote1-advertising-initiatives",
+                  "name": "Advertising Initiatives",
+                  "amount": 0.002095
+                }
+              ]
             },
             {
               "id": "public-services-and-procurement-canada-public-works-and-government-services-vote5",
-              "name": "Vote 5",
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
               "amount": 0.654842
             },
             {
               "id": "public-services-and-procurement-canada-public-works-and-government-services-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.106993
             }
           ]
@@ -88,17 +137,47 @@
           "children": [
             {
               "id": "public-services-and-procurement-canada-shared-services-canada-vote15",
-              "name": "Vote 15",
-              "amount": 2.065798
+              "name": "Operating expenditures",
+              "vote": "Vote 15",
+              "children": [
+                {
+                  "id": "public-services-and-procurement-canada-shared-services-canada-vote15-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 1.714733
+                },
+                {
+                  "id": "public-services-and-procurement-canada-shared-services-canada-vote15-less-revenues-netted-against-expenditures",
+                  "name": "Less: revenues netted against expenditures",
+                  "amount": 0.351
+                },
+                {
+                  "id": "public-services-and-procurement-canada-shared-services-canada-vote15-treasury-board-secretariat-moving-and-accommodations-expenses",
+                  "name": "Treasury Board Secretariat Moving and Accommodations Expenses",
+                  "amount": 6.5e-5
+                }
+              ]
             },
             {
               "id": "public-services-and-procurement-canada-shared-services-canada-vote20",
-              "name": "Vote 20",
-              "amount": 0.198877
+              "name": "Capital expenditures",
+              "vote": "Vote 20",
+              "children": [
+                {
+                  "id": "public-services-and-procurement-canada-shared-services-canada-vote20-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.19786
+                },
+                {
+                  "id": "public-services-and-procurement-canada-shared-services-canada-vote20-treasury-board-secretariat-moving-and-accommodations-expenses",
+                  "name": "Treasury Board Secretariat Moving and Accommodations Expenses",
+                  "amount": 0.001017
+                }
+              ]
             },
             {
               "id": "public-services-and-procurement-canada-shared-services-canada-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.090563
             }
           ]
@@ -109,7 +188,8 @@
           "children": [
             {
               "id": "public-services-and-procurement-canada-old-port-of-montreal-corporation-inc-vote10",
-              "name": "Vote 10",
+              "name": "Payments to the Old Port of Montreal Corporation Inc or to the Crown corporation to which it is amalgamated for operating and capital expenditures of the Old Port of Montreal Division",
+              "vote": "Vote 10",
               "amount": 0.017196
             }
           ]

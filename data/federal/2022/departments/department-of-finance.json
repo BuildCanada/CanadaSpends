@@ -68,16 +68,35 @@
             {
               "id": "department-of-finance-department-of-finance-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 106.259274
             },
             {
               "id": "department-of-finance-department-of-finance-vote1",
-              "name": "Vote 1",
-              "amount": 0.128778
+              "name": "Program expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "department-of-finance-department-of-finance-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.11511
+                },
+                {
+                  "id": "department-of-finance-department-of-finance-vote1-advertising-initiatives",
+                  "name": "Advertising Initiatives",
+                  "amount": 0.009417
+                },
+                {
+                  "id": "department-of-finance-department-of-finance-vote1-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 0.004251
+                }
+              ]
             },
             {
               "id": "department-of-finance-department-of-finance-vote5",
-              "name": "Vote 5",
+              "name": "Authority for amount by way of direct payments to the International Development Association pursuant to Bretton Woods and Related Agreements Act",
+              "vote": "Vote 5",
               "amount": 0.0
             }
           ]
@@ -89,11 +108,13 @@
             {
               "id": "department-of-finance-office-of-the-superintendent-of-financial-institutions-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.206384
             },
             {
               "id": "department-of-finance-office-of-the-superintendent-of-financial-institutions-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.001244
             }
           ]
@@ -104,12 +125,14 @@
           "children": [
             {
               "id": "department-of-finance-office-of-the-auditor-general-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.100707
             },
             {
               "id": "department-of-finance-office-of-the-auditor-general-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.011611
             }
           ]
@@ -120,12 +143,50 @@
           "children": [
             {
               "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote1",
-              "name": "Vote 1",
-              "amount": 0.07029
+              "name": "Program expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.0611
+                },
+                {
+                  "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote1-critical-im-it-infrastructure-systems-and-services",
+                  "name": "Critical IM/IT Infrastructure Systems and Services",
+                  "amount": 0.005672
+                },
+                {
+                  "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote1-support-accommodation-for-public-services-and-procurement-canada-arrangement",
+                  "name": "Support Accommodation for Public Services and Procurement Canada arrangement",
+                  "amount": 0.001401
+                },
+                {
+                  "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote1-strengthening-compliance-outreach-and-examinations",
+                  "name": "Strengthening Compliance Outreach and Examinations",
+                  "amount": 0.000853
+                },
+                {
+                  "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote1-support-accommodation-for-headquarters-relocation",
+                  "name": "Support Accommodation for Headquarters Relocation",
+                  "amount": 0.000688
+                },
+                {
+                  "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote1-expanding-public-private-partnership-projects",
+                  "name": "Expanding Public Private Partnership Projects",
+                  "amount": 0.000394
+                },
+                {
+                  "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote1-support-im-it-for-headquarters-relocation",
+                  "name": "Support IM/IT for Headquarters Relocation",
+                  "amount": 0.000181
+                }
+              ]
             },
             {
               "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.006739
             }
           ]
@@ -137,6 +198,7 @@
             {
               "id": "department-of-finance-financial-consumer-agency-of-canada-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.038658
             }
           ]

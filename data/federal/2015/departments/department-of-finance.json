@@ -68,26 +68,52 @@
             {
               "id": "department-of-finance-finance-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 85.563214
             },
             {
               "id": "department-of-finance-finance-vote1",
-              "name": "Vote 1",
-              "amount": 0.115142
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "department-of-finance-finance-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.096548
+                },
+                {
+                  "id": "department-of-finance-finance-vote1-move-to-90-elgin-street-building",
+                  "name": "Move to 90 Elgin street building",
+                  "amount": 0.009786
+                },
+                {
+                  "id": "department-of-finance-finance-vote1-advertising-initiatives",
+                  "name": "Advertising initiatives",
+                  "amount": 0.008708
+                },
+                {
+                  "id": "department-of-finance-finance-vote1-less-revenues-netted-against-expenditures",
+                  "name": "Less: revenues netted against expenditures",
+                  "amount": 0.000101
+                }
+              ]
             },
             {
               "id": "department-of-finance-finance-vote5",
-              "name": "Vote 5",
+              "name": "Grants and contributions",
+              "vote": "Vote 5",
               "amount": 0.005
             },
             {
               "id": "department-of-finance-finance-vote6",
-              "name": "Vote 6",
+              "name": "Authority for amount by way of direct payments to the International Development Association pursuant to Bretton Woods and Related Agreements Act",
+              "vote": "Vote 6",
               "amount": 0.0
             },
             {
               "id": "department-of-finance-finance-vote9",
-              "name": "Vote 9",
+              "name": "To amend subsection 14(1) of the Canadian Securities Regulation Regime Transition Office Act",
+              "vote": "Vote 9",
               "amount": 0.0
             }
           ]
@@ -98,7 +124,8 @@
           "children": [
             {
               "id": "department-of-finance-ppp-canada-inc-vote3",
-              "name": "Vote 3",
+              "name": "Payments to PPP Canada Inc. for PPP Canada Fund investments",
+              "vote": "Vote 3",
               "amount": 0.1977
             }
           ]
@@ -110,11 +137,13 @@
             {
               "id": "department-of-finance-office-of-the-superintendent-of-financial-institutions-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.145364
             },
             {
               "id": "department-of-finance-office-of-the-superintendent-of-financial-institutions-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.000945
             }
           ]
@@ -125,12 +154,14 @@
           "children": [
             {
               "id": "department-of-finance-office-of-the-auditor-general-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.074999
             },
             {
               "id": "department-of-finance-office-of-the-auditor-general-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.009124
             }
           ]
@@ -141,12 +172,14 @@
           "children": [
             {
               "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.046418
             },
             {
               "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.004987
             }
           ]
@@ -158,6 +191,7 @@
             {
               "id": "department-of-finance-financial-consumer-agency-of-canada-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.01789
             }
           ]
@@ -168,12 +202,14 @@
           "children": [
             {
               "id": "department-of-finance-canadian-international-trade-tribunal-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.005041
             },
             {
               "id": "department-of-finance-canadian-international-trade-tribunal-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.000683
             }
           ]

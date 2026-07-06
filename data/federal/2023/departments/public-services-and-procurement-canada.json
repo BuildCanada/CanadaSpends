@@ -67,17 +67,87 @@
           "children": [
             {
               "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote1",
-              "name": "Vote 1",
-              "amount": 4.315058
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote1-real-property-services",
+                  "name": "Real property services",
+                  "amount": 2.423924
+                },
+                {
+                  "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 1.191337
+                },
+                {
+                  "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote1-post-implementation-of-pay-system",
+                  "name": "Post implementation of pay system",
+                  "amount": 0.331776
+                },
+                {
+                  "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote1-pre-planning-for-capital-fit-up-and-non-capital-specific-projects",
+                  "name": "Pre-planning for capital, fit-up and non-capital specific projects",
+                  "amount": 0.160059
+                },
+                {
+                  "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote1-receiver-general-and-central-compensation-administration-function",
+                  "name": "Receiver General and central compensation administration function",
+                  "amount": 0.103098
+                },
+                {
+                  "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote1-linguistic-services",
+                  "name": "Linguistic services",
+                  "amount": 0.046725
+                },
+                {
+                  "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote1-e-procurement-solution",
+                  "name": "e-Procurement Solution",
+                  "amount": 0.037541
+                },
+                {
+                  "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote1-cape-breton-operation",
+                  "name": "Cape Breton operation",
+                  "amount": 0.020178
+                },
+                {
+                  "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote1-innovative-solutions-canada",
+                  "name": "Innovative Solutions Canada",
+                  "amount": 0.000419
+                }
+              ]
             },
             {
               "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote5",
-              "name": "Vote 5",
-              "amount": 1.525206
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
+              "children": [
+                {
+                  "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote5-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 1.183453
+                },
+                {
+                  "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote5-real-property-refit-fit-up",
+                  "name": "Real property refit / fit-up",
+                  "amount": 0.166883
+                },
+                {
+                  "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote5-real-property-capital-leases",
+                  "name": "Real property capital leases",
+                  "amount": 0.132257
+                },
+                {
+                  "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote5-post-implementation-of-pay-system",
+                  "name": "Post implementation of pay system",
+                  "amount": 0.042613
+                }
+              ]
             },
             {
               "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.07172
             }
           ]
@@ -88,17 +158,47 @@
           "children": [
             {
               "id": "public-services-and-procurement-canada-shared-services-canada-vote1",
-              "name": "Vote 1",
-              "amount": 3.009574
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "public-services-and-procurement-canada-shared-services-canada-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 3.002148
+                },
+                {
+                  "id": "public-services-and-procurement-canada-shared-services-canada-vote1-innovative-solutions-canada",
+                  "name": "Innovative Solutions Canada",
+                  "amount": 0.006712
+                },
+                {
+                  "id": "public-services-and-procurement-canada-shared-services-canada-vote1-secure-canada-s-government-information-technology-infrastructure-and-information",
+                  "name": "Secure Canada's government information technology infrastructure and information",
+                  "amount": 0.000714
+                }
+              ]
             },
             {
               "id": "public-services-and-procurement-canada-shared-services-canada-vote5",
-              "name": "Vote 5",
-              "amount": 0.295168
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
+              "children": [
+                {
+                  "id": "public-services-and-procurement-canada-shared-services-canada-vote5-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.29509
+                },
+                {
+                  "id": "public-services-and-procurement-canada-shared-services-canada-vote5-secure-canada-s-government-information-technology-infrastructure-and-information",
+                  "name": "Secure Canada's government information technology infrastructure and information",
+                  "amount": 7.8e-5
+                }
+              ]
             },
             {
               "id": "public-services-and-procurement-canada-shared-services-canada-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.126957
             }
           ]
@@ -109,12 +209,14 @@
           "children": [
             {
               "id": "public-services-and-procurement-canada-national-capital-commission-vote5",
-              "name": "Vote 5",
+              "name": "Payments to the Commission for capital expenditures",
+              "vote": "Vote 5",
               "amount": 0.111341
             },
             {
               "id": "public-services-and-procurement-canada-national-capital-commission-vote1",
-              "name": "Vote 1",
+              "name": "Payments to the Commission for operating expenditures",
+              "vote": "Vote 1",
               "amount": 0.082887
             }
           ]
@@ -125,7 +227,8 @@
           "children": [
             {
               "id": "public-services-and-procurement-canada-canada-post-corporation-vote1",
-              "name": "Vote 1",
+              "name": "Payments to the Corporation for special purposes",
+              "vote": "Vote 1",
               "amount": 0.02221
             }
           ]

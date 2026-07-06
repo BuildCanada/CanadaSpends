@@ -67,23 +67,90 @@
           "children": [
             {
               "id": "natural-resources-department-of-natural-resources-vote10",
-              "name": "Vote 10",
-              "amount": 1.1772
+              "name": "Grants and contributions",
+              "vote": "Vote 10",
+              "children": [
+                {
+                  "id": "natural-resources-department-of-natural-resources-vote10-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 1.140486
+                },
+                {
+                  "id": "natural-resources-department-of-natural-resources-vote10-energuide-energy-efficiency-assessment",
+                  "name": "EnerGuide Energy Efficiency Assessment",
+                  "amount": 0.036191
+                },
+                {
+                  "id": "natural-resources-department-of-natural-resources-vote10-innovative-solutions-canada",
+                  "name": "Innovative Solutions Canada",
+                  "amount": 0.000523
+                }
+              ]
             },
             {
               "id": "natural-resources-department-of-natural-resources-vote1",
-              "name": "Vote 1",
-              "amount": 0.801705
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "natural-resources-department-of-natural-resources-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.780952
+                },
+                {
+                  "id": "natural-resources-department-of-natural-resources-vote1-atomic-workers-recognition-program",
+                  "name": "Atomic Workers Recognition Program",
+                  "amount": 0.010664
+                },
+                {
+                  "id": "natural-resources-department-of-natural-resources-vote1-energuide-energy-efficiency-assessment",
+                  "name": "EnerGuide Energy Efficiency Assessment",
+                  "amount": 0.00577
+                },
+                {
+                  "id": "natural-resources-department-of-natural-resources-vote1-international-boundary-commission",
+                  "name": "International Boundary Commission",
+                  "amount": 0.001834
+                },
+                {
+                  "id": "natural-resources-department-of-natural-resources-vote1-softwood-lumber-operating-expenditures",
+                  "name": "Softwood lumber operating expenditures",
+                  "amount": 0.001668
+                },
+                {
+                  "id": "natural-resources-department-of-natural-resources-vote1-innovative-solutions-canada",
+                  "name": "Innovative Solutions Canada",
+                  "amount": 0.00078
+                },
+                {
+                  "id": "natural-resources-department-of-natural-resources-vote1-soldier-settlement-board-manitoba",
+                  "name": "Soldier settlement board—Manitoba",
+                  "amount": 3.7e-5
+                }
+              ]
             },
             {
               "id": "natural-resources-department-of-natural-resources-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.544815
             },
             {
               "id": "natural-resources-department-of-natural-resources-vote5",
-              "name": "Vote 5",
-              "amount": 0.034105
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
+              "children": [
+                {
+                  "id": "natural-resources-department-of-natural-resources-vote5-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.034055
+                },
+                {
+                  "id": "natural-resources-department-of-natural-resources-vote5-international-boundary-commission-canadian-section",
+                  "name": "International Boundary Commission—Canadian section",
+                  "amount": 5.0e-5
+                }
+              ]
             }
           ]
         },
@@ -93,8 +160,20 @@
           "children": [
             {
               "id": "natural-resources-atomic-energy-of-canada-limited-vote1",
-              "name": "Vote 1",
-              "amount": 1.0832
+              "name": "Payments to the corporation for operating and capital expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "natural-resources-atomic-energy-of-canada-limited-vote1-payments-to-crown-corporation",
+                  "name": "Payments to Crown Corporation",
+                  "amount": 0.93575
+                },
+                {
+                  "id": "natural-resources-atomic-energy-of-canada-limited-vote1-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.14745
+                }
+              ]
             }
           ]
         },
@@ -105,11 +184,13 @@
             {
               "id": "natural-resources-canadian-nuclear-safety-commission-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.112079
             },
             {
               "id": "natural-resources-canadian-nuclear-safety-commission-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.040887
             }
           ]
@@ -120,12 +201,30 @@
           "children": [
             {
               "id": "natural-resources-canadian-energy-regulator-vote1",
-              "name": "Vote 1",
-              "amount": 0.100803
+              "name": "Program expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "natural-resources-canadian-energy-regulator-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.099265
+                },
+                {
+                  "id": "natural-resources-canadian-energy-regulator-vote1-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 0.001264
+                },
+                {
+                  "id": "natural-resources-canadian-energy-regulator-vote1-translation-costs-devinat-case",
+                  "name": "Translation costs (Devinat case)",
+                  "amount": 0.000274
+                }
+              ]
             },
             {
               "id": "natural-resources-canadian-energy-regulator-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.011614
             }
           ]
@@ -136,12 +235,14 @@
           "children": [
             {
               "id": "natural-resources-northern-pipeline-agency-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.000293
             },
             {
               "id": "natural-resources-northern-pipeline-agency-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 6.0e-6
             }
           ]

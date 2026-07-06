@@ -63,8 +63,35 @@
           "children": [
             {
               "id": "housing-infrastructure-communities-infrastructure-and-communities-vote",
-              "name": "All votes",
-              "amount": 4.695427
+              "name": "Total appropriations (vote-level detail not published for this edition)",
+              "vote": "All votes",
+              "children": [
+                {
+                  "id": "housing-infrastructure-communities-infrastructure-and-communities-vote-statutory-amounts",
+                  "name": "Statutory amounts",
+                  "amount": 2.078141
+                },
+                {
+                  "id": "housing-infrastructure-communities-infrastructure-and-communities-vote-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 1.536773
+                },
+                {
+                  "id": "housing-infrastructure-communities-infrastructure-and-communities-vote-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.690322
+                },
+                {
+                  "id": "housing-infrastructure-communities-infrastructure-and-communities-vote-payments-to-crown-corporation",
+                  "name": "Payments to Crown Corporation",
+                  "amount": 0.24913
+                },
+                {
+                  "id": "housing-infrastructure-communities-infrastructure-and-communities-vote-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.141061
+                }
+              ]
             }
           ]
         }

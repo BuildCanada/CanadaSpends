@@ -26,6 +26,21 @@ module PbCli
       MINI_SANKEY_TOP_N = 12
       HEADLINE_TOLERANCE = 0.005 # 0.5%
 
+      # Administrative/residual allotment labels that carry no descriptive value
+      # on their own. A vote whose spending allotments are all generic is emitted
+      # as a leaf; a generic row alongside informative ones stays as the residual
+      # child (keeping sums exact). Compared case-insensitively; the spec's
+      # minimum set is extended with the always-zero admin sub-lines so a rare
+      # non-zero admin row can't spuriously fan out a vote.
+      GENERIC_ALLOTMENT_LABELS = [
+        'operating budget', 'capital budget', 'capital',
+        'grants and contributions', 'grants', 'contributions',
+        'statutory amounts', 'reprofile', 'reprofiled', 'total', 'frozen',
+        'reduction', 'other', 'other authority', 'transferred or reallocated',
+        'revenues netted against expenditures',
+        'less: revenues netted against expenditures'
+      ].freeze
+
       # Known published consolidated totals ($B) for headline validation.
       # 2024 is the site's current anchor; others documented in export_errors.md.
       PUBLISHED_TOTALS = {
@@ -587,6 +602,9 @@ module PbCli
         end
       end
 
+      # Tree: department → organization → vote (named by its DESCRIPTION, not
+      # its number) → allotments (only when they add information). Vote nodes
+      # keep the vote number in their id and carry a secondary `vote` field.
       def mini_sankey(year, slug, rows)
         org_index = {}
         root = { 'id' => slug, 'name' => portfolio_name(slug), 'children' => [] }
@@ -601,25 +619,88 @@ module PbCli
           vkey = r['vote_number']
           vote_node = org_node['_votes'][vkey]
           unless vote_node
-            label, = split_vote(r['vote'].to_s)
-            vote_node = { 'id' => "#{slug}-#{slugify(org)}-vote#{vkey}", 'name' => label, '_dollars' => 0.0 }
+            label, desc = split_vote(r['vote'].to_s)
+            vote_node = {
+              'id' => "#{slug}-#{slugify(org)}-vote#{vkey}",
+              'name' => desc, 'vote' => label, '_allotments' => []
+            }
             org_node['_votes'][vkey] = vote_node
             org_node['children'] << vote_node
           end
-          vote_node['_dollars'] += r['expenditures'].to_f
+          vote_node['_allotments'] << r
         end
+        disambiguate_sibling_votes(root)
         finalize_mini(root)
         PbCli::Export::Truncation.truncate(assign_parent_amounts_ref(root), top_n: MINI_SANKEY_TOP_N)
       end
 
-      def finalize_mini(node)
-        (node['children'] || []).each do |child|
-          child.delete('_votes')
-          if child.key?('_dollars')
-            child['amount'] = PbCli::Export::Units.dollars_to_billions(child.delete('_dollars'))
-          else
-            finalize_mini(child)
+      # Sibling votes of the same organization that share a description are
+      # disambiguated by appending the vote label (e.g. "Program expenditures
+      # (Vote 15)"), so no two children of an org node collide.
+      def disambiguate_sibling_votes(root)
+        root['children'].each do |org_node|
+          org_node['children'].group_by { |v| v['name'] }.each_value do |group|
+            next if group.size < 2
+
+            group.each { |v| v['name'] = "#{v['name']} (#{v['vote']})" }
           end
+        end
+      end
+
+      # Collapses the working tree into serialized form: org nodes drop their
+      # vote index; each vote node either becomes a leaf (amount) or gains
+      # allotment children when those add information.
+      def finalize_mini(root)
+        root['children'].each do |org_node|
+          org_node.delete('_votes')
+          org_node['children'].each { |vote_node| finalize_vote(vote_node) }
+        end
+      end
+
+      def finalize_vote(vote_node)
+        allotments = vote_node.delete('_allotments')
+        children = allotment_children(vote_node, allotments)
+        if children
+          vote_node['children'] = children
+        else
+          dollars = allotments.sum { |r| r['expenditures'].to_f }
+          vote_node['amount'] = PbCli::Export::Units.dollars_to_billions(dollars)
+        end
+      end
+
+      # Allotment leaf children for a vote, or nil when the vote should stay a
+      # leaf. Rows are aggregated by description (case-insensitively, first-seen
+      # casing wins) and zero-dollar rows are dropped — both keep the parent sum
+      # exact. A vote is a leaf when it has ≤1 spending allotment or every
+      # spending allotment is a generic/administrative shell (incl. one named
+      # like the vote). Otherwise all spending allotments become children so the
+      # informative ones surface and the generic residual keeps the sum exact.
+      def allotment_children(vote_node, allotments)
+        by_key = {}
+        order = []
+        allotments.each do |r|
+          desc = r['description'].to_s.strip
+          key = desc.downcase
+          unless by_key.key?(key)
+            by_key[key] = { 'display' => desc, 'dollars' => 0.0 }
+            order << key
+          end
+          by_key[key]['dollars'] += r['expenditures'].to_f
+        end
+        spending = order.reject { |k| PbCli::Export::Units.round_dollars(by_key[k]['dollars']).zero? }
+        return nil if spending.size <= 1
+
+        vote_name = vote_node['name'].to_s.strip.downcase
+        informative = spending.reject { |k| GENERIC_ALLOTMENT_LABELS.include?(k) || k == vote_name }
+        return nil if informative.empty?
+
+        spending.map do |k|
+          entry = by_key[k]
+          {
+            'id' => "#{vote_node['id']}-#{slugify(entry['display'])}",
+            'name' => entry['display'],
+            'amount' => PbCli::Export::Units.dollars_to_billions(entry['dollars'])
+          }
         end
       end
 

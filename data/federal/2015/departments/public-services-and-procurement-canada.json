@@ -67,17 +67,87 @@
           "children": [
             {
               "id": "public-services-and-procurement-canada-public-works-and-government-services-vote1",
-              "name": "Vote 1",
-              "amount": 4.691461
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "public-services-and-procurement-canada-public-works-and-government-services-vote1-real-property-services",
+                  "name": "Real property services",
+                  "amount": 1.894121
+                },
+                {
+                  "id": "public-services-and-procurement-canada-public-works-and-government-services-vote1-less-revenues-netted-against-expenditures",
+                  "name": "Less: revenues netted against expenditures",
+                  "amount": 1.519095
+                },
+                {
+                  "id": "public-services-and-procurement-canada-public-works-and-government-services-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 1.0955
+                },
+                {
+                  "id": "public-services-and-procurement-canada-public-works-and-government-services-vote1-receiver-general-and-central-compensation-administration-function",
+                  "name": "Receiver General and central compensation administration function",
+                  "amount": 0.102283
+                },
+                {
+                  "id": "public-services-and-procurement-canada-public-works-and-government-services-vote1-cape-breton-operation",
+                  "name": "Cape Breton operation",
+                  "amount": 0.034669
+                },
+                {
+                  "id": "public-services-and-procurement-canada-public-works-and-government-services-vote1-linguistic-services",
+                  "name": "Linguistic services",
+                  "amount": 0.030501
+                },
+                {
+                  "id": "public-services-and-procurement-canada-public-works-and-government-services-vote1-build-in-canada-innovation-program",
+                  "name": "Build in Canada innovation program",
+                  "amount": 0.010773
+                },
+                {
+                  "id": "public-services-and-procurement-canada-public-works-and-government-services-vote1-cost-and-profit-assurance-program",
+                  "name": "Cost and profit assurance program",
+                  "amount": 0.002384
+                },
+                {
+                  "id": "public-services-and-procurement-canada-public-works-and-government-services-vote1-advertising-initiatives",
+                  "name": "Advertising initiatives",
+                  "amount": 0.001804
+                },
+                {
+                  "id": "public-services-and-procurement-canada-public-works-and-government-services-vote1-sydney-tar-ponds-project",
+                  "name": "Sydney tar ponds project",
+                  "amount": 0.000332
+                }
+              ]
             },
             {
               "id": "public-services-and-procurement-canada-public-works-and-government-services-vote5",
-              "name": "Vote 5",
-              "amount": 0.98552
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
+              "children": [
+                {
+                  "id": "public-services-and-procurement-canada-public-works-and-government-services-vote5-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.728621
+                },
+                {
+                  "id": "public-services-and-procurement-canada-public-works-and-government-services-vote5-real-property-capital-leases",
+                  "name": "Real property capital leases",
+                  "amount": 0.152024
+                },
+                {
+                  "id": "public-services-and-procurement-canada-public-works-and-government-services-vote5-real-property-refit-fit-up",
+                  "name": "Real property refit / fit‑up",
+                  "amount": 0.104875
+                }
+              ]
             },
             {
               "id": "public-services-and-procurement-canada-public-works-and-government-services-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.128371
             }
           ]
@@ -88,17 +158,47 @@
           "children": [
             {
               "id": "public-services-and-procurement-canada-shared-services-canada-vote1",
-              "name": "Vote 1",
-              "amount": 2.074956
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "public-services-and-procurement-canada-shared-services-canada-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 1.681534
+                },
+                {
+                  "id": "public-services-and-procurement-canada-shared-services-canada-vote1-less-revenues-netted-against-expenditures",
+                  "name": "Less: revenues netted against expenditures",
+                  "amount": 0.393328
+                },
+                {
+                  "id": "public-services-and-procurement-canada-shared-services-canada-vote1-tbs-moving-and-accommodations-expenses",
+                  "name": "TBS moving and accommodations expenses",
+                  "amount": 9.5e-5
+                }
+              ]
             },
             {
               "id": "public-services-and-procurement-canada-shared-services-canada-vote5",
-              "name": "Vote 5",
-              "amount": 0.246406
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
+              "children": [
+                {
+                  "id": "public-services-and-procurement-canada-shared-services-canada-vote5-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.244039
+                },
+                {
+                  "id": "public-services-and-procurement-canada-shared-services-canada-vote5-tbs-moving-and-accommodations-expenses",
+                  "name": "TBS moving and accommodations expenses",
+                  "amount": 0.002367
+                }
+              ]
             },
             {
               "id": "public-services-and-procurement-canada-shared-services-canada-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.087675
             }
           ]

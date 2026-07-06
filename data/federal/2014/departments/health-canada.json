@@ -67,32 +67,110 @@
           "children": [
             {
               "id": "health-canada-health-vote1",
-              "name": "Vote 1",
-              "amount": 2.23828
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "health-canada-health-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 1.201612
+                },
+                {
+                  "id": "health-canada-health-vote1-non-insured-health-benefits",
+                  "name": "Non‑Insured Health Benefits",
+                  "amount": 0.800912
+                },
+                {
+                  "id": "health-canada-health-vote1-less-revenues-netted-against-expenditures",
+                  "name": "Less: revenues netted against expenditures",
+                  "amount": 0.187607
+                },
+                {
+                  "id": "health-canada-health-vote1-indian-residential-schools-resolution-health-support",
+                  "name": "Indian Residential Schools Resolution Health Support",
+                  "amount": 0.02011
+                },
+                {
+                  "id": "health-canada-health-vote1-non-insured-health-benefits-mcivor",
+                  "name": "Non‑Insured Health Benefits ‑ McIvor",
+                  "amount": 0.013054
+                },
+                {
+                  "id": "health-canada-health-vote1-non-insured-health-benefits-qalipu",
+                  "name": "Non‑Insured Health Benefits ‑ Qalipu",
+                  "amount": 0.009993
+                },
+                {
+                  "id": "health-canada-health-vote1-advertising-initiatives",
+                  "name": "Advertising initiatives",
+                  "amount": 0.004992
+                }
+              ]
             },
             {
               "id": "health-canada-health-vote10",
-              "name": "Vote 10",
-              "amount": 1.640643
+              "name": "Grants and contributions",
+              "vote": "Vote 10",
+              "children": [
+                {
+                  "id": "health-canada-health-vote10-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 1.361595
+                },
+                {
+                  "id": "health-canada-health-vote10-non-insured-health-benefits",
+                  "name": "Non‑Insured Health Benefits",
+                  "amount": 0.1808
+                },
+                {
+                  "id": "health-canada-health-vote10-canadian-strategy-for-cancer-control",
+                  "name": "Canadian Strategy for Cancer Control",
+                  "amount": 0.0485
+                },
+                {
+                  "id": "health-canada-health-vote10-indian-residential-schools-resolution-health-support",
+                  "name": "Indian Residential Schools Resolution Health Support",
+                  "amount": 0.041633
+                },
+                {
+                  "id": "health-canada-health-vote10-health-council-of-canada",
+                  "name": "Health Council of Canada",
+                  "amount": 0.005951
+                },
+                {
+                  "id": "health-canada-health-vote10-non-insured-health-benefits-mcivor",
+                  "name": "Non‑Insured Health Benefits ‑ McIvor",
+                  "amount": 0.001936
+                },
+                {
+                  "id": "health-canada-health-vote10-non-insured-health-benefits-qalipu",
+                  "name": "Non‑Insured Health Benefits ‑ Qalipu",
+                  "amount": 0.000227
+                }
+              ]
             },
             {
               "id": "health-canada-health-vote11",
-              "name": "Vote 11",
+              "name": "Operating expenditures and contributions",
+              "vote": "Vote 11",
               "amount": 0.590256
             },
             {
               "id": "health-canada-health-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.496818
             },
             {
               "id": "health-canada-health-vote5",
-              "name": "Vote 5",
+              "name": "Capital expenditures (Vote 5)",
+              "vote": "Vote 5",
               "amount": 0.021683
             },
             {
               "id": "health-canada-health-vote13",
-              "name": "Vote 13",
+              "name": "Capital expenditures (Vote 13)",
+              "vote": "Vote 13",
               "amount": 0.021465
             }
           ]
@@ -103,17 +181,20 @@
           "children": [
             {
               "id": "health-canada-canadian-institutes-of-health-research-vote20",
-              "name": "Vote 20",
+              "name": "Grants",
+              "vote": "Vote 20",
               "amount": 0.943955
             },
             {
               "id": "health-canada-canadian-institutes-of-health-research-vote15",
-              "name": "Vote 15",
+              "name": "Operating expenditures",
+              "vote": "Vote 15",
               "amount": 0.048129
             },
             {
               "id": "health-canada-canadian-institutes-of-health-research-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.005887
             }
           ]
@@ -124,22 +205,47 @@
           "children": [
             {
               "id": "health-canada-public-health-agency-of-canada-vote45",
-              "name": "Vote 45",
-              "amount": 0.361694
+              "name": "Operating expenditures",
+              "vote": "Vote 45",
+              "children": [
+                {
+                  "id": "health-canada-public-health-agency-of-canada-vote45-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.344607
+                },
+                {
+                  "id": "health-canada-public-health-agency-of-canada-vote45-influenza-vaccine-fill-line",
+                  "name": "Influenza vaccine fill line",
+                  "amount": 0.011134
+                },
+                {
+                  "id": "health-canada-public-health-agency-of-canada-vote45-federal-portion-of-provincial-territorial-antiviral-purchases-for-the-short-term-replenishment-of-the-national-antiviral-stockpile",
+                  "name": "Federal portion of provincial/territorial antiviral purchases for the short‑term replenishment of the National Antiviral Stockpile",
+                  "amount": 0.005448
+                },
+                {
+                  "id": "health-canada-public-health-agency-of-canada-vote45-less-revenues-netted-against-expenditures",
+                  "name": "Less: revenues netted against expenditures",
+                  "amount": 0.000505
+                }
+              ]
             },
             {
               "id": "health-canada-public-health-agency-of-canada-vote55",
-              "name": "Vote 55",
+              "name": "Grants and contributions",
+              "vote": "Vote 55",
               "amount": 0.205633
             },
             {
               "id": "health-canada-public-health-agency-of-canada-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.043823
             },
             {
               "id": "health-canada-public-health-agency-of-canada-vote50",
-              "name": "Vote 50",
+              "name": "Capital expenditures",
+              "vote": "Vote 50",
               "amount": 0.011357
             }
           ]
@@ -150,12 +256,25 @@
           "children": [
             {
               "id": "health-canada-patented-medicine-prices-review-board-vote40",
-              "name": "Vote 40",
-              "amount": 0.006807
+              "name": "Program expenditures",
+              "vote": "Vote 40",
+              "children": [
+                {
+                  "id": "health-canada-patented-medicine-prices-review-board-vote40-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.006746
+                },
+                {
+                  "id": "health-canada-patented-medicine-prices-review-board-vote40-public-interest-hearing",
+                  "name": "Public interest hearing",
+                  "amount": 6.1e-5
+                }
+              ]
             },
             {
               "id": "health-canada-patented-medicine-prices-review-board-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.003733
             }
           ]

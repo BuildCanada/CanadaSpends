@@ -67,8 +67,40 @@
           "children": [
             {
               "id": "privy-council-privy-council-vote",
-              "name": "All votes",
-              "amount": 0.399431
+              "name": "Total appropriations (vote-level detail not published for this edition)",
+              "vote": "All votes",
+              "children": [
+                {
+                  "id": "privy-council-privy-council-vote-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.225168
+                },
+                {
+                  "id": "privy-council-privy-council-vote-statutory-amounts",
+                  "name": "Statutory amounts",
+                  "amount": 0.12139
+                },
+                {
+                  "id": "privy-council-privy-council-vote-im-it-modernization-project",
+                  "name": "IM/IT modernization project",
+                  "amount": 0.02823
+                },
+                {
+                  "id": "privy-council-privy-council-vote-commission-of-inquiry-missing-and-murdered-indigenous-women-and-girls",
+                  "name": "Commission of Inquiry - Missing and Murdered Indigenous Women and Girls",
+                  "amount": 0.018638
+                },
+                {
+                  "id": "privy-council-privy-council-vote-access-control-and-physical-security-project",
+                  "name": "Access control and physical security project",
+                  "amount": 0.005895
+                },
+                {
+                  "id": "privy-council-privy-council-vote-national-security-and-intelligence-committee-of-parliamentarians-secretariat",
+                  "name": "National Security and Intelligence Committee of Parliamentarians Secretariat",
+                  "amount": 0.00011
+                }
+              ]
             }
           ]
         }

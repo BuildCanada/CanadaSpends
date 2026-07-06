@@ -67,42 +67,97 @@
           "children": [
             {
               "id": "treasury-board-treasury-board-secretariat-vote20",
-              "name": "Vote 20",
-              "amount": 3.625046
+              "name": "Public Service Insurance",
+              "vote": "Vote 20",
+              "children": [
+                {
+                  "id": "treasury-board-treasury-board-secretariat-vote20-vote-20-non-discretionary-program-costs",
+                  "name": "Vote 20 Non-Discretionary Program Costs",
+                  "amount": 3.621301
+                },
+                {
+                  "id": "treasury-board-treasury-board-secretariat-vote20-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.003745
+                }
+              ]
             },
             {
               "id": "treasury-board-treasury-board-secretariat-vote1",
-              "name": "Vote 1",
-              "amount": 0.319933
+              "name": "Program expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "treasury-board-treasury-board-secretariat-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.263593
+                },
+                {
+                  "id": "treasury-board-treasury-board-secretariat-vote1-back-office-transformation-initiative",
+                  "name": "Back office transformation initiative",
+                  "amount": 0.02519
+                },
+                {
+                  "id": "treasury-board-treasury-board-secretariat-vote1-post-implementation-of-pay-system",
+                  "name": "Post implementation of pay system",
+                  "amount": 0.020231
+                },
+                {
+                  "id": "treasury-board-treasury-board-secretariat-vote1-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.009162
+                },
+                {
+                  "id": "treasury-board-treasury-board-secretariat-vote1-centralized-enabling-workplace-fund",
+                  "name": "Centralized Enabling Workplace Fund",
+                  "amount": 0.000898
+                },
+                {
+                  "id": "treasury-board-treasury-board-secretariat-vote1-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 0.000634
+                },
+                {
+                  "id": "treasury-board-treasury-board-secretariat-vote1-greening-government-fund",
+                  "name": "Greening Government Fund",
+                  "amount": 0.000225
+                }
+              ]
             },
             {
               "id": "treasury-board-treasury-board-secretariat-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.036297
             },
             {
-              "id": "treasury-board-treasury-board-secretariat-vote10",
-              "name": "Vote 10",
-              "amount": 0.0
-            },
-            {
-              "id": "treasury-board-treasury-board-secretariat-vote25",
-              "name": "Vote 25",
-              "amount": 0.0
-            },
-            {
-              "id": "treasury-board-treasury-board-secretariat-vote30",
-              "name": "Vote 30",
-              "amount": 0.0
-            },
-            {
               "id": "treasury-board-treasury-board-secretariat-vote35",
-              "name": "Vote 35",
+              "name": "Capital Budget Carry Forward",
+              "vote": "Vote 35",
               "amount": 0.0
             },
             {
               "id": "treasury-board-treasury-board-secretariat-vote5",
-              "name": "Vote 5",
+              "name": "Government Contingencies",
+              "vote": "Vote 5",
+              "amount": 0.0
+            },
+            {
+              "id": "treasury-board-treasury-board-secretariat-vote10",
+              "name": "Government-wide Initiatives",
+              "vote": "Vote 10",
+              "amount": 0.0
+            },
+            {
+              "id": "treasury-board-treasury-board-secretariat-vote25",
+              "name": "Operating Budget Carry Forward",
+              "vote": "Vote 25",
+              "amount": 0.0
+            },
+            {
+              "id": "treasury-board-treasury-board-secretariat-vote30",
+              "name": "Paylist Requirements",
+              "vote": "Vote 30",
               "amount": 0.0
             }
           ]
@@ -113,12 +168,14 @@
           "children": [
             {
               "id": "treasury-board-canada-school-of-public-service-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.068096
             },
             {
               "id": "treasury-board-canada-school-of-public-service-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.014187
             }
           ]
@@ -129,12 +186,14 @@
           "children": [
             {
               "id": "treasury-board-office-of-the-public-sector-integrity-commissioner-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.004893
             },
             {
               "id": "treasury-board-office-of-the-public-sector-integrity-commissioner-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.000499
             }
           ]
@@ -145,12 +204,14 @@
           "children": [
             {
               "id": "treasury-board-office-of-the-commissioner-of-lobbying-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.004431
             },
             {
               "id": "treasury-board-office-of-the-commissioner-of-lobbying-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.000457
             }
           ]

@@ -67,37 +67,66 @@
           "children": [
             {
               "id": "environment-and-climate-change-department-of-the-environment-vote1",
-              "name": "Vote 1",
-              "amount": 0.948351
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "environment-and-climate-change-department-of-the-environment-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.947027
+                },
+                {
+                  "id": "environment-and-climate-change-department-of-the-environment-vote1-advertising-initiative",
+                  "name": "Advertising Initiative",
+                  "amount": 0.001324
+                }
+              ]
             },
             {
               "id": "environment-and-climate-change-department-of-the-environment-vote10",
-              "name": "Vote 10",
-              "amount": 0.481634
+              "name": "Grants and contributions",
+              "vote": "Vote 10",
+              "children": [
+                {
+                  "id": "environment-and-climate-change-department-of-the-environment-vote10-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 0.472453
+                },
+                {
+                  "id": "environment-and-climate-change-department-of-the-environment-vote10-international-assistance-envelope",
+                  "name": "International Assistance Envelope",
+                  "amount": 0.009181
+                }
+              ]
             },
             {
               "id": "environment-and-climate-change-department-of-the-environment-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.097912
             },
             {
               "id": "environment-and-climate-change-department-of-the-environment-vote5",
-              "name": "Vote 5",
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
               "amount": 0.09551
             },
             {
               "id": "environment-and-climate-change-department-of-the-environment-vote15",
-              "name": "Vote 15",
+              "name": "Canada's Marine Safety Response",
+              "vote": "Vote 15",
               "amount": 0.0
             },
             {
               "id": "environment-and-climate-change-department-of-the-environment-vote20",
-              "name": "Vote 20",
+              "name": "Ensuring Better Disaster Management Preparation and Response",
+              "vote": "Vote 20",
               "amount": 0.0
             },
             {
               "id": "environment-and-climate-change-department-of-the-environment-vote25",
-              "name": "Vote 25",
+              "name": "Implementing a Federal Carbon Offset System",
+              "vote": "Vote 25",
               "amount": 0.0
             }
           ]
@@ -108,17 +137,41 @@
           "children": [
             {
               "id": "environment-and-climate-change-parks-canada-agency-vote1",
-              "name": "Vote 1",
-              "amount": 1.219083
+              "name": "Program expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "environment-and-climate-change-parks-canada-agency-vote1-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.726723
+                },
+                {
+                  "id": "environment-and-climate-change-parks-canada-agency-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.444132
+                },
+                {
+                  "id": "environment-and-climate-change-parks-canada-agency-vote1-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 0.045736
+                },
+                {
+                  "id": "environment-and-climate-change-parks-canada-agency-vote1-advertising-initiatives",
+                  "name": "Advertising Initiatives",
+                  "amount": 0.002492
+                }
+              ]
             },
             {
               "id": "environment-and-climate-change-parks-canada-agency-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.234869
             },
             {
               "id": "environment-and-climate-change-parks-canada-agency-vote5",
-              "name": "Vote 5",
+              "name": "Payments to the New Parks and Historic Sites Account",
+              "vote": "Vote 5",
               "amount": 0.026323
             }
           ]
@@ -129,17 +182,20 @@
           "children": [
             {
               "id": "environment-and-climate-change-impact-assessment-agency-of-canada-vote1",
-              "name": "Vote 1",
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
               "amount": 0.052508
             },
             {
               "id": "environment-and-climate-change-impact-assessment-agency-of-canada-vote5",
-              "name": "Vote 5",
+              "name": "Grants and contributions",
+              "vote": "Vote 5",
               "amount": 0.007388
             },
             {
               "id": "environment-and-climate-change-impact-assessment-agency-of-canada-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.006253
             }
           ]

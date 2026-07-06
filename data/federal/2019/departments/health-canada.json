@@ -67,23 +67,65 @@
           "children": [
             {
               "id": "health-canada-department-of-health-vote10",
-              "name": "Vote 10",
-              "amount": 1.378409
+              "name": "Grants and contributions",
+              "vote": "Vote 10",
+              "children": [
+                {
+                  "id": "health-canada-department-of-health-vote10-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 1.335437
+                },
+                {
+                  "id": "health-canada-department-of-health-vote10-canadian-strategy-for-cancer-control",
+                  "name": "Canadian strategy for cancer control",
+                  "amount": 0.042972
+                }
+              ]
             },
             {
               "id": "health-canada-department-of-health-vote1",
-              "name": "Vote 1",
-              "amount": 0.911801
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "health-canada-department-of-health-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.903555
+                },
+                {
+                  "id": "health-canada-department-of-health-vote1-advertising-initiatives",
+                  "name": "Advertising initiatives",
+                  "amount": 0.0045
+                },
+                {
+                  "id": "health-canada-department-of-health-vote1-canada-s-2018-g7-presidency",
+                  "name": "Canada's 2018 G7 Presidency",
+                  "amount": 0.003747
+                }
+              ]
             },
             {
               "id": "health-canada-department-of-health-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.191456
             },
             {
               "id": "health-canada-department-of-health-vote5",
-              "name": "Vote 5",
-              "amount": 0.026803
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
+              "children": [
+                {
+                  "id": "health-canada-department-of-health-vote5-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.026741
+                },
+                {
+                  "id": "health-canada-department-of-health-vote5-canada-s-2018-g7-presidency",
+                  "name": "Canada's 2018 G7 Presidency",
+                  "amount": 6.2e-5
+                }
+              ]
             }
           ]
         },
@@ -93,17 +135,20 @@
           "children": [
             {
               "id": "health-canada-canadian-institutes-of-health-research-vote5",
-              "name": "Vote 5",
+              "name": "Grants",
+              "vote": "Vote 5",
               "amount": 1.087884
             },
             {
               "id": "health-canada-canadian-institutes-of-health-research-vote1",
-              "name": "Vote 1",
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
               "amount": 0.057011
             },
             {
               "id": "health-canada-canadian-institutes-of-health-research-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.006032
             }
           ]
@@ -114,17 +159,36 @@
           "children": [
             {
               "id": "health-canada-canadian-food-inspection-agency-vote1",
-              "name": "Vote 1",
-              "amount": 0.596496
+              "name": "Operating expenditures, grants and contributions",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "health-canada-canadian-food-inspection-agency-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.595815
+                },
+                {
+                  "id": "health-canada-canadian-food-inspection-agency-vote1-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 0.000579
+                },
+                {
+                  "id": "health-canada-canadian-food-inspection-agency-vote1-canada-s-2018-g7-presidency",
+                  "name": "Canada's 2018 G7 Presidency",
+                  "amount": 0.000102
+                }
+              ]
             },
             {
               "id": "health-canada-canadian-food-inspection-agency-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.160319
             },
             {
               "id": "health-canada-canadian-food-inspection-agency-vote5",
-              "name": "Vote 5",
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
               "amount": 0.035492
             }
           ]
@@ -135,23 +199,59 @@
           "children": [
             {
               "id": "health-canada-public-health-agency-of-canada-vote1",
-              "name": "Vote 1",
-              "amount": 0.33722
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "health-canada-public-health-agency-of-canada-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.331499
+                },
+                {
+                  "id": "health-canada-public-health-agency-of-canada-vote1-ebola-virus-disease-outbreak",
+                  "name": "Ebola virus disease outbreak",
+                  "amount": 0.002674
+                },
+                {
+                  "id": "health-canada-public-health-agency-of-canada-vote1-advertising-initiatives",
+                  "name": "Advertising initiatives",
+                  "amount": 0.002
+                },
+                {
+                  "id": "health-canada-public-health-agency-of-canada-vote1-canada-s-2018-g7-presidency",
+                  "name": "Canada's 2018 G7 Presidency",
+                  "amount": 0.001047
+                }
+              ]
             },
             {
               "id": "health-canada-public-health-agency-of-canada-vote10",
-              "name": "Vote 10",
+              "name": "Grants and contributions",
+              "vote": "Vote 10",
               "amount": 0.292401
             },
             {
               "id": "health-canada-public-health-agency-of-canada-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.038198
             },
             {
               "id": "health-canada-public-health-agency-of-canada-vote5",
-              "name": "Vote 5",
-              "amount": 0.008221
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
+              "children": [
+                {
+                  "id": "health-canada-public-health-agency-of-canada-vote5-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.008188
+                },
+                {
+                  "id": "health-canada-public-health-agency-of-canada-vote5-ebola-virus-disease-outbreak",
+                  "name": "Ebola virus disease outbreak",
+                  "amount": 3.3e-5
+                }
+              ]
             }
           ]
         },
@@ -161,12 +261,25 @@
           "children": [
             {
               "id": "health-canada-patented-medicine-prices-review-board-vote1",
-              "name": "Vote 1",
-              "amount": 0.009375
+              "name": "Program expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "health-canada-patented-medicine-prices-review-board-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.009016
+                },
+                {
+                  "id": "health-canada-patented-medicine-prices-review-board-vote1-public-interest-hearings",
+                  "name": "Public interest hearings",
+                  "amount": 0.000359
+                }
+              ]
             },
             {
               "id": "health-canada-patented-medicine-prices-review-board-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.000923
             }
           ]

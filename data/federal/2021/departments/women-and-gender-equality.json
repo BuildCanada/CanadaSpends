@@ -47,17 +47,31 @@
           "children": [
             {
               "id": "women-and-gender-equality-department-for-women-and-gender-equality-vote5",
-              "name": "Vote 5",
-              "amount": 0.098144
+              "name": "Grants and contributions",
+              "vote": "Vote 5",
+              "children": [
+                {
+                  "id": "women-and-gender-equality-department-for-women-and-gender-equality-vote5-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 0.088144
+                },
+                {
+                  "id": "women-and-gender-equality-department-for-women-and-gender-equality-vote5-women-s-shelters-and-centers-for-victims-of-sexual-assault",
+                  "name": "Women's shelters and centers for victims of sexual assault",
+                  "amount": 0.01
+                }
+              ]
             },
             {
               "id": "women-and-gender-equality-department-for-women-and-gender-equality-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.074997
             },
             {
               "id": "women-and-gender-equality-department-for-women-and-gender-equality-vote1",
-              "name": "Vote 1",
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
               "amount": 0.046322
             }
           ]

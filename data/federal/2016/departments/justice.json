@@ -67,8 +67,40 @@
           "children": [
             {
               "id": "justice-justice-vote",
-              "name": "All votes",
-              "amount": 2.287967
+              "name": "Total appropriations (vote-level detail not published for this edition)",
+              "vote": "All votes",
+              "children": [
+                {
+                  "id": "justice-justice-vote-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.939166
+                },
+                {
+                  "id": "justice-justice-vote-statutory-amounts",
+                  "name": "Statutory amounts",
+                  "amount": 0.657557
+                },
+                {
+                  "id": "justice-justice-vote-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 0.349723
+                },
+                {
+                  "id": "justice-justice-vote-less-revenues-netted-against-expenditures",
+                  "name": "Less: revenues netted against expenditures",
+                  "amount": 0.335169
+                },
+                {
+                  "id": "justice-justice-vote-immigration-and-refugee-protection-act",
+                  "name": "Immigration and Refugee Protection Act",
+                  "amount": 0.006352
+                },
+                {
+                  "id": "justice-justice-vote-translation-costs-devinat-case",
+                  "name": "Translation costs (Devinat case)",
+                  "amount": 0.0
+                }
+              ]
             }
           ]
         }

@@ -67,37 +67,80 @@
           "children": [
             {
               "id": "veterans-affairs-department-of-veterans-affairs-vote5",
-              "name": "Vote 5",
+              "name": "Grants and contributions",
+              "vote": "Vote 5",
               "amount": 3.648776
             },
             {
               "id": "veterans-affairs-department-of-veterans-affairs-vote1",
-              "name": "Vote 1",
-              "amount": 1.146915
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "veterans-affairs-department-of-veterans-affairs-vote1-other-health-purchased-services",
+                  "name": "Other Health Purchased Services",
+                  "amount": 0.630165
+                },
+                {
+                  "id": "veterans-affairs-department-of-veterans-affairs-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.353575
+                },
+                {
+                  "id": "veterans-affairs-department-of-veterans-affairs-vote1-toth-settlement",
+                  "name": "TOTH settlement",
+                  "amount": 0.090974
+                },
+                {
+                  "id": "veterans-affairs-department-of-veterans-affairs-vote1-veterans-support-services",
+                  "name": "Veterans Support Services",
+                  "amount": 0.06215
+                },
+                {
+                  "id": "veterans-affairs-department-of-veterans-affairs-vote1-budget-2017-outreach-strategy",
+                  "name": "Budget 2017 Outreach Strategy",
+                  "amount": 0.00571
+                },
+                {
+                  "id": "veterans-affairs-department-of-veterans-affairs-vote1-ste-anne-s-hospital",
+                  "name": "Ste. Anne's Hospital",
+                  "amount": 0.002296
+                },
+                {
+                  "id": "veterans-affairs-department-of-veterans-affairs-vote1-advertising-initiatives",
+                  "name": "Advertising Initiatives",
+                  "amount": 0.002046
+                }
+              ]
             },
             {
               "id": "veterans-affairs-department-of-veterans-affairs-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.036683
             },
             {
-              "id": "veterans-affairs-department-of-veterans-affairs-vote10",
-              "name": "Vote 10",
-              "amount": 0.0
-            },
-            {
               "id": "veterans-affairs-department-of-veterans-affairs-vote15",
-              "name": "Vote 15",
+              "name": "Commemorating Canada's Veterans",
+              "vote": "Vote 15",
               "amount": 0.0
             },
             {
               "id": "veterans-affairs-department-of-veterans-affairs-vote30",
-              "name": "Vote 30",
+              "name": "Supporting Research on Military and Veteran Health",
+              "vote": "Vote 30",
               "amount": 0.0
             },
             {
               "id": "veterans-affairs-department-of-veterans-affairs-vote35",
-              "name": "Vote 35",
+              "name": "Supporting Veterans as They Transition to Post-Service Life",
+              "vote": "Vote 35",
+              "amount": 0.0
+            },
+            {
+              "id": "veterans-affairs-department-of-veterans-affairs-vote10",
+              "name": "Supporting Veterans' Families",
+              "vote": "Vote 10",
               "amount": 0.0
             }
           ]
@@ -108,12 +151,14 @@
           "children": [
             {
               "id": "veterans-affairs-veterans-review-and-appeal-board-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.009532
             },
             {
               "id": "veterans-affairs-veterans-review-and-appeal-board-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.001165
             }
           ]

@@ -67,37 +67,60 @@
           "children": [
             {
               "id": "national-defence-department-of-national-defence-vote1",
-              "name": "Vote 1",
-              "amount": 17.206511
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "national-defence-department-of-national-defence-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 17.142173
+                },
+                {
+                  "id": "national-defence-department-of-national-defence-vote1-innovative-solutions-canada",
+                  "name": "Innovative Solutions Canada",
+                  "amount": 0.057357
+                },
+                {
+                  "id": "national-defence-department-of-national-defence-vote1-heyder-and-beattie-class-actions",
+                  "name": "Heyder and Beattie Class Actions",
+                  "amount": 0.00698
+                }
+              ]
             },
             {
               "id": "national-defence-department-of-national-defence-vote5",
-              "name": "Vote 5",
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
               "amount": 4.953763
             },
             {
               "id": "national-defence-department-of-national-defence-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 4.35311
             },
             {
               "id": "national-defence-department-of-national-defence-vote15",
-              "name": "Vote 15",
+              "name": "Payments in respect of the long-term disability and life insurance plan for members of the Canadian Forces",
+              "vote": "Vote 15",
               "amount": 0.417578
             },
             {
               "id": "national-defence-department-of-national-defence-vote10",
-              "name": "Vote 10",
+              "name": "Grants and contributions",
+              "vote": "Vote 10",
               "amount": 0.263296
             },
             {
-              "id": "national-defence-department-of-national-defence-vote20",
-              "name": "Vote 20",
+              "id": "national-defence-department-of-national-defence-vote25",
+              "name": "Debt forgiveness",
+              "vote": "Vote 25",
               "amount": 0.0
             },
             {
-              "id": "national-defence-department-of-national-defence-vote25",
-              "name": "Vote 25",
+              "id": "national-defence-department-of-national-defence-vote20",
+              "name": "Debt write-off",
+              "vote": "Vote 20",
               "amount": 0.0
             }
           ]
@@ -108,12 +131,25 @@
           "children": [
             {
               "id": "national-defence-communications-security-establishment-vote1",
-              "name": "Vote 1",
-              "amount": 0.747477
+              "name": "Program expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "national-defence-communications-security-establishment-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.637353
+                },
+                {
+                  "id": "national-defence-communications-security-establishment-vote1-communications-security-establishment-long-term-accommodation-project",
+                  "name": "Communications Security Establishment long-term accommodation project",
+                  "amount": 0.110124
+                }
+              ]
             },
             {
               "id": "national-defence-communications-security-establishment-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.045898
             }
           ]
@@ -124,12 +160,14 @@
           "children": [
             {
               "id": "national-defence-military-grievances-external-review-committee-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.006393
             },
             {
               "id": "national-defence-military-grievances-external-review-committee-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.000803
             }
           ]
@@ -140,12 +178,14 @@
           "children": [
             {
               "id": "national-defence-military-police-complaints-commission-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.004479
             },
             {
               "id": "national-defence-military-police-complaints-commission-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.000467
             }
           ]

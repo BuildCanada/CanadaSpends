@@ -67,17 +67,36 @@
           "children": [
             {
               "id": "canadian-heritage-canadian-heritage-vote5",
-              "name": "Vote 5",
+              "name": "Grants and contributions",
+              "vote": "Vote 5",
               "amount": 1.1308
             },
             {
               "id": "canadian-heritage-canadian-heritage-vote1",
-              "name": "Vote 1",
-              "amount": 0.188533
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "canadian-heritage-canadian-heritage-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.181608
+                },
+                {
+                  "id": "canadian-heritage-canadian-heritage-vote1-less-revenues-netted-against-expenditures",
+                  "name": "Less: revenues netted against expenditures",
+                  "amount": 0.006879
+                },
+                {
+                  "id": "canadian-heritage-canadian-heritage-vote1-advertising-initiatives",
+                  "name": "Advertising initiatives",
+                  "amount": 4.6e-5
+                }
+              ]
             },
             {
               "id": "canadian-heritage-canadian-heritage-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.025996
             }
           ]
@@ -88,17 +107,20 @@
           "children": [
             {
               "id": "canadian-heritage-canadian-broadcasting-corporation-vote15",
-              "name": "Vote 15",
+              "name": "Payments to the Canadian Broadcasting Corporation for operating expenditures",
+              "vote": "Vote 15",
               "amount": 0.975618
             },
             {
               "id": "canadian-heritage-canadian-broadcasting-corporation-vote25",
-              "name": "Vote 25",
+              "name": "Payments to the Canadian Broadcasting Corporation for capital expenditures",
+              "vote": "Vote 25",
               "amount": 0.103856
             },
             {
               "id": "canadian-heritage-canadian-broadcasting-corporation-vote20",
-              "name": "Vote 20",
+              "name": "Payments to the Canadian Broadcasting Corporation for working capital",
+              "vote": "Vote 20",
               "amount": 0.004
             }
           ]
@@ -109,7 +131,8 @@
           "children": [
             {
               "id": "canadian-heritage-canada-council-for-the-arts-vote10",
-              "name": "Vote 10",
+              "name": "Payments to the Canada Council for the Arts",
+              "vote": "Vote 10",
               "amount": 0.181974
             }
           ]
@@ -120,12 +143,14 @@
           "children": [
             {
               "id": "canadian-heritage-canadian-radio-television-and-telecommunications-commission-vote50",
-              "name": "Vote 50",
+              "name": "Program expenditures",
+              "vote": "Vote 50",
               "amount": 0.098138
             },
             {
               "id": "canadian-heritage-canadian-radio-television-and-telecommunications-commission-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.006625
             }
           ]
@@ -136,12 +161,14 @@
           "children": [
             {
               "id": "canadian-heritage-public-service-commission-vote95",
-              "name": "Vote 95",
+              "name": "Program expenditures",
+              "vote": "Vote 95",
               "amount": 0.092507
             },
             {
               "id": "canadian-heritage-public-service-commission-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.011587
             }
           ]
@@ -152,17 +179,20 @@
           "children": [
             {
               "id": "canadian-heritage-library-and-archives-of-canada-vote55",
-              "name": "Vote 55",
+              "name": "Operating expenditures",
+              "vote": "Vote 55",
               "amount": 0.087726
             },
             {
               "id": "canadian-heritage-library-and-archives-of-canada-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.010954
             },
             {
               "id": "canadian-heritage-library-and-archives-of-canada-vote60",
-              "name": "Vote 60",
+              "name": "Capital expenditures",
+              "vote": "Vote 60",
               "amount": 0.002596
             }
           ]
@@ -173,7 +203,8 @@
           "children": [
             {
               "id": "canadian-heritage-telefilm-canada-vote115",
-              "name": "Vote 115",
+              "name": "Payments to Telefilm Canada to be used for the purposes set out in the Telefilm Canada Act",
+              "vote": "Vote 115",
               "amount": 0.099975
             }
           ]
@@ -184,12 +215,14 @@
           "children": [
             {
               "id": "canadian-heritage-national-film-board-vote75",
-              "name": "Vote 75",
+              "name": "Program expenditures",
+              "vote": "Vote 75",
               "amount": 0.074429
             },
             {
               "id": "canadian-heritage-national-film-board-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.000279
             }
           ]
@@ -200,7 +233,8 @@
           "children": [
             {
               "id": "canadian-heritage-canadian-museum-of-history-vote35",
-              "name": "Vote 35",
+              "name": "Payments to the Canadian Museum of History for operating and capital expenditures",
+              "vote": "Vote 35",
               "amount": 0.062851
             }
           ]
@@ -211,12 +245,14 @@
           "children": [
             {
               "id": "canadian-heritage-national-gallery-of-canada-vote80",
-              "name": "Vote 80",
+              "name": "Payments to the National Gallery of Canada for operating and capital expenditures",
+              "vote": "Vote 80",
               "amount": 0.036193
             },
             {
               "id": "canadian-heritage-national-gallery-of-canada-vote85",
-              "name": "Vote 85",
+              "name": "Payment to the National Gallery of Canada for the acquisition of objects for the Collection and other costs attributable to this activity",
+              "vote": "Vote 85",
               "amount": 0.008
             }
           ]
@@ -227,7 +263,8 @@
           "children": [
             {
               "id": "canadian-heritage-national-arts-centre-corporation-vote65",
-              "name": "Vote 65",
+              "name": "Payments to the National Arts Centre Corporation for operating expenditures",
+              "vote": "Vote 65",
               "amount": 0.034648
             }
           ]
@@ -238,7 +275,8 @@
           "children": [
             {
               "id": "canadian-heritage-canadian-museum-for-human-rights-vote30",
-              "name": "Vote 30",
+              "name": "Payments to the Canadian Museum for Human Rights for operating and capital expenditures",
+              "vote": "Vote 30",
               "amount": 0.032016
             }
           ]
@@ -246,7 +284,7 @@
         {
           "name": "Other",
           "id": "canadian-heritage-other",
-          "amount": 0.101297,
+          "amount": 0.101298,
           "isAggregate": true,
           "count": 7
         }

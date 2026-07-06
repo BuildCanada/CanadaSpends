@@ -68,22 +68,63 @@
             {
               "id": "natural-resources-natural-resources-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.893906
             },
             {
               "id": "natural-resources-natural-resources-vote1",
-              "name": "Vote 1",
-              "amount": 0.833154
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "natural-resources-natural-resources-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.602236
+                },
+                {
+                  "id": "natural-resources-natural-resources-vote1-atomic-energy-of-canada-limited-program-implementation-expenditures-in-the-nuclear-legacy-liabilities-program",
+                  "name": "Atomic Energy of Canada Limited program implementation expenditures in the nuclear legacy liabilities program",
+                  "amount": 0.195
+                },
+                {
+                  "id": "natural-resources-natural-resources-vote1-less-revenues-netted-against-expenditures",
+                  "name": "Less: revenues netted against expenditures",
+                  "amount": 0.024205
+                },
+                {
+                  "id": "natural-resources-natural-resources-vote1-atomic-energy-of-canada-limited-restructuring-advisory-services",
+                  "name": "Atomic Energy of Canada Limited restructuring advisory services",
+                  "amount": 0.01
+                },
+                {
+                  "id": "natural-resources-natural-resources-vote1-international-boundary-commission-canadian-section",
+                  "name": "International Boundary Commission — Canadian section",
+                  "amount": 0.001713
+                }
+              ]
             },
             {
               "id": "natural-resources-natural-resources-vote10",
-              "name": "Vote 10",
+              "name": "Grants and contributions",
+              "vote": "Vote 10",
               "amount": 0.352641
             },
             {
               "id": "natural-resources-natural-resources-vote5",
-              "name": "Vote 5",
-              "amount": 0.018128
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
+              "children": [
+                {
+                  "id": "natural-resources-natural-resources-vote5-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.018098
+                },
+                {
+                  "id": "natural-resources-natural-resources-vote5-international-boundary-commission-canadian-section",
+                  "name": "International Boundary Commission — Canadian section",
+                  "amount": 3.0e-5
+                }
+              ]
             }
           ]
         },
@@ -93,12 +134,25 @@
           "children": [
             {
               "id": "natural-resources-atomic-energy-of-canada-limited-vote1",
-              "name": "Vote 1",
-              "amount": 0.325643
+              "name": "Payments to Atomic Energy of Canada Limited for operating and capital expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "natural-resources-atomic-energy-of-canada-limited-vote1-payments-to-crown-corporation",
+                  "name": "Payments to Crown Corporation",
+                  "amount": 0.243643
+                },
+                {
+                  "id": "natural-resources-atomic-energy-of-canada-limited-vote1-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.082
+                }
+              ]
             },
             {
               "id": "natural-resources-atomic-energy-of-canada-limited-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.0011
             }
           ]
@@ -110,11 +164,13 @@
             {
               "id": "natural-resources-canadian-nuclear-safety-commission-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.098088
             },
             {
               "id": "natural-resources-canadian-nuclear-safety-commission-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.040051
             }
           ]
@@ -125,12 +181,30 @@
           "children": [
             {
               "id": "natural-resources-national-energy-board-vote1",
-              "name": "Vote 1",
-              "amount": 0.078629
+              "name": "Program expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "natural-resources-national-energy-board-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.077477
+                },
+                {
+                  "id": "natural-resources-national-energy-board-vote1-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 0.00085
+                },
+                {
+                  "id": "natural-resources-national-energy-board-vote1-translation-costs-devinat-case",
+                  "name": "Translation costs (Devinat case)",
+                  "amount": 0.000302
+                }
+              ]
             },
             {
               "id": "natural-resources-national-energy-board-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.008692
             }
           ]
@@ -141,12 +215,14 @@
           "children": [
             {
               "id": "natural-resources-northern-pipeline-agency-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.000479
             },
             {
               "id": "natural-resources-northern-pipeline-agency-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 3.7e-5
             }
           ]

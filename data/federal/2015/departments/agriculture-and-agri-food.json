@@ -68,21 +68,25 @@
             {
               "id": "agriculture-and-agri-food-agriculture-and-agri-food-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 1.065277
             },
             {
               "id": "agriculture-and-agri-food-agriculture-and-agri-food-vote1",
-              "name": "Vote 1",
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
               "amount": 0.679903
             },
             {
               "id": "agriculture-and-agri-food-agriculture-and-agri-food-vote10",
-              "name": "Vote 10",
+              "name": "Grants and contributions",
+              "vote": "Vote 10",
               "amount": 0.345166
             },
             {
               "id": "agriculture-and-agri-food-agriculture-and-agri-food-vote5",
-              "name": "Vote 5",
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
               "amount": 0.025836
             }
           ]
@@ -93,12 +97,25 @@
           "children": [
             {
               "id": "agriculture-and-agri-food-canadian-grain-commission-vote1",
-              "name": "Vote 1",
-              "amount": 0.006677
+              "name": "Program expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "agriculture-and-agri-food-canadian-grain-commission-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.005689
+                },
+                {
+                  "id": "agriculture-and-agri-food-canadian-grain-commission-vote1-work-force-adjustment-funding",
+                  "name": "Work force adjustment funding",
+                  "amount": 0.000988
+                }
+              ]
             },
             {
               "id": "agriculture-and-agri-food-canadian-grain-commission-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.0
             }
           ]
@@ -109,7 +126,8 @@
           "children": [
             {
               "id": "agriculture-and-agri-food-canadian-dairy-commission-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.003884
             }
           ]

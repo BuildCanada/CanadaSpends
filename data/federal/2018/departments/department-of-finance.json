@@ -67,8 +67,30 @@
           "children": [
             {
               "id": "department-of-finance-finance-vote",
-              "name": "All votes",
-              "amount": 90.641314
+              "name": "Total appropriations (vote-level detail not published for this edition)",
+              "vote": "All votes",
+              "children": [
+                {
+                  "id": "department-of-finance-finance-vote-statutory-amounts",
+                  "name": "Statutory amounts",
+                  "amount": 90.384837
+                },
+                {
+                  "id": "department-of-finance-finance-vote-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.225278
+                },
+                {
+                  "id": "department-of-finance-finance-vote-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 0.030183
+                },
+                {
+                  "id": "department-of-finance-finance-vote-canada-s-2018-g7-presidency",
+                  "name": "Canada's 2018 G7 Presidency",
+                  "amount": 0.001015
+                }
+              ]
             }
           ]
         }

@@ -67,8 +67,45 @@
           "children": [
             {
               "id": "department-of-finance-finance-vote",
-              "name": "All votes",
-              "amount": 87.315405
+              "name": "Total appropriations (vote-level detail not published for this edition)",
+              "vote": "All votes",
+              "children": [
+                {
+                  "id": "department-of-finance-finance-vote-statutory-amounts",
+                  "name": "Statutory amounts",
+                  "amount": 87.080228
+                },
+                {
+                  "id": "department-of-finance-finance-vote-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.211157
+                },
+                {
+                  "id": "department-of-finance-finance-vote-payments-to-crown-corporation",
+                  "name": "Payments to Crown Corporation",
+                  "amount": 0.0118
+                },
+                {
+                  "id": "department-of-finance-finance-vote-advertising-initiatives",
+                  "name": "Advertising initiatives",
+                  "amount": 0.006299
+                },
+                {
+                  "id": "department-of-finance-finance-vote-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 0.003028
+                },
+                {
+                  "id": "department-of-finance-finance-vote-less-revenues-netted-against-expenditures",
+                  "name": "Less: revenues netted against expenditures",
+                  "amount": 0.001583
+                },
+                {
+                  "id": "department-of-finance-finance-vote-move-to-90-elgin-street-building",
+                  "name": "Move to 90 Elgin street building",
+                  "amount": 0.00131
+                }
+              ]
             }
           ]
         }

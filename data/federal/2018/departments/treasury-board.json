@@ -67,8 +67,45 @@
           "children": [
             {
               "id": "treasury-board-treasury-board-vote",
-              "name": "All votes",
-              "amount": 4.56399
+              "name": "Total appropriations (vote-level detail not published for this edition)",
+              "vote": "All votes",
+              "children": [
+                {
+                  "id": "treasury-board-treasury-board-vote-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 4.146357
+                },
+                {
+                  "id": "treasury-board-treasury-board-vote-statutory-amounts",
+                  "name": "Statutory amounts",
+                  "amount": 0.379146
+                },
+                {
+                  "id": "treasury-board-treasury-board-vote-back-office-transformation-initiative",
+                  "name": "Back office transformation initiative",
+                  "amount": 0.02916
+                },
+                {
+                  "id": "treasury-board-treasury-board-vote-tbs-moving-and-accommodations-expenses",
+                  "name": "TBS moving and accommodations expenses",
+                  "amount": 0.00667
+                },
+                {
+                  "id": "treasury-board-treasury-board-vote-post-implementation-of-pay-system",
+                  "name": "Post implementation of pay system",
+                  "amount": 0.001277
+                },
+                {
+                  "id": "treasury-board-treasury-board-vote-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 0.001108
+                },
+                {
+                  "id": "treasury-board-treasury-board-vote-legal-fees-for-court-challenge",
+                  "name": "Legal fees for court challenge",
+                  "amount": 0.000272
+                }
+              ]
             }
           ]
         }

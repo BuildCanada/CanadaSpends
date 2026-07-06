@@ -68,26 +68,57 @@
             {
               "id": "employment-and-social-development-canada-department-of-employment-and-social-development-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 158.494989
             },
             {
               "id": "employment-and-social-development-canada-department-of-employment-and-social-development-vote1",
-              "name": "Vote 1",
-              "amount": 3.373893
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "employment-and-social-development-canada-department-of-employment-and-social-development-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 3.279717
+                },
+                {
+                  "id": "employment-and-social-development-canada-department-of-employment-and-social-development-vote1-benefits-delivery-modernization",
+                  "name": "Benefits Delivery Modernization",
+                  "amount": 0.074221
+                },
+                {
+                  "id": "employment-and-social-development-canada-department-of-employment-and-social-development-vote1-retroactive-compensation",
+                  "name": "Retroactive Compensation",
+                  "amount": 0.01872
+                },
+                {
+                  "id": "employment-and-social-development-canada-department-of-employment-and-social-development-vote1-advertising-initiatives",
+                  "name": "Advertising initiatives",
+                  "amount": 0.001143
+                },
+                {
+                  "id": "employment-and-social-development-canada-department-of-employment-and-social-development-vote1-innovative-solutions-canada",
+                  "name": "Innovative Solutions Canada",
+                  "amount": 9.1e-5
+                }
+              ]
             },
             {
               "id": "employment-and-social-development-canada-department-of-employment-and-social-development-vote5",
-              "name": "Vote 5",
+              "name": "Grants and contributions",
+              "vote": "Vote 5",
               "amount": 3.037669
             },
             {
               "id": "employment-and-social-development-canada-department-of-employment-and-social-development-vote15",
-              "name": "Vote 15",
+              "name": "Debt write-off—Canada Student Loans",
+              "vote": "Vote 15",
               "amount": 0.185536
             },
             {
               "id": "employment-and-social-development-canada-department-of-employment-and-social-development-vote10",
-              "name": "Vote 10",
+              "name": "Debt write-off—Government Annuities Account",
+              "vote": "Vote 10",
               "amount": 2.5e-5
             }
           ]
@@ -98,12 +129,14 @@
           "children": [
             {
               "id": "employment-and-social-development-canada-canada-mortgage-and-housing-corporation-vote1",
-              "name": "Vote 1",
+              "name": "Reimbursement under the provisions of the National Housing Act and the Canada Mortgage and Housing Corporation Act",
+              "vote": "Vote 1",
               "amount": 2.876264
             },
             {
               "id": "employment-and-social-development-canada-canada-mortgage-and-housing-corporation-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 2.654236
             }
           ]
@@ -114,17 +147,20 @@
           "children": [
             {
               "id": "employment-and-social-development-canada-canadian-accessibility-standards-development-organization-vote1",
-              "name": "Vote 1",
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
               "amount": 0.008867
             },
             {
               "id": "employment-and-social-development-canada-canadian-accessibility-standards-development-organization-vote5",
-              "name": "Vote 5",
+              "name": "Grants and contributions",
+              "vote": "Vote 5",
               "amount": 0.005238
             },
             {
               "id": "employment-and-social-development-canada-canadian-accessibility-standards-development-organization-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.000499
             }
           ]
@@ -135,12 +171,30 @@
           "children": [
             {
               "id": "employment-and-social-development-canada-canadian-centre-for-occupational-health-and-safety-vote1",
-              "name": "Vote 1",
-              "amount": 0.006558
+              "name": "Program expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "employment-and-social-development-canada-canadian-centre-for-occupational-health-and-safety-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.005775
+                },
+                {
+                  "id": "employment-and-social-development-canada-canadian-centre-for-occupational-health-and-safety-vote1-employee-benefits-plan",
+                  "name": "Employee Benefits Plan",
+                  "amount": 0.000697
+                },
+                {
+                  "id": "employment-and-social-development-canada-canadian-centre-for-occupational-health-and-safety-vote1-advertising-initiatives",
+                  "name": "Advertising Initiatives",
+                  "amount": 8.5e-5
+                }
+              ]
             },
             {
               "id": "employment-and-social-development-canada-canadian-centre-for-occupational-health-and-safety-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.005148
             }
           ]

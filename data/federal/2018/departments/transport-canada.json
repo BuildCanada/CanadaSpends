@@ -67,8 +67,40 @@
           "children": [
             {
               "id": "transport-canada-transport-vote",
-              "name": "All votes",
-              "amount": 2.555665
+              "name": "Total appropriations (vote-level detail not published for this edition)",
+              "vote": "All votes",
+              "children": [
+                {
+                  "id": "transport-canada-transport-vote-payments-to-crown-corporation",
+                  "name": "Payments to Crown Corporation",
+                  "amount": 1.024569
+                },
+                {
+                  "id": "transport-canada-transport-vote-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.777243
+                },
+                {
+                  "id": "transport-canada-transport-vote-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.323153
+                },
+                {
+                  "id": "transport-canada-transport-vote-statutory-amounts",
+                  "name": "Statutory amounts",
+                  "amount": 0.221844
+                },
+                {
+                  "id": "transport-canada-transport-vote-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 0.208741
+                },
+                {
+                  "id": "transport-canada-transport-vote-canada-s-2018-g7-presidency",
+                  "name": "Canada's 2018 G7 Presidency",
+                  "amount": 0.000113
+                }
+              ]
             }
           ]
         }

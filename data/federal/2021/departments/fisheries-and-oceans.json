@@ -67,27 +67,54 @@
           "children": [
             {
               "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote1",
-              "name": "Vote 1",
-              "amount": 2.001884
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 1.998628
+                },
+                {
+                  "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote1-self-employed-fish-harvesters-affected-by-covid-19",
+                  "name": "Self-employed Fish Harvesters affected by COVID-19",
+                  "amount": 0.003256
+                }
+              ]
             },
             {
               "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote5",
-              "name": "Vote 5",
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
               "amount": 0.773359
             },
             {
               "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.317744
             },
             {
               "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote10",
-              "name": "Vote 10",
-              "amount": 0.291858
+              "name": "Grants and contributions",
+              "vote": "Vote 10",
+              "children": [
+                {
+                  "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote10-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 0.291247
+                },
+                {
+                  "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote10-innovative-solutions-canada",
+                  "name": "Innovative Solutions Canada",
+                  "amount": 0.000611
+                }
+              ]
             },
             {
               "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote15",
-              "name": "Vote 15",
+              "name": "Debt Write-off",
+              "vote": "Vote 15",
               "amount": 0.003028
             }
           ]

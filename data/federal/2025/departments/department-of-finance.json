@@ -68,16 +68,35 @@
             {
               "id": "department-of-finance-department-of-finance-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 143.112977
             },
             {
               "id": "department-of-finance-department-of-finance-vote1",
-              "name": "Vote 1",
-              "amount": 0.14687
+              "name": "Program expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "department-of-finance-department-of-finance-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.145667
+                },
+                {
+                  "id": "department-of-finance-department-of-finance-vote1-2025-g7-presidency",
+                  "name": "2025 G7 Presidency",
+                  "amount": 0.000803
+                },
+                {
+                  "id": "department-of-finance-department-of-finance-vote1-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 0.0004
+                }
+              ]
             },
             {
               "id": "department-of-finance-department-of-finance-vote5",
-              "name": "Vote 5",
+              "name": "Authority for amount by way of direct payments to the International Development Association pursuant to Bretton Woods and Related Agreements Act",
+              "vote": "Vote 5",
               "amount": 0.0
             }
           ]
@@ -89,11 +108,13 @@
             {
               "id": "department-of-finance-office-of-the-superintendent-of-financial-institutions-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.311525
             },
             {
               "id": "department-of-finance-office-of-the-superintendent-of-financial-institutions-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.001403
             }
           ]
@@ -104,12 +125,14 @@
           "children": [
             {
               "id": "department-of-finance-office-of-the-auditor-general-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.118498
             },
             {
               "id": "department-of-finance-office-of-the-auditor-general-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.014572
             }
           ]
@@ -120,12 +143,40 @@
           "children": [
             {
               "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote1",
-              "name": "Vote 1",
-              "amount": 0.050816
+              "name": "Program expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.037288
+                },
+                {
+                  "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote1-cyber-resilience",
+                  "name": "Cyber Resilience",
+                  "amount": 0.006994
+                },
+                {
+                  "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote1-intelligence-suite",
+                  "name": "Intelligence Suite",
+                  "amount": 0.004129
+                },
+                {
+                  "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote1-critical-information-management-and-information-technology-infrastructure-systems-and-services",
+                  "name": "Critical Information Management and Information Technology Infrastructure Systems and Services",
+                  "amount": 0.002012
+                },
+                {
+                  "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote1-expanding-public-private-partnership-projects",
+                  "name": "Expanding Public Private Partnership Projects",
+                  "amount": 0.000394
+                }
+              ]
             },
             {
               "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.050623
             }
           ]
@@ -137,6 +188,7 @@
             {
               "id": "department-of-finance-financial-consumer-agency-of-canada-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.055268
             }
           ]

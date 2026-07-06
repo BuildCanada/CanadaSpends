@@ -67,17 +67,46 @@
           "children": [
             {
               "id": "veterans-affairs-department-of-veterans-affairs-vote5",
-              "name": "Vote 5",
+              "name": "Grants and contributions",
+              "vote": "Vote 5",
               "amount": 4.177857
             },
             {
               "id": "veterans-affairs-department-of-veterans-affairs-vote1",
-              "name": "Vote 1",
-              "amount": 1.202411
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "veterans-affairs-department-of-veterans-affairs-vote1-other-health-purchased-services",
+                  "name": "Other Health Purchased Services",
+                  "amount": 0.740013
+                },
+                {
+                  "id": "veterans-affairs-department-of-veterans-affairs-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.380563
+                },
+                {
+                  "id": "veterans-affairs-department-of-veterans-affairs-vote1-veterans-support-services",
+                  "name": "Veterans Support Services",
+                  "amount": 0.077768
+                },
+                {
+                  "id": "veterans-affairs-department-of-veterans-affairs-vote1-advertising-initiatives",
+                  "name": "Advertising Initiatives",
+                  "amount": 0.004049
+                },
+                {
+                  "id": "veterans-affairs-department-of-veterans-affairs-vote1-ste-anne-s-hospital",
+                  "name": "Ste. Anne's Hospital",
+                  "amount": 1.8e-5
+                }
+              ]
             },
             {
               "id": "veterans-affairs-department-of-veterans-affairs-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.042077
             }
           ]
@@ -88,12 +117,14 @@
           "children": [
             {
               "id": "veterans-affairs-veterans-review-and-appeal-board-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.012154
             },
             {
               "id": "veterans-affairs-veterans-review-and-appeal-board-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.001467
             }
           ]

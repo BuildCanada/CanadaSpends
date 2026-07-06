@@ -67,8 +67,45 @@
           "children": [
             {
               "id": "national-defence-national-defence-vote",
-              "name": "All votes",
-              "amount": 20.102858
+              "name": "Total appropriations (vote-level detail not published for this edition)",
+              "vote": "All votes",
+              "children": [
+                {
+                  "id": "national-defence-national-defence-vote-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 14.818895
+                },
+                {
+                  "id": "national-defence-national-defence-vote-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 3.055226
+                },
+                {
+                  "id": "national-defence-national-defence-vote-statutory-amounts",
+                  "name": "Statutory amounts",
+                  "amount": 1.51582
+                },
+                {
+                  "id": "national-defence-national-defence-vote-less-revenues-netted-against-expenditures",
+                  "name": "Less: revenues netted against expenditures",
+                  "amount": 0.446867
+                },
+                {
+                  "id": "national-defence-national-defence-vote-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 0.150785
+                },
+                {
+                  "id": "national-defence-national-defence-vote-communications-security-establishment-long-term-accommodation-project",
+                  "name": "Communications Security Establishment long-term accommodation project",
+                  "amount": 0.114265
+                },
+                {
+                  "id": "national-defence-national-defence-vote-advertising-initiatives",
+                  "name": "Advertising initiatives",
+                  "amount": 0.001
+                }
+              ]
             }
           ]
         }

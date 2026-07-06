@@ -67,17 +67,42 @@
           "children": [
             {
               "id": "justice-department-of-justice-vote1",
-              "name": "Vote 1",
-              "amount": 0.796533
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "justice-department-of-justice-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.795812
+                },
+                {
+                  "id": "justice-department-of-justice-vote1-immigration-and-refugee-protection-act",
+                  "name": "Immigration and Refugee Protection Act",
+                  "amount": 0.000721
+                }
+              ]
             },
             {
               "id": "justice-department-of-justice-vote5",
-              "name": "Vote 5",
-              "amount": 0.681511
+              "name": "Grants and contributions",
+              "vote": "Vote 5",
+              "children": [
+                {
+                  "id": "justice-department-of-justice-vote5-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 0.681362
+                },
+                {
+                  "id": "justice-department-of-justice-vote5-immigration-and-refugee-protection-act",
+                  "name": "Immigration and Refugee Protection Act",
+                  "amount": 0.000149
+                }
+              ]
             },
             {
               "id": "justice-department-of-justice-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.103045
             }
           ]
@@ -89,16 +114,19 @@
             {
               "id": "justice-office-of-the-commissioner-for-federal-judicial-affairs-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.739461
             },
             {
               "id": "justice-office-of-the-commissioner-for-federal-judicial-affairs-vote1",
-              "name": "Vote 1",
+              "name": "Office of the Commissioner for Federal Judicial Affairs—Operating expenditures",
+              "vote": "Vote 1",
               "amount": 0.011244
             },
             {
               "id": "justice-office-of-the-commissioner-for-federal-judicial-affairs-vote5",
-              "name": "Vote 5",
+              "name": "Canadian Judicial Council—Operating expenditures",
+              "vote": "Vote 5",
               "amount": 0.002015
             }
           ]
@@ -109,12 +137,25 @@
           "children": [
             {
               "id": "justice-office-of-the-director-of-public-prosecutions-vote1",
-              "name": "Vote 1",
-              "amount": 0.216583
+              "name": "Program expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "justice-office-of-the-director-of-public-prosecutions-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.214561
+                },
+                {
+                  "id": "justice-office-of-the-director-of-public-prosecutions-vote1-fine-recovery-costs",
+                  "name": "Fine recovery costs",
+                  "amount": 0.002023
+                }
+              ]
             },
             {
               "id": "justice-office-of-the-director-of-public-prosecutions-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.021839
             }
           ]
@@ -125,12 +166,35 @@
           "children": [
             {
               "id": "justice-courts-administration-service-vote1",
-              "name": "Vote 1",
-              "amount": 0.113382
+              "name": "Program expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "justice-courts-administration-service-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.100286
+                },
+                {
+                  "id": "justice-courts-administration-service-vote1-national-court-facilities-modernization-program",
+                  "name": "National Court Facilities Modernization Program",
+                  "amount": 0.00594
+                },
+                {
+                  "id": "justice-courts-administration-service-vote1-immigration-and-refugee-protection-act",
+                  "name": "Immigration and Refugee Protection Act",
+                  "amount": 0.003753
+                },
+                {
+                  "id": "justice-courts-administration-service-vote1-courts-and-registry-management-system",
+                  "name": "Courts and Registry Management System",
+                  "amount": 0.003403
+                }
+              ]
             },
             {
               "id": "justice-courts-administration-service-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.011745
             }
           ]
@@ -141,12 +205,25 @@
           "children": [
             {
               "id": "justice-administrative-tribunals-support-service-of-canada-vote1",
-              "name": "Vote 1",
-              "amount": 0.109074
+              "name": "Program expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "justice-administrative-tribunals-support-service-of-canada-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.108954
+                },
+                {
+                  "id": "justice-administrative-tribunals-support-service-of-canada-vote1-translation-costs-devinat-case",
+                  "name": "Translation costs (Devinat case)",
+                  "amount": 0.00012
+                }
+              ]
             },
             {
               "id": "justice-administrative-tribunals-support-service-of-canada-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.013135
             }
           ]
@@ -157,17 +234,20 @@
           "children": [
             {
               "id": "justice-offices-of-the-information-and-privacy-commissioners-of-canada-vote5",
-              "name": "Vote 5",
+              "name": "Office of the Privacy Commissioner of Canada—Program expenditures",
+              "vote": "Vote 5",
               "amount": 0.031271
             },
             {
               "id": "justice-offices-of-the-information-and-privacy-commissioners-of-canada-vote1",
-              "name": "Vote 1",
+              "name": "Office of the Information Commissioner of Canada—Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.016126
             },
             {
               "id": "justice-offices-of-the-information-and-privacy-commissioners-of-canada-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.005601
             }
           ]
@@ -178,12 +258,14 @@
           "children": [
             {
               "id": "justice-registrar-of-the-supreme-court-of-canada-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.034783
             },
             {
               "id": "justice-registrar-of-the-supreme-court-of-canada-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.013579
             }
           ]
@@ -194,12 +276,14 @@
           "children": [
             {
               "id": "justice-canadian-human-rights-commission-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.042002
             },
             {
               "id": "justice-canadian-human-rights-commission-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.004981
             }
           ]
@@ -210,12 +294,14 @@
           "children": [
             {
               "id": "justice-law-commission-of-canada-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.001641
             },
             {
               "id": "justice-law-commission-of-canada-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.000145
             }
           ]

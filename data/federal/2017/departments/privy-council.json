@@ -67,8 +67,45 @@
           "children": [
             {
               "id": "privy-council-privy-council-vote",
-              "name": "All votes",
-              "amount": 0.316963
+              "name": "Total appropriations (vote-level detail not published for this edition)",
+              "vote": "All votes",
+              "children": [
+                {
+                  "id": "privy-council-privy-council-vote-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.202861
+                },
+                {
+                  "id": "privy-council-privy-council-vote-statutory-amounts",
+                  "name": "Statutory amounts",
+                  "amount": 0.093062
+                },
+                {
+                  "id": "privy-council-privy-council-vote-im-it-modernization-project",
+                  "name": "IM/IT modernization project",
+                  "amount": 0.017596
+                },
+                {
+                  "id": "privy-council-privy-council-vote-electoral-reform",
+                  "name": "Electoral reform",
+                  "amount": 0.003005
+                },
+                {
+                  "id": "privy-council-privy-council-vote-advertising-initiatives",
+                  "name": "Advertising initiatives",
+                  "amount": 0.00034
+                },
+                {
+                  "id": "privy-council-privy-council-vote-less-revenues-netted-against-expenditures",
+                  "name": "Less: revenues netted against expenditures",
+                  "amount": 7.3e-5
+                },
+                {
+                  "id": "privy-council-privy-council-vote-access-control-and-physical-security-project",
+                  "name": "Access control and physical security project",
+                  "amount": 2.6e-5
+                }
+              ]
             }
           ]
         }

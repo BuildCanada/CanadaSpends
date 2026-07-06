@@ -23,22 +23,42 @@
           "children": [
             {
               "id": "parks-canada-parks-canada-agency-vote1",
-              "name": "Vote 1",
-              "amount": 0.738148
+              "name": "Operating expenditures, grants and contributions",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "parks-canada-parks-canada-agency-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.631531
+                },
+                {
+                  "id": "parks-canada-parks-canada-agency-vote1-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 0.103618
+                },
+                {
+                  "id": "parks-canada-parks-canada-agency-vote1-advertising-initiatives",
+                  "name": "Advertising Initiatives",
+                  "amount": 0.002999
+                }
+              ]
             },
             {
               "id": "parks-canada-parks-canada-agency-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.333114
             },
             {
               "id": "parks-canada-parks-canada-agency-vote5",
-              "name": "Vote 5",
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
               "amount": 0.261834
             },
             {
               "id": "parks-canada-parks-canada-agency-vote10",
-              "name": "Vote 10",
+              "name": "Payments to the New Parks and Historic Sites Account",
+              "vote": "Vote 10",
               "amount": 0.03565
             }
           ]

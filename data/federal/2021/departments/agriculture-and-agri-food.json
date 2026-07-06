@@ -68,21 +68,52 @@
             {
               "id": "agriculture-and-agri-food-department-of-agriculture-and-agri-food-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 1.863768
             },
             {
               "id": "agriculture-and-agri-food-department-of-agriculture-and-agri-food-vote1",
-              "name": "Vote 1",
-              "amount": 0.655756
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "agriculture-and-agri-food-department-of-agriculture-and-agri-food-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.654741
+                },
+                {
+                  "id": "agriculture-and-agri-food-department-of-agriculture-and-agri-food-vote1-innovative-solutions-canada",
+                  "name": "Innovative Solutions Canada",
+                  "amount": 0.001015
+                }
+              ]
             },
             {
               "id": "agriculture-and-agri-food-department-of-agriculture-and-agri-food-vote10",
-              "name": "Vote 10",
-              "amount": 0.512343
+              "name": "Grants and contributions",
+              "vote": "Vote 10",
+              "children": [
+                {
+                  "id": "agriculture-and-agri-food-department-of-agriculture-and-agri-food-vote10-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 0.488793
+                },
+                {
+                  "id": "agriculture-and-agri-food-department-of-agriculture-and-agri-food-vote10-mandatory-isolation-support-for-temporary-foreign-workers",
+                  "name": "Mandatory Isolation Support for Temporary Foreign Workers",
+                  "amount": 0.02155
+                },
+                {
+                  "id": "agriculture-and-agri-food-department-of-agriculture-and-agri-food-vote10-innovative-solutions-canada",
+                  "name": "Innovative Solutions Canada",
+                  "amount": 0.002
+                }
+              ]
             },
             {
               "id": "agriculture-and-agri-food-department-of-agriculture-and-agri-food-vote5",
-              "name": "Vote 5",
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
               "amount": 0.047433
             }
           ]
@@ -93,12 +124,14 @@
           "children": [
             {
               "id": "agriculture-and-agri-food-canadian-grain-commission-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.006136
             },
             {
               "id": "agriculture-and-agri-food-canadian-grain-commission-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.0
             }
           ]
@@ -109,7 +142,8 @@
           "children": [
             {
               "id": "agriculture-and-agri-food-canadian-dairy-commission-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.004577
             }
           ]

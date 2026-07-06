@@ -67,22 +67,42 @@
           "children": [
             {
               "id": "immigration-refugees-and-citizenship-department-of-citizenship-and-immigration-vote10",
-              "name": "Vote 10",
+              "name": "Grants and contributions",
+              "vote": "Vote 10",
               "amount": 3.572858
             },
             {
               "id": "immigration-refugees-and-citizenship-department-of-citizenship-and-immigration-vote1",
-              "name": "Vote 1",
-              "amount": 2.639341
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "immigration-refugees-and-citizenship-department-of-citizenship-and-immigration-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 1.741067
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-department-of-citizenship-and-immigration-vote1-interim-federal-health-program",
+                  "name": "Interim federal health program",
+                  "amount": 0.896468
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-department-of-citizenship-and-immigration-vote1-immigration-and-refugee-protection-act",
+                  "name": "Immigration and Refugee Protection Act",
+                  "amount": 0.001805
+                }
+              ]
             },
             {
               "id": "immigration-refugees-and-citizenship-department-of-citizenship-and-immigration-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.301905
             },
             {
               "id": "immigration-refugees-and-citizenship-department-of-citizenship-and-immigration-vote5",
-              "name": "Vote 5",
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
               "amount": 0.006937
             }
           ]
@@ -93,12 +113,30 @@
           "children": [
             {
               "id": "immigration-refugees-and-citizenship-immigration-and-refugee-board-vote1",
-              "name": "Vote 1",
-              "amount": 0.314288
+              "name": "Program expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "immigration-refugees-and-citizenship-immigration-and-refugee-board-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.304742
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-immigration-and-refugee-board-vote1-translation-costs-devinat-case",
+                  "name": "Translation costs (Devinat case)",
+                  "amount": 0.008203
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-immigration-and-refugee-board-vote1-immigration-and-refugee-protection-act",
+                  "name": "Immigration and Refugee Protection Act",
+                  "amount": 0.001343
+                }
+              ]
             },
             {
               "id": "immigration-refugees-and-citizenship-immigration-and-refugee-board-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.038587
             }
           ]

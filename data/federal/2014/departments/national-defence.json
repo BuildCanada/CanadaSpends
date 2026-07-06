@@ -67,22 +67,42 @@
           "children": [
             {
               "id": "national-defence-national-defence-vote1",
-              "name": "Vote 1",
-              "amount": 14.827021
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "national-defence-national-defence-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 13.899843
+                },
+                {
+                  "id": "national-defence-national-defence-vote1-security-insurance-plan-long-term-disability",
+                  "name": "Security insurance plan long‑term disability",
+                  "amount": 0.51
+                },
+                {
+                  "id": "national-defence-national-defence-vote1-less-revenues-netted-against-expenditures",
+                  "name": "Less: revenues netted against expenditures",
+                  "amount": 0.417178
+                }
+              ]
             },
             {
               "id": "national-defence-national-defence-vote5",
-              "name": "Vote 5",
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
               "amount": 2.855755
             },
             {
               "id": "national-defence-national-defence-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 1.751329
             },
             {
               "id": "national-defence-national-defence-vote10",
-              "name": "Vote 10",
+              "name": "Grants and contributions",
+              "vote": "Vote 10",
               "amount": 0.164625
             }
           ]
@@ -93,12 +113,30 @@
           "children": [
             {
               "id": "national-defence-communications-security-establishment-canada-vote20",
-              "name": "Vote 20",
-              "amount": 0.4107
+              "name": "Program expenditures",
+              "vote": "Vote 20",
+              "children": [
+                {
+                  "id": "national-defence-communications-security-establishment-canada-vote20-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.396562
+                },
+                {
+                  "id": "national-defence-communications-security-establishment-canada-vote20-communications-security-establishment-canada-long-term-accommodation-project",
+                  "name": "Communications Security Establishment Canada Long‑Term Accommodation Project",
+                  "amount": 0.013532
+                },
+                {
+                  "id": "national-defence-communications-security-establishment-canada-vote20-less-revenues-netted-against-expenditures",
+                  "name": "Less: revenues netted against expenditures",
+                  "amount": 0.000606
+                }
+              ]
             },
             {
               "id": "national-defence-communications-security-establishment-canada-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.034186
             }
           ]
@@ -109,12 +147,14 @@
           "children": [
             {
               "id": "national-defence-military-grievances-external-review-committee-vote15",
-              "name": "Vote 15",
+              "name": "Program expenditures",
+              "vote": "Vote 15",
               "amount": 0.005356
             },
             {
               "id": "national-defence-military-grievances-external-review-committee-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.000625
             }
           ]
@@ -125,12 +165,30 @@
           "children": [
             {
               "id": "national-defence-military-police-complaints-commission-vote25",
-              "name": "Vote 25",
-              "amount": 0.00516
+              "name": "Program expenditures",
+              "vote": "Vote 25",
+              "children": [
+                {
+                  "id": "national-defence-military-police-complaints-commission-vote25-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.003799
+                },
+                {
+                  "id": "national-defence-military-police-complaints-commission-vote25-public-interest-hearing",
+                  "name": "Public interest hearing",
+                  "amount": 0.000876
+                },
+                {
+                  "id": "national-defence-military-police-complaints-commission-vote25-conduct-review",
+                  "name": "Conduct review",
+                  "amount": 0.000484
+                }
+              ]
             },
             {
               "id": "national-defence-military-police-complaints-commission-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.00036
             }
           ]
@@ -141,12 +199,14 @@
           "children": [
             {
               "id": "national-defence-office-of-the-communications-security-establishment-commissioner-vote30",
-              "name": "Vote 30",
+              "name": "Program expenditures",
+              "vote": "Vote 30",
               "amount": 0.001775
             },
             {
               "id": "national-defence-office-of-the-communications-security-establishment-commissioner-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.000168
             }
           ]

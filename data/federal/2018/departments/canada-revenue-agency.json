@@ -67,8 +67,45 @@
           "children": [
             {
               "id": "canada-revenue-agency-national-revenue-vote",
-              "name": "All votes",
-              "amount": 5.06278
+              "name": "Total appropriations (vote-level detail not published for this edition)",
+              "vote": "All votes",
+              "children": [
+                {
+                  "id": "canada-revenue-agency-national-revenue-vote-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 3.565154
+                },
+                {
+                  "id": "canada-revenue-agency-national-revenue-vote-statutory-amounts",
+                  "name": "Statutory amounts",
+                  "amount": 0.941297
+                },
+                {
+                  "id": "canada-revenue-agency-national-revenue-vote-real-property-accommodation-and-services",
+                  "name": "Real property accommodation and services",
+                  "amount": 0.32054
+                },
+                {
+                  "id": "canada-revenue-agency-national-revenue-vote-payments-to-quebec-for-gst-administration",
+                  "name": "Payments to Quebec for GST administration",
+                  "amount": 0.141822
+                },
+                {
+                  "id": "canada-revenue-agency-national-revenue-vote-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.073505
+                },
+                {
+                  "id": "canada-revenue-agency-national-revenue-vote-non-resident-trusts-and-offshore-investment-fund-properties",
+                  "name": "Non-resident trusts and offshore investment fund properties",
+                  "amount": 0.019463
+                },
+                {
+                  "id": "canada-revenue-agency-national-revenue-vote-advertising-initiatives",
+                  "name": "Advertising initiatives",
+                  "amount": 0.000998
+                }
+              ]
             }
           ]
         }

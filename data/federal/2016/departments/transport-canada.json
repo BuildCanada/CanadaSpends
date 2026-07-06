@@ -67,8 +67,40 @@
           "children": [
             {
               "id": "transport-canada-transport-vote",
-              "name": "All votes",
-              "amount": 4.563952
+              "name": "Total appropriations (vote-level detail not published for this edition)",
+              "vote": "All votes",
+              "children": [
+                {
+                  "id": "transport-canada-transport-vote-statutory-amounts",
+                  "name": "Statutory amounts",
+                  "amount": 1.597381
+                },
+                {
+                  "id": "transport-canada-transport-vote-payments-to-crown-corporation",
+                  "name": "Payments to Crown Corporation",
+                  "amount": 1.046667
+                },
+                {
+                  "id": "transport-canada-transport-vote-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.758765
+                },
+                {
+                  "id": "transport-canada-transport-vote-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.552181
+                },
+                {
+                  "id": "transport-canada-transport-vote-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 0.525375
+                },
+                {
+                  "id": "transport-canada-transport-vote-less-revenues-netted-against-expenditures",
+                  "name": "Less: revenues netted against expenditures",
+                  "amount": 0.083583
+                }
+              ]
             }
           ]
         }

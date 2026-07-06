@@ -67,8 +67,77 @@
           "children": [
             {
               "id": "public-services-and-procurement-canada-public-services-and-procurement-vote",
-              "name": "All votes",
-              "amount": 8.327546
+              "name": "Total appropriations (vote-level detail not published for this edition)",
+              "vote": "All votes",
+              "children": [
+                {
+                  "id": "public-services-and-procurement-canada-public-services-and-procurement-vote-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 2.787046
+                },
+                {
+                  "id": "public-services-and-procurement-canada-public-services-and-procurement-vote-less-revenues-netted-against-expenditures",
+                  "name": "Less: revenues netted against expenditures",
+                  "amount": 1.953961
+                },
+                {
+                  "id": "public-services-and-procurement-canada-public-services-and-procurement-vote-real-property-services",
+                  "name": "Real property services",
+                  "amount": 1.930813
+                },
+                {
+                  "id": "public-services-and-procurement-canada-public-services-and-procurement-vote-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 1.042201
+                },
+                {
+                  "id": "public-services-and-procurement-canada-public-services-and-procurement-vote-statutory-amounts",
+                  "name": "Statutory amounts",
+                  "amount": 0.184019
+                },
+                {
+                  "id": "public-services-and-procurement-canada-public-services-and-procurement-vote-real-property-capital-leases",
+                  "name": "Real property capital leases",
+                  "amount": 0.146258
+                },
+                {
+                  "id": "public-services-and-procurement-canada-public-services-and-procurement-vote-receiver-general-and-central-compensation-administration-function",
+                  "name": "Receiver General and central compensation administration function",
+                  "amount": 0.092554
+                },
+                {
+                  "id": "public-services-and-procurement-canada-public-services-and-procurement-vote-real-property-refit-fit-up",
+                  "name": "Real property refit / fit-up",
+                  "amount": 0.086204
+                },
+                {
+                  "id": "public-services-and-procurement-canada-public-services-and-procurement-vote-cape-breton-operation",
+                  "name": "Cape Breton operation",
+                  "amount": 0.036133
+                },
+                {
+                  "id": "public-services-and-procurement-canada-public-services-and-procurement-vote-linguistic-services",
+                  "name": "Linguistic services",
+                  "amount": 0.02619
+                },
+                {
+                  "id": "public-services-and-procurement-canada-public-services-and-procurement-vote-build-in-canada-innovation-program",
+                  "name": "Build in Canada innovation program",
+                  "amount": 0.025033
+                },
+                {
+                  "id": "public-services-and-procurement-canada-public-services-and-procurement-vote-payments-to-crown-corporation",
+                  "name": "Payments to Crown Corporation",
+                  "amount": 0.009254
+                },
+                {
+                  "name": "Other",
+                  "id": "public-services-and-procurement-canada-public-services-and-procurement-vote-other",
+                  "amount": 0.00788,
+                  "isAggregate": true,
+                  "count": 4
+                }
+              ]
             }
           ]
         }

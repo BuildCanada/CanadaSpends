@@ -67,22 +67,37 @@
           "children": [
             {
               "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote1",
-              "name": "Vote 1",
-              "amount": 2.419733
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 2.418985
+                },
+                {
+                  "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote1-innovative-solutions-canada",
+                  "name": "Innovative Solutions Canada",
+                  "amount": 0.000748
+                }
+              ]
             },
             {
               "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote5",
-              "name": "Vote 5",
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
               "amount": 1.344508
             },
             {
               "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote10",
-              "name": "Vote 10",
+              "name": "Grants and contributions",
+              "vote": "Vote 10",
               "amount": 0.591513
             },
             {
               "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.236619
             }
           ]

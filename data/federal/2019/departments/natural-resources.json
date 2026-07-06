@@ -67,23 +67,59 @@
           "children": [
             {
               "id": "natural-resources-department-of-natural-resources-vote1",
-              "name": "Vote 1",
-              "amount": 0.60112
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "natural-resources-department-of-natural-resources-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.597495
+                },
+                {
+                  "id": "natural-resources-department-of-natural-resources-vote1-softwood-lumber-operating-expenditures",
+                  "name": "Softwood lumber operating expenditures",
+                  "amount": 0.001774
+                },
+                {
+                  "id": "natural-resources-department-of-natural-resources-vote1-international-boundary-commission",
+                  "name": "International Boundary Commission",
+                  "amount": 0.001721
+                },
+                {
+                  "id": "natural-resources-department-of-natural-resources-vote1-soldier-settlement-board-manitoba",
+                  "name": "Soldier settlement board—Manitoba",
+                  "amount": 0.000129
+                }
+              ]
             },
             {
               "id": "natural-resources-department-of-natural-resources-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.461962
             },
             {
               "id": "natural-resources-department-of-natural-resources-vote10",
-              "name": "Vote 10",
+              "name": "Grants and contributions",
+              "vote": "Vote 10",
               "amount": 0.333046
             },
             {
               "id": "natural-resources-department-of-natural-resources-vote5",
-              "name": "Vote 5",
-              "amount": 0.025288
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
+              "children": [
+                {
+                  "id": "natural-resources-department-of-natural-resources-vote5-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.025247
+                },
+                {
+                  "id": "natural-resources-department-of-natural-resources-vote5-international-boundary-commission-canadian-section",
+                  "name": "International Boundary Commission—Canadian section",
+                  "amount": 4.1e-5
+                }
+              ]
             }
           ]
         },
@@ -93,12 +129,25 @@
           "children": [
             {
               "id": "natural-resources-atomic-energy-of-canada-limited-vote1",
-              "name": "Vote 1",
-              "amount": 0.826233
+              "name": "Payments to Atomic Energy of Canada Limited for operating and capital expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "natural-resources-atomic-energy-of-canada-limited-vote1-payments-to-crown-corporation",
+                  "name": "Payments to Crown Corporation",
+                  "amount": 0.755239
+                },
+                {
+                  "id": "natural-resources-atomic-energy-of-canada-limited-vote1-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.070995
+                }
+              ]
             },
             {
               "id": "natural-resources-atomic-energy-of-canada-limited-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.003
             }
           ]
@@ -110,11 +159,13 @@
             {
               "id": "natural-resources-canadian-nuclear-safety-commission-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.107556
             },
             {
               "id": "natural-resources-canadian-nuclear-safety-commission-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.041367
             }
           ]
@@ -125,12 +176,30 @@
           "children": [
             {
               "id": "natural-resources-national-energy-board-vote1",
-              "name": "Vote 1",
-              "amount": 0.084475
+              "name": "Program expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "natural-resources-national-energy-board-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.079172
+                },
+                {
+                  "id": "natural-resources-national-energy-board-vote1-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 0.00509
+                },
+                {
+                  "id": "natural-resources-national-energy-board-vote1-translation-costs-devinat-case",
+                  "name": "Translation costs (Devinat case)",
+                  "amount": 0.000213
+                }
+              ]
             },
             {
               "id": "natural-resources-national-energy-board-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.02363
             }
           ]
@@ -141,12 +210,14 @@
           "children": [
             {
               "id": "natural-resources-northern-pipeline-agency-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.000227
             },
             {
               "id": "natural-resources-northern-pipeline-agency-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 4.0e-6
             }
           ]

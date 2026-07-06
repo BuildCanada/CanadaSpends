@@ -68,16 +68,60 @@
             {
               "id": "employment-and-social-development-canada-employment-and-social-development-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 47.303426
             },
             {
               "id": "employment-and-social-development-canada-employment-and-social-development-vote1",
-              "name": "Vote 1",
-              "amount": 4.123375
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "employment-and-social-development-canada-employment-and-social-development-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 2.339455
+                },
+                {
+                  "id": "employment-and-social-development-canada-employment-and-social-development-vote1-less-revenues-netted-against-expenditures",
+                  "name": "Less: revenues netted against expenditures",
+                  "amount": 1.738838
+                },
+                {
+                  "id": "employment-and-social-development-canada-employment-and-social-development-vote1-retroactive-compensation",
+                  "name": "Retroactive compensation",
+                  "amount": 0.014077
+                },
+                {
+                  "id": "employment-and-social-development-canada-employment-and-social-development-vote1-bill-c-51-implementation",
+                  "name": "Bill C‑51 — Implementation",
+                  "amount": 0.013962
+                },
+                {
+                  "id": "employment-and-social-development-canada-employment-and-social-development-vote1-advertising-initiatives",
+                  "name": "Advertising initiatives",
+                  "amount": 0.010477
+                },
+                {
+                  "id": "employment-and-social-development-canada-employment-and-social-development-vote1-employment-insurance",
+                  "name": "Employment Insurance",
+                  "amount": 0.002628
+                },
+                {
+                  "id": "employment-and-social-development-canada-employment-and-social-development-vote1-alternative-option-to-the-working-while-on-claim-employment-insurance-pilot",
+                  "name": "Alternative option to the working while on claim Employment Insurance pilot",
+                  "amount": 0.002526
+                },
+                {
+                  "id": "employment-and-social-development-canada-employment-and-social-development-vote1-canada-pension-plan",
+                  "name": "Canada Pension Plan",
+                  "amount": 0.001412
+                }
+              ]
             },
             {
               "id": "employment-and-social-development-canada-employment-and-social-development-vote5",
-              "name": "Vote 5",
+              "name": "Grants and contributions",
+              "vote": "Vote 5",
               "amount": 1.697786
             }
           ]
@@ -88,12 +132,14 @@
           "children": [
             {
               "id": "employment-and-social-development-canada-canada-mortgage-and-housing-corporation-vote15",
-              "name": "Vote 15",
+              "name": "To reimburse Canada Mortgage and Housing Corporation for the amounts of loans forgiven, grants, contributions and expenditures made, and losses, costs and expenses incurred under the provisions of the National Housing Act or in respect of the exercise of powers or the carrying out of duties or functions conferred on the Corporation pursuant to the authority of any Act of Parliament of Canada other than the National Housing Act, in accordance with the Corporation's authority under the Canada Mortgage and Housing Corporation Act",
+              "vote": "Vote 15",
               "amount": 2.05485
             },
             {
               "id": "employment-and-social-development-canada-canada-mortgage-and-housing-corporation-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.03
             }
           ]
@@ -104,17 +150,20 @@
           "children": [
             {
               "id": "employment-and-social-development-canada-office-of-the-co-ordinator-status-of-women-vote30",
-              "name": "Vote 30",
+              "name": "Grants and contributions",
+              "vote": "Vote 30",
               "amount": 0.019033
             },
             {
               "id": "employment-and-social-development-canada-office-of-the-co-ordinator-status-of-women-vote25",
-              "name": "Vote 25",
+              "name": "Operating expenditures",
+              "vote": "Vote 25",
               "amount": 0.011063
             },
             {
               "id": "employment-and-social-development-canada-office-of-the-co-ordinator-status-of-women-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.001325
             }
           ]
@@ -125,12 +174,14 @@
           "children": [
             {
               "id": "employment-and-social-development-canada-canadian-centre-for-occupational-health-and-safety-vote20",
-              "name": "Vote 20",
+              "name": "Program expenditures",
+              "vote": "Vote 20",
               "amount": 0.012385
             },
             {
               "id": "employment-and-social-development-canada-canadian-centre-for-occupational-health-and-safety-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.001117
             }
           ]
@@ -141,12 +192,14 @@
           "children": [
             {
               "id": "employment-and-social-development-canada-canada-industrial-relations-board-vote10",
-              "name": "Vote 10",
+              "name": "Program expenditures",
+              "vote": "Vote 10",
               "amount": 0.011753
             },
             {
               "id": "employment-and-social-development-canada-canada-industrial-relations-board-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.001505
             }
           ]

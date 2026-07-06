@@ -67,8 +67,77 @@
           "children": [
             {
               "id": "health-canada-health-vote",
-              "name": "All votes",
-              "amount": 7.078566
+              "name": "Total appropriations (vote-level detail not published for this edition)",
+              "vote": "All votes",
+              "children": [
+                {
+                  "id": "health-canada-health-vote-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 2.074133
+                },
+                {
+                  "id": "health-canada-health-vote-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 1.882498
+                },
+                {
+                  "id": "health-canada-health-vote-non-insured-health-benefits",
+                  "name": "Non-insured health benefits",
+                  "amount": 1.203223
+                },
+                {
+                  "id": "health-canada-health-vote-grants",
+                  "name": "Grants",
+                  "amount": 1.024249
+                },
+                {
+                  "id": "health-canada-health-vote-statutory-amounts",
+                  "name": "Statutory amounts",
+                  "amount": 0.411545
+                },
+                {
+                  "id": "health-canada-health-vote-less-revenues-netted-against-expenditures",
+                  "name": "Less: revenues netted against expenditures",
+                  "amount": 0.244378
+                },
+                {
+                  "id": "health-canada-health-vote-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.082827
+                },
+                {
+                  "id": "health-canada-health-vote-indian-residential-schools-resolution-health-support",
+                  "name": "Indian residential schools resolution health support",
+                  "amount": 0.066391
+                },
+                {
+                  "id": "health-canada-health-vote-canadian-strategy-for-cancer-control",
+                  "name": "Canadian strategy for cancer control",
+                  "amount": 0.0475
+                },
+                {
+                  "id": "health-canada-health-vote-non-insured-health-benefits-mcivor",
+                  "name": "Non-insured health benefits—McIvor",
+                  "amount": 0.021774
+                },
+                {
+                  "id": "health-canada-health-vote-non-insured-health-benefits-qalipu",
+                  "name": "Non-insured health benefits—Qalipu",
+                  "amount": 0.013251
+                },
+                {
+                  "id": "health-canada-health-vote-ebola-virus-disease-outbreak",
+                  "name": "Ebola virus disease outbreak",
+                  "amount": 0.002146
+                },
+                {
+                  "name": "Other",
+                  "id": "health-canada-health-vote-other",
+                  "amount": 0.004651,
+                  "isAggregate": true,
+                  "count": 3
+                }
+              ]
             }
           ]
         }

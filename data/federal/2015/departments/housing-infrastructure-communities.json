@@ -63,17 +63,20 @@
           "children": [
             {
               "id": "housing-infrastructure-communities-office-of-infrastructure-of-canada-vote5",
-              "name": "Vote 5",
+              "name": "Contributions",
+              "vote": "Vote 5",
               "amount": 3.013648
             },
             {
               "id": "housing-infrastructure-communities-office-of-infrastructure-of-canada-vote1",
-              "name": "Vote 1",
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
               "amount": 0.066587
             },
             {
               "id": "housing-infrastructure-communities-office-of-infrastructure-of-canada-vote3",
-              "name": "Vote 3",
+              "name": "Capital expenditures",
+              "vote": "Vote 3",
               "amount": 0.015647
             }
           ]
@@ -84,8 +87,20 @@
           "children": [
             {
               "id": "housing-infrastructure-communities-the-jacques-cartier-and-champlain-bridges-inc-vote1",
-              "name": "Vote 1",
-              "amount": 0.244958
+              "name": "Payments to The Jacques‑Cartier and Champlain Bridges Inc.",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "housing-infrastructure-communities-the-jacques-cartier-and-champlain-bridges-inc-vote1-payments-to-crown-corporation",
+                  "name": "Payments to Crown Corporation",
+                  "amount": 0.179803
+                },
+                {
+                  "id": "housing-infrastructure-communities-the-jacques-cartier-and-champlain-bridges-inc-vote1-payments-to-crown-corporation-capital",
+                  "name": "Payments to Crown Corporation — Capital",
+                  "amount": 0.065155
+                }
+              ]
             }
           ]
         }

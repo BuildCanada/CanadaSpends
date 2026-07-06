@@ -55,17 +55,20 @@
           "children": [
             {
               "id": "regional-economic-development-atlantic-canada-opportunities-agency-vote5",
-              "name": "Vote 5",
+              "name": "Grants and contributions",
+              "vote": "Vote 5",
               "amount": 0.231079
             },
             {
               "id": "regional-economic-development-atlantic-canada-opportunities-agency-vote1",
-              "name": "Vote 1",
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
               "amount": 0.065978
             },
             {
               "id": "regional-economic-development-atlantic-canada-opportunities-agency-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.008216
             }
           ]
@@ -76,12 +79,14 @@
           "children": [
             {
               "id": "regional-economic-development-economic-development-agency-of-canada-for-the-regions-of-quebec-vote5",
-              "name": "Vote 5",
+              "name": "Grants and contributions",
+              "vote": "Vote 5",
               "amount": 0.216412
             },
             {
               "id": "regional-economic-development-economic-development-agency-of-canada-for-the-regions-of-quebec-vote1",
-              "name": "Vote 1",
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
               "amount": 0.037486
             }
           ]
@@ -92,12 +97,14 @@
           "children": [
             {
               "id": "regional-economic-development-western-economic-diversification-vote5",
-              "name": "Vote 5",
+              "name": "Grants and contributions",
+              "vote": "Vote 5",
               "amount": 0.125946
             },
             {
               "id": "regional-economic-development-western-economic-diversification-vote1",
-              "name": "Vote 1",
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
               "amount": 0.036056
             }
           ]
@@ -108,17 +115,20 @@
           "children": [
             {
               "id": "regional-economic-development-federal-economic-development-agency-for-southern-ontario-vote5",
-              "name": "Vote 5",
+              "name": "Grants and contributions",
+              "vote": "Vote 5",
               "amount": 0.074386
             },
             {
               "id": "regional-economic-development-federal-economic-development-agency-for-southern-ontario-vote1",
-              "name": "Vote 1",
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
               "amount": 0.02666
             },
             {
               "id": "regional-economic-development-federal-economic-development-agency-for-southern-ontario-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.003057
             }
           ]
@@ -129,12 +139,14 @@
           "children": [
             {
               "id": "regional-economic-development-canadian-northern-economic-development-agency-vote5",
-              "name": "Vote 5",
+              "name": "Contributions",
+              "vote": "Vote 5",
               "amount": 0.035582
             },
             {
               "id": "regional-economic-development-canadian-northern-economic-development-agency-vote1",
-              "name": "Vote 1",
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
               "amount": 0.013539
             }
           ]
@@ -145,8 +157,25 @@
           "children": [
             {
               "id": "regional-economic-development-enterprise-cape-breton-corporation-vote1",
-              "name": "Vote 1",
-              "amount": 0.009866
+              "name": "Payments to the Enterprise Cape Breton Corporation",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "regional-economic-development-enterprise-cape-breton-corporation-vote1-environmental-and-human-resources-obligations",
+                  "name": "Environmental and human resources obligations",
+                  "amount": 0.00814
+                },
+                {
+                  "id": "regional-economic-development-enterprise-cape-breton-corporation-vote1-payments-to-crown-corporation",
+                  "name": "Payments to Crown Corporation",
+                  "amount": 0.001698
+                },
+                {
+                  "id": "regional-economic-development-enterprise-cape-breton-corporation-vote1-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 2.7e-5
+                }
+              ]
             }
           ]
         }

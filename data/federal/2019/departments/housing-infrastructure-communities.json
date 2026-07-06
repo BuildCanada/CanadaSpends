@@ -63,22 +63,37 @@
           "children": [
             {
               "id": "housing-infrastructure-communities-office-of-infrastructure-of-canada-vote10",
-              "name": "Vote 10",
-              "amount": 3.279177
+              "name": "Grants and Contributions",
+              "vote": "Vote 10",
+              "children": [
+                {
+                  "id": "housing-infrastructure-communities-office-of-infrastructure-of-canada-vote10-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 3.164996
+                },
+                {
+                  "id": "housing-infrastructure-communities-office-of-infrastructure-of-canada-vote10-public-private-partnerships-canada-fund",
+                  "name": "Public-Private Partnerships Canada Fund",
+                  "amount": 0.114181
+                }
+              ]
             },
             {
               "id": "housing-infrastructure-communities-office-of-infrastructure-of-canada-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 2.177695
             },
             {
               "id": "housing-infrastructure-communities-office-of-infrastructure-of-canada-vote5",
-              "name": "Vote 5",
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
               "amount": 0.111653
             },
             {
               "id": "housing-infrastructure-communities-office-of-infrastructure-of-canada-vote1",
-              "name": "Vote 1",
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
               "amount": 0.085727
             }
           ]
@@ -89,8 +104,20 @@
           "children": [
             {
               "id": "housing-infrastructure-communities-windsor-detroit-bridge-authority-vote1",
-              "name": "Vote 1",
-              "amount": 0.3305
+              "name": "Payments to the Authority",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "housing-infrastructure-communities-windsor-detroit-bridge-authority-vote1-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.1845
+                },
+                {
+                  "id": "housing-infrastructure-communities-windsor-detroit-bridge-authority-vote1-payments-to-crown-corporation",
+                  "name": "Payments to Crown Corporation",
+                  "amount": 0.146
+                }
+              ]
             }
           ]
         },
@@ -100,8 +127,25 @@
           "children": [
             {
               "id": "housing-infrastructure-communities-the-jacques-cartier-and-champlain-bridges-inc-vote1",
-              "name": "Vote 1",
-              "amount": 0.166798
+              "name": "Payments to the corporation",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "housing-infrastructure-communities-the-jacques-cartier-and-champlain-bridges-inc-vote1-payments-to-crown-corporation",
+                  "name": "Payments to Crown Corporation",
+                  "amount": 0.082361
+                },
+                {
+                  "id": "housing-infrastructure-communities-the-jacques-cartier-and-champlain-bridges-inc-vote1-payments-to-crown-corporation-capital",
+                  "name": "Payments to Crown Corporation—Capital",
+                  "amount": 0.050416
+                },
+                {
+                  "id": "housing-infrastructure-communities-the-jacques-cartier-and-champlain-bridges-inc-vote1-champlain-bridge-maintenance-and-repairs",
+                  "name": "Champlain Bridge Maintenance and Repairs",
+                  "amount": 0.034021
+                }
+              ]
             }
           ]
         }

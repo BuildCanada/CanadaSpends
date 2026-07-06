@@ -67,12 +67,30 @@
           "children": [
             {
               "id": "privy-council-privy-council-office-vote1",
-              "name": "Vote 1",
-              "amount": 0.191005
+              "name": "Program expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "privy-council-privy-council-office-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.178456
+                },
+                {
+                  "id": "privy-council-privy-council-office-vote1-joint-public-inquiry-nova-scotia-tragedy",
+                  "name": "Joint Public Inquiry Nova Scotia Tragedy",
+                  "amount": 0.010729
+                },
+                {
+                  "id": "privy-council-privy-council-office-vote1-secure-mobile-communications",
+                  "name": "Secure Mobile Communications",
+                  "amount": 0.001819
+                }
+              ]
             },
             {
               "id": "privy-council-privy-council-office-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.019566
             }
           ]
@@ -83,12 +101,14 @@
           "children": [
             {
               "id": "privy-council-public-service-commission-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.08458
             },
             {
               "id": "privy-council-public-service-commission-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.010332
             }
           ]
@@ -99,12 +119,14 @@
           "children": [
             {
               "id": "privy-council-canadian-transportation-accident-investigation-and-safety-board-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.032156
             },
             {
               "id": "privy-council-canadian-transportation-accident-investigation-and-safety-board-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.00378
             }
           ]
@@ -115,12 +137,25 @@
           "children": [
             {
               "id": "privy-council-national-security-and-intelligence-review-agency-secretariat-vote1",
-              "name": "Vote 1",
-              "amount": 0.016113
+              "name": "Program expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "privy-council-national-security-and-intelligence-review-agency-secretariat-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.015799
+                },
+                {
+                  "id": "privy-council-national-security-and-intelligence-review-agency-secretariat-vote1-information-management-and-information-technology-modernization-project",
+                  "name": "Information Management and Information Technology Modernization Project",
+                  "amount": 0.000314
+                }
+              ]
             },
             {
               "id": "privy-council-national-security-and-intelligence-review-agency-secretariat-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.001176
             }
           ]
@@ -131,12 +166,14 @@
           "children": [
             {
               "id": "privy-council-office-of-the-intelligence-commissioner-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.001914
             },
             {
               "id": "privy-council-office-of-the-intelligence-commissioner-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.000138
             }
           ]

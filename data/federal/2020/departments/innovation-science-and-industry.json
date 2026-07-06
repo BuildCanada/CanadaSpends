@@ -67,62 +67,85 @@
           "children": [
             {
               "id": "innovation-science-and-industry-department-of-industry-vote10",
-              "name": "Vote 10",
+              "name": "Grants and contributions",
+              "vote": "Vote 10",
               "amount": 1.740264
             },
             {
               "id": "innovation-science-and-industry-department-of-industry-vote1",
-              "name": "Vote 1",
-              "amount": 0.586439
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "innovation-science-and-industry-department-of-industry-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.585459
+                },
+                {
+                  "id": "innovation-science-and-industry-department-of-industry-vote1-advertising-initiatives",
+                  "name": "Advertising Initiatives",
+                  "amount": 0.00098
+                }
+              ]
             },
             {
               "id": "innovation-science-and-industry-department-of-industry-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.161959
             },
             {
               "id": "innovation-science-and-industry-department-of-industry-vote5",
-              "name": "Vote 5",
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
               "amount": 0.00787
             },
             {
               "id": "innovation-science-and-industry-department-of-industry-vote25",
-              "name": "Vote 25",
+              "name": "Access to High-Speed Internet for all Canadians",
+              "vote": "Vote 25",
               "amount": 0.0
             },
             {
               "id": "innovation-science-and-industry-department-of-industry-vote30",
-              "name": "Vote 30",
-              "amount": 0.0
-            },
-            {
-              "id": "innovation-science-and-industry-department-of-industry-vote35",
-              "name": "Vote 35",
-              "amount": 0.0
-            },
-            {
-              "id": "innovation-science-and-industry-department-of-industry-vote40",
-              "name": "Vote 40",
-              "amount": 0.0
-            },
-            {
-              "id": "innovation-science-and-industry-department-of-industry-vote45",
-              "name": "Vote 45",
-              "amount": 0.0
-            },
-            {
-              "id": "innovation-science-and-industry-department-of-industry-vote55",
-              "name": "Vote 55",
-              "amount": 0.0
-            },
-            {
-              "id": "innovation-science-and-industry-department-of-industry-vote65",
-              "name": "Vote 65",
+              "name": "Giving Young Canadians Digital Skills",
+              "vote": "Vote 30",
               "amount": 0.0
             },
             {
               "id": "innovation-science-and-industry-department-of-industry-vote70",
-              "name": "Vote 70",
+              "name": "Launching a Federal Strategy on Jobs and Tourism (FedNor)",
+              "vote": "Vote 70",
+              "amount": 0.0
+            },
+            {
+              "id": "innovation-science-and-industry-department-of-industry-vote35",
+              "name": "Preparing for a New Generation of Wireless Technology",
+              "vote": "Vote 35",
+              "amount": 0.0
+            },
+            {
+              "id": "innovation-science-and-industry-department-of-industry-vote40",
+              "name": "Protecting Canada's Critical Infrastructure from Cyber Threats",
+              "vote": "Vote 40",
+              "amount": 0.0
+            },
+            {
+              "id": "innovation-science-and-industry-department-of-industry-vote45",
+              "name": "Protecting Canada's National Security",
+              "vote": "Vote 45",
+              "amount": 0.0
+            },
+            {
+              "id": "innovation-science-and-industry-department-of-industry-vote55",
+              "name": "Supporting Renewed Legal Relationships With Indigenous Peoples",
+              "vote": "Vote 55",
+              "amount": 0.0
+            },
+            {
+              "id": "innovation-science-and-industry-department-of-industry-vote65",
+              "name": "Supporting the work of the Business/Higher Education Roundtable",
+              "vote": "Vote 65",
               "amount": 0.0
             }
           ]
@@ -133,22 +156,26 @@
           "children": [
             {
               "id": "innovation-science-and-industry-natural-sciences-and-engineering-research-council-vote5",
-              "name": "Vote 5",
+              "name": "Grants",
+              "vote": "Vote 5",
               "amount": 1.296861
             },
             {
               "id": "innovation-science-and-industry-natural-sciences-and-engineering-research-council-vote1",
-              "name": "Vote 1",
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
               "amount": 0.056498
             },
             {
               "id": "innovation-science-and-industry-natural-sciences-and-engineering-research-council-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.006006
             },
             {
               "id": "innovation-science-and-industry-natural-sciences-and-engineering-research-council-vote10",
-              "name": "Vote 10",
+              "name": "Paid Parental Leave for Student Researchers",
+              "vote": "Vote 10",
               "amount": 0.0
             }
           ]
@@ -159,22 +186,26 @@
           "children": [
             {
               "id": "innovation-science-and-industry-national-research-council-of-canada-vote1",
-              "name": "Vote 1",
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
               "amount": 0.465564
             },
             {
               "id": "innovation-science-and-industry-national-research-council-of-canada-vote10",
-              "name": "Vote 10",
+              "name": "Grants and contributions",
+              "vote": "Vote 10",
               "amount": 0.435225
             },
             {
               "id": "innovation-science-and-industry-national-research-council-of-canada-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.26279
             },
             {
               "id": "innovation-science-and-industry-national-research-council-of-canada-vote5",
-              "name": "Vote 5",
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
               "amount": 0.051023
             }
           ]
@@ -185,22 +216,26 @@
           "children": [
             {
               "id": "innovation-science-and-industry-social-sciences-and-humanities-research-council-vote5",
-              "name": "Vote 5",
+              "name": "Grants",
+              "vote": "Vote 5",
               "amount": 0.902401
             },
             {
               "id": "innovation-science-and-industry-social-sciences-and-humanities-research-council-vote1",
-              "name": "Vote 1",
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
               "amount": 0.034776
             },
             {
               "id": "innovation-science-and-industry-social-sciences-and-humanities-research-council-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.00358
             },
             {
               "id": "innovation-science-and-industry-social-sciences-and-humanities-research-council-vote10",
-              "name": "Vote 10",
+              "name": "Paid Parental Leave for Student Researchers",
+              "vote": "Vote 10",
               "amount": 0.0
             }
           ]
@@ -211,17 +246,41 @@
           "children": [
             {
               "id": "innovation-science-and-industry-statistics-canada-vote1",
-              "name": "Vote 1",
-              "amount": 0.593798
+              "name": "Program expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "innovation-science-and-industry-statistics-canada-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.593536
+                },
+                {
+                  "id": "innovation-science-and-industry-statistics-canada-vote1-statistical-survey-operations-settlement",
+                  "name": "Statistical Survey Operations Settlement",
+                  "amount": 0.000192
+                },
+                {
+                  "id": "innovation-science-and-industry-statistics-canada-vote1-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 6.4e-5
+                },
+                {
+                  "id": "innovation-science-and-industry-statistics-canada-vote1-2021-census-of-population",
+                  "name": "2021 Census of Population",
+                  "amount": 6.0e-6
+                }
+              ]
             },
             {
               "id": "innovation-science-and-industry-statistics-canada-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.07319
             },
             {
               "id": "innovation-science-and-industry-statistics-canada-vote5",
-              "name": "Vote 5",
+              "name": "Monitoring Purchases of Canadian Real Estate",
+              "vote": "Vote 5",
               "amount": 0.0
             }
           ]
@@ -232,22 +291,26 @@
           "children": [
             {
               "id": "innovation-science-and-industry-canadian-space-agency-vote1",
-              "name": "Vote 1",
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
               "amount": 0.178869
             },
             {
               "id": "innovation-science-and-industry-canadian-space-agency-vote5",
-              "name": "Vote 5",
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
               "amount": 0.075927
             },
             {
               "id": "innovation-science-and-industry-canadian-space-agency-vote10",
-              "name": "Vote 10",
+              "name": "Grants and contributions",
+              "vote": "Vote 10",
               "amount": 0.059583
             },
             {
               "id": "innovation-science-and-industry-canadian-space-agency-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.010057
             }
           ]
@@ -258,7 +321,8 @@
           "children": [
             {
               "id": "innovation-science-and-industry-canadian-tourism-commission-vote1",
-              "name": "Vote 1",
+              "name": "Payments to the Canadian Tourism Commission",
+              "vote": "Vote 1",
               "amount": 0.100666
             }
           ]
@@ -269,7 +333,8 @@
           "children": [
             {
               "id": "innovation-science-and-industry-standards-council-of-canada-vote1",
-              "name": "Vote 1",
+              "name": "Payments to the Standards Council of Canada",
+              "vote": "Vote 1",
               "amount": 0.018579
             }
           ]
@@ -280,12 +345,14 @@
           "children": [
             {
               "id": "innovation-science-and-industry-copyright-board-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.00372
             },
             {
               "id": "innovation-science-and-industry-copyright-board-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.000351
             }
           ]

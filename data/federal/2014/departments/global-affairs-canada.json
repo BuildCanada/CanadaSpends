@@ -67,32 +67,106 @@
           "children": [
             {
               "id": "global-affairs-canada-foreign-affairs-trade-and-development-vote10",
-              "name": "Vote 10",
-              "amount": 3.105855
+              "name": "Grants and contributions",
+              "vote": "Vote 10",
+              "children": [
+                {
+                  "id": "global-affairs-canada-foreign-affairs-trade-and-development-vote10-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 3.019605
+                },
+                {
+                  "id": "global-affairs-canada-foreign-affairs-trade-and-development-vote10-crisis-pool",
+                  "name": "Crisis Pool",
+                  "amount": 0.08625
+                }
+              ]
             },
             {
               "id": "global-affairs-canada-foreign-affairs-trade-and-development-vote1",
-              "name": "Vote 1",
-              "amount": 1.528511
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "global-affairs-canada-foreign-affairs-trade-and-development-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 1.431307
+                },
+                {
+                  "id": "global-affairs-canada-foreign-affairs-trade-and-development-vote1-less-revenues-netted-against-expenditures",
+                  "name": "Less: revenues netted against expenditures",
+                  "amount": 0.04362
+                },
+                {
+                  "id": "global-affairs-canada-foreign-affairs-trade-and-development-vote1-strengthening-security-at-missions-abroad",
+                  "name": "Strengthening security at missions abroad",
+                  "amount": 0.038473
+                },
+                {
+                  "id": "global-affairs-canada-foreign-affairs-trade-and-development-vote1-mission-security",
+                  "name": "Mission security",
+                  "amount": 0.010994
+                },
+                {
+                  "id": "global-affairs-canada-foreign-affairs-trade-and-development-vote1-softwood-lumber-litigation-costs",
+                  "name": "Softwood lumber litigation costs",
+                  "amount": 0.002842
+                },
+                {
+                  "id": "global-affairs-canada-foreign-affairs-trade-and-development-vote1-trans-pacific-partnership-negotiation-costs",
+                  "name": "Trans‑Pacific Partnership negotiation costs",
+                  "amount": 0.001
+                },
+                {
+                  "id": "global-affairs-canada-foreign-affairs-trade-and-development-vote1-immigration-and-refugee-protection-act",
+                  "name": "Immigration and Refugee Protection Act",
+                  "amount": 0.000239
+                },
+                {
+                  "id": "global-affairs-canada-foreign-affairs-trade-and-development-vote1-dispute-resolution-panelists",
+                  "name": "Dispute Resolution Panelists",
+                  "amount": 3.8e-5
+                }
+              ]
             },
             {
               "id": "global-affairs-canada-foreign-affairs-trade-and-development-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.30456
             },
             {
               "id": "global-affairs-canada-foreign-affairs-trade-and-development-vote5",
-              "name": "Vote 5",
-              "amount": 0.139921
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
+              "children": [
+                {
+                  "id": "global-affairs-canada-foreign-affairs-trade-and-development-vote5-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.069979
+                },
+                {
+                  "id": "global-affairs-canada-foreign-affairs-trade-and-development-vote5-strengthening-security-at-missions-abroad",
+                  "name": "Strengthening security at missions abroad",
+                  "amount": 0.068924
+                },
+                {
+                  "id": "global-affairs-canada-foreign-affairs-trade-and-development-vote5-mission-security",
+                  "name": "Mission security",
+                  "amount": 0.001019
+                }
+              ]
             },
             {
               "id": "global-affairs-canada-foreign-affairs-trade-and-development-vote15",
-              "name": "Vote 15",
+              "name": "Payments, in respect of pension, insurance and social security programs or other arrangements for employees locally engaged outside of Canada, or in respect of the administration of such programs or arrangements, including premiums, contributions, benefit payments, fees and other expenditures made in respect of employees locally engaged outside Canada and for such other persons, as Treasury Board determines",
+              "vote": "Vote 15",
               "amount": 0.065364
             },
             {
               "id": "global-affairs-canada-foreign-affairs-trade-and-development-vote16",
-              "name": "Vote 16c",
+              "name": "Pursuant to section 24.1 of the Financial Administration Act, to forgive certain debts due to Her Majesty in Right of Canada amounting to $8,306,202 relating to loans made to the Government of the Republic of the Union of Myanmar (Burma)",
+              "vote": "Vote 16c",
               "amount": 0.008306
             }
           ]
@@ -103,17 +177,20 @@
           "children": [
             {
               "id": "global-affairs-canada-canadian-international-development-agency-vote30",
-              "name": "Vote 30",
+              "name": "Grants and contributions",
+              "vote": "Vote 30",
               "amount": 0.404044
             },
             {
               "id": "global-affairs-canada-canadian-international-development-agency-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.2502
             },
             {
               "id": "global-affairs-canada-canadian-international-development-agency-vote25",
-              "name": "Vote 25",
+              "name": "Operating expenditures",
+              "vote": "Vote 25",
               "amount": 0.038222
             }
           ]
@@ -124,7 +201,8 @@
           "children": [
             {
               "id": "global-affairs-canada-international-development-research-centre-vote45",
-              "name": "Vote 45",
+              "name": "Payments to the International Development Research Centre",
+              "vote": "Vote 45",
               "amount": 0.202416
             }
           ]
@@ -136,6 +214,7 @@
             {
               "id": "global-affairs-canada-export-development-canada-canada-account-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.122396
             }
           ]
@@ -146,12 +225,14 @@
           "children": [
             {
               "id": "global-affairs-canada-national-capital-commission-vote55",
-              "name": "Vote 55",
+              "name": "Payments to the National Capital Commission for operating expenditures",
+              "vote": "Vote 55",
               "amount": 0.07819
             },
             {
               "id": "global-affairs-canada-national-capital-commission-vote60",
-              "name": "Vote 60",
+              "name": "Payments to the National Capital Commission for capital expenditures",
+              "vote": "Vote 60",
               "amount": 0.027971
             }
           ]
@@ -162,7 +243,8 @@
           "children": [
             {
               "id": "global-affairs-canada-canadian-commercial-corporation-vote20",
-              "name": "Vote 20",
+              "name": "Payments to the Canadian Commercial Corporation",
+              "vote": "Vote 20",
               "amount": 0.015656
             }
           ]
@@ -173,12 +255,14 @@
           "children": [
             {
               "id": "global-affairs-canada-international-joint-commission-canadian-section-vote50",
-              "name": "Vote 50",
+              "name": "Program expenditures",
+              "vote": "Vote 50",
               "amount": 0.006045
             },
             {
               "id": "global-affairs-canada-international-joint-commission-canadian-section-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.000625
             }
           ]

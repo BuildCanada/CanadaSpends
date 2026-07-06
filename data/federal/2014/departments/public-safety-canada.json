@@ -67,22 +67,78 @@
           "children": [
             {
               "id": "public-safety-canada-royal-canadian-mounted-police-vote45",
-              "name": "Vote 45",
-              "amount": 5.536388
+              "name": "Operating expenditures",
+              "vote": "Vote 45",
+              "children": [
+                {
+                  "id": "public-safety-canada-royal-canadian-mounted-police-vote45-contract-policing-services",
+                  "name": "Contract policing services",
+                  "amount": 2.137957
+                },
+                {
+                  "id": "public-safety-canada-royal-canadian-mounted-police-vote45-less-revenues-netted-against-expenditures",
+                  "name": "Less: revenues netted against expenditures",
+                  "amount": 1.777468
+                },
+                {
+                  "id": "public-safety-canada-royal-canadian-mounted-police-vote45-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 1.438781
+                },
+                {
+                  "id": "public-safety-canada-royal-canadian-mounted-police-vote45-restoring-the-effectiveness-of-federal-policing",
+                  "name": "Restoring the Effectiveness of Federal Policing",
+                  "amount": 0.1535
+                },
+                {
+                  "id": "public-safety-canada-royal-canadian-mounted-police-vote45-international-police-peacekeeping-and-peace-operations",
+                  "name": "International Police Peacekeeping and Peace operations",
+                  "amount": 0.027782
+                },
+                {
+                  "id": "public-safety-canada-royal-canadian-mounted-police-vote45-2010-olympic-security-expenditures",
+                  "name": "2010 Olympic Security Expenditures",
+                  "amount": 0.000773
+                },
+                {
+                  "id": "public-safety-canada-royal-canadian-mounted-police-vote45-2010-g8-g20-summit-security-unit",
+                  "name": "2010 G8/G20 Summit Security Unit",
+                  "amount": 0.000126
+                }
+              ]
             },
             {
               "id": "public-safety-canada-royal-canadian-mounted-police-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.540676
             },
             {
               "id": "public-safety-canada-royal-canadian-mounted-police-vote50",
-              "name": "Vote 50",
-              "amount": 0.220102
+              "name": "Capital expenditures",
+              "vote": "Vote 50",
+              "children": [
+                {
+                  "id": "public-safety-canada-royal-canadian-mounted-police-vote50-contract-policing-services",
+                  "name": "Contract policing services",
+                  "amount": 0.121082
+                },
+                {
+                  "id": "public-safety-canada-royal-canadian-mounted-police-vote50-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.096081
+                },
+                {
+                  "id": "public-safety-canada-royal-canadian-mounted-police-vote50-restoring-the-effectiveness-of-federal-policing",
+                  "name": "Restoring the Effectiveness of Federal Policing",
+                  "amount": 0.002938
+                }
+              ]
             },
             {
               "id": "public-safety-canada-royal-canadian-mounted-police-vote55",
-              "name": "Vote 55",
+              "name": "Grants and contributions",
+              "vote": "Vote 55",
               "amount": 0.150151
             }
           ]
@@ -93,17 +149,20 @@
           "children": [
             {
               "id": "public-safety-canada-correctional-service-of-canada-vote25",
-              "name": "Vote 25",
+              "name": "Operating expenditures",
+              "vote": "Vote 25",
               "amount": 2.116015
             },
             {
               "id": "public-safety-canada-correctional-service-of-canada-vote30",
-              "name": "Vote 30",
+              "name": "Capital expenditures",
+              "vote": "Vote 30",
               "amount": 0.378372
             },
             {
               "id": "public-safety-canada-correctional-service-of-canada-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.255905
             }
           ]
@@ -114,17 +173,36 @@
           "children": [
             {
               "id": "public-safety-canada-canada-border-services-agency-vote10",
-              "name": "Vote 10",
-              "amount": 1.576788
+              "name": "Operating expenditures",
+              "vote": "Vote 10",
+              "children": [
+                {
+                  "id": "public-safety-canada-canada-border-services-agency-vote10-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 1.554966
+                },
+                {
+                  "id": "public-safety-canada-canada-border-services-agency-vote10-less-revenues-netted-against-expenditures",
+                  "name": "Less: revenues netted against expenditures",
+                  "amount": 0.018169
+                },
+                {
+                  "id": "public-safety-canada-canada-border-services-agency-vote10-immigration-and-refugee-protection-act",
+                  "name": "Immigration and Refugee Protection Act",
+                  "amount": 0.003653
+                }
+              ]
             },
             {
               "id": "public-safety-canada-canada-border-services-agency-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.187729
             },
             {
               "id": "public-safety-canada-canada-border-services-agency-vote15",
-              "name": "Vote 15",
+              "name": "Capital expenditures",
+              "vote": "Vote 15",
               "amount": 0.121932
             }
           ]
@@ -135,17 +213,67 @@
           "children": [
             {
               "id": "public-safety-canada-public-safety-and-emergency-preparedness-vote5",
-              "name": "Vote 5",
-              "amount": 1.192322
+              "name": "Grants and contributions",
+              "vote": "Vote 5",
+              "children": [
+                {
+                  "id": "public-safety-canada-public-safety-and-emergency-preparedness-vote5-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 1.176688
+                },
+                {
+                  "id": "public-safety-canada-public-safety-and-emergency-preparedness-vote5-financial-support-to-provinces-and-territories-for-2011-flood-mitigation-investments",
+                  "name": "Financial support to Provinces and Territories for 2011 flood mitigation investments",
+                  "amount": 0.015635
+                }
+              ]
             },
             {
               "id": "public-safety-canada-public-safety-and-emergency-preparedness-vote1",
-              "name": "Vote 1",
-              "amount": 0.138344
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "public-safety-canada-public-safety-and-emergency-preparedness-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.128089
+                },
+                {
+                  "id": "public-safety-canada-public-safety-and-emergency-preparedness-vote1-advertising-initiatives",
+                  "name": "Advertising initiatives",
+                  "amount": 0.004489
+                },
+                {
+                  "id": "public-safety-canada-public-safety-and-emergency-preparedness-vote1-less-revenues-netted-against-expenditures",
+                  "name": "Less: revenues netted against expenditures",
+                  "amount": 0.002549
+                },
+                {
+                  "id": "public-safety-canada-public-safety-and-emergency-preparedness-vote1-national-security-and-emergency-management-initiatives-under-the-action-plan-for-perimeter-security-and-economic-competitiveness",
+                  "name": "National Security and Emergency Management Initiatives under the Action Plan for Perimeter Security and Economic Competitiveness",
+                  "amount": 0.002204
+                },
+                {
+                  "id": "public-safety-canada-public-safety-and-emergency-preparedness-vote1-national-security-review",
+                  "name": "National Security Review",
+                  "amount": 0.000535
+                },
+                {
+                  "id": "public-safety-canada-public-safety-and-emergency-preparedness-vote1-immigration-and-refugee-protection-act",
+                  "name": "Immigration and Refugee Protection Act",
+                  "amount": 0.000364
+                },
+                {
+                  "id": "public-safety-canada-public-safety-and-emergency-preparedness-vote1-financial-support-to-provinces-and-territories-for-2011-flood-mitigation-investments",
+                  "name": "Financial support to Provinces and Territories for 2011 flood mitigation investments",
+                  "amount": 0.000113
+                }
+              ]
             },
             {
               "id": "public-safety-canada-public-safety-and-emergency-preparedness-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.015683
             }
           ]
@@ -156,12 +284,30 @@
           "children": [
             {
               "id": "public-safety-canada-canadian-security-intelligence-service-vote20",
-              "name": "Vote 20",
-              "amount": 0.468802
+              "name": "Operating expenditures",
+              "vote": "Vote 20",
+              "children": [
+                {
+                  "id": "public-safety-canada-canadian-security-intelligence-service-vote20-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.464152
+                },
+                {
+                  "id": "public-safety-canada-canadian-security-intelligence-service-vote20-immigration-and-refugee-protection-act",
+                  "name": "Immigration and Refugee Protection Act",
+                  "amount": 0.00441
+                },
+                {
+                  "id": "public-safety-canada-canadian-security-intelligence-service-vote20-national-security-review",
+                  "name": "National Security Review",
+                  "amount": 0.00024
+                }
+              ]
             },
             {
               "id": "public-safety-canada-canadian-security-intelligence-service-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.047504
             }
           ]
@@ -172,12 +318,14 @@
           "children": [
             {
               "id": "public-safety-canada-parole-board-of-canada-vote35",
-              "name": "Vote 35",
+              "name": "Program expenditures",
+              "vote": "Vote 35",
               "amount": 0.052766
             },
             {
               "id": "public-safety-canada-parole-board-of-canada-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.006689
             }
           ]
@@ -188,12 +336,14 @@
           "children": [
             {
               "id": "public-safety-canada-royal-canadian-mounted-police-public-complaints-commission-vote65",
-              "name": "Vote 65",
+              "name": "Program expenditures",
+              "vote": "Vote 65",
               "amount": 0.007959
             },
             {
               "id": "public-safety-canada-royal-canadian-mounted-police-public-complaints-commission-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.000831
             }
           ]
@@ -204,12 +354,14 @@
           "children": [
             {
               "id": "public-safety-canada-office-of-the-correctional-investigator-of-canada-vote40",
-              "name": "Vote 40",
+              "name": "Program expenditures",
+              "vote": "Vote 40",
               "amount": 0.004192
             },
             {
               "id": "public-safety-canada-office-of-the-correctional-investigator-of-canada-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.000534
             }
           ]
@@ -220,12 +372,14 @@
           "children": [
             {
               "id": "public-safety-canada-royal-canadian-mounted-police-external-review-committee-vote60",
-              "name": "Vote 60",
+              "name": "Program expenditures",
+              "vote": "Vote 60",
               "amount": 0.001445
             },
             {
               "id": "public-safety-canada-royal-canadian-mounted-police-external-review-committee-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.000161
             }
           ]

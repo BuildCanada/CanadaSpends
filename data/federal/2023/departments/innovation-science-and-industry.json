@@ -67,22 +67,48 @@
           "children": [
             {
               "id": "innovation-science-and-industry-department-of-industry-vote10",
-              "name": "Vote 10",
-              "amount": 2.846548
+              "name": "Grants and contributions",
+              "vote": "Vote 10",
+              "children": [
+                {
+                  "id": "innovation-science-and-industry-department-of-industry-vote10-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 2.845348
+                },
+                {
+                  "id": "innovation-science-and-industry-department-of-industry-vote10-innovative-solutions-canada",
+                  "name": "Innovative Solutions Canada",
+                  "amount": 0.0012
+                }
+              ]
             },
             {
               "id": "innovation-science-and-industry-department-of-industry-vote1",
-              "name": "Vote 1",
-              "amount": 0.734673
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "innovation-science-and-industry-department-of-industry-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.734552
+                },
+                {
+                  "id": "innovation-science-and-industry-department-of-industry-vote1-innovative-solutions-canada",
+                  "name": "Innovative Solutions Canada",
+                  "amount": 0.000121
+                }
+              ]
             },
             {
               "id": "innovation-science-and-industry-department-of-industry-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.159108
             },
             {
               "id": "innovation-science-and-industry-department-of-industry-vote5",
-              "name": "Vote 5",
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
               "amount": 0.013587
             }
           ]
@@ -93,22 +119,48 @@
           "children": [
             {
               "id": "innovation-science-and-industry-national-research-council-of-canada-vote10",
-              "name": "Vote 10",
-              "amount": 0.612326
+              "name": "Grants and contributions",
+              "vote": "Vote 10",
+              "children": [
+                {
+                  "id": "innovation-science-and-industry-national-research-council-of-canada-vote10-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 0.611517
+                },
+                {
+                  "id": "innovation-science-and-industry-national-research-council-of-canada-vote10-innovative-solutions-canada",
+                  "name": "Innovative Solutions Canada",
+                  "amount": 0.000809
+                }
+              ]
             },
             {
               "id": "innovation-science-and-industry-national-research-council-of-canada-vote1",
-              "name": "Vote 1",
-              "amount": 0.560673
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "innovation-science-and-industry-national-research-council-of-canada-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.556525
+                },
+                {
+                  "id": "innovation-science-and-industry-national-research-council-of-canada-vote1-innovative-solutions-canada",
+                  "name": "Innovative Solutions Canada",
+                  "amount": 0.004148
+                }
+              ]
             },
             {
               "id": "innovation-science-and-industry-national-research-council-of-canada-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.204872
             },
             {
               "id": "innovation-science-and-industry-national-research-council-of-canada-vote5",
-              "name": "Vote 5",
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
               "amount": 0.092886
             }
           ]
@@ -119,17 +171,20 @@
           "children": [
             {
               "id": "innovation-science-and-industry-natural-sciences-and-engineering-research-council-vote5",
-              "name": "Vote 5",
+              "name": "Grants",
+              "vote": "Vote 5",
               "amount": 1.315534
             },
             {
               "id": "innovation-science-and-industry-natural-sciences-and-engineering-research-council-vote1",
-              "name": "Vote 1",
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
               "amount": 0.058643
             },
             {
               "id": "innovation-science-and-industry-natural-sciences-and-engineering-research-council-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.007352
             }
           ]
@@ -140,17 +195,20 @@
           "children": [
             {
               "id": "innovation-science-and-industry-social-sciences-and-humanities-research-council-vote5",
-              "name": "Vote 5",
+              "name": "Grants",
+              "vote": "Vote 5",
               "amount": 1.014866
             },
             {
               "id": "innovation-science-and-industry-social-sciences-and-humanities-research-council-vote1",
-              "name": "Vote 1",
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
               "amount": 0.042935
             },
             {
               "id": "innovation-science-and-industry-social-sciences-and-humanities-research-council-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.0049
             }
           ]
@@ -161,12 +219,25 @@
           "children": [
             {
               "id": "innovation-science-and-industry-statistics-canada-vote1",
-              "name": "Vote 1",
-              "amount": 0.745013
+              "name": "Program expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "innovation-science-and-industry-statistics-canada-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.744985
+                },
+                {
+                  "id": "innovation-science-and-industry-statistics-canada-vote1-statistical-survey-operations-settlement",
+                  "name": "Statistical Survey Operations Settlement",
+                  "amount": 2.8e-5
+                }
+              ]
             },
             {
               "id": "innovation-science-and-industry-statistics-canada-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.097015
             }
           ]
@@ -177,22 +248,37 @@
           "children": [
             {
               "id": "innovation-science-and-industry-canadian-space-agency-vote1",
-              "name": "Vote 1",
-              "amount": 0.225124
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "innovation-science-and-industry-canadian-space-agency-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.224766
+                },
+                {
+                  "id": "innovation-science-and-industry-canadian-space-agency-vote1-innovative-solutions-canada",
+                  "name": "Innovative Solutions Canada",
+                  "amount": 0.000358
+                }
+              ]
             },
             {
               "id": "innovation-science-and-industry-canadian-space-agency-vote5",
-              "name": "Vote 5",
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
               "amount": 0.174852
             },
             {
               "id": "innovation-science-and-industry-canadian-space-agency-vote10",
-              "name": "Vote 10",
+              "name": "Grants and contributions",
+              "vote": "Vote 10",
               "amount": 0.085065
             },
             {
               "id": "innovation-science-and-industry-canadian-space-agency-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.013195
             }
           ]
@@ -203,7 +289,8 @@
           "children": [
             {
               "id": "innovation-science-and-industry-canadian-tourism-commission-vote1",
-              "name": "Vote 1",
+              "name": "Payments to the Commission",
+              "vote": "Vote 1",
               "amount": 0.156225
             }
           ]
@@ -214,7 +301,8 @@
           "children": [
             {
               "id": "innovation-science-and-industry-standards-council-of-canada-vote1",
-              "name": "Vote 1",
+              "name": "Payments to the Council",
+              "vote": "Vote 1",
               "amount": 0.017968
             }
           ]
@@ -225,12 +313,14 @@
           "children": [
             {
               "id": "innovation-science-and-industry-copyright-board-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.003586
             },
             {
               "id": "innovation-science-and-industry-copyright-board-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.000409
             }
           ]

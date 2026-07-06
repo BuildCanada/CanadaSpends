@@ -67,32 +67,116 @@
           "children": [
             {
               "id": "global-affairs-canada-department-of-foreign-affairs-trade-and-development-vote10",
-              "name": "Vote 10",
-              "amount": 5.879804
+              "name": "Grants and contributions",
+              "vote": "Vote 10",
+              "children": [
+                {
+                  "id": "global-affairs-canada-department-of-foreign-affairs-trade-and-development-vote10-international-assistance-envelope",
+                  "name": "International assistance envelope",
+                  "amount": 5.213804
+                },
+                {
+                  "id": "global-affairs-canada-department-of-foreign-affairs-trade-and-development-vote10-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 0.486001
+                },
+                {
+                  "id": "global-affairs-canada-department-of-foreign-affairs-trade-and-development-vote10-crisis-pool-quick-release-mechanism",
+                  "name": "Crisis pool quick release mechanism",
+                  "amount": 0.18
+                }
+              ]
             },
             {
               "id": "global-affairs-canada-department-of-foreign-affairs-trade-and-development-vote1",
-              "name": "Vote 1",
-              "amount": 2.38678
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "global-affairs-canada-department-of-foreign-affairs-trade-and-development-vote1-operating-budget",
+                  "name": "Operating Budget",
+                  "amount": 1.794316
+                },
+                {
+                  "id": "global-affairs-canada-department-of-foreign-affairs-trade-and-development-vote1-international-assistance-envelope",
+                  "name": "International Assistance Envelope",
+                  "amount": 0.371188
+                },
+                {
+                  "id": "global-affairs-canada-department-of-foreign-affairs-trade-and-development-vote1-duty-of-care-at-missions-abroad",
+                  "name": "Duty of Care at Missions Abroad",
+                  "amount": 0.178905
+                },
+                {
+                  "id": "global-affairs-canada-department-of-foreign-affairs-trade-and-development-vote1-2025-g7-presidency",
+                  "name": "2025 G7 Presidency",
+                  "amount": 0.024443
+                },
+                {
+                  "id": "global-affairs-canada-department-of-foreign-affairs-trade-and-development-vote1-softwood-lumber",
+                  "name": "Softwood Lumber",
+                  "amount": 0.016213
+                },
+                {
+                  "id": "global-affairs-canada-department-of-foreign-affairs-trade-and-development-vote1-innovative-solutions-canada",
+                  "name": "Innovative Solutions Canada",
+                  "amount": 0.000966
+                },
+                {
+                  "id": "global-affairs-canada-department-of-foreign-affairs-trade-and-development-vote1-dispute-resolution-panelists",
+                  "name": "Dispute Resolution Panelists",
+                  "amount": 0.000608
+                },
+                {
+                  "id": "global-affairs-canada-department-of-foreign-affairs-trade-and-development-vote1-immigration-and-refugee-protection-act",
+                  "name": "Immigration and Refugee Protection Act",
+                  "amount": 0.000141
+                }
+              ]
             },
             {
               "id": "global-affairs-canada-department-of-foreign-affairs-trade-and-development-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.536576
             },
             {
               "id": "global-affairs-canada-department-of-foreign-affairs-trade-and-development-vote5",
-              "name": "Vote 5",
-              "amount": 0.187985
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
+              "children": [
+                {
+                  "id": "global-affairs-canada-department-of-foreign-affairs-trade-and-development-vote5-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.104314
+                },
+                {
+                  "id": "global-affairs-canada-department-of-foreign-affairs-trade-and-development-vote5-duty-of-care-at-missions-abroad",
+                  "name": "Duty of Care at Missions Abroad",
+                  "amount": 0.082416
+                },
+                {
+                  "id": "global-affairs-canada-department-of-foreign-affairs-trade-and-development-vote5-2025-g7-presidency",
+                  "name": "2025 G7 Presidency",
+                  "amount": 0.000855
+                },
+                {
+                  "id": "global-affairs-canada-department-of-foreign-affairs-trade-and-development-vote5-international-assistance-envelope",
+                  "name": "International Assistance Envelope",
+                  "amount": 0.0004
+                }
+              ]
             },
             {
               "id": "global-affairs-canada-department-of-foreign-affairs-trade-and-development-vote15",
-              "name": "Vote 15",
+              "name": "Payments, in respect of pension, insurance and social security programs or other arrangements for employees locally engaged outside of Canada, or in respect of the administration of such programs or arrangements",
+              "vote": "Vote 15",
               "amount": 0.112669
             },
             {
               "id": "global-affairs-canada-department-of-foreign-affairs-trade-and-development-vote20",
-              "name": "Vote 20",
+              "name": "Pursuant to subsection 12(2) of the International Development (Financial Institutions) Assistance Act, payments to international financial institutions—Direct payments",
+              "vote": "Vote 20",
               "amount": 0.0
             }
           ]
@@ -104,6 +188,7 @@
             {
               "id": "global-affairs-canada-export-development-canada-canada-account-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.583164
             }
           ]
@@ -114,7 +199,8 @@
           "children": [
             {
               "id": "global-affairs-canada-international-development-research-centre-vote1",
-              "name": "Vote 1",
+              "name": "Payments to the Centre",
+              "vote": "Vote 1",
               "amount": 0.16027
             }
           ]
@@ -125,7 +211,8 @@
           "children": [
             {
               "id": "global-affairs-canada-invest-in-canada-hub-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.032744
             }
           ]
@@ -136,7 +223,8 @@
           "children": [
             {
               "id": "global-affairs-canada-canadian-commercial-corporation-vote1",
-              "name": "Vote 1",
+              "name": "Payments to the Corporation",
+              "vote": "Vote 1",
               "amount": 0.013792
             }
           ]
@@ -147,12 +235,14 @@
           "children": [
             {
               "id": "global-affairs-canada-international-joint-commission-canadian-section-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.008218
             },
             {
               "id": "global-affairs-canada-international-joint-commission-canadian-section-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.000657
             }
           ]
@@ -163,12 +253,14 @@
           "children": [
             {
               "id": "global-affairs-canada-canadian-intergovernmental-conference-secretariat-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.007546
             },
             {
               "id": "global-affairs-canada-canadian-intergovernmental-conference-secretariat-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.000579
             }
           ]

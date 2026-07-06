@@ -67,62 +67,85 @@
           "children": [
             {
               "id": "transport-canada-department-of-transport-vote1",
-              "name": "Vote 1",
-              "amount": 0.835419
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "transport-canada-department-of-transport-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.833274
+                },
+                {
+                  "id": "transport-canada-department-of-transport-vote1-tanker-safety-inspection-program",
+                  "name": "Tanker Safety Inspection Program",
+                  "amount": 0.002145
+                }
+              ]
             },
             {
               "id": "transport-canada-department-of-transport-vote10",
-              "name": "Vote 10",
+              "name": "Grants and contributions—Efficient Transportation System",
+              "vote": "Vote 10",
               "amount": 0.371542
             },
             {
               "id": "transport-canada-department-of-transport-vote15",
-              "name": "Vote 15",
+              "name": "Grants and contributions—Green and Innovative Transportation System",
+              "vote": "Vote 15",
               "amount": 0.213982
             },
             {
               "id": "transport-canada-department-of-transport-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.209024
             },
             {
               "id": "transport-canada-department-of-transport-vote5",
-              "name": "Vote 5",
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
               "amount": 0.132602
             },
             {
               "id": "transport-canada-department-of-transport-vote20",
-              "name": "Vote 20",
+              "name": "Grants and contributions—Safe and Secure Transportation System",
+              "vote": "Vote 20",
               "amount": 0.024271
             },
             {
               "id": "transport-canada-department-of-transport-vote25",
-              "name": "Vote 25",
+              "name": "Bringing Innovation to Regulations",
+              "vote": "Vote 25",
               "amount": 0.0
             },
             {
               "id": "transport-canada-department-of-transport-vote30",
-              "name": "Vote 30",
+              "name": "Canada's Marine Safety Response",
+              "vote": "Vote 30",
               "amount": 0.0
             },
             {
               "id": "transport-canada-department-of-transport-vote35",
-              "name": "Vote 35",
+              "name": "Delivering Better Service for Air Travellers",
+              "vote": "Vote 35",
               "amount": 0.0
             },
             {
               "id": "transport-canada-department-of-transport-vote40",
-              "name": "Vote 40",
+              "name": "Encouraging Canadians to Use Zero Emission Vehicles",
+              "vote": "Vote 40",
               "amount": 0.0
             },
             {
               "id": "transport-canada-department-of-transport-vote45",
-              "name": "Vote 45",
+              "name": "Protecting Canada's Critical Infrastructure from Cyber Threats",
+              "vote": "Vote 45",
               "amount": 0.0
             },
             {
               "id": "transport-canada-department-of-transport-vote50",
-              "name": "Vote 50",
+              "name": "Safe and Secure Road and Rail Transportation",
+              "vote": "Vote 50",
               "amount": 0.0
             }
           ]
@@ -133,8 +156,20 @@
           "children": [
             {
               "id": "transport-canada-canadian-air-transport-security-authority-vote1",
-              "name": "Vote 1",
-              "amount": 0.847862
+              "name": "Payments to the Canadian Air Transport Security Authority for operating and capital expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "transport-canada-canadian-air-transport-security-authority-vote1-payments-to-crown-corporation",
+                  "name": "Payments to Crown Corporation",
+                  "amount": 0.743499
+                },
+                {
+                  "id": "transport-canada-canadian-air-transport-security-authority-vote1-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.104363
+                }
+              ]
             }
           ]
         },
@@ -144,8 +179,20 @@
           "children": [
             {
               "id": "transport-canada-via-rail-canada-inc-vote1",
-              "name": "Vote 1",
-              "amount": 0.506348
+              "name": "Payments to VIA Rail Canada Inc.",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "transport-canada-via-rail-canada-inc-vote1-payments-to-crown-corporation",
+                  "name": "Payments to Crown Corporation",
+                  "amount": 0.301404
+                },
+                {
+                  "id": "transport-canada-via-rail-canada-inc-vote1-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.204944
+                }
+              ]
             }
           ]
         },
@@ -155,8 +202,20 @@
           "children": [
             {
               "id": "transport-canada-marine-atlantic-inc-vote1",
-              "name": "Vote 1",
-              "amount": 0.130904
+              "name": "Payments to Marine Atlantic Inc.",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "transport-canada-marine-atlantic-inc-vote1-payments-to-crown-corporation",
+                  "name": "Payments to Crown Corporation",
+                  "amount": 0.082069
+                },
+                {
+                  "id": "transport-canada-marine-atlantic-inc-vote1-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.048835
+                }
+              ]
             }
           ]
         },
@@ -166,12 +225,14 @@
           "children": [
             {
               "id": "transport-canada-canadian-transportation-agency-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.031493
             },
             {
               "id": "transport-canada-canadian-transportation-agency-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.003785
             }
           ]

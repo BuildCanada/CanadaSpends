@@ -67,23 +67,115 @@
           "children": [
             {
               "id": "health-canada-public-health-agency-of-canada-vote1",
-              "name": "Vote 1",
-              "amount": 8.093853
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "health-canada-public-health-agency-of-canada-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 6.922772
+                },
+                {
+                  "id": "health-canada-public-health-agency-of-canada-vote1-border-quarantine-measures",
+                  "name": "Border quarantine measures",
+                  "amount": 0.962517
+                },
+                {
+                  "id": "health-canada-public-health-agency-of-canada-vote1-warehousing-and-national-emergency-strategic-stockpile-maintenance",
+                  "name": "Warehousing and National Emergency Strategic Stockpile Maintenance",
+                  "amount": 0.118735
+                },
+                {
+                  "id": "health-canada-public-health-agency-of-canada-vote1-medicom",
+                  "name": "Medicom",
+                  "amount": 0.03295
+                },
+                {
+                  "id": "health-canada-public-health-agency-of-canada-vote1-advertising-initiatives",
+                  "name": "Advertising initiatives",
+                  "amount": 0.0255
+                },
+                {
+                  "id": "health-canada-public-health-agency-of-canada-vote1-3m-n95-mask-procurement",
+                  "name": "3M–N95 Mask Procurement",
+                  "amount": 0.023041
+                },
+                {
+                  "id": "health-canada-public-health-agency-of-canada-vote1-national-microbiology-laboratory-medical-counter-measures-laboratory",
+                  "name": "National Microbiology Laboratory - Medical Counter-Measures Laboratory",
+                  "amount": 0.004274
+                },
+                {
+                  "id": "health-canada-public-health-agency-of-canada-vote1-covid-19-immunity-task-force",
+                  "name": "COVID-19 Immunity Task Force",
+                  "amount": 0.002948
+                },
+                {
+                  "id": "health-canada-public-health-agency-of-canada-vote1-ebola-virus-disease-outbreak",
+                  "name": "Ebola virus disease outbreak",
+                  "amount": 0.000614
+                },
+                {
+                  "id": "health-canada-public-health-agency-of-canada-vote1-innovation-solutions-canada",
+                  "name": "Innovation Solutions Canada",
+                  "amount": 0.000502
+                }
+              ]
             },
             {
               "id": "health-canada-public-health-agency-of-canada-vote10",
-              "name": "Vote 10",
-              "amount": 0.529172
+              "name": "Grants and contributions",
+              "vote": "Vote 10",
+              "children": [
+                {
+                  "id": "health-canada-public-health-agency-of-canada-vote10-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 0.383709
+                },
+                {
+                  "id": "health-canada-public-health-agency-of-canada-vote10-covid-19-immunity-task-force",
+                  "name": "COVID-19 Immunity Task Force",
+                  "amount": 0.084746
+                },
+                {
+                  "id": "health-canada-public-health-agency-of-canada-vote10-border-quarantine-measures",
+                  "name": "Border quarantine measures",
+                  "amount": 0.060718
+                }
+              ]
             },
             {
               "id": "health-canada-public-health-agency-of-canada-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.065769
             },
             {
               "id": "health-canada-public-health-agency-of-canada-vote5",
-              "name": "Vote 5",
-              "amount": 0.017378
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
+              "children": [
+                {
+                  "id": "health-canada-public-health-agency-of-canada-vote5-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.013988
+                },
+                {
+                  "id": "health-canada-public-health-agency-of-canada-vote5-warehousing-and-national-emergency-strategic-stockpile-maintenance",
+                  "name": "Warehousing and National Emergency Strategic Stockpile Maintenance",
+                  "amount": 0.002975
+                },
+                {
+                  "id": "health-canada-public-health-agency-of-canada-vote5-covid-19-immunity-task-force",
+                  "name": "COVID-19 Immunity Task Force",
+                  "amount": 0.000307
+                },
+                {
+                  "id": "health-canada-public-health-agency-of-canada-vote5-national-microbiology-laboratory-medical-counter-measures-laboratory",
+                  "name": "National Microbiology Laboratory - Medical Counter-Measures Laboratory",
+                  "amount": 0.000108
+                }
+              ]
             }
           ]
         },
@@ -93,22 +185,42 @@
           "children": [
             {
               "id": "health-canada-department-of-health-vote10",
-              "name": "Vote 10",
-              "amount": 3.25085
+              "name": "Grants and contributions",
+              "vote": "Vote 10",
+              "children": [
+                {
+                  "id": "health-canada-department-of-health-vote10-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 3.196432
+                },
+                {
+                  "id": "health-canada-department-of-health-vote10-canadian-strategy-for-cancer-control",
+                  "name": "Canadian strategy for cancer control",
+                  "amount": 0.052453
+                },
+                {
+                  "id": "health-canada-department-of-health-vote10-innovative-solutions-canada",
+                  "name": "Innovative Solutions Canada",
+                  "amount": 0.001965
+                }
+              ]
             },
             {
               "id": "health-canada-department-of-health-vote1",
-              "name": "Vote 1",
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
               "amount": 1.958709
             },
             {
               "id": "health-canada-department-of-health-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 1.029229
             },
             {
               "id": "health-canada-department-of-health-vote5",
-              "name": "Vote 5",
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
               "amount": 0.016665
             }
           ]
@@ -119,17 +231,31 @@
           "children": [
             {
               "id": "health-canada-canadian-institutes-of-health-research-vote5",
-              "name": "Vote 5",
-              "amount": 1.315234
+              "name": "Grants",
+              "vote": "Vote 5",
+              "children": [
+                {
+                  "id": "health-canada-canadian-institutes-of-health-research-vote5-grants",
+                  "name": "Grants",
+                  "amount": 1.308242
+                },
+                {
+                  "id": "health-canada-canadian-institutes-of-health-research-vote5-covid-19-immunity-task-force",
+                  "name": "COVID-19 Immunity Task Force",
+                  "amount": 0.006993
+                }
+              ]
             },
             {
               "id": "health-canada-canadian-institutes-of-health-research-vote1",
-              "name": "Vote 1",
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
               "amount": 0.06144
             },
             {
               "id": "health-canada-canadian-institutes-of-health-research-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.007625
             }
           ]
@@ -140,17 +266,36 @@
           "children": [
             {
               "id": "health-canada-canadian-food-inspection-agency-vote1",
-              "name": "Vote 1",
-              "amount": 0.672494
+              "name": "Operating expenditures, grants and contributions",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "health-canada-canadian-food-inspection-agency-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.671057
+                },
+                {
+                  "id": "health-canada-canadian-food-inspection-agency-vote1-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 0.000821
+                },
+                {
+                  "id": "health-canada-canadian-food-inspection-agency-vote1-innovative-solutions-canada",
+                  "name": "Innovative Solutions Canada",
+                  "amount": 0.000616
+                }
+              ]
             },
             {
               "id": "health-canada-canadian-food-inspection-agency-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.12808
             },
             {
               "id": "health-canada-canadian-food-inspection-agency-vote5",
-              "name": "Vote 5",
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
               "amount": 0.023875
             }
           ]
@@ -161,12 +306,25 @@
           "children": [
             {
               "id": "health-canada-patented-medicine-prices-review-board-vote1",
-              "name": "Vote 1",
-              "amount": 0.01118
+              "name": "Program expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "health-canada-patented-medicine-prices-review-board-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.010534
+                },
+                {
+                  "id": "health-canada-patented-medicine-prices-review-board-vote1-public-interest-hearings",
+                  "name": "Public interest hearings",
+                  "amount": 0.000646
+                }
+              ]
             },
             {
               "id": "health-canada-patented-medicine-prices-review-board-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.001159
             }
           ]

@@ -67,22 +67,48 @@
           "children": [
             {
               "id": "transport-canada-department-of-transport-vote10",
-              "name": "Vote 10",
-              "amount": 1.572424
+              "name": "Grants and contributions",
+              "vote": "Vote 10",
+              "children": [
+                {
+                  "id": "transport-canada-department-of-transport-vote10-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 1.571124
+                },
+                {
+                  "id": "transport-canada-department-of-transport-vote10-innovative-solutions-canada",
+                  "name": "Innovative Solutions Canada",
+                  "amount": 0.0013
+                }
+              ]
             },
             {
               "id": "transport-canada-department-of-transport-vote1",
-              "name": "Vote 1",
-              "amount": 1.123994
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "transport-canada-department-of-transport-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 1.06737
+                },
+                {
+                  "id": "transport-canada-department-of-transport-vote1-high-frequency-rail",
+                  "name": "High Frequency Rail",
+                  "amount": 0.056624
+                }
+              ]
             },
             {
               "id": "transport-canada-department-of-transport-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.25716
             },
             {
               "id": "transport-canada-department-of-transport-vote5",
-              "name": "Vote 5",
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
               "amount": 0.1639
             }
           ]
@@ -93,8 +119,20 @@
           "children": [
             {
               "id": "transport-canada-canadian-air-transport-security-authority-vote1",
-              "name": "Vote 1",
-              "amount": 0.971163
+              "name": "Payments to the Authority for operating and capital expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "transport-canada-canadian-air-transport-security-authority-vote1-payments-to-crown-corporation",
+                  "name": "Payments to Crown Corporation",
+                  "amount": 0.936307
+                },
+                {
+                  "id": "transport-canada-canadian-air-transport-security-authority-vote1-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.034856
+                }
+              ]
             }
           ]
         },
@@ -104,8 +142,20 @@
           "children": [
             {
               "id": "transport-canada-via-rail-canada-inc-vote1",
-              "name": "Vote 1",
-              "amount": 0.80395
+              "name": "Payments to the Corporation",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "transport-canada-via-rail-canada-inc-vote1-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.415664
+                },
+                {
+                  "id": "transport-canada-via-rail-canada-inc-vote1-payments-to-crown-corporation",
+                  "name": "Payments to Crown Corporation",
+                  "amount": 0.388286
+                }
+              ]
             }
           ]
         },
@@ -115,8 +165,20 @@
           "children": [
             {
               "id": "transport-canada-marine-atlantic-inc-vote1",
-              "name": "Vote 1",
-              "amount": 0.191686
+              "name": "Payments to the Corporation",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "transport-canada-marine-atlantic-inc-vote1-payments-to-crown-corporation",
+                  "name": "Payments to Crown Corporation",
+                  "amount": 0.127711
+                },
+                {
+                  "id": "transport-canada-marine-atlantic-inc-vote1-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.063975
+                }
+              ]
             }
           ]
         },
@@ -126,12 +188,14 @@
           "children": [
             {
               "id": "transport-canada-canadian-transportation-agency-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.049212
             },
             {
               "id": "transport-canada-canadian-transportation-agency-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.006064
             }
           ]
@@ -142,7 +206,8 @@
           "children": [
             {
               "id": "transport-canada-via-hfr-via-tgf-inc-vote1",
-              "name": "Vote 1",
+              "name": "Payments to the corporation for operating and capital expenditures",
+              "vote": "Vote 1",
               "amount": 0.049503
             }
           ]
@@ -153,8 +218,20 @@
           "children": [
             {
               "id": "transport-canada-the-federal-bridge-corporation-limited-vote1",
-              "name": "Vote 1",
-              "amount": 0.007045
+              "name": "Payments to the Corporation",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "transport-canada-the-federal-bridge-corporation-limited-vote1-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.005954
+                },
+                {
+                  "id": "transport-canada-the-federal-bridge-corporation-limited-vote1-payments-to-crown-corporation",
+                  "name": "Payments to Crown Corporation",
+                  "amount": 0.001091
+                }
+              ]
             }
           ]
         }

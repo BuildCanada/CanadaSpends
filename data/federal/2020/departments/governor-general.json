@@ -67,22 +67,73 @@
           "children": [
             {
               "id": "governor-general-shared-services-canada-vote1",
-              "name": "Vote 1",
-              "amount": 2.202306
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "governor-general-shared-services-canada-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 2.056423
+                },
+                {
+                  "id": "governor-general-shared-services-canada-vote1-service-integrity-staffing-and-professional-services",
+                  "name": "Service integrity—Staffing and professional services",
+                  "amount": 0.078625
+                },
+                {
+                  "id": "governor-general-shared-services-canada-vote1-funding-for-the-refresh-of-infrastructure-technology",
+                  "name": "Funding for the refresh of infrastructure technology",
+                  "amount": 0.052492
+                },
+                {
+                  "id": "governor-general-shared-services-canada-vote1-secure-canada-s-government-information-technology-infrastructure-and-information",
+                  "name": "Secure Canada's government information technology infrastructure and information",
+                  "amount": 0.014022
+                },
+                {
+                  "id": "governor-general-shared-services-canada-vote1-2021-census-of-population",
+                  "name": "2021 Census of Population",
+                  "amount": 0.000744
+                }
+              ]
             },
             {
               "id": "governor-general-shared-services-canada-vote5",
-              "name": "Vote 5",
-              "amount": 0.40702
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
+              "children": [
+                {
+                  "id": "governor-general-shared-services-canada-vote5-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.304136
+                },
+                {
+                  "id": "governor-general-shared-services-canada-vote5-mission-critical-infrastructure-technology",
+                  "name": "Mission Critical Infrastructure Technology",
+                  "amount": 0.088062
+                },
+                {
+                  "id": "governor-general-shared-services-canada-vote5-secure-canada-s-government-information-technology-infrastructure-and-information",
+                  "name": "Secure Canada's government information technology infrastructure and information",
+                  "amount": 0.014647
+                },
+                {
+                  "id": "governor-general-shared-services-canada-vote5-funding-for-the-refresh-of-infrastructure-technology",
+                  "name": "Funding for the Refresh of Infrastructure Technology",
+                  "amount": 0.000174
+                }
+              ]
             },
             {
               "id": "governor-general-shared-services-canada-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.09577
             },
             {
               "id": "governor-general-shared-services-canada-vote10",
-              "name": "Vote 10",
+              "name": "Making Federal Government Workplaces More Accessible",
+              "vote": "Vote 10",
               "amount": 0.0
             }
           ]
@@ -93,12 +144,14 @@
           "children": [
             {
               "id": "governor-general-office-of-the-governor-general-s-secretary-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.020135
             },
             {
               "id": "governor-general-office-of-the-governor-general-s-secretary-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.003046
             }
           ]

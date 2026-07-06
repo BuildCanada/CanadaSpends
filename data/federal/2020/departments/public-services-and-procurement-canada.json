@@ -67,42 +67,122 @@
           "children": [
             {
               "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote1",
-              "name": "Vote 1",
-              "amount": 3.949706
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote1-real-property-services",
+                  "name": "Real property services",
+                  "amount": 2.263907
+                },
+                {
+                  "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 1.082008
+                },
+                {
+                  "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote1-post-implementation-of-pay-system",
+                  "name": "Post implementation of pay system",
+                  "amount": 0.289459
+                },
+                {
+                  "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote1-pre-planning-for-capital-fit-up-and-non-capital-specific-projects",
+                  "name": "Pre-planning for capital, fit-up and non-capital specific projects",
+                  "amount": 0.123125
+                },
+                {
+                  "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote1-receiver-general-and-central-compensation-administration-function",
+                  "name": "Receiver General and central compensation administration function",
+                  "amount": 0.086348
+                },
+                {
+                  "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote1-e-procurement-solution",
+                  "name": "e-Procurement Solution",
+                  "amount": 0.036987
+                },
+                {
+                  "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote1-linguistic-services",
+                  "name": "Linguistic services",
+                  "amount": 0.035919
+                },
+                {
+                  "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote1-cape-breton-operation",
+                  "name": "Cape Breton operation",
+                  "amount": 0.027267
+                },
+                {
+                  "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote1-cost-and-profit-assurance-program",
+                  "name": "Cost and profit assurance program",
+                  "amount": 0.002628
+                },
+                {
+                  "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote1-advertising-initiatives",
+                  "name": "Advertising initiatives",
+                  "amount": 0.002057
+                }
+              ]
             },
             {
               "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote5",
-              "name": "Vote 5",
-              "amount": 1.086104
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
+              "children": [
+                {
+                  "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote5-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.790989
+                },
+                {
+                  "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote5-real-property-capital-leases",
+                  "name": "Real property capital leases",
+                  "amount": 0.132762
+                },
+                {
+                  "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote5-real-property-refit-fit-up",
+                  "name": "Real property refit / fit-up",
+                  "amount": 0.122214
+                },
+                {
+                  "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote5-post-implementation-of-pay-system",
+                  "name": "Post implementation of pay system",
+                  "amount": 0.040138
+                }
+              ]
             },
             {
               "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.152606
             },
             {
               "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote10",
-              "name": "Vote 10",
+              "name": "Cost and Profit Assurance Program",
+              "vote": "Vote 10",
               "amount": 0.0
             },
             {
               "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote15",
-              "name": "Vote 15",
+              "name": "Ensuring Proper Payments for Public Servants",
+              "vote": "Vote 15",
               "amount": 0.0
             },
             {
               "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote25",
-              "name": "Vote 25",
+              "name": "Industrial Security Systems Transformation Project",
+              "vote": "Vote 25",
               "amount": 0.0
             },
             {
               "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote30",
-              "name": "Vote 30",
+              "name": "Maintaining Service Levels of the Controlled Goods Program",
+              "vote": "Vote 30",
               "amount": 0.0
             },
             {
               "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote35",
-              "name": "Vote 35",
+              "name": "Predictable Capital Funding",
+              "vote": "Vote 35",
               "amount": 0.0
             }
           ]
@@ -113,12 +193,14 @@
           "children": [
             {
               "id": "public-services-and-procurement-canada-national-capital-commission-vote1",
-              "name": "Vote 1",
+              "name": "Payments to the Commission for operating expenditures",
+              "vote": "Vote 1",
               "amount": 0.025619
             },
             {
               "id": "public-services-and-procurement-canada-national-capital-commission-vote5",
-              "name": "Vote 5",
+              "name": "Payments to the Commission for capital expenditures",
+              "vote": "Vote 5",
               "amount": 0.017603
             }
           ]
@@ -129,7 +211,8 @@
           "children": [
             {
               "id": "public-services-and-procurement-canada-canada-post-corporation-vote1",
-              "name": "Vote 1",
+              "name": "Payments to the Corporation for special purposes",
+              "vote": "Vote 1",
               "amount": 0.02221
             }
           ]

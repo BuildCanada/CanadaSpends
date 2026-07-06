@@ -67,22 +67,53 @@
           "children": [
             {
               "id": "fisheries-and-oceans-fisheries-and-oceans-vote1",
-              "name": "Vote 1",
-              "amount": 1.276163
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "fisheries-and-oceans-fisheries-and-oceans-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 1.225819
+                },
+                {
+                  "id": "fisheries-and-oceans-fisheries-and-oceans-vote1-less-revenues-netted-against-expenditures",
+                  "name": "Less: revenues netted against expenditures",
+                  "amount": 0.041816
+                },
+                {
+                  "id": "fisheries-and-oceans-fisheries-and-oceans-vote1-canada-s-sustainable-aquaculture-program",
+                  "name": "Canada's sustainable aquaculture program",
+                  "amount": 0.008529
+                }
+              ]
             },
             {
               "id": "fisheries-and-oceans-fisheries-and-oceans-vote5",
-              "name": "Vote 5",
-              "amount": 0.328878
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
+              "children": [
+                {
+                  "id": "fisheries-and-oceans-fisheries-and-oceans-vote5-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.32819
+                },
+                {
+                  "id": "fisheries-and-oceans-fisheries-and-oceans-vote5-canadian-coast-guard-replacement-air-cushion-vehicles",
+                  "name": "Canadian Coast Guard replacement air cushion vehicles",
+                  "amount": 0.000688
+                }
+              ]
             },
             {
               "id": "fisheries-and-oceans-fisheries-and-oceans-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.125848
             },
             {
               "id": "fisheries-and-oceans-fisheries-and-oceans-vote10",
-              "name": "Vote 10",
+              "name": "Grants and contributions",
+              "vote": "Vote 10",
               "amount": 0.08971
             }
           ]

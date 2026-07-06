@@ -67,32 +67,54 @@
           "children": [
             {
               "id": "transport-canada-department-of-transport-vote1",
-              "name": "Vote 1",
-              "amount": 0.788821
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "transport-canada-department-of-transport-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.786346
+                },
+                {
+                  "id": "transport-canada-department-of-transport-vote1-tanker-safety-inspection-program",
+                  "name": "Tanker Safety Inspection Program",
+                  "amount": 0.002175
+                },
+                {
+                  "id": "transport-canada-department-of-transport-vote1-canada-s-2018-g7-presidency",
+                  "name": "Canada's 2018 G7 Presidency",
+                  "amount": 0.0003
+                }
+              ]
             },
             {
               "id": "transport-canada-department-of-transport-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.204021
             },
             {
               "id": "transport-canada-department-of-transport-vote10",
-              "name": "Vote 10",
+              "name": "Grants and contributions—Efficient Transportation System",
+              "vote": "Vote 10",
               "amount": 0.173226
             },
             {
               "id": "transport-canada-department-of-transport-vote5",
-              "name": "Vote 5",
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
               "amount": 0.105621
             },
             {
               "id": "transport-canada-department-of-transport-vote20",
-              "name": "Vote 20",
+              "name": "Grants and contributions—Safe and Secure Transportation System",
+              "vote": "Vote 20",
               "amount": 0.022734
             },
             {
               "id": "transport-canada-department-of-transport-vote15",
-              "name": "Vote 15",
+              "name": "Grants and contributions—Green and Innovative Transportation System",
+              "vote": "Vote 15",
               "amount": 0.010797
             }
           ]
@@ -103,8 +125,25 @@
           "children": [
             {
               "id": "transport-canada-canadian-air-transport-security-authority-vote1",
-              "name": "Vote 1",
-              "amount": 0.817771
+              "name": "Payments to the Canadian Air Transport Security Authority for operating and capital expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "transport-canada-canadian-air-transport-security-authority-vote1-payments-to-crown-corporation",
+                  "name": "Payments to Crown Corporation",
+                  "amount": 0.705501
+                },
+                {
+                  "id": "transport-canada-canadian-air-transport-security-authority-vote1-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.112221
+                },
+                {
+                  "id": "transport-canada-canadian-air-transport-security-authority-vote1-canada-s-2018-g7-presidency",
+                  "name": "Canada's 2018 G7 Presidency",
+                  "amount": 4.9e-5
+                }
+              ]
             }
           ]
         },
@@ -114,8 +153,20 @@
           "children": [
             {
               "id": "transport-canada-via-rail-canada-inc-vote1",
-              "name": "Vote 1",
-              "amount": 0.496247
+              "name": "Payments to VIA Rail Canada Inc.",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "transport-canada-via-rail-canada-inc-vote1-payments-to-crown-corporation",
+                  "name": "Payments to Crown Corporation",
+                  "amount": 0.274503
+                },
+                {
+                  "id": "transport-canada-via-rail-canada-inc-vote1-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.221744
+                }
+              ]
             }
           ]
         },
@@ -125,8 +176,20 @@
           "children": [
             {
               "id": "transport-canada-marine-atlantic-inc-vote1",
-              "name": "Vote 1",
-              "amount": 0.125945
+              "name": "Payments to Marine Atlantic Inc.",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "transport-canada-marine-atlantic-inc-vote1-payments-to-crown-corporation",
+                  "name": "Payments to Crown Corporation",
+                  "amount": 0.075945
+                },
+                {
+                  "id": "transport-canada-marine-atlantic-inc-vote1-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.05
+                }
+              ]
             }
           ]
         },
@@ -136,12 +199,14 @@
           "children": [
             {
               "id": "transport-canada-canadian-transportation-agency-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.029685
             },
             {
               "id": "transport-canada-canadian-transportation-agency-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.003459
             }
           ]
@@ -152,7 +217,8 @@
           "children": [
             {
               "id": "transport-canada-the-federal-bridge-corporation-limited-vote1",
-              "name": "Vote 1",
+              "name": "Payments to The Federal Bridge Corporation Limited",
+              "vote": "Vote 1",
               "amount": 0.003464
             }
           ]

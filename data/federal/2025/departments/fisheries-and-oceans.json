@@ -67,22 +67,47 @@
           "children": [
             {
               "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote1",
-              "name": "Vote 1",
-              "amount": 2.352479
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 2.272903
+                },
+                {
+                  "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote1-budget-for-marine-fuel",
+                  "name": "Budget for Marine fuel",
+                  "amount": 0.058579
+                },
+                {
+                  "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote1-budget-for-marine-fuel-contingency",
+                  "name": "Budget for Marine fuel—Contingency",
+                  "amount": 0.019984
+                },
+                {
+                  "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote1-innovative-solutions-canada",
+                  "name": "Innovative Solutions Canada",
+                  "amount": 0.001013
+                }
+              ]
             },
             {
               "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote5",
-              "name": "Vote 5",
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
               "amount": 1.923148
             },
             {
               "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote10",
-              "name": "Vote 10",
+              "name": "Grants and contributions",
+              "vote": "Vote 10",
               "amount": 0.761067
             },
             {
               "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.224946
             }
           ]

@@ -67,52 +67,89 @@
           "children": [
             {
               "id": "health-canada-department-of-health-vote10",
-              "name": "Vote 10",
-              "amount": 1.547551
+              "name": "Grants and contributions",
+              "vote": "Vote 10",
+              "children": [
+                {
+                  "id": "health-canada-department-of-health-vote10-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 1.496704
+                },
+                {
+                  "id": "health-canada-department-of-health-vote10-canadian-strategy-for-cancer-control",
+                  "name": "Canadian strategy for cancer control",
+                  "amount": 0.050847
+                }
+              ]
             },
             {
               "id": "health-canada-department-of-health-vote1",
-              "name": "Vote 1",
-              "amount": 1.065221
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "health-canada-department-of-health-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.987091
+                },
+                {
+                  "id": "health-canada-department-of-health-vote1-canada-s-2018-g7-presidency",
+                  "name": "Canada's 2018 G7 Presidency",
+                  "amount": 0.075
+                },
+                {
+                  "id": "health-canada-department-of-health-vote1-advertising-initiatives",
+                  "name": "Advertising initiatives",
+                  "amount": 0.00313
+                }
+              ]
             },
             {
               "id": "health-canada-department-of-health-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.186252
             },
             {
               "id": "health-canada-department-of-health-vote5",
-              "name": "Vote 5",
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
               "amount": 0.021532
             },
             {
               "id": "health-canada-department-of-health-vote15",
-              "name": "Vote 15",
-              "amount": 0.0
-            },
-            {
-              "id": "health-canada-department-of-health-vote20",
-              "name": "Vote 20",
-              "amount": 0.0
-            },
-            {
-              "id": "health-canada-department-of-health-vote25",
-              "name": "Vote 25",
-              "amount": 0.0
-            },
-            {
-              "id": "health-canada-department-of-health-vote35",
-              "name": "Vote 35",
-              "amount": 0.0
-            },
-            {
-              "id": "health-canada-department-of-health-vote45",
-              "name": "Vote 45",
+              "name": "Bringing Innovation to Regulations",
+              "vote": "Vote 15",
               "amount": 0.0
             },
             {
               "id": "health-canada-department-of-health-vote50",
-              "name": "Vote 50",
+              "name": "Creating a Pan-Canadian Database for Organ Donation and Transplantation",
+              "vote": "Vote 50",
+              "amount": 0.0
+            },
+            {
+              "id": "health-canada-department-of-health-vote20",
+              "name": "Enhancing the Federal Response to the Opioid Crisis in Canada",
+              "vote": "Vote 20",
+              "amount": 0.0
+            },
+            {
+              "id": "health-canada-department-of-health-vote25",
+              "name": "Introducing the Canadian Drug Agency",
+              "vote": "Vote 25",
+              "amount": 0.0
+            },
+            {
+              "id": "health-canada-department-of-health-vote35",
+              "name": "Protecting Against Bovine Spongiform Encephalopathy in Canada",
+              "vote": "Vote 35",
+              "amount": 0.0
+            },
+            {
+              "id": "health-canada-department-of-health-vote45",
+              "name": "Terry Fox Research Institute",
+              "vote": "Vote 45",
               "amount": 0.0
             }
           ]
@@ -123,22 +160,26 @@
           "children": [
             {
               "id": "health-canada-canadian-institutes-of-health-research-vote5",
-              "name": "Vote 5",
+              "name": "Grants",
+              "vote": "Vote 5",
               "amount": 1.134827
             },
             {
               "id": "health-canada-canadian-institutes-of-health-research-vote1",
-              "name": "Vote 1",
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
               "amount": 0.060555
             },
             {
               "id": "health-canada-canadian-institutes-of-health-research-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.006669
             },
             {
               "id": "health-canada-canadian-institutes-of-health-research-vote10",
-              "name": "Vote 10",
+              "name": "Paid Parental Leave for Student Researchers",
+              "vote": "Vote 10",
               "amount": 0.0
             }
           ]
@@ -149,32 +190,70 @@
           "children": [
             {
               "id": "health-canada-public-health-agency-of-canada-vote1",
-              "name": "Vote 1",
-              "amount": 0.598991
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "health-canada-public-health-agency-of-canada-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.349669
+                },
+                {
+                  "id": "health-canada-public-health-agency-of-canada-vote1-coronavirus",
+                  "name": "Coronavirus",
+                  "amount": 0.24596
+                },
+                {
+                  "id": "health-canada-public-health-agency-of-canada-vote1-ebola-virus-disease-outbreak",
+                  "name": "Ebola virus disease outbreak",
+                  "amount": 0.002411
+                },
+                {
+                  "id": "health-canada-public-health-agency-of-canada-vote1-advertising-initiatives",
+                  "name": "Advertising initiatives",
+                  "amount": 0.000951
+                }
+              ]
             },
             {
               "id": "health-canada-public-health-agency-of-canada-vote10",
-              "name": "Vote 10",
+              "name": "Grants and contributions",
+              "vote": "Vote 10",
               "amount": 0.245036
             },
             {
               "id": "health-canada-public-health-agency-of-canada-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.0415
             },
             {
               "id": "health-canada-public-health-agency-of-canada-vote5",
-              "name": "Vote 5",
-              "amount": 0.007734
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
+              "children": [
+                {
+                  "id": "health-canada-public-health-agency-of-canada-vote5-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.00767
+                },
+                {
+                  "id": "health-canada-public-health-agency-of-canada-vote5-ebola-virus-disease-outbreak",
+                  "name": "Ebola virus disease outbreak",
+                  "amount": 6.4e-5
+                }
+              ]
             },
             {
               "id": "health-canada-public-health-agency-of-canada-vote15",
-              "name": "Vote 15",
+              "name": "Introducing a National Dementia Strategy",
+              "vote": "Vote 15",
               "amount": 0.0
             },
             {
               "id": "health-canada-public-health-agency-of-canada-vote25",
-              "name": "Vote 25",
+              "name": "Supporting a Pan-Canadian Suicide Prevention Service",
+              "vote": "Vote 25",
               "amount": 0.0
             }
           ]
@@ -185,37 +264,44 @@
           "children": [
             {
               "id": "health-canada-canadian-food-inspection-agency-vote1",
-              "name": "Vote 1",
+              "name": "Operating expenditures, grants and contributions",
+              "vote": "Vote 1",
               "amount": 0.593507
             },
             {
               "id": "health-canada-canadian-food-inspection-agency-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.135193
             },
             {
               "id": "health-canada-canadian-food-inspection-agency-vote5",
-              "name": "Vote 5",
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
               "amount": 0.023567
             },
             {
               "id": "health-canada-canadian-food-inspection-agency-vote10",
-              "name": "Vote 10",
+              "name": "A Food Policy for Canada",
+              "vote": "Vote 10",
               "amount": 0.0
             },
             {
               "id": "health-canada-canadian-food-inspection-agency-vote15",
-              "name": "Vote 15",
+              "name": "Bringing Innovation to Regulations",
+              "vote": "Vote 15",
               "amount": 0.0
             },
             {
               "id": "health-canada-canadian-food-inspection-agency-vote20",
-              "name": "Vote 20",
+              "name": "Ensuring Continued Access to US Markets for Canadian Meat Products",
+              "vote": "Vote 20",
               "amount": 0.0
             },
             {
               "id": "health-canada-canadian-food-inspection-agency-vote25",
-              "name": "Vote 25",
+              "name": "Protecting Against Bovine Spongiform Encephalopathy in Canada",
+              "vote": "Vote 25",
               "amount": 0.0
             }
           ]
@@ -226,12 +312,25 @@
           "children": [
             {
               "id": "health-canada-patented-medicine-prices-review-board-vote1",
-              "name": "Vote 1",
-              "amount": 0.012162
+              "name": "Program expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "health-canada-patented-medicine-prices-review-board-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.011193
+                },
+                {
+                  "id": "health-canada-patented-medicine-prices-review-board-vote1-public-interest-hearings",
+                  "name": "Public interest hearings",
+                  "amount": 0.000969
+                }
+              ]
             },
             {
               "id": "health-canada-patented-medicine-prices-review-board-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.001152
             }
           ]

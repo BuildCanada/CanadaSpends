@@ -67,32 +67,80 @@
           "children": [
             {
               "id": "immigration-refugees-and-citizenship-citizenship-and-immigration-vote5",
-              "name": "Vote 5",
-              "amount": 0.956179
+              "name": "Grants and contributions",
+              "vote": "Vote 5",
+              "children": [
+                {
+                  "id": "immigration-refugees-and-citizenship-citizenship-and-immigration-vote5-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 0.953094
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-citizenship-and-immigration-vote5-global-assistance-for-irregular-migrants",
+                  "name": "Global Assistance for Irregular Migrants",
+                  "amount": 0.003086
+                }
+              ]
             },
             {
               "id": "immigration-refugees-and-citizenship-citizenship-and-immigration-vote1",
-              "name": "Vote 1",
-              "amount": 0.533936
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "immigration-refugees-and-citizenship-citizenship-and-immigration-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.489733
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-citizenship-and-immigration-vote1-interim-federal-health-program",
+                  "name": "Interim Federal Health Program",
+                  "amount": 0.029275
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-citizenship-and-immigration-vote1-less-revenues-netted-against-expenditures",
+                  "name": "Less: revenues netted against expenditures",
+                  "amount": 0.006096
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-citizenship-and-immigration-vote1-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.005414
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-citizenship-and-immigration-vote1-immigration-and-refugee-protection-act",
+                  "name": "Immigration and Refugee Protection Act",
+                  "amount": 0.002119
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-citizenship-and-immigration-vote1-advertising-initiatives",
+                  "name": "Advertising initiatives",
+                  "amount": 0.001299
+                }
+              ]
             },
             {
               "id": "immigration-refugees-and-citizenship-citizenship-and-immigration-vote9",
-              "name": "Vote 9c",
+              "name": "Citizenship and Immigration — Pursuant to subsection 25(2) of the Financial Administration Act, to write off from the Accounts of Canada 1,925 debts due to Her Majesty in right of Canada amounting to $806,220",
+              "vote": "Vote 9c",
               "amount": 0.000799
             },
             {
-              "id": "immigration-refugees-and-citizenship-citizenship-and-immigration-voteStatutory",
-              "name": "Statutory amounts",
+              "id": "immigration-refugees-and-citizenship-citizenship-and-immigration-vote8",
+              "name": "Passport Canada Revolving Fund — In accordance with section 12 of the Revolving Funds Act, (R.S.C., 1985, c. R‑8), subsection 4(3) of the same act is replaced by the following: 4(3) The aggregate of expenditures made under subsection (1) shall not at any time exceed by more than $1 the revenues received in respect of the purpose mentioned in subsection (1). This amendment is deemed to have been enacted on July 2, 2013",
+              "vote": "Vote 8c",
               "amount": 0.0
             },
             {
               "id": "immigration-refugees-and-citizenship-citizenship-and-immigration-vote7",
-              "name": "Vote 7b",
+              "name": "Passport Canada Revolving Fund — In accordance with section 12 of the Revolving Funds Act, (R.S.C., 1985, c. R‑8), subsections 4(1) and (2) of that act are replaced by the following: 4(1) The Minister of Citizenship and Immigration may make expenditures out of the Consolidated Revenue Fund for the purpose of passport and other travel document services in Canada and at posts abroad. (2) The Minister of Citizenship and Immigration may spend, for the purpose mentioned in subsection (1), any revenue received in respect of that purpose. This amendment is deemed to have been enacted on July 2, 2013",
+              "vote": "Vote 7b",
               "amount": 0.0
             },
             {
-              "id": "immigration-refugees-and-citizenship-citizenship-and-immigration-vote8",
-              "name": "Vote 8c",
+              "id": "immigration-refugees-and-citizenship-citizenship-and-immigration-voteStatutory",
+              "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.0
             }
           ]
@@ -103,12 +151,30 @@
           "children": [
             {
               "id": "immigration-refugees-and-citizenship-immigration-and-refugee-board-vote10",
-              "name": "Vote 10",
-              "amount": 0.108051
+              "name": "Program expenditures",
+              "vote": "Vote 10",
+              "children": [
+                {
+                  "id": "immigration-refugees-and-citizenship-immigration-and-refugee-board-vote10-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.102835
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-immigration-and-refugee-board-vote10-translation-costs-devinat-case",
+                  "name": "Translation costs (Devinat case)",
+                  "amount": 0.004104
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-immigration-and-refugee-board-vote10-immigration-and-refugee-protection-act",
+                  "name": "Immigration and Refugee Protection Act",
+                  "amount": 0.001112
+                }
+              ]
             },
             {
               "id": "immigration-refugees-and-citizenship-immigration-and-refugee-board-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.013869
             }
           ]

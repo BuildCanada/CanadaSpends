@@ -67,12 +67,25 @@
           "children": [
             {
               "id": "privy-council-privy-council-office-vote1",
-              "name": "Vote 1",
-              "amount": 0.235551
+              "name": "Program expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "privy-council-privy-council-office-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.216494
+                },
+                {
+                  "id": "privy-council-privy-council-office-vote1-public-inquiry-into-foreign-interference",
+                  "name": "Public Inquiry into Foreign Interference",
+                  "amount": 0.019057
+                }
+              ]
             },
             {
               "id": "privy-council-privy-council-office-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.024502
             }
           ]
@@ -83,12 +96,14 @@
           "children": [
             {
               "id": "privy-council-public-service-commission-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.0965
             },
             {
               "id": "privy-council-public-service-commission-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.012061
             }
           ]
@@ -99,12 +114,14 @@
           "children": [
             {
               "id": "privy-council-canadian-transportation-accident-investigation-and-safety-board-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.038662
             },
             {
               "id": "privy-council-canadian-transportation-accident-investigation-and-safety-board-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.004316
             }
           ]
@@ -115,12 +132,25 @@
           "children": [
             {
               "id": "privy-council-national-security-and-intelligence-review-agency-secretariat-vote1",
-              "name": "Vote 1",
-              "amount": 0.017009
+              "name": "Program expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "privy-council-national-security-and-intelligence-review-agency-secretariat-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.016695
+                },
+                {
+                  "id": "privy-council-national-security-and-intelligence-review-agency-secretariat-vote1-information-management-and-information-technology-modernization-project",
+                  "name": "Information Management and Information Technology Modernization Project",
+                  "amount": 0.000314
+                }
+              ]
             },
             {
               "id": "privy-council-national-security-and-intelligence-review-agency-secretariat-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.001831
             }
           ]
@@ -131,12 +161,14 @@
           "children": [
             {
               "id": "privy-council-office-of-the-intelligence-commissioner-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.001927
             },
             {
               "id": "privy-council-office-of-the-intelligence-commissioner-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.000133
             }
           ]

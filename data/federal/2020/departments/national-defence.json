@@ -67,47 +67,56 @@
           "children": [
             {
               "id": "national-defence-department-of-national-defence-vote1",
-              "name": "Vote 1",
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
               "amount": 16.743279
             },
             {
               "id": "national-defence-department-of-national-defence-vote5",
-              "name": "Vote 5",
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
               "amount": 4.164429
             },
             {
               "id": "national-defence-department-of-national-defence-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 1.649914
             },
             {
               "id": "national-defence-department-of-national-defence-vote15",
-              "name": "Vote 15",
+              "name": "Payments in respect of the long-term disability and life insurance plan for members of the Canadian Forces",
+              "vote": "Vote 15",
               "amount": 0.417199
             },
             {
               "id": "national-defence-department-of-national-defence-vote10",
-              "name": "Vote 10",
+              "name": "Grants and contributions",
+              "vote": "Vote 10",
               "amount": 0.222588
             },
             {
               "id": "national-defence-department-of-national-defence-vote20",
-              "name": "Vote 20",
-              "amount": 0.0
-            },
-            {
-              "id": "national-defence-department-of-national-defence-vote25",
-              "name": "Vote 25",
-              "amount": 0.0
-            },
-            {
-              "id": "national-defence-department-of-national-defence-vote30",
-              "name": "Vote 30",
+              "name": "Protecting Canada's National Security",
+              "vote": "Vote 20",
               "amount": 0.0
             },
             {
               "id": "national-defence-department-of-national-defence-vote35",
-              "name": "Vote 35",
+              "name": "Reinforcing Canada's Support for Ukraine",
+              "vote": "Vote 35",
+              "amount": 0.0
+            },
+            {
+              "id": "national-defence-department-of-national-defence-vote25",
+              "name": "Renewing Canada's Middle East Strategy",
+              "vote": "Vote 25",
+              "amount": 0.0
+            },
+            {
+              "id": "national-defence-department-of-national-defence-vote30",
+              "name": "Supporting Veterans as They Transition to Post-Service Life",
+              "vote": "Vote 30",
               "amount": 0.0
             }
           ]
@@ -118,32 +127,59 @@
           "children": [
             {
               "id": "national-defence-communications-security-establishment-vote1",
-              "name": "Vote 1",
-              "amount": 0.734111
+              "name": "Program expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "national-defence-communications-security-establishment-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.607604
+                },
+                {
+                  "id": "national-defence-communications-security-establishment-vote1-communications-security-establishment-long-term-accommodation-project",
+                  "name": "Communications Security Establishment long-term accommodation project",
+                  "amount": 0.117824
+                },
+                {
+                  "id": "national-defence-communications-security-establishment-vote1-canadian-cryptographic-modernization-program-contingency-funding",
+                  "name": "Canadian Cryptographic Modernization Program contingency funding",
+                  "amount": 0.006442
+                },
+                {
+                  "id": "national-defence-communications-security-establishment-vote1-support-for-privy-council-office",
+                  "name": "Support for Privy Council Office",
+                  "amount": 0.002241
+                }
+              ]
             },
             {
               "id": "national-defence-communications-security-establishment-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.041017
             },
             {
+              "id": "national-defence-communications-security-establishment-vote5",
+              "name": "Protecting Canada's Critical Infrastructure from Cyber Threats",
+              "vote": "Vote 5",
+              "amount": 0.0
+            },
+            {
               "id": "national-defence-communications-security-establishment-vote10",
-              "name": "Vote 10",
+              "name": "Protecting Canada's National Security",
+              "vote": "Vote 10",
               "amount": 0.0
             },
             {
               "id": "national-defence-communications-security-establishment-vote15",
-              "name": "Vote 15",
+              "name": "Protecting Democracy",
+              "vote": "Vote 15",
               "amount": 0.0
             },
             {
               "id": "national-defence-communications-security-establishment-vote20",
-              "name": "Vote 20",
-              "amount": 0.0
-            },
-            {
-              "id": "national-defence-communications-security-establishment-vote5",
-              "name": "Vote 5",
+              "name": "Renewing Canada's Middle East Strategy",
+              "vote": "Vote 20",
               "amount": 0.0
             }
           ]
@@ -154,12 +190,14 @@
           "children": [
             {
               "id": "national-defence-military-grievances-external-review-committee-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.005723
             },
             {
               "id": "national-defence-military-grievances-external-review-committee-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.000653
             }
           ]
@@ -170,12 +208,14 @@
           "children": [
             {
               "id": "national-defence-military-police-complaints-commission-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.004309
             },
             {
               "id": "national-defence-military-police-complaints-commission-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.000422
             }
           ]
@@ -186,12 +226,14 @@
           "children": [
             {
               "id": "national-defence-office-of-the-communications-security-establishment-commissioner-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.000397
             },
             {
               "id": "national-defence-office-of-the-communications-security-establishment-commissioner-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 4.3e-5
             }
           ]

@@ -68,17 +68,62 @@
             {
               "id": "employment-and-social-development-canada-department-of-employment-and-social-development-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 87.334482
             },
             {
               "id": "employment-and-social-development-canada-department-of-employment-and-social-development-vote5",
-              "name": "Vote 5",
-              "amount": 10.117401
+              "name": "Grants and contributions",
+              "vote": "Vote 5",
+              "children": [
+                {
+                  "id": "employment-and-social-development-canada-department-of-employment-and-social-development-vote5-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 10.115996
+                },
+                {
+                  "id": "employment-and-social-development-canada-department-of-employment-and-social-development-vote5-canada-emergency-response-benefit",
+                  "name": "Canada Emergency Response Benefit",
+                  "amount": 0.001346
+                },
+                {
+                  "id": "employment-and-social-development-canada-department-of-employment-and-social-development-vote5-canada-emergency-student-benefit",
+                  "name": "Canada Emergency Student Benefit",
+                  "amount": 5.9e-5
+                }
+              ]
             },
             {
               "id": "employment-and-social-development-canada-department-of-employment-and-social-development-vote1",
-              "name": "Vote 1",
-              "amount": 4.244431
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "employment-and-social-development-canada-department-of-employment-and-social-development-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 3.81125
+                },
+                {
+                  "id": "employment-and-social-development-canada-department-of-employment-and-social-development-vote1-benefits-delivery-modernization",
+                  "name": "Benefits Delivery Modernization",
+                  "amount": 0.390147
+                },
+                {
+                  "id": "employment-and-social-development-canada-department-of-employment-and-social-development-vote1-emergency-benefits-administration-and-integrity",
+                  "name": "Emergency Benefits—Administration and Integrity",
+                  "amount": 0.034338
+                },
+                {
+                  "id": "employment-and-social-development-canada-department-of-employment-and-social-development-vote1-advertising-initiatives",
+                  "name": "Advertising initiatives",
+                  "amount": 0.007708
+                },
+                {
+                  "id": "employment-and-social-development-canada-department-of-employment-and-social-development-vote1-innovative-solutions-canada",
+                  "name": "Innovative Solutions Canada",
+                  "amount": 0.000988
+                }
+              ]
             }
           ]
         },
@@ -88,17 +133,20 @@
           "children": [
             {
               "id": "employment-and-social-development-canada-canadian-accessibility-standards-development-organization-vote1",
-              "name": "Vote 1",
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
               "amount": 0.011909
             },
             {
               "id": "employment-and-social-development-canada-canadian-accessibility-standards-development-organization-vote5",
-              "name": "Vote 5",
+              "name": "Grants and contributions",
+              "vote": "Vote 5",
               "amount": 0.008499
             },
             {
               "id": "employment-and-social-development-canada-canadian-accessibility-standards-development-organization-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.000972
             }
           ]
@@ -110,11 +158,13 @@
             {
               "id": "employment-and-social-development-canada-canadian-centre-for-occupational-health-and-safety-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.0088
             },
             {
               "id": "employment-and-social-development-canada-canadian-centre-for-occupational-health-and-safety-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.006079
             }
           ]

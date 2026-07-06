@@ -67,12 +67,35 @@
           "children": [
             {
               "id": "privy-council-privy-council-office-vote1",
-              "name": "Vote 1",
-              "amount": 0.226949
+              "name": "Program expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "privy-council-privy-council-office-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.217138
+                },
+                {
+                  "id": "privy-council-privy-council-office-vote1-public-inquiry-into-foreign-interference",
+                  "name": "Public Inquiry into Foreign Interference",
+                  "amount": 0.009045
+                },
+                {
+                  "id": "privy-council-privy-council-office-vote1-joint-public-inquiry-nova-scotia-tragedy",
+                  "name": "Joint Public Inquiry Nova Scotia Tragedy",
+                  "amount": 0.00055
+                },
+                {
+                  "id": "privy-council-privy-council-office-vote1-public-order-emergency-commission",
+                  "name": "Public Order Emergency Commission",
+                  "amount": 0.000217
+                }
+              ]
             },
             {
               "id": "privy-council-privy-council-office-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.024603
             }
           ]
@@ -83,12 +106,14 @@
           "children": [
             {
               "id": "privy-council-public-service-commission-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.101308
             },
             {
               "id": "privy-council-public-service-commission-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.013685
             }
           ]
@@ -99,12 +124,14 @@
           "children": [
             {
               "id": "privy-council-canadian-transportation-accident-investigation-and-safety-board-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.039334
             },
             {
               "id": "privy-council-canadian-transportation-accident-investigation-and-safety-board-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.004194
             }
           ]
@@ -115,12 +142,14 @@
           "children": [
             {
               "id": "privy-council-national-security-and-intelligence-review-agency-secretariat-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.018088
             },
             {
               "id": "privy-council-national-security-and-intelligence-review-agency-secretariat-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.001557
             }
           ]
@@ -131,12 +160,14 @@
           "children": [
             {
               "id": "privy-council-office-of-the-intelligence-commissioner-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.002085
             },
             {
               "id": "privy-council-office-of-the-intelligence-commissioner-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.000143
             }
           ]

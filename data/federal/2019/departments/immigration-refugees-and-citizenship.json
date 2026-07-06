@@ -67,27 +67,74 @@
           "children": [
             {
               "id": "immigration-refugees-and-citizenship-department-of-citizenship-and-immigration-vote10",
-              "name": "Vote 10",
-              "amount": 1.437039
+              "name": "Grants and contributions",
+              "vote": "Vote 10",
+              "children": [
+                {
+                  "id": "immigration-refugees-and-citizenship-department-of-citizenship-and-immigration-vote10-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 1.3789
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-department-of-citizenship-and-immigration-vote10-resettlement-of-syrian-refugees",
+                  "name": "Resettlement of Syrian refugees",
+                  "amount": 0.05757
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-department-of-citizenship-and-immigration-vote10-global-assistance-for-irregular-migrants",
+                  "name": "Global assistance for irregular migrants",
+                  "amount": 0.000569
+                }
+              ]
             },
             {
               "id": "immigration-refugees-and-citizenship-department-of-citizenship-and-immigration-vote1",
-              "name": "Vote 1",
-              "amount": 0.888807
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "immigration-refugees-and-citizenship-department-of-citizenship-and-immigration-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.72159
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-department-of-citizenship-and-immigration-vote1-interim-federal-health-program",
+                  "name": "Interim federal health program",
+                  "amount": 0.163725
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-department-of-citizenship-and-immigration-vote1-immigration-and-refugee-protection-act",
+                  "name": "Immigration and Refugee Protection Act",
+                  "amount": 0.001956
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-department-of-citizenship-and-immigration-vote1-advertising-initiatives",
+                  "name": "Advertising initiatives",
+                  "amount": 0.000965
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-department-of-citizenship-and-immigration-vote1-resettlement-of-syrian-refugees",
+                  "name": "Resettlement of Syrian refugees",
+                  "amount": 0.00057
+                }
+              ]
             },
             {
               "id": "immigration-refugees-and-citizenship-department-of-citizenship-and-immigration-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.065819
             },
             {
               "id": "immigration-refugees-and-citizenship-department-of-citizenship-and-immigration-vote5",
-              "name": "Vote 5",
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
               "amount": 0.021318
             },
             {
               "id": "immigration-refugees-and-citizenship-department-of-citizenship-and-immigration-vote15",
-              "name": "Vote 15",
+              "name": "Debt write-off—Immigration loans",
+              "vote": "Vote 15",
               "amount": 0.000262
             }
           ]
@@ -98,12 +145,30 @@
           "children": [
             {
               "id": "immigration-refugees-and-citizenship-immigration-and-refugee-board-vote1",
-              "name": "Vote 1",
-              "amount": 0.142999
+              "name": "Program expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "immigration-refugees-and-citizenship-immigration-and-refugee-board-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.134894
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-immigration-and-refugee-board-vote1-translation-costs-devinat-case",
+                  "name": "Translation costs (Devinat case)",
+                  "amount": 0.006895
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-immigration-and-refugee-board-vote1-immigration-and-refugee-protection-act",
+                  "name": "Immigration and Refugee Protection Act",
+                  "amount": 0.00121
+                }
+              ]
             },
             {
               "id": "immigration-refugees-and-citizenship-immigration-and-refugee-board-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.015359
             }
           ]

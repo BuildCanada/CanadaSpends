@@ -67,8 +67,45 @@
           "children": [
             {
               "id": "treasury-board-treasury-board-vote",
-              "name": "All votes",
-              "amount": 4.309162
+              "name": "Total appropriations (vote-level detail not published for this edition)",
+              "vote": "All votes",
+              "children": [
+                {
+                  "id": "treasury-board-treasury-board-vote-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 3.271155
+                },
+                {
+                  "id": "treasury-board-treasury-board-vote-less-revenues-netted-against-expenditures",
+                  "name": "Less: revenues netted against expenditures",
+                  "amount": 0.576655
+                },
+                {
+                  "id": "treasury-board-treasury-board-vote-statutory-amounts",
+                  "name": "Statutory amounts",
+                  "amount": 0.381905
+                },
+                {
+                  "id": "treasury-board-treasury-board-vote-back-office-transformation-initiative",
+                  "name": "Back office transformation initiative",
+                  "amount": 0.070123
+                },
+                {
+                  "id": "treasury-board-treasury-board-vote-white-class-action-settlement-agreement",
+                  "name": "White class action settlement agreement",
+                  "amount": 0.006066
+                },
+                {
+                  "id": "treasury-board-treasury-board-vote-tbs-moving-and-accommodations-expenses",
+                  "name": "TBS moving and accommodations expenses",
+                  "amount": 0.002125
+                },
+                {
+                  "id": "treasury-board-treasury-board-vote-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 0.001134
+                }
+              ]
             }
           ]
         }

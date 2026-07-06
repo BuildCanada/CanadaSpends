@@ -67,22 +67,42 @@
           "children": [
             {
               "id": "transport-canada-transport-vote1",
-              "name": "Vote 1",
-              "amount": 0.813816
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "transport-canada-transport-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.713869
+                },
+                {
+                  "id": "transport-canada-transport-vote1-less-revenues-netted-against-expenditures",
+                  "name": "Less: revenues netted against expenditures",
+                  "amount": 0.089268
+                },
+                {
+                  "id": "transport-canada-transport-vote1-duties-payable",
+                  "name": "Duties payable",
+                  "amount": 0.010679
+                }
+              ]
             },
             {
               "id": "transport-canada-transport-vote10",
-              "name": "Vote 10",
+              "name": "Grants and contributions",
+              "vote": "Vote 10",
               "amount": 0.581862
             },
             {
               "id": "transport-canada-transport-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.263849
             },
             {
               "id": "transport-canada-transport-vote5",
-              "name": "Vote 5",
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
               "amount": 0.124091
             }
           ]
@@ -93,8 +113,20 @@
           "children": [
             {
               "id": "transport-canada-canadian-air-transport-security-authority-vote1",
-              "name": "Vote 1",
-              "amount": 0.623897
+              "name": "Payments to the Canadian Air Transport Security Authority for operating and capital expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "transport-canada-canadian-air-transport-security-authority-vote1-payments-to-crown-corporation",
+                  "name": "Payments to Crown Corporation",
+                  "amount": 0.545487
+                },
+                {
+                  "id": "transport-canada-canadian-air-transport-security-authority-vote1-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.07841
+                }
+              ]
             }
           ]
         },
@@ -104,8 +136,20 @@
           "children": [
             {
               "id": "transport-canada-via-rail-canada-inc-vote1",
-              "name": "Vote 1",
-              "amount": 0.40621
+              "name": "Payments to VIA Rail Canada Inc.",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "transport-canada-via-rail-canada-inc-vote1-payments-to-crown-corporation",
+                  "name": "Payments to Crown Corporation",
+                  "amount": 0.316168
+                },
+                {
+                  "id": "transport-canada-via-rail-canada-inc-vote1-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.090042
+                }
+              ]
             }
           ]
         },
@@ -115,8 +159,20 @@
           "children": [
             {
               "id": "transport-canada-marine-atlantic-inc-vote1",
-              "name": "Vote 1",
-              "amount": 0.127484
+              "name": "Payments to Marine Atlantic Inc.",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "transport-canada-marine-atlantic-inc-vote1-payments-to-crown-corporation",
+                  "name": "Payments to Crown Corporation",
+                  "amount": 0.109354
+                },
+                {
+                  "id": "transport-canada-marine-atlantic-inc-vote1-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.01813
+                }
+              ]
             }
           ]
         },
@@ -126,12 +182,14 @@
           "children": [
             {
               "id": "transport-canada-canadian-transportation-agency-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.025548
             },
             {
               "id": "transport-canada-canadian-transportation-agency-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.00323
             }
           ]
@@ -142,7 +200,8 @@
           "children": [
             {
               "id": "transport-canada-canada-post-corporation-vote1",
-              "name": "Vote 1",
+              "name": "Payments to the Canada Post Corporation for special purposes",
+              "vote": "Vote 1",
               "amount": 0.02221
             }
           ]
@@ -153,7 +212,8 @@
           "children": [
             {
               "id": "transport-canada-the-federal-bridge-corporation-limited-vote1",
-              "name": "Vote 1",
+              "name": "Payments to The Federal Bridge Corporation Limited",
+              "vote": "Vote 1",
               "amount": 0.008138
             }
           ]
@@ -164,7 +224,8 @@
           "children": [
             {
               "id": "transport-canada-windsor-detroit-bridge-authority-vote3",
-              "name": "Vote 3",
+              "name": "Payments to the Windsor‑Detroit Bridge Authority",
+              "vote": "Vote 3",
               "amount": 0.008059
             }
           ]
@@ -175,12 +236,14 @@
           "children": [
             {
               "id": "transport-canada-transportation-appeal-tribunal-of-canada-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.000814
             },
             {
               "id": "transport-canada-transportation-appeal-tribunal-of-canada-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 7.0e-5
             }
           ]

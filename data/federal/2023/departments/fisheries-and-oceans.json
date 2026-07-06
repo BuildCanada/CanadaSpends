@@ -67,22 +67,42 @@
           "children": [
             {
               "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote1",
-              "name": "Vote 1",
-              "amount": 2.238752
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 2.23412
+                },
+                {
+                  "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote1-self-employed-fish-harvesters-affected-by-covid-19",
+                  "name": "Self-employed Fish Harvesters affected by COVID-19",
+                  "amount": 0.003307
+                },
+                {
+                  "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote1-innovative-solutions-canada",
+                  "name": "Innovative Solutions Canada",
+                  "amount": 0.001325
+                }
+              ]
             },
             {
               "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote5",
-              "name": "Vote 5",
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
               "amount": 0.986124
             },
             {
               "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote10",
-              "name": "Vote 10",
+              "name": "Grants and contributions",
+              "vote": "Vote 10",
               "amount": 0.402101
             },
             {
               "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.196901
             }
           ]
@@ -93,7 +113,8 @@
           "children": [
             {
               "id": "fisheries-and-oceans-freshwater-fish-marketing-corporation-vote1",
-              "name": "Vote 1",
+              "name": "Authorization to borrow money otherwise than from the Crown",
+              "vote": "Vote 1",
               "amount": 0.0
             }
           ]

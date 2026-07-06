@@ -67,22 +67,37 @@
           "children": [
             {
               "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote1",
-              "name": "Vote 1",
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
               "amount": 1.704183
             },
             {
               "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote5",
-              "name": "Vote 5",
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
               "amount": 1.280687
             },
             {
               "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote10",
-              "name": "Vote 10",
-              "amount": 0.185375
+              "name": "Grants and contributions",
+              "vote": "Vote 10",
+              "children": [
+                {
+                  "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote10-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 0.185075
+                },
+                {
+                  "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote10-whales-innovation-challenge",
+                  "name": "Whales Innovation Challenge",
+                  "amount": 0.0003
+                }
+              ]
             },
             {
               "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.153875
             }
           ]

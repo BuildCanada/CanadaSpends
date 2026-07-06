@@ -68,21 +68,41 @@
             {
               "id": "employment-and-social-development-canada-department-of-employment-and-social-development-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 57.83947
             },
             {
               "id": "employment-and-social-development-canada-department-of-employment-and-social-development-vote1",
-              "name": "Vote 1",
-              "amount": 2.672102
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "employment-and-social-development-canada-department-of-employment-and-social-development-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 2.664682
+                },
+                {
+                  "id": "employment-and-social-development-canada-department-of-employment-and-social-development-vote1-advertising-initiatives",
+                  "name": "Advertising initiatives",
+                  "amount": 0.00688
+                },
+                {
+                  "id": "employment-and-social-development-canada-department-of-employment-and-social-development-vote1-employment-insurance",
+                  "name": "Employment Insurance",
+                  "amount": 0.00054
+                }
+              ]
             },
             {
               "id": "employment-and-social-development-canada-department-of-employment-and-social-development-vote5",
-              "name": "Vote 5",
+              "name": "Grants and contributions",
+              "vote": "Vote 5",
               "amount": 2.432186
             },
             {
               "id": "employment-and-social-development-canada-department-of-employment-and-social-development-vote10",
-              "name": "Vote 10",
+              "name": "Debt write-off—Canada Student Loans",
+              "vote": "Vote 10",
               "amount": 0.162154
             }
           ]
@@ -93,7 +113,8 @@
           "children": [
             {
               "id": "employment-and-social-development-canada-canada-mortgage-and-housing-corporation-vote1",
-              "name": "Vote 1",
+              "name": "Reimbursement under the provisions of the National Housing Act and the Canada Mortgage and Housing Corporation Act",
+              "vote": "Vote 1",
               "amount": 2.086438
             }
           ]
@@ -105,11 +126,13 @@
             {
               "id": "employment-and-social-development-canada-canadian-centre-for-occupational-health-and-safety-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.006218
             },
             {
               "id": "employment-and-social-development-canada-canadian-centre-for-occupational-health-and-safety-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.004342
             }
           ]

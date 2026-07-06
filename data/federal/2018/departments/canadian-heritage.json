@@ -67,8 +67,45 @@
           "children": [
             {
               "id": "canadian-heritage-canadian-heritage-vote",
-              "name": "All votes",
-              "amount": 3.97989
+              "name": "Total appropriations (vote-level detail not published for this edition)",
+              "vote": "All votes",
+              "children": [
+                {
+                  "id": "canadian-heritage-canadian-heritage-vote-payments-to-crown-corporation",
+                  "name": "Payments to Crown Corporation",
+                  "amount": 2.01893
+                },
+                {
+                  "id": "canadian-heritage-canadian-heritage-vote-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 1.280555
+                },
+                {
+                  "id": "canadian-heritage-canadian-heritage-vote-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.470021
+                },
+                {
+                  "id": "canadian-heritage-canadian-heritage-vote-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.151335
+                },
+                {
+                  "id": "canadian-heritage-canadian-heritage-vote-statutory-amounts",
+                  "name": "Statutory amounts",
+                  "amount": 0.046711
+                },
+                {
+                  "id": "canadian-heritage-canadian-heritage-vote-contribution-to-employee-benefits-plans",
+                  "name": "Contribution to employee benefits plans",
+                  "amount": 0.007857
+                },
+                {
+                  "id": "canadian-heritage-canadian-heritage-vote-advertising-initiatives",
+                  "name": "Advertising initiatives",
+                  "amount": 0.00448
+                }
+              ]
             }
           ]
         }

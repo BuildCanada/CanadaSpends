@@ -67,6 +67,71 @@ class TestExport < Minitest::Test
     assert(dept['historicalShare'].all? { |p| p['percentage'] > 0.1 })
   end
 
+  # miniSankey legibility: vote nodes are named by their DESCRIPTION, not
+  # "Vote N"; the vote number survives in id + a secondary `vote` field.
+  def test_mini_sankey_names_votes_by_description
+    @command.call(['--year', '2024'])
+    dept = JSON.parse(File.read(File.join(@out, '2024', 'departments', 'national-defence.json')))
+    dnd = mini_org(dept, 'Department of National Defence')
+
+    names = dnd['children'].map { |v| v['name'] }
+    %w[Operating\ expenditures Capital\ expenditures Grants\ and\ contributions Statutory\ amounts].each do |expected|
+      assert_includes names, expected, "vote named by description: #{expected}"
+    end
+    refute(names.any? { |n| n =~ /\AVote \d+\z/ }, 'no bare "Vote N" leaf names remain')
+
+    # The vote number is preserved on the node for secondary display.
+    op = dnd['children'].find { |v| v['name'] == 'Operating expenditures' }
+    assert_equal 'Vote 1', op['vote']
+    assert(op['id'].end_with?('-vote1'), 'vote number kept in id')
+  end
+
+  # Informative allotments (class-action settlements) surface under the vote;
+  # a purely-generic vote stays a leaf.
+  def test_mini_sankey_emits_informative_allotments_only
+    @command.call(['--year', '2024'])
+    dept = JSON.parse(File.read(File.join(@out, '2024', 'departments', 'national-defence.json')))
+    dnd = mini_org(dept, 'Department of National Defence')
+
+    operating = dnd['children'].find { |v| v['name'] == 'Operating expenditures' }
+    assert operating['children'], 'Operating expenditures fans out to allotments'
+    child_names = operating['children'].map { |c| c['name'] }
+    assert_includes child_names, 'Heyder and Beattie Class Actions'
+    assert_includes child_names, 'Operating budget' # generic residual stays for exact sums
+
+    capital = dnd['children'].find { |v| v['name'] == 'Capital expenditures' }
+    refute capital.key?('children'), 'a single-generic-allotment vote is a leaf'
+    assert capital['amount'], 'leaf votes carry an amount'
+  end
+
+  # Parents carry no amount (D3 double-counting contract) and leaf sums are exact.
+  def test_mini_sankey_parents_carry_no_amount_and_sums_balance
+    @command.call(['--year', '2024'])
+    dept = JSON.parse(File.read(File.join(@out, '2024', 'departments', 'national-defence.json')))
+    tree = dept['miniSankey']['spending_data']
+
+    assert_no_parent_amounts(tree)
+    dnd = mini_org(dept, 'Department of National Defence')
+    operating = dnd['children'].find { |v| v['name'] == 'Operating expenditures' }
+    refute operating.key?('amount'), 'a vote with children carries no amount'
+    # Allotment children sum back to the raw vote total.
+    raw = 19_981_255_434 + 1_038_225 + 112_504_913 + 14_287_073
+    assert_in_delta raw / 1e9, leaf_sum(operating), 0.001
+  end
+
+  # Sibling votes of the same org sharing a description get the vote appended.
+  # Health Canada FY2014 has two "Capital expenditures" votes (5 and 13).
+  def test_mini_sankey_disambiguates_same_named_sibling_votes
+    @command.call(['--year', '2014'])
+    dept = JSON.parse(File.read(File.join(@out, '2014', 'departments', 'health-canada.json')))
+    health = mini_org(dept, 'Health')
+    names = health['children'].map { |v| v['name'] }
+
+    assert_includes names, 'Capital expenditures (Vote 5)'
+    assert_includes names, 'Capital expenditures (Vote 13)'
+    refute_includes names, 'Capital expenditures', 'colliding names are disambiguated'
+  end
+
   def test_output_is_deterministic
     @command.call(['--year', '2024'])
     first = File.read(File.join(@out, '2024', 'sankey.json'))
@@ -116,6 +181,11 @@ class TestExport < Minitest::Test
   end
 
   private
+
+  # The miniSankey organization node with the given display name.
+  def mini_org(dept, org_name)
+    dept['miniSankey']['spending_data']['children'].find { |o| o['name'] == org_name }
+  end
 
   def node(tree, id)
     return tree if tree['id'] == id

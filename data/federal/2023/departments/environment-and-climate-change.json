@@ -67,22 +67,68 @@
           "children": [
             {
               "id": "environment-and-climate-change-department-of-the-environment-vote1",
-              "name": "Vote 1",
-              "amount": 1.153345
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "environment-and-climate-change-department-of-the-environment-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 1.116761
+                },
+                {
+                  "id": "environment-and-climate-change-department-of-the-environment-vote1-united-nations-biodiversity-conference-cop-15",
+                  "name": "United Nations Biodiversity Conference (COP 15)",
+                  "amount": 0.035987
+                },
+                {
+                  "id": "environment-and-climate-change-department-of-the-environment-vote1-innovative-solutions-canada",
+                  "name": "Innovative Solutions Canada",
+                  "amount": 0.00052
+                },
+                {
+                  "id": "environment-and-climate-change-department-of-the-environment-vote1-international-assistance-envelope",
+                  "name": "International Assistance Envelope",
+                  "amount": 7.7e-5
+                }
+              ]
             },
             {
               "id": "environment-and-climate-change-department-of-the-environment-vote10",
-              "name": "Vote 10",
-              "amount": 0.641102
+              "name": "Grants and contributions",
+              "vote": "Vote 10",
+              "children": [
+                {
+                  "id": "environment-and-climate-change-department-of-the-environment-vote10-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 0.595224
+                },
+                {
+                  "id": "environment-and-climate-change-department-of-the-environment-vote10-international-assistance-envelope",
+                  "name": "International Assistance Envelope",
+                  "amount": 0.042733
+                },
+                {
+                  "id": "environment-and-climate-change-department-of-the-environment-vote10-united-nations-biodiversity-conference-cop-15",
+                  "name": "United Nations Biodiversity Conference (COP 15)",
+                  "amount": 0.002122
+                },
+                {
+                  "id": "environment-and-climate-change-department-of-the-environment-vote10-innovative-solutions-canada",
+                  "name": "Innovative Solutions Canada",
+                  "amount": 0.001024
+                }
+              ]
             },
             {
               "id": "environment-and-climate-change-department-of-the-environment-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.123538
             },
             {
               "id": "environment-and-climate-change-department-of-the-environment-vote5",
-              "name": "Vote 5",
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
               "amount": 0.080093
             }
           ]
@@ -93,22 +139,42 @@
           "children": [
             {
               "id": "environment-and-climate-change-parks-canada-agency-vote1",
-              "name": "Vote 1",
-              "amount": 0.61512
+              "name": "Operating expenditures, grants and contributions",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "environment-and-climate-change-parks-canada-agency-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.536481
+                },
+                {
+                  "id": "environment-and-climate-change-parks-canada-agency-vote1-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 0.07502
+                },
+                {
+                  "id": "environment-and-climate-change-parks-canada-agency-vote1-advertising-initiatives",
+                  "name": "Advertising Initiatives",
+                  "amount": 0.00362
+                }
+              ]
             },
             {
               "id": "environment-and-climate-change-parks-canada-agency-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.279768
             },
             {
               "id": "environment-and-climate-change-parks-canada-agency-vote5",
-              "name": "Vote 5",
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
               "amount": 0.206384
             },
             {
               "id": "environment-and-climate-change-parks-canada-agency-vote10",
-              "name": "Vote 10",
+              "name": "Payments to the New Parks and Historic Sites Account",
+              "vote": "Vote 10",
               "amount": 0.055336
             }
           ]
@@ -119,17 +185,20 @@
           "children": [
             {
               "id": "environment-and-climate-change-impact-assessment-agency-of-canada-vote1",
-              "name": "Vote 1",
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
               "amount": 0.053097
             },
             {
               "id": "environment-and-climate-change-impact-assessment-agency-of-canada-vote5",
-              "name": "Vote 5",
+              "name": "Grants and contributions",
+              "vote": "Vote 5",
               "amount": 0.01469
             },
             {
               "id": "environment-and-climate-change-impact-assessment-agency-of-canada-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.00615
             }
           ]

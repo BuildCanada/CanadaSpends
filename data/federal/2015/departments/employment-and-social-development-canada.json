@@ -68,21 +68,46 @@
             {
               "id": "employment-and-social-development-canada-employment-and-social-development-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 49.72827
             },
             {
               "id": "employment-and-social-development-canada-employment-and-social-development-vote1",
-              "name": "Vote 1",
-              "amount": 4.05228
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "employment-and-social-development-canada-employment-and-social-development-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 2.316716
+                },
+                {
+                  "id": "employment-and-social-development-canada-employment-and-social-development-vote1-less-revenues-netted-against-expenditures",
+                  "name": "Less: revenues netted against expenditures",
+                  "amount": 1.716971
+                },
+                {
+                  "id": "employment-and-social-development-canada-employment-and-social-development-vote1-bill-c-51-implementation",
+                  "name": "Bill C‑51 implementation",
+                  "amount": 0.011633
+                },
+                {
+                  "id": "employment-and-social-development-canada-employment-and-social-development-vote1-advertising-initiatives",
+                  "name": "Advertising initiatives",
+                  "amount": 0.006959
+                }
+              ]
             },
             {
               "id": "employment-and-social-development-canada-employment-and-social-development-vote5",
-              "name": "Vote 5",
+              "name": "Grants and contributions",
+              "vote": "Vote 5",
               "amount": 1.570719
             },
             {
               "id": "employment-and-social-development-canada-employment-and-social-development-vote7",
-              "name": "Vote 7c",
+              "name": "Debt write‑off — Canada Student Loans",
+              "vote": "Vote 7c",
               "amount": 0.287431
             }
           ]
@@ -93,7 +118,8 @@
           "children": [
             {
               "id": "employment-and-social-development-canada-canada-mortgage-and-housing-corporation-vote1",
-              "name": "Vote 1",
+              "name": "Reimbursement under the provisions of the National Housing Act and the Canada Mortgage and Housing Corporation Act",
+              "vote": "Vote 1",
               "amount": 2.053213
             }
           ]
@@ -104,17 +130,20 @@
           "children": [
             {
               "id": "employment-and-social-development-canada-office-of-the-co-ordinator-status-of-women-vote5",
-              "name": "Vote 5",
+              "name": "Grants and contributions",
+              "vote": "Vote 5",
               "amount": 0.019033
             },
             {
               "id": "employment-and-social-development-canada-office-of-the-co-ordinator-status-of-women-vote1",
-              "name": "Vote 1",
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
               "amount": 0.009817
             },
             {
               "id": "employment-and-social-development-canada-office-of-the-co-ordinator-status-of-women-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.001275
             }
           ]
@@ -125,12 +154,14 @@
           "children": [
             {
               "id": "employment-and-social-development-canada-canadian-centre-for-occupational-health-and-safety-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.013092
             },
             {
               "id": "employment-and-social-development-canada-canadian-centre-for-occupational-health-and-safety-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.001053
             }
           ]
@@ -141,12 +172,14 @@
           "children": [
             {
               "id": "employment-and-social-development-canada-national-capital-commission-vote1",
-              "name": "Vote 1",
+              "name": "Payments to the National Capital Commission for operating expenditures",
+              "vote": "Vote 1",
               "amount": 0.006316
             },
             {
               "id": "employment-and-social-development-canada-national-capital-commission-vote5",
-              "name": "Vote 5",
+              "name": "Payments to the National Capital Commission for capital expenditures",
+              "vote": "Vote 5",
               "amount": 0.001969
             }
           ]
@@ -157,12 +190,14 @@
           "children": [
             {
               "id": "employment-and-social-development-canada-canada-industrial-relations-board-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.00659
             },
             {
               "id": "employment-and-social-development-canada-canada-industrial-relations-board-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.000898
             }
           ]

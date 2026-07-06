@@ -67,22 +67,52 @@
           "children": [
             {
               "id": "national-defence-national-defence-vote1",
-              "name": "Vote 1",
-              "amount": 14.290584
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "national-defence-national-defence-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 13.754699
+                },
+                {
+                  "id": "national-defence-national-defence-vote1-less-revenues-netted-against-expenditures",
+                  "name": "Less: revenues netted against expenditures",
+                  "amount": 0.447074
+                },
+                {
+                  "id": "national-defence-national-defence-vote1-operation-impact",
+                  "name": "Operation Impact",
+                  "amount": 0.06307
+                },
+                {
+                  "id": "national-defence-national-defence-vote1-operation-reassurance",
+                  "name": "Operation Reassurance",
+                  "amount": 0.022741
+                },
+                {
+                  "id": "national-defence-national-defence-vote1-advertising-initiatives",
+                  "name": "Advertising initiatives",
+                  "amount": 0.003
+                }
+              ]
             },
             {
               "id": "national-defence-national-defence-vote5",
-              "name": "Vote 5",
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
               "amount": 3.316468
             },
             {
               "id": "national-defence-national-defence-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 1.606157
             },
             {
               "id": "national-defence-national-defence-vote10",
-              "name": "Vote 10",
+              "name": "Grants and contributions",
+              "vote": "Vote 10",
               "amount": 0.134877
             }
           ]
@@ -93,12 +123,30 @@
           "children": [
             {
               "id": "national-defence-communications-security-establishment-vote1",
-              "name": "Vote 1",
-              "amount": 0.819762
+              "name": "Program expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "national-defence-communications-security-establishment-vote1-communications-security-establishment-long-term-accommodation-project",
+                  "name": "Communications Security Establishment long‑term accommodation project",
+                  "amount": 0.409754
+                },
+                {
+                  "id": "national-defence-communications-security-establishment-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.409461
+                },
+                {
+                  "id": "national-defence-communications-security-establishment-vote1-less-revenues-netted-against-expenditures",
+                  "name": "Less: revenues netted against expenditures",
+                  "amount": 0.000548
+                }
+              ]
             },
             {
               "id": "national-defence-communications-security-establishment-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.037766
             }
           ]
@@ -109,12 +157,14 @@
           "children": [
             {
               "id": "national-defence-military-grievances-external-review-committee-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.005622
             },
             {
               "id": "national-defence-military-grievances-external-review-committee-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.000628
             }
           ]
@@ -125,12 +175,30 @@
           "children": [
             {
               "id": "national-defence-military-police-complaints-commission-vote1",
-              "name": "Vote 1",
-              "amount": 0.004619
+              "name": "Program expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "national-defence-military-police-complaints-commission-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.003772
+                },
+                {
+                  "id": "national-defence-military-police-complaints-commission-vote1-public-interest-hearings",
+                  "name": "Public interest hearings",
+                  "amount": 0.000447
+                },
+                {
+                  "id": "national-defence-military-police-complaints-commission-vote1-conduct-review",
+                  "name": "Conduct review",
+                  "amount": 0.000399
+                }
+              ]
             },
             {
               "id": "national-defence-military-police-complaints-commission-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.000346
             }
           ]
@@ -141,12 +209,14 @@
           "children": [
             {
               "id": "national-defence-office-of-the-communications-security-establishment-commissioner-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.001868
             },
             {
               "id": "national-defence-office-of-the-communications-security-establishment-commissioner-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.000175
             }
           ]

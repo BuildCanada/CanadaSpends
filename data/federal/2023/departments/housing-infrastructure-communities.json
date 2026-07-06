@@ -63,22 +63,37 @@
           "children": [
             {
               "id": "housing-infrastructure-communities-office-of-infrastructure-of-canada-vote10",
-              "name": "Vote 10",
-              "amount": 4.280895
+              "name": "Grants and Contributions",
+              "vote": "Vote 10",
+              "children": [
+                {
+                  "id": "housing-infrastructure-communities-office-of-infrastructure-of-canada-vote10-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 4.273616
+                },
+                {
+                  "id": "housing-infrastructure-communities-office-of-infrastructure-of-canada-vote10-public-private-partnerships-canada-fund",
+                  "name": "Public-Private Partnerships Canada Fund",
+                  "amount": 0.007279
+                }
+              ]
             },
             {
               "id": "housing-infrastructure-communities-office-of-infrastructure-of-canada-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 2.287522
             },
             {
               "id": "housing-infrastructure-communities-office-of-infrastructure-of-canada-vote1",
-              "name": "Vote 1",
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
               "amount": 0.248856
             },
             {
               "id": "housing-infrastructure-communities-office-of-infrastructure-of-canada-vote5",
-              "name": "Vote 5",
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
               "amount": 0.011686
             }
           ]
@@ -89,12 +104,14 @@
           "children": [
             {
               "id": "housing-infrastructure-communities-canada-mortgage-and-housing-corporation-vote1",
-              "name": "Vote 1",
+              "name": "Reimbursement under the provisions of the National Housing Act and the Canada Mortgage and Housing Corporation Act",
+              "vote": "Vote 1",
               "amount": 3.575649
             },
             {
               "id": "housing-infrastructure-communities-canada-mortgage-and-housing-corporation-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.587056
             }
           ]
@@ -105,8 +122,20 @@
           "children": [
             {
               "id": "housing-infrastructure-communities-windsor-detroit-bridge-authority-vote1",
-              "name": "Vote 1",
-              "amount": 0.793291
+              "name": "Payments to the Authority",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "housing-infrastructure-communities-windsor-detroit-bridge-authority-vote1-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.594503
+                },
+                {
+                  "id": "housing-infrastructure-communities-windsor-detroit-bridge-authority-vote1-payments-to-crown-corporation",
+                  "name": "Payments to Crown Corporation",
+                  "amount": 0.198789
+                }
+              ]
             }
           ]
         },
@@ -117,11 +146,13 @@
             {
               "id": "housing-infrastructure-communities-office-of-the-chief-electoral-officer-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.160934
             },
             {
               "id": "housing-infrastructure-communities-office-of-the-chief-electoral-officer-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.0522
             }
           ]
@@ -132,8 +163,20 @@
           "children": [
             {
               "id": "housing-infrastructure-communities-the-jacques-cartier-and-champlain-bridges-inc-vote1",
-              "name": "Vote 1",
-              "amount": 0.205277
+              "name": "Payments to the corporation",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "housing-infrastructure-communities-the-jacques-cartier-and-champlain-bridges-inc-vote1-payments-to-crown-corporation",
+                  "name": "Payments to Crown Corporation",
+                  "amount": 0.181048
+                },
+                {
+                  "id": "housing-infrastructure-communities-the-jacques-cartier-and-champlain-bridges-inc-vote1-payments-to-crown-corporation-capital",
+                  "name": "Payments to Crown Corporation—Capital",
+                  "amount": 0.024229
+                }
+              ]
             }
           ]
         },
@@ -143,12 +186,14 @@
           "children": [
             {
               "id": "housing-infrastructure-communities-office-of-the-commissioner-of-official-languages-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.02
             },
             {
               "id": "housing-infrastructure-communities-office-of-the-commissioner-of-official-languages-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.002433
             }
           ]
@@ -159,12 +204,14 @@
           "children": [
             {
               "id": "housing-infrastructure-communities-canadian-intergovernmental-conference-secretariat-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.005871
             },
             {
               "id": "housing-infrastructure-communities-canadian-intergovernmental-conference-secretariat-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.000429
             }
           ]
@@ -175,12 +222,14 @@
           "children": [
             {
               "id": "housing-infrastructure-communities-leaders-debates-commission-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.000648
             },
             {
               "id": "housing-infrastructure-communities-leaders-debates-commission-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 5.2e-5
             }
           ]

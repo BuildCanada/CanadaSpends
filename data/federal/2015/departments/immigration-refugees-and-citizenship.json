@@ -67,22 +67,68 @@
           "children": [
             {
               "id": "immigration-refugees-and-citizenship-citizenship-and-immigration-vote5",
-              "name": "Vote 5",
-              "amount": 0.989897
+              "name": "Grants and contributions",
+              "vote": "Vote 5",
+              "children": [
+                {
+                  "id": "immigration-refugees-and-citizenship-citizenship-and-immigration-vote5-grants-and-contributions",
+                  "name": "Grants and contributions",
+                  "amount": 0.987602
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-citizenship-and-immigration-vote5-global-assistance-for-irregular-migrants",
+                  "name": "Global assistance for irregular migrants",
+                  "amount": 0.002294
+                }
+              ]
             },
             {
               "id": "immigration-refugees-and-citizenship-citizenship-and-immigration-vote1",
-              "name": "Vote 1",
-              "amount": 0.570913
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "immigration-refugees-and-citizenship-citizenship-and-immigration-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.52198
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-citizenship-and-immigration-vote1-interim-federal-health-program",
+                  "name": "Interim federal health program",
+                  "amount": 0.023956
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-citizenship-and-immigration-vote1-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.015854
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-citizenship-and-immigration-vote1-less-revenues-netted-against-expenditures",
+                  "name": "Less: revenues netted against expenditures",
+                  "amount": 0.005038
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-citizenship-and-immigration-vote1-immigration-and-refugee-protection-act",
+                  "name": "Immigration and Refugee Protection Act",
+                  "amount": 0.002197
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-citizenship-and-immigration-vote1-advertising-initiatives",
+                  "name": "Advertising initiatives",
+                  "amount": 0.001889
+                }
+              ]
             },
             {
               "id": "immigration-refugees-and-citizenship-citizenship-and-immigration-vote7",
-              "name": "Vote 7b",
+              "name": "Write‑off outstanding immigration loans",
+              "vote": "Vote 7b",
               "amount": 0.001117
             },
             {
               "id": "immigration-refugees-and-citizenship-citizenship-and-immigration-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.0
             }
           ]
@@ -93,12 +139,30 @@
           "children": [
             {
               "id": "immigration-refugees-and-citizenship-immigration-and-refugee-board-vote1",
-              "name": "Vote 1",
-              "amount": 0.107061
+              "name": "Program expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "immigration-refugees-and-citizenship-immigration-and-refugee-board-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.09826
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-immigration-and-refugee-board-vote1-translation-costs-devinat-case",
+                  "name": "Translation costs (Devinat case)",
+                  "amount": 0.007622
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-immigration-and-refugee-board-vote1-immigration-and-refugee-protection-act",
+                  "name": "Immigration and Refugee Protection Act",
+                  "amount": 0.001178
+                }
+              ]
             },
             {
               "id": "immigration-refugees-and-citizenship-immigration-and-refugee-board-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.012689
             }
           ]

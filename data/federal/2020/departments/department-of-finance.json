@@ -68,31 +68,37 @@
             {
               "id": "department-of-finance-department-of-finance-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 98.735528
             },
             {
               "id": "department-of-finance-department-of-finance-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.107153
             },
             {
+              "id": "department-of-finance-department-of-finance-vote5",
+              "name": "Authority for amount by way of direct payments to the International Development Association pursuant to Bretton Woods and Related Agreements Act",
+              "vote": "Vote 5",
+              "amount": 0.0
+            },
+            {
               "id": "department-of-finance-department-of-finance-vote10",
-              "name": "Vote 10",
+              "name": "Introducing a Financial Consumer Agency of Canada Governance Council",
+              "vote": "Vote 10",
               "amount": 0.0
             },
             {
               "id": "department-of-finance-department-of-finance-vote15",
-              "name": "Vote 15",
+              "name": "Protecting Canadians' Pensions",
+              "vote": "Vote 15",
               "amount": 0.0
             },
             {
               "id": "department-of-finance-department-of-finance-vote20",
-              "name": "Vote 20",
-              "amount": 0.0
-            },
-            {
-              "id": "department-of-finance-department-of-finance-vote5",
-              "name": "Vote 5",
+              "name": "Strengthening Canada's Anti-Money Laundering and Anti-Terrorist Financing Regime",
+              "vote": "Vote 20",
               "amount": 0.0
             }
           ]
@@ -104,11 +110,13 @@
             {
               "id": "department-of-finance-office-of-the-superintendent-of-financial-institutions-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.192133
             },
             {
               "id": "department-of-finance-office-of-the-superintendent-of-financial-institutions-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.001501
             }
           ]
@@ -119,12 +127,14 @@
           "children": [
             {
               "id": "department-of-finance-office-of-the-auditor-general-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.079696
             },
             {
               "id": "department-of-finance-office-of-the-auditor-general-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.009335
             }
           ]
@@ -135,17 +145,36 @@
           "children": [
             {
               "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote1",
-              "name": "Vote 1",
-              "amount": 0.050468
+              "name": "Program expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.049361
+                },
+                {
+                  "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote1-strengthening-fintrac-compliance-outreach-and-examinations",
+                  "name": "Strengthening FINTRAC Compliance Outreach and Examinations",
+                  "amount": 0.000723
+                },
+                {
+                  "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote1-expanding-fintrac-public-private-partnership-projects",
+                  "name": "Expanding FINTRAC Public Private Partnership Projects",
+                  "amount": 0.000384
+                }
+              ]
             },
             {
               "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.004814
             },
             {
               "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote5",
-              "name": "Vote 5",
+              "name": "Strengthening Canada's Anti-Money Laundering and Anti-Terrorist Financing Regime",
+              "vote": "Vote 5",
               "amount": 0.0
             }
           ]
@@ -157,6 +186,7 @@
             {
               "id": "department-of-finance-financial-consumer-agency-of-canada-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.030331
             }
           ]

@@ -68,16 +68,19 @@
             {
               "id": "department-of-finance-department-of-finance-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 135.087937
             },
             {
               "id": "department-of-finance-department-of-finance-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.423514
             },
             {
               "id": "department-of-finance-department-of-finance-vote5",
-              "name": "Vote 5",
+              "name": "Authority for amount by way of direct payments to the International Development Association pursuant to Bretton Woods and Related Agreements Act",
+              "vote": "Vote 5",
               "amount": 0.0
             }
           ]
@@ -89,11 +92,13 @@
             {
               "id": "department-of-finance-office-of-the-superintendent-of-financial-institutions-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.310227
             },
             {
               "id": "department-of-finance-office-of-the-superintendent-of-financial-institutions-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.001244
             }
           ]
@@ -104,12 +109,14 @@
           "children": [
             {
               "id": "department-of-finance-office-of-the-auditor-general-vote1",
-              "name": "Vote 1",
+              "name": "Program expenditures",
+              "vote": "Vote 1",
               "amount": 0.122872
             },
             {
               "id": "department-of-finance-office-of-the-auditor-general-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.013863
             }
           ]
@@ -120,12 +127,40 @@
           "children": [
             {
               "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote1",
-              "name": "Vote 1",
-              "amount": 0.089388
+              "name": "Program expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 0.080026
+                },
+                {
+                  "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote1-critical-im-it-infrastructure-systems-and-services",
+                  "name": "Critical IM/IT Infrastructure Systems and Services",
+                  "amount": 0.004465
+                },
+                {
+                  "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote1-intelligence-suite",
+                  "name": "Intelligence Suite",
+                  "amount": 0.003733
+                },
+                {
+                  "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote1-strengthening-compliance-outreach-and-examinations",
+                  "name": "Strengthening Compliance Outreach and Examinations",
+                  "amount": 0.000769
+                },
+                {
+                  "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote1-expanding-public-private-partnership-projects",
+                  "name": "Expanding Public Private Partnership Projects",
+                  "amount": 0.000396
+                }
+              ]
             },
             {
               "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.009234
             }
           ]
@@ -137,6 +172,7 @@
             {
               "id": "department-of-finance-financial-consumer-agency-of-canada-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.053367
             }
           ]

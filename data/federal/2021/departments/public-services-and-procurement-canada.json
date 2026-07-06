@@ -67,17 +67,92 @@
           "children": [
             {
               "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote1",
-              "name": "Vote 1",
-              "amount": 4.261605
+              "name": "Operating expenditures",
+              "vote": "Vote 1",
+              "children": [
+                {
+                  "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote1-real-property-services",
+                  "name": "Real property services",
+                  "amount": 2.364709
+                },
+                {
+                  "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote1-operating-budget",
+                  "name": "Operating budget",
+                  "amount": 1.244115
+                },
+                {
+                  "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote1-post-implementation-of-pay-system",
+                  "name": "Post implementation of pay system",
+                  "amount": 0.311776
+                },
+                {
+                  "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote1-pre-planning-for-capital-fit-up-and-non-capital-specific-projects",
+                  "name": "Pre-planning for capital, fit-up and non-capital specific projects",
+                  "amount": 0.153819
+                },
+                {
+                  "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote1-receiver-general-and-central-compensation-administration-function",
+                  "name": "Receiver General and central compensation administration function",
+                  "amount": 0.087825
+                },
+                {
+                  "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote1-linguistic-services",
+                  "name": "Linguistic services",
+                  "amount": 0.041701
+                },
+                {
+                  "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote1-e-procurement-solution",
+                  "name": "e-Procurement Solution",
+                  "amount": 0.029191
+                },
+                {
+                  "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote1-cape-breton-operation",
+                  "name": "Cape Breton operation",
+                  "amount": 0.024934
+                },
+                {
+                  "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote1-cost-and-profit-assurance-program",
+                  "name": "Cost and profit assurance program",
+                  "amount": 0.002585
+                },
+                {
+                  "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote1-innovative-solutions-canada",
+                  "name": "Innovative Solutions Canada",
+                  "amount": 0.00095
+                }
+              ]
             },
             {
               "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote5",
-              "name": "Vote 5",
-              "amount": 1.150464
+              "name": "Capital expenditures",
+              "vote": "Vote 5",
+              "children": [
+                {
+                  "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote5-capital-budget",
+                  "name": "Capital budget",
+                  "amount": 0.865422
+                },
+                {
+                  "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote5-real-property-capital-leases",
+                  "name": "Real property capital leases",
+                  "amount": 0.122618
+                },
+                {
+                  "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote5-real-property-refit-fit-up",
+                  "name": "Real property refit / fit-up",
+                  "amount": 0.116568
+                },
+                {
+                  "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote5-post-implementation-of-pay-system",
+                  "name": "Post implementation of pay system",
+                  "amount": 0.045856
+                }
+              ]
             },
             {
               "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-voteStatutory",
               "name": "Statutory amounts",
+              "vote": "Statutory amounts",
               "amount": 0.438651
             }
           ]
@@ -88,12 +163,14 @@
           "children": [
             {
               "id": "public-services-and-procurement-canada-national-capital-commission-vote1",
-              "name": "Vote 1",
+              "name": "Payments to the Commission for operating expenditures",
+              "vote": "Vote 1",
               "amount": 0.083395
             },
             {
               "id": "public-services-and-procurement-canada-national-capital-commission-vote5",
-              "name": "Vote 5",
+              "name": "Payments to the Commission for capital expenditures",
+              "vote": "Vote 5",
               "amount": 0.070319
             }
           ]
@@ -104,7 +181,8 @@
           "children": [
             {
               "id": "public-services-and-procurement-canada-canada-post-corporation-vote1",
-              "name": "Vote 1",
+              "name": "Payments to the Corporation for special purposes",
+              "vote": "Vote 1",
               "amount": 0.02221
             }
           ]
