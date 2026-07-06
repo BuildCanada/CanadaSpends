@@ -1,9 +1,9 @@
 {
   "financialYearEnding": 2022,
   "units": "billions_cad",
-  "vol1Total": 493.406,
+  "vol1Total": 503.592,
   "vol2MinistrySum": 386.290511,
-  "difference": 107.115489,
+  "difference": 117.301489,
   "items": [
     {
       "id": "recon-2022-carbon-tax-rebate",
@@ -36,10 +36,16 @@
       "note": "Vol I consolidated expense line, not present in Vol II appropriations."
     },
     {
+      "id": "recon-2022-net-actuarial-losses",
+      "name": "Net actuarial losses",
+      "amount": 10.186,
+      "note": "Vol I consolidated expense line, not present in Vol II appropriations."
+    },
+    {
       "id": "recon-2022-remainder",
       "name": "Consolidation, accrual and gross/net adjustments",
       "amount": 0.279489,
-      "note": "Unattributed remainder: consolidated Crown corporations, accrual items, and gross (Vol II) vs net (Vol I) presentation differences."
+      "note": "Unattributed remainder: consolidated Crown corporations, accrual items, and gross (Vol II) vs net (Vol I) presentation differences. Equals the spending Sankey's \"Accounting and consolidation adjustments\" leaf."
     }
   ]
 }

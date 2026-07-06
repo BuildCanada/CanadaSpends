@@ -1,6 +1,6 @@
 {
-  "total": 532.30067,
-  "spending": 532.30067,
+  "total": 521.425,
+  "spending": 521.425,
   "revenue": 459.549,
   "spending_data": {
     "id": "spending",
@@ -447,6 +447,11 @@
             "id": "net-interest-on-debt",
             "name": "Net Interest on Debt",
             "amount": 47.273
+          },
+          {
+            "id": "net-actuarial-losses",
+            "name": "Net actuarial losses",
+            "amount": 7.489
           }
         ]
       },
@@ -465,6 +470,11 @@
             "amount": 1.029201
           }
         ]
+      },
+      {
+        "id": "accounting-basis-adjustments",
+        "name": "Accounting and consolidation adjustments",
+        "amount": -25.85367
       },
       {
         "id": "safety",
@@ -548,11 +558,6 @@
                 "amount": 3.691224
               }
             ]
-          },
-          {
-            "id": "net-actuarial-losses",
-            "name": "Net actuarial losses",
-            "amount": -7.489
           },
           {
             "id": "functioning-of-government",

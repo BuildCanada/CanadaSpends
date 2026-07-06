@@ -151,11 +151,19 @@ export default async function FederalYearOverview({
                 value={<InflationValue nominal={summary.totalRevenue} />}
                 subtitle={<Trans>consolidated federal revenue (Vol I)</Trans>}
               />
-              <StatCard
-                title={<Trans>Deficit in FY {summary.financialYear}</Trans>}
-                value={<InflationValue nominal={summary.deficit} />}
-                subtitle={<Trans>revenue minus spending (Vol I)</Trans>}
-              />
+              {summary.deficit < 0 ? (
+                <StatCard
+                  title={<Trans>Surplus in FY {summary.financialYear}</Trans>}
+                  value={<InflationValue nominal={Math.abs(summary.deficit)} />}
+                  subtitle={<Trans>revenue minus spending (Vol I)</Trans>}
+                />
+              ) : (
+                <StatCard
+                  title={<Trans>Deficit in FY {summary.financialYear}</Trans>}
+                  value={<InflationValue nominal={Math.abs(summary.deficit)} />}
+                  subtitle={<Trans>spending minus revenue (Vol I)</Trans>}
+                />
+              )}
             </StatCardContainer>
           </Section>
 

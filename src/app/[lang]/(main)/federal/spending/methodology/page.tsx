@@ -82,6 +82,44 @@ export default async function FederalMethodologyPage(props: PageLangParam) {
 
         <Section>
           <H2>
+            <Trans>Net actuarial losses and the published total</Trans>
+          </H2>
+          <P>
+            <Trans>
+              Total spending equals the published Consolidated Statement of
+              Operations total expenses, which include net actuarial losses on
+              pensions and future benefits. In the source statement this line is
+              stored sign-inverted (a loss is shown as a negative number), so we
+              normalize it to a positive cost and place it under Obligations,
+              alongside net interest on debt. With this line included, headline
+              total spending, total revenue, and the deficit match the published
+              statement exactly, and revenue minus spending equals the published
+              Annual operating deficit for every year (a surplus year would show
+              a negative deficit, labelled as a surplus).
+            </Trans>
+          </P>
+        </Section>
+
+        <Section>
+          <H2>
+            <Trans>Accounting and consolidation adjustments</Trans>
+          </H2>
+          <P>
+            <Trans>
+              The spending Sankey mixes Volume II gross ministry expenditures
+              with Volume I consolidated items, so its leaves do not naturally
+              sum to the Volume I headline. A single top-level &ldquo;Accounting
+              and consolidation adjustments&rdquo; leaf reconciles the tree to
+              the published total; it captures the gross (Volume II) versus
+              consolidated net (Volume I) difference and may be negative. This
+              leaf equals the unattributed remainder in the reconciliation table
+              below, so the Sankey and the reconciliation stay consistent.
+            </Trans>
+          </P>
+        </Section>
+
+        <Section>
+          <H2>
             <Trans>Curation differences from the previous site</Trans>
           </H2>
           <P>

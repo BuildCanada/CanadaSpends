@@ -36,9 +36,12 @@ module PbCli
       MESO_RECON_TOLERANCE_B = 0.05
 
       # Known published consolidated totals ($B) for headline validation.
-      # 2024 is the site's current anchor; others documented in export_errors.md.
+      # 2024 is the site's anchor: total expenses INCLUDING net actuarial losses
+      # (521.425) and total revenues (459.549), per the published Consolidated
+      # Statement of Operations. The retired 513.94 anchor excluded net actuarial
+      # losses (source-correction, see docs/specs/federal-parity-report-2024.md).
       PUBLISHED_TOTALS = {
-        2024 => { spending: 513.94, revenue: 459.53 }
+        2024 => { spending: 521.425, revenue: 459.549 }
       }.freeze
 
       def initialize(paths = {})
@@ -155,6 +158,7 @@ module PbCli
         years.each do |year|
           @vol1_spending[year] = @vol1.year?(year) ? @vol1.total_spending(year) : nil
           @vol1_revenue[year] = @vol1.year?(year) ? @vol1.total_revenue(year) : nil
+          assert_vol1_consistency(year) if @vol1.year?(year)
           slug_dollars = Hash.new(0.0)
           allotments_for(year).each do |row|
             next if row['is_total_or_subtotal']
@@ -225,6 +229,21 @@ module PbCli
         return override if override && valid_slugs.include?(override)
 
         @mapping.meso_portfolio_slug(row.portfolio)
+      end
+
+      # Hard export validation (consolidated-statement-alignment spec): for every
+      # year the published total_spending - total_revenue must equal the published
+      # "Annual operating deficit" line to within $1M, else the year is blocked.
+      def assert_vol1_consistency(year)
+        delta = @vol1.consistency_delta(year)
+        return if delta <= 0.001
+
+        record_error(year, format(
+          'Vol I identity fails: spending %.3f - revenue %.3f = %.3f != published deficit %.3f (Δ %.4fB > $1M)',
+          @vol1.total_spending(year), @vol1.total_revenue(year),
+          @vol1.total_spending(year) - @vol1.total_revenue(year),
+          @vol1.published_deficit(year), delta
+        ))
       end
 
       # A year cannot be exported if it has mapping errors or lacks Vol I data.
@@ -307,12 +326,33 @@ module PbCli
 
       def build_sankey_trees(year)
         themes = @mapping.themes.map { |t| build_node(year, t) }
+        total = @vol1.total_spending(year)
+        add_accounting_adjustments_leaf(year, themes, total)
         spending = {
           'id' => 'spending', 'name' => 'Spending',
-          'amount' => sum_amounts(themes), 'children' => themes
+          # Declared total is the published headline (== summary.totalSpending);
+          # the adjustments leaf makes the children sum to it exactly.
+          'amount' => total, 'children' => themes
         }
         revenue = build_revenue_tree(year)
         [spending, revenue]
+      end
+
+      # After the thematic tree (Vol II nodes post-offset + Vol I leaves) is
+      # built, one top-level leaf reconciles the leaf sum to the published
+      # headline so the Sankey spending column equals summary.totalSpending. The
+      # residual is the Vol II gross vs Vol I consolidated difference already
+      # decomposed in reconciliation.json (it equals that file's unattributed
+      # remainder item); FY2024 ≈ -10.9B. Emit nothing when |residual| < $1M.
+      def add_accounting_adjustments_leaf(year, themes, total)
+        residual = PbCli::Export::Units.round_billions(total - sum_amounts(themes))
+        return if residual.abs < 0.001
+
+        themes << {
+          'id' => 'accounting-basis-adjustments',
+          'name' => 'Accounting and consolidation adjustments',
+          'amount' => residual
+        }
       end
 
       def build_node(year, node)
@@ -370,7 +410,15 @@ module PbCli
         statement.zero? ? 1.0 : statement / cash_sum
       end
 
+      # A rule may set `negate: true` to sign-normalize a statement line that is
+      # stored inverted (net actuarial losses: a loss is negative in the CSV, so
+      # negate turns it into a positive expense).
       def vol1_rule_dollars(year, rule)
+        dollars = raw_vol1_rule_dollars(year, rule)
+        rule['negate'] ? -dollars : dollars
+      end
+
+      def raw_vol1_rule_dollars(year, rule)
         if rule['vol1_line']
           @vol1.line_amount(year, rule['vol1_line'])
         elsif rule['vol1_dataset_column']
@@ -511,7 +559,7 @@ module PbCli
           'id' => "recon-#{year}-remainder",
           'name' => 'Consolidation, accrual and gross/net adjustments',
           'amount' => PbCli::Export::Units.round_billions(difference - named_sum),
-          'note' => 'Unattributed remainder: consolidated Crown corporations, accrual items, and gross (Vol II) vs net (Vol I) presentation differences.'
+          'note' => 'Unattributed remainder: consolidated Crown corporations, accrual items, and gross (Vol II) vs net (Vol I) presentation differences. Equals the spending Sankey\'s "Accounting and consolidation adjustments" leaf.'
         }
 
         {
@@ -525,17 +573,23 @@ module PbCli
       end
 
       # Vol I-sourced nodes WITHOUT an offset are genuinely outside Vol II
-      # appropriations (tax-system / specified-purpose-account items) — they
-      # are the named part of the Vol I ↔ Vol II difference. Net actuarial
-      # losses are excluded from the Vol I headline total, so not an item.
+      # appropriations (tax-system / specified-purpose-account items, plus net
+      # actuarial losses) — they are the named part of the Vol I ↔ Vol II
+      # difference. Net actuarial losses are now inside the Vol I headline total,
+      # so they are a named item here (sign-normalized to a positive expense to
+      # match the Sankey leaf). This set equals the non-offset Vol I leaves in
+      # the spending tree, so difference - Σ(items) equals the tree's
+      # accounting-basis-adjustments leaf.
       def vol1_only_items(year)
         @mapping.vol1_rules
-                .reject { |r| r['offset_node'] || r['node_id'] == 'net-actuarial-losses' }
+                .reject { |r| r['offset_node'] }
                 .map do |rule|
+          amount = @vol1.line_amount_billions(year, rule['vol1_line'])
+          amount = PbCli::Export::Units.round_billions(-amount) if rule['negate']
           {
             'id' => "recon-#{year}-#{rule['node_id']}",
             'name' => Array(rule['vol1_line']).first,
-            'amount' => @vol1.line_amount_billions(year, rule['vol1_line']),
+            'amount' => amount,
             'note' => 'Vol I consolidated expense line, not present in Vol II appropriations.'
           }
         end

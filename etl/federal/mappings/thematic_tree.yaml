@@ -336,14 +336,6 @@ themes:
             # Finance ministry in Public Accounts and has no current node.
             rules:
               - organization: Office of the Auditor General
-      - id: net-actuarial-losses
-        name_en: Net actuarial losses
-        rules:
-          # Stored as presented in the statement CSV (negative in gain years —
-          # FY2024 is -7.49, matching the current site). No sign flip.
-          - source: vol1
-            vol1_line: Net actuarial losses
-            vol1_hint: Net actuarial losses on pensions and future benefits (accrual item, Vol I only)
 
   - id: transfers-to-provinces
     name_en: Transfers to Provinces
@@ -417,6 +409,18 @@ themes:
           - source: vol1
             vol1_line: Public debt charges
             offset_node: other-major-transfers
+      - id: net-actuarial-losses
+        name_en: Net actuarial losses
+        rules:
+          # Net actuarial losses on pensions and future benefits (accrual item,
+          # Vol I only). The statement CSV stores this lvl1 section sign-inverted
+          # (a loss is negative — FY2024 -7489 = a $7.489B loss), so `negate`
+          # presents it as a positive cost alongside net interest on debt. A
+          # genuine actuarial GAIN year would be negative here, which is truthful.
+          - source: vol1
+            vol1_line: Net actuarial losses
+            vol1_hint: Net actuarial losses on pensions and future benefits (accrual item, Vol I only)
+            negate: true
 
   - id: defence
     name_en: Defence

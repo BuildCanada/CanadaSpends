@@ -1,6 +1,6 @@
 {
-  "total": 303.094199,
-  "spending": 303.094199,
+  "total": 330.177,
+  "spending": 330.177,
   "revenue": 311.216,
   "spending_data": {
     "id": "spending",
@@ -424,6 +424,22 @@
         ]
       },
       {
+        "id": "obligations",
+        "name": "Obligations",
+        "children": [
+          {
+            "id": "net-interest-on-debt",
+            "name": "Net Interest on Debt",
+            "amount": 21.889
+          },
+          {
+            "id": "net-actuarial-losses",
+            "name": "Net actuarial losses",
+            "amount": 10.352
+          }
+        ]
+      },
+      {
         "id": "defence",
         "name": "Defence",
         "children": [
@@ -436,17 +452,6 @@
             "id": "communications-security-establishment",
             "name": "Communications Security Establishment",
             "amount": 0.0
-          }
-        ]
-      },
-      {
-        "id": "obligations",
-        "name": "Obligations",
-        "children": [
-          {
-            "id": "net-interest-on-debt",
-            "name": "Net Interest on Debt",
-            "amount": 21.889
           }
         ]
       },
@@ -509,35 +514,9 @@
         ]
       },
       {
-        "id": "indigenous-priorities",
-        "name": "Indigenous Priorities",
-        "children": [
-          {
-            "id": "crown-indigenous-relations",
-            "name": "Crown-Indigenous Relations",
-            "amount": 8.05332
-          },
-          {
-            "id": "indigenous-well-being",
-            "name": "Indigenous Well-Being + Self Determination",
-            "amount": 4.300828
-          }
-        ]
-      },
-      {
-        "id": "international-affairs",
-        "name": "International Affairs",
-        "amount": 6.811176
-      },
-      {
         "id": "other",
         "name": "Other",
         "children": [
-          {
-            "id": "net-actuarial-losses",
-            "name": "Net actuarial losses",
-            "amount": -10.352
-          },
           {
             "id": "public-works-government-services",
             "name": "Public Works + Government Services",
@@ -586,6 +565,32 @@
             ]
           }
         ]
+      },
+      {
+        "id": "indigenous-priorities",
+        "name": "Indigenous Priorities",
+        "children": [
+          {
+            "id": "crown-indigenous-relations",
+            "name": "Crown-Indigenous Relations",
+            "amount": 8.05332
+          },
+          {
+            "id": "indigenous-well-being",
+            "name": "Indigenous Well-Being + Self Determination",
+            "amount": 4.300828
+          }
+        ]
+      },
+      {
+        "id": "international-affairs",
+        "name": "International Affairs",
+        "amount": 6.811176
+      },
+      {
+        "id": "accounting-basis-adjustments",
+        "name": "Accounting and consolidation adjustments",
+        "amount": 6.378801
       }
     ]
   },

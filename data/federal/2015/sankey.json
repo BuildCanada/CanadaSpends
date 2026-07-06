@@ -1,6 +1,6 @@
 {
-  "total": 271.509108,
-  "spending": 271.509108,
+  "total": 280.455,
+  "spending": 280.455,
   "revenue": 279.905,
   "spending_data": {
     "id": "spending",
@@ -431,6 +431,11 @@
             "id": "net-interest-on-debt",
             "name": "Net Interest on Debt",
             "amount": 24.207
+          },
+          {
+            "id": "net-actuarial-losses",
+            "name": "Net actuarial losses",
+            "amount": 7.584
           }
         ]
       },
@@ -509,27 +514,6 @@
         ]
       },
       {
-        "id": "indigenous-priorities",
-        "name": "Indigenous Priorities",
-        "children": [
-          {
-            "id": "crown-indigenous-relations",
-            "name": "Crown-Indigenous Relations",
-            "amount": 7.707586
-          },
-          {
-            "id": "indigenous-well-being",
-            "name": "Indigenous Well-Being + Self Determination",
-            "amount": 0.0
-          }
-        ]
-      },
-      {
-        "id": "international-affairs",
-        "name": "International Affairs",
-        "amount": 6.240523
-      },
-      {
         "id": "other",
         "name": "Other",
         "children": [
@@ -548,11 +532,6 @@
                 "amount": 2.409038
               }
             ]
-          },
-          {
-            "id": "net-actuarial-losses",
-            "name": "Net actuarial losses",
-            "amount": -7.584
           },
           {
             "id": "functioning-of-government",
@@ -586,6 +565,32 @@
             ]
           }
         ]
+      },
+      {
+        "id": "indigenous-priorities",
+        "name": "Indigenous Priorities",
+        "children": [
+          {
+            "id": "crown-indigenous-relations",
+            "name": "Crown-Indigenous Relations",
+            "amount": 7.707586
+          },
+          {
+            "id": "indigenous-well-being",
+            "name": "Indigenous Well-Being + Self Determination",
+            "amount": 0.0
+          }
+        ]
+      },
+      {
+        "id": "international-affairs",
+        "name": "International Affairs",
+        "amount": 6.240523
+      },
+      {
+        "id": "accounting-basis-adjustments",
+        "name": "Accounting and consolidation adjustments",
+        "amount": -6.222108
       }
     ]
   },

@@ -246,10 +246,11 @@ const THEME_REASONS = {
   Safety:
     "basis — RCMP/Justice gross Vol II expenditures vs site net program cost",
   Other:
-    "basis + mapping — PSPC/SSC/TBS gross vs net; audit-agents/OAG (+0.14) deliberate addition",
+    "basis + mapping + source-correction — PSPC/SSC/TBS gross vs net; audit-agents/OAG (+0.14) deliberate addition; net actuarial losses (previously a -7.489B leaf here) relocated to Obligations, raising this theme by ~7.49B",
   "Transfers to Provinces":
     "mapping — Vol I 'other major transfers' kept in administrative ministries to avoid double-count; equalization/fiscal-stabilization vintage offset",
-  Obligations: "exact — Vol I public debt charges",
+  Obligations:
+    "source-correction — Vol I public debt charges (47.273) PLUS net actuarial losses (7.489), relocated here sign-normalized to a positive expense; the curated site showed debt charges only (47.27)",
   Defence: "basis — gross vs net",
   "Indigenous Priorities":
     "source-correction — generated includes the FY2024 $20.00B 'Compensation for First Nations children' ISC payment the curated tree omitted",
@@ -277,8 +278,11 @@ function buildReport(baseline) {
   const summary = loadJson(path.join(DATA_DIR, "summary.json"));
   const sankey = loadJson(path.join(DATA_DIR, "sankey.json"));
 
+  // Sankey parent amounts are stripped (leaf-only D3 contract), so sum leaves
+  // per top-level theme to recover the theme total.
   const genThemes = {};
-  for (const c of sankey.spending_data.children) genThemes[c.name] = c.amount;
+  for (const c of sankey.spending_data.children)
+    genThemes[c.name] = round(sumLeaves(c));
 
   const genMinistry = {};
   for (const m of summary.ministries) genMinistry[m.slug] = m;
@@ -301,16 +305,36 @@ function buildReport(baseline) {
   lines.push("");
   lines.push("| Metric | Current site | Generated | Δ | Reason |");
   lines.push("|---|--:|--:|--:|---|");
+  // Old site's deficit StatCard was revenue − spending on the actuarial-
+  // EXCLUDING basis; the generated deficit is the published Annual operating
+  // deficit (positive = shortfall), which INCLUDES net actuarial losses.
+  const oldDeficitShortfall = round(baseline.headline.spending - baseline.revenueTotal);
   const headRows = [
-    ["Total spending", baseline.headline.spending, summary.totalSpending],
-    ["Total revenue", baseline.revenueTotal, summary.totalRevenue],
+    [
+      "Total spending",
+      baseline.headline.spending,
+      summary.totalSpending,
+      "source-correction — generated total expenses now INCLUDE net actuarial losses (FY2024 +7.489B) per the published Consolidated Statement of Operations (521.425B); the hardcoded site and the retired 513.94 anchor excluded them",
+    ],
+    ["Total revenue", baseline.revenueTotal, summary.totalRevenue, null],
+    [
+      "Deficit (shortfall)",
+      oldDeficitShortfall,
+      summary.deficit,
+      "source-correction — deficit is now the published Annual operating deficit (61.876B), which includes net actuarial losses; the old StatCard showed revenue−spending on the actuarial-excluding basis (54.39B)",
+    ],
   ];
-  for (const [name, cur, gen] of headRows) {
+  for (const [name, cur, gen, fixedReason] of headRows) {
     const d = gen - cur;
+    const reason = fixedReason || (Math.abs(d) <= 0.1 ? "rounding" : "basis");
     lines.push(
-      `| ${name} | ${fmt(cur)} | ${fmt(gen)} | ${d >= 0 ? "+" : ""}${fmt(d)} | ${Math.abs(d) <= 0.1 ? "rounding" : "basis"} |`,
+      `| ${name} | ${fmt(cur)} | ${fmt(gen)} | ${d >= 0 ? "+" : ""}${fmt(d)} | ${reason} |`,
     );
   }
+  lines.push("");
+  lines.push(
+    "Headline change vs the old site (reason `source-correction`): the hardcoded site under-reported total expenses by excluding **net actuarial losses** (a Vol I level-1 section stored sign-inverted). The generated headline now matches the published statement — total expenses **521.425B**, revenues **459.549B**, Annual operating deficit **61.876B** — and the identity `totalSpending − totalRevenue == deficit` is enforced as a hard export validation for every year.",
+  );
   lines.push("");
 
   // Theme totals
@@ -334,6 +358,12 @@ function buildReport(baseline) {
     if (reason === "unexplained") unexplained.push(`Theme "${name}" Δ${fmt(d)}`);
     lines.push(
       `| ${name} | ${fmt(cur)} | ${fmt(gen)} | ${d >= 0 ? "+" : ""}${fmt(d)} | ${reason} |`,
+    );
+  }
+  const adj = genThemes["Accounting and consolidation adjustments"];
+  if (adj != null) {
+    lines.push(
+      `| Accounting and consolidation adjustments | — | ${fmt(adj)} | — | source-correction — new top-level reconciling leaf making the spending tree sum to the published headline (Vol II gross vs Vol I consolidated difference; == reconciliation.json remainder). No curated counterpart. |`,
     );
   }
   lines.push("");

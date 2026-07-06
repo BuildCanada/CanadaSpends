@@ -6,24 +6,28 @@ Compares the values the **hardcoded FY2024 site** displayed against the **genera
 
 ## Headline totals (Volume I consolidated)
 
-| Metric         | Current site | Generated |     Δ | Reason   |
-| -------------- | -----------: | --------: | ----: | -------- |
-| Total spending |       513.94 |    513.94 | -0.00 | rounding |
-| Total revenue  |       459.54 |    459.55 | +0.01 | rounding |
+| Metric              | Current site | Generated |     Δ | Reason                                                                                                                                                                                                                           |
+| ------------------- | -----------: | --------: | ----: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Total spending      |       513.94 |    521.42 | +7.48 | source-correction — generated total expenses now INCLUDE net actuarial losses (FY2024 +7.489B) per the published Consolidated Statement of Operations (521.425B); the hardcoded site and the retired 513.94 anchor excluded them |
+| Total revenue       |       459.54 |    459.55 | +0.01 | rounding                                                                                                                                                                                                                         |
+| Deficit (shortfall) |        54.40 |     61.88 | +7.48 | source-correction — deficit is now the published Annual operating deficit (61.876B), which includes net actuarial losses; the old StatCard showed revenue−spending on the actuarial-excluding basis (54.39B)                     |
+
+Headline change vs the old site (reason `source-correction`): the hardcoded site under-reported total expenses by excluding **net actuarial losses** (a Vol I level-1 section stored sign-inverted). The generated headline now matches the published statement — total expenses **521.425B**, revenues **459.549B**, Annual operating deficit **61.876B** — and the identity `totalSpending − totalRevenue == deficit` is enforced as a hard export validation for every year.
 
 ## Sankey theme totals ($B)
 
-| Theme                          | Current site | Generated |      Δ | Reason                                                                                                                                            |
-| ------------------------------ | -----------: | --------: | -----: | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Economy and Standard of Living |       120.09 |    118.44 |  -1.65 | basis — Vol II cash vs Vol I accrual for ESDC/ELCC carve-outs; small curation drift                                                               |
-| Social Security                |       120.24 |    120.25 |  +0.01 | rounding                                                                                                                                          |
-| Safety                         |        22.69 |     25.40 |  +2.72 | basis — RCMP/Justice gross Vol II expenditures vs site net program cost                                                                           |
-| Other                          |         6.86 |     10.02 |  +3.17 | basis + mapping — PSPC/SSC/TBS gross vs net; audit-agents/OAG (+0.14) deliberate addition                                                         |
-| Transfers to Provinces         |       100.30 |     93.85 |  -6.45 | mapping — Vol I 'other major transfers' kept in administrative ministries to avoid double-count; equalization/fiscal-stabilization vintage offset |
-| Obligations                    |        47.27 |     47.27 |  +0.00 | exact — Vol I public debt charges                                                                                                                 |
-| Defence                        |        34.48 |     34.85 |  +0.37 | basis — gross vs net                                                                                                                              |
-| Indigenous Priorities          |        42.84 |     62.96 | +20.12 | source-correction — generated includes the FY2024 $20.00B 'Compensation for First Nations children' ISC payment the curated tree omitted          |
-| International Affairs          |        19.20 |     19.26 |  +0.06 | rounding                                                                                                                                          |
+| Theme                                    | Current site | Generated |      Δ | Reason                                                                                                                                                                                                                      |
+| ---------------------------------------- | -----------: | --------: | -----: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Economy and Standard of Living           |       120.09 |    118.44 |  -1.65 | basis — Vol II cash vs Vol I accrual for ESDC/ELCC carve-outs; small curation drift                                                                                                                                         |
+| Social Security                          |       120.24 |    120.25 |  +0.01 | rounding                                                                                                                                                                                                                    |
+| Safety                                   |        22.69 |     25.40 |  +2.72 | basis — RCMP/Justice gross Vol II expenditures vs site net program cost                                                                                                                                                     |
+| Other                                    |         6.86 |     17.51 | +10.66 | basis + mapping + source-correction — PSPC/SSC/TBS gross vs net; audit-agents/OAG (+0.14) deliberate addition; net actuarial losses (previously a -7.489B leaf here) relocated to Obligations, raising this theme by ~7.49B |
+| Transfers to Provinces                   |       100.30 |     93.85 |  -6.45 | mapping — Vol I 'other major transfers' kept in administrative ministries to avoid double-count; equalization/fiscal-stabilization vintage offset                                                                           |
+| Obligations                              |        47.27 |     54.76 |  +7.49 | source-correction — Vol I public debt charges (47.273) PLUS net actuarial losses (7.489), relocated here sign-normalized to a positive expense; the curated site showed debt charges only (47.27)                           |
+| Defence                                  |        34.48 |     34.85 |  +0.37 | basis — gross vs net                                                                                                                                                                                                        |
+| Indigenous Priorities                    |        42.84 |     62.96 | +20.12 | source-correction — generated includes the FY2024 $20.00B 'Compensation for First Nations children' ISC payment the curated tree omitted                                                                                    |
+| International Affairs                    |        19.20 |     19.26 |  +0.06 | rounding                                                                                                                                                                                                                    |
+| Accounting and consolidation adjustments |            — |    -25.85 |      — | source-correction — new top-level reconciling leaf making the spending tree sum to the published headline (Vol II gross vs Vol I consolidated difference; == reconciliation.json remainder). No curated counterpart.        |
 
 ## Department totals & share of federal spending
 
@@ -31,20 +35,20 @@ Current site total = first StatCard on each hardcoded page (or MiniSankey total)
 
 | Department                               | Cur total $B | Gen total $B |     Δ | Cur % | Gen % |    Δ% | Reason                                                                                                                                           |
 | ---------------------------------------- | -----------: | -----------: | ----: | ----: | ----: | ----: | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| canada-revenue-agency                    |        16.80 |        17.29 | +0.49 |  3.20 |  3.37 | +0.17 | basis — Vol II appropriations (gross) vs the site's curated/net figure                                                                           |
-| department-of-finance                    |       136.10 |       136.11 | +0.01 | 26.40 | 26.48 | +0.08 | rounding                                                                                                                                         |
-| employment-and-social-development-canada |        94.48 |        97.28 | +2.80 | 18.40 | 18.93 | +0.53 | basis — Vol II appropriations (gross) vs the site's curated/net figure                                                                           |
-| global-affairs-canada                    |        19.20 |        19.26 | +0.06 |  3.70 |  3.75 | +0.05 | rounding                                                                                                                                         |
-| health-canada                            |        13.70 |        13.96 | +0.26 |  2.70 |  2.72 | +0.02 | basis — Vol II appropriations (gross) vs the site's curated/net figure                                                                           |
-| housing-infrastructure-communities       |        14.50 |        14.56 | +0.06 |  2.80 |  2.83 | +0.03 | rounding                                                                                                                                         |
-| immigration-refugees-and-citizenship     |         6.30 |         6.35 | +0.05 |  1.20 |  1.24 | +0.04 | rounding                                                                                                                                         |
-| indigenous-services-and-northern-affairs |        63.00 |        63.03 | +0.03 | 12.30 | 12.26 | -0.04 | source-correction — Public Accounts includes the FY2024 ~$20B ISC First Nations children compensation payment omitted from the curated site tree |
-| innovation-science-and-industry          |        10.20 |        10.47 | +0.27 |  2.00 |  2.04 | +0.04 | basis — Vol II appropriations (gross) vs the site's curated/net figure                                                                           |
-| national-defence                         |        34.50 |        34.85 | +0.35 |  6.70 |  6.78 | +0.08 | basis — Vol II appropriations (gross) vs the site's curated/net figure                                                                           |
-| public-safety-canada                     |        13.90 |        16.09 | +2.19 |  2.70 |  3.13 | +0.43 | basis — Vol II appropriations (gross) vs the site's curated/net figure                                                                           |
-| public-services-and-procurement-canada   |         8.30 |        10.68 | +2.38 |  1.60 |  2.08 | +0.48 | basis — Vol II appropriations (gross) vs the site's curated/net figure                                                                           |
-| transport-canada                         |         5.10 |         5.20 | +0.10 |  1.00 |  1.01 | +0.01 | rounding                                                                                                                                         |
-| veterans-affairs                         |         6.10 |         6.07 | -0.03 |  1.20 |  1.18 | -0.02 | rounding                                                                                                                                         |
+| canada-revenue-agency                    |        16.80 |        17.29 | +0.49 |  3.20 |  3.32 | +0.12 | basis — Vol II appropriations (gross) vs the site's curated/net figure                                                                           |
+| department-of-finance                    |       136.10 |       136.11 | +0.01 | 26.40 | 26.10 | -0.30 | basis — Vol II appropriations (gross) vs the site's curated/net figure                                                                           |
+| employment-and-social-development-canada |        94.48 |        97.28 | +2.80 | 18.40 | 18.66 | +0.26 | basis — Vol II appropriations (gross) vs the site's curated/net figure                                                                           |
+| global-affairs-canada                    |        19.20 |        19.26 | +0.06 |  3.70 |  3.69 | -0.01 | rounding                                                                                                                                         |
+| health-canada                            |        13.70 |        13.96 | +0.26 |  2.70 |  2.68 | -0.02 | basis — Vol II appropriations (gross) vs the site's curated/net figure                                                                           |
+| housing-infrastructure-communities       |        14.50 |        14.56 | +0.06 |  2.80 |  2.79 | -0.01 | rounding                                                                                                                                         |
+| immigration-refugees-and-citizenship     |         6.30 |         6.35 | +0.05 |  1.20 |  1.22 | +0.02 | rounding                                                                                                                                         |
+| indigenous-services-and-northern-affairs |        63.00 |        63.03 | +0.03 | 12.30 | 12.09 | -0.21 | source-correction — Public Accounts includes the FY2024 ~$20B ISC First Nations children compensation payment omitted from the curated site tree |
+| innovation-science-and-industry          |        10.20 |        10.01 | -0.19 |  2.00 |  1.92 | -0.08 | basis — Vol II appropriations (gross) vs the site's curated/net figure                                                                           |
+| national-defence                         |        34.50 |        34.85 | +0.35 |  6.70 |  6.68 | -0.02 | basis — Vol II appropriations (gross) vs the site's curated/net figure                                                                           |
+| public-safety-canada                     |        13.90 |        16.09 | +2.19 |  2.70 |  3.09 | +0.39 | basis — Vol II appropriations (gross) vs the site's curated/net figure                                                                           |
+| public-services-and-procurement-canada   |         8.30 |        10.68 | +2.38 |  1.60 |  2.05 | +0.45 | basis — Vol II appropriations (gross) vs the site's curated/net figure                                                                           |
+| transport-canada                         |         5.10 |         5.20 | +0.10 |  1.00 |  1.00 | -0.00 | rounding                                                                                                                                         |
+| veterans-affairs                         |         6.10 |         6.07 | -0.03 |  1.20 |  1.16 | -0.04 | rounding                                                                                                                                         |
 
 ## Department MiniSankey & entity breakdowns
 
@@ -60,7 +64,7 @@ The hardcoded MiniSankey leaves were curated program-level groupings; the genera
 | housing-infrastructure-communities       |             14.50 |             14.56 |         12 |          4 |            4 |            4 | basis — Vol II votes/allotments vs curated program leaves |
 | immigration-refugees-and-citizenship     |              6.34 |              6.35 |         14 |          2 |            2 |            2 | basis — Vol II votes/allotments vs curated program leaves |
 | indigenous-services-and-northern-affairs |             63.01 |             63.03 |         13 |          4 |            4 |            4 | basis — Vol II votes/allotments vs curated program leaves |
-| innovation-science-and-industry          |             10.22 |             10.47 |         14 |         10 |           10 |           10 | basis — Vol II votes/allotments vs curated program leaves |
+| innovation-science-and-industry          |             10.22 |             10.01 |         14 |          9 |           10 |            9 | basis — Vol II votes/allotments vs curated program leaves |
 | national-defence                         |             34.49 |             34.85 |         14 |          4 |            4 |            4 | basis — Vol II votes/allotments vs curated program leaves |
 | public-safety-canada                     |             13.91 |             16.09 |         14 |         13 |           14 |           13 | basis — Vol II votes/allotments vs curated program leaves |
 | public-services-and-procurement-canada   |              8.29 |             10.68 |         14 |          4 |            4 |            4 | basis — Vol II votes/allotments vs curated program leaves |
@@ -75,10 +79,9 @@ The hardcoded `FederalSpendingChart` series ran FY1995–2024 (10 of 14 pages ha
 
 Reason-code counts across compared theme + department rows:
 
-- **basis**: 11
+- **basis**: 12
 - **mapping**: 1
-- **rounding**: 8
-- **source-correction**: 2
-- **exact**: 1
+- **rounding**: 7
+- **source-correction**: 3
 
 **No `unexplained` rows.** Every material mismatch carries a `basis`, `mapping`, `rounding`, or `source-correction` code, consistent with spec §11 acceptance. All department deltas roll up into the documented theme-level differences (NOTES.md Wave 2.5).

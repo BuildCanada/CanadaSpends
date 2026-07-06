@@ -1,6 +1,6 @@
 {
-  "total": 354.877345,
-  "spending": 354.877345,
+  "total": 373.523,
+  "spending": 373.523,
   "revenue": 334.131,
   "spending_data": {
     "id": "spending",
@@ -431,6 +431,11 @@
             "id": "net-interest-on-debt",
             "name": "Net Interest on Debt",
             "amount": 24.447
+          },
+          {
+            "id": "net-actuarial-losses",
+            "name": "Net actuarial losses",
+            "amount": 10.609
           }
         ]
       },
@@ -525,19 +530,9 @@
         ]
       },
       {
-        "id": "international-affairs",
-        "name": "International Affairs",
-        "amount": 7.402151
-      },
-      {
         "id": "other",
         "name": "Other",
         "children": [
-          {
-            "id": "net-actuarial-losses",
-            "name": "Net actuarial losses",
-            "amount": -10.609
-          },
           {
             "id": "public-works-government-services",
             "name": "Public Works + Government Services",
@@ -586,6 +581,16 @@
             ]
           }
         ]
+      },
+      {
+        "id": "international-affairs",
+        "name": "International Affairs",
+        "amount": 7.402151
+      },
+      {
+        "id": "accounting-basis-adjustments",
+        "name": "Accounting and consolidation adjustments",
+        "amount": -2.572345
       }
     ]
   },

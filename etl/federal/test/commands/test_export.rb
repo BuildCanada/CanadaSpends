@@ -31,10 +31,47 @@ class TestExport < Minitest::Test
     @command.call(['--year', '2024'])
     summary = JSON.parse(File.read(File.join(@out, '2024', 'summary.json')))
 
-    assert_in_delta 513.94, summary['totalSpending'], 0.5
-    assert_in_delta 459.53, summary['totalRevenue'], 0.5
+    # Published FY2024 Consolidated Statement of Operations (cdeif-tycfi CSVs):
+    # total expenses INCLUDING net actuarial losses = 513,936 + 7,489 =
+    # 521,425M; total revenues = 459,549M. (The retired 513.94/459.53 anchor
+    # excluded net actuarial losses — source-correction, see the parity report.)
+    assert_in_delta 521.425, summary['totalSpending'], 0.5
+    assert_in_delta 459.549, summary['totalRevenue'], 0.5
     assert_equal 'vol1_consolidated', summary['basis']
     assert_equal 2025, summary['inflation']['baseYear']
+  end
+
+  # The deficit field is the published "Annual operating deficit" line, sign
+  # convention positive = deficit / negative = surplus, and identically equals
+  # totalSpending - totalRevenue.
+  def test_summary_deficit_is_published_operating_deficit
+    @command.call(['--year', '2024'])
+    summary = JSON.parse(File.read(File.join(@out, '2024', 'summary.json')))
+
+    # Published FY2024 Annual operating deficit = 61,876M ($61.876B), a deficit.
+    assert_in_delta 61.876, summary['deficit'], 0.001
+    assert_in_delta summary['totalSpending'] - summary['totalRevenue'],
+                    summary['deficit'], 0.001
+    assert_operator summary['deficit'], :>, 0, 'FY2024 is a deficit (positive)'
+  end
+
+  # Sign convention exercised at the low end of the series. FY2015 is the
+  # SMALLEST deficit in 2014–2025 but is still a deficit ($0.55B) on the
+  # published operating basis: revenues 279,905M vs expenses-incl-net-actuarial
+  # 280,455M (Annual operating deficit line = -550M). On the OLD basis that
+  # excluded net actuarial losses FY2015 read as a $7.0B surplus; including the
+  # $7.6B actuarial loss (the point of this change) flips it to a small deficit.
+  # No fiscal year 2014–2025 is a surplus on the published operating basis, so
+  # the "Surplus" StatCard branch (deficit < 0) is not triggered by this data.
+  def test_fy2015_deficit_sign_smallest_deficit_not_surplus
+    @command.call(['--year', '2015'])
+    summary = JSON.parse(File.read(File.join(@out, '2015', 'summary.json')))
+
+    assert_in_delta 0.550, summary['deficit'], 0.001
+    assert_operator summary['deficit'], :>, 0,
+                    'FY2015 is a small deficit on the published operating basis, not a surplus'
+    assert_in_delta summary['totalSpending'] - summary['totalRevenue'],
+                    summary['deficit'], 0.001
   end
 
   def test_sankey_amounts_are_leaf_only_and_sum_to_declared_totals
@@ -50,6 +87,32 @@ class TestExport < Minitest::Test
     assert_no_parent_amounts(data['revenue_data'])
     assert_in_delta data['spending'], leaf_sum(data['spending_data']), 0.001
     assert_in_delta data['revenue'], leaf_sum(data['revenue_data']), 0.001
+  end
+
+  # The spending Sankey's declared total AND its leaf sum must equal
+  # summary.totalSpending exactly — enforced by the top-level
+  # accounting-basis-adjustments reconciling leaf (spec §5). For FY2024 the
+  # leaf ≈ -25.85B (the thematic tree, mixing Vol II gross + Vol I items, sums
+  # to ~547.3B; the leaf brings it down to the published 521.425B). This leaf
+  # also equals reconciliation.json's unattributed remainder item.
+  def test_spending_tree_sums_to_headline_via_adjustments_leaf
+    @command.call(['--year', '2024'])
+    summary = JSON.parse(File.read(File.join(@out, '2024', 'summary.json')))
+    sankey = JSON.parse(File.read(File.join(@out, '2024', 'sankey.full.json')))
+    recon = JSON.parse(File.read(File.join(@out, '2024', 'reconciliation.json')))
+    tree = sankey['spending_data']
+
+    assert_in_delta summary['totalSpending'], sankey['spending'], 0.001
+    assert_in_delta summary['totalSpending'], leaf_sum(tree), 0.001
+
+    leaf = node(tree, 'accounting-basis-adjustments')
+    refute_nil leaf, 'reconciling leaf present'
+    assert_equal 'Accounting and consolidation adjustments', leaf['name']
+    assert_in_delta(-25.854, leaf['amount'], 0.01)
+
+    remainder = recon['items'].find { |i| i['id'] == 'recon-2024-remainder' }
+    assert_in_delta leaf['amount'], remainder['amount'], 0.001,
+                    'adjustments leaf == reconciliation remainder (spec §5 link)'
   end
 
   def test_department_shapes_and_units
@@ -175,8 +238,12 @@ class TestExport < Minitest::Test
     assert_operator residual, :>, 0, 'Finance catch-all must stay positive after offsets'
     assert_operator residual, :<, 20, 'Finance catch-all is a residual, not the full lump'
 
+    # Net actuarial losses now sit under the Obligations theme, sign-normalized
+    # to a POSITIVE expense. Published FY2024 statement stores the line as
+    # -7,489M (a $7.489B loss); the exporter negates it to +7.489B so it reads
+    # as a cost alongside net interest on debt.
     actuarial = leaf_sum(node(tree, 'net-actuarial-losses'))
-    assert_in_delta(-7.489, actuarial, 0.01, 'actuarial sign follows the statement (gain year)')
+    assert_in_delta(7.489, actuarial, 0.01, 'net actuarial losses normalized to a positive expense')
   end
 
   def test_offsets_keep_social_security_at_published_scale
@@ -184,7 +251,9 @@ class TestExport < Minitest::Test
     tree = JSON.parse(File.read(File.join(@out, '2024', 'sankey.full.json')))['spending_data']
 
     assert_in_delta 120.24, leaf_sum(node(tree, 'social-security')), 0.5
-    assert_in_delta 47.27, leaf_sum(node(tree, 'obligations')), 0.1
+    # Obligations now = net interest on debt (47.273) + net actuarial losses
+    # (7.489) = 54.762 (published FY2024 debt charges + actuarial loss).
+    assert_in_delta 54.762, leaf_sum(node(tree, 'obligations')), 0.1
   end
 
   def test_excluded_year_reported_and_others_ship

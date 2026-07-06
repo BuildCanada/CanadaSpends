@@ -1,6 +1,6 @@
 # Federal export report
 
-Generated: 2026-07-06T16:03:36Z
+Generated: 2026-07-06T16:34:58Z
 
 Shipped years: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025
 
@@ -10,7 +10,7 @@ Shipped years: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024,
 
 ## miniSankey standard-object reconciliation (non-blocking)
 
-Standard-object GROSS total vs Vol II allotment expenditures, $B. Out-of-tolerance department-years below have documented systematic causes (net-voted common services, pre-2018 presentation basis, portfolio scope, and the FY2020–21 governor-general allotment code-noise artifact — see NOTES.md).
+Standard-object GROSS total vs Vol II allotment expenditures, $B. Out-of-tolerance department-years below have documented systematic causes (net-voted common services, pre-2018 presentation basis, and portfolio scope — see NOTES.md).
 
 ### 2014 (11)
 

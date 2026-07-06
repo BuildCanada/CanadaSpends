@@ -7,11 +7,23 @@ module PbCli
     # fiscal year: revenue lines, expense lines, net actuarial losses and the
     # annual operating deficit. Units are the CSV's Amt-units column (x1000000).
     #
-    # Headline totals (spec §5 anchor):
+    # Headline totals (consolidated-statement-alignment spec):
     #   totalRevenue  = sum of lvl1 "Revenues" rows
-    #   totalSpending = sum of lvl1 "Expenses" rows  (excludes net actuarial;
-    #                   FY2024 = 513,936M = $513.94B, the published figure)
-    #   deficit       = totalRevenue - totalSpending
+    #   totalSpending = sum of lvl1 "Expenses" rows + net actuarial losses,
+    #                   sign-normalized so a loss is a POSITIVE expense
+    #                   (FY2024 = 513,936M + 7,489M = 521,425M = $521.425B,
+    #                   the published total-expenses figure)
+    #   deficit       = the published "Annual operating deficit" line, normalized
+    #                   so positive = deficit (shortfall), negative = surplus.
+    #                   Identically equals totalSpending - totalRevenue.
+    #
+    # Sign conventions verified across ALL three editions (2025 → FY2016+, 2024,
+    # 2023-eng → FY2014–2023): "Expenses"/"Revenues" lvl1 rows are positive; the
+    # "Net actuarial losses" lvl1 section is stored NEGATIVE for a loss (FY2024
+    # -7489 = a $7.489B loss); the "Annual operating deficit" lvl1 line is stored
+    # NEGATIVE for a deficit (FY2024 -61876 = a $61.876B deficit). The identity
+    # total_spending - total_revenue == published_deficit holds to <$1M for every
+    # fiscal year 2014–2025 (enforced as a hard export validation).
     class Vol1Statement
       EDITIONS = {
         2023 => 'cdeif-tycfi-2023-eng.csv',
@@ -54,17 +66,42 @@ module PbCli
         !edition_for(year).nil?
       end
 
-      # Total spending in billions (Vol I consolidated expenses, excl net actuarial).
+      # Total spending in billions: Vol I consolidated expenses INCLUDING net
+      # actuarial losses (sign-normalized so a loss is a positive expense). Equals
+      # the published statement's total-expenses figure (FY2024 = 521.425).
       def total_spending(year)
-        billions(sum_for_level(year, 'Expenses'))
+        billions(sum_for_level(year, 'Expenses') + net_actuarial_losses_dollars(year))
       end
 
       def total_revenue(year)
         billions(sum_for_level(year, 'Revenues'))
       end
 
+      # Net actuarial losses as a POSITIVE expense (billions). The statement
+      # stores the lvl1 "Net actuarial losses" section sign-inverted (a loss is
+      # negative: FY2024 -7489 = a $7.489B loss), so negate to present it as a
+      # cost. A genuine actuarial GAIN year would be negative here — truthful.
+      def net_actuarial_losses(year)
+        billions(net_actuarial_losses_dollars(year))
+      end
+
+      # The published "Annual operating deficit" line, normalized so positive =
+      # deficit (shortfall) and negative = surplus. The statement stores a
+      # deficit as a negative value (FY2024 -61876 = a $61.876B deficit).
+      def published_deficit(year)
+        billions(-sum_for_level(year, 'Annual operating deficit'))
+      end
+
+      # summary.deficit: the published deficit (positive = deficit/shortfall,
+      # negative = surplus). Equals total_spending - total_revenue.
       def deficit(year)
-        Units.round_billions(total_revenue(year) - total_spending(year))
+        published_deficit(year)
+      end
+
+      # |total_spending - total_revenue - published_deficit| in billions — the
+      # exporter treats a value over $1M as a blocking consistency failure.
+      def consistency_delta(year)
+        (total_spending(year) - total_revenue(year) - published_deficit(year)).abs
       end
 
       # Amount in DOLLARS for a statement expense line, matched at the row's
@@ -117,6 +154,11 @@ module PbCli
         raise KeyError, "no Vol I data for fiscal year #{year}" unless ed
 
         @editions[ed]
+      end
+
+      # Net actuarial losses in DOLLARS, sign-normalized to a positive expense.
+      def net_actuarial_losses_dollars(year)
+        -sum_for_level(year, 'Net actuarial losses')
       end
 
       def sum_for_level(year, lvl1)

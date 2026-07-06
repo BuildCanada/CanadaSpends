@@ -1,6 +1,6 @@
 {
-  "total": 659.989581,
-  "spending": 659.989581,
+  "total": 644.175,
+  "spending": 644.175,
   "revenue": 316.446,
   "spending_data": {
     "id": "spending",
@@ -424,6 +424,27 @@
         ]
       },
       {
+        "id": "accounting-basis-adjustments",
+        "name": "Accounting and consolidation adjustments",
+        "amount": -46.404581
+      },
+      {
+        "id": "obligations",
+        "name": "Obligations",
+        "children": [
+          {
+            "id": "net-interest-on-debt",
+            "name": "Net Interest on Debt",
+            "amount": 20.358
+          },
+          {
+            "id": "net-actuarial-losses",
+            "name": "Net actuarial losses",
+            "amount": 15.295
+          }
+        ]
+      },
+      {
         "id": "defence",
         "name": "Defence",
         "children": [
@@ -452,17 +473,6 @@
             "id": "crown-indigenous-relations",
             "name": "Crown-Indigenous Relations",
             "amount": 5.444709
-          }
-        ]
-      },
-      {
-        "id": "obligations",
-        "name": "Obligations",
-        "children": [
-          {
-            "id": "net-interest-on-debt",
-            "name": "Net Interest on Debt",
-            "amount": 20.358
           }
         ]
       },
@@ -525,19 +535,9 @@
         ]
       },
       {
-        "id": "international-affairs",
-        "name": "International Affairs",
-        "amount": 9.823059
-      },
-      {
         "id": "other",
         "name": "Other",
         "children": [
-          {
-            "id": "net-actuarial-losses",
-            "name": "Net actuarial losses",
-            "amount": -15.295
-          },
           {
             "id": "public-works-government-services",
             "name": "Public Works + Government Services",
@@ -586,6 +586,11 @@
             ]
           }
         ]
+      },
+      {
+        "id": "international-affairs",
+        "name": "International Affairs",
+        "amount": 9.823059
       }
     ]
   },

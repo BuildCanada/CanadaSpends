@@ -1,6 +1,6 @@
 {
-  "total": 286.225875,
-  "spending": 286.225875,
+  "total": 295.469,
+  "spending": 295.469,
   "revenue": 292.608,
   "spending_data": {
     "id": "spending",
@@ -431,6 +431,11 @@
             "id": "net-interest-on-debt",
             "name": "Net Interest on Debt",
             "amount": 21.837
+          },
+          {
+            "id": "net-actuarial-losses",
+            "name": "Net actuarial losses",
+            "amount": 10.064
           }
         ]
       },
@@ -509,35 +514,9 @@
         ]
       },
       {
-        "id": "indigenous-priorities",
-        "name": "Indigenous Priorities",
-        "children": [
-          {
-            "id": "crown-indigenous-relations",
-            "name": "Crown-Indigenous Relations",
-            "amount": 7.975748
-          },
-          {
-            "id": "indigenous-well-being",
-            "name": "Indigenous Well-Being + Self Determination",
-            "amount": 0.0
-          }
-        ]
-      },
-      {
-        "id": "international-affairs",
-        "name": "International Affairs",
-        "amount": 6.268123
-      },
-      {
         "id": "other",
         "name": "Other",
         "children": [
-          {
-            "id": "net-actuarial-losses",
-            "name": "Net actuarial losses",
-            "amount": -10.064
-          },
           {
             "id": "public-works-government-services",
             "name": "Public Works + Government Services",
@@ -586,6 +565,32 @@
             ]
           }
         ]
+      },
+      {
+        "id": "accounting-basis-adjustments",
+        "name": "Accounting and consolidation adjustments",
+        "amount": -10.884875
+      },
+      {
+        "id": "indigenous-priorities",
+        "name": "Indigenous Priorities",
+        "children": [
+          {
+            "id": "crown-indigenous-relations",
+            "name": "Crown-Indigenous Relations",
+            "amount": 7.975748
+          },
+          {
+            "id": "indigenous-well-being",
+            "name": "Indigenous Well-Being + Self Determination",
+            "amount": 0.0
+          }
+        ]
+      },
+      {
+        "id": "international-affairs",
+        "name": "International Affairs",
+        "amount": 6.268123
       }
     ]
   },

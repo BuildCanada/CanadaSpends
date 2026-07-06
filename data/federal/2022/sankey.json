@@ -1,6 +1,6 @@
 {
-  "total": 482.940512,
-  "spending": 482.940512,
+  "total": 503.592,
+  "spending": 503.592,
   "revenue": 413.277,
   "spending_data": {
     "id": "spending",
@@ -424,6 +424,22 @@
         ]
       },
       {
+        "id": "obligations",
+        "name": "Obligations",
+        "children": [
+          {
+            "id": "net-interest-on-debt",
+            "name": "Net Interest on Debt",
+            "amount": 24.487
+          },
+          {
+            "id": "net-actuarial-losses",
+            "name": "Net actuarial losses",
+            "amount": 10.186
+          }
+        ]
+      },
+      {
         "id": "defence",
         "name": "Defence",
         "children": [
@@ -440,17 +456,6 @@
         ]
       },
       {
-        "id": "obligations",
-        "name": "Obligations",
-        "children": [
-          {
-            "id": "net-interest-on-debt",
-            "name": "Net Interest on Debt",
-            "amount": 24.487
-          }
-        ]
-      },
-      {
         "id": "indigenous-priorities",
         "name": "Indigenous Priorities",
         "children": [
@@ -463,6 +468,59 @@
             "id": "crown-indigenous-relations",
             "name": "Crown-Indigenous Relations",
             "amount": 4.890432
+          }
+        ]
+      },
+      {
+        "id": "other",
+        "name": "Other",
+        "children": [
+          {
+            "id": "functioning-of-government",
+            "name": "Functioning of Government",
+            "children": [
+              {
+                "id": "treasury-board",
+                "name": "Treasury Board",
+                "amount": 12.006101
+              },
+              {
+                "id": "parliament",
+                "name": "Parliament",
+                "amount": 0.788045
+              },
+              {
+                "id": "privy-council-office",
+                "name": "Privy Council Office",
+                "amount": 0.324824
+              },
+              {
+                "id": "audit-agents",
+                "name": "Audit + Agents of Parliament",
+                "amount": 0.112318
+              },
+              {
+                "id": "governor-general",
+                "name": "Office of the Secretary to the Governor General",
+                "amount": 0.023854
+              }
+            ]
+          },
+          {
+            "id": "public-works-government-services",
+            "name": "Public Works + Government Services",
+            "children": [
+              {
+                "id": "other-public-services-procurement",
+                "name": "Other Public Services + Procurement",
+                "amount": 6.2282
+              },
+              {
+                "id": "government-it-operations",
+                "name": "Government IT Operations",
+                "amount": 3.109112
+              }
+            ]
           }
         ]
       },
@@ -525,67 +583,14 @@
         ]
       },
       {
-        "id": "other",
-        "name": "Other",
-        "children": [
-          {
-            "id": "functioning-of-government",
-            "name": "Functioning of Government",
-            "children": [
-              {
-                "id": "treasury-board",
-                "name": "Treasury Board",
-                "amount": 12.006101
-              },
-              {
-                "id": "parliament",
-                "name": "Parliament",
-                "amount": 0.788045
-              },
-              {
-                "id": "privy-council-office",
-                "name": "Privy Council Office",
-                "amount": 0.324824
-              },
-              {
-                "id": "audit-agents",
-                "name": "Audit + Agents of Parliament",
-                "amount": 0.112318
-              },
-              {
-                "id": "governor-general",
-                "name": "Office of the Secretary to the Governor General",
-                "amount": 0.023854
-              }
-            ]
-          },
-          {
-            "id": "net-actuarial-losses",
-            "name": "Net actuarial losses",
-            "amount": -10.186
-          },
-          {
-            "id": "public-works-government-services",
-            "name": "Public Works + Government Services",
-            "children": [
-              {
-                "id": "other-public-services-procurement",
-                "name": "Other Public Services + Procurement",
-                "amount": 6.2282
-              },
-              {
-                "id": "government-it-operations",
-                "name": "Government IT Operations",
-                "amount": 3.109112
-              }
-            ]
-          }
-        ]
-      },
-      {
         "id": "international-affairs",
         "name": "International Affairs",
         "amount": 9.573891
+      },
+      {
+        "id": "accounting-basis-adjustments",
+        "name": "Accounting and consolidation adjustments",
+        "amount": 0.279488
       }
     ]
   },

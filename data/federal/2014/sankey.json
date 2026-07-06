@@ -1,6 +1,6 @@
 {
-  "total": 256.239903,
-  "spending": 256.239903,
+  "total": 278.062,
+  "spending": 278.062,
   "revenue": 270.012,
   "spending_data": {
     "id": "spending",
@@ -431,6 +431,11 @@
             "id": "net-interest-on-debt",
             "name": "Net Interest on Debt",
             "amount": 24.729
+          },
+          {
+            "id": "net-actuarial-losses",
+            "name": "Net actuarial losses",
+            "amount": 19.661
           }
         ]
       },
@@ -449,6 +454,11 @@
             "amount": 0.0
           }
         ]
+      },
+      {
+        "id": "accounting-basis-adjustments",
+        "name": "Accounting and consolidation adjustments",
+        "amount": -17.499903
       },
       {
         "id": "safety",
@@ -509,30 +519,9 @@
         ]
       },
       {
-        "id": "indigenous-priorities",
-        "name": "Indigenous Priorities",
-        "children": [
-          {
-            "id": "crown-indigenous-relations",
-            "name": "Crown-Indigenous Relations",
-            "amount": 8.052465
-          },
-          {
-            "id": "indigenous-well-being",
-            "name": "Indigenous Well-Being + Self Determination",
-            "amount": 0.0
-          }
-        ]
-      },
-      {
         "id": "other",
         "name": "Other",
         "children": [
-          {
-            "id": "net-actuarial-losses",
-            "name": "Net actuarial losses",
-            "amount": -19.661
-          },
           {
             "id": "public-works-government-services",
             "name": "Public Works + Government Services",
@@ -579,6 +568,22 @@
                 "amount": 0.020307
               }
             ]
+          }
+        ]
+      },
+      {
+        "id": "indigenous-priorities",
+        "name": "Indigenous Priorities",
+        "children": [
+          {
+            "id": "crown-indigenous-relations",
+            "name": "Crown-Indigenous Relations",
+            "amount": 8.052465
+          },
+          {
+            "id": "indigenous-well-being",
+            "name": "Indigenous Well-Being + Self Determination",
+            "amount": 0.0
           }
         ]
       },

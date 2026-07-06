@@ -135,7 +135,12 @@ the Vol II catch-alls via `offset_node` — see the rule-key docs at the top of
 `thematic_tree.yaml`. CHT/CST province children are pro-rated to the accrual
 statement line (`scale_to_line`), exactly as the current site did. The
 net-actuarial sign flip was removed (the statement stores −7.489 for FY2024
-and the site shows −7.49; the flip was a bug).
+and the site shows −7.49; the flip was a bug). **Superseded 2026-07-06** by the
+consolidated-statement alignment (see the dated section below): net actuarial
+losses are now INCLUDED in total spending, sign-normalized to a positive expense
+(+7.489), and relocated under Obligations. The theme table below is the pre-
+alignment record; the current authoritative parity numbers live in
+`docs/specs/federal-parity-report-2024.md`.
 
 | Theme                          | Current site | Generated |      Δ | Reason                                                                                                                                                                                                                                                                       |
 | ------------------------------ | -----------: | --------: | -----: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -235,3 +240,39 @@ the allotment side.
 that the allotment extraction modernized; matching is space/comma/footnote
 insensitive, with a small `meso_portfolio_aliases` list for genuinely renamed
 portfolios (e.g. "Foreign Affairs, Trade and Development" → global-affairs).
+
+## Consolidated-statement alignment (2026-07-06)
+
+Spec `docs/specs/consolidated-statement-alignment.md`. The headline, Sankey, and
+Vol I statement now agree exactly (±$1M) for every exported year.
+
+- **Total spending now includes net actuarial losses.** `Vol1Statement#total_spending`
+  = the "Expenses" lvl1 section + the "Net actuarial losses" lvl1 section,
+  sign-normalized so a loss is a POSITIVE expense (the CSV stores it inverted:
+  FY2024 −7,489 = a $7.489B loss). FY2024 headline spending is now **521.425**
+  (published total expenses), not the retired 513.94 (which excluded net
+  actuarial losses). Verified across all three editions (2025 → FY2016+, 2024,
+  2023-eng → FY2014–2023): "Expenses"/"Revenues" positive; "Net actuarial
+  losses" and "Annual operating deficit" stored negative.
+- **Deficit = the published "Annual operating deficit" line**, normalized so
+  positive = deficit / negative = surplus, and it identically equals
+  `total_spending − total_revenue`. Enforced as a hard export validation per
+  year (`assert_vol1_consistency`). **No fiscal year 2014–2025 is a surplus** on
+  this published operating basis — FY2015 is the smallest deficit (+0.55B). On
+  the OLD basis that excluded net actuarial losses FY2015 read as a $7.0B
+  surplus; including the $7.6B actuarial loss flips it to a small deficit. The
+  overview StatCard still flips to "Surplus" (positive magnitude) whenever
+  `deficit < 0`; that branch is simply not triggered by this dataset.
+- **`net-actuarial-losses` relocated** from the `other` theme to `obligations`
+  (alongside net interest on debt), amount sign-normalized to +7.489 via a new
+  `negate: true` rule flag. Obligations FY2024 = 47.273 + 7.489 = **54.762**.
+- **`accounting-basis-adjustments` reconciling leaf.** One top-level spending
+  leaf = `totalSpending − Σ(spending leaves)` makes the Sankey column equal the
+  published headline (emitted only when |residual| ≥ $1M). It equals
+  reconciliation.json's unattributed remainder item. Per-year values (FY2024 =
+  **−25.854**; not the spec's rough −10.9 estimate, which predated flipping net
+  actuarial losses to +7.489 — that flip adds 14.978 to the gross tree). It is
+  negative when the Vol II gross tree exceeds the Vol I consolidated net total.
+- **No surplus/padding node** exists (or ever existed) in this pipeline's tree;
+  the old curated site's "$13.77B Surplus" leaf was the column gap (revenue −
+  spending), now the natural visual gap between the two Sankey columns.
