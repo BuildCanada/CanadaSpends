@@ -1,0 +1,13 @@
+---
+reviewed: false
+source: llm-first-pass
+generated: 2026-07-06
+---
+
+{{name}} encompasses the institutions of Canada's federal legislative branch. It includes the House of Commons and the Senate, which together debate and pass legislation, review government spending, and hold the government to account, as well as the Library of Parliament, which provides research, analysis, and information services to parliamentarians of both chambers. The portfolio also includes independent parliamentary officers such as the Conflict of Interest and Ethics Commissioner and the Senate Ethics Officer, who administer and enforce conflict-of-interest and ethics rules for members of Parliament and senators, reporting directly to Parliament rather than to the executive branch of government.
+
+In the 2013-14 fiscal year, {{name}} spent {{totalSpending}}, equal to {{percentageOfFederal}} of total federal spending that year. This spending funded the sittings and committee work of both chambers, the salaries and support staff of members of Parliament and senators, and their shared administrative and research support services. Unlike most federal departments, Parliament's spending is not directed by the executive government of the day; the House of Commons and the Senate each administer their own budgets through their respective internal governance bodies.
+
+The House of Commons accounted for the largest share of this spending by a wide margin, followed by the Senate and then the Library of Parliament; the Conflict of Interest and Ethics Commissioner and the Senate Ethics Officer represented much smaller shares, consistent with their role as small, specialized oversight offices rather than full legislative chambers. Spending was funded mainly through an operating vote and statutory amounts, along with several smaller votes covering specific parliamentary activities. Among transfer payments, the largest were payments to parliamentary and procedural associations and contributions to parliamentary associations, which support the participation of Canadian parliamentarians in interparliamentary bodies and exchanges, along with pensions paid to retired senators.
+
+<!-- verification: entity ranking (House of Commons > Senate > Library of Parliament > Conflict of Interest and Ethics Commissioner > Senate Ethics Officer) matches topEntities order in the fact sheet. Transfer payment ranking (payments to parliamentary and procedural associations; contributions to parliamentary associations; pensions to retired senators) matches topTransferPayments order, excluding one zero-used House of Commons line item. Mandate descriptions of the House of Commons, Senate, Library of Parliament, and the two ethics officers are generic/uncontroversial background. -->

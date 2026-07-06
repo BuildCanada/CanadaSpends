@@ -1,0 +1,136 @@
+{
+  "name": "Treasury Board",
+  "slug": "treasury-board",
+  "financialYearEnding": 2017,
+  "reportedAs": null,
+  "basis": "vol2_appropriations",
+  "totalSpending": 4.309162,
+  "percentageOfFederal": 1.4368,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 1.4833
+    },
+    {
+      "year": 2015,
+      "percentage": 1.5315
+    },
+    {
+      "year": 2016,
+      "percentage": 1.8365
+    },
+    {
+      "year": 2017,
+      "percentage": 1.4368
+    },
+    {
+      "year": 2018,
+      "percentage": 1.427
+    },
+    {
+      "year": 2019,
+      "percentage": 2.0488
+    },
+    {
+      "year": 2020,
+      "percentage": 1.0482
+    },
+    {
+      "year": 2021,
+      "percentage": 0.6478
+    },
+    {
+      "year": 2022,
+      "percentage": 2.4333
+    },
+    {
+      "year": 2023,
+      "percentage": 1.0873
+    },
+    {
+      "year": 2024,
+      "percentage": 1.0349
+    },
+    {
+      "year": 2025,
+      "percentage": 2.2313
+    }
+  ],
+  "miniSankey": {
+    "spending_data": {
+      "id": "treasury-board",
+      "name": "Treasury Board",
+      "children": [
+        {
+          "id": "treasury-board-org-treasury-board",
+          "name": "Treasury Board",
+          "children": [
+            {
+              "id": "treasury-board-treasury-board-vote",
+              "name": "All votes",
+              "amount": 4.309162
+            }
+          ],
+          "amount": 4.309162
+        }
+      ],
+      "amount": 4.309162
+    }
+  },
+  "entities": [
+    {
+      "id": "treasury-board-2017-entity-treasury-board",
+      "name": "Treasury Board",
+      "value": 4.309162
+    }
+  ],
+  "votes": [
+    {
+      "id": "treasury-board-2017-treasury-board-vote",
+      "vote": "All votes",
+      "description": "Total appropriations (vote-level detail not published for this edition)",
+      "totalAvailable": 6630349732,
+      "used": 4309162305,
+      "lapsed": 2321187427
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "treasury-board-2017-tp-0000",
+      "category": "Contributions",
+      "description": "Contributions for access to legal advice under the Public Servants Disclosure Protection Act",
+      "used": 25157
+    },
+    {
+      "id": "treasury-board-2017-tp-0001",
+      "category": "Contributions",
+      "description": "Contributions to the Open Government Partnership",
+      "used": 531560
+    },
+    {
+      "id": "treasury-board-2017-tp-0002",
+      "category": "Contributions",
+      "description": "International Public Sector Accounting Standards Board",
+      "used": 200000
+    },
+    {
+      "id": "treasury-board-2017-tp-0003",
+      "category": "Other transfer payments",
+      "description": "Payments under the Public Service Pension Adjustment Act",
+      "used": 355
+    },
+    {
+      "id": "treasury-board-2017-tp-0004",
+      "category": "Other transfer payments",
+      "description": "Payments, in the nature of Workers' Compensation, in accordance with the Public Service Income Benefit Plan for Survivors of Employees Slain on Duty",
+      "used": 372849
+    },
+    {
+      "id": "treasury-board-2017-tp-0005",
+      "category": "Other transfer payments",
+      "description": "Special Indemnity Plan for Spouses of Canadian Forces Attachés",
+      "used": 4852
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

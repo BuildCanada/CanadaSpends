@@ -1,0 +1,398 @@
+{
+  "name": "National Defence",
+  "slug": "national-defence",
+  "financialYearEnding": 2022,
+  "reportedAs": null,
+  "basis": "vol2_appropriations",
+  "totalSpending": 25.287375,
+  "percentageOfFederal": 5.1251,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 7.762
+    },
+    {
+      "year": 2015,
+      "percentage": 7.4097
+    },
+    {
+      "year": 2016,
+      "percentage": 7.0541
+    },
+    {
+      "year": 2017,
+      "percentage": 6.7027
+    },
+    {
+      "year": 2018,
+      "percentage": 7.4751
+    },
+    {
+      "year": 2019,
+      "percentage": 6.7204
+    },
+    {
+      "year": 2020,
+      "percentage": 6.6088
+    },
+    {
+      "year": 2021,
+      "percentage": 4.4523
+    },
+    {
+      "year": 2022,
+      "percentage": 5.1251
+    },
+    {
+      "year": 2023,
+      "percentage": 5.9641
+    },
+    {
+      "year": 2024,
+      "percentage": 6.7806
+    },
+    {
+      "year": 2025,
+      "percentage": 6.5109
+    }
+  ],
+  "miniSankey": {
+    "spending_data": {
+      "id": "national-defence",
+      "name": "National Defence",
+      "children": [
+        {
+          "id": "national-defence-org-department-of-national-defence",
+          "name": "Department of National Defence",
+          "children": [
+            {
+              "id": "national-defence-department-of-national-defence-vote1",
+              "name": "Vote 1",
+              "amount": 17.359668
+            },
+            {
+              "id": "national-defence-department-of-national-defence-vote5",
+              "name": "Vote 5",
+              "amount": 4.641317
+            },
+            {
+              "id": "national-defence-department-of-national-defence-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 1.628065
+            },
+            {
+              "id": "national-defence-department-of-national-defence-vote15",
+              "name": "Vote 15",
+              "amount": 0.517142
+            },
+            {
+              "id": "national-defence-department-of-national-defence-vote10",
+              "name": "Vote 10",
+              "amount": 0.313285
+            }
+          ],
+          "amount": 24.459477
+        },
+        {
+          "id": "national-defence-org-communications-security-establishment",
+          "name": "Communications Security Establishment",
+          "children": [
+            {
+              "id": "national-defence-communications-security-establishment-vote1",
+              "name": "Vote 1",
+              "amount": 0.762798
+            },
+            {
+              "id": "national-defence-communications-security-establishment-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.0533
+            }
+          ],
+          "amount": 0.816098
+        },
+        {
+          "id": "national-defence-org-military-grievances-external-review-committee",
+          "name": "Military Grievances External Review Committee",
+          "children": [
+            {
+              "id": "national-defence-military-grievances-external-review-committee-vote1",
+              "name": "Vote 1",
+              "amount": 0.006283
+            },
+            {
+              "id": "national-defence-military-grievances-external-review-committee-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.000742
+            }
+          ],
+          "amount": 0.007025
+        },
+        {
+          "id": "national-defence-org-military-police-complaints-commission",
+          "name": "Military Police Complaints Commission",
+          "children": [
+            {
+              "id": "national-defence-military-police-complaints-commission-vote1",
+              "name": "Vote 1",
+              "amount": 0.004336
+            },
+            {
+              "id": "national-defence-military-police-complaints-commission-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.000439
+            }
+          ],
+          "amount": 0.004775
+        }
+      ],
+      "amount": 25.287375
+    }
+  },
+  "entities": [
+    {
+      "id": "national-defence-2022-entity-department-of-national-defence",
+      "name": "Department of National Defence",
+      "value": 24.459477
+    },
+    {
+      "id": "national-defence-2022-entity-communications-security-establishment",
+      "name": "Communications Security Establishment",
+      "value": 0.816098
+    },
+    {
+      "id": "national-defence-2022-entity-military-grievances-external-review-committee",
+      "name": "Military Grievances External Review Committee",
+      "value": 0.007025
+    },
+    {
+      "id": "national-defence-2022-entity-military-police-complaints-commission",
+      "name": "Military Police Complaints Commission",
+      "value": 0.004775
+    }
+  ],
+  "votes": [
+    {
+      "id": "national-defence-2022-communications-security-establishment-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 826366595,
+      "used": 762798274,
+      "lapsed": 63568321
+    },
+    {
+      "id": "national-defence-2022-communications-security-establishment-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 53375427,
+      "used": 53299702,
+      "lapsed": 75725
+    },
+    {
+      "id": "national-defence-2022-department-of-national-defence-vote1",
+      "vote": "Vote 1",
+      "description": "Operating expenditures",
+      "totalAvailable": 18696811381,
+      "used": 17359667951,
+      "lapsed": 1337143430
+    },
+    {
+      "id": "national-defence-2022-department-of-national-defence-vote10",
+      "vote": "Vote 10",
+      "description": "Grants and contributions",
+      "totalAvailable": 344013167,
+      "used": 313285109,
+      "lapsed": 30728058
+    },
+    {
+      "id": "national-defence-2022-department-of-national-defence-vote15",
+      "vote": "Vote 15",
+      "description": "Payments in respect of the long-term disability and life insurance plan for members of the Canadian Forces",
+      "totalAvailable": 532281864,
+      "used": 517142045,
+      "lapsed": 15139819
+    },
+    {
+      "id": "national-defence-2022-department-of-national-defence-vote5",
+      "vote": "Vote 5",
+      "description": "Capital expenditures",
+      "totalAvailable": 5797367581,
+      "used": 4641317354,
+      "lapsed": 1156050227
+    },
+    {
+      "id": "national-defence-2022-department-of-national-defence-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 1645786274,
+      "used": 1628064634,
+      "lapsed": 17721640
+    },
+    {
+      "id": "national-defence-2022-military-grievances-external-review-committee-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 6711875,
+      "used": 6282615,
+      "lapsed": 429260
+    },
+    {
+      "id": "national-defence-2022-military-grievances-external-review-committee-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 742446,
+      "used": 742446,
+      "lapsed": 0
+    },
+    {
+      "id": "national-defence-2022-military-police-complaints-commission-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 4625078,
+      "used": 4336250,
+      "lapsed": 288828
+    },
+    {
+      "id": "national-defence-2022-military-police-complaints-commission-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 438645,
+      "used": 438567,
+      "lapsed": 78
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "national-defence-2022-tp-0000",
+      "category": "Contributions",
+      "description": "Contribution in support of various Sexual Assault Centres in Canada Program",
+      "used": 484012
+    },
+    {
+      "id": "national-defence-2022-tp-0001",
+      "category": "Contributions",
+      "description": "Contribution to the Biological and Chemical Defence Review Committee",
+      "used": 139747
+    },
+    {
+      "id": "national-defence-2022-tp-0002",
+      "category": "Contributions",
+      "description": "Contribution to the Civil Air Search and Rescue Association",
+      "used": 3100000
+    },
+    {
+      "id": "national-defence-2022-tp-0003",
+      "category": "Contributions",
+      "description": "Contributions in Support of the Military Training and Cooperation Program",
+      "used": 4842409
+    },
+    {
+      "id": "national-defence-2022-tp-0004",
+      "category": "Contributions",
+      "description": "Contributions in support of the Capital Assistance Program",
+      "used": 31132623
+    },
+    {
+      "id": "national-defence-2022-tp-0005",
+      "category": "Contributions",
+      "description": "Contributions to the Ukraine Operation",
+      "used": 41950000
+    },
+    {
+      "id": "national-defence-2022-tp-0006",
+      "category": "Contributions",
+      "description": "Innovation for Defence Excellence and Security Program",
+      "used": 16518711
+    },
+    {
+      "id": "national-defence-2022-tp-0007",
+      "category": "Contributions",
+      "description": "Mobilizing Insights in Defence and Security Contribution Program",
+      "used": 2250000
+    },
+    {
+      "id": "national-defence-2022-tp-0008",
+      "category": "Contributions",
+      "description": "NATO Military Budget (NATO Programs)",
+      "used": 135000528
+    },
+    {
+      "id": "national-defence-2022-tp-0009",
+      "category": "Contributions",
+      "description": "NATO Other Activities",
+      "used": 5311464
+    },
+    {
+      "id": "national-defence-2022-tp-0010",
+      "category": "Contributions",
+      "description": "NATO Security Investment Program (NATO Programs)",
+      "used": 68461276
+    },
+    {
+      "id": "national-defence-2022-tp-0011",
+      "category": "Contributions",
+      "description": "Payments under Parts I-IV of the Defence Services Pension Continuation Act (R.S.C., 1970 c. D-3)",
+      "used": 135276
+    },
+    {
+      "id": "national-defence-2022-tp-0012",
+      "category": "Contributions",
+      "description": "Payments under the Supplementary Retirement Benefits Act",
+      "used": 626966
+    },
+    {
+      "id": "national-defence-2022-tp-0013",
+      "category": "Contributions",
+      "description": "Remediation of the North Bay Jack Garland Airport Site",
+      "used": 237742
+    },
+    {
+      "id": "national-defence-2022-tp-0014",
+      "category": "Contributions",
+      "description": "Vancouver Principles Contribution Program",
+      "used": 225000
+    },
+    {
+      "id": "national-defence-2022-tp-0015",
+      "category": "Grants",
+      "description": "Air Cadet League of Canada",
+      "used": 500000
+    },
+    {
+      "id": "national-defence-2022-tp-0016",
+      "category": "Grants",
+      "description": "Army Cadet League of Canada",
+      "used": 500000
+    },
+    {
+      "id": "national-defence-2022-tp-0017",
+      "category": "Grants",
+      "description": "Grants in support of the Compensation for Employers of Reservists Program",
+      "used": 230147
+    },
+    {
+      "id": "national-defence-2022-tp-0018",
+      "category": "Grants",
+      "description": "Innovation for Defence Excellence and Security Program",
+      "used": 25023
+    },
+    {
+      "id": "national-defence-2022-tp-0019",
+      "category": "Grants",
+      "description": "Mobilizing Insights in Defence and Security Grant program",
+      "used": 1876427
+    },
+    {
+      "id": "national-defence-2022-tp-0020",
+      "category": "Grants",
+      "description": "Navy League of Canada",
+      "used": 500000
+    },
+    {
+      "id": "national-defence-2022-tp-0021",
+      "category": "Grants",
+      "description": "Payments to dependants of certain members of the Royal Canadian Air Force killed while serving as instructors under the British Commonwealth Air Training Plan (Appropriation Act No. 4, 1968)",
+      "used": 8820
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

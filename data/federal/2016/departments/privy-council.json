@@ -1,0 +1,142 @@
+{
+  "name": "Privy Council",
+  "slug": "privy-council",
+  "financialYearEnding": 2016,
+  "reportedAs": null,
+  "basis": "vol2_appropriations",
+  "totalSpending": 0.668078,
+  "percentageOfFederal": 0.2341,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 0.1211
+    },
+    {
+      "year": 2015,
+      "percentage": 0.1235
+    },
+    {
+      "year": 2016,
+      "percentage": 0.2341
+    },
+    {
+      "year": 2017,
+      "percentage": 0.1057
+    },
+    {
+      "year": 2018,
+      "percentage": 0.1249
+    },
+    {
+      "year": 2019,
+      "percentage": 0.1111
+    },
+    {
+      "year": 2020,
+      "percentage": 0.258
+    },
+    {
+      "year": 2021,
+      "percentage": 0.0938
+    },
+    {
+      "year": 2022,
+      "percentage": 0.0731
+    },
+    {
+      "year": 2023,
+      "percentage": 0.088
+    },
+    {
+      "year": 2024,
+      "percentage": 0.084
+    },
+    {
+      "year": 2025,
+      "percentage": 0.0796
+    }
+  ],
+  "miniSankey": {
+    "spending_data": {
+      "id": "privy-council",
+      "name": "Privy Council",
+      "children": [
+        {
+          "id": "privy-council-org-privy-council",
+          "name": "Privy Council",
+          "children": [
+            {
+              "id": "privy-council-privy-council-vote",
+              "name": "All votes",
+              "amount": 0.668078
+            }
+          ],
+          "amount": 0.668078
+        }
+      ],
+      "amount": 0.668078
+    }
+  },
+  "entities": [
+    {
+      "id": "privy-council-2016-entity-privy-council",
+      "name": "Privy Council",
+      "value": 0.668078
+    }
+  ],
+  "votes": [
+    {
+      "id": "privy-council-2016-privy-council-vote",
+      "vote": "All votes",
+      "description": "Total appropriations (vote-level detail not published for this edition)",
+      "totalAvailable": 676485217,
+      "used": 668077922,
+      "lapsed": 8407295
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "privy-council-2016-tp-0000",
+      "category": "Office of the Chief Electoral Officer",
+      "description": "Subsidies to electoral district associations' auditors",
+      "used": 865182
+    },
+    {
+      "id": "privy-council-2016-tp-0001",
+      "category": "Other transfer payments",
+      "description": "Items not required for the current year",
+      "used": 0
+    },
+    {
+      "id": "privy-council-2016-tp-0002",
+      "category": "Other transfer payments",
+      "description": "Payment of subsidies to candidates' auditors for the 42nd general election",
+      "used": 1407924
+    },
+    {
+      "id": "privy-council-2016-tp-0003",
+      "category": "Other transfer payments",
+      "description": "Reimbursement of election expenses to candidates and payments of subsidies to candidates' auditors for the 2015 by-elections",
+      "used": 146361
+    },
+    {
+      "id": "privy-council-2016-tp-0004",
+      "category": "Other transfer payments",
+      "description": "Reimbursement of election expenses to candidates for the 42nd general election",
+      "used": 37901787
+    },
+    {
+      "id": "privy-council-2016-tp-0005",
+      "category": "Other transfer payments",
+      "description": "Reimbursement of election expenses to candidates, and payments of subsidies to candidates' auditors for other general elections and by-elections.",
+      "used": 62943
+    },
+    {
+      "id": "privy-council-2016-tp-0006",
+      "category": "Other transfer payments",
+      "description": "Reimbursement of election expenses to political parties for the 42nd general election",
+      "used": 64610235
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

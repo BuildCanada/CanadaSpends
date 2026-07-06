@@ -1,0 +1,138 @@
+{
+  "name": "National Revenue",
+  "slug": "canada-revenue-agency",
+  "financialYearEnding": 2019,
+  "reportedAs": null,
+  "basis": "vol2_appropriations",
+  "totalSpending": 5.477248,
+  "percentageOfFederal": 1.6213,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 1.8282
+    },
+    {
+      "year": 2015,
+      "percentage": 1.7195
+    },
+    {
+      "year": 2016,
+      "percentage": 1.6789
+    },
+    {
+      "year": 2017,
+      "percentage": 1.7105
+    },
+    {
+      "year": 2018,
+      "percentage": 1.583
+    },
+    {
+      "year": 2019,
+      "percentage": 1.6213
+    },
+    {
+      "year": 2020,
+      "percentage": 2.0908
+    },
+    {
+      "year": 2021,
+      "percentage": 1.663
+    },
+    {
+      "year": 2022,
+      "percentage": 2.0131
+    },
+    {
+      "year": 2023,
+      "percentage": 2.862
+    },
+    {
+      "year": 2024,
+      "percentage": 3.365
+    },
+    {
+      "year": 2025,
+      "percentage": 4.1719
+    }
+  ],
+  "miniSankey": {
+    "spending_data": {
+      "id": "canada-revenue-agency",
+      "name": "National Revenue",
+      "children": [
+        {
+          "id": "canada-revenue-agency-org-canada-revenue-agency",
+          "name": "Canada Revenue Agency",
+          "children": [
+            {
+              "id": "canada-revenue-agency-canada-revenue-agency-vote1",
+              "name": "Vote 1",
+              "amount": 3.775163
+            },
+            {
+              "id": "canada-revenue-agency-canada-revenue-agency-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 1.643402
+            },
+            {
+              "id": "canada-revenue-agency-canada-revenue-agency-vote5",
+              "name": "Vote 5",
+              "amount": 0.058683
+            }
+          ],
+          "amount": 5.477248
+        }
+      ],
+      "amount": 5.477248
+    }
+  },
+  "entities": [
+    {
+      "id": "canada-revenue-agency-2019-entity-canada-revenue-agency",
+      "name": "Canada Revenue Agency",
+      "value": 5.477248
+    }
+  ],
+  "votes": [
+    {
+      "id": "canada-revenue-agency-2019-canada-revenue-agency-vote1",
+      "vote": "Vote 1",
+      "description": "Operating expenditures, contributions and recoverable expenditures in relation to the application of the Canada Pension Plan and the Employment Insurance Act",
+      "totalAvailable": 3938568668,
+      "used": 3775162949,
+      "lapsed": 163405719
+    },
+    {
+      "id": "canada-revenue-agency-2019-canada-revenue-agency-vote5",
+      "vote": "Vote 5",
+      "description": "Capital expenditures and recoverable expenditures in relation to the application of the Canada Pension Plan and the Employment Insurance Act",
+      "totalAvailable": 84964124,
+      "used": 58683080,
+      "lapsed": 26281044
+    },
+    {
+      "id": "canada-revenue-agency-2019-canada-revenue-agency-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 1643402290,
+      "used": 1643402290,
+      "lapsed": 0
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "canada-revenue-agency-2019-tp-0000",
+      "category": "Other transfer payments",
+      "description": "Children's Special Allowance payments",
+      "used": 338745215
+    },
+    {
+      "id": "canada-revenue-agency-2019-tp-0001",
+      "category": "Other transfer payments",
+      "description": "Climate action incentive payments",
+      "used": 663758550
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

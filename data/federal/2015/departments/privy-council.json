@@ -1,0 +1,327 @@
+{
+  "name": "Privy Council",
+  "slug": "privy-council",
+  "financialYearEnding": 2015,
+  "reportedAs": "Privy Council Office",
+  "basis": "vol2_appropriations",
+  "totalSpending": 0.336893,
+  "percentageOfFederal": 0.1235,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 0.1211
+    },
+    {
+      "year": 2015,
+      "percentage": 0.1235
+    },
+    {
+      "year": 2016,
+      "percentage": 0.2341
+    },
+    {
+      "year": 2017,
+      "percentage": 0.1057
+    },
+    {
+      "year": 2018,
+      "percentage": 0.1249
+    },
+    {
+      "year": 2019,
+      "percentage": 0.1111
+    },
+    {
+      "year": 2020,
+      "percentage": 0.258
+    },
+    {
+      "year": 2021,
+      "percentage": 0.0938
+    },
+    {
+      "year": 2022,
+      "percentage": 0.0731
+    },
+    {
+      "year": 2023,
+      "percentage": 0.088
+    },
+    {
+      "year": 2024,
+      "percentage": 0.084
+    },
+    {
+      "year": 2025,
+      "percentage": 0.0796
+    }
+  ],
+  "miniSankey": {
+    "spending_data": {
+      "id": "privy-council",
+      "name": "Privy Council",
+      "children": [
+        {
+          "id": "privy-council-org-office-of-the-chief-electoral-officer",
+          "name": "Office of the Chief Electoral Officer",
+          "children": [
+            {
+              "id": "privy-council-office-of-the-chief-electoral-officer-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.120622
+            },
+            {
+              "id": "privy-council-office-of-the-chief-electoral-officer-vote1",
+              "name": "Vote 1",
+              "amount": 0.030144
+            }
+          ],
+          "amount": 0.150766
+        },
+        {
+          "id": "privy-council-org-privy-council-office",
+          "name": "Privy Council Office",
+          "children": [
+            {
+              "id": "privy-council-privy-council-office-vote1",
+              "name": "Vote 1",
+              "amount": 0.109882
+            },
+            {
+              "id": "privy-council-privy-council-office-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.013459
+            }
+          ],
+          "amount": 0.123341
+        },
+        {
+          "id": "privy-council-org-canadian-transportation-accident-investigation-and-safety-board",
+          "name": "Canadian Transportation Accident Investigation and Safety Board",
+          "children": [
+            {
+              "id": "privy-council-canadian-transportation-accident-investigation-and-safety-board-vote1",
+              "name": "Vote 1",
+              "amount": 0.028656
+            },
+            {
+              "id": "privy-council-canadian-transportation-accident-investigation-and-safety-board-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.003564
+            }
+          ],
+          "amount": 0.03222
+        },
+        {
+          "id": "privy-council-org-office-of-the-commissioner-of-official-languages",
+          "name": "Office of the Commissioner of Official Languages",
+          "children": [
+            {
+              "id": "privy-council-office-of-the-commissioner-of-official-languages-vote1",
+              "name": "Vote 1",
+              "amount": 0.020066
+            },
+            {
+              "id": "privy-council-office-of-the-commissioner-of-official-languages-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.00235
+            }
+          ],
+          "amount": 0.022416
+        },
+        {
+          "id": "privy-council-org-canadian-intergovernmental-conference-secretariat",
+          "name": "Canadian Intergovernmental Conference Secretariat",
+          "children": [
+            {
+              "id": "privy-council-canadian-intergovernmental-conference-secretariat-vote1",
+              "name": "Vote 1",
+              "amount": 0.004851
+            },
+            {
+              "id": "privy-council-canadian-intergovernmental-conference-secretariat-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.000318
+            }
+          ],
+          "amount": 0.005169
+        },
+        {
+          "id": "privy-council-org-security-intelligence-review-committee",
+          "name": "Security Intelligence Review Committee",
+          "children": [
+            {
+              "id": "privy-council-security-intelligence-review-committee-vote1",
+              "name": "Vote 1",
+              "amount": 0.0027
+            },
+            {
+              "id": "privy-council-security-intelligence-review-committee-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.00028
+            }
+          ],
+          "amount": 0.00298
+        }
+      ],
+      "amount": 0.336892
+    }
+  },
+  "entities": [
+    {
+      "id": "privy-council-2015-entity-office-of-the-chief-electoral-officer",
+      "name": "Office of the Chief Electoral Officer",
+      "value": 0.150766
+    },
+    {
+      "id": "privy-council-2015-entity-privy-council-office",
+      "name": "Privy Council Office",
+      "value": 0.123341
+    },
+    {
+      "id": "privy-council-2015-entity-canadian-transportation-accident-investigation-and-safety-board",
+      "name": "Canadian Transportation Accident Investigation and Safety Board",
+      "value": 0.032219
+    },
+    {
+      "id": "privy-council-2015-entity-office-of-the-commissioner-of-official-languages",
+      "name": "Office of the Commissioner of Official Languages",
+      "value": 0.022416
+    },
+    {
+      "id": "privy-council-2015-entity-canadian-intergovernmental-conference-secretariat",
+      "name": "Canadian Intergovernmental Conference Secretariat",
+      "value": 0.005169
+    },
+    {
+      "id": "privy-council-2015-entity-security-intelligence-review-committee",
+      "name": "Security Intelligence Review Committee",
+      "value": 0.00298
+    }
+  ],
+  "votes": [
+    {
+      "id": "privy-council-2015-canadian-intergovernmental-conference-secretariat-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 5842294,
+      "used": 4851471,
+      "lapsed": 990823
+    },
+    {
+      "id": "privy-council-2015-canadian-intergovernmental-conference-secretariat-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 318016,
+      "used": 318016,
+      "lapsed": 0
+    },
+    {
+      "id": "privy-council-2015-canadian-transportation-accident-investigation-and-safety-board-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 28736067,
+      "used": 28655526,
+      "lapsed": 80541
+    },
+    {
+      "id": "privy-council-2015-canadian-transportation-accident-investigation-and-safety-board-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 3567441,
+      "used": 3563805,
+      "lapsed": 3636
+    },
+    {
+      "id": "privy-council-2015-office-of-the-chief-electoral-officer-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 31582646,
+      "used": 30144204,
+      "lapsed": 1438442
+    },
+    {
+      "id": "privy-council-2015-office-of-the-chief-electoral-officer-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 120622171,
+      "used": 120622171,
+      "lapsed": 0
+    },
+    {
+      "id": "privy-council-2015-office-of-the-commissioner-of-official-languages-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 20594421,
+      "used": 20066040,
+      "lapsed": 528381
+    },
+    {
+      "id": "privy-council-2015-office-of-the-commissioner-of-official-languages-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 2349834,
+      "used": 2349834,
+      "lapsed": 0
+    },
+    {
+      "id": "privy-council-2015-privy-council-office-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 113897027,
+      "used": 109881993,
+      "lapsed": 4015034
+    },
+    {
+      "id": "privy-council-2015-privy-council-office-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 13477960,
+      "used": 13459438,
+      "lapsed": 18522
+    },
+    {
+      "id": "privy-council-2015-security-intelligence-review-committee-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 2727928,
+      "used": 2699866,
+      "lapsed": 28062
+    },
+    {
+      "id": "privy-council-2015-security-intelligence-review-committee-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 280173,
+      "used": 280154,
+      "lapsed": 19
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "privy-council-2015-tp-0000",
+      "category": "Other transfer payments",
+      "description": "Quarterly allowances to registered eligible political parties and subsidies to electoral district associations for auditor's fee (political financing provision under the Canada Elections Act)",
+      "used": 8184963
+    },
+    {
+      "id": "privy-council-2015-tp-0001",
+      "category": "Other transfer payments",
+      "description": "Reimbursement of eligible election expenses for other general elections and by‑elections to candidates (political financing provision under the Canada Elections Act)",
+      "used": 33942
+    },
+    {
+      "id": "privy-council-2015-tp-0002",
+      "category": "Other transfer payments",
+      "description": "Reimbursement of eligible election expenses to candidates for the 2014 by‑elections (political financing provision under the Canada Elections Act)",
+      "used": 505004
+    },
+    {
+      "id": "privy-council-2015-tp-0003",
+      "category": "Other transfer payments",
+      "description": "Reimbursement of eligible elections expenses to candidates for the 41st General Election (political financing provision under the Canada Elections Act)",
+      "used": 69295
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

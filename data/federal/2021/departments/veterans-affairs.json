@@ -1,0 +1,404 @@
+{
+  "name": "Veterans Affairs",
+  "slug": "veterans-affairs",
+  "financialYearEnding": 2021,
+  "reportedAs": null,
+  "basis": "vol2_appropriations",
+  "totalSpending": 4.847139,
+  "percentageOfFederal": 0.7708,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 1.3642
+    },
+    {
+      "year": 2015,
+      "percentage": 1.2417
+    },
+    {
+      "year": 2016,
+      "percentage": 1.2635
+    },
+    {
+      "year": 2017,
+      "percentage": 1.2607
+    },
+    {
+      "year": 2018,
+      "percentage": 1.4961
+    },
+    {
+      "year": 2019,
+      "percentage": 1.3914
+    },
+    {
+      "year": 2020,
+      "percentage": 1.3345
+    },
+    {
+      "year": 2021,
+      "percentage": 0.7708
+    },
+    {
+      "year": 2022,
+      "percentage": 1.098
+    },
+    {
+      "year": 2023,
+      "percentage": 1.148
+    },
+    {
+      "year": 2024,
+      "percentage": 1.1813
+    },
+    {
+      "year": 2025,
+      "percentage": 1.4084
+    }
+  ],
+  "miniSankey": {
+    "spending_data": {
+      "id": "veterans-affairs",
+      "name": "Veterans Affairs",
+      "children": [
+        {
+          "id": "veterans-affairs-org-department-of-veterans-affairs",
+          "name": "Department of Veterans Affairs",
+          "children": [
+            {
+              "id": "veterans-affairs-department-of-veterans-affairs-vote5",
+              "name": "Vote 5",
+              "amount": 3.667732
+            },
+            {
+              "id": "veterans-affairs-department-of-veterans-affairs-vote1",
+              "name": "Vote 1",
+              "amount": 1.084358
+            },
+            {
+              "id": "veterans-affairs-department-of-veterans-affairs-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.084543
+            }
+          ],
+          "amount": 4.836633
+        },
+        {
+          "id": "veterans-affairs-org-veterans-review-and-appeal-board",
+          "name": "Veterans Review and Appeal Board",
+          "children": [
+            {
+              "id": "veterans-affairs-veterans-review-and-appeal-board-vote1",
+              "name": "Vote 1",
+              "amount": 0.009255
+            },
+            {
+              "id": "veterans-affairs-veterans-review-and-appeal-board-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.00125
+            }
+          ],
+          "amount": 0.010505
+        }
+      ],
+      "amount": 4.847138
+    }
+  },
+  "entities": [
+    {
+      "id": "veterans-affairs-2021-entity-department-of-veterans-affairs",
+      "name": "Department of Veterans Affairs",
+      "value": 4.836634
+    },
+    {
+      "id": "veterans-affairs-2021-entity-veterans-review-and-appeal-board",
+      "name": "Veterans Review and Appeal Board",
+      "value": 0.010506
+    }
+  ],
+  "votes": [
+    {
+      "id": "veterans-affairs-2021-department-of-veterans-affairs-vote1",
+      "vote": "Vote 1",
+      "description": "Operating expenditures",
+      "totalAvailable": 1230944800,
+      "used": 1084358047,
+      "lapsed": 146586753
+    },
+    {
+      "id": "veterans-affairs-2021-department-of-veterans-affairs-vote5",
+      "vote": "Vote 5",
+      "description": "Grants and contributions",
+      "totalAvailable": 4155647628,
+      "used": 3667732300,
+      "lapsed": 487915328
+    },
+    {
+      "id": "veterans-affairs-2021-department-of-veterans-affairs-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 84575156,
+      "used": 84543156,
+      "lapsed": 32000
+    },
+    {
+      "id": "veterans-affairs-2021-veterans-review-and-appeal-board-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 10668899,
+      "used": 9255187,
+      "lapsed": 1413712
+    },
+    {
+      "id": "veterans-affairs-2021-veterans-review-and-appeal-board-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 1250493,
+      "used": 1250493,
+      "lapsed": 0
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "veterans-affairs-2021-tp-0000",
+      "category": "Contributions",
+      "description": "Centre of Excellence on Post-Traumatic Stress Disorder and other related mental health conditions",
+      "used": 6265285
+    },
+    {
+      "id": "veterans-affairs-2021-tp-0001",
+      "category": "Contributions",
+      "description": "Contributions for Research Funding Program",
+      "used": 6106099
+    },
+    {
+      "id": "veterans-affairs-2021-tp-0002",
+      "category": "Contributions",
+      "description": "Contributions for Veterans and Family Well-Being Fund",
+      "used": 5636057
+    },
+    {
+      "id": "veterans-affairs-2021-tp-0003",
+      "category": "Contributions",
+      "description": "Contributions to Veterans, under the Veterans Independence Program, to assist in defraying costs of extended health care not covered by provincial health programs",
+      "used": 71945770
+    },
+    {
+      "id": "veterans-affairs-2021-tp-0004",
+      "category": "Contributions",
+      "description": "Contributions under the Commemorative Partnerships Program, to organizations, institutions and other levels of government, in support of projects related to the health and well-being of the veteran population, and commemoration activities and events",
+      "used": 3148620
+    },
+    {
+      "id": "veterans-affairs-2021-tp-0005",
+      "category": "Grants",
+      "description": "Additional Pain and Suffering Compensation",
+      "used": 154052414
+    },
+    {
+      "id": "veterans-affairs-2021-tp-0006",
+      "category": "Grants",
+      "description": "Assistance in accordance with the provisions of the Assistance Fund Regulations",
+      "used": 73334
+    },
+    {
+      "id": "veterans-affairs-2021-tp-0007",
+      "category": "Grants",
+      "description": "Assistance to Canadian Veterans—Overseas District",
+      "used": 26330
+    },
+    {
+      "id": "veterans-affairs-2021-tp-0008",
+      "category": "Grants",
+      "description": "Canadian Forces Income Support Allowance",
+      "used": 2083888
+    },
+    {
+      "id": "veterans-affairs-2021-tp-0009",
+      "category": "Grants",
+      "description": "Canadian Veterans Association of the United Kingdom",
+      "used": 0
+    },
+    {
+      "id": "veterans-affairs-2021-tp-0010",
+      "category": "Grants",
+      "description": "Career Transition Services",
+      "used": 0
+    },
+    {
+      "id": "veterans-affairs-2021-tp-0011",
+      "category": "Grants",
+      "description": "Caregiver Recognition Benefit",
+      "used": 10617875
+    },
+    {
+      "id": "veterans-affairs-2021-tp-0012",
+      "category": "Grants",
+      "description": "Children of Deceased Veterans Education Assistance",
+      "used": 764731
+    },
+    {
+      "id": "veterans-affairs-2021-tp-0013",
+      "category": "Grants",
+      "description": "Commonwealth War Graves Commission",
+      "used": 11476215
+    },
+    {
+      "id": "veterans-affairs-2021-tp-0014",
+      "category": "Grants",
+      "description": "Critical Injury Benefit",
+      "used": 1373961
+    },
+    {
+      "id": "veterans-affairs-2021-tp-0015",
+      "category": "Grants",
+      "description": "Disability Awards and Allowances",
+      "used": 3036714
+    },
+    {
+      "id": "veterans-affairs-2021-tp-0016",
+      "category": "Grants",
+      "description": "Earnings Loss and Supplementary Retirement Benefit",
+      "used": 7050551
+    },
+    {
+      "id": "veterans-affairs-2021-tp-0017",
+      "category": "Grants",
+      "description": "Education and Training Benefit",
+      "used": 23413408
+    },
+    {
+      "id": "veterans-affairs-2021-tp-0018",
+      "category": "Grants",
+      "description": "Grant for Commemorative Partnerships",
+      "used": 429803
+    },
+    {
+      "id": "veterans-affairs-2021-tp-0019",
+      "category": "Grants",
+      "description": "Grant for Research Funding Program",
+      "used": 0
+    },
+    {
+      "id": "veterans-affairs-2021-tp-0020",
+      "category": "Grants",
+      "description": "Grant for Veterans and Family Well-Being Fund",
+      "used": 1363943
+    },
+    {
+      "id": "veterans-affairs-2021-tp-0021",
+      "category": "Grants",
+      "description": "Housekeeping and Grounds Maintenance",
+      "used": 267137081
+    },
+    {
+      "id": "veterans-affairs-2021-tp-0022",
+      "category": "Grants",
+      "description": "Income Replacement Benefit",
+      "used": 868374197
+    },
+    {
+      "id": "veterans-affairs-2021-tp-0023",
+      "category": "Grants",
+      "description": "Items not required for the current year",
+      "used": 0
+    },
+    {
+      "id": "veterans-affairs-2021-tp-0024",
+      "category": "Grants",
+      "description": "Last Post Fund",
+      "used": 5934000
+    },
+    {
+      "id": "veterans-affairs-2021-tp-0025",
+      "category": "Grants",
+      "description": "Pain and Suffering Compensation",
+      "used": 1085547081
+    },
+    {
+      "id": "veterans-affairs-2021-tp-0026",
+      "category": "Grants",
+      "description": "Payments of Gallantry Awards",
+      "used": 2310
+    },
+    {
+      "id": "veterans-affairs-2021-tp-0027",
+      "category": "Grants",
+      "description": "Payments to support veterans' organizations pursuant to the Public Health Events of National Concern Payments Act",
+      "used": 19999420
+    },
+    {
+      "id": "veterans-affairs-2021-tp-0028",
+      "category": "Grants",
+      "description": "Payments under the Flying Accidents Compensation Regulations",
+      "used": 464807
+    },
+    {
+      "id": "veterans-affairs-2021-tp-0029",
+      "category": "Grants",
+      "description": "Pensions for disability and death, including pensions granted under the authority of the Civilian Government Employees (War) Compensation Order, P.C. 45/8848 of November 22, 1944, which shall be subject to the Pension Act; for former prisoners of war under the Pension Act, and Newfoundland special awards",
+      "used": 1125004404
+    },
+    {
+      "id": "veterans-affairs-2021-tp-0030",
+      "category": "Grants",
+      "description": "Re-establishment Credits under section 8 of the War Service Grants Act",
+      "used": 0
+    },
+    {
+      "id": "veterans-affairs-2021-tp-0031",
+      "category": "Grants",
+      "description": "Repayments under section 15 of the War Service Grants Act of compensating adjustments made in accordance with the terms of the Veterans' Land Act",
+      "used": 0
+    },
+    {
+      "id": "veterans-affairs-2021-tp-0032",
+      "category": "Grants",
+      "description": "Retirement Income Security Benefit",
+      "used": 26446
+    },
+    {
+      "id": "veterans-affairs-2021-tp-0033",
+      "category": "Grants",
+      "description": "Returned Soldiers Insurance Actuarial Liability Adjustment (Returned Soldiers' Insurance Act)",
+      "used": 0
+    },
+    {
+      "id": "veterans-affairs-2021-tp-0034",
+      "category": "Grants",
+      "description": "Supplementary Retirement Benefit Payout",
+      "used": 900971
+    },
+    {
+      "id": "veterans-affairs-2021-tp-0035",
+      "category": "Grants",
+      "description": "Treatment Allowances",
+      "used": 149520
+    },
+    {
+      "id": "veterans-affairs-2021-tp-0036",
+      "category": "Grants",
+      "description": "United Nations Memorial Cemetery in Korea",
+      "used": 23870
+    },
+    {
+      "id": "veterans-affairs-2021-tp-0037",
+      "category": "Grants",
+      "description": "Veterans Emergency Funds",
+      "used": 1453159
+    },
+    {
+      "id": "veterans-affairs-2021-tp-0038",
+      "category": "Grants",
+      "description": "Veterans Insurance Actuarial Liability Adjustment (Veterans Insurance Act)",
+      "used": 33549
+    },
+    {
+      "id": "veterans-affairs-2021-tp-0039",
+      "category": "Grants",
+      "description": "War Veterans Allowances and Civilian War Allowances",
+      "used": 3849457
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

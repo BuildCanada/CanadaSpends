@@ -1,0 +1,162 @@
+{
+  "name": "National Revenue",
+  "slug": "canada-revenue-agency",
+  "financialYearEnding": 2025,
+  "reportedAs": null,
+  "basis": "vol2_appropriations",
+  "totalSpending": 22.665023,
+  "percentageOfFederal": 4.1719,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 1.8282
+    },
+    {
+      "year": 2015,
+      "percentage": 1.7195
+    },
+    {
+      "year": 2016,
+      "percentage": 1.6789
+    },
+    {
+      "year": 2017,
+      "percentage": 1.7105
+    },
+    {
+      "year": 2018,
+      "percentage": 1.583
+    },
+    {
+      "year": 2019,
+      "percentage": 1.6213
+    },
+    {
+      "year": 2020,
+      "percentage": 2.0908
+    },
+    {
+      "year": 2021,
+      "percentage": 1.663
+    },
+    {
+      "year": 2022,
+      "percentage": 2.0131
+    },
+    {
+      "year": 2023,
+      "percentage": 2.862
+    },
+    {
+      "year": 2024,
+      "percentage": 3.365
+    },
+    {
+      "year": 2025,
+      "percentage": 4.1719
+    }
+  ],
+  "miniSankey": {
+    "spending_data": {
+      "id": "canada-revenue-agency",
+      "name": "National Revenue",
+      "children": [
+        {
+          "id": "canada-revenue-agency-org-canada-revenue-agency",
+          "name": "Canada Revenue Agency",
+          "children": [
+            {
+              "id": "canada-revenue-agency-canada-revenue-agency-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 16.970598
+            },
+            {
+              "id": "canada-revenue-agency-canada-revenue-agency-vote1",
+              "name": "Vote 1",
+              "amount": 5.618395
+            },
+            {
+              "id": "canada-revenue-agency-canada-revenue-agency-vote5",
+              "name": "Vote 5",
+              "amount": 0.07603
+            }
+          ],
+          "amount": 22.665023
+        }
+      ],
+      "amount": 22.665023
+    }
+  },
+  "entities": [
+    {
+      "id": "canada-revenue-agency-2025-entity-canada-revenue-agency",
+      "name": "Canada Revenue Agency",
+      "value": 22.665023
+    }
+  ],
+  "votes": [
+    {
+      "id": "canada-revenue-agency-2025-canada-revenue-agency-vote1",
+      "vote": "Vote 1",
+      "description": "Operating expenditures, contributions and recoverable expenditures in relation to the application of the Canada Pension Plan and the Employment Insurance Act",
+      "totalAvailable": 5895307845,
+      "used": 5618395319,
+      "lapsed": 276912526
+    },
+    {
+      "id": "canada-revenue-agency-2025-canada-revenue-agency-vote5",
+      "vote": "Vote 5",
+      "description": "Capital expenditures and recoverable expenditures in relation to the application of the Canada Pension Plan and the Employment Insurance Act",
+      "totalAvailable": 143422994,
+      "used": 76030232,
+      "lapsed": 67392762
+    },
+    {
+      "id": "canada-revenue-agency-2025-canada-revenue-agency-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 16970597604,
+      "used": 16970597604,
+      "lapsed": 0
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "canada-revenue-agency-2025-tp-0000",
+      "category": "Other transfer payments",
+      "description": "Children's Special Allowance payments (Children's Special Allowance Act)",
+      "used": 429947248
+    },
+    {
+      "id": "canada-revenue-agency-2025-tp-0001",
+      "category": "Other transfer payments",
+      "description": "Community Volunteer Income Tax Program Grant",
+      "used": 6010237
+    },
+    {
+      "id": "canada-revenue-agency-2025-tp-0002",
+      "category": "Other transfer payments",
+      "description": "Distribution of fuel charges (Canada Carbon Rebate for individuals) under section 165 of the Greenhouse Gas Pollution Pricing Act and section 122.8 of the Income Tax Act",
+      "used": 12664115951
+    },
+    {
+      "id": "canada-revenue-agency-2025-tp-0003",
+      "category": "Other transfer payments",
+      "description": "Distribution of fuel charges (Canada Carbon Rebate for small businesses) under section 165 of the Greenhouse Gas Pollution Pricing Act and section 127.421 of the Income Tax Act",
+      "used": 2568878652
+    },
+    {
+      "id": "canada-revenue-agency-2025-tp-0004",
+      "category": "Other transfer payments",
+      "description": "Distribution of fuel charges (to farming businesses) under section 165 of the Greenhouse Gas Pollution Pricing Act and section 127.42 of the Income Tax Act",
+      "used": 167366526
+    },
+    {
+      "id": "canada-revenue-agency-2025-tp-0005",
+      "category": "Other transfer payments",
+      "description": "Distribution of fuel charges (to provinces and territories) under section 165 of the Greenhouse Gas Pollution Pricing Act",
+      "used": 49890877
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

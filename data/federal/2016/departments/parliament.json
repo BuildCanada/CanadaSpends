@@ -1,0 +1,118 @@
+{
+  "name": "Parliament",
+  "slug": "parliament",
+  "financialYearEnding": 2016,
+  "reportedAs": null,
+  "basis": "vol2_appropriations",
+  "totalSpending": 0.600079,
+  "percentageOfFederal": 0.2103,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 0.2134
+    },
+    {
+      "year": 2015,
+      "percentage": 0.205
+    },
+    {
+      "year": 2016,
+      "percentage": 0.2103
+    },
+    {
+      "year": 2017,
+      "percentage": 0.2283
+    },
+    {
+      "year": 2018,
+      "percentage": 0.2384
+    },
+    {
+      "year": 2019,
+      "percentage": 0.2267
+    },
+    {
+      "year": 2020,
+      "percentage": 0.2169
+    },
+    {
+      "year": 2021,
+      "percentage": 0.1418
+    },
+    {
+      "year": 2022,
+      "percentage": 0.1597
+    },
+    {
+      "year": 2023,
+      "percentage": 0.182
+    },
+    {
+      "year": 2024,
+      "percentage": 0.1876
+    },
+    {
+      "year": 2025,
+      "percentage": 0.184
+    }
+  ],
+  "miniSankey": {
+    "spending_data": {
+      "id": "parliament",
+      "name": "Parliament",
+      "children": [
+        {
+          "id": "parliament-org-parliament",
+          "name": "Parliament",
+          "children": [
+            {
+              "id": "parliament-parliament-vote",
+              "name": "All votes",
+              "amount": 0.600079
+            }
+          ],
+          "amount": 0.600079
+        }
+      ],
+      "amount": 0.600079
+    }
+  },
+  "entities": [
+    {
+      "id": "parliament-2016-entity-parliament",
+      "name": "Parliament",
+      "value": 0.600079
+    }
+  ],
+  "votes": [
+    {
+      "id": "parliament-2016-parliament-vote",
+      "vote": "All votes",
+      "description": "Total appropriations (vote-level detail not published for this edition)",
+      "totalAvailable": 626382982,
+      "used": 600079420,
+      "lapsed": 26303562
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "parliament-2016-tp-0000",
+      "category": "Contributions",
+      "description": "Contributions to Parliamentary Associations",
+      "used": 418679
+    },
+    {
+      "id": "parliament-2016-tp-0001",
+      "category": "Contributions",
+      "description": "Payments to parliamentary and procedural associations",
+      "used": 1012033
+    },
+    {
+      "id": "parliament-2016-tp-0002",
+      "category": "Grants",
+      "description": "Pensions to Retired Senators",
+      "used": 47664
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

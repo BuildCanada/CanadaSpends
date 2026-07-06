@@ -1,0 +1,184 @@
+{
+  "name": "Finance",
+  "slug": "department-of-finance",
+  "financialYearEnding": 2017,
+  "reportedAs": null,
+  "basis": "vol2_appropriations",
+  "totalSpending": 88.725612,
+  "percentageOfFederal": 29.583,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 33.2913
+    },
+    {
+      "year": 2015,
+      "percentage": 31.5851
+    },
+    {
+      "year": 2016,
+      "percentage": 30.5935
+    },
+    {
+      "year": 2017,
+      "percentage": 29.583
+    },
+    {
+      "year": 2018,
+      "percentage": 28.3409
+    },
+    {
+      "year": 2019,
+      "percentage": 27.9531
+    },
+    {
+      "year": 2020,
+      "percentage": 27.3373
+    },
+    {
+      "year": 2021,
+      "percentage": 18.7727
+    },
+    {
+      "year": 2022,
+      "percentage": 21.6503
+    },
+    {
+      "year": 2023,
+      "percentage": 24.8834
+    },
+    {
+      "year": 2024,
+      "percentage": 26.4842
+    },
+    {
+      "year": 2025,
+      "percentage": 26.4804
+    }
+  ],
+  "miniSankey": {
+    "spending_data": {
+      "id": "department-of-finance",
+      "name": "Finance",
+      "children": [
+        {
+          "id": "department-of-finance-org-finance",
+          "name": "Finance",
+          "children": [
+            {
+              "id": "department-of-finance-finance-vote",
+              "name": "All votes",
+              "amount": 88.725612
+            }
+          ],
+          "amount": 88.725612
+        }
+      ],
+      "amount": 88.725612
+    }
+  },
+  "entities": [
+    {
+      "id": "department-of-finance-2017-entity-finance",
+      "name": "Finance",
+      "value": 88.725612
+    }
+  ],
+  "votes": [
+    {
+      "id": "department-of-finance-2017-finance-vote",
+      "vote": "All votes",
+      "description": "Total appropriations (vote-level detail not published for this edition)",
+      "totalAvailable": 88880275174,
+      "used": 88725612128,
+      "lapsed": 154663046
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "department-of-finance-2017-tp-0000",
+      "category": "Contributions",
+      "description": "Contribution to the Harbourfront Centre",
+      "used": 4000000
+    },
+    {
+      "id": "department-of-finance-2017-tp-0001",
+      "category": "Contributions",
+      "description": "Research and Policy Initiatives Assistance",
+      "used": 10000
+    },
+    {
+      "id": "department-of-finance-2017-tp-0002",
+      "category": "Other transfer payments",
+      "description": "Additional Fiscal Equalization Offset Payment to Nova Scotia",
+      "used": 33255000
+    },
+    {
+      "id": "department-of-finance-2017-tp-0003",
+      "category": "Other transfer payments",
+      "description": "Additional Fiscal Equalization to Nova Scotia",
+      "used": 10598000
+    },
+    {
+      "id": "department-of-finance-2017-tp-0004",
+      "category": "Other transfer payments",
+      "description": "Alternative Payments for Standing Programs",
+      "used": 0
+    },
+    {
+      "id": "department-of-finance-2017-tp-0005",
+      "category": "Other transfer payments",
+      "description": "Canada Health Transfer",
+      "used": 36057581263
+    },
+    {
+      "id": "department-of-finance-2017-tp-0006",
+      "category": "Other transfer payments",
+      "description": "Canada Social Transfer",
+      "used": 13347956000
+    },
+    {
+      "id": "department-of-finance-2017-tp-0007",
+      "category": "Other transfer payments",
+      "description": "Debt payments on behalf of poor countries to International Organizations pursuant to section 18(1) of the Economic Recovery Act",
+      "used": 51200000
+    },
+    {
+      "id": "department-of-finance-2017-tp-0008",
+      "category": "Other transfer payments",
+      "description": "Fiscal Equalization",
+      "used": 17880415000
+    },
+    {
+      "id": "department-of-finance-2017-tp-0009",
+      "category": "Other transfer payments",
+      "description": "Items not required for the current year",
+      "used": 0
+    },
+    {
+      "id": "department-of-finance-2017-tp-0010",
+      "category": "Other transfer payments",
+      "description": "Payments to International Development Association",
+      "used": 441620000
+    },
+    {
+      "id": "department-of-finance-2017-tp-0011",
+      "category": "Other transfer payments",
+      "description": "Statutory Subsidies",
+      "used": 42355839
+    },
+    {
+      "id": "department-of-finance-2017-tp-0012",
+      "category": "Other transfer payments",
+      "description": "Territorial Financing",
+      "used": 3602979726
+    },
+    {
+      "id": "department-of-finance-2017-tp-0013",
+      "category": "Other transfer payments",
+      "description": "Youth Allowances Recovery",
+      "used": 0
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

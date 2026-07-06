@@ -1,0 +1,13 @@
+---
+reviewed: false
+source: llm-first-pass
+generated: 2026-07-06
+---
+
+{{name}} est responsable des programmes et services fédéraux liés à l'emploi, au perfectionnement des compétences, aux marchés du travail et à la sécurité sociale, notamment le soutien du revenu de retraite, l'assurance-emploi et l'aide financière aux étudiants. Ses activités comprennent généralement le versement de prestations aux aînés, aux travailleurs et aux familles, ainsi que des programmes qui appuient le logement et la santé et la sécurité au travail.
+
+{{name}} a dépensé {{totalSpending}} au cours de l'exercice 2019-2020, ce qui représentait {{percentageOfFederal}} des dépenses fédérales de cette année-là.
+
+Les dépenses ont été autorisées au moyen de 21 crédits. Le ministère de l'Emploi et du Développement social a représenté la grande majorité des dépenses, un montant moindre étant administré par la Société canadienne d'hypothèques et de logement, et des montants plus modestes par le Centre canadien d'hygiène et de sécurité au travail et l'Organisation canadienne d'élaboration de normes d'accessibilité. Les paiements de transfert ont été dominés par les paiements de la Sécurité de la vieillesse, l'un des plus importants programmes de transfert du ministère, suivis des paiements du Supplément de revenu garanti destinés aux aînés à faible revenu. Le ministère a également versé des paiements pour la Prestation canadienne d'urgence instaurée en réponse à la pandémie de COVID-19, ainsi qu'un soutien aux étudiants postsecondaires par l'entremise des bourses canadiennes pour étudiants et des subventions incitatives aux études versées dans le cadre du programme canadien pour l'épargne-études.
+
+<!-- verification: {{name}} used only as placeholder token. Total spending and percentage use placeholders only. Entities named: Department of Employment and Social Development, Canada Mortgage and Housing Corporation, Canadian Centre for Occupational Health and Safety, Canadian Accessibility Standards Development Organization — all match topEntities/topSankeyChildren. Transfer categories named: Old Age Security Payments, Guaranteed Income Supplement Payments, Canada Emergency Response Benefit payments, Canada Student Grants, Canada Education Savings grant payments — all match topTransferPayments descriptions. Vote count of 21 stated as literal integer, matches voteCount. Note: fact sheet's "name" field reads "Employment and Social Development" rather than the slug's full title; prose uses only the {{name}} placeholder so no literal-name conflict arises. No dollar/percentage figures used outside the three placeholders. -->

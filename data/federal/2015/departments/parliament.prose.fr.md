@@ -1,0 +1,20 @@
+---
+reviewed: false
+source: llm-first-pass
+generated: 2026-07-06
+---
+
+Le Parlement n'est pas un ministère au sens habituel, mais bien la branche législative du gouvernement du Canada, composée de la Chambre des communes, élue, et du Sénat, dont les membres sont nommés, ainsi que des fonctionnaires et institutions qui appuient leur travail. Les députés de la Chambre des communes débattent des projets de loi, votent sur ceux-ci et demandent des comptes au gouvernement, tandis que les sénateurs assurent un examen complémentaire des projets de loi adoptés par la Chambre. Il comprend la Chambre des communes et le Sénat, ainsi que la Bibliothèque du Parlement, qui offre des services de recherche, d'analyse et d'information non partisans aux deux chambres, et plusieurs bureaux plus modestes qui appuient l'intégrité et le bon fonctionnement du Parlement, comme le Commissariat aux conflits d'intérêts et à l'éthique, qui supervise les règles de conduite éthique des députés de la Chambre des communes, et le Bureau du conseiller sénatorial en éthique, qui remplit une fonction semblable pour les sénateurs.
+
+Au cours de l'exercice 2014-2015, le Parlement a enregistré des dépenses totales de {{totalSpending}}, soit {{percentageOfFederal}} des dépenses fédérales de cette année-là. Ses dépenses étaient réparties entre dix crédits budgétaires, couvrant en grande partie les dépenses de programme nécessaires au fonctionnement de chacune de ses entités constitutives, de l'administration des chambres elles-mêmes, y compris la dotation en personnel, la sécurité et les services de soutien aux députés et sénateurs, aux services de recherche et de bibliothèque et aux fonctions de surveillance de l'éthique qui les appuient.
+
+La majeure partie de ces dépenses a été comptabilisée sous la Chambre des communes, ce qui reflète sa taille plus importante et son éventail plus large de fonctions administratives et de soutien aux députés, suivie du Sénat, puis de la Bibliothèque du Parlement, des montants plus modestes étant attribués au Commissariat aux conflits d'intérêts et à l'éthique et au Bureau du conseiller sénatorial en éthique. Ses principaux paiements de transfert appuyaient des associations parlementaires, par des paiements et des contributions versés à des associations parlementaires et procédurales qui mettent en relation les parlementaires canadiens avec leurs homologues d'autres assemblées législatives, en plus d'un programme de subventions plus modeste versant des pensions à d'anciens sénateurs.
+
+<!-- verification :
+- La description du mandat au paragraphe 1 décrit la structure institutionnelle du Parlement (Chambre des communes, Sénat, Bibliothèque du Parlement, bureaux d'éthique) et la fonction législative générale de chaque chambre de façon générique et correspond à topEntities/topSankeyChildren; ce traitement est requis par les instructions pour les institutions qui ne sont pas des ministères classiques, et les descriptions génériques de rôles (fonction législative, services de recherche/bibliothèque, surveillance de l'éthique, services de soutien aux députés/sénateurs) constituent des connaissances générales non controversées, non tirées de la fiche de données.
+- Les entités nommées (Chambre des communes, Sénat, Bibliothèque du Parlement, Commissariat aux conflits d'intérêts et à l'éthique, Bureau du conseiller sénatorial en éthique) correspondent exactement à topEntities/topSankeyChildren et sont présentées par ordre de valeur.
+- Les paiements de transfert nommés (paiements aux associations parlementaires et procédurales, contributions aux associations parlementaires, pensions aux anciens sénateurs) correspondent à topTransferPayments; un quatrième élément (contribution « House of Commons ») avait une valeur utilisée nulle et a été omis car peu descriptif.
+- Le nombre de crédits (dix) correspond au champ voteCount.
+- Aucun montant en dollars ni pourcentage littéral n'est utilisé en dehors des trois espaces réservés.
+- Incertitude : aucune.
+-->

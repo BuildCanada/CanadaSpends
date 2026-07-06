@@ -1,0 +1,349 @@
+{
+  "name": "Finance",
+  "slug": "department-of-finance",
+  "financialYearEnding": 2025,
+  "reportedAs": null,
+  "basis": "vol2_appropriations",
+  "totalSpending": 143.862551,
+  "percentageOfFederal": 26.4804,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 33.2913
+    },
+    {
+      "year": 2015,
+      "percentage": 31.5851
+    },
+    {
+      "year": 2016,
+      "percentage": 30.5935
+    },
+    {
+      "year": 2017,
+      "percentage": 29.583
+    },
+    {
+      "year": 2018,
+      "percentage": 28.3409
+    },
+    {
+      "year": 2019,
+      "percentage": 27.9531
+    },
+    {
+      "year": 2020,
+      "percentage": 27.3373
+    },
+    {
+      "year": 2021,
+      "percentage": 18.7727
+    },
+    {
+      "year": 2022,
+      "percentage": 21.6503
+    },
+    {
+      "year": 2023,
+      "percentage": 24.8834
+    },
+    {
+      "year": 2024,
+      "percentage": 26.4842
+    },
+    {
+      "year": 2025,
+      "percentage": 26.4804
+    }
+  ],
+  "miniSankey": {
+    "spending_data": {
+      "id": "department-of-finance",
+      "name": "Finance",
+      "children": [
+        {
+          "id": "department-of-finance-org-department-of-finance",
+          "name": "Department of Finance",
+          "children": [
+            {
+              "id": "department-of-finance-department-of-finance-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 143.112977
+            },
+            {
+              "id": "department-of-finance-department-of-finance-vote1",
+              "name": "Vote 1",
+              "amount": 0.14687
+            },
+            {
+              "id": "department-of-finance-department-of-finance-vote5",
+              "name": "Vote 5",
+              "amount": 0.0
+            }
+          ],
+          "amount": 143.259847
+        },
+        {
+          "id": "department-of-finance-org-office-of-the-superintendent-of-financial-institutions",
+          "name": "Office of the Superintendent of Financial Institutions",
+          "children": [
+            {
+              "id": "department-of-finance-office-of-the-superintendent-of-financial-institutions-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.311525
+            },
+            {
+              "id": "department-of-finance-office-of-the-superintendent-of-financial-institutions-vote1",
+              "name": "Vote 1",
+              "amount": 0.001403
+            }
+          ],
+          "amount": 0.312928
+        },
+        {
+          "id": "department-of-finance-org-office-of-the-auditor-general",
+          "name": "Office of the Auditor General",
+          "children": [
+            {
+              "id": "department-of-finance-office-of-the-auditor-general-vote1",
+              "name": "Vote 1",
+              "amount": 0.118498
+            },
+            {
+              "id": "department-of-finance-office-of-the-auditor-general-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.014572
+            }
+          ],
+          "amount": 0.13307
+        },
+        {
+          "id": "department-of-finance-org-financial-transactions-and-reports-analysis-centre-of-canada",
+          "name": "Financial Transactions and Reports Analysis Centre of Canada",
+          "children": [
+            {
+              "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote1",
+              "name": "Vote 1",
+              "amount": 0.050816
+            },
+            {
+              "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.050623
+            }
+          ],
+          "amount": 0.101439
+        },
+        {
+          "id": "department-of-finance-org-financial-consumer-agency-of-canada",
+          "name": "Financial Consumer Agency of Canada",
+          "children": [
+            {
+              "id": "department-of-finance-financial-consumer-agency-of-canada-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.055268
+            }
+          ],
+          "amount": 0.055268
+        }
+      ],
+      "amount": 143.862552
+    }
+  },
+  "entities": [
+    {
+      "id": "department-of-finance-2025-entity-department-of-finance",
+      "name": "Department of Finance",
+      "value": 143.259847
+    },
+    {
+      "id": "department-of-finance-2025-entity-office-of-the-superintendent-of-financial-institutions",
+      "name": "Office of the Superintendent of Financial Institutions",
+      "value": 0.312927
+    },
+    {
+      "id": "department-of-finance-2025-entity-office-of-the-auditor-general",
+      "name": "Office of the Auditor General",
+      "value": 0.13307
+    },
+    {
+      "id": "department-of-finance-2025-entity-financial-transactions-and-reports-analysis-centre-of-canada",
+      "name": "Financial Transactions and Reports Analysis Centre of Canada",
+      "value": 0.101439
+    },
+    {
+      "id": "department-of-finance-2025-entity-financial-consumer-agency-of-canada",
+      "name": "Financial Consumer Agency of Canada",
+      "value": 0.055268
+    }
+  ],
+  "votes": [
+    {
+      "id": "department-of-finance-2025-department-of-finance-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 162605459,
+      "used": 146869835,
+      "lapsed": 15735624
+    },
+    {
+      "id": "department-of-finance-2025-department-of-finance-vote5",
+      "vote": "Vote 5",
+      "description": "Authority for amount by way of direct payments to the International Development Association pursuant to Bretton Woods and Related Agreements Act",
+      "totalAvailable": 1,
+      "used": 0,
+      "lapsed": 1
+    },
+    {
+      "id": "department-of-finance-2025-department-of-finance-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 143181550322,
+      "used": 143112976851,
+      "lapsed": 68573471
+    },
+    {
+      "id": "department-of-finance-2025-financial-consumer-agency-of-canada-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 55267544,
+      "used": 55267544,
+      "lapsed": 0
+    },
+    {
+      "id": "department-of-finance-2025-financial-transactions-and-reports-analysis-centre-of-canada-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 72601726,
+      "used": 50816019,
+      "lapsed": 21785707
+    },
+    {
+      "id": "department-of-finance-2025-financial-transactions-and-reports-analysis-centre-of-canada-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 50623008,
+      "used": 50623008,
+      "lapsed": 0
+    },
+    {
+      "id": "department-of-finance-2025-office-of-the-auditor-general-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 126183191,
+      "used": 118498146,
+      "lapsed": 7685045
+    },
+    {
+      "id": "department-of-finance-2025-office-of-the-auditor-general-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 14574611,
+      "used": 14571914,
+      "lapsed": 2697
+    },
+    {
+      "id": "department-of-finance-2025-office-of-the-superintendent-of-financial-institutions-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 1402500,
+      "used": 1402500,
+      "lapsed": 0
+    },
+    {
+      "id": "department-of-finance-2025-office-of-the-superintendent-of-financial-institutions-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 453515384,
+      "used": 311524729,
+      "lapsed": 141990655
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "department-of-finance-2025-tp-0000",
+      "category": "Contributions",
+      "description": "Indigenous Participant Funding Program",
+      "used": 400000
+    },
+    {
+      "id": "department-of-finance-2025-tp-0001",
+      "category": "Contributions",
+      "description": "Items not required for the current year",
+      "used": 0
+    },
+    {
+      "id": "department-of-finance-2025-tp-0002",
+      "category": "Other transfer payments",
+      "description": "Alternative Payments for Standing Programs (Part VI— Federal-Provincial Fiscal Arrangements Act)",
+      "used": 0
+    },
+    {
+      "id": "department-of-finance-2025-tp-0003",
+      "category": "Other transfer payments",
+      "description": "Canada Health Transfer (Part V.1—Federal-Provincial Fiscal Arrangements Act)",
+      "used": 52070383303
+    },
+    {
+      "id": "department-of-finance-2025-tp-0004",
+      "category": "Other transfer payments",
+      "description": "Canada Social Transfer (Part V.1—Federal-Provincial Fiscal Arrangements Act)",
+      "used": 16908791000
+    },
+    {
+      "id": "department-of-finance-2025-tp-0005",
+      "category": "Other transfer payments",
+      "description": "Debt payments on behalf of poor countries to International Organizations pursuant to subsection 18(1) of the Economic Recovery Act",
+      "used": 51535479
+    },
+    {
+      "id": "department-of-finance-2025-tp-0006",
+      "category": "Other transfer payments",
+      "description": "Fiscal Equalization (Part I—Federal-Provincial Fiscal Arrangements Act)",
+      "used": 25252833000
+    },
+    {
+      "id": "department-of-finance-2025-tp-0007",
+      "category": "Other transfer payments",
+      "description": "Items not required for the current year",
+      "used": 0
+    },
+    {
+      "id": "department-of-finance-2025-tp-0008",
+      "category": "Other transfer payments",
+      "description": "Payment to Newfoundland and Labrador related to the Hibernia Dividend Backed Annuity Agreement (Section 200— Budget Implementation Act, 2021, No. 1)",
+      "used": 184903516
+    },
+    {
+      "id": "department-of-finance-2025-tp-0009",
+      "category": "Other transfer payments",
+      "description": "Payments of any amount that is required for the purpose of providing financial assistance, pursuant to section 8.3 of the Bretton Woods and Related Agreements Act",
+      "used": 212248
+    },
+    {
+      "id": "department-of-finance-2025-tp-0010",
+      "category": "Other transfer payments",
+      "description": "Payments to International Development Association (Bretton Woods and Related Agreements Act)",
+      "used": 486916000
+    },
+    {
+      "id": "department-of-finance-2025-tp-0011",
+      "category": "Other transfer payments",
+      "description": "Statutory Subsidies (Constitution Acts, 1867-1982, and other statutory authorities)",
+      "used": 44920116
+    },
+    {
+      "id": "department-of-finance-2025-tp-0012",
+      "category": "Other transfer payments",
+      "description": "Territorial Financing (Part I.1 - Federal-Provincial Fiscal Arrangements Act)",
+      "used": 5158964752
+    },
+    {
+      "id": "department-of-finance-2025-tp-0013",
+      "category": "Other transfer payments",
+      "description": "Youth Allowances Recovery (Federal-Provincial Fiscal Revision Act, 1964)",
+      "used": 0
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

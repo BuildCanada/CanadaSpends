@@ -1,0 +1,362 @@
+{
+  "name": "Veterans Affairs",
+  "slug": "veterans-affairs",
+  "financialYearEnding": 2019,
+  "reportedAs": null,
+  "basis": "vol2_appropriations",
+  "totalSpending": 4.700369,
+  "percentageOfFederal": 1.3914,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 1.3642
+    },
+    {
+      "year": 2015,
+      "percentage": 1.2417
+    },
+    {
+      "year": 2016,
+      "percentage": 1.2635
+    },
+    {
+      "year": 2017,
+      "percentage": 1.2607
+    },
+    {
+      "year": 2018,
+      "percentage": 1.4961
+    },
+    {
+      "year": 2019,
+      "percentage": 1.3914
+    },
+    {
+      "year": 2020,
+      "percentage": 1.3345
+    },
+    {
+      "year": 2021,
+      "percentage": 0.7708
+    },
+    {
+      "year": 2022,
+      "percentage": 1.098
+    },
+    {
+      "year": 2023,
+      "percentage": 1.148
+    },
+    {
+      "year": 2024,
+      "percentage": 1.1813
+    },
+    {
+      "year": 2025,
+      "percentage": 1.4084
+    }
+  ],
+  "miniSankey": {
+    "spending_data": {
+      "id": "veterans-affairs",
+      "name": "Veterans Affairs",
+      "children": [
+        {
+          "id": "veterans-affairs-org-department-of-veterans-affairs",
+          "name": "Department of Veterans Affairs",
+          "children": [
+            {
+              "id": "veterans-affairs-department-of-veterans-affairs-vote5",
+              "name": "Vote 5",
+              "amount": 3.655819
+            },
+            {
+              "id": "veterans-affairs-department-of-veterans-affairs-vote1",
+              "name": "Vote 1",
+              "amount": 1.00164
+            },
+            {
+              "id": "veterans-affairs-department-of-veterans-affairs-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.033004
+            }
+          ],
+          "amount": 4.690463
+        },
+        {
+          "id": "veterans-affairs-org-veterans-review-and-appeal-board",
+          "name": "Veterans Review and Appeal Board",
+          "children": [
+            {
+              "id": "veterans-affairs-veterans-review-and-appeal-board-vote1",
+              "name": "Vote 1",
+              "amount": 0.008817
+            },
+            {
+              "id": "veterans-affairs-veterans-review-and-appeal-board-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.001089
+            }
+          ],
+          "amount": 0.009906
+        }
+      ],
+      "amount": 4.700369
+    }
+  },
+  "entities": [
+    {
+      "id": "veterans-affairs-2019-entity-department-of-veterans-affairs",
+      "name": "Department of Veterans Affairs",
+      "value": 4.690463
+    },
+    {
+      "id": "veterans-affairs-2019-entity-veterans-review-and-appeal-board",
+      "name": "Veterans Review and Appeal Board",
+      "value": 0.009906
+    }
+  ],
+  "votes": [
+    {
+      "id": "veterans-affairs-2019-department-of-veterans-affairs-vote1",
+      "vote": "Vote 1",
+      "description": "Operating expenditures",
+      "totalAvailable": 1070668762,
+      "used": 1001640228,
+      "lapsed": 69028534
+    },
+    {
+      "id": "veterans-affairs-2019-department-of-veterans-affairs-vote5",
+      "vote": "Vote 5",
+      "description": "Grants and contributions",
+      "totalAvailable": 3692225001,
+      "used": 3655818666,
+      "lapsed": 36406335
+    },
+    {
+      "id": "veterans-affairs-2019-department-of-veterans-affairs-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 33004059,
+      "used": 33004059,
+      "lapsed": 0
+    },
+    {
+      "id": "veterans-affairs-2019-veterans-review-and-appeal-board-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 10170713,
+      "used": 8816668,
+      "lapsed": 1354045
+    },
+    {
+      "id": "veterans-affairs-2019-veterans-review-and-appeal-board-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 1089432,
+      "used": 1089432,
+      "lapsed": 0
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "veterans-affairs-2019-tp-0000",
+      "category": "Contributions",
+      "description": "Centre of Excellence on Post-Traumatic Stress Disorder and other related mental health conditions",
+      "used": 398753
+    },
+    {
+      "id": "veterans-affairs-2019-tp-0001",
+      "category": "Contributions",
+      "description": "Contributions for Veterans and Family Well-Being Fund",
+      "used": 1141796
+    },
+    {
+      "id": "veterans-affairs-2019-tp-0002",
+      "category": "Contributions",
+      "description": "Contributions to Veterans, under the Veterans Independence Program, to assist in defraying costs of extended health care not covered by provincial health programs",
+      "used": 75285480
+    },
+    {
+      "id": "veterans-affairs-2019-tp-0003",
+      "category": "Contributions",
+      "description": "Contributions under the Commemorative Partnerships Program, to organizations, institutions and other levels of government, in support of projects related to the health and well-being of the veteran population, and commemoration activities and events",
+      "used": 1464374
+    },
+    {
+      "id": "veterans-affairs-2019-tp-0004",
+      "category": "Grants",
+      "description": "Assistance in accordance with the provisions of the Assistance Fund Regulations",
+      "used": 123267
+    },
+    {
+      "id": "veterans-affairs-2019-tp-0005",
+      "category": "Grants",
+      "description": "Assistance to Canadian Veterans—Overseas District",
+      "used": 54817
+    },
+    {
+      "id": "veterans-affairs-2019-tp-0006",
+      "category": "Grants",
+      "description": "Canadian Forces Income Support Allowance",
+      "used": 1524010
+    },
+    {
+      "id": "veterans-affairs-2019-tp-0007",
+      "category": "Grants",
+      "description": "Canadian Veterans Association of the United Kingdom",
+      "used": 0
+    },
+    {
+      "id": "veterans-affairs-2019-tp-0008",
+      "category": "Grants",
+      "description": "Career Transition Services",
+      "used": 4320
+    },
+    {
+      "id": "veterans-affairs-2019-tp-0009",
+      "category": "Grants",
+      "description": "Caregiver Recognition Benefit",
+      "used": 6622296
+    },
+    {
+      "id": "veterans-affairs-2019-tp-0010",
+      "category": "Grants",
+      "description": "Children of Deceased Veterans Education Assistance",
+      "used": 617910
+    },
+    {
+      "id": "veterans-affairs-2019-tp-0011",
+      "category": "Grants",
+      "description": "Commonwealth War Graves Commission",
+      "used": 11086005
+    },
+    {
+      "id": "veterans-affairs-2019-tp-0012",
+      "category": "Grants",
+      "description": "Critical Injury Benefit",
+      "used": 664932
+    },
+    {
+      "id": "veterans-affairs-2019-tp-0013",
+      "category": "Grants",
+      "description": "Disability Awards and Allowances",
+      "used": 1323653614
+    },
+    {
+      "id": "veterans-affairs-2019-tp-0014",
+      "category": "Grants",
+      "description": "Earnings Loss and Supplementary Retirement Benefit",
+      "used": 717249444
+    },
+    {
+      "id": "veterans-affairs-2019-tp-0015",
+      "category": "Grants",
+      "description": "Education and Training Benefit",
+      "used": 12311850
+    },
+    {
+      "id": "veterans-affairs-2019-tp-0016",
+      "category": "Grants",
+      "description": "Family Caregiver Relief Benefit",
+      "used": 273071
+    },
+    {
+      "id": "veterans-affairs-2019-tp-0017",
+      "category": "Grants",
+      "description": "Grant for Commemorative Partnerships",
+      "used": 850837
+    },
+    {
+      "id": "veterans-affairs-2019-tp-0018",
+      "category": "Grants",
+      "description": "Grant for Veterans and Family Well-Being Fund",
+      "used": 1852985
+    },
+    {
+      "id": "veterans-affairs-2019-tp-0019",
+      "category": "Grants",
+      "description": "Housekeeping and Grounds Maintenance",
+      "used": 266889789
+    },
+    {
+      "id": "veterans-affairs-2019-tp-0020",
+      "category": "Grants",
+      "description": "Last Post Fund",
+      "used": 8375000
+    },
+    {
+      "id": "veterans-affairs-2019-tp-0021",
+      "category": "Grants",
+      "description": "Payments of Gallantry Awards",
+      "used": 3361
+    },
+    {
+      "id": "veterans-affairs-2019-tp-0022",
+      "category": "Grants",
+      "description": "Payments under the Flying Accidents Compensation Regulations",
+      "used": 554522
+    },
+    {
+      "id": "veterans-affairs-2019-tp-0023",
+      "category": "Grants",
+      "description": "Pensions for disability and death, including pensions granted under the authority of the Civilian Government Employees (War) Compensation Order, P.C. 45/8848 of November 22, 1944, which shall be subject to the Pension Act; for former prisoners of war under the Pension Act, and Newfoundland special awards",
+      "used": 1215938359
+    },
+    {
+      "id": "veterans-affairs-2019-tp-0024",
+      "category": "Grants",
+      "description": "Re-establishment Credits under section 8 of the War Service Grants Act",
+      "used": 0
+    },
+    {
+      "id": "veterans-affairs-2019-tp-0025",
+      "category": "Grants",
+      "description": "Repayments under section 15 of the War Service Grants Act of compensating adjustments made in accordance with the terms of the Veterans' Land Act",
+      "used": 0
+    },
+    {
+      "id": "veterans-affairs-2019-tp-0026",
+      "category": "Grants",
+      "description": "Retirement Income Security Benefit",
+      "used": 1550010
+    },
+    {
+      "id": "veterans-affairs-2019-tp-0027",
+      "category": "Grants",
+      "description": "Returned Soldiers Insurance Actuarial Liability Adjustment",
+      "used": 772
+    },
+    {
+      "id": "veterans-affairs-2019-tp-0028",
+      "category": "Grants",
+      "description": "Treatment Allowances",
+      "used": 356925
+    },
+    {
+      "id": "veterans-affairs-2019-tp-0029",
+      "category": "Grants",
+      "description": "United Nations Memorial Cemetery in Korea",
+      "used": 24405
+    },
+    {
+      "id": "veterans-affairs-2019-tp-0030",
+      "category": "Grants",
+      "description": "Veterans Emergency Funds",
+      "used": 1209404
+    },
+    {
+      "id": "veterans-affairs-2019-tp-0031",
+      "category": "Grants",
+      "description": "Veterans Insurance Actuarial Liability Adjustment",
+      "used": 45663
+    },
+    {
+      "id": "veterans-affairs-2019-tp-0032",
+      "category": "Grants",
+      "description": "War Veterans Allowances and Civilian War Allowances",
+      "used": 5737130
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

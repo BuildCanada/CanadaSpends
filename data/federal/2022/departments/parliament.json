@@ -1,0 +1,397 @@
+{
+  "name": "Parliament",
+  "slug": "parliament",
+  "financialYearEnding": 2022,
+  "reportedAs": null,
+  "basis": "vol2_appropriations",
+  "totalSpending": 0.788045,
+  "percentageOfFederal": 0.1597,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 0.2134
+    },
+    {
+      "year": 2015,
+      "percentage": 0.205
+    },
+    {
+      "year": 2016,
+      "percentage": 0.2103
+    },
+    {
+      "year": 2017,
+      "percentage": 0.2283
+    },
+    {
+      "year": 2018,
+      "percentage": 0.2384
+    },
+    {
+      "year": 2019,
+      "percentage": 0.2267
+    },
+    {
+      "year": 2020,
+      "percentage": 0.2169
+    },
+    {
+      "year": 2021,
+      "percentage": 0.1418
+    },
+    {
+      "year": 2022,
+      "percentage": 0.1597
+    },
+    {
+      "year": 2023,
+      "percentage": 0.182
+    },
+    {
+      "year": 2024,
+      "percentage": 0.1876
+    },
+    {
+      "year": 2025,
+      "percentage": 0.184
+    }
+  ],
+  "miniSankey": {
+    "spending_data": {
+      "id": "parliament",
+      "name": "Parliament",
+      "children": [
+        {
+          "id": "parliament-org-house-of-commons",
+          "name": "House of Commons",
+          "children": [
+            {
+              "id": "parliament-house-of-commons-vote1",
+              "name": "Vote 1",
+              "amount": 0.390409
+            },
+            {
+              "id": "parliament-house-of-commons-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.146361
+            }
+          ],
+          "amount": 0.53677
+        },
+        {
+          "id": "parliament-org-senate",
+          "name": "Senate",
+          "children": [
+            {
+              "id": "parliament-senate-vote1",
+              "name": "Vote 1",
+              "amount": 0.066283
+            },
+            {
+              "id": "parliament-senate-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.030079
+            }
+          ],
+          "amount": 0.096362
+        },
+        {
+          "id": "parliament-org-parliamentary-protective-service",
+          "name": "Parliamentary Protective Service",
+          "children": [
+            {
+              "id": "parliament-parliamentary-protective-service-vote1",
+              "name": "Vote 1",
+              "amount": 0.078908
+            },
+            {
+              "id": "parliament-parliamentary-protective-service-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.008712
+            }
+          ],
+          "amount": 0.08762
+        },
+        {
+          "id": "parliament-org-library-of-parliament",
+          "name": "Library of Parliament",
+          "children": [
+            {
+              "id": "parliament-library-of-parliament-vote1",
+              "name": "Vote 1",
+              "amount": 0.045148
+            },
+            {
+              "id": "parliament-library-of-parliament-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.005122
+            }
+          ],
+          "amount": 0.05027
+        },
+        {
+          "id": "parliament-org-office-of-the-conflict-of-interest-and-ethics-commissioner",
+          "name": "Office of the Conflict of Interest and Ethics Commissioner",
+          "children": [
+            {
+              "id": "parliament-office-of-the-conflict-of-interest-and-ethics-commissioner-vote1",
+              "name": "Vote 1",
+              "amount": 0.006568
+            },
+            {
+              "id": "parliament-office-of-the-conflict-of-interest-and-ethics-commissioner-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.000771
+            }
+          ],
+          "amount": 0.007339
+        },
+        {
+          "id": "parliament-org-office-of-the-parliamentary-budget-officer",
+          "name": "Office of the Parliamentary Budget Officer",
+          "children": [
+            {
+              "id": "parliament-office-of-the-parliamentary-budget-officer-vote1",
+              "name": "Vote 1",
+              "amount": 0.005494
+            },
+            {
+              "id": "parliament-office-of-the-parliamentary-budget-officer-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.000596
+            }
+          ],
+          "amount": 0.00609
+        },
+        {
+          "id": "parliament-org-secretariat-of-the-national-security-and-intelligence-committee-of-parliamentarians",
+          "name": "Secretariat of the National Security and Intelligence Committee of Parliamentarians",
+          "children": [
+            {
+              "id": "parliament-secretariat-of-the-national-security-and-intelligence-committee-of-parliamentarians-vote1",
+              "name": "Vote 1",
+              "amount": 0.00253
+            },
+            {
+              "id": "parliament-secretariat-of-the-national-security-and-intelligence-committee-of-parliamentarians-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.000168
+            }
+          ],
+          "amount": 0.002698
+        },
+        {
+          "id": "parliament-org-office-of-the-senate-ethics-officer",
+          "name": "Office of the Senate Ethics Officer",
+          "children": [
+            {
+              "id": "parliament-office-of-the-senate-ethics-officer-vote1",
+              "name": "Vote 1",
+              "amount": 0.000802
+            },
+            {
+              "id": "parliament-office-of-the-senate-ethics-officer-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 9.6e-5
+            }
+          ],
+          "amount": 0.000898
+        }
+      ],
+      "amount": 0.788047
+    }
+  },
+  "entities": [
+    {
+      "id": "parliament-2022-entity-house-of-commons",
+      "name": "House of Commons",
+      "value": 0.53677
+    },
+    {
+      "id": "parliament-2022-entity-senate",
+      "name": "Senate",
+      "value": 0.096362
+    },
+    {
+      "id": "parliament-2022-entity-parliamentary-protective-service",
+      "name": "Parliamentary Protective Service",
+      "value": 0.087619
+    },
+    {
+      "id": "parliament-2022-entity-library-of-parliament",
+      "name": "Library of Parliament",
+      "value": 0.050269
+    },
+    {
+      "id": "parliament-2022-entity-office-of-the-conflict-of-interest-and-ethics-commissioner",
+      "name": "Office of the Conflict of Interest and Ethics Commissioner",
+      "value": 0.007338
+    },
+    {
+      "id": "parliament-2022-entity-office-of-the-parliamentary-budget-officer",
+      "name": "Office of the Parliamentary Budget Officer",
+      "value": 0.00609
+    },
+    {
+      "id": "parliament-2022-entity-secretariat-of-the-national-security-and-intelligence-committee-of-parliamentarians",
+      "name": "Secretariat of the National Security and Intelligence Committee of Parliamentarians",
+      "value": 0.002698
+    },
+    {
+      "id": "parliament-2022-entity-office-of-the-senate-ethics-officer",
+      "name": "Office of the Senate Ethics Officer",
+      "value": 0.000898
+    }
+  ],
+  "votes": [
+    {
+      "id": "parliament-2022-house-of-commons-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 427898669,
+      "used": 390409474,
+      "lapsed": 37489195
+    },
+    {
+      "id": "parliament-2022-house-of-commons-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 146360520,
+      "used": 146360520,
+      "lapsed": 0
+    },
+    {
+      "id": "parliament-2022-library-of-parliament-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 49660916,
+      "used": 45147655,
+      "lapsed": 4513261
+    },
+    {
+      "id": "parliament-2022-library-of-parliament-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 5121531,
+      "used": 5121531,
+      "lapsed": 0
+    },
+    {
+      "id": "parliament-2022-office-of-the-conflict-of-interest-and-ethics-commissioner-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 6852883,
+      "used": 6567669,
+      "lapsed": 285214
+    },
+    {
+      "id": "parliament-2022-office-of-the-conflict-of-interest-and-ethics-commissioner-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 770535,
+      "used": 770535,
+      "lapsed": 0
+    },
+    {
+      "id": "parliament-2022-office-of-the-parliamentary-budget-officer-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 6520482,
+      "used": 5494267,
+      "lapsed": 1026215
+    },
+    {
+      "id": "parliament-2022-office-of-the-parliamentary-budget-officer-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 595951,
+      "used": 595951,
+      "lapsed": 0
+    },
+    {
+      "id": "parliament-2022-office-of-the-senate-ethics-officer-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 1231278,
+      "used": 802217,
+      "lapsed": 429061
+    },
+    {
+      "id": "parliament-2022-office-of-the-senate-ethics-officer-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 95938,
+      "used": 95938,
+      "lapsed": 0
+    },
+    {
+      "id": "parliament-2022-parliamentary-protective-service-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 82166584,
+      "used": 78907584,
+      "lapsed": 3259000
+    },
+    {
+      "id": "parliament-2022-parliamentary-protective-service-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 8711770,
+      "used": 8711770,
+      "lapsed": 0
+    },
+    {
+      "id": "parliament-2022-secretariat-of-the-national-security-and-intelligence-committee-of-parliamentarians-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 3581498,
+      "used": 2530086,
+      "lapsed": 1051412
+    },
+    {
+      "id": "parliament-2022-secretariat-of-the-national-security-and-intelligence-committee-of-parliamentarians-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 167916,
+      "used": 167916,
+      "lapsed": 0
+    },
+    {
+      "id": "parliament-2022-senate-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 79080673,
+      "used": 66282797,
+      "lapsed": 12797876
+    },
+    {
+      "id": "parliament-2022-senate-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 30079497,
+      "used": 30079497,
+      "lapsed": 0
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "parliament-2022-tp-0000",
+      "category": "Contributions",
+      "description": "Contributions to Parliamentary Associations and Group(s)",
+      "used": 449680
+    },
+    {
+      "id": "parliament-2022-tp-0001",
+      "category": "Contributions",
+      "description": "Payments to Parliamentary and Procedural Associations",
+      "used": 1069257
+    },
+    {
+      "id": "parliament-2022-tp-0002",
+      "category": "Grants",
+      "description": "Payments out of Consolidated Revenue Fund for pensions to widows of former members",
+      "used": 25977
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

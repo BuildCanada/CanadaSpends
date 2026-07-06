@@ -1,0 +1,13 @@
+---
+reviewed: false
+source: llm-first-pass
+generated: 2026-07-06
+---
+
+{{name}} est responsable des forces militaires du Canada et de la politique de défense nationale. Il supervise le recrutement, la formation, l'équipement et le déploiement des forces armées, gère les infrastructures et l'approvisionnement en matière de défense, et soutient les militaires et leurs familles. Le ministère collabore également avec des nations alliées dans le cadre d'ententes de sécurité collective et contribue en personnel et en ressources à des opérations et exercices internationaux.
+
+{{name}} a dépensé {{totalSpending}} au cours de l'exercice 2019-2020, ce qui représente {{percentageOfFederal}} des dépenses fédérales de cette année-là. Ces dépenses ont été administrées au moyen de 21 crédits budgétaires.
+
+La grande majorité de ces dépenses a été effectuée par le ministère de la Défense nationale lui-même, une part beaucoup plus faible étant attribuée au Centre de la sécurité des télécommunications. Les organismes indépendants de surveillance et d'examen rattachés à ce portefeuille, dont le Comité externe d'examen des griefs militaires, la Commission d'examen des plaintes concernant la police militaire et le Bureau du commissaire du Centre de la sécurité des télécommunications, ont représenté une part beaucoup plus faible des dépenses. Du côté des paiements de transfert, les contributions les plus importantes ont appuyé les engagements du Canada envers l'OTAN, notamment le budget militaire de l'OTAN et le Programme OTAN d'investissement au service de la sécurité. D'autres programmes de contribution ont financé la formation militaire et la coopération avec des pays partenaires, l'aide à l'acquisition d'immobilisations, ainsi que le soutien à l'Association civile de recherche et sauvetage aériens.
+
+<!-- verification: National Defence confirmed from fact sheet (top-level name field "National Defence"). Total spending and percentage figures use placeholders only. Vote count (21) stated as a literal integer per hard rules. Top entities named: Department of National Defence, Communications Security Establishment, Military Grievances External Review Committee, Military Police Complaints Commission, Office of the Communications Security Establishment Commissioner — all match topEntities/topSankeyChildren. Transfer categories named: NATO Military Budget, NATO Security Investment Program, Military Training and Cooperation Program, Capital Assistance Program, Civil Air Search and Rescue Association — all match topTransferPayments descriptions (lightly paraphrased for prose flow, no facts added). No claim uses figures outside the three placeholders. French translation preserves the three placeholder tokens verbatim. -->

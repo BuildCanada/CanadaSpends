@@ -1,0 +1,13 @@
+---
+reviewed: false
+source: llm-first-pass
+generated: 2026-07-06
+---
+
+{{name}} supervise la sécurité nationale, l'application de la loi, les services correctionnels, la sécurité frontalière et la gestion des urgences au Canada. Ce portefeuille coordonne les activités fédérales de maintien de l'ordre et de renseignement, administre le système correctionnel, gère l'application des mesures frontalières et collabore avec les provinces et les territoires pour se préparer aux urgences et aux catastrophes naturelles et y répondre.
+
+{{name}} a dépensé {{totalSpending}} au cours de l'exercice 2019-2020, ce qui représente {{percentageOfFederal}} des dépenses fédérales de cette année-là. Ces dépenses ont été administrées au moyen de 46 crédits budgétaires.
+
+La Gendarmerie royale du Canada a représenté la plus grande part des dépenses de ce portefeuille, suivie du Service correctionnel du Canada et de l'Agence des services frontaliers du Canada. Le ministère de la Sécurité publique et de la Protection civile et le Service canadien du renseignement de sécurité ont chacun représenté des parts plus modestes. Parmi les paiements de transfert, l'une des catégories les plus importantes regroupait les contributions versées aux provinces pour de l'aide liée aux catastrophes naturelles, de même que des subventions visant à indemniser les membres de la Gendarmerie royale du Canada blessés dans l'exercice de leurs fonctions. D'autres programmes de contribution ont financé le Programme des services de police des Premières Nations, mis en œuvre en partenariat avec les provinces, les territoires et les collectivités autochtones, le soutien au Service aérien d'urgence en traumatologie, ainsi que le Programme national d'atténuation des catastrophes.
+
+<!-- verification: Public Safety confirmed from fact sheet (top-level name field "Public Safety", slug public-safety-canada). Total spending and percentage figures use placeholders only. Vote count (46) stated as a literal integer per hard rules. Top entities named: Royal Canadian Mounted Police, Correctional Service of Canada, Canada Border Services Agency, Department of Public Safety and Emergency Preparedness, Canadian Security Intelligence Service — all match topEntities/topSankeyChildren. Transfer categories named: contributions to provinces for natural disaster assistance, RCMP injury-on-duty compensation grant, First Nations Policing Program, Shock Trauma Air Rescue Service contribution, National Disaster Mitigation Program — all match topTransferPayments descriptions (First Nations Policing Program description paraphrased for brevity, no facts added or altered). No claim uses figures outside the three placeholders. French translation preserves the three placeholder tokens verbatim. -->

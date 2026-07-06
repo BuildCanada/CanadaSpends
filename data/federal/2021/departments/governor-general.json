@@ -1,0 +1,170 @@
+{
+  "name": "Governor General",
+  "slug": "governor-general",
+  "financialYearEnding": 2021,
+  "reportedAs": "Office of the Governor General's Secretary; Public Accounts of Canada",
+  "basis": "vol2_appropriations",
+  "totalSpending": 3.202356,
+  "percentageOfFederal": 0.5092,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 0.0079
+    },
+    {
+      "year": 2015,
+      "percentage": 0.0076
+    },
+    {
+      "year": 2016,
+      "percentage": 0.0078
+    },
+    {
+      "year": 2017,
+      "percentage": 0.0076
+    },
+    {
+      "year": 2018,
+      "percentage": 0.0073
+    },
+    {
+      "year": 2019,
+      "percentage": 0.0069
+    },
+    {
+      "year": 2020,
+      "percentage": 0.7518
+    },
+    {
+      "year": 2021,
+      "percentage": 0.5092
+    },
+    {
+      "year": 2022,
+      "percentage": 0.0048
+    },
+    {
+      "year": 2023,
+      "percentage": 0.0053
+    },
+    {
+      "year": 2024,
+      "percentage": 0.0051
+    },
+    {
+      "year": 2025,
+      "percentage": 0.0055
+    }
+  ],
+  "miniSankey": {
+    "spending_data": {
+      "id": "governor-general",
+      "name": "Governor General",
+      "children": [
+        {
+          "id": "governor-general-org-shared-services-canada",
+          "name": "Shared Services Canada",
+          "children": [
+            {
+              "id": "governor-general-shared-services-canada-vote1",
+              "name": "Vote 1",
+              "amount": 2.60809
+            },
+            {
+              "id": "governor-general-shared-services-canada-vote5",
+              "name": "Vote 5",
+              "amount": 0.447572
+            },
+            {
+              "id": "governor-general-shared-services-canada-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.122017
+            }
+          ],
+          "amount": 3.177679
+        },
+        {
+          "id": "governor-general-org-office-of-the-governor-general-s-secretary",
+          "name": "Office of the Governor General's Secretary",
+          "children": [
+            {
+              "id": "governor-general-office-of-the-governor-general-s-secretary-vote1",
+              "name": "Vote 1",
+              "amount": 0.021299
+            },
+            {
+              "id": "governor-general-office-of-the-governor-general-s-secretary-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.003379
+            }
+          ],
+          "amount": 0.024678
+        }
+      ],
+      "amount": 3.202357
+    }
+  },
+  "entities": [
+    {
+      "id": "governor-general-2021-entity-shared-services-canada",
+      "name": "Shared Services Canada",
+      "value": 3.177679
+    },
+    {
+      "id": "governor-general-2021-entity-office-of-the-governor-general-s-secretary",
+      "name": "Office of the Governor General's Secretary",
+      "value": 0.024677
+    }
+  ],
+  "votes": [
+    {
+      "id": "governor-general-2021-office-of-the-governor-general-s-secretary-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 21926096,
+      "used": 21298630,
+      "lapsed": 627466
+    },
+    {
+      "id": "governor-general-2021-office-of-the-governor-general-s-secretary-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 3378545,
+      "used": 3378545,
+      "lapsed": 0
+    },
+    {
+      "id": "governor-general-2021-shared-services-canada-vote1",
+      "vote": "Vote 1",
+      "description": "Operating expenditures",
+      "totalAvailable": 2773987533,
+      "used": 2608089961,
+      "lapsed": 165897572
+    },
+    {
+      "id": "governor-general-2021-shared-services-canada-vote5",
+      "vote": "Vote 5",
+      "description": "Capital expenditures",
+      "totalAvailable": 523569002,
+      "used": 447571947,
+      "lapsed": 75997055
+    },
+    {
+      "id": "governor-general-2021-shared-services-canada-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 122017117,
+      "used": 122017068,
+      "lapsed": 49
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "governor-general-2021-tp-0000",
+      "category": "Grants",
+      "description": "Annuities payable under the Governor General's Act (R.S.C., 1985 c. G-9)",
+      "used": 789703
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

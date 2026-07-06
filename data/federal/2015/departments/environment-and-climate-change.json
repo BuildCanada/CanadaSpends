@@ -1,0 +1,402 @@
+{
+  "name": "Environment and Climate Change",
+  "slug": "environment-and-climate-change",
+  "financialYearEnding": 2015,
+  "reportedAs": "Environment",
+  "basis": "vol2_appropriations",
+  "totalSpending": 1.897835,
+  "percentageOfFederal": 0.6955,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 0.7357
+    },
+    {
+      "year": 2015,
+      "percentage": 0.6955
+    },
+    {
+      "year": 2016,
+      "percentage": 0.7612
+    },
+    {
+      "year": 2017,
+      "percentage": 0.7972
+    },
+    {
+      "year": 2018,
+      "percentage": 0.8134
+    },
+    {
+      "year": 2019,
+      "percentage": 0.8829
+    },
+    {
+      "year": 2020,
+      "percentage": 0.8734
+    },
+    {
+      "year": 2021,
+      "percentage": 0.5083
+    },
+    {
+      "year": 2022,
+      "percentage": 0.6111
+    },
+    {
+      "year": 2023,
+      "percentage": 0.6818
+    },
+    {
+      "year": 2024,
+      "percentage": 0.776
+    },
+    {
+      "year": 2025,
+      "percentage": 0.5875
+    }
+  ],
+  "miniSankey": {
+    "spending_data": {
+      "id": "environment-and-climate-change",
+      "name": "Environment and Climate Change",
+      "children": [
+        {
+          "id": "environment-and-climate-change-org-environment",
+          "name": "Environment",
+          "children": [
+            {
+              "id": "environment-and-climate-change-environment-vote1",
+              "name": "Vote 1",
+              "amount": 0.890129
+            },
+            {
+              "id": "environment-and-climate-change-environment-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.100888
+            },
+            {
+              "id": "environment-and-climate-change-environment-vote10",
+              "name": "Vote 10",
+              "amount": 0.094023
+            },
+            {
+              "id": "environment-and-climate-change-environment-vote5",
+              "name": "Vote 5",
+              "amount": 0.055251
+            }
+          ],
+          "amount": 1.140291
+        },
+        {
+          "id": "environment-and-climate-change-org-parks-canada-agency",
+          "name": "Parks Canada Agency",
+          "children": [
+            {
+              "id": "environment-and-climate-change-parks-canada-agency-vote1",
+              "name": "Vote 1",
+              "amount": 0.553061
+            },
+            {
+              "id": "environment-and-climate-change-parks-canada-agency-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.165239
+            },
+            {
+              "id": "environment-and-climate-change-parks-canada-agency-vote5",
+              "name": "Vote 5",
+              "amount": 0.0035
+            }
+          ],
+          "amount": 0.7218
+        },
+        {
+          "id": "environment-and-climate-change-org-canadian-environmental-assessment-agency",
+          "name": "Canadian Environmental Assessment Agency",
+          "children": [
+            {
+              "id": "environment-and-climate-change-canadian-environmental-assessment-agency-vote1",
+              "name": "Vote 1",
+              "amount": 0.032836
+            },
+            {
+              "id": "environment-and-climate-change-canadian-environmental-assessment-agency-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.002909
+            }
+          ],
+          "amount": 0.035745
+        }
+      ],
+      "amount": 1.897836
+    }
+  },
+  "entities": [
+    {
+      "id": "environment-and-climate-change-2015-entity-environment",
+      "name": "Environment",
+      "value": 1.14029
+    },
+    {
+      "id": "environment-and-climate-change-2015-entity-parks-canada-agency",
+      "name": "Parks Canada Agency",
+      "value": 0.7218
+    },
+    {
+      "id": "environment-and-climate-change-2015-entity-canadian-environmental-assessment-agency",
+      "name": "Canadian Environmental Assessment Agency",
+      "value": 0.035745
+    }
+  ],
+  "votes": [
+    {
+      "id": "environment-and-climate-change-2015-canadian-environmental-assessment-agency-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 45056020,
+      "used": 32835587,
+      "lapsed": 12220433
+    },
+    {
+      "id": "environment-and-climate-change-2015-canadian-environmental-assessment-agency-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 2909480,
+      "used": 2909480,
+      "lapsed": 0
+    },
+    {
+      "id": "environment-and-climate-change-2015-environment-vote1",
+      "vote": "Vote 1",
+      "description": "Operating expenditures",
+      "totalAvailable": 940953099,
+      "used": 890128628,
+      "lapsed": 50824471
+    },
+    {
+      "id": "environment-and-climate-change-2015-environment-vote10",
+      "vote": "Vote 10",
+      "description": "Grants and contributions",
+      "totalAvailable": 132315225,
+      "used": 94023122,
+      "lapsed": 38292103
+    },
+    {
+      "id": "environment-and-climate-change-2015-environment-vote5",
+      "vote": "Vote 5",
+      "description": "Capital expenditures",
+      "totalAvailable": 66983518,
+      "used": 55250545,
+      "lapsed": 11732973
+    },
+    {
+      "id": "environment-and-climate-change-2015-environment-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 101643451,
+      "used": 100888122,
+      "lapsed": 755329
+    },
+    {
+      "id": "environment-and-climate-change-2015-parks-canada-agency-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 652634423,
+      "used": 553060657,
+      "lapsed": 99573766
+    },
+    {
+      "id": "environment-and-climate-change-2015-parks-canada-agency-vote5",
+      "vote": "Vote 5",
+      "description": "Payments to the New Parks and Historic Sites Account",
+      "totalAvailable": 3500000,
+      "used": 3500000,
+      "lapsed": 0
+    },
+    {
+      "id": "environment-and-climate-change-2015-parks-canada-agency-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 175916982,
+      "used": 165239203,
+      "lapsed": 10677779
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "environment-and-climate-change-2015-tp-0000",
+      "category": "Contributions",
+      "description": "Assessed contribution in the World Meteorological Organization (WMO)",
+      "used": 2296265
+    },
+    {
+      "id": "environment-and-climate-change-2015-tp-0001",
+      "category": "Contributions",
+      "description": "Assessed contribution to the Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES)",
+      "used": 201771
+    },
+    {
+      "id": "environment-and-climate-change-2015-tp-0002",
+      "category": "Contributions",
+      "description": "Assessed contribution to the Convention on Wetlands of International Importance (Ramsar Convention)",
+      "used": 171370
+    },
+    {
+      "id": "environment-and-climate-change-2015-tp-0003",
+      "category": "Contributions",
+      "description": "Assessed contribution to the Organization for Economic Co‑operation and Development (OECD)",
+      "used": 106782
+    },
+    {
+      "id": "environment-and-climate-change-2015-tp-0004",
+      "category": "Contributions",
+      "description": "Canadian Environmental Assessment Agency",
+      "used": 0
+    },
+    {
+      "id": "environment-and-climate-change-2015-tp-0005",
+      "category": "Contributions",
+      "description": "Contribution for Canada's share of the Commission of Environmental Co‑operation budget",
+      "used": 3271685
+    },
+    {
+      "id": "environment-and-climate-change-2015-tp-0006",
+      "category": "Contributions",
+      "description": "Contribution to the Province of Quebec — James Bay and Northern Quebec Agreement",
+      "used": 245500
+    },
+    {
+      "id": "environment-and-climate-change-2015-tp-0007",
+      "category": "Contributions",
+      "description": "Contributions for the Science Horizons Youth Internship and the International Environmental Youth Corp programs",
+      "used": 2999744
+    },
+    {
+      "id": "environment-and-climate-change-2015-tp-0008",
+      "category": "Contributions",
+      "description": "Contributions for the support of public participation in the environmental assessment review process — Participant Funding Program",
+      "used": 2069320
+    },
+    {
+      "id": "environment-and-climate-change-2015-tp-0009",
+      "category": "Contributions",
+      "description": "Contributions in support of Biodiversity — Wildlife and Habitat",
+      "used": 24774134
+    },
+    {
+      "id": "environment-and-climate-change-2015-tp-0010",
+      "category": "Contributions",
+      "description": "Contributions in support of Climate Change and Clean Air",
+      "used": 9459133
+    },
+    {
+      "id": "environment-and-climate-change-2015-tp-0011",
+      "category": "Contributions",
+      "description": "Contributions in support of National historic sites cost‑sharing program",
+      "used": 915289
+    },
+    {
+      "id": "environment-and-climate-change-2015-tp-0012",
+      "category": "Contributions",
+      "description": "Contributions in support of Substances and Waste management",
+      "used": 1481095
+    },
+    {
+      "id": "environment-and-climate-change-2015-tp-0013",
+      "category": "Contributions",
+      "description": "Contributions in support of Sustainable Ecosystems",
+      "used": 15987750
+    },
+    {
+      "id": "environment-and-climate-change-2015-tp-0014",
+      "category": "Contributions",
+      "description": "Contributions in support of Water Resources",
+      "used": 989500
+    },
+    {
+      "id": "environment-and-climate-change-2015-tp-0015",
+      "category": "Contributions",
+      "description": "Contributions in support of Weather and Environmental Services for Canadians",
+      "used": 2637889
+    },
+    {
+      "id": "environment-and-climate-change-2015-tp-0016",
+      "category": "Contributions",
+      "description": "Contributions in support of activities or projects related to national parks, national marine conservation areas, national historic sites and historic canals",
+      "used": 5574023
+    },
+    {
+      "id": "environment-and-climate-change-2015-tp-0017",
+      "category": "Contributions",
+      "description": "EcoAction 2000 — Community Funding Initiative",
+      "used": 4456044
+    },
+    {
+      "id": "environment-and-climate-change-2015-tp-0018",
+      "category": "Contributions",
+      "description": "Habitat Stewardship Contribution Program",
+      "used": 12629243
+    },
+    {
+      "id": "environment-and-climate-change-2015-tp-0019",
+      "category": "Contributions",
+      "description": "Items not required for the current year",
+      "used": 0
+    },
+    {
+      "id": "environment-and-climate-change-2015-tp-0020",
+      "category": "Contributions",
+      "description": "Items not required for the current year",
+      "used": 0
+    },
+    {
+      "id": "environment-and-climate-change-2015-tp-0021",
+      "category": "Contributions",
+      "description": "Parks Canada Agency",
+      "used": 0
+    },
+    {
+      "id": "environment-and-climate-change-2015-tp-0022",
+      "category": "Grants",
+      "description": "Funding to Support the Trans Canada Trail Foundation's Fundraising Campaign",
+      "used": 5520495
+    },
+    {
+      "id": "environment-and-climate-change-2015-tp-0023",
+      "category": "Grants",
+      "description": "Grant to the Canada Foundation for Sustainable Development Technology",
+      "used": 0
+    },
+    {
+      "id": "environment-and-climate-change-2015-tp-0024",
+      "category": "Grants",
+      "description": "Grant to the International Peace Garden",
+      "used": 22700
+    },
+    {
+      "id": "environment-and-climate-change-2015-tp-0025",
+      "category": "Grants",
+      "description": "Grants for the implementation of the Montreal Protocol on substances that deplete the ozone layer",
+      "used": 2525717
+    },
+    {
+      "id": "environment-and-climate-change-2015-tp-0026",
+      "category": "Grants",
+      "description": "Grants in support of weather and environmental services for Canadians",
+      "used": 35000
+    },
+    {
+      "id": "environment-and-climate-change-2015-tp-0027",
+      "category": "Grants",
+      "description": "National Conservation Plan — Natural Areas Conservation Program Grant",
+      "used": 10000000
+    },
+    {
+      "id": "environment-and-climate-change-2015-tp-0028",
+      "category": "Grants",
+      "description": "Nature Conservancy Canada",
+      "used": 8792488
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

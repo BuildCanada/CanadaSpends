@@ -1,0 +1,99 @@
+{
+  "name": "Governor General",
+  "slug": "governor-general",
+  "financialYearEnding": 2015,
+  "reportedAs": "Office of the Governor General's Secretary",
+  "basis": "vol2_appropriations",
+  "totalSpending": 0.020861,
+  "percentageOfFederal": 0.0076,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 0.0079
+    },
+    {
+      "year": 2015,
+      "percentage": 0.0076
+    },
+    {
+      "year": 2016,
+      "percentage": 0.0078
+    },
+    {
+      "year": 2017,
+      "percentage": 0.0076
+    },
+    {
+      "year": 2018,
+      "percentage": 0.0073
+    },
+    {
+      "year": 2019,
+      "percentage": 0.0069
+    },
+    {
+      "year": 2020,
+      "percentage": 0.7518
+    },
+    {
+      "year": 2021,
+      "percentage": 0.5092
+    },
+    {
+      "year": 2022,
+      "percentage": 0.0048
+    },
+    {
+      "year": 2023,
+      "percentage": 0.0053
+    },
+    {
+      "year": 2024,
+      "percentage": 0.0051
+    },
+    {
+      "year": 2025,
+      "percentage": 0.0055
+    }
+  ],
+  "miniSankey": {
+    "spending_data": {
+      "id": "governor-general",
+      "name": "Governor General",
+      "children": [
+        {
+          "id": "governor-general-org-office-of-the-governor-general-s-secretary",
+          "name": "Office of the Governor General's Secretary",
+          "children": [
+            {
+              "id": "governor-general-office-of-the-governor-general-s-secretary-vote1",
+              "name": "Vote 1",
+              "amount": 0.020861
+            }
+          ],
+          "amount": 0.020861
+        }
+      ],
+      "amount": 0.020861
+    }
+  },
+  "entities": [
+    {
+      "id": "governor-general-2015-entity-office-of-the-governor-general-s-secretary",
+      "name": "Office of the Governor General's Secretary",
+      "value": 0.020861
+    }
+  ],
+  "votes": [
+    {
+      "id": "governor-general-2015-office-of-the-governor-general-s-secretary-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 21066313,
+      "used": 20861040,
+      "lapsed": 205273
+    }
+  ],
+  "transferPayments": [],
+  "lineItemsUnits": "dollars_cad"
+}

@@ -1,0 +1,112 @@
+{
+  "name": "National Revenue",
+  "slug": "canada-revenue-agency",
+  "financialYearEnding": 2015,
+  "reportedAs": "Canada Revenue Agency",
+  "basis": "vol2_appropriations",
+  "totalSpending": 4.691921,
+  "percentageOfFederal": 1.7195,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 1.8282
+    },
+    {
+      "year": 2015,
+      "percentage": 1.7195
+    },
+    {
+      "year": 2016,
+      "percentage": 1.6789
+    },
+    {
+      "year": 2017,
+      "percentage": 1.7105
+    },
+    {
+      "year": 2018,
+      "percentage": 1.583
+    },
+    {
+      "year": 2019,
+      "percentage": 1.6213
+    },
+    {
+      "year": 2020,
+      "percentage": 2.0908
+    },
+    {
+      "year": 2021,
+      "percentage": 1.663
+    },
+    {
+      "year": 2022,
+      "percentage": 2.0131
+    },
+    {
+      "year": 2023,
+      "percentage": 2.862
+    },
+    {
+      "year": 2024,
+      "percentage": 3.365
+    },
+    {
+      "year": 2025,
+      "percentage": 4.1719
+    }
+  ],
+  "miniSankey": {
+    "spending_data": {
+      "id": "canada-revenue-agency",
+      "name": "National Revenue",
+      "children": [
+        {
+          "id": "canada-revenue-agency-org-canada-revenue-agency",
+          "name": "Canada Revenue Agency",
+          "children": [
+            {
+              "id": "canada-revenue-agency-canada-revenue-agency-vote1",
+              "name": "Vote 1",
+              "amount": 3.798517
+            },
+            {
+              "id": "canada-revenue-agency-canada-revenue-agency-vote5",
+              "name": "Vote 5",
+              "amount": 0.893404
+            }
+          ],
+          "amount": 4.691921
+        }
+      ],
+      "amount": 4.691921
+    }
+  },
+  "entities": [
+    {
+      "id": "canada-revenue-agency-2015-entity-canada-revenue-agency",
+      "name": "Canada Revenue Agency",
+      "value": 4.691921
+    }
+  ],
+  "votes": [
+    {
+      "id": "canada-revenue-agency-2015-canada-revenue-agency-vote1",
+      "vote": "Vote 1",
+      "description": "Operating expenditures, contributions and recoverable expenditures on behalf of the Canada Pension Plan and the Employment Insurance Act",
+      "totalAvailable": 4022956838,
+      "used": 3798516999,
+      "lapsed": 224439839
+    },
+    {
+      "id": "canada-revenue-agency-2015-canada-revenue-agency-vote5",
+      "vote": "Vote 5",
+      "description": "Capital expenditures and recoverable expenditures on behalf of the Canada Pension Plan and the Employment Insurance Act",
+      "totalAvailable": 940526740,
+      "used": 893404117,
+      "lapsed": 47122623
+    }
+  ],
+  "transferPayments": [],
+  "lineItemsUnits": "dollars_cad"
+}

@@ -1,0 +1,649 @@
+{
+  "name": "Health",
+  "slug": "health-canada",
+  "financialYearEnding": 2019,
+  "reportedAs": null,
+  "basis": "vol2_appropriations",
+  "totalSpending": 5.138041,
+  "percentageOfFederal": 1.5209,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 2.5697
+    },
+    {
+      "year": 2015,
+      "percentage": 2.4803
+    },
+    {
+      "year": 2016,
+      "percentage": 2.3542
+    },
+    {
+      "year": 2017,
+      "percentage": 2.3601
+    },
+    {
+      "year": 2018,
+      "percentage": 1.9231
+    },
+    {
+      "year": 2019,
+      "percentage": 1.5209
+    },
+    {
+      "year": 2020,
+      "percentage": 1.5655
+    },
+    {
+      "year": 2021,
+      "percentage": 2.2871
+    },
+    {
+      "year": 2022,
+      "percentage": 3.4825
+    },
+    {
+      "year": 2023,
+      "percentage": 2.6777
+    },
+    {
+      "year": 2024,
+      "percentage": 2.7157
+    },
+    {
+      "year": 2025,
+      "percentage": 2.3956
+    }
+  ],
+  "miniSankey": {
+    "spending_data": {
+      "id": "health-canada",
+      "name": "Health",
+      "children": [
+        {
+          "id": "health-canada-org-department-of-health",
+          "name": "Department of Health",
+          "children": [
+            {
+              "id": "health-canada-department-of-health-vote10",
+              "name": "Vote 10",
+              "amount": 1.378409
+            },
+            {
+              "id": "health-canada-department-of-health-vote1",
+              "name": "Vote 1",
+              "amount": 0.911801
+            },
+            {
+              "id": "health-canada-department-of-health-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.191456
+            },
+            {
+              "id": "health-canada-department-of-health-vote5",
+              "name": "Vote 5",
+              "amount": 0.026803
+            }
+          ],
+          "amount": 2.508469
+        },
+        {
+          "id": "health-canada-org-canadian-institutes-of-health-research",
+          "name": "Canadian Institutes of Health Research",
+          "children": [
+            {
+              "id": "health-canada-canadian-institutes-of-health-research-vote5",
+              "name": "Vote 5",
+              "amount": 1.087884
+            },
+            {
+              "id": "health-canada-canadian-institutes-of-health-research-vote1",
+              "name": "Vote 1",
+              "amount": 0.057011
+            },
+            {
+              "id": "health-canada-canadian-institutes-of-health-research-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.006032
+            }
+          ],
+          "amount": 1.150927
+        },
+        {
+          "id": "health-canada-org-canadian-food-inspection-agency",
+          "name": "Canadian Food Inspection Agency",
+          "children": [
+            {
+              "id": "health-canada-canadian-food-inspection-agency-vote1",
+              "name": "Vote 1",
+              "amount": 0.596496
+            },
+            {
+              "id": "health-canada-canadian-food-inspection-agency-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.160319
+            },
+            {
+              "id": "health-canada-canadian-food-inspection-agency-vote5",
+              "name": "Vote 5",
+              "amount": 0.035492
+            }
+          ],
+          "amount": 0.792307
+        },
+        {
+          "id": "health-canada-org-public-health-agency-of-canada",
+          "name": "Public Health Agency of Canada",
+          "children": [
+            {
+              "id": "health-canada-public-health-agency-of-canada-vote1",
+              "name": "Vote 1",
+              "amount": 0.33722
+            },
+            {
+              "id": "health-canada-public-health-agency-of-canada-vote10",
+              "name": "Vote 10",
+              "amount": 0.292401
+            },
+            {
+              "id": "health-canada-public-health-agency-of-canada-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.038198
+            },
+            {
+              "id": "health-canada-public-health-agency-of-canada-vote5",
+              "name": "Vote 5",
+              "amount": 0.008221
+            }
+          ],
+          "amount": 0.67604
+        },
+        {
+          "id": "health-canada-org-patented-medicine-prices-review-board",
+          "name": "Patented Medicine Prices Review Board",
+          "children": [
+            {
+              "id": "health-canada-patented-medicine-prices-review-board-vote1",
+              "name": "Vote 1",
+              "amount": 0.009375
+            },
+            {
+              "id": "health-canada-patented-medicine-prices-review-board-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.000923
+            }
+          ],
+          "amount": 0.010298
+        }
+      ],
+      "amount": 5.138041
+    }
+  },
+  "entities": [
+    {
+      "id": "health-canada-2019-entity-department-of-health",
+      "name": "Department of Health",
+      "value": 2.508468
+    },
+    {
+      "id": "health-canada-2019-entity-canadian-institutes-of-health-research",
+      "name": "Canadian Institutes of Health Research",
+      "value": 1.150927
+    },
+    {
+      "id": "health-canada-2019-entity-canadian-food-inspection-agency",
+      "name": "Canadian Food Inspection Agency",
+      "value": 0.792307
+    },
+    {
+      "id": "health-canada-2019-entity-public-health-agency-of-canada",
+      "name": "Public Health Agency of Canada",
+      "value": 0.67604
+    },
+    {
+      "id": "health-canada-2019-entity-patented-medicine-prices-review-board",
+      "name": "Patented Medicine Prices Review Board",
+      "value": 0.010298
+    }
+  ],
+  "votes": [
+    {
+      "id": "health-canada-2019-canadian-food-inspection-agency-vote1",
+      "vote": "Vote 1",
+      "description": "Operating expenditures, grants and contributions",
+      "totalAvailable": 610678989,
+      "used": 596495919,
+      "lapsed": 14183070
+    },
+    {
+      "id": "health-canada-2019-canadian-food-inspection-agency-vote5",
+      "vote": "Vote 5",
+      "description": "Capital expenditures",
+      "totalAvailable": 43084442,
+      "used": 35491934,
+      "lapsed": 7592508
+    },
+    {
+      "id": "health-canada-2019-canadian-food-inspection-agency-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 178148433,
+      "used": 160319438,
+      "lapsed": 17828995
+    },
+    {
+      "id": "health-canada-2019-canadian-institutes-of-health-research-vote1",
+      "vote": "Vote 1",
+      "description": "Operating expenditures",
+      "totalAvailable": 57880254,
+      "used": 57010795,
+      "lapsed": 869459
+    },
+    {
+      "id": "health-canada-2019-canadian-institutes-of-health-research-vote5",
+      "vote": "Vote 5",
+      "description": "Grants",
+      "totalAvailable": 1095042508,
+      "used": 1087884193,
+      "lapsed": 7158315
+    },
+    {
+      "id": "health-canada-2019-canadian-institutes-of-health-research-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 6039437,
+      "used": 6032139,
+      "lapsed": 7298
+    },
+    {
+      "id": "health-canada-2019-department-of-health-vote1",
+      "vote": "Vote 1",
+      "description": "Operating expenditures",
+      "totalAvailable": 966788483,
+      "used": 911801196,
+      "lapsed": 54987287
+    },
+    {
+      "id": "health-canada-2019-department-of-health-vote10",
+      "vote": "Vote 10",
+      "description": "Grants and contributions",
+      "totalAvailable": 1395307328,
+      "used": 1378408712,
+      "lapsed": 16898616
+    },
+    {
+      "id": "health-canada-2019-department-of-health-vote5",
+      "vote": "Vote 5",
+      "description": "Capital expenditures",
+      "totalAvailable": 29144205,
+      "used": 26802917,
+      "lapsed": 2341288
+    },
+    {
+      "id": "health-canada-2019-department-of-health-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 191486395,
+      "used": 191455540,
+      "lapsed": 30855
+    },
+    {
+      "id": "health-canada-2019-patented-medicine-prices-review-board-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 14222086,
+      "used": 9375135,
+      "lapsed": 4846951
+    },
+    {
+      "id": "health-canada-2019-patented-medicine-prices-review-board-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 923200,
+      "used": 923200,
+      "lapsed": 0
+    },
+    {
+      "id": "health-canada-2019-public-health-agency-of-canada-vote1",
+      "vote": "Vote 1",
+      "description": "Operating expenditures",
+      "totalAvailable": 348303318,
+      "used": 337219759,
+      "lapsed": 11083559
+    },
+    {
+      "id": "health-canada-2019-public-health-agency-of-canada-vote10",
+      "vote": "Vote 10",
+      "description": "Grants and contributions",
+      "totalAvailable": 302163580,
+      "used": 292400866,
+      "lapsed": 9762714
+    },
+    {
+      "id": "health-canada-2019-public-health-agency-of-canada-vote5",
+      "vote": "Vote 5",
+      "description": "Capital expenditures",
+      "totalAvailable": 9625839,
+      "used": 8221372,
+      "lapsed": 1404467
+    },
+    {
+      "id": "health-canada-2019-public-health-agency-of-canada-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 38249183,
+      "used": 38197624,
+      "lapsed": 51559
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "health-canada-2019-tp-0000",
+      "category": "Contributions",
+      "description": "Canada Brain Research Fund Program",
+      "used": 23500000
+    },
+    {
+      "id": "health-canada-2019-tp-0001",
+      "category": "Contributions",
+      "description": "Canadian Blood Services: Blood Research and Development Program",
+      "used": 6250000
+    },
+    {
+      "id": "health-canada-2019-tp-0002",
+      "category": "Contributions",
+      "description": "Climate Change and Health Adaptation Capacity Building Contribution Program",
+      "used": 170385
+    },
+    {
+      "id": "health-canada-2019-tp-0003",
+      "category": "Contributions",
+      "description": "Contribution to Canada Health Infoway",
+      "used": 49844676
+    },
+    {
+      "id": "health-canada-2019-tp-0004",
+      "category": "Contributions",
+      "description": "Contribution to strengthen Canada's organs and tissues donation and transplantation system",
+      "used": 4566500
+    },
+    {
+      "id": "health-canada-2019-tp-0005",
+      "category": "Contributions",
+      "description": "Contribution to the Canadian Agency for Drugs and Technologies in Health",
+      "used": 20058769
+    },
+    {
+      "id": "health-canada-2019-tp-0006",
+      "category": "Contributions",
+      "description": "Contribution to the Canadian Foundation for Healthcare Improvement",
+      "used": 17000000
+    },
+    {
+      "id": "health-canada-2019-tp-0007",
+      "category": "Contributions",
+      "description": "Contribution to the Canadian Institute for Health Information",
+      "used": 83948979
+    },
+    {
+      "id": "health-canada-2019-tp-0008",
+      "category": "Contributions",
+      "description": "Contribution to the Canadian Partnership Against Cancer",
+      "used": 42971939
+    },
+    {
+      "id": "health-canada-2019-tp-0009",
+      "category": "Contributions",
+      "description": "Contribution to the Canadian Patient Safety Institute",
+      "used": 7600000
+    },
+    {
+      "id": "health-canada-2019-tp-0010",
+      "category": "Contributions",
+      "description": "Contributions in support of the Federal Initiative on HIV/AIDS",
+      "used": 23131839
+    },
+    {
+      "id": "health-canada-2019-tp-0011",
+      "category": "Contributions",
+      "description": "Contributions to Canadian Blood Services and/or other designated transfusion/transplantation centres to support adverse event surveillance activities",
+      "used": 1585503
+    },
+    {
+      "id": "health-canada-2019-tp-0012",
+      "category": "Contributions",
+      "description": "Contributions to incorporated local or regional non-profit Aboriginal organizations and institutions for the purpose of developing early intervention programs for Aboriginal pre-school children and their families",
+      "used": 35107539
+    },
+    {
+      "id": "health-canada-2019-tp-0013",
+      "category": "Contributions",
+      "description": "Contributions to individuals and organizations in support of public health infrastructure",
+      "used": 0
+    },
+    {
+      "id": "health-canada-2019-tp-0014",
+      "category": "Contributions",
+      "description": "Contributions to individuals and organizations to support health promotion projects in the areas of building community capacity, stimulating knowledge development and dissemination, and partnership building/intersectoral collaboration",
+      "used": 70746507
+    },
+    {
+      "id": "health-canada-2019-tp-0015",
+      "category": "Contributions",
+      "description": "Contributions to non-government organizations, corporations, other levels of government, post-secondary institutions and individuals to support development and creation of public health workforce development products and tools",
+      "used": 0
+    },
+    {
+      "id": "health-canada-2019-tp-0016",
+      "category": "Contributions",
+      "description": "Contributions to non-profit organizations to support, on a long-term basis, the development and provision of preventative and early intervention services aimed at addressing the health and developmental problems experienced by young children at risk in Canada",
+      "used": 81109715
+    },
+    {
+      "id": "health-canada-2019-tp-0017",
+      "category": "Contributions",
+      "description": "Health Care Policy Contribution Program",
+      "used": 9489511
+    },
+    {
+      "id": "health-canada-2019-tp-0018",
+      "category": "Contributions",
+      "description": "Items not required for the current year",
+      "used": 0
+    },
+    {
+      "id": "health-canada-2019-tp-0019",
+      "category": "Contributions",
+      "description": "Mental Health Commission of Canada Contributions Program",
+      "used": 14250000
+    },
+    {
+      "id": "health-canada-2019-tp-0020",
+      "category": "Contributions",
+      "description": "Official Languages Health Contribution Program",
+      "used": 36100000
+    },
+    {
+      "id": "health-canada-2019-tp-0021",
+      "category": "Contributions",
+      "description": "Payments to provinces and territories for the purpose of emergency treatment funding",
+      "used": 150000002
+    },
+    {
+      "id": "health-canada-2019-tp-0022",
+      "category": "Contributions",
+      "description": "Radon Outreach Contribution Program",
+      "used": 99753
+    },
+    {
+      "id": "health-canada-2019-tp-0023",
+      "category": "Contributions",
+      "description": "Substance Use and Addictions Program",
+      "used": 26938461
+    },
+    {
+      "id": "health-canada-2019-tp-0024",
+      "category": "Contributions",
+      "description": "Thalidomide Survivors Contribution Program",
+      "used": 9500408
+    },
+    {
+      "id": "health-canada-2019-tp-0025",
+      "category": "Grants",
+      "description": "Business-Led Networks of Centres of Excellence",
+      "used": 0
+    },
+    {
+      "id": "health-canada-2019-tp-0026",
+      "category": "Grants",
+      "description": "Canada 150 Research Chairs",
+      "used": 1206781
+    },
+    {
+      "id": "health-canada-2019-tp-0027",
+      "category": "Grants",
+      "description": "Canada Excellence Research Chairs",
+      "used": 4200000
+    },
+    {
+      "id": "health-canada-2019-tp-0028",
+      "category": "Grants",
+      "description": "Canada First Research Excellence Fund",
+      "used": 43803273
+    },
+    {
+      "id": "health-canada-2019-tp-0029",
+      "category": "Grants",
+      "description": "Canada Graduate Scholarships",
+      "used": 21205669
+    },
+    {
+      "id": "health-canada-2019-tp-0030",
+      "category": "Grants",
+      "description": "Centres of Excellence for Commercialization and Research",
+      "used": 13194408
+    },
+    {
+      "id": "health-canada-2019-tp-0031",
+      "category": "Grants",
+      "description": "College and Community Innovation Program",
+      "used": 567326
+    },
+    {
+      "id": "health-canada-2019-tp-0032",
+      "category": "Grants",
+      "description": "Compensation payments in accordance with requirements established by Regulations under the Health of Animals Act and the Plant Protection Act, and authorized pursuant to the Canadian Food Inspection Agency Act",
+      "used": 4172539
+    },
+    {
+      "id": "health-canada-2019-tp-0033",
+      "category": "Grants",
+      "description": "Contributions in support of the Federal Assistance Program",
+      "used": 578768
+    },
+    {
+      "id": "health-canada-2019-tp-0034",
+      "category": "Grants",
+      "description": "Grant to Canada Health Infoway Inc. to accelerate the development of electronic health records, common information technology standards across the country, and the further applications of tele-health applications",
+      "used": 14260425
+    },
+    {
+      "id": "health-canada-2019-tp-0035",
+      "category": "Grants",
+      "description": "Grant to support a Healthy Seniors Pilot Project in New Brunswick",
+      "used": 75000000
+    },
+    {
+      "id": "health-canada-2019-tp-0036",
+      "category": "Grants",
+      "description": "Grant under the Innovative Solutions Canada program",
+      "used": 0
+    },
+    {
+      "id": "health-canada-2019-tp-0037",
+      "category": "Grants",
+      "description": "Grants for research projects and personnel support",
+      "used": 958291539
+    },
+    {
+      "id": "health-canada-2019-tp-0038",
+      "category": "Grants",
+      "description": "Grants to Support Cannabis Public Education and Awareness",
+      "used": 0
+    },
+    {
+      "id": "health-canada-2019-tp-0039",
+      "category": "Grants",
+      "description": "Grants to eligible non-profit international organizations in support of their projects or programs on health",
+      "used": 2196707
+    },
+    {
+      "id": "health-canada-2019-tp-0040",
+      "category": "Grants",
+      "description": "Grants to graduate students, post-graduate students and Canadian post-secondary institutions to increase professional capacity and training levels in order to build an effective public health sector",
+      "used": 0
+    },
+    {
+      "id": "health-canada-2019-tp-0041",
+      "category": "Grants",
+      "description": "Grants to individuals and organizations in support of health promotion projects in the areas of building community capacity, stimulating knowledge development and dissemination, and partnership building/intersectorial collaboration",
+      "used": 3323250
+    },
+    {
+      "id": "health-canada-2019-tp-0042",
+      "category": "Grants",
+      "description": "Grants to individuals and organizations in support of public health infrastructure",
+      "used": 199806
+    },
+    {
+      "id": "health-canada-2019-tp-0043",
+      "category": "Grants",
+      "description": "Grants under the Innovative Solutions Canada program",
+      "used": 0
+    },
+    {
+      "id": "health-canada-2019-tp-0044",
+      "category": "Grants",
+      "description": "Industrial Research Chairs for Colleges",
+      "used": 0
+    },
+    {
+      "id": "health-canada-2019-tp-0045",
+      "category": "Grants",
+      "description": "Institute support grants",
+      "used": 13604167
+    },
+    {
+      "id": "health-canada-2019-tp-0046",
+      "category": "Grants",
+      "description": "Networks of Centres of Excellence",
+      "used": 23477000
+    },
+    {
+      "id": "health-canada-2019-tp-0047",
+      "category": "Grants",
+      "description": "Payment to the Province of Ontario pursuant to section 103 of the Patent Act",
+      "used": 20000000
+    },
+    {
+      "id": "health-canada-2019-tp-0048",
+      "category": "Grants",
+      "description": "Territorial Health Investment Fund",
+      "used": 27000000
+    },
+    {
+      "id": "health-canada-2019-tp-0049",
+      "category": "Grants",
+      "description": "Vanier Canada Graduate Scholarships",
+      "used": 8334030
+    },
+    {
+      "id": "health-canada-2019-tp-0050",
+      "category": "Other transfer payment",
+      "description": "Strengthening Canada's Home and Community Care and Mental Health and Addiction Initiative",
+      "used": 849119329
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

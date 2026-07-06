@@ -1,0 +1,194 @@
+{
+  "name": "Housing, Infrastructure and Communities",
+  "slug": "housing-infrastructure-communities",
+  "financialYearEnding": 2014,
+  "reportedAs": "Office of Infrastructure of Canada",
+  "basis": "vol2_appropriations",
+  "totalSpending": 3.551434,
+  "percentageOfFederal": 1.3744,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 1.3744
+    },
+    {
+      "year": 2015,
+      "percentage": 1.2243
+    },
+    {
+      "year": 2017,
+      "percentage": 1.2788
+    },
+    {
+      "year": 2018,
+      "percentage": 1.4681
+    },
+    {
+      "year": 2019,
+      "percentage": 1.8209
+    },
+    {
+      "year": 2020,
+      "percentage": 2.6659
+    },
+    {
+      "year": 2021,
+      "percentage": 0.9803
+    },
+    {
+      "year": 2022,
+      "percentage": 2.9143
+    },
+    {
+      "year": 2023,
+      "percentage": 2.5834
+    },
+    {
+      "year": 2024,
+      "percentage": 2.8324
+    },
+    {
+      "year": 2025,
+      "percentage": 2.6818
+    }
+  ],
+  "miniSankey": {
+    "spending_data": {
+      "id": "housing-infrastructure-communities",
+      "name": "Housing, Infrastructure and Communities",
+      "children": [
+        {
+          "id": "housing-infrastructure-communities-org-office-of-infrastructure-of-canada",
+          "name": "Office of Infrastructure of Canada",
+          "children": [
+            {
+              "id": "housing-infrastructure-communities-office-of-infrastructure-of-canada-vote5",
+              "name": "Vote 5",
+              "amount": 3.467616
+            },
+            {
+              "id": "housing-infrastructure-communities-office-of-infrastructure-of-canada-vote1",
+              "name": "Vote 1",
+              "amount": 0.046209
+            }
+          ],
+          "amount": 3.513825
+        },
+        {
+          "id": "housing-infrastructure-communities-org-the-jacques-cartier-and-champlain-bridges-inc",
+          "name": "The Jacques Cartier and Champlain Bridges Inc",
+          "children": [
+            {
+              "id": "housing-infrastructure-communities-the-jacques-cartier-and-champlain-bridges-inc-vote50",
+              "name": "Vote 50",
+              "amount": 0.037609
+            }
+          ],
+          "amount": 0.037609
+        }
+      ],
+      "amount": 3.551434
+    }
+  },
+  "entities": [
+    {
+      "id": "housing-infrastructure-communities-2014-entity-office-of-infrastructure-of-canada",
+      "name": "Office of Infrastructure of Canada",
+      "value": 3.513825
+    },
+    {
+      "id": "housing-infrastructure-communities-2014-entity-the-jacques-cartier-and-champlain-bridges-inc",
+      "name": "The Jacques Cartier and Champlain Bridges Inc",
+      "value": 0.037609
+    }
+  ],
+  "votes": [
+    {
+      "id": "housing-infrastructure-communities-2014-office-of-infrastructure-of-canada-vote1",
+      "vote": "Vote 1",
+      "description": "Operating expenditures",
+      "totalAvailable": 55182896,
+      "used": 46209274,
+      "lapsed": 8973622
+    },
+    {
+      "id": "housing-infrastructure-communities-2014-office-of-infrastructure-of-canada-vote5",
+      "vote": "Vote 5",
+      "description": "Contributions",
+      "totalAvailable": 4106424090,
+      "used": 3467616217,
+      "lapsed": 638807873
+    },
+    {
+      "id": "housing-infrastructure-communities-2014-the-jacques-cartier-and-champlain-bridges-inc-vote50",
+      "vote": "Vote 50",
+      "description": "Payments to the Jacques Cartier and Champlain Bridges Inc",
+      "totalAvailable": 101315253,
+      "used": 37608715,
+      "lapsed": 63706538
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "housing-infrastructure-communities-2014-tp-0000",
+      "category": "Contributions",
+      "description": "Contributions under the Border Infrastructure Fund",
+      "used": 28196496
+    },
+    {
+      "id": "housing-infrastructure-communities-2014-tp-0001",
+      "category": "Contributions",
+      "description": "Contributions under the Building Canada Fund — Communities Component",
+      "used": 120382787
+    },
+    {
+      "id": "housing-infrastructure-communities-2014-tp-0002",
+      "category": "Contributions",
+      "description": "Contributions under the Building Canada Fund — Major Infrastructure Component",
+      "used": 692803945
+    },
+    {
+      "id": "housing-infrastructure-communities-2014-tp-0003",
+      "category": "Contributions",
+      "description": "Contributions under the Building Canada Fund — Strategic Research and Partnership",
+      "used": 5000
+    },
+    {
+      "id": "housing-infrastructure-communities-2014-tp-0004",
+      "category": "Contributions",
+      "description": "Contributions under the Canada Strategic Infrastructure Fund",
+      "used": 196634325
+    },
+    {
+      "id": "housing-infrastructure-communities-2014-tp-0005",
+      "category": "Contributions",
+      "description": "Contributions under the Green Infrastructure Fund",
+      "used": 84567663
+    },
+    {
+      "id": "housing-infrastructure-communities-2014-tp-0006",
+      "category": "Contributions",
+      "description": "Contributions under the Municipal Rural Infrastructure Fund",
+      "used": 42337674
+    },
+    {
+      "id": "housing-infrastructure-communities-2014-tp-0007",
+      "category": "Contributions",
+      "description": "Items not required for the current year",
+      "used": 0
+    },
+    {
+      "id": "housing-infrastructure-communities-2014-tp-0008",
+      "category": "Other transfer payments",
+      "description": "Gas Tax Fund",
+      "used": 2106864500
+    },
+    {
+      "id": "housing-infrastructure-communities-2014-tp-0009",
+      "category": "Other transfer payments",
+      "description": "Provincial‑territorial infrastructure base funding program",
+      "used": 191431000
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

@@ -1,0 +1,709 @@
+{
+  "total": 532.30067,
+  "spending": 532.30067,
+  "revenue": 459.549,
+  "spending_data": {
+    "id": "spending",
+    "name": "Spending",
+    "amount": 532.30067,
+    "children": [
+      {
+        "id": "social-security",
+        "name": "Social Security",
+        "children": [
+          {
+            "id": "retirement-benefits",
+            "name": "Retirement Benefits",
+            "amount": 76.036
+          },
+          {
+            "id": "childrens-benefits",
+            "name": "Children's Benefits",
+            "amount": 26.339
+          },
+          {
+            "id": "employment-insurance",
+            "name": "Employment Insurance",
+            "amount": 23.13
+          },
+          {
+            "id": "covid-income-support",
+            "name": "COVID-19 Income Support",
+            "amount": -4.838
+          },
+          {
+            "id": "canada-emergency-wage-subsidy",
+            "name": "Canada Emergency Wage Subsidy",
+            "amount": -0.42
+          }
+        ],
+        "amount": 120.247
+      },
+      {
+        "id": "economy-and-standard-of-living",
+        "name": "Economy and Standard of Living",
+        "children": [
+          {
+            "id": "standard-of-living-and-inequalities",
+            "name": "Standard of Living and Assistance to Address Inequalities",
+            "children": [
+              {
+                "id": "standard-of-living",
+                "name": "Standard of Living",
+                "children": [
+                  {
+                    "id": "revenue-canada",
+                    "name": "Revenue Canada",
+                    "amount": 17.293893
+                  },
+                  {
+                    "id": "employment-training",
+                    "name": "Employment + Training",
+                    "amount": 15.634786
+                  },
+                  {
+                    "id": "carbon-tax-rebate",
+                    "name": "Carbon Tax Rebate",
+                    "amount": 9.858
+                  },
+                  {
+                    "id": "support-for-veterans",
+                    "name": "Support for Veterans",
+                    "amount": 6.07119
+                  },
+                  {
+                    "id": "housing-assistance",
+                    "name": "Housing Assistance",
+                    "amount": 5.491113
+                  },
+                  {
+                    "id": "official-languages-culture",
+                    "name": "Official Languages + Culture",
+                    "amount": 4.873413
+                  },
+                  {
+                    "id": "gender-equality",
+                    "name": "Gender Equality",
+                    "amount": 0.320899
+                  }
+                ],
+                "amount": 59.543294
+              },
+              {
+                "id": "health",
+                "name": "Health",
+                "children": [
+                  {
+                    "id": "health-care-systems-protection",
+                    "name": "Health Care Systems + Protection",
+                    "amount": 7.099876
+                  },
+                  {
+                    "id": "public-health-disease-prevention",
+                    "name": "Public Health + Disease Prevention",
+                    "amount": 4.429425
+                  },
+                  {
+                    "id": "health-research",
+                    "name": "Health Research",
+                    "amount": 1.348456
+                  },
+                  {
+                    "id": "food-safety",
+                    "name": "Food Safety",
+                    "amount": 1.079321
+                  }
+                ],
+                "amount": 13.957078
+              }
+            ],
+            "amount": 73.500372
+          },
+          {
+            "id": "economy-infrastructure",
+            "name": "Economy + Infrastructure",
+            "children": [
+              {
+                "id": "innovation-research",
+                "name": "Innovation + Research",
+                "children": [
+                  {
+                    "id": "investment-growth-commercialization",
+                    "name": "Investment, Growth and Commercialization",
+                    "amount": 4.469299
+                  },
+                  {
+                    "id": "research",
+                    "name": "Research",
+                    "amount": 4.069575
+                  },
+                  {
+                    "id": "statistics-canada",
+                    "name": "Statistics Canada",
+                    "amount": 0.873709
+                  },
+                  {
+                    "id": "other-boards-councils",
+                    "name": "Other Boards + Councils",
+                    "amount": 0.147157
+                  }
+                ],
+                "amount": 9.55974
+              },
+              {
+                "id": "infrastructure-investments",
+                "name": "Infrastructure Investments",
+                "amount": 9.065491
+              },
+              {
+                "id": "transportation",
+                "name": "Transportation",
+                "amount": 5.239629
+              },
+              {
+                "id": "natural-resources-management",
+                "name": "Natural Resources Management",
+                "amount": 5.112227
+              },
+              {
+                "id": "fisheries",
+                "name": "Fisheries",
+                "amount": 4.592373
+              },
+              {
+                "id": "agriculture",
+                "name": "Agriculture",
+                "amount": 4.234928
+              },
+              {
+                "id": "environment-climate-change",
+                "name": "Environment and Climate Change",
+                "children": [
+                  {
+                    "id": "environment-programs",
+                    "name": "Other Environment and Climate Change Programs",
+                    "amount": 2.535628
+                  },
+                  {
+                    "id": "national-parks",
+                    "name": "National Parks",
+                    "amount": 1.452548
+                  }
+                ],
+                "amount": 3.988176
+              },
+              {
+                "id": "community-regional-development",
+                "name": "Community and Regional Development",
+                "amount": 2.234581
+              },
+              {
+                "id": "banking-finance",
+                "name": "Banking + Finance",
+                "amount": 0.463462
+              },
+              {
+                "id": "space",
+                "name": "Space",
+                "amount": 0.450747
+              }
+            ],
+            "amount": 44.941354
+          }
+        ],
+        "amount": 118.441726
+      },
+      {
+        "id": "transfers-to-provinces",
+        "name": "Transfers to Provinces",
+        "link": "https://www.canada.ca/en/department-finance/programs/federal-transfers/major-federal-transfers.html",
+        "children": [
+          {
+            "id": "health-transfer",
+            "name": "Health Transfer to Provinces",
+            "children": [
+              {
+                "id": "health-transfer-ontario",
+                "name": "Ontario",
+                "amount": 19.278003
+              },
+              {
+                "id": "health-transfer-quebec",
+                "name": "Quebec",
+                "amount": 10.921126
+              },
+              {
+                "id": "health-transfer-british-columbia",
+                "name": "British Columbia",
+                "amount": 6.841202
+              },
+              {
+                "id": "health-transfer-alberta",
+                "name": "Alberta",
+                "amount": 5.746494
+              },
+              {
+                "id": "health-transfer-manitoba",
+                "name": "Manitoba",
+                "amount": 1.797281
+              },
+              {
+                "id": "health-transfer-saskatchewan",
+                "name": "Saskatchewan",
+                "amount": 1.471464
+              },
+              {
+                "id": "health-transfer-nova-scotia",
+                "name": "Nova Scotia",
+                "amount": 1.309036
+              },
+              {
+                "id": "health-transfer-new-brunswick",
+                "name": "New Brunswick",
+                "amount": 1.024546
+              },
+              {
+                "id": "health-transfer-newfoundland-and-labrador",
+                "name": "Newfoundland and Labrador",
+                "amount": 0.670857
+              },
+              {
+                "id": "health-transfer-prince-edward-island",
+                "name": "Prince Edward Island",
+                "amount": 0.210484
+              },
+              {
+                "id": "health-transfer-yukon",
+                "name": "Yukon",
+                "amount": 0.055745
+              },
+              {
+                "id": "health-transfer-northwest-territories",
+                "name": "Northwest Territories",
+                "amount": 0.054783
+              },
+              {
+                "name": "Other",
+                "id": "health-transfer-other",
+                "amount": 0.049978,
+                "isAggregate": true,
+                "count": 1
+              }
+            ],
+            "amount": 49.430999
+          },
+          {
+            "id": "equalization",
+            "name": "Equalization Payments to Provinces",
+            "children": [
+              {
+                "id": "equalization-quebec",
+                "name": "Quebec",
+                "amount": 14.043
+              },
+              {
+                "id": "equalization-manitoba",
+                "name": "Manitoba",
+                "amount": 3.513
+              },
+              {
+                "id": "equalization-nova-scotia",
+                "name": "Nova Scotia",
+                "amount": 2.805
+              },
+              {
+                "id": "equalization-new-brunswick",
+                "name": "New Brunswick",
+                "amount": 2.633
+              },
+              {
+                "id": "equalization-alberta",
+                "name": "Alberta",
+                "amount": 0.581
+              },
+              {
+                "id": "equalization-prince-edward-island",
+                "name": "Prince Edward Island",
+                "amount": 0.562
+              },
+              {
+                "id": "equalization-ontario",
+                "name": "Ontario",
+                "amount": 0.431
+              },
+              {
+                "id": "equalization-newfoundland-and-labrador",
+                "name": "Newfoundland and Labrador",
+                "amount": 0.01
+              },
+              {
+                "id": "equalization-british-columbia",
+                "name": "British Columbia",
+                "amount": 0.004
+              },
+              {
+                "id": "equalization-saskatchewan",
+                "name": "Saskatchewan",
+                "amount": 0.002
+              }
+            ],
+            "amount": 24.584
+          },
+          {
+            "id": "social-transfer",
+            "name": "Social Transfer to Provinces",
+            "children": [
+              {
+                "id": "social-transfer-ontario",
+                "name": "Ontario",
+                "amount": 6.406
+              },
+              {
+                "id": "social-transfer-quebec",
+                "name": "Quebec",
+                "amount": 3.622
+              },
+              {
+                "id": "social-transfer-british-columbia",
+                "name": "British Columbia",
+                "amount": 2.273
+              },
+              {
+                "id": "social-transfer-alberta",
+                "name": "Alberta",
+                "amount": 1.908
+              },
+              {
+                "id": "social-transfer-manitoba",
+                "name": "Manitoba",
+                "amount": 0.597
+              },
+              {
+                "id": "social-transfer-saskatchewan",
+                "name": "Saskatchewan",
+                "amount": 0.488
+              },
+              {
+                "id": "social-transfer-nova-scotia",
+                "name": "Nova Scotia",
+                "amount": 0.436
+              },
+              {
+                "id": "social-transfer-new-brunswick",
+                "name": "New Brunswick",
+                "amount": 0.341
+              },
+              {
+                "id": "social-transfer-newfoundland-and-labrador",
+                "name": "Newfoundland and Labrador",
+                "amount": 0.223
+              },
+              {
+                "id": "social-transfer-prince-edward-island",
+                "name": "Prince Edward Island",
+                "amount": 0.07
+              },
+              {
+                "id": "social-transfer-northwest-territories",
+                "name": "Northwest Territories",
+                "amount": 0.018
+              },
+              {
+                "id": "social-transfer-yukon",
+                "name": "Yukon",
+                "amount": 0.018
+              },
+              {
+                "name": "Other",
+                "id": "social-transfer-other",
+                "amount": 0.017,
+                "isAggregate": true,
+                "count": 1
+              }
+            ],
+            "amount": 16.417
+          },
+          {
+            "id": "other-major-transfers",
+            "name": "Other Major Transfers",
+            "amount": 11.098451
+          },
+          {
+            "id": "quebec-tax-offset",
+            "name": "Quebec Tax Offset",
+            "amount": -7.68
+          }
+        ],
+        "amount": 93.85045
+      },
+      {
+        "id": "indigenous-priorities",
+        "name": "Indigenous Priorities",
+        "children": [
+          {
+            "id": "indigenous-well-being",
+            "name": "Indigenous Well-Being + Self Determination",
+            "amount": 46.532284
+          },
+          {
+            "id": "crown-indigenous-relations",
+            "name": "Crown-Indigenous Relations",
+            "amount": 16.424524
+          }
+        ],
+        "amount": 62.956808
+      },
+      {
+        "id": "obligations",
+        "name": "Obligations",
+        "children": [
+          {
+            "id": "net-interest-on-debt",
+            "name": "Net Interest on Debt",
+            "amount": 47.273
+          }
+        ],
+        "amount": 47.273
+      },
+      {
+        "id": "defence",
+        "name": "Defence",
+        "children": [
+          {
+            "id": "defence-operations",
+            "name": "Defence Operations",
+            "amount": 33.81898
+          },
+          {
+            "id": "communications-security-establishment",
+            "name": "Communications Security Establishment",
+            "amount": 1.029201
+          }
+        ],
+        "amount": 34.848181
+      },
+      {
+        "id": "safety",
+        "name": "Safety",
+        "children": [
+          {
+            "id": "public-safety",
+            "name": "Public Safety",
+            "children": [
+              {
+                "id": "rcmp",
+                "name": "RCMP",
+                "amount": 7.300081
+              },
+              {
+                "id": "corrections",
+                "name": "Corrections",
+                "amount": 3.462297
+              },
+              {
+                "id": "justice-system",
+                "name": "Justice System",
+                "amount": 2.969698
+              },
+              {
+                "id": "community-safety-emergency",
+                "name": "Community Safety",
+                "amount": 1.519985
+              },
+              {
+                "id": "csis",
+                "name": "CSIS",
+                "amount": 0.82841
+              },
+              {
+                "id": "elections",
+                "name": "Office of the Chief Electoral Officer",
+                "amount": 0.24971
+              }
+            ],
+            "amount": 16.330181
+          },
+          {
+            "id": "immigration-border-security",
+            "name": "Immigration + Border Security",
+            "children": [
+              {
+                "id": "immigration-services",
+                "name": "Other Immigration Services",
+                "amount": 6.347585
+              },
+              {
+                "id": "border-security",
+                "name": "Border Security",
+                "amount": 2.726283
+              }
+            ],
+            "amount": 9.073868
+          }
+        ],
+        "amount": 25.404049
+      },
+      {
+        "id": "international-affairs",
+        "name": "International Affairs",
+        "amount": 19.258101
+      },
+      {
+        "id": "other",
+        "name": "Other",
+        "children": [
+          {
+            "id": "public-works-government-services",
+            "name": "Public Works + Government Services",
+            "children": [
+              {
+                "id": "other-public-services-procurement",
+                "name": "Other Public Services + Procurement",
+                "amount": 6.984998
+              },
+              {
+                "id": "government-it-operations",
+                "name": "Government IT Operations",
+                "amount": 3.691224
+              }
+            ],
+            "amount": 10.676222
+          },
+          {
+            "id": "net-actuarial-losses",
+            "name": "Net actuarial losses",
+            "amount": -7.489
+          },
+          {
+            "id": "functioning-of-government",
+            "name": "Functioning of Government",
+            "children": [
+              {
+                "id": "treasury-board",
+                "name": "Treasury Board",
+                "amount": 5.318664
+              },
+              {
+                "id": "parliament",
+                "name": "Parliament",
+                "amount": 0.963899
+              },
+              {
+                "id": "privy-council-office",
+                "name": "Privy Council Office",
+                "amount": 0.388419
+              },
+              {
+                "id": "audit-agents",
+                "name": "Audit + Agents of Parliament",
+                "amount": 0.136735
+              },
+              {
+                "id": "governor-general",
+                "name": "Office of the Secretary to the Governor General",
+                "amount": 0.026416
+              }
+            ],
+            "amount": 6.834133
+          }
+        ],
+        "amount": 10.021355
+      }
+    ]
+  },
+  "revenue_data": {
+    "id": "revenue",
+    "name": "Revenue",
+    "children": [
+      {
+        "id": "revenue-tax-revenues",
+        "name": "Tax revenues",
+        "children": [
+          {
+            "id": "revenue-tax-revenues-income-tax-revenues",
+            "name": "Income tax revenues",
+            "children": [
+              {
+                "id": "revenue-tax-revenues-income-tax-revenues-personal",
+                "name": "Personal",
+                "amount": 217.696
+              },
+              {
+                "id": "revenue-tax-revenues-income-tax-revenues-corporate",
+                "name": "Corporate",
+                "amount": 82.468
+              },
+              {
+                "id": "revenue-tax-revenues-income-tax-revenues-non-resident",
+                "name": "Non-resident",
+                "amount": 12.541
+              }
+            ],
+            "amount": 312.705
+          },
+          {
+            "id": "revenue-tax-revenues-other-taxes-and-duties",
+            "name": "Other taxes and duties",
+            "children": [
+              {
+                "id": "revenue-tax-revenues-other-taxes-and-duties-goods-and-services-tax",
+                "name": "Goods and services tax",
+                "amount": 51.416
+              },
+              {
+                "id": "revenue-tax-revenues-other-taxes-and-duties-other-excise-taxes-and-duties",
+                "name": "Other excise taxes and duties",
+                "amount": 6.829
+              },
+              {
+                "id": "revenue-tax-revenues-other-taxes-and-duties-energy-taxes",
+                "name": "Energy taxes",
+                "amount": 5.599
+              },
+              {
+                "id": "revenue-tax-revenues-other-taxes-and-duties-customs-import-duties",
+                "name": "Customs import duties",
+                "amount": 5.571
+              }
+            ],
+            "amount": 69.415
+          }
+        ],
+        "amount": 382.12
+      },
+      {
+        "id": "revenue-other-revenues",
+        "name": "Other revenues",
+        "children": [
+          {
+            "id": "revenue-other-revenues-other-program-revenues",
+            "name": "Other program revenues",
+            "amount": 29.859
+          },
+          {
+            "id": "revenue-other-revenues-net-foreign-exchange-revenues-and-return-on-investments",
+            "name": "Net foreign exchange revenues and return on investments",
+            "amount": 4.29
+          },
+          {
+            "id": "revenue-other-revenues-enterprise-crown-corporations-and-other-government-business-enterprises",
+            "name": "Enterprise Crown corporations and other government business enterprises",
+            "amount": 3.217
+          }
+        ],
+        "amount": 37.366
+      },
+      {
+        "id": "revenue-employment-insurance-premiums",
+        "name": "Employment insurance premiums",
+        "amount": 29.56
+      },
+      {
+        "id": "revenue-proceeds-from-the-pollution-pricing-framework",
+        "name": "Proceeds from the pollution pricing framework",
+        "amount": 10.503
+      }
+    ],
+    "amount": 459.549
+  }
+}

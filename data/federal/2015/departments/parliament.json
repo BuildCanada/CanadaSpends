@@ -1,0 +1,289 @@
+{
+  "name": "Parliament",
+  "slug": "parliament",
+  "financialYearEnding": 2015,
+  "reportedAs": null,
+  "basis": "vol2_appropriations",
+  "totalSpending": 0.559506,
+  "percentageOfFederal": 0.205,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 0.2134
+    },
+    {
+      "year": 2015,
+      "percentage": 0.205
+    },
+    {
+      "year": 2016,
+      "percentage": 0.2103
+    },
+    {
+      "year": 2017,
+      "percentage": 0.2283
+    },
+    {
+      "year": 2018,
+      "percentage": 0.2384
+    },
+    {
+      "year": 2019,
+      "percentage": 0.2267
+    },
+    {
+      "year": 2020,
+      "percentage": 0.2169
+    },
+    {
+      "year": 2021,
+      "percentage": 0.1418
+    },
+    {
+      "year": 2022,
+      "percentage": 0.1597
+    },
+    {
+      "year": 2023,
+      "percentage": 0.182
+    },
+    {
+      "year": 2024,
+      "percentage": 0.1876
+    },
+    {
+      "year": 2025,
+      "percentage": 0.184
+    }
+  ],
+  "miniSankey": {
+    "spending_data": {
+      "id": "parliament",
+      "name": "Parliament",
+      "children": [
+        {
+          "id": "parliament-org-house-of-commons",
+          "name": "House of Commons",
+          "children": [
+            {
+              "id": "parliament-house-of-commons-vote1",
+              "name": "Vote 1",
+              "amount": 0.288094
+            },
+            {
+              "id": "parliament-house-of-commons-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.135947
+            }
+          ],
+          "amount": 0.424041
+        },
+        {
+          "id": "parliament-org-the-senate",
+          "name": "The Senate",
+          "children": [
+            {
+              "id": "parliament-the-senate-vote1",
+              "name": "Vote 1",
+              "amount": 0.056881
+            },
+            {
+              "id": "parliament-the-senate-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.028521
+            }
+          ],
+          "amount": 0.085402
+        },
+        {
+          "id": "parliament-org-library-of-parliament",
+          "name": "Library of Parliament",
+          "children": [
+            {
+              "id": "parliament-library-of-parliament-vote1",
+              "name": "Vote 1",
+              "amount": 0.038356
+            },
+            {
+              "id": "parliament-library-of-parliament-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.004727
+            }
+          ],
+          "amount": 0.043083
+        },
+        {
+          "id": "parliament-org-office-of-the-conflict-of-interest-and-ethics-commissioner",
+          "name": "Office of the Conflict of Interest and Ethics Commissioner",
+          "children": [
+            {
+              "id": "parliament-office-of-the-conflict-of-interest-and-ethics-commissioner-vote1",
+              "name": "Vote 1",
+              "amount": 0.005608
+            },
+            {
+              "id": "parliament-office-of-the-conflict-of-interest-and-ethics-commissioner-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.000669
+            }
+          ],
+          "amount": 0.006277
+        },
+        {
+          "id": "parliament-org-senate-ethics-officer",
+          "name": "Senate Ethics Officer",
+          "children": [
+            {
+              "id": "parliament-senate-ethics-officer-vote1",
+              "name": "Vote 1",
+              "amount": 0.00062
+            },
+            {
+              "id": "parliament-senate-ethics-officer-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 8.3e-5
+            }
+          ],
+          "amount": 0.000703
+        }
+      ],
+      "amount": 0.559506
+    }
+  },
+  "entities": [
+    {
+      "id": "parliament-2015-entity-house-of-commons",
+      "name": "House of Commons",
+      "value": 0.424041
+    },
+    {
+      "id": "parliament-2015-entity-the-senate",
+      "name": "The Senate",
+      "value": 0.085402
+    },
+    {
+      "id": "parliament-2015-entity-library-of-parliament",
+      "name": "Library of Parliament",
+      "value": 0.043082
+    },
+    {
+      "id": "parliament-2015-entity-office-of-the-conflict-of-interest-and-ethics-commissioner",
+      "name": "Office of the Conflict of Interest and Ethics Commissioner",
+      "value": 0.006277
+    },
+    {
+      "id": "parliament-2015-entity-senate-ethics-officer",
+      "name": "Senate Ethics Officer",
+      "value": 0.000703
+    }
+  ],
+  "votes": [
+    {
+      "id": "parliament-2015-house-of-commons-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 302349933,
+      "used": 288093941,
+      "lapsed": 14255992
+    },
+    {
+      "id": "parliament-2015-house-of-commons-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 135947473,
+      "used": 135947473,
+      "lapsed": 0
+    },
+    {
+      "id": "parliament-2015-library-of-parliament-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 39317035,
+      "used": 38355703,
+      "lapsed": 961332
+    },
+    {
+      "id": "parliament-2015-library-of-parliament-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 4726530,
+      "used": 4726530,
+      "lapsed": 0
+    },
+    {
+      "id": "parliament-2015-office-of-the-conflict-of-interest-and-ethics-commissioner-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 6178280,
+      "used": 5607761,
+      "lapsed": 570519
+    },
+    {
+      "id": "parliament-2015-office-of-the-conflict-of-interest-and-ethics-commissioner-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 669451,
+      "used": 669451,
+      "lapsed": 0
+    },
+    {
+      "id": "parliament-2015-senate-ethics-officer-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 1059500,
+      "used": 620027,
+      "lapsed": 439473
+    },
+    {
+      "id": "parliament-2015-senate-ethics-officer-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 83194,
+      "used": 83194,
+      "lapsed": 0
+    },
+    {
+      "id": "parliament-2015-the-senate-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 58432359,
+      "used": 56881095,
+      "lapsed": 1551264
+    },
+    {
+      "id": "parliament-2015-the-senate-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 28521296,
+      "used": 28521296,
+      "lapsed": 0
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "parliament-2015-tp-0000",
+      "category": "Contributions",
+      "description": "Contributions to Parliamentary Associations",
+      "used": 421775
+    },
+    {
+      "id": "parliament-2015-tp-0001",
+      "category": "Contributions",
+      "description": "House of Commons",
+      "used": 0
+    },
+    {
+      "id": "parliament-2015-tp-0002",
+      "category": "Contributions",
+      "description": "Payments to Parliamentary and Procedural Associations",
+      "used": 989696
+    },
+    {
+      "id": "parliament-2015-tp-0003",
+      "category": "Grants",
+      "description": "Pensions to Retired Senators",
+      "used": 46913
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

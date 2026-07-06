@@ -1,0 +1,295 @@
+{
+  "name": "Privy Council",
+  "slug": "privy-council",
+  "financialYearEnding": 2024,
+  "reportedAs": null,
+  "basis": "vol2_appropriations",
+  "totalSpending": 0.431948,
+  "percentageOfFederal": 0.084,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 0.1211
+    },
+    {
+      "year": 2015,
+      "percentage": 0.1235
+    },
+    {
+      "year": 2016,
+      "percentage": 0.2341
+    },
+    {
+      "year": 2017,
+      "percentage": 0.1057
+    },
+    {
+      "year": 2018,
+      "percentage": 0.1249
+    },
+    {
+      "year": 2019,
+      "percentage": 0.1111
+    },
+    {
+      "year": 2020,
+      "percentage": 0.258
+    },
+    {
+      "year": 2021,
+      "percentage": 0.0938
+    },
+    {
+      "year": 2022,
+      "percentage": 0.0731
+    },
+    {
+      "year": 2023,
+      "percentage": 0.088
+    },
+    {
+      "year": 2024,
+      "percentage": 0.084
+    },
+    {
+      "year": 2025,
+      "percentage": 0.0796
+    }
+  ],
+  "miniSankey": {
+    "spending_data": {
+      "id": "privy-council",
+      "name": "Privy Council",
+      "children": [
+        {
+          "id": "privy-council-org-privy-council-office",
+          "name": "Privy Council Office",
+          "children": [
+            {
+              "id": "privy-council-privy-council-office-vote1",
+              "name": "Vote 1",
+              "amount": 0.226949
+            },
+            {
+              "id": "privy-council-privy-council-office-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.024603
+            }
+          ],
+          "amount": 0.251552
+        },
+        {
+          "id": "privy-council-org-public-service-commission",
+          "name": "Public Service Commission",
+          "children": [
+            {
+              "id": "privy-council-public-service-commission-vote1",
+              "name": "Vote 1",
+              "amount": 0.101308
+            },
+            {
+              "id": "privy-council-public-service-commission-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.013685
+            }
+          ],
+          "amount": 0.114993
+        },
+        {
+          "id": "privy-council-org-canadian-transportation-accident-investigation-and-safety-board",
+          "name": "Canadian Transportation Accident Investigation and Safety Board",
+          "children": [
+            {
+              "id": "privy-council-canadian-transportation-accident-investigation-and-safety-board-vote1",
+              "name": "Vote 1",
+              "amount": 0.039334
+            },
+            {
+              "id": "privy-council-canadian-transportation-accident-investigation-and-safety-board-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.004194
+            }
+          ],
+          "amount": 0.043528
+        },
+        {
+          "id": "privy-council-org-national-security-and-intelligence-review-agency-secretariat",
+          "name": "National Security and Intelligence Review Agency Secretariat",
+          "children": [
+            {
+              "id": "privy-council-national-security-and-intelligence-review-agency-secretariat-vote1",
+              "name": "Vote 1",
+              "amount": 0.018088
+            },
+            {
+              "id": "privy-council-national-security-and-intelligence-review-agency-secretariat-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.001557
+            }
+          ],
+          "amount": 0.019645
+        },
+        {
+          "id": "privy-council-org-office-of-the-intelligence-commissioner",
+          "name": "Office of the Intelligence Commissioner",
+          "children": [
+            {
+              "id": "privy-council-office-of-the-intelligence-commissioner-vote1",
+              "name": "Vote 1",
+              "amount": 0.002085
+            },
+            {
+              "id": "privy-council-office-of-the-intelligence-commissioner-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.000143
+            }
+          ],
+          "amount": 0.002228
+        }
+      ],
+      "amount": 0.431946
+    }
+  },
+  "entities": [
+    {
+      "id": "privy-council-2024-entity-privy-council-office",
+      "name": "Privy Council Office",
+      "value": 0.251552
+    },
+    {
+      "id": "privy-council-2024-entity-public-service-commission",
+      "name": "Public Service Commission",
+      "value": 0.114993
+    },
+    {
+      "id": "privy-council-2024-entity-canadian-transportation-accident-investigation-and-safety-board",
+      "name": "Canadian Transportation Accident Investigation and Safety Board",
+      "value": 0.043529
+    },
+    {
+      "id": "privy-council-2024-entity-national-security-and-intelligence-review-agency-secretariat",
+      "name": "National Security and Intelligence Review Agency Secretariat",
+      "value": 0.019646
+    },
+    {
+      "id": "privy-council-2024-entity-office-of-the-intelligence-commissioner",
+      "name": "Office of the Intelligence Commissioner",
+      "value": 0.002228
+    }
+  ],
+  "votes": [
+    {
+      "id": "privy-council-2024-canadian-transportation-accident-investigation-and-safety-board-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 39883635,
+      "used": 39334239,
+      "lapsed": 549396
+    },
+    {
+      "id": "privy-council-2024-canadian-transportation-accident-investigation-and-safety-board-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 4209404,
+      "used": 4194412,
+      "lapsed": 14992
+    },
+    {
+      "id": "privy-council-2024-national-security-and-intelligence-review-agency-secretariat-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 22633165,
+      "used": 18088290,
+      "lapsed": 4544875
+    },
+    {
+      "id": "privy-council-2024-national-security-and-intelligence-review-agency-secretariat-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 1557436,
+      "used": 1557436,
+      "lapsed": 0
+    },
+    {
+      "id": "privy-council-2024-office-of-the-intelligence-commissioner-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 2546535,
+      "used": 2085193,
+      "lapsed": 461342
+    },
+    {
+      "id": "privy-council-2024-office-of-the-intelligence-commissioner-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 143231,
+      "used": 143231,
+      "lapsed": 0
+    },
+    {
+      "id": "privy-council-2024-privy-council-office-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 235616999,
+      "used": 226949288,
+      "lapsed": 8667711
+    },
+    {
+      "id": "privy-council-2024-privy-council-office-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 24605324,
+      "used": 24602914,
+      "lapsed": 2410
+    },
+    {
+      "id": "privy-council-2024-public-service-commission-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 110775254,
+      "used": 101308233,
+      "lapsed": 9467021
+    },
+    {
+      "id": "privy-council-2024-public-service-commission-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 13684532,
+      "used": 13684532,
+      "lapsed": 0
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "privy-council-2024-tp-0000",
+      "category": "Contributions",
+      "description": "Contribution Program for Commissions of Inquiry",
+      "used": 485698
+    },
+    {
+      "id": "privy-council-2024-tp-0001",
+      "category": "Contributions",
+      "description": "Contributions for the Lytton Business Restart Program",
+      "used": 0
+    },
+    {
+      "id": "privy-council-2024-tp-0002",
+      "category": "Contributions",
+      "description": "Items not required for the current year",
+      "used": 0
+    },
+    {
+      "id": "privy-council-2024-tp-0003",
+      "category": "Contributions",
+      "description": "Joint public Inquiry into the Nova Scotia April 2020 Tragedy",
+      "used": 33161
+    },
+    {
+      "id": "privy-council-2024-tp-0004",
+      "category": "Grants",
+      "description": "Grants for the Lytton Homeowner Resilient Rebuild Program",
+      "used": 5000
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

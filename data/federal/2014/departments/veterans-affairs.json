@@ -1,0 +1,308 @@
+{
+  "name": "Veterans Affairs",
+  "slug": "veterans-affairs",
+  "financialYearEnding": 2014,
+  "reportedAs": null,
+  "basis": "vol2_appropriations",
+  "totalSpending": 3.525031,
+  "percentageOfFederal": 1.3642,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 1.3642
+    },
+    {
+      "year": 2015,
+      "percentage": 1.2417
+    },
+    {
+      "year": 2016,
+      "percentage": 1.2635
+    },
+    {
+      "year": 2017,
+      "percentage": 1.2607
+    },
+    {
+      "year": 2018,
+      "percentage": 1.4961
+    },
+    {
+      "year": 2019,
+      "percentage": 1.3914
+    },
+    {
+      "year": 2020,
+      "percentage": 1.3345
+    },
+    {
+      "year": 2021,
+      "percentage": 0.7708
+    },
+    {
+      "year": 2022,
+      "percentage": 1.098
+    },
+    {
+      "year": 2023,
+      "percentage": 1.148
+    },
+    {
+      "year": 2024,
+      "percentage": 1.1813
+    },
+    {
+      "year": 2025,
+      "percentage": 1.4084
+    }
+  ],
+  "miniSankey": {
+    "spending_data": {
+      "id": "veterans-affairs",
+      "name": "Veterans Affairs",
+      "children": [
+        {
+          "id": "veterans-affairs-org-veterans-affairs",
+          "name": "Veterans Affairs",
+          "children": [
+            {
+              "id": "veterans-affairs-veterans-affairs-vote5",
+              "name": "Vote 5",
+              "amount": 2.635519
+            },
+            {
+              "id": "veterans-affairs-veterans-affairs-vote1",
+              "name": "Vote 1",
+              "amount": 0.836469
+            },
+            {
+              "id": "veterans-affairs-veterans-affairs-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.041584
+            }
+          ],
+          "amount": 3.513572
+        },
+        {
+          "id": "veterans-affairs-org-veterans-review-and-appeal-board",
+          "name": "Veterans Review and Appeal Board",
+          "children": [
+            {
+              "id": "veterans-affairs-veterans-review-and-appeal-board-vote10",
+              "name": "Vote 10",
+              "amount": 0.010023
+            },
+            {
+              "id": "veterans-affairs-veterans-review-and-appeal-board-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.001435
+            }
+          ],
+          "amount": 0.011458
+        }
+      ],
+      "amount": 3.52503
+    }
+  },
+  "entities": [
+    {
+      "id": "veterans-affairs-2014-entity-veterans-affairs",
+      "name": "Veterans Affairs",
+      "value": 3.513573
+    },
+    {
+      "id": "veterans-affairs-2014-entity-veterans-review-and-appeal-board",
+      "name": "Veterans Review and Appeal Board",
+      "value": 0.011458
+    }
+  ],
+  "votes": [
+    {
+      "id": "veterans-affairs-2014-veterans-affairs-vote1",
+      "vote": "Vote 1",
+      "description": "Operating expenditures",
+      "totalAvailable": 899651451,
+      "used": 836468983,
+      "lapsed": 63182468
+    },
+    {
+      "id": "veterans-affairs-2014-veterans-affairs-vote5",
+      "vote": "Vote 5",
+      "description": "Grants and contributions",
+      "totalAvailable": 2738741501,
+      "used": 2635519439,
+      "lapsed": 103222062
+    },
+    {
+      "id": "veterans-affairs-2014-veterans-affairs-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 41584467,
+      "used": 41584467,
+      "lapsed": 0
+    },
+    {
+      "id": "veterans-affairs-2014-veterans-review-and-appeal-board-vote10",
+      "vote": "Vote 10",
+      "description": "Program expenditures",
+      "totalAvailable": 10693187,
+      "used": 10022700,
+      "lapsed": 670487
+    },
+    {
+      "id": "veterans-affairs-2014-veterans-review-and-appeal-board-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 1435388,
+      "used": 1435388,
+      "lapsed": 0
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "veterans-affairs-2014-tp-0000",
+      "category": "Contributions",
+      "description": "Contributions for the Community war memorial program to support the building of new, or major additions to existing cenotaphs and monuments",
+      "used": 747598
+    },
+    {
+      "id": "veterans-affairs-2014-tp-0001",
+      "category": "Contributions",
+      "description": "Contributions to veterans, under the Veterans independence program, to assist in defraying costs of extended health care not covered by provincial health programs",
+      "used": 184061004
+    },
+    {
+      "id": "veterans-affairs-2014-tp-0002",
+      "category": "Contributions",
+      "description": "Contributions under the Partnerships contribution program, to organizations, institutions and other levels of government, in support of projects related to the health and well‑being of the veteran population, and commemoration activities and events",
+      "used": 2140321
+    },
+    {
+      "id": "veterans-affairs-2014-tp-0003",
+      "category": "Grants",
+      "description": "Assistance in accordance with the provisions of the Assistance Fund regulations",
+      "used": 296665
+    },
+    {
+      "id": "veterans-affairs-2014-tp-0004",
+      "category": "Grants",
+      "description": "Assistance to Canadian veterans — Overseas district",
+      "used": 129968
+    },
+    {
+      "id": "veterans-affairs-2014-tp-0005",
+      "category": "Grants",
+      "description": "Canadian Forces income support allowance",
+      "used": 322312
+    },
+    {
+      "id": "veterans-affairs-2014-tp-0006",
+      "category": "Grants",
+      "description": "Canadian Veterans Association of the United Kingdom",
+      "used": 5000
+    },
+    {
+      "id": "veterans-affairs-2014-tp-0007",
+      "category": "Grants",
+      "description": "Career transition services",
+      "used": 11684
+    },
+    {
+      "id": "veterans-affairs-2014-tp-0008",
+      "category": "Grants",
+      "description": "Children of deceased veterans education assistance",
+      "used": 569658
+    },
+    {
+      "id": "veterans-affairs-2014-tp-0009",
+      "category": "Grants",
+      "description": "Commonwealth War Graves Commission",
+      "used": 9714969
+    },
+    {
+      "id": "veterans-affairs-2014-tp-0010",
+      "category": "Grants",
+      "description": "Disability awards and allowances",
+      "used": 461366803
+    },
+    {
+      "id": "veterans-affairs-2014-tp-0011",
+      "category": "Grants",
+      "description": "Earnings loss and supplementary retirement benefit",
+      "used": 149391628
+    },
+    {
+      "id": "veterans-affairs-2014-tp-0012",
+      "category": "Grants",
+      "description": "Housekeeping and grounds maintenance",
+      "used": 245571113
+    },
+    {
+      "id": "veterans-affairs-2014-tp-0013",
+      "category": "Grants",
+      "description": "Last Post Fund",
+      "used": 8461534
+    },
+    {
+      "id": "veterans-affairs-2014-tp-0014",
+      "category": "Grants",
+      "description": "Payments of gallantry awards",
+      "used": 13749
+    },
+    {
+      "id": "veterans-affairs-2014-tp-0015",
+      "category": "Grants",
+      "description": "Payments under the Flying Accidents Compensation regulations",
+      "used": 711007
+    },
+    {
+      "id": "veterans-affairs-2014-tp-0016",
+      "category": "Grants",
+      "description": "Pensions for disability and death, including pensions granted under the authority of the Civilian Government Employees (War) Compensation Order, PC45/8848 of November 22, 1944, which shall be subject to the Pension Act; for compensation for former prisoners of war under the Pension Act, and Newfoundland special awards",
+      "used": 1562918105
+    },
+    {
+      "id": "veterans-affairs-2014-tp-0017",
+      "category": "Grants",
+      "description": "Repayments under section 15 of the War Service Grants Act of compensating adjustments made in accordance with the terms of the Veterans' Land Act",
+      "used": 0
+    },
+    {
+      "id": "veterans-affairs-2014-tp-0018",
+      "category": "Grants",
+      "description": "Returned soldiers insurance actuarial liability adjustment",
+      "used": 1067
+    },
+    {
+      "id": "veterans-affairs-2014-tp-0019",
+      "category": "Grants",
+      "description": "Re‑establishment credits under section 8 of the War Service Grants Act",
+      "used": 0
+    },
+    {
+      "id": "veterans-affairs-2014-tp-0020",
+      "category": "Grants",
+      "description": "Treatment allowances",
+      "used": 556890
+    },
+    {
+      "id": "veterans-affairs-2014-tp-0021",
+      "category": "Grants",
+      "description": "United Nations Memorial Cemetery in Korea",
+      "used": 18021
+    },
+    {
+      "id": "veterans-affairs-2014-tp-0022",
+      "category": "Grants",
+      "description": "Veterans insurance actuarial liability adjustment",
+      "used": 0
+    },
+    {
+      "id": "veterans-affairs-2014-tp-0023",
+      "category": "Grants",
+      "description": "War veterans allowances and civilian war allowances",
+      "used": 8511410
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

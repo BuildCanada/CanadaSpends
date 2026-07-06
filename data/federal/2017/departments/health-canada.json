@@ -1,0 +1,388 @@
+{
+  "name": "Health",
+  "slug": "health-canada",
+  "financialYearEnding": 2017,
+  "reportedAs": null,
+  "basis": "vol2_appropriations",
+  "totalSpending": 7.078566,
+  "percentageOfFederal": 2.3601,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 2.5697
+    },
+    {
+      "year": 2015,
+      "percentage": 2.4803
+    },
+    {
+      "year": 2016,
+      "percentage": 2.3542
+    },
+    {
+      "year": 2017,
+      "percentage": 2.3601
+    },
+    {
+      "year": 2018,
+      "percentage": 1.9231
+    },
+    {
+      "year": 2019,
+      "percentage": 1.5209
+    },
+    {
+      "year": 2020,
+      "percentage": 1.5655
+    },
+    {
+      "year": 2021,
+      "percentage": 2.2871
+    },
+    {
+      "year": 2022,
+      "percentage": 3.4825
+    },
+    {
+      "year": 2023,
+      "percentage": 2.6777
+    },
+    {
+      "year": 2024,
+      "percentage": 2.7157
+    },
+    {
+      "year": 2025,
+      "percentage": 2.3956
+    }
+  ],
+  "miniSankey": {
+    "spending_data": {
+      "id": "health-canada",
+      "name": "Health",
+      "children": [
+        {
+          "id": "health-canada-org-health",
+          "name": "Health",
+          "children": [
+            {
+              "id": "health-canada-health-vote",
+              "name": "All votes",
+              "amount": 7.078566
+            }
+          ],
+          "amount": 7.078566
+        }
+      ],
+      "amount": 7.078566
+    }
+  },
+  "entities": [
+    {
+      "id": "health-canada-2017-entity-health",
+      "name": "Health",
+      "value": 7.078566
+    }
+  ],
+  "votes": [
+    {
+      "id": "health-canada-2017-health-vote",
+      "vote": "All votes",
+      "description": "Total appropriations (vote-level detail not published for this edition)",
+      "totalAvailable": 7406237386,
+      "used": 7078566421,
+      "lapsed": 327670965
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "health-canada-2017-tp-0000",
+      "category": "Contributions",
+      "description": "Anti-Drug Strategy Initiatives",
+      "used": 22793236
+    },
+    {
+      "id": "health-canada-2017-tp-0001",
+      "category": "Contributions",
+      "description": "Assessed contribution to the Pan-American Health Organization",
+      "used": 0
+    },
+    {
+      "id": "health-canada-2017-tp-0002",
+      "category": "Contributions",
+      "description": "Canada Brain Research Fund to Advance Knowledge for the Treatment of Brain Disorders",
+      "used": 24992085
+    },
+    {
+      "id": "health-canada-2017-tp-0003",
+      "category": "Contributions",
+      "description": "Canadian Blood Services: Blood Research and Development Program",
+      "used": 5175000
+    },
+    {
+      "id": "health-canada-2017-tp-0004",
+      "category": "Contributions",
+      "description": "Compensation payments in accordance with established by Regulations under the Health of Animals Act and the Plant Protection Act, and authorized pursuant to the Canadian Food Inspection Agency Act",
+      "used": 40867951
+    },
+    {
+      "id": "health-canada-2017-tp-0005",
+      "category": "Contributions",
+      "description": "Contribution in support of the Federal Initiative on HIV/AIDS",
+      "used": 23048615
+    },
+    {
+      "id": "health-canada-2017-tp-0006",
+      "category": "Contributions",
+      "description": "Contribution to Canada Health Infoway",
+      "used": 21000000
+    },
+    {
+      "id": "health-canada-2017-tp-0007",
+      "category": "Contributions",
+      "description": "Contribution to strengthen Canada's organs and tissues donation and transplantation system",
+      "used": 3580000
+    },
+    {
+      "id": "health-canada-2017-tp-0008",
+      "category": "Contributions",
+      "description": "Contribution to the Canadian Agency for Drugs and Technologies in Health",
+      "used": 16058769
+    },
+    {
+      "id": "health-canada-2017-tp-0009",
+      "category": "Contributions",
+      "description": "Contribution to the Canadian Foundation for Healthcare Improvement",
+      "used": 17000000
+    },
+    {
+      "id": "health-canada-2017-tp-0010",
+      "category": "Contributions",
+      "description": "Contribution to the Canadian Institute for Health Information",
+      "used": 78863979
+    },
+    {
+      "id": "health-canada-2017-tp-0011",
+      "category": "Contributions",
+      "description": "Contribution to the Canadian Partnership Against Cancer",
+      "used": 47500000
+    },
+    {
+      "id": "health-canada-2017-tp-0012",
+      "category": "Contributions",
+      "description": "Contribution to the Canadian Patient Safety Institute",
+      "used": 7600000
+    },
+    {
+      "id": "health-canada-2017-tp-0013",
+      "category": "Contributions",
+      "description": "Contributions for First Nations and Inuit Health Infrastructure Support",
+      "used": 752135571
+    },
+    {
+      "id": "health-canada-2017-tp-0014",
+      "category": "Contributions",
+      "description": "Contributions for First Nations and Inuit Primary Health Care",
+      "used": 694651345
+    },
+    {
+      "id": "health-canada-2017-tp-0015",
+      "category": "Contributions",
+      "description": "Contributions for First Nations and Inuit Supplementary Health Benefits",
+      "used": 210429939
+    },
+    {
+      "id": "health-canada-2017-tp-0016",
+      "category": "Contributions",
+      "description": "Contributions in support of the Federal Assistance Program to support projects and initiatives that will strengthen the underlying science, improve the national and international regulatory framework and improve the effectiveness of the inspection system",
+      "used": 1243488
+    },
+    {
+      "id": "health-canada-2017-tp-0017",
+      "category": "Contributions",
+      "description": "Contributions to Canadian Blood Services and/or other designated transfusion/transplantation centres to support adverse event surveillance activities",
+      "used": 1913206
+    },
+    {
+      "id": "health-canada-2017-tp-0018",
+      "category": "Contributions",
+      "description": "Contributions to incorporated local or regional non-profit Aboriginal organizations and institutions for the purpose of developing early intervention programs for Aboriginal pre-school children and their families",
+      "used": 32479550
+    },
+    {
+      "id": "health-canada-2017-tp-0019",
+      "category": "Contributions",
+      "description": "Contributions to individuals and organizations in support of public health infrastructure",
+      "used": 2043683
+    },
+    {
+      "id": "health-canada-2017-tp-0020",
+      "category": "Contributions",
+      "description": "Contributions to individuals and organizations to support health promotion projects in the areas of building community capacity, stimulating knowledge development and dissemination, and partnership building/intersectoral collaboration",
+      "used": 44338988
+    },
+    {
+      "id": "health-canada-2017-tp-0021",
+      "category": "Contributions",
+      "description": "Contributions to non-government organizations, corporations, other levels of government, post-secondary institutions and individuals to support development and creation of public health workforce products and tools",
+      "used": 0
+    },
+    {
+      "id": "health-canada-2017-tp-0022",
+      "category": "Contributions",
+      "description": "Contributions to non-profit organizations to support, on a long-term basis, the development and provision of preventative and early intervention services aimed at addressing the health and developmental problems experienced by young children at risk in Canada",
+      "used": 81225731
+    },
+    {
+      "id": "health-canada-2017-tp-0023",
+      "category": "Contributions",
+      "description": "Health Care Policy Contribution Program",
+      "used": 9284670
+    },
+    {
+      "id": "health-canada-2017-tp-0024",
+      "category": "Contributions",
+      "description": "Items not required for the current year",
+      "used": 0
+    },
+    {
+      "id": "health-canada-2017-tp-0025",
+      "category": "Contributions",
+      "description": "Items not required for the current year",
+      "used": 0
+    },
+    {
+      "id": "health-canada-2017-tp-0026",
+      "category": "Contributions",
+      "description": "Mood Disorders Society of Canada",
+      "used": 325000
+    },
+    {
+      "id": "health-canada-2017-tp-0027",
+      "category": "Contributions",
+      "description": "Official Languages Health Contribution Program",
+      "used": 36400000
+    },
+    {
+      "id": "health-canada-2017-tp-0028",
+      "category": "Contributions",
+      "description": "Pallium Foundation of Canada to support training in palliative care to front-line health care providers",
+      "used": 788401
+    },
+    {
+      "id": "health-canada-2017-tp-0029",
+      "category": "Contributions",
+      "description": "Territorial Health Investment Fund",
+      "used": 20000000
+    },
+    {
+      "id": "health-canada-2017-tp-0030",
+      "category": "Contributions",
+      "description": "Thalidomide Survivors Contribution Program",
+      "used": 11185847
+    },
+    {
+      "id": "health-canada-2017-tp-0031",
+      "category": "Grants",
+      "description": "Business-Led Networks of Centres of Excellence",
+      "used": 3106750
+    },
+    {
+      "id": "health-canada-2017-tp-0032",
+      "category": "Grants",
+      "description": "Canada Excellence Research Chairs",
+      "used": 9800000
+    },
+    {
+      "id": "health-canada-2017-tp-0033",
+      "category": "Grants",
+      "description": "Canada First Research Excellence Fund",
+      "used": 25489387
+    },
+    {
+      "id": "health-canada-2017-tp-0034",
+      "category": "Grants",
+      "description": "Canada Graduate Scholarships",
+      "used": 21104926
+    },
+    {
+      "id": "health-canada-2017-tp-0035",
+      "category": "Grants",
+      "description": "Centres of Excellence for Commercialization and Research",
+      "used": 10771143
+    },
+    {
+      "id": "health-canada-2017-tp-0036",
+      "category": "Grants",
+      "description": "College and Community Innovation Program",
+      "used": 75000
+    },
+    {
+      "id": "health-canada-2017-tp-0037",
+      "category": "Grants",
+      "description": "Grant to Canada Health Infoway Inc. to accelerate the development of electronic health records, common information technology standards accross the country, and the further applications of tele-health applications",
+      "used": 37877924
+    },
+    {
+      "id": "health-canada-2017-tp-0038",
+      "category": "Grants",
+      "description": "Grant to eligible non-profit international organizations in support of their projects or programs on health",
+      "used": 2123773
+    },
+    {
+      "id": "health-canada-2017-tp-0039",
+      "category": "Grants",
+      "description": "Grant to graduate students, post-graduate students and Canadian post-secondary institutions to increase professional capacity and training levels in order to build an effective public health sector",
+      "used": 0
+    },
+    {
+      "id": "health-canada-2017-tp-0040",
+      "category": "Grants",
+      "description": "Grant to support the Mental Health Commission of Canada",
+      "used": 14243652
+    },
+    {
+      "id": "health-canada-2017-tp-0041",
+      "category": "Grants",
+      "description": "Grants for research projects and personnel support",
+      "used": 910868003
+    },
+    {
+      "id": "health-canada-2017-tp-0042",
+      "category": "Grants",
+      "description": "Grants to individuals and organizations in support of health promotion projects in the areas of building community capacity, stimulating knowledge development and dissemination, and partnership building/intersectorial collaboration",
+      "used": 1853586
+    },
+    {
+      "id": "health-canada-2017-tp-0043",
+      "category": "Grants",
+      "description": "Grants to individuals and organizations in support of public health infrastructure",
+      "used": 478938
+    },
+    {
+      "id": "health-canada-2017-tp-0044",
+      "category": "Grants",
+      "description": "Industrial Research Chairs for Colleges",
+      "used": 160000
+    },
+    {
+      "id": "health-canada-2017-tp-0045",
+      "category": "Grants",
+      "description": "Institute support grants",
+      "used": 12013832
+    },
+    {
+      "id": "health-canada-2017-tp-0046",
+      "category": "Grants",
+      "description": "Networks of Centres of Excellence",
+      "used": 22589000
+    },
+    {
+      "id": "health-canada-2017-tp-0047",
+      "category": "Grants",
+      "description": "Vanier Canada Graduate Scholarships",
+      "used": 8270836
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

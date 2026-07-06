@@ -1,0 +1,201 @@
+{
+  "name": "Public Services and Procurement",
+  "slug": "public-services-and-procurement-canada",
+  "financialYearEnding": 2021,
+  "reportedAs": null,
+  "basis": "vol2_appropriations",
+  "totalSpending": 6.026643,
+  "percentageOfFederal": 0.9583,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 3.2069
+    },
+    {
+      "year": 2015,
+      "percentage": 3.0104
+    },
+    {
+      "year": 2016,
+      "percentage": 2.9178
+    },
+    {
+      "year": 2017,
+      "percentage": 3.0271
+    },
+    {
+      "year": 2018,
+      "percentage": 2.358
+    },
+    {
+      "year": 2019,
+      "percentage": 2.2956
+    },
+    {
+      "year": 2020,
+      "percentage": 1.4477
+    },
+    {
+      "year": 2021,
+      "percentage": 0.9583
+    },
+    {
+      "year": 2022,
+      "percentage": 1.8924
+    },
+    {
+      "year": 2023,
+      "percentage": 2.019
+    },
+    {
+      "year": 2024,
+      "percentage": 2.0773
+    },
+    {
+      "year": 2025,
+      "percentage": 1.9423
+    }
+  ],
+  "miniSankey": {
+    "spending_data": {
+      "id": "public-services-and-procurement-canada",
+      "name": "Public Services and Procurement",
+      "children": [
+        {
+          "id": "public-services-and-procurement-canada-org-department-of-public-works-and-government-services",
+          "name": "Department of Public Works and Government Services",
+          "children": [
+            {
+              "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote1",
+              "name": "Vote 1",
+              "amount": 4.261605
+            },
+            {
+              "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-vote5",
+              "name": "Vote 5",
+              "amount": 1.150464
+            },
+            {
+              "id": "public-services-and-procurement-canada-department-of-public-works-and-government-services-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.438651
+            }
+          ],
+          "amount": 5.85072
+        },
+        {
+          "id": "public-services-and-procurement-canada-org-national-capital-commission",
+          "name": "National Capital Commission",
+          "children": [
+            {
+              "id": "public-services-and-procurement-canada-national-capital-commission-vote1",
+              "name": "Vote 1",
+              "amount": 0.083395
+            },
+            {
+              "id": "public-services-and-procurement-canada-national-capital-commission-vote5",
+              "name": "Vote 5",
+              "amount": 0.070319
+            }
+          ],
+          "amount": 0.153714
+        },
+        {
+          "id": "public-services-and-procurement-canada-org-canada-post-corporation",
+          "name": "Canada Post Corporation",
+          "children": [
+            {
+              "id": "public-services-and-procurement-canada-canada-post-corporation-vote1",
+              "name": "Vote 1",
+              "amount": 0.02221
+            }
+          ],
+          "amount": 0.02221
+        }
+      ],
+      "amount": 6.026644
+    }
+  },
+  "entities": [
+    {
+      "id": "public-services-and-procurement-canada-2021-entity-department-of-public-works-and-government-services",
+      "name": "Department of Public Works and Government Services",
+      "value": 5.85072
+    },
+    {
+      "id": "public-services-and-procurement-canada-2021-entity-national-capital-commission",
+      "name": "National Capital Commission",
+      "value": 0.153713
+    },
+    {
+      "id": "public-services-and-procurement-canada-2021-entity-canada-post-corporation",
+      "name": "Canada Post Corporation",
+      "value": 0.02221
+    }
+  ],
+  "votes": [
+    {
+      "id": "public-services-and-procurement-canada-2021-canada-post-corporation-vote1",
+      "vote": "Vote 1",
+      "description": "Payments to the Corporation for special purposes",
+      "totalAvailable": 22210000,
+      "used": 22209960,
+      "lapsed": 40
+    },
+    {
+      "id": "public-services-and-procurement-canada-2021-department-of-public-works-and-government-services-vote1",
+      "vote": "Vote 1",
+      "description": "Operating expenditures",
+      "totalAvailable": 5163353797,
+      "used": 4261604894,
+      "lapsed": 901748903
+    },
+    {
+      "id": "public-services-and-procurement-canada-2021-department-of-public-works-and-government-services-vote5",
+      "vote": "Vote 5",
+      "description": "Capital expenditures",
+      "totalAvailable": 1584605345,
+      "used": 1150463966,
+      "lapsed": 434141379
+    },
+    {
+      "id": "public-services-and-procurement-canada-2021-department-of-public-works-and-government-services-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 812832658,
+      "used": 438650864,
+      "lapsed": 374181794
+    },
+    {
+      "id": "public-services-and-procurement-canada-2021-national-capital-commission-vote1",
+      "vote": "Vote 1",
+      "description": "Payments to the Commission for operating expenditures",
+      "totalAvailable": 83394839,
+      "used": 83394839,
+      "lapsed": 0
+    },
+    {
+      "id": "public-services-and-procurement-canada-2021-national-capital-commission-vote5",
+      "vote": "Vote 5",
+      "description": "Payments to the Commission for capital expenditures",
+      "totalAvailable": 70318549,
+      "used": 70318548,
+      "lapsed": 1
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "public-services-and-procurement-canada-2021-tp-0000",
+      "category": "Grants",
+      "description": "Payment in lieu of taxes to municipalities and other taxing authorities",
+      "used": 557833452
+    },
+    {
+      "id": "public-services-and-procurement-canada-2021-tp-0001",
+      "category": "Grants",
+      "description": "Recoveries of payment in lieu of taxes from custodian departments",
+      "used": 0
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

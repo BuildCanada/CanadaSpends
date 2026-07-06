@@ -1,0 +1,143 @@
+{
+  "name": "Parks Canada",
+  "slug": "parks-canada",
+  "financialYearEnding": 2025,
+  "reportedAs": null,
+  "basis": "vol2_appropriations",
+  "totalSpending": 1.368746,
+  "percentageOfFederal": 0.2519,
+  "historicalShare": [
+    {
+      "year": 2025,
+      "percentage": 0.2519
+    }
+  ],
+  "miniSankey": {
+    "spending_data": {
+      "id": "parks-canada",
+      "name": "Parks Canada",
+      "children": [
+        {
+          "id": "parks-canada-org-parks-canada-agency",
+          "name": "Parks Canada Agency",
+          "children": [
+            {
+              "id": "parks-canada-parks-canada-agency-vote1",
+              "name": "Vote 1",
+              "amount": 0.738148
+            },
+            {
+              "id": "parks-canada-parks-canada-agency-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.333114
+            },
+            {
+              "id": "parks-canada-parks-canada-agency-vote5",
+              "name": "Vote 5",
+              "amount": 0.261834
+            },
+            {
+              "id": "parks-canada-parks-canada-agency-vote10",
+              "name": "Vote 10",
+              "amount": 0.03565
+            }
+          ],
+          "amount": 1.368746
+        }
+      ],
+      "amount": 1.368746
+    }
+  },
+  "entities": [
+    {
+      "id": "parks-canada-2025-entity-parks-canada-agency",
+      "name": "Parks Canada Agency",
+      "value": 1.368746
+    }
+  ],
+  "votes": [
+    {
+      "id": "parks-canada-2025-parks-canada-agency-vote1",
+      "vote": "Vote 1",
+      "description": "Operating expenditures, grants and contributions",
+      "totalAvailable": 755983434,
+      "used": 738147722,
+      "lapsed": 17835712
+    },
+    {
+      "id": "parks-canada-2025-parks-canada-agency-vote10",
+      "vote": "Vote 10",
+      "description": "Payments to the New Parks and Historic Sites Account",
+      "totalAvailable": 35650130,
+      "used": 35650130,
+      "lapsed": 0
+    },
+    {
+      "id": "parks-canada-2025-parks-canada-agency-vote5",
+      "vote": "Vote 5",
+      "description": "Capital expenditures",
+      "totalAvailable": 339750983,
+      "used": 261833719,
+      "lapsed": 77917264
+    },
+    {
+      "id": "parks-canada-2025-parks-canada-agency-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 379026274,
+      "used": 333114277,
+      "lapsed": 45911997
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "parks-canada-2025-tp-0000",
+      "category": "Contributions",
+      "description": "Contributions in support of activities or projects related to national parks, national marine conservation areas, national historic sites and historic canals",
+      "used": 86630720
+    },
+    {
+      "id": "parks-canada-2025-tp-0001",
+      "category": "Contributions",
+      "description": "Contributions in support of the National Historic Sites Cost-Sharing Program",
+      "used": 1358792
+    },
+    {
+      "id": "parks-canada-2025-tp-0002",
+      "category": "Contributions",
+      "description": "Work placements through the Youth Employment and Skills Strategy",
+      "used": 3758864
+    },
+    {
+      "id": "parks-canada-2025-tp-0003",
+      "category": "Grants",
+      "description": "Grant to the International Peace Garden",
+      "used": 22700
+    },
+    {
+      "id": "parks-canada-2025-tp-0004",
+      "category": "Grants",
+      "description": "Grants for the Implementation of Rights and Reconciliation Agreements in Atlantic Canada",
+      "used": 7275004
+    },
+    {
+      "id": "parks-canada-2025-tp-0005",
+      "category": "Grants",
+      "description": "Grants in support of activities or projects related to national parks, national marine conservation areas, national historic sites and historic canals",
+      "used": 2471562
+    },
+    {
+      "id": "parks-canada-2025-tp-0006",
+      "category": "Grants",
+      "description": "Items not required for the current year",
+      "used": 0
+    },
+    {
+      "id": "parks-canada-2025-tp-0007",
+      "category": "Grants",
+      "description": "Tallurutiup Imanga Inuit Stewardship Program Seed Fund",
+      "used": 2100000
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

@@ -1,0 +1,517 @@
+{
+  "name": "Transport",
+  "slug": "transport-canada",
+  "financialYearEnding": 2023,
+  "reportedAs": null,
+  "basis": "vol2_appropriations",
+  "totalSpending": 4.102497,
+  "percentageOfFederal": 0.8664,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 1.1041
+    },
+    {
+      "year": 2015,
+      "percentage": 1.1028
+    },
+    {
+      "year": 2016,
+      "percentage": 1.5991
+    },
+    {
+      "year": 2017,
+      "percentage": 0.8598
+    },
+    {
+      "year": 2018,
+      "percentage": 0.7991
+    },
+    {
+      "year": 2019,
+      "percentage": 0.8235
+    },
+    {
+      "year": 2020,
+      "percentage": 0.9113
+    },
+    {
+      "year": 2021,
+      "percentage": 0.556
+    },
+    {
+      "year": 2022,
+      "percentage": 0.763
+    },
+    {
+      "year": 2023,
+      "percentage": 0.8664
+    },
+    {
+      "year": 2024,
+      "percentage": 1.011
+    },
+    {
+      "year": 2025,
+      "percentage": 1.1086
+    }
+  ],
+  "miniSankey": {
+    "spending_data": {
+      "id": "transport-canada",
+      "name": "Transport",
+      "children": [
+        {
+          "id": "transport-canada-org-department-of-transport",
+          "name": "Department of Transport",
+          "children": [
+            {
+              "id": "transport-canada-department-of-transport-vote10",
+              "name": "Vote 10",
+              "amount": 1.062618
+            },
+            {
+              "id": "transport-canada-department-of-transport-vote1",
+              "name": "Vote 1",
+              "amount": 0.947292
+            },
+            {
+              "id": "transport-canada-department-of-transport-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.258335
+            },
+            {
+              "id": "transport-canada-department-of-transport-vote5",
+              "name": "Vote 5",
+              "amount": 0.100986
+            }
+          ],
+          "amount": 2.369231
+        },
+        {
+          "id": "transport-canada-org-canadian-air-transport-security-authority",
+          "name": "Canadian Air Transport Security Authority",
+          "children": [
+            {
+              "id": "transport-canada-canadian-air-transport-security-authority-vote1",
+              "name": "Vote 1",
+              "amount": 0.865964
+            }
+          ],
+          "amount": 0.865964
+        },
+        {
+          "id": "transport-canada-org-via-rail-canada-inc",
+          "name": "VIA Rail Canada Inc.",
+          "children": [
+            {
+              "id": "transport-canada-via-rail-canada-inc-vote1",
+              "name": "Vote 1",
+              "amount": 0.689628
+            }
+          ],
+          "amount": 0.689628
+        },
+        {
+          "id": "transport-canada-org-marine-atlantic-inc",
+          "name": "Marine Atlantic Inc.",
+          "children": [
+            {
+              "id": "transport-canada-marine-atlantic-inc-vote1",
+              "name": "Vote 1",
+              "amount": 0.132121
+            }
+          ],
+          "amount": 0.132121
+        },
+        {
+          "id": "transport-canada-org-canadian-transportation-agency",
+          "name": "Canadian Transportation Agency",
+          "children": [
+            {
+              "id": "transport-canada-canadian-transportation-agency-vote1",
+              "name": "Vote 1",
+              "amount": 0.036683
+            },
+            {
+              "id": "transport-canada-canadian-transportation-agency-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.004447
+            }
+          ],
+          "amount": 0.04113
+        },
+        {
+          "id": "transport-canada-org-the-federal-bridge-corporation-limited",
+          "name": "The Federal Bridge Corporation Limited",
+          "children": [
+            {
+              "id": "transport-canada-the-federal-bridge-corporation-limited-vote1",
+              "name": "Vote 1",
+              "amount": 0.004423
+            }
+          ],
+          "amount": 0.004423
+        }
+      ],
+      "amount": 4.102497
+    }
+  },
+  "entities": [
+    {
+      "id": "transport-canada-2023-entity-department-of-transport",
+      "name": "Department of Transport",
+      "value": 2.369231
+    },
+    {
+      "id": "transport-canada-2023-entity-canadian-air-transport-security-authority",
+      "name": "Canadian Air Transport Security Authority",
+      "value": 0.865964
+    },
+    {
+      "id": "transport-canada-2023-entity-via-rail-canada-inc",
+      "name": "VIA Rail Canada Inc.",
+      "value": 0.689628
+    },
+    {
+      "id": "transport-canada-2023-entity-marine-atlantic-inc",
+      "name": "Marine Atlantic Inc.",
+      "value": 0.132121
+    },
+    {
+      "id": "transport-canada-2023-entity-canadian-transportation-agency",
+      "name": "Canadian Transportation Agency",
+      "value": 0.04113
+    },
+    {
+      "id": "transport-canada-2023-entity-the-federal-bridge-corporation-limited",
+      "name": "The Federal Bridge Corporation Limited",
+      "value": 0.004423
+    }
+  ],
+  "votes": [
+    {
+      "id": "transport-canada-2023-canadian-air-transport-security-authority-vote1",
+      "vote": "Vote 1",
+      "description": "Payments to the Authority for operating and capital expenditures",
+      "totalAvailable": 922689126,
+      "used": 865964449,
+      "lapsed": 56724677
+    },
+    {
+      "id": "transport-canada-2023-canadian-transportation-agency-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 38077186,
+      "used": 36683294,
+      "lapsed": 1393892
+    },
+    {
+      "id": "transport-canada-2023-canadian-transportation-agency-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 4447023,
+      "used": 4447023,
+      "lapsed": 0
+    },
+    {
+      "id": "transport-canada-2023-department-of-transport-vote1",
+      "vote": "Vote 1",
+      "description": "Operating expenditures",
+      "totalAvailable": 999526570,
+      "used": 947291542,
+      "lapsed": 52235028
+    },
+    {
+      "id": "transport-canada-2023-department-of-transport-vote10",
+      "vote": "Vote 10",
+      "description": "Grants and contributions",
+      "totalAvailable": 2191707562,
+      "used": 1062618063,
+      "lapsed": 1129089499
+    },
+    {
+      "id": "transport-canada-2023-department-of-transport-vote5",
+      "vote": "Vote 5",
+      "description": "Capital expenditures",
+      "totalAvailable": 161694566,
+      "used": 100986121,
+      "lapsed": 60708445
+    },
+    {
+      "id": "transport-canada-2023-department-of-transport-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 262151368,
+      "used": 258335338,
+      "lapsed": 3816030
+    },
+    {
+      "id": "transport-canada-2023-marine-atlantic-inc-vote1",
+      "vote": "Vote 1",
+      "description": "Payments to the Corporation",
+      "totalAvailable": 158520769,
+      "used": 132120769,
+      "lapsed": 26400000
+    },
+    {
+      "id": "transport-canada-2023-the-federal-bridge-corporation-limited-vote1",
+      "vote": "Vote 1",
+      "description": "Payments to the Corporation",
+      "totalAvailable": 5303000,
+      "used": 4423000,
+      "lapsed": 880000
+    },
+    {
+      "id": "transport-canada-2023-via-rail-canada-inc-vote1",
+      "vote": "Vote 1",
+      "description": "Payments to the Corporation",
+      "totalAvailable": 1096370797,
+      "used": 689627801,
+      "lapsed": 406742996
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "transport-canada-2023-tp-0000",
+      "category": "Contributions",
+      "description": "Airport Critical Infrastructure Program",
+      "used": 263217326
+    },
+    {
+      "id": "transport-canada-2023-tp-0001",
+      "category": "Contributions",
+      "description": "Airports Capital Assistance Program",
+      "used": 120767029
+    },
+    {
+      "id": "transport-canada-2023-tp-0002",
+      "category": "Contributions",
+      "description": "Airports Operations and Maintenance Subsidy Program",
+      "used": 2329951
+    },
+    {
+      "id": "transport-canada-2023-tp-0003",
+      "category": "Contributions",
+      "description": "Allowances to former employees of Newfoundland Railways, Steamships and Telecommunications Services transferred to Canadian National Railways",
+      "used": 70294
+    },
+    {
+      "id": "transport-canada-2023-tp-0004",
+      "category": "Contributions",
+      "description": "Canadian Transportation Research Forum's Scholarship program",
+      "used": 24000
+    },
+    {
+      "id": "transport-canada-2023-tp-0005",
+      "category": "Contributions",
+      "description": "Contribution in Support of Boating Safety",
+      "used": 2455046
+    },
+    {
+      "id": "transport-canada-2023-tp-0006",
+      "category": "Contributions",
+      "description": "Contribution to Advance Transportation Innovation",
+      "used": 4506
+    },
+    {
+      "id": "transport-canada-2023-tp-0007",
+      "category": "Contributions",
+      "description": "Contribution to Support Clean Transportation Program",
+      "used": 150000
+    },
+    {
+      "id": "transport-canada-2023-tp-0008",
+      "category": "Contributions",
+      "description": "Contributions to provinces toward highway improvements to enhance overall efficiency and promote safety while encouraging industrial development and tourism from a regional economic perspective: Outaouais Road Development Agreement",
+      "used": 1488503
+    },
+    {
+      "id": "transport-canada-2023-tp-0009",
+      "category": "Contributions",
+      "description": "Contributions to support the Transportation Assets Risk Assessment initiative",
+      "used": 1536327
+    },
+    {
+      "id": "transport-canada-2023-tp-0010",
+      "category": "Contributions",
+      "description": "Ferry Services Contribution Program",
+      "used": 52864399
+    },
+    {
+      "id": "transport-canada-2023-tp-0011",
+      "category": "Contributions",
+      "description": "Items not required for the current year",
+      "used": 0
+    },
+    {
+      "id": "transport-canada-2023-tp-0012",
+      "category": "Contributions",
+      "description": "Labrador Coastal Airstrips Restoration Program",
+      "used": 1360000
+    },
+    {
+      "id": "transport-canada-2023-tp-0013",
+      "category": "Contributions",
+      "description": "Major Rehabilitation Work on the Victoria Bridge",
+      "used": 8321344
+    },
+    {
+      "id": "transport-canada-2023-tp-0014",
+      "category": "Contributions",
+      "description": "National Trade Corridors Fund",
+      "used": 219257054
+    },
+    {
+      "id": "transport-canada-2023-tp-0015",
+      "category": "Contributions",
+      "description": "Northumberland Strait Crossing Subsidy Payment under the Northumberland Strait Crossing Act (S.C., 1993, c. 43)",
+      "used": 72865776
+    },
+    {
+      "id": "transport-canada-2023-tp-0016",
+      "category": "Contributions",
+      "description": "Payments to other governments or international agencies for the operation and maintenance of airports, air navigation and airways facilities",
+      "used": 0
+    },
+    {
+      "id": "transport-canada-2023-tp-0017",
+      "category": "Contributions",
+      "description": "Payments to the Canadian National Railway Company in respect of the termination of the collection of tolls on the Victoria Bridge, Montreal and for rehabilitation work on roadway portion of the Bridge (Vote 107, Appropriation Act No. 5, 1963)",
+      "used": 3300000
+    },
+    {
+      "id": "transport-canada-2023-tp-0018",
+      "category": "Contributions",
+      "description": "Port Asset Transfer Program",
+      "used": 60000
+    },
+    {
+      "id": "transport-canada-2023-tp-0019",
+      "category": "Contributions",
+      "description": "Program to Address Disturbances from Vessel Traffic",
+      "used": 2658371
+    },
+    {
+      "id": "transport-canada-2023-tp-0020",
+      "category": "Contributions",
+      "description": "Program to Advance Indigenous Reconciliation",
+      "used": 2530356
+    },
+    {
+      "id": "transport-canada-2023-tp-0021",
+      "category": "Contributions",
+      "description": "Program to Protect Canada's Coastlines and Waterways",
+      "used": 18754803
+    },
+    {
+      "id": "transport-canada-2023-tp-0022",
+      "category": "Contributions",
+      "description": "Rail Safety Improvement Contribution Program",
+      "used": 18767964
+    },
+    {
+      "id": "transport-canada-2023-tp-0023",
+      "category": "Contributions",
+      "description": "Remote Passenger Rail Program",
+      "used": 17190439
+    },
+    {
+      "id": "transport-canada-2023-tp-0024",
+      "category": "Contributions",
+      "description": "Road Safety Transfer Payment Program",
+      "used": 19981342
+    },
+    {
+      "id": "transport-canada-2023-tp-0025",
+      "category": "Contributions",
+      "description": "Support for Remote Communities",
+      "used": 500000
+    },
+    {
+      "id": "transport-canada-2023-tp-0026",
+      "category": "Contributions",
+      "description": "Transportation Association of Canada",
+      "used": 308376
+    },
+    {
+      "id": "transport-canada-2023-tp-0027",
+      "category": "Grants",
+      "description": "Commemoration Fund for the Victims of the Ethiopian Airlines Tragedy",
+      "used": 479525
+    },
+    {
+      "id": "transport-canada-2023-tp-0028",
+      "category": "Grants",
+      "description": "Community Participation Funding Program",
+      "used": 625692
+    },
+    {
+      "id": "transport-canada-2023-tp-0029",
+      "category": "Grants",
+      "description": "Grant for Innovative Solutions Canada",
+      "used": 0
+    },
+    {
+      "id": "transport-canada-2023-tp-0030",
+      "category": "Grants",
+      "description": "Grant to support the Transportation Assets Risk Assessment initiative",
+      "used": 50000
+    },
+    {
+      "id": "transport-canada-2023-tp-0031",
+      "category": "Grants",
+      "description": "Grant to the International Civil Aviation Organization for Cooperative Development of Operational Safety and Continuing Airworthiness Program",
+      "used": 92324
+    },
+    {
+      "id": "transport-canada-2023-tp-0032",
+      "category": "Grants",
+      "description": "Grant to the Province of British Columbia in respect of the provision of ferry and coastal freight and passenger services",
+      "used": 33344267
+    },
+    {
+      "id": "transport-canada-2023-tp-0033",
+      "category": "Grants",
+      "description": "Grants to support Clean Transportation Program",
+      "used": 850808
+    },
+    {
+      "id": "transport-canada-2023-tp-0034",
+      "category": "Grants",
+      "description": "Incentives for Zero-Emission Vehicles Program",
+      "used": 269784720
+    },
+    {
+      "id": "transport-canada-2023-tp-0035",
+      "category": "Grants",
+      "description": "Items not required for the current year",
+      "used": 0
+    },
+    {
+      "id": "transport-canada-2023-tp-0036",
+      "category": "Grants",
+      "description": "Program to Address Disturbances from Vessel Traffic",
+      "used": 100000
+    },
+    {
+      "id": "transport-canada-2023-tp-0037",
+      "category": "Grants",
+      "description": "Program to Advance Indigenous Reconciliation",
+      "used": 2020333
+    },
+    {
+      "id": "transport-canada-2023-tp-0038",
+      "category": "Grants",
+      "description": "Program to Protect Canada's Coastlines and Waterways",
+      "used": 517964
+    },
+    {
+      "id": "transport-canada-2023-tp-0039",
+      "category": "Grants",
+      "description": "Rail Safety Improvement Program",
+      "used": 155000
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

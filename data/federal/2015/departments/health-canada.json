@@ -1,0 +1,661 @@
+{
+  "name": "Health",
+  "slug": "health-canada",
+  "financialYearEnding": 2015,
+  "reportedAs": null,
+  "basis": "vol2_appropriations",
+  "totalSpending": 6.768046,
+  "percentageOfFederal": 2.4803,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 2.5697
+    },
+    {
+      "year": 2015,
+      "percentage": 2.4803
+    },
+    {
+      "year": 2016,
+      "percentage": 2.3542
+    },
+    {
+      "year": 2017,
+      "percentage": 2.3601
+    },
+    {
+      "year": 2018,
+      "percentage": 1.9231
+    },
+    {
+      "year": 2019,
+      "percentage": 1.5209
+    },
+    {
+      "year": 2020,
+      "percentage": 1.5655
+    },
+    {
+      "year": 2021,
+      "percentage": 2.2871
+    },
+    {
+      "year": 2022,
+      "percentage": 3.4825
+    },
+    {
+      "year": 2023,
+      "percentage": 2.6777
+    },
+    {
+      "year": 2024,
+      "percentage": 2.7157
+    },
+    {
+      "year": 2025,
+      "percentage": 2.3956
+    }
+  ],
+  "miniSankey": {
+    "spending_data": {
+      "id": "health-canada",
+      "name": "Health",
+      "children": [
+        {
+          "id": "health-canada-org-health",
+          "name": "Health",
+          "children": [
+            {
+              "id": "health-canada-health-vote1",
+              "name": "Vote 1",
+              "amount": 2.229998
+            },
+            {
+              "id": "health-canada-health-vote10",
+              "name": "Vote 10",
+              "amount": 1.726041
+            },
+            {
+              "id": "health-canada-health-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.27062
+            },
+            {
+              "id": "health-canada-health-vote5",
+              "name": "Vote 5",
+              "amount": 0.029333
+            }
+          ],
+          "amount": 4.255992
+        },
+        {
+          "id": "health-canada-org-canadian-institutes-of-health-research",
+          "name": "Canadian Institutes of Health Research",
+          "children": [
+            {
+              "id": "health-canada-canadian-institutes-of-health-research-vote5",
+              "name": "Vote 5",
+              "amount": 0.959845
+            },
+            {
+              "id": "health-canada-canadian-institutes-of-health-research-vote1",
+              "name": "Vote 1",
+              "amount": 0.051591
+            },
+            {
+              "id": "health-canada-canadian-institutes-of-health-research-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.005843
+            }
+          ],
+          "amount": 1.017279
+        },
+        {
+          "id": "health-canada-org-canadian-food-inspection-agency",
+          "name": "Canadian Food Inspection Agency",
+          "children": [
+            {
+              "id": "health-canada-canadian-food-inspection-agency-vote1",
+              "name": "Vote 1",
+              "amount": 0.646617
+            },
+            {
+              "id": "health-canada-canadian-food-inspection-agency-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.181267
+            },
+            {
+              "id": "health-canada-canadian-food-inspection-agency-vote5",
+              "name": "Vote 5",
+              "amount": 0.020609
+            }
+          ],
+          "amount": 0.848493
+        },
+        {
+          "id": "health-canada-org-public-health-agency-of-canada",
+          "name": "Public Health Agency of Canada",
+          "children": [
+            {
+              "id": "health-canada-public-health-agency-of-canada-vote1",
+              "name": "Vote 1",
+              "amount": 0.340086
+            },
+            {
+              "id": "health-canada-public-health-agency-of-canada-vote10",
+              "name": "Vote 10",
+              "amount": 0.249625
+            },
+            {
+              "id": "health-canada-public-health-agency-of-canada-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.04172
+            },
+            {
+              "id": "health-canada-public-health-agency-of-canada-vote5",
+              "name": "Vote 5",
+              "amount": 0.00692
+            }
+          ],
+          "amount": 0.638351
+        },
+        {
+          "id": "health-canada-org-patented-medicine-prices-review-board",
+          "name": "Patented Medicine Prices Review Board",
+          "children": [
+            {
+              "id": "health-canada-patented-medicine-prices-review-board-vote1",
+              "name": "Vote 1",
+              "amount": 0.00709
+            },
+            {
+              "id": "health-canada-patented-medicine-prices-review-board-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.000841
+            }
+          ],
+          "amount": 0.007931
+        }
+      ],
+      "amount": 6.768046
+    }
+  },
+  "entities": [
+    {
+      "id": "health-canada-2015-entity-health",
+      "name": "Health",
+      "value": 4.255992
+    },
+    {
+      "id": "health-canada-2015-entity-canadian-institutes-of-health-research",
+      "name": "Canadian Institutes of Health Research",
+      "value": 1.017279
+    },
+    {
+      "id": "health-canada-2015-entity-canadian-food-inspection-agency",
+      "name": "Canadian Food Inspection Agency",
+      "value": 0.848493
+    },
+    {
+      "id": "health-canada-2015-entity-public-health-agency-of-canada",
+      "name": "Public Health Agency of Canada",
+      "value": 0.638351
+    },
+    {
+      "id": "health-canada-2015-entity-patented-medicine-prices-review-board",
+      "name": "Patented Medicine Prices Review Board",
+      "value": 0.00793
+    }
+  ],
+  "votes": [
+    {
+      "id": "health-canada-2015-canadian-food-inspection-agency-vote1",
+      "vote": "Vote 1",
+      "description": "Operating expenditures and contributions",
+      "totalAvailable": 660582170,
+      "used": 646617028,
+      "lapsed": 13965142
+    },
+    {
+      "id": "health-canada-2015-canadian-food-inspection-agency-vote5",
+      "vote": "Vote 5",
+      "description": "Capital expenditures",
+      "totalAvailable": 27959173,
+      "used": 20608538,
+      "lapsed": 7350635
+    },
+    {
+      "id": "health-canada-2015-canadian-food-inspection-agency-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 194673304,
+      "used": 181267323,
+      "lapsed": 13405981
+    },
+    {
+      "id": "health-canada-2015-canadian-institutes-of-health-research-vote1",
+      "vote": "Vote 1",
+      "description": "Operating expenditures",
+      "totalAvailable": 51991326,
+      "used": 51591197,
+      "lapsed": 400129
+    },
+    {
+      "id": "health-canada-2015-canadian-institutes-of-health-research-vote5",
+      "vote": "Vote 5",
+      "description": "Grants",
+      "totalAvailable": 960200961,
+      "used": 959845009,
+      "lapsed": 355952
+    },
+    {
+      "id": "health-canada-2015-canadian-institutes-of-health-research-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 5843176,
+      "used": 5843176,
+      "lapsed": 0
+    },
+    {
+      "id": "health-canada-2015-health-vote1",
+      "vote": "Vote 1",
+      "description": "Operating expenditures",
+      "totalAvailable": 2389673504,
+      "used": 2229997663,
+      "lapsed": 159675841
+    },
+    {
+      "id": "health-canada-2015-health-vote10",
+      "vote": "Vote 10",
+      "description": "Grants and contributions",
+      "totalAvailable": 1755536333,
+      "used": 1726041096,
+      "lapsed": 29495237
+    },
+    {
+      "id": "health-canada-2015-health-vote5",
+      "vote": "Vote 5",
+      "description": "Capital expenditures",
+      "totalAvailable": 35926781,
+      "used": 29332692,
+      "lapsed": 6594089
+    },
+    {
+      "id": "health-canada-2015-health-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 271454542,
+      "used": 270620109,
+      "lapsed": 834433
+    },
+    {
+      "id": "health-canada-2015-patented-medicine-prices-review-board-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 10356470,
+      "used": 7089582,
+      "lapsed": 3266888
+    },
+    {
+      "id": "health-canada-2015-patented-medicine-prices-review-board-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 840698,
+      "used": 840698,
+      "lapsed": 0
+    },
+    {
+      "id": "health-canada-2015-public-health-agency-of-canada-vote1",
+      "vote": "Vote 1",
+      "description": "Operating expenditures",
+      "totalAvailable": 367216549,
+      "used": 340086060,
+      "lapsed": 27130489
+    },
+    {
+      "id": "health-canada-2015-public-health-agency-of-canada-vote10",
+      "vote": "Vote 10",
+      "description": "Grants and contributions",
+      "totalAvailable": 251101573,
+      "used": 249625473,
+      "lapsed": 1476100
+    },
+    {
+      "id": "health-canada-2015-public-health-agency-of-canada-vote5",
+      "vote": "Vote 5",
+      "description": "Capital expenditures",
+      "totalAvailable": 8760266,
+      "used": 6920341,
+      "lapsed": 1839925
+    },
+    {
+      "id": "health-canada-2015-public-health-agency-of-canada-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 41727562,
+      "used": 41719601,
+      "lapsed": 7961
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "health-canada-2015-tp-0000",
+      "category": "Contributions",
+      "description": "Anti‑Drug Strategy Initiatives",
+      "used": 12896914
+    },
+    {
+      "id": "health-canada-2015-tp-0001",
+      "category": "Contributions",
+      "description": "Assessed contribution to the Pan‑American Health Organization (PAHO)",
+      "used": 14334724
+    },
+    {
+      "id": "health-canada-2015-tp-0002",
+      "category": "Contributions",
+      "description": "Canada Brain Research Fund to Advance Knowledge for the Treatment of Brain Disorders",
+      "used": 5404909
+    },
+    {
+      "id": "health-canada-2015-tp-0003",
+      "category": "Contributions",
+      "description": "Canadian Food Inspection Agency",
+      "used": 0
+    },
+    {
+      "id": "health-canada-2015-tp-0004",
+      "category": "Contributions",
+      "description": "Canadian Institutes of Health Research",
+      "used": 0
+    },
+    {
+      "id": "health-canada-2015-tp-0005",
+      "category": "Contributions",
+      "description": "Compensation payments in accordance with requirements established by regulations under the Health of Animals Act and the Plant Protection Act, and authorized pursuant to the Canadian Food Inspection Agency Act",
+      "used": 12555078
+    },
+    {
+      "id": "health-canada-2015-tp-0006",
+      "category": "Contributions",
+      "description": "Contribution in support of the Federal Assistance Program",
+      "used": 879210
+    },
+    {
+      "id": "health-canada-2015-tp-0007",
+      "category": "Contributions",
+      "description": "Contribution in support of the Federal Initiative on HIV/AIDS",
+      "used": 22708436
+    },
+    {
+      "id": "health-canada-2015-tp-0008",
+      "category": "Contributions",
+      "description": "Contribution to strengthen Canada's organs and tissues donation and transplantation system",
+      "used": 3580000
+    },
+    {
+      "id": "health-canada-2015-tp-0009",
+      "category": "Contributions",
+      "description": "Contribution to the Canadian Agency for Drugs and Technologies in Health",
+      "used": 16058769
+    },
+    {
+      "id": "health-canada-2015-tp-0010",
+      "category": "Contributions",
+      "description": "Contribution to the Canadian Blood Services: Blood Safety and Effectiveness and Research and Development",
+      "used": 5000000
+    },
+    {
+      "id": "health-canada-2015-tp-0011",
+      "category": "Contributions",
+      "description": "Contribution to the Canadian Institute for Health Information",
+      "used": 77758979
+    },
+    {
+      "id": "health-canada-2015-tp-0012",
+      "category": "Contributions",
+      "description": "Contribution to the Canadian Partnership Against Cancer",
+      "used": 47500000
+    },
+    {
+      "id": "health-canada-2015-tp-0013",
+      "category": "Contributions",
+      "description": "Contribution to the Canadian Patient Safety Institute",
+      "used": 7600000
+    },
+    {
+      "id": "health-canada-2015-tp-0014",
+      "category": "Contributions",
+      "description": "Contributions for First Nations and Inuit Health Infrastructure Support",
+      "used": 611949625
+    },
+    {
+      "id": "health-canada-2015-tp-0015",
+      "category": "Contributions",
+      "description": "Contributions for First Nations and Inuit Primary Health Care",
+      "used": 641124657
+    },
+    {
+      "id": "health-canada-2015-tp-0016",
+      "category": "Contributions",
+      "description": "Contributions for First Nations and Inuit Supplementary Health Benefits",
+      "used": 191378390
+    },
+    {
+      "id": "health-canada-2015-tp-0017",
+      "category": "Contributions",
+      "description": "Contributions to Canadian Blood Services and/or other designated transfusion/transplantation centres to support adverse event surveillance activities",
+      "used": 1864732
+    },
+    {
+      "id": "health-canada-2015-tp-0018",
+      "category": "Contributions",
+      "description": "Contributions to incorporated local or regional non‑profit Aboriginal organizations and institutions for the purpose of developing early intervention programs for Aboriginal pre‑school children and their families",
+      "used": 32994509
+    },
+    {
+      "id": "health-canada-2015-tp-0019",
+      "category": "Contributions",
+      "description": "Contributions to individuals and organizations in support of public health infrastructure",
+      "used": 1220659
+    },
+    {
+      "id": "health-canada-2015-tp-0020",
+      "category": "Contributions",
+      "description": "Contributions to individuals and organizations to support health promotion projects in the areas of building community capacity, stimulating knowledge development and dissemination, and partnership building/intersectoral collaboration",
+      "used": 40956432
+    },
+    {
+      "id": "health-canada-2015-tp-0021",
+      "category": "Contributions",
+      "description": "Contributions to non‑government organizations, corporations, other levels of government, post‑secondary institutions and individuals to support development and creation of public health workforce development products and tools",
+      "used": 1215700
+    },
+    {
+      "id": "health-canada-2015-tp-0022",
+      "category": "Contributions",
+      "description": "Contributions to non‑profit organizations to support, on a long‑term basis, the development and provision of preventative and early intervention services aimed at addressing the health and developmental problems experienced by young children at risk in Canada",
+      "used": 81921533
+    },
+    {
+      "id": "health-canada-2015-tp-0023",
+      "category": "Contributions",
+      "description": "Contributions to the provinces in accordance with the Rabies Indemnification Regulations of the Governor in Council of amounts not exceeding two‑fifths of the amounts paid by the provinces to owners of animals dying as a result of rabies infection",
+      "used": 0
+    },
+    {
+      "id": "health-canada-2015-tp-0024",
+      "category": "Contributions",
+      "description": "Drug Strategy Community Initiatives Fund",
+      "used": 0
+    },
+    {
+      "id": "health-canada-2015-tp-0025",
+      "category": "Contributions",
+      "description": "Drug Treatment Funding Program",
+      "used": 0
+    },
+    {
+      "id": "health-canada-2015-tp-0026",
+      "category": "Contributions",
+      "description": "Health Care Policy Contribution Program",
+      "used": 20382789
+    },
+    {
+      "id": "health-canada-2015-tp-0027",
+      "category": "Contributions",
+      "description": "McMaster University — Teams Advancing Patient Experience: Strengthening Quality",
+      "used": 2416500
+    },
+    {
+      "id": "health-canada-2015-tp-0028",
+      "category": "Contributions",
+      "description": "Mood Disorders Society of Canada",
+      "used": 1999990
+    },
+    {
+      "id": "health-canada-2015-tp-0029",
+      "category": "Contributions",
+      "description": "Official Languages Health Contribution Program",
+      "used": 35835074
+    },
+    {
+      "id": "health-canada-2015-tp-0030",
+      "category": "Contributions",
+      "description": "Other transfer payment",
+      "used": 0
+    },
+    {
+      "id": "health-canada-2015-tp-0031",
+      "category": "Contributions",
+      "description": "Pallium Foundation of Canada to support training in palliative care to front‑line health care providers",
+      "used": 1081862
+    },
+    {
+      "id": "health-canada-2015-tp-0032",
+      "category": "Contributions",
+      "description": "Payments to provinces and territories to improve access to health care and treatment services to persons infected with hepatitis C through the blood system",
+      "used": 49700000
+    },
+    {
+      "id": "health-canada-2015-tp-0033",
+      "category": "Contributions",
+      "description": "Territorial Health Investment Fund",
+      "used": 26190000
+    },
+    {
+      "id": "health-canada-2015-tp-0034",
+      "category": "Grants",
+      "description": "Business‑Led Networks of Centres of Excellence",
+      "used": 3106027
+    },
+    {
+      "id": "health-canada-2015-tp-0035",
+      "category": "Grants",
+      "description": "Canada Excellence Research Chairs",
+      "used": 8950000
+    },
+    {
+      "id": "health-canada-2015-tp-0036",
+      "category": "Grants",
+      "description": "Canada Graduate Scholarships",
+      "used": 21222555
+    },
+    {
+      "id": "health-canada-2015-tp-0037",
+      "category": "Grants",
+      "description": "Centres of Excellence for Commercialization and Research",
+      "used": 12073000
+    },
+    {
+      "id": "health-canada-2015-tp-0038",
+      "category": "Grants",
+      "description": "College and Community Innovation Program",
+      "used": 154919
+    },
+    {
+      "id": "health-canada-2015-tp-0039",
+      "category": "Grants",
+      "description": "Grant to Canada Health Infoway Inc. to accelerate the development of electronic health records, common information technology standards across the country, and the further applications of tele‑health applications",
+      "used": 87956664
+    },
+    {
+      "id": "health-canada-2015-tp-0040",
+      "category": "Grants",
+      "description": "Grant to eligible non‑profit international organizations in support of their projects or programs on health",
+      "used": 2183882
+    },
+    {
+      "id": "health-canada-2015-tp-0041",
+      "category": "Grants",
+      "description": "Grant to graduate students, post‑graduate students and Canadian post secondary institutions to increase professional capacity and training levels in order to build an effective public health sector",
+      "used": 0
+    },
+    {
+      "id": "health-canada-2015-tp-0042",
+      "category": "Grants",
+      "description": "Grant to support the Mental Health Commission of Canada",
+      "used": 14250000
+    },
+    {
+      "id": "health-canada-2015-tp-0043",
+      "category": "Grants",
+      "description": "Grant to the Canadian Centre on Substance Abuse",
+      "used": 3562500
+    },
+    {
+      "id": "health-canada-2015-tp-0044",
+      "category": "Grants",
+      "description": "Grant to the Health Council of Canada",
+      "used": 1152000
+    },
+    {
+      "id": "health-canada-2015-tp-0045",
+      "category": "Grants",
+      "description": "Grants for research projects and personnel support",
+      "used": 870277008
+    },
+    {
+      "id": "health-canada-2015-tp-0046",
+      "category": "Grants",
+      "description": "Grants to individuals and organizations in support of health promotion projects in the areas of building community capacity, stimulating knowledge development and dissemination, and partnership building/intersectorial collaboration",
+      "used": 524866
+    },
+    {
+      "id": "health-canada-2015-tp-0047",
+      "category": "Grants",
+      "description": "Industrial Research Chairs for Colleges",
+      "used": 160000
+    },
+    {
+      "id": "health-canada-2015-tp-0048",
+      "category": "Grants",
+      "description": "Institute support grants",
+      "used": 13000000
+    },
+    {
+      "id": "health-canada-2015-tp-0049",
+      "category": "Grants",
+      "description": "Items not required for the current year",
+      "used": 0
+    },
+    {
+      "id": "health-canada-2015-tp-0050",
+      "category": "Grants",
+      "description": "Networks of Centres of Excellence",
+      "used": 22589000
+    },
+    {
+      "id": "health-canada-2015-tp-0051",
+      "category": "Grants",
+      "description": "Public Health Agency of Canada",
+      "used": 0
+    },
+    {
+      "id": "health-canada-2015-tp-0052",
+      "category": "Grants",
+      "description": "Vanier Canada Graduate Scholarships",
+      "used": 8312500
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

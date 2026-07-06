@@ -1,0 +1,429 @@
+{
+  "name": "National Defence",
+  "slug": "national-defence",
+  "financialYearEnding": 2015,
+  "reportedAs": null,
+  "basis": "vol2_appropriations",
+  "totalSpending": 20.218874,
+  "percentageOfFederal": 7.4097,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 7.762
+    },
+    {
+      "year": 2015,
+      "percentage": 7.4097
+    },
+    {
+      "year": 2016,
+      "percentage": 7.0541
+    },
+    {
+      "year": 2017,
+      "percentage": 6.7027
+    },
+    {
+      "year": 2018,
+      "percentage": 7.4751
+    },
+    {
+      "year": 2019,
+      "percentage": 6.7204
+    },
+    {
+      "year": 2020,
+      "percentage": 6.6088
+    },
+    {
+      "year": 2021,
+      "percentage": 4.4523
+    },
+    {
+      "year": 2022,
+      "percentage": 5.1251
+    },
+    {
+      "year": 2023,
+      "percentage": 5.9641
+    },
+    {
+      "year": 2024,
+      "percentage": 6.7806
+    },
+    {
+      "year": 2025,
+      "percentage": 6.5109
+    }
+  ],
+  "miniSankey": {
+    "spending_data": {
+      "id": "national-defence",
+      "name": "National Defence",
+      "children": [
+        {
+          "id": "national-defence-org-national-defence",
+          "name": "National Defence",
+          "children": [
+            {
+              "id": "national-defence-national-defence-vote1",
+              "name": "Vote 1",
+              "amount": 14.290584
+            },
+            {
+              "id": "national-defence-national-defence-vote5",
+              "name": "Vote 5",
+              "amount": 3.316468
+            },
+            {
+              "id": "national-defence-national-defence-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 1.606157
+            },
+            {
+              "id": "national-defence-national-defence-vote10",
+              "name": "Vote 10",
+              "amount": 0.134877
+            }
+          ],
+          "amount": 19.348086
+        },
+        {
+          "id": "national-defence-org-communications-security-establishment",
+          "name": "Communications Security Establishment",
+          "children": [
+            {
+              "id": "national-defence-communications-security-establishment-vote1",
+              "name": "Vote 1",
+              "amount": 0.819762
+            },
+            {
+              "id": "national-defence-communications-security-establishment-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.037766
+            }
+          ],
+          "amount": 0.857528
+        },
+        {
+          "id": "national-defence-org-military-grievances-external-review-committee",
+          "name": "Military Grievances External Review Committee",
+          "children": [
+            {
+              "id": "national-defence-military-grievances-external-review-committee-vote1",
+              "name": "Vote 1",
+              "amount": 0.005622
+            },
+            {
+              "id": "national-defence-military-grievances-external-review-committee-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.000628
+            }
+          ],
+          "amount": 0.00625
+        },
+        {
+          "id": "national-defence-org-military-police-complaints-commission",
+          "name": "Military Police Complaints Commission",
+          "children": [
+            {
+              "id": "national-defence-military-police-complaints-commission-vote1",
+              "name": "Vote 1",
+              "amount": 0.004619
+            },
+            {
+              "id": "national-defence-military-police-complaints-commission-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.000346
+            }
+          ],
+          "amount": 0.004965
+        },
+        {
+          "id": "national-defence-org-office-of-the-communications-security-establishment-commissioner",
+          "name": "Office of the Communications Security Establishment Commissioner",
+          "children": [
+            {
+              "id": "national-defence-office-of-the-communications-security-establishment-commissioner-vote1",
+              "name": "Vote 1",
+              "amount": 0.001868
+            },
+            {
+              "id": "national-defence-office-of-the-communications-security-establishment-commissioner-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.000175
+            }
+          ],
+          "amount": 0.002043
+        }
+      ],
+      "amount": 20.218872
+    }
+  },
+  "entities": [
+    {
+      "id": "national-defence-2015-entity-national-defence",
+      "name": "National Defence",
+      "value": 19.348087
+    },
+    {
+      "id": "national-defence-2015-entity-communications-security-establishment",
+      "name": "Communications Security Establishment",
+      "value": 0.857528
+    },
+    {
+      "id": "national-defence-2015-entity-military-grievances-external-review-committee",
+      "name": "Military Grievances External Review Committee",
+      "value": 0.00625
+    },
+    {
+      "id": "national-defence-2015-entity-military-police-complaints-commission",
+      "name": "Military Police Complaints Commission",
+      "value": 0.004965
+    },
+    {
+      "id": "national-defence-2015-entity-office-of-the-communications-security-establishment-commissioner",
+      "name": "Office of the Communications Security Establishment Commissioner",
+      "value": 0.002044
+    }
+  ],
+  "votes": [
+    {
+      "id": "national-defence-2015-communications-security-establishment-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 831160824,
+      "used": 819762016,
+      "lapsed": 11398808
+    },
+    {
+      "id": "national-defence-2015-communications-security-establishment-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 37771414,
+      "used": 37766390,
+      "lapsed": 5024
+    },
+    {
+      "id": "national-defence-2015-military-grievances-external-review-committee-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 6482571,
+      "used": 5621968,
+      "lapsed": 860603
+    },
+    {
+      "id": "national-defence-2015-military-grievances-external-review-committee-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 627937,
+      "used": 627937,
+      "lapsed": 0
+    },
+    {
+      "id": "national-defence-2015-military-police-complaints-commission-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 7740533,
+      "used": 4619001,
+      "lapsed": 3121532
+    },
+    {
+      "id": "national-defence-2015-military-police-complaints-commission-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 346272,
+      "used": 346272,
+      "lapsed": 0
+    },
+    {
+      "id": "national-defence-2015-national-defence-vote1",
+      "vote": "Vote 1",
+      "description": "Operating expenditures",
+      "totalAvailable": 14716942161,
+      "used": 14290584364,
+      "lapsed": 426357797
+    },
+    {
+      "id": "national-defence-2015-national-defence-vote10",
+      "vote": "Vote 10",
+      "description": "Grants and contributions",
+      "totalAvailable": 178764886,
+      "used": 134877030,
+      "lapsed": 43887856
+    },
+    {
+      "id": "national-defence-2015-national-defence-vote5",
+      "vote": "Vote 5",
+      "description": "Capital expenditures",
+      "totalAvailable": 4835557782,
+      "used": 3316468475,
+      "lapsed": 1519089307
+    },
+    {
+      "id": "national-defence-2015-national-defence-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 1621453538,
+      "used": 1606156838,
+      "lapsed": 15296700
+    },
+    {
+      "id": "national-defence-2015-office-of-the-communications-security-establishment-commissioner-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 1949021,
+      "used": 1868188,
+      "lapsed": 80833
+    },
+    {
+      "id": "national-defence-2015-office-of-the-communications-security-establishment-commissioner-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 175372,
+      "used": 175372,
+      "lapsed": 0
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "national-defence-2015-tp-0000",
+      "category": "Contributions",
+      "description": "COSPAS‑SARSAT Secretariat Contribution Program",
+      "used": 190000
+    },
+    {
+      "id": "national-defence-2015-tp-0001",
+      "category": "Contributions",
+      "description": "Canadian Association of Physician Assistants Contribution Program",
+      "used": 741000
+    },
+    {
+      "id": "national-defence-2015-tp-0002",
+      "category": "Contributions",
+      "description": "Contribution Program in support of the Remediation of the Former Mid‑Canada Line Radar Sites in Ontario",
+      "used": 4281000
+    },
+    {
+      "id": "national-defence-2015-tp-0003",
+      "category": "Contributions",
+      "description": "Contribution Program in support of the Search and Rescue New Initiatives Fund",
+      "used": 5214102
+    },
+    {
+      "id": "national-defence-2015-tp-0004",
+      "category": "Contributions",
+      "description": "Contribution to the Biological and Chemical Defence Review Committee",
+      "used": 124320
+    },
+    {
+      "id": "national-defence-2015-tp-0005",
+      "category": "Contributions",
+      "description": "Contribution to the Civil Air Search and Rescue Association",
+      "used": 2818029
+    },
+    {
+      "id": "national-defence-2015-tp-0006",
+      "category": "Contributions",
+      "description": "Contributions in Support of the Military Training and Cooperation Program",
+      "used": 9710559
+    },
+    {
+      "id": "national-defence-2015-tp-0007",
+      "category": "Contributions",
+      "description": "Contributions in support of the Capital Assistance Program",
+      "used": 708303
+    },
+    {
+      "id": "national-defence-2015-tp-0008",
+      "category": "Contributions",
+      "description": "Items not required for the current year",
+      "used": 0
+    },
+    {
+      "id": "national-defence-2015-tp-0009",
+      "category": "Contributions",
+      "description": "NATO Military Budget (NATO Programs)",
+      "used": 72211779
+    },
+    {
+      "id": "national-defence-2015-tp-0010",
+      "category": "Contributions",
+      "description": "NATO Security Investment Program (NATO Programs)",
+      "used": 34472281
+    },
+    {
+      "id": "national-defence-2015-tp-0011",
+      "category": "Contributions",
+      "description": "North Atlantic Treaty Organization Contribution Program:",
+      "used": 0
+    },
+    {
+      "id": "national-defence-2015-tp-0012",
+      "category": "Contributions",
+      "description": "North Atlantic Treaty Organization Contribution Program: NATO Other Activities",
+      "used": 1521506
+    },
+    {
+      "id": "national-defence-2015-tp-0013",
+      "category": "Contributions",
+      "description": "Payments under Parts I‑IV of the Defence Services Pension Continuation Act",
+      "used": 529008
+    },
+    {
+      "id": "national-defence-2015-tp-0014",
+      "category": "Contributions",
+      "description": "Payments under the Supplementary Retirement Benefits Act",
+      "used": 2586516
+    },
+    {
+      "id": "national-defence-2015-tp-0015",
+      "category": "Grants",
+      "description": "Air Cadet League of Canada",
+      "used": 442000
+    },
+    {
+      "id": "national-defence-2015-tp-0016",
+      "category": "Grants",
+      "description": "Army Cadet League of Canada",
+      "used": 442000
+    },
+    {
+      "id": "national-defence-2015-tp-0017",
+      "category": "Grants",
+      "description": "Grant Program to the National Offices of the Cadet Leagues of Canada: Navy League of Canada",
+      "used": 442000
+    },
+    {
+      "id": "national-defence-2015-tp-0018",
+      "category": "Grants",
+      "description": "Grant to the Royal Canadian Naval Benevolent Fund",
+      "used": 25700
+    },
+    {
+      "id": "national-defence-2015-tp-0019",
+      "category": "Grants",
+      "description": "Grants in support of the Compensation for Employer of Reservists Program",
+      "used": 0
+    },
+    {
+      "id": "national-defence-2015-tp-0020",
+      "category": "Grants",
+      "description": "Grants in support of the Defence Engagement Program",
+      "used": 367451
+    },
+    {
+      "id": "national-defence-2015-tp-0021",
+      "category": "Grants",
+      "description": "Named Grant to the Institute for Environmental Monitoring and Research",
+      "used": 1165000
+    },
+    {
+      "id": "national-defence-2015-tp-0022",
+      "category": "Grants",
+      "description": "Payments to dependants of certain members of the Royal Canadian Air Force killed while serving as instructors under the British Commonwealth Air Training Plan",
+      "used": 23656
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

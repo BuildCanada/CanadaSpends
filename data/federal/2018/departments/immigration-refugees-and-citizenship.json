@@ -1,0 +1,136 @@
+{
+  "name": "Immigration, Refugees and Citizenship",
+  "slug": "immigration-refugees-and-citizenship",
+  "financialYearEnding": 2018,
+  "reportedAs": null,
+  "basis": "vol2_appropriations",
+  "totalSpending": 2.219462,
+  "percentageOfFederal": 0.694,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 0.6242
+    },
+    {
+      "year": 2015,
+      "percentage": 0.6163
+    },
+    {
+      "year": 2016,
+      "percentage": 0.6452
+    },
+    {
+      "year": 2017,
+      "percentage": 0.6563
+    },
+    {
+      "year": 2018,
+      "percentage": 0.694
+    },
+    {
+      "year": 2019,
+      "percentage": 0.7612
+    },
+    {
+      "year": 2020,
+      "percentage": 0.901
+    },
+    {
+      "year": 2021,
+      "percentage": 0.5413
+    },
+    {
+      "year": 2022,
+      "percentage": 0.7547
+    },
+    {
+      "year": 2023,
+      "percentage": 1.1622
+    },
+    {
+      "year": 2024,
+      "percentage": 1.2351
+    },
+    {
+      "year": 2025,
+      "percentage": 1.2653
+    }
+  ],
+  "miniSankey": {
+    "spending_data": {
+      "id": "immigration-refugees-and-citizenship",
+      "name": "Immigration, Refugees and Citizenship",
+      "children": [
+        {
+          "id": "immigration-refugees-and-citizenship-org-immigration-refugees-and-citizenship",
+          "name": "Immigration, Refugees and Citizenship",
+          "children": [
+            {
+              "id": "immigration-refugees-and-citizenship-immigration-refugees-and-citizenship-vote",
+              "name": "All votes",
+              "amount": 2.219462
+            }
+          ],
+          "amount": 2.219462
+        }
+      ],
+      "amount": 2.219462
+    }
+  },
+  "entities": [
+    {
+      "id": "immigration-refugees-and-citizenship-2018-entity-immigration-refugees-and-citizenship",
+      "name": "Immigration, Refugees and Citizenship",
+      "value": 2.219462
+    }
+  ],
+  "votes": [
+    {
+      "id": "immigration-refugees-and-citizenship-2018-immigration-refugees-and-citizenship-vote",
+      "vote": "All votes",
+      "description": "Total appropriations (vote-level detail not published for this edition)",
+      "totalAvailable": 3408664125,
+      "used": 2219462000,
+      "lapsed": 1189202125
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "immigration-refugees-and-citizenship-2018-tp-0000",
+      "category": "Contributions",
+      "description": "Global Assistance to Irregular Migrants",
+      "used": 1001228
+    },
+    {
+      "id": "immigration-refugees-and-citizenship-2018-tp-0001",
+      "category": "Contributions",
+      "description": "International Organization for Migration",
+      "used": 2178090
+    },
+    {
+      "id": "immigration-refugees-and-citizenship-2018-tp-0002",
+      "category": "Contributions",
+      "description": "Resettlement Assistance",
+      "used": 95175436
+    },
+    {
+      "id": "immigration-refugees-and-citizenship-2018-tp-0003",
+      "category": "Contributions",
+      "description": "Settlement Program",
+      "used": 714482559
+    },
+    {
+      "id": "immigration-refugees-and-citizenship-2018-tp-0004",
+      "category": "Grants",
+      "description": "Grant for Migration Policy Development",
+      "used": 1367097
+    },
+    {
+      "id": "immigration-refugees-and-citizenship-2018-tp-0005",
+      "category": "Grants",
+      "description": "Grant for the Canada-Quebec Accord on Immigration",
+      "used": 490253000
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

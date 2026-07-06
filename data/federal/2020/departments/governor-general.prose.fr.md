@@ -1,0 +1,13 @@
+---
+reviewed: false
+source: llm-first-pass
+generated: 2026-07-06
+---
+
+{{name}} est le bureau du représentant de la Couronne au Canada, exerçant des responsabilités constitutionnelles, cérémonielles et diplomatiques au nom du souverain. Ces responsabilités comprennent l'octroi de la sanction royale aux lois, la convocation et la dissolution du Parlement, la reconnaissance des réalisations et du service des Canadiens par l'entremise du système des distinctions honorifiques, ainsi que la tenue de cérémonies et de visites officielles avec des dignitaires étrangers et des membres du public. Le Bureau du secrétaire du gouverneur général assure le soutien administratif de ces fonctions, notamment la planification des événements officiels, l'administration des programmes de distinctions honorifiques et l'exploitation et l'entretien des résidences officielles utilisées dans l'exercice de ce rôle.
+
+{{name}} a dépensé {{totalSpending}} au cours de l'exercice 2019-2020, ce qui représente {{percentageOfFederal}} des dépenses fédérales cette année-là.
+
+Au sein de ce regroupement ministériel des comptes publics, les dépenses administrées au moyen de 6 crédits parlementaires étaient concentrées au sein de Services partagés Canada, une part plus modeste étant comptabilisée au sein du Bureau du secrétaire du gouverneur général. Les paiements de transfert du ministère consistaient en des annuités payables en vertu de la Loi sur le gouverneur général, un paiement statutaire qui représentait une faible part des dépenses totales du ministère. Cette concentration des dépenses au sein de Services partagés Canada reflète la façon dont ce ministère est regroupé à des fins d'affectation de crédits dans les comptes publics, plutôt que l'ampleur des fonctions cérémonielles et constitutionnelles décrites ci-dessus.
+
+<!-- verification: Governor General confirmed from fact sheet (name field). Total spending and percentage figures use placeholders only. Entities named: Shared Services Canada, Office of the Governor General's Secretary — match topEntities/topSankeyChildren. Vote count (6) stated as literal integer per allowed exception. Transfer category named: annuities payable under the Governor General's Act — matches topTransferPayments. FLAG: source data groups the large Shared Services Canada entity under this "Governor General" department heading, which does not match the office's generic ceremonial/constitutional mandate described in paragraph 1 — this is a data-grouping oddity in the Public Accounts classification, reported as-is per instructions, not corrected. No claim uses figures outside the three placeholders. -->

@@ -1,0 +1,17 @@
+---
+reviewed: false
+source: llm-first-pass
+generated: 2026-07-06
+---
+
+{{name}} manages Canada's diplomatic relations, international trade policy, and international development assistance. Its responsibilities include operating Canada's network of embassies and consulates abroad, negotiating and administering trade agreements, and delivering development assistance in partnership with multilateral organizations, other governments, and Canadian and international civil society organizations.
+
+In the 2013-14 fiscal year, {{name}} spent {{totalSpending}}, representing {{percentageOfFederal}} of federal spending reported for that year in the Public Accounts of Canada. Much of this spending supported international development assistance programming delivered on behalf of the Government of Canada, alongside the operating costs of Canada's diplomatic and trade presence abroad.
+
+The Department of Foreign Affairs, Trade and Development accounted for the large majority of spending within the portfolio, with the Canadian International Development Agency representing the next-largest share, followed by the International Development Research Centre, Export Development Canada's Canada Account, and the National Capital Commission, together with the Canadian Commercial Corporation and the International Joint Commission (Canadian Section) making up a comparatively minor portion. Among transfer payments, grants in support of development assistance, humanitarian assistance, and disaster preparedness for developing countries and countries in transition were the largest category — appearing as both the largest and third-largest transfer payment — followed by contributions for bilateral development programming directed to specific countries and regions, payments to international financial institutions through the encashment of notes, and Canada's assessed contribution to United Nations peacekeeping operations.
+
+<!-- verification:
+- Department of Foreign Affairs, Trade and Development, Canadian International Development Agency, International Development Research Centre, Export Development Canada (Canada Account), National Capital Commission — all appear in fact sheet topEntities, in the same order; Canadian Commercial Corporation and International Joint Commission (Canadian Section) appear as smaller entries further down the fact sheet's topMiniSankeyChildren.
+- Grants in support of development/humanitarian assistance and disaster preparedness (appearing twice, as the 1st- and 3rd-largest), contributions for bilateral programming, payments to international financial institutions (encashment of notes), and assessed contributions to UN peacekeeping operations — all appear in fact sheet topTransferPayments, in descending order by used amount.
+- Re-verified 2026-07-06 against corrected fact sheet: the previously-listed "Invest in Canada Hub" entity does not appear anywhere in the corrected fact sheet (likely a stale-snapshot artifact, as Invest in Canada was not established until 2018) and has been removed; the Canadian International Development Agency and National Capital Commission, which are the corrected fact sheet's actual 2nd- and 5th-largest entities, have been added. The "Partnerships with Canadians Programming" transfer-payment category likewise does not appear in the corrected fact sheet and has been replaced with the actual entries (development/humanitarian grants, bilateral contributions, encashment of notes, UN peacekeeping). No further anachronisms identified.
+-->

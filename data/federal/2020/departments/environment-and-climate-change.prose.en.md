@@ -1,0 +1,13 @@
+---
+reviewed: false
+source: llm-first-pass
+generated: 2026-07-06
+---
+
+{{name}} is the federal department responsible for environmental protection, wildlife and biodiversity conservation, and the development of policy addressing climate change. Its mandate includes the stewardship of Canada's national parks and protected natural areas, environmental monitoring and enforcement of pollution-prevention regulations, and coordination of federal action on climate change adaptation and mitigation. The department also oversees assessments of the environmental effects of major projects, works with provinces, territories, and Indigenous communities on shared environmental priorities, and maintains scientific capacity to monitor air, water, and ecosystem health across the country. This work spans both regulatory functions, such as setting and enforcing environmental standards, and program delivery, such as funding conservation and climate initiatives carried out by other levels of government, organizations, and communities.
+
+{{name}} spent {{totalSpending}} in the 2019–20 fiscal year, representing {{percentageOfFederal}} of federal spending that year.
+
+Spending administered through 13 appropriation votes was concentrated primarily within the Department of the Environment and the Parks Canada Agency, which together accounted for most of the department's total, while the Impact Assessment Agency of Canada represented a smaller share. Among transfer payments, contributions in support of the Low Carbon Economy Fund made up one of the department's larger transfer programs, followed by contributions in support of the Canada Nature Fund. Additional, smaller contributions supported conserving nature, taking action on clean growth and climate change, and preventing and managing pollution. Taken together, these transfer payments reflect a mix of climate-focused funding and biodiversity and pollution-management programming delivered through the department's contribution agreements.
+
+<!-- verification: Environment and Climate Change confirmed from fact sheet (name field). Total spending and percentage figures use placeholders only. Top entities named: Department of the Environment, Parks Canada Agency, Impact Assessment Agency of Canada — all match topEntities/topSankeyChildren. Vote count (13) stated as literal integer per allowed exception. Transfer categories named: Low Carbon Economy Fund, Canada Nature Fund, Conserving Nature, Taking Action on Clean Growth and Climate Change, Preventing and Managing Pollution — all match topTransferPayments descriptions. No claim uses figures outside the three placeholders. -->

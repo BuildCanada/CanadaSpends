@@ -1,0 +1,13 @@
+---
+reviewed: false
+source: llm-first-pass
+generated: 2026-07-06
+---
+
+{{name}} is the federal department responsible for national public health policy, health research funding, food safety, and pharmaceutical regulation. Its responsibilities include supporting the health care system through funding and coordination, promoting disease prevention and health protection, funding health research, monitoring and responding to public health risks, and inspecting food products for safety. The department works closely with provinces, territories, and a range of federal health agencies to deliver on this mandate, spanning direct program delivery, regulatory oversight, and support for scientific research across the health system.
+
+{{name}} spent {{totalSpending}} in the 2019–20 fiscal year, representing {{percentageOfFederal}} of federal spending that year.
+
+Spending administered through 29 appropriation votes was distributed across the Department of Health, the largest recipient, along with the Canadian Institutes of Health Research, the Public Health Agency of Canada, and the Canadian Food Inspection Agency, with the Patented Medicine Prices Review Board accounting for a smaller share. Among transfer payments, the Strengthening Canada's Home and Community Care and Mental Health and Addiction Initiative and grants for research projects and personnel support were among the department's larger transfer programs. Additional, smaller contributions supported health promotion projects carried out by individuals and organizations, the Canadian Institute for Health Information, and preventative and early intervention services for young children at risk. Together, these transfer payments reflect a mix of direct funding for home, community, and mental health care and support for health research, alongside targeted health promotion and early-intervention programming.
+
+<!-- verification: Health confirmed from fact sheet (name field). Total spending and percentage figures use placeholders only. Top entities named: Department of Health, Canadian Institutes of Health Research, Public Health Agency of Canada, Canadian Food Inspection Agency, Patented Medicine Prices Review Board — all match topEntities/topSankeyChildren. Vote count (29) stated as literal integer per allowed exception. Transfer categories named: Strengthening Canada's Home and Community Care and Mental Health and Addiction Initiative, grants for research projects and personnel support, contributions for health promotion projects, Canadian Institute for Health Information, contributions for early intervention services for young children at risk — all match topTransferPayments descriptions. No claim uses figures outside the three placeholders. -->

@@ -1,0 +1,129 @@
+{
+  "name": "Democratic Institutions",
+  "slug": "democratic-institutions",
+  "financialYearEnding": 2019,
+  "reportedAs": null,
+  "basis": "vol2_appropriations",
+  "totalSpending": 0.18389,
+  "percentageOfFederal": 0.0544,
+  "historicalShare": [
+    {
+      "year": 2019,
+      "percentage": 0.0544
+    },
+    {
+      "year": 2025,
+      "percentage": 0.0584
+    }
+  ],
+  "miniSankey": {
+    "spending_data": {
+      "id": "democratic-institutions",
+      "name": "Democratic Institutions",
+      "children": [
+        {
+          "id": "democratic-institutions-org-office-of-the-chief-electoral-officer",
+          "name": "Office of the Chief Electoral Officer",
+          "children": [
+            {
+              "id": "democratic-institutions-office-of-the-chief-electoral-officer-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.151504
+            },
+            {
+              "id": "democratic-institutions-office-of-the-chief-electoral-officer-vote1",
+              "name": "Vote 1",
+              "amount": 0.032244
+            }
+          ],
+          "amount": 0.183748
+        },
+        {
+          "id": "democratic-institutions-org-leaders-debates-commission",
+          "name": "Leaders' Debates Commission",
+          "children": [
+            {
+              "id": "democratic-institutions-leaders-debates-commission-vote1",
+              "name": "Vote 1",
+              "amount": 0.000127
+            },
+            {
+              "id": "democratic-institutions-leaders-debates-commission-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 1.5e-5
+            }
+          ],
+          "amount": 0.000142
+        }
+      ],
+      "amount": 0.18389
+    }
+  },
+  "entities": [
+    {
+      "id": "democratic-institutions-2019-entity-office-of-the-chief-electoral-officer",
+      "name": "Office of the Chief Electoral Officer",
+      "value": 0.183748
+    },
+    {
+      "id": "democratic-institutions-2019-entity-leaders-debates-commission",
+      "name": "Leaders' Debates Commission",
+      "value": 0.000142
+    }
+  ],
+  "votes": [
+    {
+      "id": "democratic-institutions-2019-leaders-debates-commission-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 257949,
+      "used": 127247,
+      "lapsed": 130702
+    },
+    {
+      "id": "democratic-institutions-2019-leaders-debates-commission-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 14546,
+      "used": 14546,
+      "lapsed": 0
+    },
+    {
+      "id": "democratic-institutions-2019-office-of-the-chief-electoral-officer-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 33820175,
+      "used": 32244015,
+      "lapsed": 1576160
+    },
+    {
+      "id": "democratic-institutions-2019-office-of-the-chief-electoral-officer-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 151504458,
+      "used": 151504458,
+      "lapsed": 0
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "democratic-institutions-2019-tp-0000",
+      "category": "Other transfer payments",
+      "description": "Reimbursement of election expenses to candidates and payments of subsidies to candidates' auditors for the current year by-elections",
+      "used": 484116
+    },
+    {
+      "id": "democratic-institutions-2019-tp-0001",
+      "category": "Other transfer payments",
+      "description": "Reimbursement of election expenses to candidates, and payments of subsidies to candidates' auditors for other general elections and by-elections",
+      "used": 243952
+    },
+    {
+      "id": "democratic-institutions-2019-tp-0002",
+      "category": "Other transfer payments",
+      "description": "Subsidies to electoral district associations' auditors",
+      "used": 761381
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

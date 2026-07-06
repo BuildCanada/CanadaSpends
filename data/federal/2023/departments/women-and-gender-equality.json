@@ -1,0 +1,142 @@
+{
+  "name": "Women, Gender Equality and Youth",
+  "slug": "women-and-gender-equality",
+  "financialYearEnding": 2023,
+  "reportedAs": null,
+  "basis": "vol2_appropriations",
+  "totalSpending": 0.323109,
+  "percentageOfFederal": 0.0682,
+  "historicalShare": [
+    {
+      "year": 2019,
+      "percentage": 0.0214
+    },
+    {
+      "year": 2020,
+      "percentage": 0.0316
+    },
+    {
+      "year": 2021,
+      "percentage": 0.0349
+    },
+    {
+      "year": 2022,
+      "percentage": 0.0467
+    },
+    {
+      "year": 2023,
+      "percentage": 0.0682
+    },
+    {
+      "year": 2024,
+      "percentage": 0.0624
+    },
+    {
+      "year": 2025,
+      "percentage": 0.0679
+    }
+  ],
+  "miniSankey": {
+    "spending_data": {
+      "id": "women-and-gender-equality",
+      "name": "Women, Gender Equality and Youth",
+      "children": [
+        {
+          "id": "women-and-gender-equality-org-department-for-women-and-gender-equality",
+          "name": "Department for Women and Gender Equality",
+          "children": [
+            {
+              "id": "women-and-gender-equality-department-for-women-and-gender-equality-vote5",
+              "name": "Vote 5",
+              "amount": 0.259383
+            },
+            {
+              "id": "women-and-gender-equality-department-for-women-and-gender-equality-vote1",
+              "name": "Vote 1",
+              "amount": 0.057363
+            },
+            {
+              "id": "women-and-gender-equality-department-for-women-and-gender-equality-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.006363
+            }
+          ],
+          "amount": 0.323109
+        }
+      ],
+      "amount": 0.323109
+    }
+  },
+  "entities": [
+    {
+      "id": "women-and-gender-equality-2023-entity-department-for-women-and-gender-equality",
+      "name": "Department for Women and Gender Equality",
+      "value": 0.323109
+    }
+  ],
+  "votes": [
+    {
+      "id": "women-and-gender-equality-2023-department-for-women-and-gender-equality-vote1",
+      "vote": "Vote 1",
+      "description": "Operating expenditures",
+      "totalAvailable": 60370960,
+      "used": 57362612,
+      "lapsed": 3008348
+    },
+    {
+      "id": "women-and-gender-equality-2023-department-for-women-and-gender-equality-vote5",
+      "vote": "Vote 5",
+      "description": "Grants and contributions",
+      "totalAvailable": 260087038,
+      "used": 259383052,
+      "lapsed": 703986
+    },
+    {
+      "id": "women-and-gender-equality-2023-department-for-women-and-gender-equality-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 6363242,
+      "used": 6363153,
+      "lapsed": 89
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "women-and-gender-equality-2023-tp-0000",
+      "category": "Contributions",
+      "description": "Equality for Sex, Sexual Orientation, Gender Identity and Expression",
+      "used": 12957335
+    },
+    {
+      "id": "women-and-gender-equality-2023-tp-0001",
+      "category": "Contributions",
+      "description": "Gender-based Violence Funding Program—Contributions to Canadian organizations, institutions and other levels of government to improve supports and help create long-term, comprehensive solutions for survivors at the national, regional and local levels",
+      "used": 25058853
+    },
+    {
+      "id": "women-and-gender-equality-2023-tp-0002",
+      "category": "Contributions",
+      "description": "Women's Program—Contributions to women's and other voluntary organizations for the purpose of furthering women's participation in Canadian society",
+      "used": 186246454
+    },
+    {
+      "id": "women-and-gender-equality-2023-tp-0003",
+      "category": "Grants",
+      "description": "Equality for Sex, Sexual Orientation, Gender Identity and Expression",
+      "used": 3379713
+    },
+    {
+      "id": "women-and-gender-equality-2023-tp-0004",
+      "category": "Grants",
+      "description": "Gender-based Violence Funding Program—Grants to Canadian organizations, institutions and other levels of government to improve supports and help create long-term, comprehensive solutions for survivors at the national, regional and local levels",
+      "used": 7312331
+    },
+    {
+      "id": "women-and-gender-equality-2023-tp-0005",
+      "category": "Grants",
+      "description": "Women's Program—Grants to women's and other voluntary organizations for the purpose of furthering women's participation in Canadian society",
+      "used": 24428366
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

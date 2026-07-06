@@ -1,0 +1,232 @@
+{
+  "name": "National Defence",
+  "slug": "national-defence",
+  "financialYearEnding": 2016,
+  "reportedAs": null,
+  "basis": "vol2_appropriations",
+  "totalSpending": 20.132623,
+  "percentageOfFederal": 7.0541,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 7.762
+    },
+    {
+      "year": 2015,
+      "percentage": 7.4097
+    },
+    {
+      "year": 2016,
+      "percentage": 7.0541
+    },
+    {
+      "year": 2017,
+      "percentage": 6.7027
+    },
+    {
+      "year": 2018,
+      "percentage": 7.4751
+    },
+    {
+      "year": 2019,
+      "percentage": 6.7204
+    },
+    {
+      "year": 2020,
+      "percentage": 6.6088
+    },
+    {
+      "year": 2021,
+      "percentage": 4.4523
+    },
+    {
+      "year": 2022,
+      "percentage": 5.1251
+    },
+    {
+      "year": 2023,
+      "percentage": 5.9641
+    },
+    {
+      "year": 2024,
+      "percentage": 6.7806
+    },
+    {
+      "year": 2025,
+      "percentage": 6.5109
+    }
+  ],
+  "miniSankey": {
+    "spending_data": {
+      "id": "national-defence",
+      "name": "National Defence",
+      "children": [
+        {
+          "id": "national-defence-org-national-defence",
+          "name": "National Defence",
+          "children": [
+            {
+              "id": "national-defence-national-defence-vote",
+              "name": "All votes",
+              "amount": 20.132623
+            }
+          ],
+          "amount": 20.132623
+        }
+      ],
+      "amount": 20.132623
+    }
+  },
+  "entities": [
+    {
+      "id": "national-defence-2016-entity-national-defence",
+      "name": "National Defence",
+      "value": 20.132623
+    }
+  ],
+  "votes": [
+    {
+      "id": "national-defence-2016-national-defence-vote",
+      "vote": "All votes",
+      "description": "Total appropriations (vote-level detail not published for this edition)",
+      "totalAvailable": 21540423929,
+      "used": 20132622809,
+      "lapsed": 1407801120
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "national-defence-2016-tp-0000",
+      "category": "Contributions",
+      "description": "COSPAS-SARSAT Secretariat Contribution Program",
+      "used": 47500
+    },
+    {
+      "id": "national-defence-2016-tp-0001",
+      "category": "Contributions",
+      "description": "Canadian Association of Physician Assistants Contribution Program",
+      "used": 770779
+    },
+    {
+      "id": "national-defence-2016-tp-0002",
+      "category": "Contributions",
+      "description": "Contribution Program in support of the Search and Rescue New Initiatives Fund",
+      "used": 826978
+    },
+    {
+      "id": "national-defence-2016-tp-0003",
+      "category": "Contributions",
+      "description": "Contribution to the Biological and Chemical Defence Review Committee",
+      "used": 126682
+    },
+    {
+      "id": "national-defence-2016-tp-0004",
+      "category": "Contributions",
+      "description": "Contribution to the Civil Air Search and Rescue Association",
+      "used": 2818087
+    },
+    {
+      "id": "national-defence-2016-tp-0005",
+      "category": "Contributions",
+      "description": "Contributions in Support of the Military Training and Cooperation Program",
+      "used": 10360427
+    },
+    {
+      "id": "national-defence-2016-tp-0006",
+      "category": "Contributions",
+      "description": "Contributions in support of the Capital Assistance Program",
+      "used": 3307738
+    },
+    {
+      "id": "national-defence-2016-tp-0007",
+      "category": "Contributions",
+      "description": "Items not required for the current year",
+      "used": 0
+    },
+    {
+      "id": "national-defence-2016-tp-0008",
+      "category": "Contributions",
+      "description": "NATO Military Budget (NATO Programs)",
+      "used": 82591502
+    },
+    {
+      "id": "national-defence-2016-tp-0009",
+      "category": "Contributions",
+      "description": "NATO Security Investment Program (NATO Programs)",
+      "used": 45922989
+    },
+    {
+      "id": "national-defence-2016-tp-0010",
+      "category": "Contributions",
+      "description": "North Atlantic Treaty Organization Contribution Program: NATO Other Activities",
+      "used": 2254358
+    },
+    {
+      "id": "national-defence-2016-tp-0011",
+      "category": "Contributions",
+      "description": "Payments under Parts I-IV of the Defence Services Pension Continuation Act",
+      "used": 437876
+    },
+    {
+      "id": "national-defence-2016-tp-0012",
+      "category": "Contributions",
+      "description": "Payments under the Supplementary Retirement Benefits Act",
+      "used": 2115165
+    },
+    {
+      "id": "national-defence-2016-tp-0013",
+      "category": "Contributions",
+      "description": "Search and Rescue Volunteer Association of Canada Contribution Program",
+      "used": 125000
+    },
+    {
+      "id": "national-defence-2016-tp-0014",
+      "category": "Grants",
+      "description": "Air Cadet League of Canada",
+      "used": 450000
+    },
+    {
+      "id": "national-defence-2016-tp-0015",
+      "category": "Grants",
+      "description": "Army Cadet League of Canada",
+      "used": 450000
+    },
+    {
+      "id": "national-defence-2016-tp-0016",
+      "category": "Grants",
+      "description": "Grant to the Royal Canadian Naval Benevolent Fund",
+      "used": 0
+    },
+    {
+      "id": "national-defence-2016-tp-0017",
+      "category": "Grants",
+      "description": "Grants in support of the Defence engagement program",
+      "used": 496644
+    },
+    {
+      "id": "national-defence-2016-tp-0018",
+      "category": "Grants",
+      "description": "Grants in support of the compensation for employers of reservists program",
+      "used": 0
+    },
+    {
+      "id": "national-defence-2016-tp-0019",
+      "category": "Grants",
+      "description": "Items not required for the current year",
+      "used": 0
+    },
+    {
+      "id": "national-defence-2016-tp-0020",
+      "category": "Grants",
+      "description": "Navy League of Canada",
+      "used": 450000
+    },
+    {
+      "id": "national-defence-2016-tp-0021",
+      "category": "Grants",
+      "description": "Payments to dependants of certain members of the Royal Canadian Air Force killed while serving as instructors under the British Commonwealth Air Training Plan",
+      "used": 24046
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

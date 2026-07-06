@@ -1,0 +1,106 @@
+{
+  "name": "Governor General",
+  "slug": "governor-general",
+  "financialYearEnding": 2016,
+  "reportedAs": "Office of the Governor General's Secretary",
+  "basis": "vol2_appropriations",
+  "totalSpending": 0.022318,
+  "percentageOfFederal": 0.0078,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 0.0079
+    },
+    {
+      "year": 2015,
+      "percentage": 0.0076
+    },
+    {
+      "year": 2016,
+      "percentage": 0.0078
+    },
+    {
+      "year": 2017,
+      "percentage": 0.0076
+    },
+    {
+      "year": 2018,
+      "percentage": 0.0073
+    },
+    {
+      "year": 2019,
+      "percentage": 0.0069
+    },
+    {
+      "year": 2020,
+      "percentage": 0.7518
+    },
+    {
+      "year": 2021,
+      "percentage": 0.5092
+    },
+    {
+      "year": 2022,
+      "percentage": 0.0048
+    },
+    {
+      "year": 2023,
+      "percentage": 0.0053
+    },
+    {
+      "year": 2024,
+      "percentage": 0.0051
+    },
+    {
+      "year": 2025,
+      "percentage": 0.0055
+    }
+  ],
+  "miniSankey": {
+    "spending_data": {
+      "id": "governor-general",
+      "name": "Governor General",
+      "children": [
+        {
+          "id": "governor-general-org-office-of-the-governor-general-s-secretary",
+          "name": "Office of the Governor General's Secretary",
+          "children": [
+            {
+              "id": "governor-general-office-of-the-governor-general-s-secretary-vote",
+              "name": "All votes",
+              "amount": 0.022318
+            }
+          ],
+          "amount": 0.022318
+        }
+      ],
+      "amount": 0.022318
+    }
+  },
+  "entities": [
+    {
+      "id": "governor-general-2016-entity-office-of-the-governor-general-s-secretary",
+      "name": "Office of the Governor General's Secretary",
+      "value": 0.022318
+    }
+  ],
+  "votes": [
+    {
+      "id": "governor-general-2016-office-of-the-governor-general-s-secretary-vote",
+      "vote": "All votes",
+      "description": "Total appropriations (vote-level detail not published for this edition)",
+      "totalAvailable": 22624647,
+      "used": 22318092,
+      "lapsed": 306555
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "governor-general-2016-tp-0000",
+      "category": "Grants",
+      "description": "Annuities payable under the Governor General's Act",
+      "used": 560186
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

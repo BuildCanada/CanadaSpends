@@ -1,0 +1,179 @@
+{
+  "name": "Democratic Institutions",
+  "slug": "democratic-institutions",
+  "financialYearEnding": 2025,
+  "reportedAs": null,
+  "basis": "vol2_appropriations",
+  "totalSpending": 0.317042,
+  "percentageOfFederal": 0.0584,
+  "historicalShare": [
+    {
+      "year": 2019,
+      "percentage": 0.0544
+    },
+    {
+      "year": 2025,
+      "percentage": 0.0584
+    }
+  ],
+  "miniSankey": {
+    "spending_data": {
+      "id": "democratic-institutions",
+      "name": "Democratic Institutions",
+      "children": [
+        {
+          "id": "democratic-institutions-org-office-of-the-chief-electoral-officer",
+          "name": "Office of the Chief Electoral Officer",
+          "children": [
+            {
+              "id": "democratic-institutions-office-of-the-chief-electoral-officer-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.249246
+            },
+            {
+              "id": "democratic-institutions-office-of-the-chief-electoral-officer-vote1",
+              "name": "Vote 1",
+              "amount": 0.064034
+            }
+          ],
+          "amount": 0.31328
+        },
+        {
+          "id": "democratic-institutions-org-secretariat-of-the-national-security-and-intelligence-committee-of-parliamentarians",
+          "name": "Secretariat of the National Security and Intelligence Committee of Parliamentarians",
+          "children": [
+            {
+              "id": "democratic-institutions-secretariat-of-the-national-security-and-intelligence-committee-of-parliamentarians-vote1",
+              "name": "Vote 1",
+              "amount": 0.002877
+            },
+            {
+              "id": "democratic-institutions-secretariat-of-the-national-security-and-intelligence-committee-of-parliamentarians-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.000216
+            }
+          ],
+          "amount": 0.003093
+        },
+        {
+          "id": "democratic-institutions-org-leaders-debates-commission",
+          "name": "Leaders' Debates Commission",
+          "children": [
+            {
+              "id": "democratic-institutions-leaders-debates-commission-vote1",
+              "name": "Vote 1",
+              "amount": 0.000617
+            },
+            {
+              "id": "democratic-institutions-leaders-debates-commission-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 5.3e-5
+            }
+          ],
+          "amount": 0.00067
+        }
+      ],
+      "amount": 0.317043
+    }
+  },
+  "entities": [
+    {
+      "id": "democratic-institutions-2025-entity-office-of-the-chief-electoral-officer",
+      "name": "Office of the Chief Electoral Officer",
+      "value": 0.31328
+    },
+    {
+      "id": "democratic-institutions-2025-entity-secretariat-of-the-national-security-and-intelligence-committee-of-parliamentarians",
+      "name": "Secretariat of the National Security and Intelligence Committee of Parliamentarians",
+      "value": 0.003093
+    },
+    {
+      "id": "democratic-institutions-2025-entity-leaders-debates-commission",
+      "name": "Leaders' Debates Commission",
+      "value": 0.000669
+    }
+  ],
+  "votes": [
+    {
+      "id": "democratic-institutions-2025-leaders-debates-commission-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 3453796,
+      "used": 616660,
+      "lapsed": 2837136
+    },
+    {
+      "id": "democratic-institutions-2025-leaders-debates-commission-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 52569,
+      "used": 52569,
+      "lapsed": 0
+    },
+    {
+      "id": "democratic-institutions-2025-office-of-the-chief-electoral-officer-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 64630225,
+      "used": 64033614,
+      "lapsed": 596611
+    },
+    {
+      "id": "democratic-institutions-2025-office-of-the-chief-electoral-officer-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 249246078,
+      "used": 249246078,
+      "lapsed": 0
+    },
+    {
+      "id": "democratic-institutions-2025-secretariat-of-the-national-security-and-intelligence-committee-of-parliamentarians-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 3660787,
+      "used": 2877425,
+      "lapsed": 783362
+    },
+    {
+      "id": "democratic-institutions-2025-secretariat-of-the-national-security-and-intelligence-committee-of-parliamentarians-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 215929,
+      "used": 215929,
+      "lapsed": 0
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "democratic-institutions-2025-tp-0000",
+      "category": "Other transfer payments",
+      "description": "Payment of subsidies to candidates' auditors for the 44th general election",
+      "used": 8704
+    },
+    {
+      "id": "democratic-institutions-2025-tp-0001",
+      "category": "Other transfer payments",
+      "description": "Reimbursement of election expenses to candidates and payments of subsidies to candidates' auditors for the current year by-elections",
+      "used": 625611
+    },
+    {
+      "id": "democratic-institutions-2025-tp-0002",
+      "category": "Other transfer payments",
+      "description": "Reimbursement of election expenses to candidates for the 44th general election, paid to assigned recipient",
+      "used": 116315
+    },
+    {
+      "id": "democratic-institutions-2025-tp-0003",
+      "category": "Other transfer payments",
+      "description": "Reimbursement of election expenses to candidates, and payments of subsidies to candidates' auditors for other general elections and by-elections",
+      "used": 94776
+    },
+    {
+      "id": "democratic-institutions-2025-tp-0004",
+      "category": "Other transfer payments",
+      "description": "Subsidies to electoral district associations' auditors",
+      "used": 1218784
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

@@ -1,0 +1,626 @@
+{
+  "name": "Energy and Natural Resources",
+  "slug": "natural-resources",
+  "financialYearEnding": 2022,
+  "reportedAs": "Natural Resources",
+  "basis": "vol2_appropriations",
+  "totalSpending": 3.400436,
+  "percentageOfFederal": 0.6892,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 1.0674
+    },
+    {
+      "year": 2015,
+      "percentage": 0.9714
+    },
+    {
+      "year": 2016,
+      "percentage": 0.7366
+    },
+    {
+      "year": 2017,
+      "percentage": 0.8041
+    },
+    {
+      "year": 2018,
+      "percentage": 0.8325
+    },
+    {
+      "year": 2019,
+      "percentage": 0.7424
+    },
+    {
+      "year": 2020,
+      "percentage": 0.9892
+    },
+    {
+      "year": 2021,
+      "percentage": 0.4131
+    },
+    {
+      "year": 2022,
+      "percentage": 0.6892
+    },
+    {
+      "year": 2023,
+      "percentage": 0.8251
+    },
+    {
+      "year": 2024,
+      "percentage": 0.9947
+    },
+    {
+      "year": 2025,
+      "percentage": 1.1416
+    }
+  ],
+  "miniSankey": {
+    "spending_data": {
+      "id": "natural-resources",
+      "name": "Energy and Natural Resources",
+      "children": [
+        {
+          "id": "natural-resources-org-department-of-natural-resources",
+          "name": "Department of Natural Resources",
+          "children": [
+            {
+              "id": "natural-resources-department-of-natural-resources-vote10",
+              "name": "Vote 10",
+              "amount": 0.848057
+            },
+            {
+              "id": "natural-resources-department-of-natural-resources-vote1",
+              "name": "Vote 1",
+              "amount": 0.662674
+            },
+            {
+              "id": "natural-resources-department-of-natural-resources-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.607207
+            },
+            {
+              "id": "natural-resources-department-of-natural-resources-vote5",
+              "name": "Vote 5",
+              "amount": 0.020564
+            }
+          ],
+          "amount": 2.138502
+        },
+        {
+          "id": "natural-resources-org-atomic-energy-of-canada-limited",
+          "name": "Atomic Energy of Canada Limited",
+          "children": [
+            {
+              "id": "natural-resources-atomic-energy-of-canada-limited-vote1",
+              "name": "Vote 1",
+              "amount": 1.008769
+            }
+          ],
+          "amount": 1.008769
+        },
+        {
+          "id": "natural-resources-org-canadian-nuclear-safety-commission",
+          "name": "Canadian Nuclear Safety Commission",
+          "children": [
+            {
+              "id": "natural-resources-canadian-nuclear-safety-commission-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.108428
+            },
+            {
+              "id": "natural-resources-canadian-nuclear-safety-commission-vote1",
+              "name": "Vote 1",
+              "amount": 0.035112
+            }
+          ],
+          "amount": 0.14354
+        },
+        {
+          "id": "natural-resources-org-canadian-energy-regulator",
+          "name": "Canadian Energy Regulator",
+          "children": [
+            {
+              "id": "natural-resources-canadian-energy-regulator-vote1",
+              "name": "Vote 1",
+              "amount": 0.098366
+            },
+            {
+              "id": "natural-resources-canadian-energy-regulator-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.011003
+            }
+          ],
+          "amount": 0.109369
+        },
+        {
+          "id": "natural-resources-org-northern-pipeline-agency",
+          "name": "Northern Pipeline Agency",
+          "children": [
+            {
+              "id": "natural-resources-northern-pipeline-agency-vote1",
+              "name": "Vote 1",
+              "amount": 0.000248
+            },
+            {
+              "id": "natural-resources-northern-pipeline-agency-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 8.0e-6
+            }
+          ],
+          "amount": 0.000256
+        }
+      ],
+      "amount": 3.400436
+    }
+  },
+  "entities": [
+    {
+      "id": "natural-resources-2022-entity-department-of-natural-resources",
+      "name": "Department of Natural Resources",
+      "value": 2.138501
+    },
+    {
+      "id": "natural-resources-2022-entity-atomic-energy-of-canada-limited",
+      "name": "Atomic Energy of Canada Limited",
+      "value": 1.008769
+    },
+    {
+      "id": "natural-resources-2022-entity-canadian-nuclear-safety-commission",
+      "name": "Canadian Nuclear Safety Commission",
+      "value": 0.14354
+    },
+    {
+      "id": "natural-resources-2022-entity-canadian-energy-regulator",
+      "name": "Canadian Energy Regulator",
+      "value": 0.109369
+    },
+    {
+      "id": "natural-resources-2022-entity-northern-pipeline-agency",
+      "name": "Northern Pipeline Agency",
+      "value": 0.000256
+    }
+  ],
+  "votes": [
+    {
+      "id": "natural-resources-2022-atomic-energy-of-canada-limited-vote1",
+      "vote": "Vote 1",
+      "description": "Payments to the corporation for operating and capital expenditures",
+      "totalAvailable": 1228304417,
+      "used": 1008769322,
+      "lapsed": 219535095
+    },
+    {
+      "id": "natural-resources-2022-canadian-energy-regulator-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 101282008,
+      "used": 98366011,
+      "lapsed": 2915997
+    },
+    {
+      "id": "natural-resources-2022-canadian-energy-regulator-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 11003551,
+      "used": 11003342,
+      "lapsed": 209
+    },
+    {
+      "id": "natural-resources-2022-canadian-nuclear-safety-commission-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 43438842,
+      "used": 35111799,
+      "lapsed": 8327043
+    },
+    {
+      "id": "natural-resources-2022-canadian-nuclear-safety-commission-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 112834599,
+      "used": 108428499,
+      "lapsed": 4406100
+    },
+    {
+      "id": "natural-resources-2022-department-of-natural-resources-vote1",
+      "vote": "Vote 1",
+      "description": "Operating expenditures",
+      "totalAvailable": 845747117,
+      "used": 662673761,
+      "lapsed": 183073356
+    },
+    {
+      "id": "natural-resources-2022-department-of-natural-resources-vote10",
+      "vote": "Vote 10",
+      "description": "Grants and contributions",
+      "totalAvailable": 1722176108,
+      "used": 848056583,
+      "lapsed": 874119525
+    },
+    {
+      "id": "natural-resources-2022-department-of-natural-resources-vote5",
+      "vote": "Vote 5",
+      "description": "Capital expenditures",
+      "totalAvailable": 34378468,
+      "used": 20564097,
+      "lapsed": 13814371
+    },
+    {
+      "id": "natural-resources-2022-department-of-natural-resources-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 614868823,
+      "used": 607206501,
+      "lapsed": 7662322
+    },
+    {
+      "id": "natural-resources-2022-northern-pipeline-agency-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 540000,
+      "used": 248085,
+      "lapsed": 291915
+    },
+    {
+      "id": "natural-resources-2022-northern-pipeline-agency-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 7607,
+      "used": 7607,
+      "lapsed": 0
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "natural-resources-2022-tp-0000",
+      "category": "Contributions",
+      "description": "Clean Energy for Rural and Remote Communities",
+      "used": 33593405
+    },
+    {
+      "id": "natural-resources-2022-tp-0001",
+      "category": "Contributions",
+      "description": "Clean Growth in Natural Resource Sectors Innovation Program",
+      "used": 26666338
+    },
+    {
+      "id": "natural-resources-2022-tp-0002",
+      "category": "Contributions",
+      "description": "Climate Action Support Payments (Energy Manager Program and Clean Energy for Rural and Remote Communities Program) (Budget Implementation Act, 2019, No. 1 [S.C. 2019, c.29])",
+      "used": 459311
+    },
+    {
+      "id": "natural-resources-2022-tp-0003",
+      "category": "Contributions",
+      "description": "Contribution in support of Cyber Security and Critical Energy Infrastructure Protection",
+      "used": 523032
+    },
+    {
+      "id": "natural-resources-2022-tp-0004",
+      "category": "Contributions",
+      "description": "Contribution in support of Investments in the Forest Industry Transformation Program",
+      "used": 47449263
+    },
+    {
+      "id": "natural-resources-2022-tp-0005",
+      "category": "Contributions",
+      "description": "Contribution to encourage effective public participation ensuring that public concerns and values are taken into consideration during the National Energy Board hearing process",
+      "used": 814825
+    },
+    {
+      "id": "natural-resources-2022-tp-0006",
+      "category": "Contributions",
+      "description": "Contribution to the Canada/Newfoundland and Labrador Offshore Petroleum Board (Canada-Newfoundland Atlantic Accord Implementation Act)",
+      "used": 148521
+    },
+    {
+      "id": "natural-resources-2022-tp-0007",
+      "category": "Contributions",
+      "description": "Contribution to the Canada/Nova Scotia Offshore Petroleum Board (Canada-Nova Scotia Offshore Petroleum Resources Accord Implementation Act)",
+      "used": 1289603
+    },
+    {
+      "id": "natural-resources-2022-tp-0008",
+      "category": "Contributions",
+      "description": "Contributions for Clean Technology Challenges",
+      "used": 7497411
+    },
+    {
+      "id": "natural-resources-2022-tp-0009",
+      "category": "Contributions",
+      "description": "Contributions for Growing Canada's Forests",
+      "used": 58835415
+    },
+    {
+      "id": "natural-resources-2022-tp-0010",
+      "category": "Contributions",
+      "description": "Contributions in Support of the Clean Fuels Fund and Codes and Standards Program",
+      "used": 860000
+    },
+    {
+      "id": "natural-resources-2022-tp-0011",
+      "category": "Contributions",
+      "description": "Contributions in support of Accommodation Measures for the Trans Mountain Expansion project",
+      "used": 23676244
+    },
+    {
+      "id": "natural-resources-2022-tp-0012",
+      "category": "Contributions",
+      "description": "Contributions in support of Climate Change Adaptation",
+      "used": 4984508
+    },
+    {
+      "id": "natural-resources-2022-tp-0013",
+      "category": "Contributions",
+      "description": "Contributions in support of Earthquake Early Warning",
+      "used": 3210143
+    },
+    {
+      "id": "natural-resources-2022-tp-0014",
+      "category": "Contributions",
+      "description": "Contributions in support of Energy Efficiency",
+      "used": 13167971
+    },
+    {
+      "id": "natural-resources-2022-tp-0015",
+      "category": "Contributions",
+      "description": "Contributions in support of Expanding Market Opportunities",
+      "used": 14997306
+    },
+    {
+      "id": "natural-resources-2022-tp-0016",
+      "category": "Contributions",
+      "description": "Contributions in support of Home Retrofits",
+      "used": 19866989
+    },
+    {
+      "id": "natural-resources-2022-tp-0017",
+      "category": "Contributions",
+      "description": "Contributions in support of Indigenous Advisory and Monitoring Committees for Energy Infrastructure Projects",
+      "used": 9204656
+    },
+    {
+      "id": "natural-resources-2022-tp-0018",
+      "category": "Contributions",
+      "description": "Contributions in support of Indigenous Economic Development",
+      "used": 1469732
+    },
+    {
+      "id": "natural-resources-2022-tp-0019",
+      "category": "Contributions",
+      "description": "Contributions in support of Indigenous Natural Resource Partnerships",
+      "used": 4860388
+    },
+    {
+      "id": "natural-resources-2022-tp-0020",
+      "category": "Contributions",
+      "description": "Contributions in support of Indigenous Participation in dialogues",
+      "used": 683895
+    },
+    {
+      "id": "natural-resources-2022-tp-0021",
+      "category": "Contributions",
+      "description": "Contributions in support of Indigenous engagement on mapping community wildfire risk",
+      "used": 0
+    },
+    {
+      "id": "natural-resources-2022-tp-0022",
+      "category": "Contributions",
+      "description": "Contributions in support of Mountain Pine Beetle Management in Alberta",
+      "used": 11936189
+    },
+    {
+      "id": "natural-resources-2022-tp-0023",
+      "category": "Contributions",
+      "description": "Contributions in support of Research",
+      "used": 3185544
+    },
+    {
+      "id": "natural-resources-2022-tp-0024",
+      "category": "Contributions",
+      "description": "Contributions in support of Smart Renewables and Electrification Pathways projects",
+      "used": 100081596
+    },
+    {
+      "id": "natural-resources-2022-tp-0025",
+      "category": "Contributions",
+      "description": "Contributions in support of Spruce Budworm Early Intervention Strategy—Phase II",
+      "used": 28796255
+    },
+    {
+      "id": "natural-resources-2022-tp-0026",
+      "category": "Contributions",
+      "description": "Contributions in support of Strategic Interties Predevelopment projects",
+      "used": 0
+    },
+    {
+      "id": "natural-resources-2022-tp-0027",
+      "category": "Contributions",
+      "description": "Contributions in support of Wildland Fire Resilience",
+      "used": 2387421
+    },
+    {
+      "id": "natural-resources-2022-tp-0028",
+      "category": "Contributions",
+      "description": "Contributions in support of Zero Emission Vehicle Infrastructure",
+      "used": 27470228
+    },
+    {
+      "id": "natural-resources-2022-tp-0029",
+      "category": "Contributions",
+      "description": "Contributions in support of the Emissions Reduction Fund",
+      "used": 127146617
+    },
+    {
+      "id": "natural-resources-2022-tp-0030",
+      "category": "Contributions",
+      "description": "Contributions in support of the Forest Innovation Program",
+      "used": 23059584
+    },
+    {
+      "id": "natural-resources-2022-tp-0031",
+      "category": "Contributions",
+      "description": "Contributions in support of the Forest Research Institute Initiative",
+      "used": 2368000
+    },
+    {
+      "id": "natural-resources-2022-tp-0032",
+      "category": "Contributions",
+      "description": "Contributions in support of the GeoConnections Program",
+      "used": 500000
+    },
+    {
+      "id": "natural-resources-2022-tp-0033",
+      "category": "Contributions",
+      "description": "Contributions in support of the Indigenous Consultations Participant Funding Program",
+      "used": 1775434
+    },
+    {
+      "id": "natural-resources-2022-tp-0034",
+      "category": "Contributions",
+      "description": "Contributions in support of the clean-up of the Gunnar uranium mining facilities",
+      "used": 0
+    },
+    {
+      "id": "natural-resources-2022-tp-0035",
+      "category": "Contributions",
+      "description": "Contributions to enable the research, development and management of activities that contribute to the objectives of the Research and Support Program, and the Canadian Safeguards Support Program",
+      "used": 1809949
+    },
+    {
+      "id": "natural-resources-2022-tp-0036",
+      "category": "Contributions",
+      "description": "Electric Vehicle and Alternative Fuel Infrastructure",
+      "used": 20748447
+    },
+    {
+      "id": "natural-resources-2022-tp-0037",
+      "category": "Contributions",
+      "description": "Emerging Renewable Power Program",
+      "used": 21600290
+    },
+    {
+      "id": "natural-resources-2022-tp-0038",
+      "category": "Contributions",
+      "description": "Energy Innovation Program",
+      "used": 41332565
+    },
+    {
+      "id": "natural-resources-2022-tp-0039",
+      "category": "Contributions",
+      "description": "Green Construction through Wood Program",
+      "used": 9635754
+    },
+    {
+      "id": "natural-resources-2022-tp-0040",
+      "category": "Contributions",
+      "description": "Items not required for the current year",
+      "used": 0
+    },
+    {
+      "id": "natural-resources-2022-tp-0041",
+      "category": "Contributions",
+      "description": "Participant Funding Program",
+      "used": 1042518
+    },
+    {
+      "id": "natural-resources-2022-tp-0042",
+      "category": "Contributions",
+      "description": "Payments to the Newfoundland Offshore Petroleum Resource Revenue Fund (Canada-Newfoundland Atlantic Accord Implementation Act)",
+      "used": 438146366
+    },
+    {
+      "id": "natural-resources-2022-tp-0043",
+      "category": "Contributions",
+      "description": "Payments to the Nova Scotia Offshore Revenue Account",
+      "used": 105999556
+    },
+    {
+      "id": "natural-resources-2022-tp-0044",
+      "category": "Contributions",
+      "description": "Smart Grids Programs",
+      "used": 17041921
+    },
+    {
+      "id": "natural-resources-2022-tp-0045",
+      "category": "Contributions",
+      "description": "Youth Employment and Skills Strategy",
+      "used": 41531267
+    },
+    {
+      "id": "natural-resources-2022-tp-0046",
+      "category": "Grants",
+      "description": "Grants for Capacity Building for Growing Canada's Forests",
+      "used": 312000
+    },
+    {
+      "id": "natural-resources-2022-tp-0047",
+      "category": "Grants",
+      "description": "Grants in support of Clean Technology Challenges",
+      "used": 21400000
+    },
+    {
+      "id": "natural-resources-2022-tp-0048",
+      "category": "Grants",
+      "description": "Grants in support of Engagement and Capacity Building, Smart Renewables and Electrification Pathways",
+      "used": 100000
+    },
+    {
+      "id": "natural-resources-2022-tp-0049",
+      "category": "Grants",
+      "description": "Grants in support of Geoscience",
+      "used": 1200062
+    },
+    {
+      "id": "natural-resources-2022-tp-0050",
+      "category": "Grants",
+      "description": "Grants in support of Home Retrofits",
+      "used": 53610498
+    },
+    {
+      "id": "natural-resources-2022-tp-0051",
+      "category": "Grants",
+      "description": "Grants in support of Improving Diversity in the Canadian Forest Sector Workforce under the program entitled Forest Innovation Program Grants in support of Clean Energy for Rural and Remote Communities",
+      "used": 12166000
+    },
+    {
+      "id": "natural-resources-2022-tp-0052",
+      "category": "Grants",
+      "description": "Grants in support of Innovative Solutions Canada",
+      "used": 2000000
+    },
+    {
+      "id": "natural-resources-2022-tp-0053",
+      "category": "Grants",
+      "description": "Grants in support of Oil Spill Recovery Technology under the program entitled Incentives to Develop Oil Spill Recovery Technologies",
+      "used": 0
+    },
+    {
+      "id": "natural-resources-2022-tp-0054",
+      "category": "Grants",
+      "description": "Grants in support of Outreach and Engagement, Energy Efficiency and Energy Innovation",
+      "used": 4124215
+    },
+    {
+      "id": "natural-resources-2022-tp-0055",
+      "category": "Grants",
+      "description": "Grants in support of the Canadian Interagency Forest Fire Centre",
+      "used": 1000000
+    },
+    {
+      "id": "natural-resources-2022-tp-0056",
+      "category": "Grants",
+      "description": "Grants to enable the research, development and management of activities that contribute to the objectives of the Research and Support Program",
+      "used": 63000
+    },
+    {
+      "id": "natural-resources-2022-tp-0057",
+      "category": "Grants",
+      "description": "Grants to encourage effective public participation ensuring that public concerns and values are taken into consideration during the National Energy Board hearing process",
+      "used": 228000
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

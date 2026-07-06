@@ -1,0 +1,309 @@
+{
+  "name": "Privy Council",
+  "slug": "privy-council",
+  "financialYearEnding": 2019,
+  "reportedAs": null,
+  "basis": "vol2_appropriations",
+  "totalSpending": 0.375459,
+  "percentageOfFederal": 0.1111,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 0.1211
+    },
+    {
+      "year": 2015,
+      "percentage": 0.1235
+    },
+    {
+      "year": 2016,
+      "percentage": 0.2341
+    },
+    {
+      "year": 2017,
+      "percentage": 0.1057
+    },
+    {
+      "year": 2018,
+      "percentage": 0.1249
+    },
+    {
+      "year": 2019,
+      "percentage": 0.1111
+    },
+    {
+      "year": 2020,
+      "percentage": 0.258
+    },
+    {
+      "year": 2021,
+      "percentage": 0.0938
+    },
+    {
+      "year": 2022,
+      "percentage": 0.0731
+    },
+    {
+      "year": 2023,
+      "percentage": 0.088
+    },
+    {
+      "year": 2024,
+      "percentage": 0.084
+    },
+    {
+      "year": 2025,
+      "percentage": 0.0796
+    }
+  ],
+  "miniSankey": {
+    "spending_data": {
+      "id": "privy-council",
+      "name": "Privy Council",
+      "children": [
+        {
+          "id": "privy-council-org-privy-council-office",
+          "name": "Privy Council Office",
+          "children": [
+            {
+              "id": "privy-council-privy-council-office-vote1",
+              "name": "Vote 1",
+              "amount": 0.198639
+            },
+            {
+              "id": "privy-council-privy-council-office-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.016598
+            }
+          ],
+          "amount": 0.215237
+        },
+        {
+          "id": "privy-council-org-public-service-commission",
+          "name": "Public Service Commission",
+          "children": [
+            {
+              "id": "privy-council-public-service-commission-vote1",
+              "name": "Vote 1",
+              "amount": 0.085895
+            },
+            {
+              "id": "privy-council-public-service-commission-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.010041
+            }
+          ],
+          "amount": 0.095936
+        },
+        {
+          "id": "privy-council-org-canadian-transportation-accident-investigation-and-safety-board",
+          "name": "Canadian Transportation Accident Investigation and Safety Board",
+          "children": [
+            {
+              "id": "privy-council-canadian-transportation-accident-investigation-and-safety-board-vote1",
+              "name": "Vote 1",
+              "amount": 0.028746
+            },
+            {
+              "id": "privy-council-canadian-transportation-accident-investigation-and-safety-board-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.003374
+            }
+          ],
+          "amount": 0.03212
+        },
+        {
+          "id": "privy-council-org-office-of-the-commissioner-of-official-languages",
+          "name": "Office of the Commissioner of Official Languages",
+          "children": [
+            {
+              "id": "privy-council-office-of-the-commissioner-of-official-languages-vote1",
+              "name": "Vote 1",
+              "amount": 0.019746
+            },
+            {
+              "id": "privy-council-office-of-the-commissioner-of-official-languages-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.002157
+            }
+          ],
+          "amount": 0.021903
+        },
+        {
+          "id": "privy-council-org-canadian-intergovernmental-conference-secretariat",
+          "name": "Canadian Intergovernmental Conference Secretariat",
+          "children": [
+            {
+              "id": "privy-council-canadian-intergovernmental-conference-secretariat-vote1",
+              "name": "Vote 1",
+              "amount": 0.004976
+            },
+            {
+              "id": "privy-council-canadian-intergovernmental-conference-secretariat-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.000295
+            }
+          ],
+          "amount": 0.005271
+        },
+        {
+          "id": "privy-council-org-security-intelligence-review-committee",
+          "name": "Security Intelligence Review Committee",
+          "children": [
+            {
+              "id": "privy-council-security-intelligence-review-committee-vote1",
+              "name": "Vote 1",
+              "amount": 0.004635
+            },
+            {
+              "id": "privy-council-security-intelligence-review-committee-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.000357
+            }
+          ],
+          "amount": 0.004992
+        }
+      ],
+      "amount": 0.375459
+    }
+  },
+  "entities": [
+    {
+      "id": "privy-council-2019-entity-privy-council-office",
+      "name": "Privy Council Office",
+      "value": 0.215237
+    },
+    {
+      "id": "privy-council-2019-entity-public-service-commission",
+      "name": "Public Service Commission",
+      "value": 0.095935
+    },
+    {
+      "id": "privy-council-2019-entity-canadian-transportation-accident-investigation-and-safety-board",
+      "name": "Canadian Transportation Accident Investigation and Safety Board",
+      "value": 0.032121
+    },
+    {
+      "id": "privy-council-2019-entity-office-of-the-commissioner-of-official-languages",
+      "name": "Office of the Commissioner of Official Languages",
+      "value": 0.021903
+    },
+    {
+      "id": "privy-council-2019-entity-canadian-intergovernmental-conference-secretariat",
+      "name": "Canadian Intergovernmental Conference Secretariat",
+      "value": 0.005271
+    },
+    {
+      "id": "privy-council-2019-entity-security-intelligence-review-committee",
+      "name": "Security Intelligence Review Committee",
+      "value": 0.004993
+    }
+  ],
+  "votes": [
+    {
+      "id": "privy-council-2019-canadian-intergovernmental-conference-secretariat-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 5888971,
+      "used": 4975659,
+      "lapsed": 913312
+    },
+    {
+      "id": "privy-council-2019-canadian-intergovernmental-conference-secretariat-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 294915,
+      "used": 294915,
+      "lapsed": 0
+    },
+    {
+      "id": "privy-council-2019-canadian-transportation-accident-investigation-and-safety-board-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 30054710,
+      "used": 28746407,
+      "lapsed": 1308303
+    },
+    {
+      "id": "privy-council-2019-canadian-transportation-accident-investigation-and-safety-board-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 3412646,
+      "used": 3374495,
+      "lapsed": 38151
+    },
+    {
+      "id": "privy-council-2019-office-of-the-commissioner-of-official-languages-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 20511019,
+      "used": 19745847,
+      "lapsed": 765172
+    },
+    {
+      "id": "privy-council-2019-office-of-the-commissioner-of-official-languages-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 2156673,
+      "used": 2156673,
+      "lapsed": 0
+    },
+    {
+      "id": "privy-council-2019-privy-council-office-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 218466979,
+      "used": 198639090,
+      "lapsed": 19827889
+    },
+    {
+      "id": "privy-council-2019-privy-council-office-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 16612050,
+      "used": 16598079,
+      "lapsed": 13971
+    },
+    {
+      "id": "privy-council-2019-public-service-commission-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 93697140,
+      "used": 85894838,
+      "lapsed": 7802302
+    },
+    {
+      "id": "privy-council-2019-public-service-commission-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 10040574,
+      "used": 10040574,
+      "lapsed": 0
+    },
+    {
+      "id": "privy-council-2019-security-intelligence-review-committee-vote1",
+      "vote": "Vote 1",
+      "description": "Program expenditures",
+      "totalAvailable": 4958824,
+      "used": 4635457,
+      "lapsed": 323367
+    },
+    {
+      "id": "privy-council-2019-security-intelligence-review-committee-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 357592,
+      "used": 357096,
+      "lapsed": 496
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "privy-council-2019-tp-0000",
+      "category": "Contributions",
+      "description": "National Inquiry into Missing and Murdered Indigenous Women and Girls",
+      "used": 7431001
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

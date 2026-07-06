@@ -1,0 +1,531 @@
+{
+  "name": "Energy and Natural Resources",
+  "slug": "natural-resources",
+  "financialYearEnding": 2014,
+  "reportedAs": "Natural Resources",
+  "basis": "vol2_appropriations",
+  "totalSpending": 2.758175,
+  "percentageOfFederal": 1.0674,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 1.0674
+    },
+    {
+      "year": 2015,
+      "percentage": 0.9714
+    },
+    {
+      "year": 2016,
+      "percentage": 0.7366
+    },
+    {
+      "year": 2017,
+      "percentage": 0.8041
+    },
+    {
+      "year": 2018,
+      "percentage": 0.8325
+    },
+    {
+      "year": 2019,
+      "percentage": 0.7424
+    },
+    {
+      "year": 2020,
+      "percentage": 0.9892
+    },
+    {
+      "year": 2021,
+      "percentage": 0.4131
+    },
+    {
+      "year": 2022,
+      "percentage": 0.6892
+    },
+    {
+      "year": 2023,
+      "percentage": 0.8251
+    },
+    {
+      "year": 2024,
+      "percentage": 0.9947
+    },
+    {
+      "year": 2025,
+      "percentage": 1.1416
+    }
+  ],
+  "miniSankey": {
+    "spending_data": {
+      "id": "natural-resources",
+      "name": "Energy and Natural Resources",
+      "children": [
+        {
+          "id": "natural-resources-org-natural-resources",
+          "name": "Natural Resources",
+          "children": [
+            {
+              "id": "natural-resources-natural-resources-vote1",
+              "name": "Vote 1",
+              "amount": 0.859422
+            },
+            {
+              "id": "natural-resources-natural-resources-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.857351
+            },
+            {
+              "id": "natural-resources-natural-resources-vote10",
+              "name": "Vote 10",
+              "amount": 0.401398
+            },
+            {
+              "id": "natural-resources-natural-resources-vote5",
+              "name": "Vote 5",
+              "amount": 0.02607
+            }
+          ],
+          "amount": 2.144241
+        },
+        {
+          "id": "natural-resources-org-atomic-energy-of-canada-limited",
+          "name": "Atomic Energy of Canada Limited",
+          "children": [
+            {
+              "id": "natural-resources-atomic-energy-of-canada-limited-vote15",
+              "name": "Vote 15",
+              "amount": 0.351763
+            },
+            {
+              "id": "natural-resources-atomic-energy-of-canada-limited-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.0337
+            }
+          ],
+          "amount": 0.385463
+        },
+        {
+          "id": "natural-resources-org-canadian-nuclear-safety-commission",
+          "name": "Canadian Nuclear Safety Commission",
+          "children": [
+            {
+              "id": "natural-resources-canadian-nuclear-safety-commission-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.099486
+            },
+            {
+              "id": "natural-resources-canadian-nuclear-safety-commission-vote20",
+              "name": "Vote 20",
+              "amount": 0.046131
+            }
+          ],
+          "amount": 0.145617
+        },
+        {
+          "id": "natural-resources-org-national-energy-board",
+          "name": "National Energy Board",
+          "children": [
+            {
+              "id": "natural-resources-national-energy-board-vote25",
+              "name": "Vote 25",
+              "amount": 0.073286
+            },
+            {
+              "id": "natural-resources-national-energy-board-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.008397
+            }
+          ],
+          "amount": 0.081683
+        },
+        {
+          "id": "natural-resources-org-northern-pipeline-agency",
+          "name": "Northern Pipeline Agency",
+          "children": [
+            {
+              "id": "natural-resources-northern-pipeline-agency-vote30",
+              "name": "Vote 30",
+              "amount": 0.001039
+            },
+            {
+              "id": "natural-resources-northern-pipeline-agency-voteStatutory",
+              "name": "Statutory amounts",
+              "amount": 0.000134
+            }
+          ],
+          "amount": 0.001173
+        }
+      ],
+      "amount": 2.758177
+    }
+  },
+  "entities": [
+    {
+      "id": "natural-resources-2014-entity-natural-resources",
+      "name": "Natural Resources",
+      "value": 2.14424
+    },
+    {
+      "id": "natural-resources-2014-entity-atomic-energy-of-canada-limited",
+      "name": "Atomic Energy of Canada Limited",
+      "value": 0.385463
+    },
+    {
+      "id": "natural-resources-2014-entity-canadian-nuclear-safety-commission",
+      "name": "Canadian Nuclear Safety Commission",
+      "value": 0.145617
+    },
+    {
+      "id": "natural-resources-2014-entity-national-energy-board",
+      "name": "National Energy Board",
+      "value": 0.081683
+    },
+    {
+      "id": "natural-resources-2014-entity-northern-pipeline-agency",
+      "name": "Northern Pipeline Agency",
+      "value": 0.001173
+    }
+  ],
+  "votes": [
+    {
+      "id": "natural-resources-2014-atomic-energy-of-canada-limited-vote15",
+      "vote": "Vote 15",
+      "description": "Payments to Atomic Energy of Canada Limited for operating and capital expenditures",
+      "totalAvailable": 378062900,
+      "used": 351762900,
+      "lapsed": 26300000
+    },
+    {
+      "id": "natural-resources-2014-atomic-energy-of-canada-limited-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 33700000,
+      "used": 33700000,
+      "lapsed": 0
+    },
+    {
+      "id": "natural-resources-2014-canadian-nuclear-safety-commission-vote20",
+      "vote": "Vote 20",
+      "description": "Program expenditures",
+      "totalAvailable": 49630375,
+      "used": 46130800,
+      "lapsed": 3499575
+    },
+    {
+      "id": "natural-resources-2014-canadian-nuclear-safety-commission-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 101824231,
+      "used": 99486221,
+      "lapsed": 2338010
+    },
+    {
+      "id": "natural-resources-2014-national-energy-board-vote25",
+      "vote": "Vote 25",
+      "description": "Program expenditures",
+      "totalAvailable": 77902681,
+      "used": 73286166,
+      "lapsed": 4616515
+    },
+    {
+      "id": "natural-resources-2014-national-energy-board-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 8396682,
+      "used": 8396515,
+      "lapsed": 167
+    },
+    {
+      "id": "natural-resources-2014-natural-resources-vote1",
+      "vote": "Vote 1",
+      "description": "Operating expenditures",
+      "totalAvailable": 938624096,
+      "used": 859422467,
+      "lapsed": 79201629
+    },
+    {
+      "id": "natural-resources-2014-natural-resources-vote10",
+      "vote": "Vote 10",
+      "description": "Grants and contributions",
+      "totalAvailable": 608827748,
+      "used": 401397529,
+      "lapsed": 207430219
+    },
+    {
+      "id": "natural-resources-2014-natural-resources-vote5",
+      "vote": "Vote 5",
+      "description": "Capital expenditures",
+      "totalAvailable": 28795341,
+      "used": 26069585,
+      "lapsed": 2725756
+    },
+    {
+      "id": "natural-resources-2014-natural-resources-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 864652097,
+      "used": 857350572,
+      "lapsed": 7301525
+    },
+    {
+      "id": "natural-resources-2014-northern-pipeline-agency-vote30",
+      "vote": "Vote 30",
+      "description": "Program expenditures",
+      "totalAvailable": 3003000,
+      "used": 1038693,
+      "lapsed": 1964307
+    },
+    {
+      "id": "natural-resources-2014-northern-pipeline-agency-voteStatutory",
+      "vote": "Statutory amounts",
+      "description": "Statutory amounts",
+      "totalAvailable": 133931,
+      "used": 133931,
+      "lapsed": 0
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "natural-resources-2014-tp-0000",
+      "category": "Contributions",
+      "description": "Canadian Nuclear Safety Commission",
+      "used": 0
+    },
+    {
+      "id": "natural-resources-2014-tp-0001",
+      "category": "Contributions",
+      "description": "Clean Energy Fund program",
+      "used": 9704540
+    },
+    {
+      "id": "natural-resources-2014-tp-0002",
+      "category": "Contributions",
+      "description": "Climate change adaptation initiatives",
+      "used": 4297080
+    },
+    {
+      "id": "natural-resources-2014-tp-0003",
+      "category": "Contributions",
+      "description": "Contribution Program for expanding market opportunities",
+      "used": 13639058
+    },
+    {
+      "id": "natural-resources-2014-tp-0004",
+      "category": "Contributions",
+      "description": "Contribution in support of the Investments in forest industry transformation program",
+      "used": 25625000
+    },
+    {
+      "id": "natural-resources-2014-tp-0005",
+      "category": "Contributions",
+      "description": "Contribution in support of the clean‑up of the Gunnar uranium mining facilities",
+      "used": 0
+    },
+    {
+      "id": "natural-resources-2014-tp-0006",
+      "category": "Contributions",
+      "description": "Contribution program for African model forest initiative",
+      "used": 1840055
+    },
+    {
+      "id": "natural-resources-2014-tp-0007",
+      "category": "Contributions",
+      "description": "Contribution to the Aboriginal Forestry Initiative",
+      "used": 322386
+    },
+    {
+      "id": "natural-resources-2014-tp-0008",
+      "category": "Contributions",
+      "description": "Contribution to the Canada/Newfoundland Offshore Petroleum Board",
+      "used": 4708800
+    },
+    {
+      "id": "natural-resources-2014-tp-0009",
+      "category": "Contributions",
+      "description": "Contribution to the Canada/Nova Scotia Offshore Petroleum Board",
+      "used": 2924779
+    },
+    {
+      "id": "natural-resources-2014-tp-0010",
+      "category": "Contributions",
+      "description": "Contributions in support of a sustained engagement and outreach campaign",
+      "used": 324300
+    },
+    {
+      "id": "natural-resources-2014-tp-0011",
+      "category": "Contributions",
+      "description": "Contributions in support of ecoENERGY Efficiency program",
+      "used": 948241
+    },
+    {
+      "id": "natural-resources-2014-tp-0012",
+      "category": "Contributions",
+      "description": "Contributions in support of ecoENERGY alternative fuel",
+      "used": 316500
+    },
+    {
+      "id": "natural-resources-2014-tp-0013",
+      "category": "Contributions",
+      "description": "Contributions in support of ecoENERGY for biofuels",
+      "used": 113656336
+    },
+    {
+      "id": "natural-resources-2014-tp-0014",
+      "category": "Contributions",
+      "description": "Contributions in support of ecoENERGY for renewable power",
+      "used": 127117878
+    },
+    {
+      "id": "natural-resources-2014-tp-0015",
+      "category": "Contributions",
+      "description": "Contributions in support of ecoENERGY innovation initiative",
+      "used": 34325606
+    },
+    {
+      "id": "natural-resources-2014-tp-0016",
+      "category": "Contributions",
+      "description": "Contributions in support of organizations associated with the research, development and promotion of activities that contribute to departmental objectives",
+      "used": 3150271
+    },
+    {
+      "id": "natural-resources-2014-tp-0017",
+      "category": "Contributions",
+      "description": "Contributions in support of the Forest innovation program",
+      "used": 24353130
+    },
+    {
+      "id": "natural-resources-2014-tp-0018",
+      "category": "Contributions",
+      "description": "Contributions in support of the Isotope technology acceleration program to advance the development of alternatives to existing medical isotope production technologies",
+      "used": 8995000
+    },
+    {
+      "id": "natural-resources-2014-tp-0019",
+      "category": "Contributions",
+      "description": "Contributions to enable the research, development and management of activities that contribute to the objectives of the Research and support program, and the Canadian safeguards support program",
+      "used": 1365752
+    },
+    {
+      "id": "natural-resources-2014-tp-0020",
+      "category": "Contributions",
+      "description": "Forest communities program",
+      "used": 900000
+    },
+    {
+      "id": "natural-resources-2014-tp-0021",
+      "category": "Contributions",
+      "description": "Funding to conduct consultation activities, primarily with Aboriginal groups who could be affected by the Foothills Pipe Lines project",
+      "used": 0
+    },
+    {
+      "id": "natural-resources-2014-tp-0022",
+      "category": "Contributions",
+      "description": "GeoConnections program",
+      "used": 733354
+    },
+    {
+      "id": "natural-resources-2014-tp-0023",
+      "category": "Contributions",
+      "description": "National Energy Board",
+      "used": 0
+    },
+    {
+      "id": "natural-resources-2014-tp-0024",
+      "category": "Contributions",
+      "description": "Northern Pipeline Agency",
+      "used": 0
+    },
+    {
+      "id": "natural-resources-2014-tp-0025",
+      "category": "Contributions",
+      "description": "Participant funding program",
+      "used": 282878
+    },
+    {
+      "id": "natural-resources-2014-tp-0026",
+      "category": "Contributions",
+      "description": "Participant funding program",
+      "used": 316297
+    },
+    {
+      "id": "natural-resources-2014-tp-0027",
+      "category": "Contributions",
+      "description": "Payments of the Crown Share Adjustment for Nova Scotia Offshore Petroleum Resources",
+      "used": 12855636
+    },
+    {
+      "id": "natural-resources-2014-tp-0028",
+      "category": "Contributions",
+      "description": "Payments to the Newfoundland Offshore Petroleum Resource Revenue Fund",
+      "used": 731533986
+    },
+    {
+      "id": "natural-resources-2014-tp-0029",
+      "category": "Contributions",
+      "description": "Payments to the Nova Scotia Offshore Revenue Account",
+      "used": 43861520
+    },
+    {
+      "id": "natural-resources-2014-tp-0030",
+      "category": "Contributions",
+      "description": "Renewal and enhancement of funding for the Forest Research Institute",
+      "used": 2368000
+    },
+    {
+      "id": "natural-resources-2014-tp-0031",
+      "category": "Contributions",
+      "description": "Wind power production incentive contribution program",
+      "used": 25304000
+    },
+    {
+      "id": "natural-resources-2014-tp-0032",
+      "category": "Contributions",
+      "description": "Youth employment strategy",
+      "used": 542481
+    },
+    {
+      "id": "natural-resources-2014-tp-0033",
+      "category": "Grants",
+      "description": "Grant to the Canada Foundation for Sustainable Development Technology",
+      "used": 0
+    },
+    {
+      "id": "natural-resources-2014-tp-0034",
+      "category": "Grants",
+      "description": "Grants in support of a sustained engagement and outreach campaign",
+      "used": 100000
+    },
+    {
+      "id": "natural-resources-2014-tp-0035",
+      "category": "Grants",
+      "description": "Grants in support of organizations associated with the research, development and promotion of activities that contribute to departmental objectives",
+      "used": 1596825
+    },
+    {
+      "id": "natural-resources-2014-tp-0036",
+      "category": "Grants",
+      "description": "Grants in support of the Geo‑mapping for Energy and Minerals program",
+      "used": 86400
+    },
+    {
+      "id": "natural-resources-2014-tp-0037",
+      "category": "Grants",
+      "description": "Grants in support of the Property value protection program and the Municipal tax revenue loss protection program associated with low‑level radioactive waste clean‑up in the Port Hope area",
+      "used": 1151088
+    },
+    {
+      "id": "natural-resources-2014-tp-0038",
+      "category": "Grants",
+      "description": "Grants to enable the research, development and management of activities that contribute to the objectives of the Research and support program",
+      "used": 75000
+    },
+    {
+      "id": "natural-resources-2014-tp-0039",
+      "category": "Grants",
+      "description": "Items not required for the current year",
+      "used": 0
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

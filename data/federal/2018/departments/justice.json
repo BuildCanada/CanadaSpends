@@ -1,0 +1,262 @@
+{
+  "name": "Justice",
+  "slug": "justice",
+  "financialYearEnding": 2018,
+  "reportedAs": null,
+  "basis": "vol2_appropriations",
+  "totalSpending": 2.064244,
+  "percentageOfFederal": 0.6454,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 0.8655
+    },
+    {
+      "year": 2015,
+      "percentage": 0.8234
+    },
+    {
+      "year": 2016,
+      "percentage": 0.8017
+    },
+    {
+      "year": 2017,
+      "percentage": 0.7764
+    },
+    {
+      "year": 2018,
+      "percentage": 0.6454
+    },
+    {
+      "year": 2019,
+      "percentage": 0.6544
+    },
+    {
+      "year": 2020,
+      "percentage": 0.6304
+    },
+    {
+      "year": 2021,
+      "percentage": 0.3728
+    },
+    {
+      "year": 2022,
+      "percentage": 0.5091
+    },
+    {
+      "year": 2023,
+      "percentage": 0.5726
+    },
+    {
+      "year": 2024,
+      "percentage": 0.5778
+    },
+    {
+      "year": 2025,
+      "percentage": 0.6101
+    }
+  ],
+  "miniSankey": {
+    "spending_data": {
+      "id": "justice",
+      "name": "Justice",
+      "children": [
+        {
+          "id": "justice-org-justice",
+          "name": "Justice",
+          "children": [
+            {
+              "id": "justice-justice-vote",
+              "name": "All votes",
+              "amount": 2.064244
+            }
+          ],
+          "amount": 2.064244
+        }
+      ],
+      "amount": 2.064244
+    }
+  },
+  "entities": [
+    {
+      "id": "justice-2018-entity-justice",
+      "name": "Justice",
+      "value": 2.064244
+    }
+  ],
+  "votes": [
+    {
+      "id": "justice-2018-justice-vote",
+      "vote": "All votes",
+      "description": "Total appropriations (vote-level detail not published for this edition)",
+      "totalAvailable": 2128415749,
+      "used": 2064244474,
+      "lapsed": 64171275
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "justice-2018-tp-0000",
+      "category": "Contributions",
+      "description": "Contributions for Access to Justice Services to the Territories (being Legal Aid, Indigenous Courtwork and Public Legal Education and Information Services)",
+      "used": 6406593
+    },
+    {
+      "id": "justice-2018-tp-0001",
+      "category": "Contributions",
+      "description": "Contributions from the Victims Fund",
+      "used": 24211192
+    },
+    {
+      "id": "justice-2018-tp-0002",
+      "category": "Contributions",
+      "description": "Contributions in support of Public Security and Anti-Terrorism—Legal Aid",
+      "used": 0
+    },
+    {
+      "id": "justice-2018-tp-0003",
+      "category": "Contributions",
+      "description": "Contributions in support of the Canadian Family Justice Fund",
+      "used": 15934485
+    },
+    {
+      "id": "justice-2018-tp-0004",
+      "category": "Contributions",
+      "description": "Contributions in support of the Youth Justice Fund",
+      "used": 4111997
+    },
+    {
+      "id": "justice-2018-tp-0005",
+      "category": "Contributions",
+      "description": "Contributions to support the implementation of official languages requirements under the Contraventions Act",
+      "used": 3666498
+    },
+    {
+      "id": "justice-2018-tp-0006",
+      "category": "Contributions",
+      "description": "Contributions to the Hague Conference on Private International Law",
+      "used": 310409
+    },
+    {
+      "id": "justice-2018-tp-0007",
+      "category": "Contributions",
+      "description": "Contributions to the International Institute for the Unification of Private Law (UNIDROIT)",
+      "used": 194114
+    },
+    {
+      "id": "justice-2018-tp-0008",
+      "category": "Contributions",
+      "description": "Contributions to the provinces and territories in support of the youth justice services",
+      "used": 141692415
+    },
+    {
+      "id": "justice-2018-tp-0009",
+      "category": "Contributions",
+      "description": "Contributions to the provinces and territories in support of the youth justice services—Intensive Rehabilitative Custody and Supervision Program",
+      "used": 11287933
+    },
+    {
+      "id": "justice-2018-tp-0010",
+      "category": "Contributions",
+      "description": "Contributions to the provinces to assist in the operation of immigration and refugee legal aid",
+      "used": 22568880
+    },
+    {
+      "id": "justice-2018-tp-0011",
+      "category": "Contributions",
+      "description": "Contributions to the provinces to assist in the operation of legal aid systems",
+      "used": 119727507
+    },
+    {
+      "id": "justice-2018-tp-0012",
+      "category": "Contributions",
+      "description": "Contributions to the provinces under the Indigenous Courtwork Program",
+      "used": 7950845
+    },
+    {
+      "id": "justice-2018-tp-0013",
+      "category": "Contributions",
+      "description": "Contributions under the Access to Justice in Both Official Languages Support Fund",
+      "used": 6175720
+    },
+    {
+      "id": "justice-2018-tp-0014",
+      "category": "Contributions",
+      "description": "Contributions under the Indigenous Justice Program Fund",
+      "used": 12650000
+    },
+    {
+      "id": "justice-2018-tp-0015",
+      "category": "Contributions",
+      "description": "Contributions under the Justice Partnership and Innovation Program",
+      "used": 1356329
+    },
+    {
+      "id": "justice-2018-tp-0016",
+      "category": "Contributions",
+      "description": "Contributions under the Special Advocates Program",
+      "used": 44448
+    },
+    {
+      "id": "justice-2018-tp-0017",
+      "category": "Contributions",
+      "description": "Contributions under the State-Funded Counsel Component of the Legal Aid Program",
+      "used": 1104758
+    },
+    {
+      "id": "justice-2018-tp-0018",
+      "category": "Contributions",
+      "description": "Drug Treatment Court Funding Program",
+      "used": 3781276
+    },
+    {
+      "id": "justice-2018-tp-0019",
+      "category": "Contributions",
+      "description": "Integrated Market Enforcement Teams Reserve Fund",
+      "used": 56500
+    },
+    {
+      "id": "justice-2018-tp-0020",
+      "category": "Contributions",
+      "description": "Items not required for the current year",
+      "used": 0
+    },
+    {
+      "id": "justice-2018-tp-0021",
+      "category": "Contributions",
+      "description": "The Personal Information Protection and Electronic Documents Act Class Contribution Program",
+      "used": 475745
+    },
+    {
+      "id": "justice-2018-tp-0022",
+      "category": "Grants",
+      "description": "Grant under the Justice Partnership and Innovation Program",
+      "used": 1582972
+    },
+    {
+      "id": "justice-2018-tp-0023",
+      "category": "Grants",
+      "description": "Grants from the Victims Fund",
+      "used": 2230896
+    },
+    {
+      "id": "justice-2018-tp-0024",
+      "category": "Grants",
+      "description": "Grants in support of the Youth Justice Fund",
+      "used": 79650
+    },
+    {
+      "id": "justice-2018-tp-0025",
+      "category": "Grants",
+      "description": "Grants under the Access to Justice in both Official Languages Support Fund",
+      "used": 81727
+    },
+    {
+      "id": "justice-2018-tp-0026",
+      "category": "Grants",
+      "description": "Grants under the Indigenous Justice Program Fund",
+      "used": 50000
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

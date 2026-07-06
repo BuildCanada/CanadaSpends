@@ -1,0 +1,13 @@
+---
+reviewed: false
+source: llm-first-pass
+generated: 2026-07-06
+---
+
+{{name}} Canada est le ministère fédéral responsable de la politique nationale des transports et de la réglementation de la sûreté et de la sécurité des secteurs du transport aérien, maritime, ferroviaire et routier. Ses activités comprennent l'établissement et l'application de normes de sécurité, la surveillance des infrastructures de transport de compétence fédérale, ainsi que l'administration de programmes appuyant le déplacement des personnes et des marchandises à l'échelle du pays. Le ministère supervise également un groupe de sociétés d'État et d'organismes distincts qui assurent en son nom des services et des fonctions réglementaires liés aux transports, qu'il s'agisse de l'exploitation de services ferroviaires et de traversiers pour passagers, du contrôle de sûreté aérienne ou de la réglementation économique du secteur des transports.
+
+Au cours de l'exercice 2013-2014, {{name}} Canada a déclaré des dépenses totales de {{totalSpending}}, ce qui représente {{percentageOfFederal}} des dépenses fédérales de l'exercice. Les autorisations de dépenser du ministère et de ses entités connexes étaient réparties entre 14 crédits, reflétant l'éventail des activités de fonctionnement, d'immobilisations et de subventions et contributions menées dans l'ensemble du portefeuille.
+
+Le ministère des Transports lui-même représentait la plus grande part des dépenses du portefeuille, suivi de l'Administration canadienne de la sûreté du transport aérien, responsable du contrôle de sûreté dans les aéroports canadiens. VIA Rail Canada Inc. et Marine Atlantique S.C.C., qui exploitent respectivement des services nationaux de transport ferroviaire de passagers et de traversier, ainsi que la Société des ponts Jacques-Cartier et Champlain Inc., qui gère d'importantes infrastructures de ponts dans la région de Montréal, représentaient des parts plus modestes du total. Parmi les programmes de subventions et de contributions du ministère, le plus important appuyait le Fonds pour les portes d'entrée et les corridors de transport de l'Asie-Pacifique, suivi du Fonds pour les portes d'entrée et les passages frontaliers, et de programmes de contribution de moindre envergure appuyant des services de traversier et de liaison, dont le paiement de subvention pour la traverse du détroit de Northumberland, une subvention à la province de la Colombie-Britannique pour les services de traversier et de fret et passagers côtiers, et le Programme de contribution pour les services de traversier.
+
+<!-- verification: see English version for source verification notes -->

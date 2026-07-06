@@ -1,0 +1,202 @@
+{
+  "name": "National Defence",
+  "slug": "national-defence",
+  "financialYearEnding": 2017,
+  "reportedAs": null,
+  "basis": "vol2_appropriations",
+  "totalSpending": 20.102858,
+  "percentageOfFederal": 6.7027,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 7.762
+    },
+    {
+      "year": 2015,
+      "percentage": 7.4097
+    },
+    {
+      "year": 2016,
+      "percentage": 7.0541
+    },
+    {
+      "year": 2017,
+      "percentage": 6.7027
+    },
+    {
+      "year": 2018,
+      "percentage": 7.4751
+    },
+    {
+      "year": 2019,
+      "percentage": 6.7204
+    },
+    {
+      "year": 2020,
+      "percentage": 6.6088
+    },
+    {
+      "year": 2021,
+      "percentage": 4.4523
+    },
+    {
+      "year": 2022,
+      "percentage": 5.1251
+    },
+    {
+      "year": 2023,
+      "percentage": 5.9641
+    },
+    {
+      "year": 2024,
+      "percentage": 6.7806
+    },
+    {
+      "year": 2025,
+      "percentage": 6.5109
+    }
+  ],
+  "miniSankey": {
+    "spending_data": {
+      "id": "national-defence",
+      "name": "National Defence",
+      "children": [
+        {
+          "id": "national-defence-org-national-defence",
+          "name": "National Defence",
+          "children": [
+            {
+              "id": "national-defence-national-defence-vote",
+              "name": "All votes",
+              "amount": 20.102858
+            }
+          ],
+          "amount": 20.102858
+        }
+      ],
+      "amount": 20.102858
+    }
+  },
+  "entities": [
+    {
+      "id": "national-defence-2017-entity-national-defence",
+      "name": "National Defence",
+      "value": 20.102858
+    }
+  ],
+  "votes": [
+    {
+      "id": "national-defence-2017-national-defence-vote",
+      "vote": "All votes",
+      "description": "Total appropriations (vote-level detail not published for this edition)",
+      "totalAvailable": 21135036098,
+      "used": 20102858369,
+      "lapsed": 1032177729
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "national-defence-2017-tp-0000",
+      "category": "Contributions",
+      "description": "Contribution to the Biological and Chemical Defence Review Committee",
+      "used": 129089
+    },
+    {
+      "id": "national-defence-2017-tp-0001",
+      "category": "Contributions",
+      "description": "Contribution to the Civil Air Search and Rescue Association",
+      "used": 2908142
+    },
+    {
+      "id": "national-defence-2017-tp-0002",
+      "category": "Contributions",
+      "description": "Contributions and Support to the Middle East Strategy",
+      "used": 9500000
+    },
+    {
+      "id": "national-defence-2017-tp-0003",
+      "category": "Contributions",
+      "description": "Contributions in Support of the Military Training and Cooperation Program",
+      "used": 10843564
+    },
+    {
+      "id": "national-defence-2017-tp-0004",
+      "category": "Contributions",
+      "description": "Contributions in support of the Capital Assistance Program",
+      "used": 5177394
+    },
+    {
+      "id": "national-defence-2017-tp-0005",
+      "category": "Contributions",
+      "description": "Items not required for the current year",
+      "used": 0
+    },
+    {
+      "id": "national-defence-2017-tp-0006",
+      "category": "Contributions",
+      "description": "NATO Military Budget (NATO Programs)",
+      "used": 84599569
+    },
+    {
+      "id": "national-defence-2017-tp-0007",
+      "category": "Contributions",
+      "description": "NATO Security Investment Program (NATO Programs)",
+      "used": 33965769
+    },
+    {
+      "id": "national-defence-2017-tp-0008",
+      "category": "Contributions",
+      "description": "North Atlantic Treaty Organization Contribution Program: NATO Other Activities",
+      "used": 1787572
+    },
+    {
+      "id": "national-defence-2017-tp-0009",
+      "category": "Contributions",
+      "description": "Payments under Parts I-IV of the Defence Services Pension Continuation Act (R S C 1970 c D-3)",
+      "used": 370923
+    },
+    {
+      "id": "national-defence-2017-tp-0010",
+      "category": "Contributions",
+      "description": "Payments under the Supplementary Retirement Benefits Act",
+      "used": 1763782
+    },
+    {
+      "id": "national-defence-2017-tp-0011",
+      "category": "Grants",
+      "description": "Air Cadet League of Canada",
+      "used": 458000
+    },
+    {
+      "id": "national-defence-2017-tp-0012",
+      "category": "Grants",
+      "description": "Army Cadet League of Canada",
+      "used": 458000
+    },
+    {
+      "id": "national-defence-2017-tp-0013",
+      "category": "Grants",
+      "description": "Grants in support of the Defence Engagement Program",
+      "used": 499707
+    },
+    {
+      "id": "national-defence-2017-tp-0014",
+      "category": "Grants",
+      "description": "Grants in support of the compensation for employers of reservists program",
+      "used": 0
+    },
+    {
+      "id": "national-defence-2017-tp-0015",
+      "category": "Grants",
+      "description": "Navy League of Canada",
+      "used": 458000
+    },
+    {
+      "id": "national-defence-2017-tp-0016",
+      "category": "Grants",
+      "description": "Payments to dependants of certain members of the Royal Canadian Air Force killed while serving as instructors under the British Commonwealth Air Training Plan (Appropriation Act No 4 1968)",
+      "used": 26397
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}
