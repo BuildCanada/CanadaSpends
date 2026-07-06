@@ -1,26 +1,24 @@
 ---
 reviewed: true
-source: hand-written
+source: hand-written (edited 2026-07-06)
 ---
 
-The Department of Transport (Transport Canada) is the federal department responsible for developing and enforcing transportation policies, regulations, and infrastructure projects to ensure safe and efficient movement of people and goods across Canada. It oversees aviation, rail, marine, and road transportation systems, working to enhance national connectivity and economic growth.
+The Department of Transport (Transport Canada) is the federal department responsible for developing and enforcing transportation policies, regulations, and infrastructure projects to ensure the safe and efficient movement of people and goods across Canada. It oversees aviation, rail, marine, and road transportation systems, working to enhance national connectivity and economic growth.
 
-Transport Canada spent {{totalSpending}} in fiscal year (FY) 2024. This was {{percentageOfFederal}} of the $513.9 billion in overall federal spending. The department ranked fourteenth among federal departments in total spending.
+Transport Canada spent {{totalSpending}} in fiscal year (FY) 2024, or {{percentageOfFederal}} of the $513.9 billion in overall federal spending, placing it among the smaller federal departments by expenditure.
 
-Federal spending may shift over time due to population growth, changes in policy and programs, and emerging problems to address. Since 1995, overall federal spending has risen 74.9%, while Transport spending has remained relatively flat.
+Federal spending shifts over time with population growth, changes in policy and programs, and emerging priorities, and acute events can move it sharply: during the COVID-19 pandemic, the Government of Canada's total expenses rose from $410.2 billion in 2019 to $420 billion in 2020 and $720.3 billion in 2021. Transport Canada's own spending has been comparatively steady, holding at roughly 1% of the federal budget over the past decade.
 
-In FY 2024, Transport Canada accounted for {{percentageOfFederal}} of all federal spending, 0.74% percentage points lower than in 1995.
+Transport Canada's spending is spread across the core department and several transportation crown corporations and agencies. The Department of Transport itself accounts for roughly $3.1 billion, with the balance flowing to bodies such as the Canadian Air Transport Security Authority (about $1 billion), VIA Rail Canada (about $0.8 billion), and Marine Atlantic. The department is led by the Minister of Transport, a member of cabinet appointed by the Governor General on the advice of the Prime Minister, who oversees transportation policy, safety regulation, infrastructure investment, and related climate initiatives across aviation, rail, marine, and road transportation.
 
-Major legislation, internal or global economic conditions, and acute events like the COVID-19 pandemic can significantly influence government spending year to year. For instance, during the pandemic, the Government of Canada's total expenses rose from $410.2 billion in 2019 to $420 billion in 2020 and further to $720.3 billion in 2021.
-
-Similarly, Transport Canada's expenditures experienced fluctuations during this period, increasing from approximately $3.2 billion in 2019 (adjusted for inflation) to {{totalSpending}} in 2024.
-
-Federal government spending isolated to FY 2024
-
-Federal departments often contain other entities including offices, crown corporations and agencies. In FY 2024, Transport Canada reported total expenditures of {{totalSpending}} across the following entities:
-
-Transport Canada is led by the Minister of Transport, who is appointed by the Governor General on the advice of the Prime Minister and formally sworn into office at Rideau Hall. Upon appointment, the Minister takes the Oath of Office and the Oath of Allegiance, becoming a member of the King's Privy Council for Canada.
-
-The Minister of Transport is one of the cabinet members who serve at the Prime Minister's discretion. Their tenure typically ends when they resign, are replaced, or when a new Prime Minister appoints a new cabinet. Outgoing ministers continue in their roles until their successors are sworn in.
-
-The Minister is responsible for overseeing Canada's transportation policies, ensuring safety regulations, investing in infrastructure, and leading climate initiatives related to aviation, rail, marine, and road transportation.
+<!--
+Figure decisions (FY2024 basis = Volume II; department JSON totalSpending 5.1961, percentageOfFederal 1.011):
+- Old page literals "$5.1B" / "1%" replaced with {{totalSpending}} ($5.20B) / {{percentageOfFederal}} (1.0%).
+- "$513.9 billion" total federal retained (matches summary.json 513.936).
+- Dropped "fourteenth" rank: based on the old $5.1B basis; omitted rather than asserting an unverifiable rank (replaced with "among the smaller federal departments").
+- Dropped "74.9%" (federal since 1995) and "0.74% percentage points lower than 1995" (also garbled in the original): not verifiable in JSON. The "relatively flat" claim IS JSON-supported — historicalShare is ~flat around 1% (1.1041 in 2014, 1.011 in 2024, 1.1086 in 2025) — so kept qualitatively.
+- Dropped inflation-adjusted "$3.2 billion in 2019" endpoint: not in JSON and paired against the {{totalSpending}} shown on the page's charts.
+- Dropped "10 departments accounted for 73.2%" literal (unverifiable here).
+- Entity figures restored from JSON (Department of Transport 3.117478, CATSA 0.971163, VIA Rail 0.80395, Marine Atlantic 0.191686; shown on the page's Spending by Entity chart).
+- Cut Oath of Office / Rideau Hall / ministerial-tenure boilerplate; folded the minister's substantive responsibilities into one line.
+-->

@@ -1,26 +1,12 @@
 ---
 reviewed: true
-source: hand-written
+source: hand-written (edited 2026-07-06)
 ---
 
-Le ministère de l'Innovation, des Sciences et de l'Industrie (ISIC) est le ministère fédéral responsable de favoriser la croissance économique, l'avancement technologique et la recherche scientifique au Canada. Il joue un rôle clé dans le soutien aux entreprises, le financement de la recherche et du développement, et l'élaboration de politiques visant à améliorer l'innovation, la compétitivité industrielle et la prospérité de l'économie canadienne.
+Le ministère de l'Innovation, des Sciences et de l'Industrie (ISDE) est le ministère fédéral responsable de favoriser la croissance économique, l'avancement technologique et la recherche scientifique au Canada. Il joue un rôle clé dans le soutien aux entreprises, le financement de la recherche et du développement et l'élaboration de politiques visant à améliorer l'innovation, la compétitivité industrielle et la prospérité de l'économie canadienne.
 
-ISDE a dépensé 10,2 milliards de dollars au cours de l'exercice 2024. Cela représentait 2 % des 513,9 milliards de dollars de dépenses fédérales totales. Le ministère s'est classé onzième parmi les ministères fédéraux en termes de dépenses totales.
+ISDE a dépensé {{totalSpending}} au cours de l'exercice 2024, soit {{percentageOfFederal}} des 513,9 milliards de dollars de dépenses fédérales totales, se classant onzième parmi les ministères fédéraux et se situant juste à l'extérieur des dix plus grands ministères qui représentent ensemble la vaste majorité des dépenses fédérales.
 
-Bien que ne figurant pas parmi les 10 premiers ministères en termes de dépenses, ISIC représentait 2 % de toutes les dépenses fédérales pour l'exercice 2024. 10 ministères gouvernementaux représentaient 73,2 % des dépenses fédérales pour l'exercice 2024
+Les dépenses fédérales évoluent au fil du temps en fonction de la croissance démographique, des changements dans les politiques et les programmes et des priorités émergentes, et des événements aigus peuvent les faire varier fortement d'une année à l'autre : pendant la pandémie de COVID-19, les dépenses totales du gouvernement du Canada sont passées de 410,2 milliards de dollars en 2019 à 420 milliards en 2020 et à 720,3 milliards en 2021. Les dépenses d'ISDE ont augmenté sur le long terme, mais sa part du budget fédéral est demeurée proche de {{percentageOfFederal}} au cours de la dernière décennie.
 
-Les dépenses fédérales peuvent évoluer au fil du temps en raison de la croissance démographique, des changements dans les politiques et les programmes, et des problèmes émergents à résoudre. Depuis 1995, les dépenses fédérales globales ont augmenté de 74,9 %, tandis que les dépenses d'ISDE ont augmenté de 90,3 %.
-
-Les dépenses du ministère ont augmenté plus que les dépenses globales, ce qui signifie que la part du ministère dans le budget fédéral a augmenté. Au cours de l'exercice 2024, ISIC représentait 2 % de toutes les dépenses fédérales, soit 0,17 point de pourcentage de plus qu'en 1995.
-
-Les principales lois, les conditions économiques internes ou mondiales et les événements aigus comme la pandémie de COVID-19 peuvent influencer significativement les dépenses gouvernementales d'une année à l'autre. Par exemple, pendant la pandémie, les dépenses totales du gouvernement du Canada sont passées de 410,2 milliards de dollars en 2019 à 420 milliards en 2020 et à 720,3 milliards en 2021.
-
-De même, les dépenses d'ISIC ont augmenté au cours de cette période, passant d'environ 6,5 milliards de dollars en 2019 (ajusté à l'inflation) à 10,2 milliards de dollars en 2024.
-
-Dépenses du gouvernement fédéral isolées pour l'exercice 2024
-
-Les ministères fédéraux comprennent souvent d'autres entités, notamment des bureaux, des sociétés d'État et des organismes. Au cours de l'exercice 2024, le budget d'ISDE était réparti entre les entités suivantes :
-
-Innovation, Sciences et Industrie Canada (ISIC) est dirigé par le ministre de l'Innovation, des Sciences et de l'Industrie, qui est nommé par le gouverneur général sur l'avis du premier ministre et officiellement assermenté à Rideau Hall. Lors de sa nomination, le ministre prête le serment d'office et le serment d'allégeance, devenant membre du Conseil privé du Roi pour le Canada.
-
-Le ministre de l'Innovation, des Sciences et de l'Industrie est l'un des membres du cabinet qui servent à la discrétion du premier ministre. Leur mandat se termine généralement lorsqu'ils démissionnent, sont remplacés ou lorsqu'un nouveau premier ministre nomme un nouveau cabinet. Les ministres sortants continuent dans leurs rôles jusqu'à ce que leurs successeurs soient assermentés.
+Le budget d'ISDE est réparti entre plusieurs entités. Le ministère de l'Industrie lui-même représente environ 4,5 milliards de dollars, le reste étant destiné aux organismes de science et de recherche du portefeuille — le Conseil national de recherches du Canada, les conseils subventionnaires (le Conseil de recherches en sciences naturelles et en génie et le Conseil de recherches en sciences humaines), Statistique Canada et l'Agence spatiale canadienne, entre autres. Le ministère est dirigé par le ministre de l'Innovation, des Sciences et de l'Industrie, un membre du cabinet nommé par le gouverneur général sur l'avis du premier ministre.

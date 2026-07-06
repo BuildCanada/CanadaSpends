@@ -1,26 +1,24 @@
 ---
 reviewed: true
-source: hand-written
+source: hand-written (edited 2026-07-06)
 ---
 
-The Public Services and Procurement Canada (PSPC) is the federal department responsible for providing centralized procurement, real estate management, pay and pension administration for federal employees, and translation services to the Government of Canada. It ensures that government departments have the goods, services, and infrastructure they need to operate efficiently while maintaining transparency, fairness, and value for taxpayers.
+Public Services and Procurement Canada (PSPC) is the federal department responsible for centralized procurement, real estate management, pay and pension administration for federal employees, and translation services across the Government of Canada. It works to ensure that government departments have the goods, services, and infrastructure they need to operate while maintaining transparency, fairness, and value for taxpayers.
 
-PSPC spent {{totalSpending}} in fiscal year (FY) 2024. This was {{percentageOfFederal}} of the $513.9 billion in overall federal spending. The department ranked twelfth among federal departments in total spending.
+PSPC spent {{totalSpending}} in fiscal year (FY) 2024, or {{percentageOfFederal}} of the $513.9 billion in overall federal spending. As a common-service provider, most of its budget funds procurement, accommodation, and information-technology services used by other departments rather than programs delivered directly to the public.
 
-PSPC accounted for {{percentageOfFederal}} of all federal spending in FY 2024. 10 government departments accounted for 73.2% of federal spending in FY 2024
+Federal spending shifts over time with population growth, changes in policy and programs, and emerging priorities, and acute events can move it sharply: during the COVID-19 pandemic, the Government of Canada's total expenses rose from $410.2 billion in 2019 to $420 billion in 2020 and $720.3 billion in 2021. Measured as a share of the federal budget, PSPC has trended down over the past decade, from roughly 3.2% in 2014 to {{percentageOfFederal}} in 2024.
 
-Federal spending may shift over time due to population growth, changes in policy and programs, and emerging problems to address. Since 1995, overall federal spending has risen 74.9%, while PSPC spending has increased by 7.1% when adjusted for inflation.
+PSPC's spending is split across a few entities. The Department of Public Works and Government Services accounts for roughly $6.9 billion and Shared Services Canada — which delivers common information-technology infrastructure to the federal government — for roughly $3.7 billion, with smaller amounts flowing through bodies such as the National Capital Commission. The department is led by the Minister of Government Transformation, Public Services and Procurement, a member of cabinet appointed by the Governor General on the advice of the Prime Minister.
 
-The department's spending has increased less than overall spending has grown and the department's share of the federal budget has decreased over time. In FY 2024, PSPC accounted for {{percentageOfFederal}} of all federal spending, 1 percentage point lower than in 1995.
-
-Major legislation, internal or global economic conditions, and acute events like the COVID-19 pandemic can significantly influence government spending year to year. For instance, during the pandemic, the Government of Canada's total expenses rose from $410.2 billion in 2019 to $420 billion in 2020 and further to $720.3 billion in 2021.
-
-Similarly, PSPC's expenditures experienced notable fluctuations during this period, decreasing from approximately $6.8 billion in 2019 (adjusted for inflation) to $5.3 billion in 2021 before increasing again in 2024.
-
-Federal government spending isolated to FY 2024
-
-Federal departments often contain other entities including offices, crown corporations and agencies. In FY 2024, PSPC's budget was split across the following entities:
-
-Public Services and Procurement Canada (PSPC) is led by the Minister of Government Transformation, Public Services and Procurement, who is appointed by the Governor General on the advice of the Prime Minister and formally sworn into office at Rideau Hall. Upon appointment, the Minister takes the Oath of Office and the Oath of Allegiance, becoming a member of the King's Privy Council for Canada.
-
-The Minister of Public Services and Procurement is one of the cabinet members who serve at the Prime Minister's discretion. Their tenure typically ends when they resign, are replaced, or when a new Prime Minister appoints a new cabinet. Outgoing ministers continue in their roles until their successors are sworn in.
+<!--
+Figure decisions (FY2024 basis = Volume II; department JSON totalSpending 10.676222, percentageOfFederal 2.0773):
+- Old page literals "$8.3B" / "1.6%" replaced with {{totalSpending}} ($10.68B) / {{percentageOfFederal}} (2.1%). The old $8.3B basis excluded Shared Services Canada; the generated total includes it (entities: Dept of Public Works and Government Services 6.865886 + Shared Services Canada 3.691224 + NCC 0.096902 + Canada Post 0.02221), which explains the higher figure.
+- "$513.9 billion" total federal retained (matches summary.json 513.936).
+- Dropped "twelfth" rank: it was based on the old $8.3B basis and is unreliable against the higher generated total; omitted rather than asserting an unverifiable rank.
+- Dropped "7.1%" (PSPC since 1995), "74.9%" (federal since 1995) and "1 percentage point lower than 1995": not verifiable in JSON and computed on the old (smaller) basis. Direction is JSON-supported, so replaced with the decade trend ~3.2% (2014) -> {{percentageOfFederal}} (2024) from historicalShare (3.2069 -> 2.0773; 1.9423 in 2025).
+- Dropped inflation-adjusted endpoints "$6.8B (2019)"/"$5.3B (2021)": not in JSON and on a basis that excludes Shared Services Canada, so they would conflict with {{totalSpending}}.
+- Dropped "10 departments accounted for 73.2%" literal (unverifiable here).
+- Entity figures restored from JSON (PWGSC ~$6.9B, Shared Services Canada ~$3.7B; shown on the page's Spending by Entity chart).
+- Cut Oath of Office / Rideau Hall / ministerial-tenure boilerplate.
+-->

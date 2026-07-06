@@ -1,26 +1,26 @@
 ---
 reviewed: true
-source: hand-written
+source: hand-written (edited 2026-07-06)
 ---
 
-Global Affairs Canada (GAC) is the federal department responsible for managing Canada's diplomatic relations, international trade, and development assistance. Established in 1909 as the Department of External Affairs, GAC has evolved to oversee Canada's engagement in global affairs, promoting national interests abroad and ensuring the protection of Canadian citizens overseas. The department negotiates international agreements, administers trade policies, and provides humanitarian aid. Additionally, it supports Canadian businesses in expanding internationally and strengthens diplomatic ties through multilateral organizations like the United Nations, the World Trade Organization (WTO), and NATO. GAC also plays a critical role in crisis response, assisting Canadians abroad during emergencies, and fostering global security and stability.
+Global Affairs Canada (GAC) is the federal department responsible for managing Canada's diplomatic relations, international trade, and development assistance. Established in 1909 as the Department of External Affairs, it oversees Canada's engagement in global affairs, negotiates international agreements, administers trade policy, and provides humanitarian aid. It also supports Canadian businesses expanding abroad, maintains ties through multilateral organizations such as the United Nations, the World Trade Organization, and NATO, and assists Canadian citizens overseas during emergencies.
 
-Global Affairs Canada spent {{totalSpending}} in fiscal year (FY) 2024, representing {{percentageOfFederal}} of the $513.9 billion in overall federal spending. This placed GAC among the mid-sized federal departments in terms of total expenditures.
+Global Affairs Canada spent {{totalSpending}} in fiscal year (FY) 2024, representing {{percentageOfFederal}} of the $513.9 billion in overall federal spending, placing it among the mid-sized federal departments.
 
-Federal spending may shift over time due to changing global circumstances, diplomatic priorities, and Canada's economic relationships. Since 1995, overall federal spending has increased by 74.9%, while Global Affairs Canada's budget has grown by 166.5%, reflecting an expansion in international engagement.
+GAC's FY 2024 spending was concentrated in two areas. The Export Development Canada (Canada Account), a government financing facility for transactions in the national interest, accounted for the single largest share at $10.5 billion, while the core Department of Foreign Affairs, Trade and Development spent $8.5 billion. Most of the remaining spending took the form of international development assistance, with the largest grants and contributions supporting multilateral and bilateral development programming.
 
-While GAC's spending has increased in real terms, its share of the federal budget has also increased moderately over the past decades. In 2024, GAC accounted for {{percentageOfFederal}} of federal spending, compared to 2% in 1995.
+The department is led by two ministers—one responsible for foreign affairs and one for international trade—supported by the Deputy Minister of Foreign Affairs and the Deputy Minister of International Trade. Both ministers are appointed by the Prime Minister and are among the [cabinet members](https://www.pm.gc.ca/en/cabinet) who serve at the Prime Minister's discretion, remaining in office until their successors are sworn in.
 
-Major international events, trade agreements, foreign aid commitments, and global crises such as the COVID-19 pandemic have influenced fluctuations in spending. In 2020, GAC's budget surged due to emergency international assistance programs, including vaccine distribution and humanitarian relief efforts.
-
-GAC's expenditures are divided across five primary categories:
-
-A significant portion of GAC's budget supports Canada's international development assistance, with key programs focused on climate adaptation, gender equality, and health initiatives in developing nations. The department also facilitates economic diplomacy and trade agreements that benefit Canadian businesses and secure investment opportunities abroad.
-
-Federal departments often contain other entities. In FY 2024, Global Affairs Canada's entities with the highest expenditures were:
-
-Global Affairs Canada is led by two ministers appointed by the Prime Minister and formally sworn into office at Rideau Hall. The department's leadership includes:
-
-The ministers work alongside the Deputy Minister of Foreign Affairs and the Deputy Minister of International Trade, who manage the department's operational and policy frameworks.
-
-These Ministers are some of the [cabinet members](https://www.pm.gc.ca/en/cabinet) who serve at the Prime Minister's discretion. Their tenure typically ends when they resign, are replaced, or when a new Prime Minister takes office and appoints a new cabinet. Outgoing ministers remain in their roles until their successors are sworn in.
+<!--
+Figures: EN spending para uses {{totalSpending}} ($19.26B) and {{percentageOfFederal}}
+(3.7%), matching the JSON (vol2_appropriations) and charts. FR literal "19,2 milliards"
+replaced by token.
+"$513.9 billion" retained (matches summary.json).
+Restored from dropped entity list, verified against JSON entities: Export Development
+Canada (Canada Account) $10.5B — the largest entity, larger than the core department —
+and Department of Foreign Affairs, Trade and Development $8.5B. This explains the FY2024
+total (the one-time Canada Account share is also why the share falls to 1.8% by 2025).
+Dropped "since 1995 / +166.5% / 2% in 1995" (pre-2014 data absent from JSON; share was
+2.4% in 2014) and the truncated "five primary categories" and COVID-2020 surge lines
+(dangling/unverifiable). Dropped generic direct/indirect boilerplate.
+-->

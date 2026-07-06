@@ -1,26 +1,29 @@
 ---
 reviewed: true
-source: hand-written
+source: hand-written (edited 2026-07-06)
 ---
 
-The Canada Revenue Agency (CRA) is the federal institution responsible for administering tax laws, enforcing compliance, and delivering key benefit programs to individuals and businesses across Canada. Established in 1999 under the Canada Revenue Agency Act, the CRA operates with a workforce of approximately 59,155 employees (2024) and oversees tax revenues totaling $379 billion annually—which accounts for over 82% of federal revenues. It also administers over $46 billion in benefits and credits to Canadians, including the Canada Child Benefit and the GST/HST credit.
+The Canada Revenue Agency (CRA) is the federal institution responsible for administering tax laws, enforcing compliance, and delivering key benefit programs to individuals and businesses across Canada. Established in 1999 under the Canada Revenue Agency Act, the CRA operates with a workforce of approximately 59,155 employees (2024) and oversees tax revenues totaling $379 billion annually—more than 82% of federal revenues. It also administers over $46 billion in benefits and credits to Canadians, including the Canada Child Benefit and the GST/HST credit.
 
-The Canada Revenue Agency spent {{totalSpending}} in fiscal year (FY) 2024, representing {{percentageOfFederal}} of the $513.9 billion in total federal spending. The CRA's expenditures primarily support tax administration, benefit program delivery, compliance enforcement, and IT modernization.
+The Canada Revenue Agency spent {{totalSpending}} in fiscal year (FY) 2024, representing {{percentageOfFederal}} of the $513.9 billion in total federal spending. Its expenditures primarily support tax administration, benefit program delivery, compliance enforcement, and IT modernization.
 
-Federal spending may shift over time due to economic fluctuations, changes in tax policy, and the expansion of benefit programs. Since 1995, overall federal spending has risen 74.9%, while Canada Revenue Agency spending has increased 302%
+CRA spending has grown faster than overall federal spending over the past decade, gradually increasing the agency's share of the federal budget. Legislative changes, evolving compliance trends, and the shift toward digital tax services have shaped these patterns; compliance initiatives and fraud investigations recovered an estimated $11.5 billion in lost revenue in 2024.
 
-CRA's spending grew more than overall spending, meaning its share of the federal budget increased. In 2024, the agency accounted for {{percentageOfFederal}} of all federal spending, 1.85 percentage points higher than in 1995.
+Most CRA spending is dedicated to personnel and the IT infrastructure that supports tax filing, compliance, and benefit administration. In FY 2024, 55.2% of the agency's net spending went to salaries, benefits, and pensions. Its largest expenditures included personal income tax processing, corporate tax audits, and benefit program delivery, alongside intergovernmental agreements with provinces and territories.
 
-Major legislative changes, compliance trends, and digital tax services have influenced CRA spending patterns. For example, compliance initiatives and fraud investigations recovered an estimated $11.5 billion in lost revenue in 2024 due to tax evasion.
+The Canada Revenue Agency is overseen by the [Minister of National Revenue](https://www.canada.ca/en/government/ministers/francois-philippe-champagne.html), who is responsible for tax fairness and benefit program integrity but does not have direct authority over the interpretation of tax law. The minister is one of the [cabinet members](https://www.pm.gc.ca/en/cabinet) who serve at the Prime Minister's discretion, remaining in the role until a successor is sworn in.
 
-Most federal spending can be categorized as direct or indirect. Direct spending refers to money the federal government spends on budget items such as federal programs, employee salaries, and debt interest. Indirect spending refers to federal transfers to other levels of government.
-
-Most CRA spending is dedicated to personnel and IT infrastructure supporting tax filing, compliance, and benefit administration.
-
-In FY 2024, 55.2% of CRA net spending was allocated to salaries, benefits, and pensions.
-
-CRA spending is divided across tax administration, compliance enforcement, benefit program delivery, and intergovernmental agreements with provinces and territories. The largest expenditures in FY 2024 included personal income tax processing, corporate tax audits, and benefit administration.
-
-The Canada Revenue Agency is overseen by the [Minister of National Revenue](https://www.canada.ca/en/government/ministers/francois-philippe-champagne.html), who is responsible for ensuring tax fairness and benefit program integrity but does not have direct authority over tax law interpretations.
-
-These Ministers are some of the [cabinet members](https://www.pm.gc.ca/en/cabinet) who serve at the Prime Minister's discretion. Their tenure typically ends when they resign, are replaced, or when a new Prime Minister takes office and appoints a new cabinet. Outgoing ministers remain in their roles until their successors are sworn in.
+<!--
+Figures: "$16.8B" and "3.2%" from the original hand-written page were replaced with
+{{totalSpending}} ($17.29B) and {{percentageOfFederal}} (3.4%), which reflect the
+department JSON (vol2_appropriations basis) and match the charts on the page.
+"$513.9 billion" total federal spending retained — matches summary.json (513.936).
+Dropped the "since 1995 / +74.9% / +302% / 1.85 percentage points higher than 1995"
+comparisons: they rely on pre-2014 data absent from this JSON (historicalShare starts
+2014) and were computed on the old curated basis, so they conflict with the current
+share series. Rephrased qualitatively.
+Retained as hand-written operational context (not verifiable in the Vol II JSON, but
+not spending-basis totals that would contradict the charts): 59,155 employees, $379B
+tax revenues, 82% of federal revenues, $46B benefits, $11.5B recovered, 55.2% salaries.
+Dropped generic direct/indirect-spending boilerplate (not CRA-specific).
+-->

@@ -1,28 +1,24 @@
 ---
 reviewed: true
-source: hand-written
+source: hand-written (edited 2026-07-06)
 ---
 
-Établi en 2005, EDSC est un ministère fédéral responsable du soutien aux Canadiens par le biais de programmes sociaux et de développement de la main-d'œuvre. Il administre des programmes clés tels que l'assurance-emploi (AE), le Régime de pensions du Canada (RPC), la Sécurité de la vieillesse (SV) et des initiatives de formation professionnelle. EDSC supervise également Service Canada, qui fournit des services gouvernementaux directement au public.
+Établi en 2005, Emploi et Développement social Canada (EDSC) est un ministère fédéral responsable du soutien aux Canadiens par le biais de programmes sociaux et de développement de la main-d'œuvre. Il administre des programmes clés tels que l'assurance-emploi (AE), le Régime de pensions du Canada (RPC), la Sécurité de la vieillesse (SV) et des initiatives de formation professionnelle, et il supervise Service Canada, qui fournit des services gouvernementaux directement au public.
 
-EDSC a dépensé 94,48 milliards de dollars au cours de l'exercice 2024. Cela représentait 18,4 % des 513,9 milliards de dollars de dépenses fédérales totales, ce qui en fait l'un des ministères fédéraux aux dépenses les plus élevées.
+EDSC a dépensé {{totalSpending}} au cours de l'exercice 2024, soit {{percentageOfFederal}} des 513,9 milliards de dollars de dépenses fédérales totales, ce qui en fait l'un des ministères fédéraux aux dépenses les plus élevées.
 
-Les dépenses fédérales peuvent évoluer au fil du temps en raison de la croissance démographique, des changements dans les politiques et les programmes, et des défis émergents. Depuis 2005, lorsque EDSC a été créé, les dépenses fédérales globales ont augmenté de 62,9 %, tandis que les dépenses d'EDSC ont augmenté de 1 485 %.
+L'essentiel des dépenses d'EDSC est versé directement aux particuliers et aux provinces sous forme de transferts législatifs plutôt que d'activités ministérielles. Au cours de l'exercice 2024, les plus importants étaient la Sécurité de la vieillesse (57,4 milliards de dollars) et le Supplément de revenu garanti (18,0 milliards de dollars), suivis des transferts aux provinces et aux territoires pour l'apprentissage et la garde des jeunes enfants (6,2 milliards de dollars) et des Bourses d'études canadiennes (2,7 milliards de dollars). L'assurance-emploi et le Régime de pensions du Canada fonctionnent au moyen de comptes distincts et ne font pas partie des crédits ministériels présentés ici.
 
-Les dépenses du ministère ont augmenté à un rythme significativement plus élevé que les dépenses globales, reflétant les changements dans les priorités fédérales. En 2024, EDSC représentait 18,4 % de toutes les dépenses fédérales, soit 16,51 points de pourcentage de plus qu'en 2005.
+Les dépenses du ministère sont sensibles aux conditions économiques et aux principales lois. Les programmes fédéraux de soutien du revenu ont entraîné une augmentation marquée et temporaire pendant la pandémie de COVID-19, avant que les dépenses ne reviennent à des niveaux plus bas au cours des années suivantes.
 
-Les principales lois, les conditions économiques et les facteurs externes peuvent avoir un impact sur les dépenses d'EDSC.
+Le ministère est dirigé par le [ministre des Emplois et des Familles](https://www.canada.ca/en/employment-social-development.html), qui est nommé par le gouverneur général sur l'avis du premier ministre et assermenté à Rideau Hall comme membre du Conseil privé du Roi pour le Canada. Le ministre est l'un des [membres du cabinet](https://www.pm.gc.ca/en/cabinet) qui servent à la discrétion du premier ministre et reste en fonction jusqu'à ce qu'un successeur soit assermenté.
 
-Par exemple, pendant la pandémie de COVID-19, les programmes de soutien fédéraux ont entraîné une augmentation temporaire des dépenses. Les dépenses d'EDSC sont passées de 63,3 milliards de dollars en 2019 à 169,2 milliards de dollars en 2021 avant de se stabiliser ces dernières années.
-
-La plupart des dépenses fédérales peuvent être classées comme directes ou indirectes.
-
-Les dépenses directes font référence à l'argent alloué aux programmes gouvernementaux, aux salaires des employés et aux dépenses administratives. Les dépenses indirectes comprennent les transferts fédéraux aux particuliers et aux provinces.
-
-Au cours de l'exercice 2024, EDSC a transféré 63 % de ses dépenses totales aux particuliers et aux provinces.
-
-Les ministères fédéraux comprennent souvent plusieurs agences et organes de prestation de services. Au cours de l'exercice 2024, les entités d'EDSC ayant les dépenses les plus élevées comprenaient :
-
-Le ministère est actuellement dirigé par le [ministre des Emplois et des Familles](https://www.canada.ca/en/employment-social-development.html) qui est nommé par le gouverneur général sur l'avis du premier ministre et ensuite officiellement assermenté à Rideau Hall. Il prête le serment d'office et le serment d'allégeance et devient membre du Conseil privé du Roi pour le Canada.
-
-Ces ministres sont parmi les [membres du cabinet](https://www.pm.gc.ca/en/cabinet) qui servent à la discrétion du premier ministre. Leur mandat se termine généralement lorsqu'ils démissionnent, sont remplacés ou lorsqu'un nouveau premier ministre prend ses fonctions et nomme un nouveau cabinet. Les ministres sortants restent en fonction jusqu'à ce que leurs successeurs soient assermentés.
+<!--
+Chiffres : « 94,48 milliards » / « 18,4 % » remplacés par {{totalSpending}} (97,28 G$) et
+{{percentageOfFederal}} (18,9 %), conformes au JSON (vol2_appropriations) et aux graphiques.
+« 513,9 milliards » conservé (summary.json). « 63 % » supprimé (contredit les données : les
+transferts totalisent ~92,0 G$, soit ~95 %); remplacé par les principaux transferts vérifiés
+dans le JSON. Comparaisons « depuis 2005 / +62,9 % / +1 485 % / 16,51 points » et les totaux
+de la pandémie supprimés (non vérifiables / antérieurs à 2014); la hausse liée à la pandémie
+est conservée de façon qualitative.
+-->
