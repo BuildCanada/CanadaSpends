@@ -1,3 +1,4 @@
+import { InflationProvider } from "@/components/InflationContext";
 import { ExternalLink } from "@/components/Layout";
 import NoSSR from "@/components/NoSSR";
 import { FederalSankey } from "@/components/Sankey/FederalSankey";
@@ -41,7 +42,12 @@ export default async function FederalSpendingFullScreen({
   return (
     <div className="sankey-chart-container min-w-[1280px]">
       <NoSSR>
-        <FederalSankey data={sankey} />
+        <InflationProvider
+          multiplierToBase={summary.inflation?.multiplierToBase ?? 1}
+          baseYear={summary.inflation?.baseYear ?? Number(year)}
+        >
+          <FederalSankey data={sankey} />
+        </InflationProvider>
       </NoSSR>
       <div className="absolute bottom-3 left-6">
         <ExternalLink

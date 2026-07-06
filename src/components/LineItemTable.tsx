@@ -1,5 +1,6 @@
 "use client";
 
+import { useInflation, useInflationScale } from "@/components/InflationContext";
 import type { FederalTransferPayment, FederalVoteLine } from "@/lib/federal";
 import { cn } from "@/lib/utils";
 import { Trans, useLingui } from "@lingui/react/macro";
@@ -68,6 +69,8 @@ export function LineItemTable({
   year: number;
 }) {
   const { t, i18n } = useLingui();
+  const { real, baseYear } = useInflation();
+  const scale = useInflationScale();
   const [tab, setTab] = useState<Tab>("votes");
   const [query, setQuery] = useState("");
   const [sortKey, setSortKey] = useState<string>("used");
@@ -75,6 +78,9 @@ export function LineItemTable({
   const [page, setPage] = useState(0);
 
   const money = (v: number) => formatDollars(v, i18n.locale);
+  // In real mode, dollar columns (table AND the CSV, which reads the same
+  // column definitions) are scaled and labeled with the CPI base year.
+  const realSuffix = real ? ` (${t`real`} ${baseYear} $)` : "";
 
   const voteColumns: Column[] = [
     { key: "vote", label: t`Vote`, get: (r) => (r.vote as string) ?? "" },
@@ -85,21 +91,21 @@ export function LineItemTable({
     },
     {
       key: "totalAvailable",
-      label: t`Total available`,
+      label: t`Total available` + realSuffix,
       numeric: true,
-      get: (r) => (r.totalAvailable as number) ?? 0,
+      get: (r) => Math.round(((r.totalAvailable as number) ?? 0) * scale),
     },
     {
       key: "used",
-      label: t`Used`,
+      label: t`Used` + realSuffix,
       numeric: true,
-      get: (r) => (r.used as number) ?? 0,
+      get: (r) => Math.round(((r.used as number) ?? 0) * scale),
     },
     {
       key: "lapsed",
-      label: t`Lapsed`,
+      label: t`Lapsed` + realSuffix,
       numeric: true,
-      get: (r) => (r.lapsed as number) ?? 0,
+      get: (r) => Math.round(((r.lapsed as number) ?? 0) * scale),
     },
   ];
 
@@ -116,9 +122,9 @@ export function LineItemTable({
     },
     {
       key: "used",
-      label: t`Amount`,
+      label: t`Amount` + realSuffix,
       numeric: true,
-      get: (r) => (r.used as number) ?? 0,
+      get: (r) => Math.round(((r.used as number) ?? 0) * scale),
     },
   ];
 
@@ -282,7 +288,13 @@ export function LineItemTable({
 
       <div className="flex items-center justify-between mt-3 text-sm text-foreground/60">
         <span>
-          <Trans>{rows.length} line items · all figures in dollars</Trans>
+          {real ? (
+            <Trans>
+              {rows.length} line items · all figures in real {baseYear} dollars
+            </Trans>
+          ) : (
+            <Trans>{rows.length} line items · all figures in dollars</Trans>
+          )}
         </span>
         {pageCount > 1 && (
           <div className="flex items-center gap-2">

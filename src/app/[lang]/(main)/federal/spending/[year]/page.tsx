@@ -87,39 +87,42 @@ export default async function FederalYearOverview({
   return (
     <Page>
       <PageContent>
-        <Section>
-          <H1>
-            <Trans>Federal Government Spending</Trans>
-          </H1>
-          <Intro>
-            <Trans>
-              Get data-driven insights into how the federal government&rsquo;s
-              revenue and spending affect Canadian lives and programs.
-            </Trans>
-          </Intro>
-        </Section>
-
-        <Section>
-          <YearSelector items={yearItems} label={<Trans>Fiscal year</Trans>} />
-          {index?.updatedAt && (
-            <div className="mt-3">
-              <UpdatedAt>
-                <Trans>
-                  Data updated{" "}
-                  {new Date(index.updatedAt).toLocaleDateString(
-                    lang === "fr" ? "fr-CA" : "en-CA",
-                    { year: "numeric", month: "long", day: "numeric" },
-                  )}
-                </Trans>
-              </UpdatedAt>
-            </div>
-          )}
-        </Section>
-
         <InflationProvider
           multiplierToBase={summary.inflation?.multiplierToBase ?? 1}
           baseYear={summary.inflation?.baseYear ?? yearNum}
         >
+          <Section>
+            <H1>
+              <Trans>Federal Government Spending</Trans>
+            </H1>
+            <Intro>
+              <Trans>
+                Get data-driven insights into how the federal government&rsquo;s
+                revenue and spending affect Canadian lives and programs.
+              </Trans>
+            </Intro>
+          </Section>
+
+          <Section>
+            <YearSelector
+              items={yearItems}
+              label={<Trans>Fiscal year</Trans>}
+            />
+            {index?.updatedAt && (
+              <div className="mt-3">
+                <UpdatedAt>
+                  <Trans>
+                    Data updated{" "}
+                    {new Date(index.updatedAt).toLocaleDateString(
+                      lang === "fr" ? "fr-CA" : "en-CA",
+                      { year: "numeric", month: "long", day: "numeric" },
+                    )}
+                  </Trans>
+                </UpdatedAt>
+              </div>
+            )}
+          </Section>
+
           <Section>
             <div className="flex flex-wrap items-center justify-between gap-3">
               <H2>
@@ -184,34 +187,34 @@ export default async function FederalYearOverview({
               </ExternalLink>
             </div>
           </div>
+
+          <Section>
+            <H2>
+              <Trans>Spending by ministry, FY {summary.financialYear}</Trans>
+            </H2>
+            <P>
+              <Trans>
+                Ministry totals are on a Volume II appropriations basis. Select
+                a ministry for its programs, entities, and line items.
+              </Trans>
+            </P>
+            <BillionsBarList items={ministryItems} />
+          </Section>
+
+          {isLatestYear && <FederalWorkforce />}
+
+          <Section>
+            <P className="text-sm text-foreground/60">
+              <Trans>
+                Headline totals use the Volume I consolidated basis; ministry
+                and department figures use the Volume II appropriations basis.
+                These bases differ; see the{" "}
+                <InternalLink href={methodologyPath}>methodology</InternalLink>{" "}
+                for the reconciliation and known differences.
+              </Trans>
+            </P>
+          </Section>
         </InflationProvider>
-
-        <Section>
-          <H2>
-            <Trans>Spending by ministry, FY {summary.financialYear}</Trans>
-          </H2>
-          <P>
-            <Trans>
-              Ministry totals are on a Volume II appropriations basis. Select a
-              ministry for its programs, entities, and line items.
-            </Trans>
-          </P>
-          <BillionsBarList items={ministryItems} />
-        </Section>
-
-        {isLatestYear && <FederalWorkforce />}
-
-        <Section>
-          <P className="text-sm text-foreground/60">
-            <Trans>
-              Headline totals use the Volume I consolidated basis; ministry and
-              department figures use the Volume II appropriations basis. These
-              bases differ; see the{" "}
-              <InternalLink href={methodologyPath}>methodology</InternalLink>{" "}
-              for the reconciliation and known differences.
-            </Trans>
-          </P>
-        </Section>
       </PageContent>
     </Page>
   );

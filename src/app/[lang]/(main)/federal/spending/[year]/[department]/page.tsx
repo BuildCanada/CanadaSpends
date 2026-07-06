@@ -136,34 +136,37 @@ export default async function FederalDepartmentPage({
   return (
     <Page>
       <PageContent>
-        <Section>
-          <H1>{department.name}</H1>
-          <Intro>
-            <Trans>
-              How {department.name} spent its budget in fiscal year{" "}
-              {summary.financialYear}, on a Volume II appropriations basis.
-            </Trans>
-          </Intro>
-        </Section>
-
-        <Section>
-          <YearSelector items={yearItems} label={<Trans>Fiscal year</Trans>} />
-          {department.reportedAs && (
-            <div className="mt-3">
-              <UpdatedAt>
-                <Trans>
-                  In FY {summary.financialYear} this was reported as{" "}
-                  {department.reportedAs}.
-                </Trans>
-              </UpdatedAt>
-            </div>
-          )}
-        </Section>
-
         <InflationProvider
           multiplierToBase={summary.inflation?.multiplierToBase ?? 1}
           baseYear={summary.inflation?.baseYear ?? yearNum}
         >
+          <Section>
+            <H1>{department.name}</H1>
+            <Intro>
+              <Trans>
+                How {department.name} spent its budget in fiscal year{" "}
+                {summary.financialYear}, on a Volume II appropriations basis.
+              </Trans>
+            </Intro>
+          </Section>
+
+          <Section>
+            <YearSelector
+              items={yearItems}
+              label={<Trans>Fiscal year</Trans>}
+            />
+            {department.reportedAs && (
+              <div className="mt-3">
+                <UpdatedAt>
+                  <Trans>
+                    In FY {summary.financialYear} this was reported as{" "}
+                    {department.reportedAs}.
+                  </Trans>
+                </UpdatedAt>
+              </div>
+            )}
+          </Section>
+
           <Section>
             <div className="flex flex-wrap items-center justify-between gap-3">
               <H2>
@@ -186,116 +189,118 @@ export default async function FederalDepartmentPage({
               />
             </StatCardContainer>
           </Section>
-        </InflationProvider>
 
-        {proseHtml && (
-          <Section>
-            {proseHtml.split("\n\n").map((paragraph, index) => (
-              <P key={index}>
-                <span
-                  dangerouslySetInnerHTML={{
-                    __html: paragraph
-                      .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
-                      .replace(
-                        /\[([^\]]+)\]\(([^)]+)\)/g,
-                        '<a href="$2" class="text-blue-500 underline hover:text-blue-600" target="_blank" rel="noopener noreferrer">$1</a>',
-                      ),
-                  }}
-                />
-              </P>
-            ))}
-          </Section>
-        )}
+          {proseHtml && (
+            <Section>
+              {proseHtml.split("\n\n").map((paragraph, index) => (
+                <P key={index}>
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: paragraph
+                        .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
+                        .replace(
+                          /\[([^\]]+)\]\(([^)]+)\)/g,
+                          '<a href="$2" class="text-blue-500 underline hover:text-blue-600" target="_blank" rel="noopener noreferrer">$1</a>',
+                        ),
+                    }}
+                  />
+                </P>
+              ))}
+            </Section>
+          )}
 
-        <Section>
-          <H2>
-            <Trans>
-              How did {department.name} spend its budget in{" "}
-              {summary.financialYear}?
-            </Trans>
-          </H2>
-          <ChartContainer>
-            <NoSSR>
-              <FederalDepartmentMiniSankey
-                spendingData={department.miniSankey.spending_data}
-              />
-            </NoSSR>
-          </ChartContainer>
-          <H3>
-            <Trans>Spending by entity, FY {summary.financialYear}</Trans>
-          </H3>
-          <ChartContainer>
-            <BillionsBarList items={entityItems} />
-          </ChartContainer>
-        </Section>
-
-        {shareData.length > 1 && (
           <Section>
             <H2>
-              <Trans>{department.name}&rsquo;s share of federal spending</Trans>
-            </H2>
-            <H3>
               <Trans>
-                Percentage of federal spending, {shareData[0].Year}–
-                {shareData[shareData.length - 1].Year}
+                How did {department.name} spend its budget in{" "}
+                {summary.financialYear}?
               </Trans>
+            </H2>
+            <ChartContainer>
+              <NoSSR>
+                <FederalDepartmentMiniSankey
+                  spendingData={department.miniSankey.spending_data}
+                />
+              </NoSSR>
+            </ChartContainer>
+            <H3>
+              <Trans>Spending by entity, FY {summary.financialYear}</Trans>
             </H3>
             <ChartContainer>
-              <HistoricalShareChart data={shareData} />
+              <BillionsBarList items={entityItems} />
             </ChartContainer>
           </Section>
-        )}
 
-        <Section>
-          <H2>
-            <Trans>Line items</Trans>
-          </H2>
-          <P>
-            <Trans>
-              Complete appropriation (vote/allotment) and transfer-payment
-              lines, in dollars. Search, sort, and download the full table.
-            </Trans>
-          </P>
-          <LineItemTable
-            votes={department.votes}
-            transferPayments={department.transferPayments}
-            slug={department.slug}
-            year={yearNum}
-          />
-        </Section>
+          {shareData.length > 1 && (
+            <Section>
+              <H2>
+                <Trans>
+                  {department.name}&rsquo;s share of federal spending
+                </Trans>
+              </H2>
+              <H3>
+                <Trans>
+                  Percentage of federal spending, {shareData[0].Year}–
+                  {shareData[shareData.length - 1].Year}
+                </Trans>
+              </H3>
+              <ChartContainer>
+                <HistoricalShareChart data={shareData} />
+              </ChartContainer>
+            </Section>
+          )}
 
-        {otherMinistries.length > 0 && (
           <Section>
             <H2>
-              <Trans>Explore other federal departments</Trans>
+              <Trans>Line items</Trans>
             </H2>
-            <div className="text-gray-600 leading-relaxed">
-              {otherMinistries.map((m) => (
-                <div key={m.slug} className="py-3 border-b border-gray-200">
-                  <InternalLink
-                    href={`/federal/spending/${year}/${m.slug}`}
-                    lang={lang}
-                    className="font-medium text-gray-600"
-                  >
-                    {m.name}
-                  </InternalLink>
-                </div>
-              ))}
-            </div>
+            <P>
+              <Trans>
+                Complete appropriation (vote/allotment) and transfer-payment
+                lines, in dollars. Search, sort, and download the full table.
+              </Trans>
+            </P>
+            <LineItemTable
+              votes={department.votes}
+              transferPayments={department.transferPayments}
+              slug={department.slug}
+              year={yearNum}
+            />
           </Section>
-        )}
 
-        <Section>
-          <P className="text-sm text-foreground/60">
-            <Trans>
-              {department.name} figures are on a Volume II appropriations basis
-              and will not match the Volume I consolidated headline totals. See
-              the{" "}
-              <InternalLink href={methodologyPath}>methodology</InternalLink>{" "}
-              for details.
-            </Trans>
-          </P>
-        </Section>
+          {otherMinistries.length > 0 && (
+            <Section>
+              <H2>
+                <Trans>Explore other federal departments</Trans>
+              </H2>
+              <div className="text-gray-600 leading-relaxed">
+                {otherMinistries.map((m) => (
+                  <div key={m.slug} className="py-3 border-b border-gray-200">
+                    <InternalLink
+                      href={`/federal/spending/${year}/${m.slug}`}
+                      lang={lang}
+                      className="font-medium text-gray-600"
+                    >
+                      {m.name}
+                    </InternalLink>
+                  </div>
+                ))}
+              </div>
+            </Section>
+          )}
+
+          <Section>
+            <P className="text-sm text-foreground/60">
+              <Trans>
+                {department.name} figures are on a Volume II appropriations
+                basis and will not match the Volume I consolidated headline
+                totals. See the{" "}
+                <InternalLink href={methodologyPath}>methodology</InternalLink>{" "}
+                for details.
+              </Trans>
+            </P>
+          </Section>
+        </InflationProvider>
       </PageContent>
     </Page>
   );

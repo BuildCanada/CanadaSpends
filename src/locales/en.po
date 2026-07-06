@@ -37,7 +37,7 @@ msgid "{0}"
 msgstr "{0}"
 
 #. placeholder {0}: department.name
-#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:290
+#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:289
 msgid "{0} figures are on a Volume II appropriations basis and will not match the Volume I consolidated headline totals. See the <0>methodology</0> for details."
 msgstr "{0} figures are on a Volume II appropriations basis and will not match the Volume I consolidated headline totals. See the <0>methodology</0> for details."
 
@@ -73,9 +73,14 @@ msgid "{0} is a First Nation{1}."
 msgstr "{0} is a First Nation{1}."
 
 #. placeholder {0}: rows.length
-#: src/components/LineItemTable.tsx:285
+#: src/components/LineItemTable.tsx:299
 msgid "{0} line items · all figures in dollars"
 msgstr "{0} line items · all figures in dollars"
+
+#. placeholder {0}: rows.length
+#: src/components/LineItemTable.tsx:295
+msgid "{0} line items · all figures in real {baseYear} dollars"
+msgstr "{0} line items · all figures in real {baseYear} dollars"
 
 #. placeholder {0}: formatPercent(federalAbatementConfig.rate)
 #: src/app/[lang]/(main)/tax-visualizer/page.tsx:333
@@ -89,7 +94,7 @@ msgid "{0}'s Revenue and Spending in Financial Year {1}"
 msgstr "{0}'s Revenue and Spending in Financial Year {1}"
 
 #. placeholder {0}: department.name
-#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:235
+#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:234
 msgid "{0}’s share of federal spending"
 msgstr "{0}’s share of federal spending"
 
@@ -229,7 +234,7 @@ msgid "All the taxes that apply to your income"
 msgstr "All the taxes that apply to your income"
 
 #: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:201
-#: src/components/LineItemTable.tsx:119
+#: src/components/LineItemTable.tsx:128
 msgid "Amount"
 msgstr "Amount"
 
@@ -427,7 +432,7 @@ msgstr "Capital Investments"
 msgid "Cash, investments, accounts receivable, and other assets that can be converted to cash."
 msgstr "Cash, investments, accounts receivable, and other assets that can be converted to cash."
 
-#: src/components/LineItemTable.tsx:109
+#: src/components/LineItemTable.tsx:118
 msgid "Category"
 msgstr "Category"
 
@@ -484,7 +489,7 @@ msgstr "Compensation per Employee"
 msgid "Competition Year"
 msgstr "Competition Year"
 
-#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:254
+#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:253
 msgid "Complete appropriation (vote/allotment) and transfer-payment lines, in dollars. Search, sort, and download the full table."
 msgstr "Complete appropriation (vote/allotment) and transfer-payment lines, in dollars. Search, sort, and download the full table."
 
@@ -552,7 +557,7 @@ msgid "Data is derived from the Public Accounts of Canada under the Open Governm
 msgstr "Data is derived from the Public Accounts of Canada under the Open Government Licence – Canada."
 
 #. placeholder {0}: new Date(index.updatedAt).toLocaleDateString( lang === "fr" ? "fr-CA" : "en-CA", { year: "numeric", month: "long", day: "numeric" }, )
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:107
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:111
 msgid "Data updated {0}"
 msgstr "Data updated {0}"
 
@@ -585,8 +590,8 @@ msgstr "Department Spending Reductions"
 msgid "Departments + Agencies"
 msgstr "Departments + Agencies"
 
-#: src/components/LineItemTable.tsx:83
-#: src/components/LineItemTable.tsx:114
+#: src/components/LineItemTable.tsx:92
+#: src/components/LineItemTable.tsx:123
 msgid "Description"
 msgstr "Description"
 
@@ -606,7 +611,7 @@ msgstr "Do not discuss your submission with anyone or search for related topics 
 msgid "Download and install the <0>Tor Browser</0> from the official Tor Project website."
 msgstr "Download and install the <0>Tor Browser</0> from the official Tor Project website."
 
-#: src/components/LineItemTable.tsx:225
+#: src/components/LineItemTable.tsx:234
 msgid "Download CSV"
 msgstr "Download CSV"
 
@@ -745,7 +750,7 @@ msgstr "Explore in-depth articles about Canadian government spending, budget ana
 msgid "Explore Municipal Spending"
 msgstr "Explore Municipal Spending"
 
-#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:270
+#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:269
 msgid "Explore other federal departments"
 msgstr "Explore other federal departments"
 
@@ -781,7 +786,7 @@ msgstr "Federal Budget 2025 | Canada Spends"
 msgid "Federal Fall 2025 Government Budget"
 msgstr "Federal Fall 2025 Government Budget"
 
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:92
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:96
 msgid "Federal Government Spending"
 msgstr "Federal Government Spending"
 
@@ -888,8 +893,8 @@ msgstr "First Nations Remuneration Overview"
 msgid "First Nations Remuneration Overview | Canada Spends"
 msgstr "First Nations Remuneration Overview | Canada Spends"
 
-#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:150
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:103
+#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:154
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:107
 msgid "Fiscal year"
 msgstr "Fiscal year"
 
@@ -934,7 +939,7 @@ msgstr "FY {0} Revenue and Spending"
 msgid "Get data-driven insights into how the {0} government’s revenue and spending affect {1} residents and programs."
 msgstr "Get data-driven insights into how the {0} government’s revenue and spending affect {1} residents and programs."
 
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:95
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:99
 msgid "Get data-driven insights into how the federal government’s revenue and spending affect Canadian lives and programs."
 msgstr "Get data-driven insights into how the federal government’s revenue and spending affect Canadian lives and programs."
 
@@ -944,7 +949,7 @@ msgid "Get Involved"
 msgstr "Get Involved"
 
 #: src/app/[lang]/(main)/page.tsx:47
-#: src/app/[lang]/layout.tsx:21
+#: src/app/[lang]/layout.tsx:22
 msgid "Get The Facts About Government Spending"
 msgstr "Get The Facts About Government Spending"
 
@@ -982,7 +987,7 @@ msgstr "Government spending is based on 2023-2024 fiscal spending. Attempts have
 msgid "facts-1"
 msgstr "Government spending shouldn’t be a black box. Every year, the federal government spends hundreds of billions of dollars but most Canadians have no clue where it all goes. The data is available, but it’s buried on obscure websites and impossible to navigate."
 
-#: src/app/[lang]/layout.tsx:22
+#: src/app/[lang]/layout.tsx:23
 msgid "Government spending shouldn't be a black box. We turn complex data into clear, non-partisan insights so every Canadian knows where their money goes."
 msgstr "Government spending shouldn't be a black box. We turn complex data into clear, non-partisan insights so every Canadian knows where their money goes."
 
@@ -1014,7 +1019,7 @@ msgstr "Headline totals are on a Volume I consolidated (accrual) basis. Explore 
 msgid "Headline totals on the overview page (total spending, revenue, and deficit) use the Volume I consolidated financial statements, which are prepared on an accrual basis and include consolidated Crown corporations. Department pages use the Volume II appropriations (expenditure) basis, reported ministry by ministry. Because the two bases differ, the sum of Volume II ministry totals will not equal the Volume I consolidated total. The reconciliation below bridges the two."
 msgstr "Headline totals on the overview page (total spending, revenue, and deficit) use the Volume I consolidated financial statements, which are prepared on an accrual basis and include consolidated Crown corporations. Department pages use the Volume II appropriations (expenditure) basis, reported ministry by ministry. Because the two bases differ, the sum of Volume II ministry totals will not equal the Volume I consolidated total. The reconciliation below bridges the two."
 
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:206
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:205
 msgid "Headline totals use the Volume I consolidated basis; ministry and department figures use the Volume II appropriations basis. These bases differ; see the <0>methodology</0> for the reconciliation and known differences."
 msgstr "Headline totals use the Volume I consolidated basis; ministry and department figures use the Volume II appropriations basis. These bases differ; see the <0>methodology</0> for the reconciliation and known differences."
 
@@ -1045,7 +1050,7 @@ msgstr "Housing, Infrastructure and Communities Canada"
 
 #. placeholder {0}: department.name
 #. placeholder {1}: summary.financialYear
-#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:142
+#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:146
 msgid "How {0} spent its budget in fiscal year {1}, on a Volume II appropriations basis."
 msgstr "How {0} spent its budget in fiscal year {1}, on a Volume II appropriations basis."
 
@@ -1059,7 +1064,7 @@ msgstr "How can I stay up to date on your work?"
 
 #. placeholder {0}: department.name
 #. placeholder {1}: summary.financialYear
-#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:212
+#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:211
 msgid "How did {0} spend its budget in {1}?"
 msgstr "How did {0} spend its budget in {1}?"
 
@@ -1096,7 +1101,7 @@ msgstr "In Financial Year {0},"
 
 #. placeholder {0}: summary.financialYear
 #. placeholder {1}: department.reportedAs
-#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:154
+#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:158
 msgid "In FY {0} this was reported as {1}."
 msgstr "In FY {0} this was reported as {1}."
 
@@ -1185,7 +1190,7 @@ msgstr "Land Claims"
 msgid "Land, buildings, equipment, vehicles, and infrastructure owned by the First Nation."
 msgstr "Land, buildings, equipment, vehicles, and infrastructure owned by the First Nation."
 
-#: src/components/LineItemTable.tsx:100
+#: src/components/LineItemTable.tsx:109
 msgid "Lapsed"
 msgstr "Lapsed"
 
@@ -1202,7 +1207,7 @@ msgstr "Latest Budget News & Impact"
 msgid "Learn more about the technology at <0>globaleaks.org</0>."
 msgstr "Learn more about the technology at <0>globaleaks.org</0>."
 
-#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:251
+#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:250
 msgid "Line items"
 msgstr "Line items"
 
@@ -1244,7 +1249,7 @@ msgstr "Ministries have been renamed and merged between 2013 and 2025 (for examp
 msgid "Ministry"
 msgstr "Ministry"
 
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:194
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:193
 msgid "Ministry totals are on a Volume II appropriations basis. Select a ministry for its programs, entities, and line items."
 msgstr "Ministry totals are on a Volume II appropriations basis. Select a ministry for its programs, entities, and line items."
 
@@ -1302,7 +1307,7 @@ msgstr "Net Foreign Exchange Revenue and Return on Investments"
 msgid "News Source & Date"
 msgstr "News Source & Date"
 
-#: src/components/LineItemTable.tsx:306
+#: src/components/LineItemTable.tsx:321
 msgid "Next"
 msgstr "Next"
 
@@ -1337,7 +1342,7 @@ msgstr "No form of electronic communication can be made 100% secure. While we ta
 msgid "No individual entries available."
 msgstr "No individual entries available."
 
-#: src/components/LineItemTable.tsx:275
+#: src/components/LineItemTable.tsx:284
 msgid "No matching line items."
 msgstr "No matching line items."
 
@@ -1514,7 +1519,7 @@ msgstr "per resident"
 
 #. placeholder {0}: shareData[0].Year
 #. placeholder {1}: shareData[shareData.length - 1].Year
-#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:238
+#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:237
 msgid "Percentage of federal spending, {0}–{1}"
 msgstr "Percentage of federal spending, {0}–{1}"
 
@@ -1540,7 +1545,7 @@ msgstr "Position"
 msgid "Prepared by: {0}"
 msgstr "Prepared by: {0}"
 
-#: src/components/LineItemTable.tsx:295
+#: src/components/LineItemTable.tsx:310
 msgid "Prev"
 msgstr "Prev"
 
@@ -1645,6 +1650,10 @@ msgstr "Ranked <0>#{0}</0> of {1} lowest tax"
 msgid "Rate"
 msgstr "Rate"
 
+#: src/components/LineItemTable.tsx:86
+msgid "real"
+msgstr "real"
+
 #: src/components/InflationToggle.tsx:42
 msgid "Real ({baseYear} $)"
 msgstr "Real ({baseYear} $)"
@@ -1727,7 +1736,7 @@ msgstr "Salary Range"
 msgid "Save your receipt code securely—you will need it to check for responses and communicate with our team."
 msgstr "Save your receipt code securely—you will need it to check for responses and communicate with our team."
 
-#: src/components/LineItemTable.tsx:215
+#: src/components/LineItemTable.tsx:224
 msgid "Search line items…"
 msgstr "Search line items…"
 
@@ -1830,12 +1839,12 @@ msgid "Spending Breakdown Coming Soon"
 msgstr "Spending Breakdown Coming Soon"
 
 #. placeholder {0}: summary.financialYear
-#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:225
+#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:224
 msgid "Spending by entity, FY {0}"
 msgstr "Spending by entity, FY {0}"
 
 #. placeholder {0}: summary.financialYear
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:191
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:190
 msgid "Spending by ministry, FY {0}"
 msgstr "Spending by ministry, FY {0}"
 
@@ -2051,7 +2060,7 @@ msgstr "Total accumulated surplus"
 msgid "Total assets minus total liabilities. This represents the First Nation's overall financial position."
 msgstr "Total assets minus total liabilities. This represents the First Nation's overall financial position."
 
-#: src/components/LineItemTable.tsx:88
+#: src/components/LineItemTable.tsx:97
 msgid "Total available"
 msgstr "Total available"
 
@@ -2168,7 +2177,7 @@ msgstr "Total Tax"
 msgid "Total Wages"
 msgstr "Total Wages"
 
-#: src/components/LineItemTable.tsx:204
+#: src/components/LineItemTable.tsx:213
 msgid "Transfer payments"
 msgstr "Transfer payments"
 
@@ -2209,7 +2218,7 @@ msgstr "Units"
 msgid "Use a computer you trust, not one provided by your employer."
 msgstr "Use a computer you trust, not one provided by your employer."
 
-#: src/components/LineItemTable.tsx:94
+#: src/components/LineItemTable.tsx:103
 msgid "Used"
 msgstr "Used"
 
@@ -2269,11 +2278,11 @@ msgstr "Volume I to Volume II reconciliation, FY {0}"
 msgid "Volume I vs Volume II basis"
 msgstr "Volume I vs Volume II basis"
 
-#: src/components/LineItemTable.tsx:80
+#: src/components/LineItemTable.tsx:89
 msgid "Vote"
 msgstr "Vote"
 
-#: src/components/LineItemTable.tsx:192
+#: src/components/LineItemTable.tsx:201
 msgid "Votes & allotments"
 msgstr "Votes & allotments"
 
