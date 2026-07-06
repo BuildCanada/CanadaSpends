@@ -276,3 +276,86 @@ Vol I statement now agree exactly (±$1M) for every exported year.
 - **No surplus/padding node** exists (or ever existed) in this pipeline's tree;
   the old curated site's "$13.77B Surplus" leaf was the column gap (revenue −
   spending), now the natural visual gap between the two Sankey columns.
+
+## Main-page Vol I accrual basis (2026-07-06)
+
+Spec `docs/specs/main-page-accrual-basis.md`. The overview ministry list and the
+thematic Sankey are now on the Vol I consolidated (accrual) basis, sourced from
+Vol I **Table 3.6** "External expenses by segment and by type" (`cest-eest-*`,
+CKAN dataset `353333bd-3b26-4b05-8088-ca883188b80c`; EN+FR editions 2014–2025
+committed, un-ignored). Reader: `PbCli::Export::SegmentExpenses`.
+
+- **Year coverage: ALL 12 years (2014–2025) are on the accrual basis** via
+  restatement scaling (follow-up to the original spec, which had 7 fallback
+  years). Each year's own-vintage 3.6 edition carries figures as first
+  published, while `Vol1Statement` reads the RESTATED ten-year comparative, so
+  all portfolio totals (and the provision / Crown-corporations segments) are
+  scaled proportionally to tie to the restated statement total exactly:
+  `factor = (total_spending − actuarial_stmt) / (3.6 total − actuarial_seg)`.
+  Net actuarial losses ALWAYS come from the statement line; the ≤2019 editions
+  predate the net-actuarial split (no actuarial segment), so the statement
+  amount is carved out of the portfolios by the same proportional scaling.
+  **Guard:** the restatement deviation (|factor−1| minus the actuarial
+  carve-out share) must be ≤ 1%, else the year is export-blocked with the delta
+  reported (`SCALE_GUARD`); the adjustments-leaf machinery is retained as a
+  defensive fallback but never fires. Per-year factors (also in the export
+  report):
+  | Year | Factor | Carve-out | Restatement |
+  |---|---|---|---|
+  | 2014 | 0.93344 | 7.07% (actuarial 19.661) | 0.42% under carve |
+  | 2015 | 0.97303 | 2.70% (7.584) | ~0.01% |
+  | 2016 | 0.96277 | 3.41% (10.064) | 0.32% |
+  | 2017 | 0.96356 | 3.20% (9.904) | 0.45% |
+  | 2018 | 0.96169 | 3.14% (10.352) | 0.70% |
+  | 2019 | 0.97585 | 2.42% (8.361) | 0.00% |
+  | 2020 | 1.00000 | — | 0.00% |
+  | 2021 | 1.00000 | — | 0.00% |
+  | 2022 | 1.00021 | — | 0.02% |
+  | 2023–2025 | 1.00000 | — | 0.00% |
+  Additional pre-2020 mapping wrinkles absorbed: the 2014/2015 editions carry a
+  "Canada Revenu Agency" typo (segment alias) and print the provision as a
+  portfolio row INSIDE the Ministries segment (rerouted to the segments bucket
+  by `SEGMENT_IDS`); the 2014–2016 editions carry a standalone **"Crown
+  corporations and other entities"** lump, shown as a third non-link statement
+  row and as a leaf under the `other` theme (`crown-corporations-and-other-
+entities`, fr «Sociétés d'État et autres entités» from the FR edition); the
+  2016 edition has an "Infrastructure and Communities" portfolio while Vol II
+  reports Infrastructure inside the `ic` ISED portfolio — merged via the
+  reverse direction of `segment_hosts`.
+- **Ministry list.** Each row's `totalSpending` is the slug's accrual allocation
+  (`basis: vol1_segment_accrual`), `percentage` its share of the published total.
+  Non-link statement rows are appended (`basis: vol1_segment`, no slug/href):
+  **Net actuarial losses** (always, from the statement line) and **Provision for
+  valuation and other items** (plus **Crown corporations and other entities** in
+  2014–2016), so the list sums to the headline exactly. FY2024 ISC-slug = **44.749** (Indigenous Services
+  23.885 + Crown-Indigenous Relations 20.864) on the overview, while the ISC
+  department page still shows the Vol II **63.03**.
+- **N:M portfolio → slug allocation** (`compute_accrual_allocations`). Portfolios
+  resolving to one slug are summed (merge: ISC+CIRNAC; the RDA agencies in 2024).
+  A slug present in Vol II but with no 3.6 portfolio of its own is absorbed into a
+  configured host (`segment_hosts`) and the host's 3.6 total is split across
+  {host + absorbed} by Vol II expenditure share. Hosts:
+  `regional-economic-development → innovation-science-and-industry` (RDAs are
+  inside ISED in 2020/2021/2025), `parks-canada → environment-and-climate-change`
+  and `women-and-gender-equality → canadian-heritage` (2025). A slug that has its
+  own 3.6 portfolio that year stays its own group (so FY2024's clean RDA split is
+  used verbatim; FY2023's partial Quebec-only RDA portfolio slightly understates
+  the merged RDA slug — documented limitation). Aliases: "Digital Government" →
+  PSPC (2020/2021 SSC), accented "…Regions of Québec" → RDA.
+- **Thematic Sankey.** Each slug's accrual total is spread across its Vol II
+  theme nodes pro-rata. Vol I statement leaves keep their exact statement amount;
+  on the accrual basis the tax-system/statutory items that sit inside a
+  ministry's 3.6 portfolio total (EI, CCB, carbon rebate, CEWS, COVID) gain an
+  `accrual_offset_node` so they are carved out of the owning slug's allocation
+  (OAS/EI/ELCC/COVID → ESDC's employment-training; CCB/carbon/CEWS → CRA's
+  revenue-canada; CHT/CST/equalization/Quebec/debt → Finance's
+  other-major-transfers). All offset nodes verified ≥ 0 in every accrual year.
+  The `provision-for-valuation` node (`source: segment`) carries the 3.6 provision
+  segment. Tree leaf-sum == headline with **NO** adjustments leaf in accrual years
+  (residual = actuarial_seg − actuarial_vol1 = 0). Obligations FY2024 = 47.273
+  (debt) + 7.489 (actuarial) − 1.736 (provision) = **53.026**.
+- **Kept unchanged:** department pages (Vol II appropriations, `basis:
+vol2_appropriations`), `historicalShare` (Vol II ÷ Vol I), and
+  reconciliation.json (Vol II-vs-Vol I, keyed on `offset_node`). The site's
+  Vol II ministry-list caption branch is retained in code but is dead for
+  federal years (every year renders the accrual caption).

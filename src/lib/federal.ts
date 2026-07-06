@@ -24,7 +24,12 @@ const FEDERAL_DATA_DIR =
 
 export type FederalMinistrySummary = {
   name: string;
-  slug: string;
+  // Portfolio slug for real ministries (links to the department page). Absent
+  // on the appended Vol I statement rows (Net actuarial losses, Provision for
+  // valuation), which render as non-link rows.
+  slug?: string;
+  // Stable id for the non-link statement rows, keying their French label.
+  id?: string;
   totalSpending: number;
   percentage: number;
   basis: string;
@@ -287,8 +292,26 @@ function translateSankeyNode(
 
 export function getFederalSummary(
   year: string | number,
+  lang: string = "en",
 ): FederalSummary | null {
-  return readJson<FederalSummary>(path.join(yearDir(year), "summary.json"));
+  const summary = readJson<FederalSummary>(
+    path.join(yearDir(year), "summary.json"),
+  );
+  if (!summary || lang !== "fr") {
+    return summary;
+  }
+
+  // French ministry-list labels: real ministries are keyed by slug (same key
+  // the department page uses), the appended statement rows by their stable id.
+  // Anything without a match falls back to the English label.
+  const fr = loadFrMap(year);
+  return {
+    ...summary,
+    ministries: summary.ministries.map((m) => ({
+      ...m,
+      name: tr(fr, m.slug ?? m.id, m.name),
+    })),
+  };
 }
 
 /**

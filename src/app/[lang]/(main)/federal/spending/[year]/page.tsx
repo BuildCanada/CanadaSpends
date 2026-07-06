@@ -56,7 +56,7 @@ export default async function FederalYearOverview({
     notFound();
   }
 
-  const summary = getFederalSummary(year);
+  const summary = getFederalSummary(year, lang);
   const sankey = getFederalSankey(year, lang);
   if (!summary || !sankey) {
     notFound();
@@ -74,12 +74,22 @@ export default async function FederalYearOverview({
 
   const ministryItems = summary.ministries
     .map((m) => ({
-      key: m.slug,
+      key: m.slug ?? m.id ?? m.name,
       name: m.name,
       value: m.totalSpending,
-      href: localizedPath(`/federal/spending/${year}/${m.slug}`, lang),
+      // Statement rows (Net actuarial losses, Provision) have no slug and
+      // render as non-link rows — no href so the list never links to /undefined.
+      href: m.slug
+        ? localizedPath(`/federal/spending/${year}/${m.slug}`, lang)
+        : undefined,
     }))
     .sort((a, b) => b.value - a.value);
+
+  // On the Vol I accrual basis the ministry list is Volume I consolidated
+  // (allocated by segment); fallback years keep the Volume II basis.
+  const ministriesAccrual = summary.ministries.some(
+    (m) => m.basis === "vol1_segment_accrual",
+  );
 
   const methodologyPath = localizedPath("/federal/spending/methodology", lang);
   const isLatestYear = yearNum === getFederalLatestYear();
@@ -201,10 +211,20 @@ export default async function FederalYearOverview({
               <Trans>Spending by ministry, FY {summary.financialYear}</Trans>
             </H2>
             <P>
-              <Trans>
-                Ministry totals are on a Volume II appropriations basis. Select
-                a ministry for its programs, entities, and line items.
-              </Trans>
+              {ministriesAccrual ? (
+                <Trans>
+                  Ministry totals are on the Volume I consolidated (accrual)
+                  basis, allocated to portfolios by segment, and sum to the
+                  headline total (including the two non-departmental statement
+                  lines below). Select a ministry to see its Volume II
+                  appropriations detail.
+                </Trans>
+              ) : (
+                <Trans>
+                  Ministry totals are on a Volume II appropriations basis.
+                  Select a ministry for its programs, entities, and line items.
+                </Trans>
+              )}
             </P>
             <BillionsBarList items={ministryItems} />
           </Section>
@@ -213,13 +233,29 @@ export default async function FederalYearOverview({
 
           <Section>
             <P className="text-sm text-foreground/60">
-              <Trans>
-                Headline totals use the Volume I consolidated basis; ministry
-                and department figures use the Volume II appropriations basis.
-                These bases differ; see the{" "}
-                <InternalLink href={methodologyPath}>methodology</InternalLink>{" "}
-                for the reconciliation and known differences.
-              </Trans>
+              {ministriesAccrual ? (
+                <Trans>
+                  Headline and ministry totals use the Volume I consolidated
+                  (accrual) basis; department pages use the Volume II
+                  appropriations basis (where the line-level detail lives), so a
+                  department&rsquo;s own total differs from its ministry row
+                  here. See the{" "}
+                  <InternalLink href={methodologyPath}>
+                    methodology
+                  </InternalLink>{" "}
+                  for the allocation method and known differences.
+                </Trans>
+              ) : (
+                <Trans>
+                  Headline totals use the Volume I consolidated basis; ministry
+                  and department figures use the Volume II appropriations basis.
+                  These bases differ; see the{" "}
+                  <InternalLink href={methodologyPath}>
+                    methodology
+                  </InternalLink>{" "}
+                  for the reconciliation and known differences.
+                </Trans>
+              )}
             </P>
           </Section>
         </InflationProvider>

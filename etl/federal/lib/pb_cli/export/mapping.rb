@@ -13,7 +13,7 @@ module PbCli
 
       LineRule = Struct.new(:regexp, :ministry, :organization, :node_id)
 
-      attr_reader :portfolios, :themes, :vol1_nodes, :vol1_rules
+      attr_reader :portfolios, :themes, :vol1_nodes, :vol1_rules, :segment_rules
 
       def initialize(slugs_path, tree_path)
         @slugs = YAML.load_file(slugs_path)
@@ -79,6 +79,18 @@ module PbCli
         @meso_alias_ci[key] || @name_to_slug_ci[key]
       end
 
+      # Slug for a Vol I Table 3.6 (cest-eest) portfolio label, or nil. Segment
+      # aliases win, then the meso lookup (ministries list + meso aliases).
+      def segment_portfolio_slug(portfolio)
+        @segment_alias_ci[normalize_ci(portfolio)] || meso_portfolio_slug(portfolio)
+      end
+
+      # Host slug that absorbs `slug` in the 3.6 accrual allocation when `slug`
+      # has no 3.6 portfolio of its own that year, or nil (its own group).
+      def segment_host_slug(slug)
+        @segment_hosts[slug]
+      end
+
       # Transfer rows carry no organization column, so organization_overrides
       # cannot follow an agency's transfer payments into its host ministry.
       # transfer_reattributions moves rows by (host ministry + description
@@ -125,6 +137,10 @@ module PbCli
         @vol1_rules.select { |r| r['node_id'] == node_id }
       end
 
+      def segment_rules_for(node_id)
+        @segment_rules.select { |r| r['node_id'] == node_id }
+      end
+
       def normalize_dashes(str)
         str.to_s.gsub(DASH_RE, '-')
       end
@@ -163,6 +179,12 @@ module PbCli
         (@slugs['meso_portfolio_aliases'] || []).each do |a|
           @meso_alias_ci[normalize_ci(a['portfolio'])] = a['slug']
         end
+        @segment_alias_ci = {}
+        (@slugs['segment_portfolio_aliases'] || []).each do |a|
+          @segment_alias_ci[normalize_ci(a['portfolio'])] = a['slug']
+        end
+        @segment_hosts = {}
+        (@slugs['segment_hosts'] || []).each { |h| @segment_hosts[h['slug']] = h['host'] }
         @transfer_reattributions = (@slugs['transfer_reattributions'] || []).map do |r|
           {
             slug: r['slug'],
@@ -179,6 +201,7 @@ module PbCli
         @line_rules = []
         @vol1_nodes = []
         @vol1_rules = []
+        @segment_rules = []
         @themes = @tree['themes']
         @themes.each { |t| walk_node(t) }
       end
@@ -188,6 +211,8 @@ module PbCli
           if r['source'] == 'vol1'
             @vol1_nodes << { 'id' => node['id'], 'hint' => r['vol1_hint'] }
             @vol1_rules << r.merge('node_id' => node['id'])
+          elsif r['source'] == 'segment'
+            @segment_rules << r.merge('node_id' => node['id'])
           elsif r['line']
             @line_rules << LineRule.new(Regexp.new(r['line']), r['ministry'], r['organization'], node['id'])
           elsif r['organization']

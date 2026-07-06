@@ -1,5 +1,6 @@
 require 'test_helper'
 require 'pb_cli/commands/export'
+require 'csv'
 require 'json'
 require 'fileutils'
 
@@ -89,30 +90,134 @@ class TestExport < Minitest::Test
     assert_in_delta data['revenue'], leaf_sum(data['revenue_data']), 0.001
   end
 
-  # The spending Sankey's declared total AND its leaf sum must equal
-  # summary.totalSpending exactly — enforced by the top-level
-  # accounting-basis-adjustments reconciling leaf (spec §5). For FY2024 the
-  # leaf ≈ -25.85B (the thematic tree, mixing Vol II gross + Vol I items, sums
-  # to ~547.3B; the leaf brings it down to the published 521.425B). This leaf
-  # also equals reconciliation.json's unattributed remainder item.
-  def test_spending_tree_sums_to_headline_via_adjustments_leaf
+  # FY2024 is a Vol I accrual year (main-page-accrual-basis spec): the thematic
+  # tree is re-based off Table 3.6 segment expenses and sums to the published
+  # headline EXACTLY with NO "Accounting and consolidation adjustments" leaf.
+  def test_accrual_year_spending_tree_sums_to_headline_without_adjustments_leaf
     @command.call(['--year', '2024'])
     summary = JSON.parse(File.read(File.join(@out, '2024', 'summary.json')))
     sankey = JSON.parse(File.read(File.join(@out, '2024', 'sankey.full.json')))
-    recon = JSON.parse(File.read(File.join(@out, '2024', 'reconciliation.json')))
     tree = sankey['spending_data']
 
     assert_in_delta summary['totalSpending'], sankey['spending'], 0.001
     assert_in_delta summary['totalSpending'], leaf_sum(tree), 0.001
+    assert_nil node(tree, 'accounting-basis-adjustments'),
+               'no reconciling leaf in a Vol I accrual year'
+  end
 
-    leaf = node(tree, 'accounting-basis-adjustments')
-    refute_nil leaf, 'reconciling leaf present'
-    assert_equal 'Accounting and consolidation adjustments', leaf['name']
-    assert_in_delta(-25.854, leaf['amount'], 0.01)
+  # Every exported year is on the Vol I accrual basis (restatement-scaled
+  # Table 3.6): the ministry list sums to the published headline and the
+  # spending tree carries NO adjustments leaf, in ALL 12 years.
+  def test_all_years_are_accrual_and_sum_to_headline
+    assert_equal 0, @command.call(['--all-years'])
+    index = JSON.parse(File.read(File.join(@out, 'index.json')))
+    assert_equal (2014..2025).to_a, index['years'].sort
 
-    remainder = recon['items'].find { |i| i['id'] == 'recon-2024-remainder' }
-    assert_in_delta leaf['amount'], remainder['amount'], 0.001,
-                    'adjustments leaf == reconciliation remainder (spec §5 link)'
+    index['years'].each do |year|
+      summary = JSON.parse(File.read(File.join(@out, year.to_s, 'summary.json')))
+      tree = JSON.parse(File.read(File.join(@out, year.to_s, 'sankey.full.json')))['spending_data']
+
+      assert_in_delta summary['totalSpending'],
+                      summary['ministries'].sum { |m| m['totalSpending'] }, 0.001,
+                      "#{year} ministry list sums to headline"
+      assert_in_delta summary['totalSpending'], leaf_sum(tree), 0.001,
+                      "#{year} tree sums to headline"
+      assert_nil node(tree, 'accounting-basis-adjustments'), "#{year} has no adjustments leaf"
+      assert(summary['ministries'].any? { |m| m['basis'] == 'vol1_segment_accrual' },
+             "#{year} ministry rows are accrual")
+      assert(summary['ministries'].any? { |m| m['id'] == 'net-actuarial-losses' },
+             "#{year} carries the actuarial statement row")
+    end
+  end
+
+  # Restatement scale-factor pins. FY2024's own-vintage 3.6 edition ties to the
+  # statement exactly (521,425M both sides), so the factor is 1.0. FY2016's
+  # edition is pre-restatement AND predates the net-actuarial-losses split:
+  # 3.6 total 296,440M vs restated statement 295,469M incl. 10,064M actuarial,
+  # giving factor (295.469 − 10.064) / 296.440 = 0.96277 (carve-out 3.41% +
+  # restatement 0.32%, within the 1% + carve guard).
+  def test_restatement_scale_factors_pinned
+    @command.call(['--year', '2024'])
+    assert_in_delta 1.0, @command.segment_scales[2024][:factor], 1e-6
+
+    @command.call(['--year', '2016'])
+    scale = @command.segment_scales[2016]
+    assert_in_delta 0.96277, scale[:factor], 0.0005
+    assert_in_delta 0.0341, scale[:carve], 0.001, 'carve = actuarial share of total expenses'
+    assert scale[:ok], 'FY2016 within the guard'
+  end
+
+  # The 1% restatement guard is export-blocking: a (doctored) 3.6 edition whose
+  # totals deviate ~5% from the statement blocks the year with the delta
+  # reported, rather than shipping mis-scaled figures.
+  def test_scale_factor_guard_blocks_large_restatement_deltas
+    fixture_dir = File.join(Dir.pwd, 'tmp', 'test', 'doctored_tables')
+    FileUtils.mkdir_p(fixture_dir)
+    FileUtils.cp(File.join(Dir.pwd, 'open_tables/data/cdeif-tycfi-2024.csv'), fixture_dir)
+    doctor_cest(File.join(Dir.pwd, 'open_tables/data/cest-eest-2024.csv'),
+                File.join(fixture_dir, 'cest-eest-2024.csv'), 1.05)
+
+    command = PbCli::Commands::Export.new(
+      out_dir: @out, errors_path: @errors_path, timestamp: '2026-01-01T00:00:00Z',
+      open_tables_dir: fixture_dir
+    )
+    command.call(['--year', '2024'])
+
+    refute File.exist?(File.join(@out, '2024', 'summary.json')), '2024 not shipped'
+    refute command.segment_scales[2024][:ok]
+    report = File.read(@errors_path)
+    assert_match(/restatement scale factor .* beyond guard/, report)
+  end
+
+  # Ministry list on the accrual basis (spec §3): each ministry row is the
+  # slug's Vol I accrual allocation, plus two appended non-link statement rows
+  # (Net actuarial losses, Provision for valuation) so the whole list sums to
+  # the published headline exactly. ISC-slug accrual ≈ 44.75 (not the Vol II
+  # 63.0 the department page shows).
+  def test_accrual_ministry_list_sums_to_headline_with_statement_rows
+    @command.call(['--year', '2024'])
+    summary = JSON.parse(File.read(File.join(@out, '2024', 'summary.json')))
+    ministries = summary['ministries']
+
+    assert_in_delta summary['totalSpending'],
+                    ministries.sum { |m| m['totalSpending'] }, 0.001
+
+    isc = ministries.find { |m| m['slug'] == 'indigenous-services-and-northern-affairs' }
+    assert_in_delta 44.749, isc['totalSpending'], 0.01,
+                    'ISC+CIRNAC combined accrual (23.885 + 20.864)'
+    assert_equal 'vol1_segment_accrual', isc['basis']
+
+    # The two statement rows are non-link (no slug) with stable ids that match
+    # their Sankey nodes so both share one French label.
+    statement = ministries.reject { |m| m['slug'] }
+    ids = statement.map { |m| m['id'] }.sort
+    assert_equal %w[net-actuarial-losses provision-for-valuation], ids
+    assert(statement.all? { |m| m['basis'] == 'vol1_segment' })
+    actuarial = statement.find { |m| m['id'] == 'net-actuarial-losses' }
+    assert_in_delta 7.489, actuarial['totalSpending'], 0.01
+  end
+
+  # N:M portfolio→slug allocation (spec §2). FY2024: three separate RDA 3.6
+  # portfolios merge into the regional-economic-development slug, while the ISC
+  # slug sums two 3.6 portfolios (Indigenous Services + Crown-Indigenous
+  # Relations). FY2025: the regional slug has no 3.6 portfolio and is split out
+  # of its Innovation host in proportion to Vol II shares (a genuine 1→many).
+  def test_accrual_nm_portfolio_slug_allocation
+    @command.call(['--year', '2024'])
+    s2024 = JSON.parse(File.read(File.join(@out, '2024', 'summary.json')))
+    rda = s2024['ministries'].find { |m| m['slug'] == 'regional-economic-development' }
+    # Atlantic (0.392) + Prairies (0.376) + Quebec (0.395) ≈ 1.163B merged.
+    assert_in_delta 1.163, rda['totalSpending'], 0.05, 'RDA merges its 3.6 portfolios'
+
+    @command.call(['--year', '2025'])
+    s2025 = JSON.parse(File.read(File.join(@out, '2025', 'summary.json')))
+    rda25 = s2025['ministries'].find { |m| m['slug'] == 'regional-economic-development' }
+    isi25 = s2025['ministries'].find { |m| m['slug'] == 'innovation-science-and-industry' }
+    # Split out of the Innovation host: both present and positive, and together
+    # they don't exceed the host's 3.6 portfolio total (11.876B).
+    assert_operator rda25['totalSpending'], :>, 0, 'regional split out of host'
+    assert_in_delta 11.876, rda25['totalSpending'] + isi25['totalSpending'], 0.01,
+                    'host 3.6 total split across host + absorbed slug'
   end
 
   def test_department_shapes_and_units
@@ -251,9 +356,12 @@ class TestExport < Minitest::Test
     tree = JSON.parse(File.read(File.join(@out, '2024', 'sankey.full.json')))['spending_data']
 
     assert_in_delta 120.24, leaf_sum(node(tree, 'social-security')), 0.5
-    # Obligations now = net interest on debt (47.273) + net actuarial losses
-    # (7.489) = 54.762 (published FY2024 debt charges + actuarial loss).
-    assert_in_delta 54.762, leaf_sum(node(tree, 'obligations')), 0.1
+    # Obligations (accrual basis) = net interest on debt (47.273) + net
+    # actuarial losses (7.489) + provision for valuation (-1.736) = 53.026.
+    assert_in_delta 53.026, leaf_sum(node(tree, 'obligations')), 0.1
+    # The provision-for-valuation leaf is the Vol I Table 3.6 standalone segment
+    # (FY2024 = -1.736B), sitting alongside actuarial under Obligations.
+    assert_in_delta(-1.736, leaf_sum(node(tree, 'provision-for-valuation')), 0.01)
   end
 
   def test_excluded_year_reported_and_others_ship
@@ -266,6 +374,20 @@ class TestExport < Minitest::Test
   end
 
   private
+
+  # Copies a cest-eest edition, multiplying every amount in its fiscal-year
+  # columns by `factor` (the doctored fixture for the scale-guard test).
+  def doctor_cest(src, dest, factor)
+    table = CSV.read(src, headers: true, encoding: 'bom|utf-8')
+    year_cols = table.headers.select { |h| h =~ %r{\d{4}/\d{4}} }
+    table.each do |row|
+      year_cols.each do |col|
+        v = row[col].to_s.delete(',')
+        row[col] = (v.to_f * factor).round unless v.strip.empty?
+      end
+    end
+    File.write(dest, table.to_csv)
+  end
 
   # The miniSankey organization node with the given display name.
   def mini_org(dept, org_name)

@@ -71,11 +71,52 @@ export default async function FederalMethodologyPage(props: PageLangParam) {
               Headline totals on the overview page (total spending, revenue, and
               deficit) use the Volume I consolidated financial statements, which
               are prepared on an accrual basis and include consolidated Crown
-              corporations. Department pages use the Volume II appropriations
-              (expenditure) basis, reported ministry by ministry. Because the
-              two bases differ, the sum of Volume II ministry totals will not
-              equal the Volume I consolidated total. The reconciliation below
-              bridges the two.
+              corporations. For recent years the overview ministry list and the
+              thematic Sankey are also on this Volume I accrual basis (see the
+              allocation note below), so they sum to the headline exactly.
+              Department pages remain on the Volume II appropriations
+              (expenditure) basis, ministry by ministry, because that is where
+              the line-level vote and transfer-payment detail exists — so a
+              department&rsquo;s own total differs from its accrual ministry row
+              on the overview. The reconciliation below bridges the two bases.
+            </Trans>
+          </P>
+        </Section>
+
+        <Section>
+          <H2>
+            <Trans>How ministry and Sankey totals are allocated</Trans>
+          </H2>
+          <P>
+            <Trans>
+              On the Volume I accrual basis, each ministry&rsquo;s total comes
+              from Volume I Table 3.6 (&ldquo;External expenses by segment and
+              by type&rdquo;), which reports accrual expenses for each
+              ministerial portfolio. Where our portfolio grouping is finer than
+              the table (for example, a regional development agency reported
+              inside a host portfolio), the segment total is split across the
+              affected portfolios in proportion to their Volume II expenditure
+              shares for that year; where it is coarser, the relevant segments
+              are summed. In the thematic Sankey, each portfolio&rsquo;s accrual
+              total is spread across its thematic categories in the same
+              proportions as its Volume II lines, and the tax-system and
+              statutory items sourced directly from Volume I (Old Age Security,
+              Employment Insurance, the Canada Child Benefit, major transfers to
+              provinces, public debt charges, and so on) are carved out of the
+              owning portfolio so nothing is double counted. Two
+              non-departmental statement lines — net actuarial losses and the
+              provision for valuation and other items — are shown as their own
+              rows and leaves. Because sub-ministry Sankey leaves are allocated
+              this way, they are proportional estimates, not literal Volume II
+              line amounts; the department page carries the exact appropriations
+              detail. For older years, each Table 3.6 edition carries the
+              figures as first published while the headline uses the restated
+              ten-year comparative statement, so the vintage segment figures are
+              scaled proportionally to tie to the restated statement totals
+              exactly (and for editions predating the separate net actuarial
+              losses line, that statement amount is carved out of the portfolios
+              the same way). Every year&rsquo;s ministry list and Sankey
+              therefore sum to the published headline.
             </Trans>
           </P>
         </Section>
@@ -106,14 +147,14 @@ export default async function FederalMethodologyPage(props: PageLangParam) {
           </H2>
           <P>
             <Trans>
-              The spending Sankey mixes Volume II gross ministry expenditures
-              with Volume I consolidated items, so its leaves do not naturally
-              sum to the Volume I headline. A single top-level &ldquo;Accounting
-              and consolidation adjustments&rdquo; leaf reconciles the tree to
-              the published total; it captures the gross (Volume II) versus
-              consolidated net (Volume I) difference and may be negative. This
-              leaf equals the unattributed remainder in the reconciliation table
-              below, so the Sankey and the reconciliation stay consistent.
+              Every published year is on the Volume I accrual basis, so the
+              spending Sankey sums to the published headline and no adjustments
+              leaf appears. The mechanism remains as a safeguard: should a
+              residual over $1 million ever arise, a single top-level
+              &ldquo;Accounting and consolidation adjustments&rdquo; leaf would
+              reconcile the tree to the published total (it may be negative and
+              equals the unattributed remainder in the reconciliation table
+              below), keeping the Sankey and the reconciliation consistent.
             </Trans>
           </P>
         </Section>

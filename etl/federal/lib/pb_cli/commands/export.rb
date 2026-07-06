@@ -6,6 +6,7 @@ require 'time'
 require_relative '../export/cpi'
 require_relative '../export/major_transfers'
 require_relative '../export/mapping'
+require_relative '../export/segment_expenses'
 require_relative '../export/standard_objects'
 require_relative '../export/truncation'
 require_relative '../export/units'
@@ -27,6 +28,16 @@ module PbCli
       BASE_YEAR = 2025
       MINI_SANKEY_TOP_N = 12
       HEADLINE_TOLERANCE = 0.005 # 0.5%
+      # Restatement-scaling guard (main-page-accrual-basis follow-up): a year's
+      # Table 3.6 portfolio totals are scaled to tie to the restated statement
+      # total, but only when the scale factor is within 1% of 1.0 — measured on
+      # the RESTATEMENT component. Editions predating the net-actuarial-losses
+      # split (≤2019) additionally carve the statement's actuarial amount out of
+      # the portfolios, so the actuarial share of total expenses is added to the
+      # allowance (the carve-out is a known presentation change, fully
+      # explained, not an unexplained restatement). Beyond the guard the year is
+      # export-blocked with the delta reported.
+      SCALE_GUARD = 0.01
       # Per-department miniSankey reconciliation floor (spec §B): the larger of
       # 2% or $50M. Compared against Vol II allotment expenditures, which equal
       # the standard-object GROSS total (Σ objects) for the same ministerial
@@ -43,6 +54,10 @@ module PbCli
       PUBLISHED_TOTALS = {
         2024 => { spending: 521.425, revenue: 459.549 }
       }.freeze
+
+      # Per-year restatement scale info ({ factor:, deviation:, carve:, ok: });
+      # exposed for the pinned scale-factor tests and populated during export.
+      attr_reader :segment_scales
 
       def initialize(paths = {})
         root = paths[:root] || Dir.pwd
@@ -137,7 +152,9 @@ module PbCli
         @vol1 = PbCli::Export::Vol1Statement.new(@open_tables_dir)
         @major_transfers = PbCli::Export::MajorTransfers.new(@major_transfers_path)
         @standard_objects = PbCli::Export::StandardObjects.new(@open_tables_dir)
+        @segments = PbCli::Export::SegmentExpenses.new(@open_tables_dir)
         @cpi = PbCli::Export::Cpi.new(@cpi_path, base_year: BASE_YEAR)
+        @accrual_years = {}
       end
 
       def all_data_years
@@ -152,6 +169,11 @@ module PbCli
       def precompute_year_totals(years)
         @slug_year_totals = Hash.new { |h, k| h[k] = {} }
         @node_year_totals = Hash.new { |h, k| h[k] = Hash.new(0.0) }
+        # Per-slug per-node Vol II dollars, so a slug's accrual allocation can be
+        # spread across its thematic nodes pro-rata to its Vol II theme mix.
+        @slug_node_vol2 = Hash.new { |h, k| h[k] = Hash.new { |i, j| i[j] = Hash.new(0.0) } }
+        # Per-slug accrual allocation (billions) for accrual years (summary list).
+        @slug_accrual = {}
         @vol1_spending = {}
         @vol1_revenue = {}
 
@@ -176,8 +198,16 @@ module PbCli
             amount = row['expenditures'].to_f
             slug_dollars[slug] += amount
             @node_year_totals[year][node] += amount
+            @slug_node_vol2[year][slug][node] += amount
           end
           slug_dollars.each { |slug, d| @slug_year_totals[slug][year] = PbCli::Export::Units.dollars_to_billions(d) }
+
+          # On the Vol I accrual basis (main-page-accrual-basis spec) the
+          # thematic tree and ministry list are re-based off Table 3.6 segment
+          # expenses: replace the Vol II node totals with each slug's accrual
+          # allocation, spread across its Vol II theme mix. Fallback years keep
+          # the Vol II node totals and their reconciling adjustments leaf.
+          rebase_nodes_to_accrual(year, slug_dollars) if accrual_year?(year)
           apply_vol1_offsets(year) if @vol1.year?(year)
 
           # transfer-payment slug coverage (dept pages only; never feed the tree)
@@ -188,6 +218,128 @@ module PbCli
             record_error(year, "transfer-payment row without slug: code=#{row['ministry_code'].inspect} name=#{row['ministry_name_normalized'].inspect}") if slug.nil?
           end
         end
+      end
+
+      # True when Vol I Table 3.6 segment data exists for the year and the
+      # restatement scale factor is within the guard. All 12 exported years
+      # currently qualify; a year beyond the guard is export-blocked (the error
+      # is recorded by segment_scale) and the adjustments-leaf machinery remains
+      # as a defensive fallback should a residual ever appear.
+      def accrual_year?(year)
+        return @accrual_years[year] if @accrual_years.key?(year)
+
+        @accrual_years[year] =
+          @segments.year?(year) && @vol1.year?(year) && segment_scale(year)[:ok]
+      end
+
+      # Restatement scaling (main-page-accrual-basis follow-up): the year's own
+      # Table 3.6 edition carries vintage figures, while Vol1Statement reads the
+      # RESTATED ten-year comparative. All portfolio totals (and the standalone
+      # provision / Crown-corporations segments) are scaled proportionally so
+      # the full set ties to the restated statement total exactly. Net actuarial
+      # losses always come from the statement line; editions predating the
+      # net-actuarial split (≤2019, actuarial segment absent) have the statement
+      # amount carved out of the portfolios by the same proportional scaling
+      # (target = total_spending − actuarial), with the carve share added to the
+      # 1% guard allowance since it is a fully-explained presentation change.
+      #
+      #   factor = (total_spending − actuarial_stmt) / (3.6 total − actuarial_seg)
+      #
+      # Returns { factor:, deviation:, carve:, allowed:, ok: }, memoized.
+      def segment_scale(year)
+        @segment_scales ||= {}
+        @segment_scales[year] ||= compute_segment_scale(year)
+      end
+
+      def compute_segment_scale(year)
+        total = @vol1.total_spending(year)
+        act_stmt = @vol1.net_actuarial_losses(year)
+        act_seg = PbCli::Export::Units.dollars_to_billions(
+          @segments.segment_dollars(year, 'net-actuarial-losses')
+        )
+        base = @segments.total(year) - act_seg
+        factor = (total - act_stmt) / base
+        carve = act_seg.abs < 0.0005 && act_stmt.abs >= 0.0005 ? (act_stmt / total).abs : 0.0
+        deviation = (factor - 1).abs
+        ok = deviation <= SCALE_GUARD + carve
+        unless ok
+          record_error(year, format(
+            '3.6 restatement scale factor %.5f beyond guard: restatement deviation %.4f%% > %.2f%% ' \
+            '(actuarial carve-out allowance %.4f%%; 3.6 total %.3fB vs statement %.3fB)',
+            factor, (deviation - carve) * 100, SCALE_GUARD * 100, carve * 100,
+            @segments.total(year), total
+          ))
+        end
+        { factor: factor, deviation: deviation, carve: carve, allowed: SCALE_GUARD + carve, ok: ok }
+      end
+
+      # Replaces @node_year_totals[year] (Vol II) with each slug's accrual
+      # allocation spread across its Vol II theme mix. Records @slug_accrual for
+      # the ministry list. Export-blocking on unresolved 3.6 portfolios, on a
+      # portfolio resolving to a slug absent from Vol II, or on an orphan slug
+      # (present in Vol II, no 3.6 portfolio) with no configured host.
+      def rebase_nodes_to_accrual(year, slug_dollars)
+        accrual = compute_accrual_allocations(year, slug_dollars)
+        @slug_accrual[year] = accrual.transform_values { |d| PbCli::Export::Units.dollars_to_billions(d) }
+
+        @node_year_totals[year] = Hash.new(0.0)
+        accrual.each do |slug, dollars|
+          vol2_total = slug_dollars[slug]
+          next if vol2_total.nil? || vol2_total.zero?
+
+          @slug_node_vol2[year][slug].each do |node, vol2|
+            @node_year_totals[year][node] += dollars * vol2 / vol2_total
+          end
+        end
+      end
+
+      # Allocates the Table 3.6 "Ministries" segment total (restatement-scaled)
+      # to portfolio slugs (dollars). Portfolios that resolve to the same slug
+      # are summed (merge); a slug present in Vol II but with no 3.6 portfolio
+      # of its own is absorbed into a configured host portfolio's group and the
+      # group total is split across its members in proportion to their Vol II
+      # expenditure shares (spec §2); a portfolio whose slug is ABSENT from
+      # Vol II that year merges into its host's group (2016 Infrastructure).
+      # Σ(allocations) == factor × the 3.6 Ministries total.
+      def compute_accrual_allocations(year, slug_dollars)
+        factor = segment_scale(year)[:factor]
+        present = slug_dollars.keys
+        primary = Hash.new(0.0)
+        @segments.portfolios(year).each_value do |portfolio|
+          slug = @mapping.segment_portfolio_slug(portfolio.label)
+          if slug.nil?
+            record_error(year, "3.6 portfolio without slug: #{portfolio.label.inspect}")
+            next
+          end
+          slug = @mapping.segment_host_slug(slug) unless present.include?(slug)
+          unless slug && present.include?(slug)
+            record_error(year, "3.6 portfolio #{portfolio.label.inspect} resolves to a slug with no Vol II data this year and no host")
+            next
+          end
+          primary[slug] += portfolio.total * factor
+        end
+
+        group_of = {}
+        present.each do |slug|
+          host = @mapping.segment_host_slug(slug)
+          if !primary[slug].zero? || host.nil?
+            group_of[slug] = slug
+          elsif present.include?(host)
+            group_of[slug] = host
+          else
+            record_error(year, "orphan slug #{slug} (no 3.6 portfolio) has no host present in Vol II this year")
+            group_of[slug] = slug
+          end
+        end
+
+        allocation = Hash.new(0.0)
+        present.group_by { |slug| group_of[slug] }.each do |group, members|
+          denom = members.sum { |slug| slug_dollars[slug] }
+          members.each do |slug|
+            allocation[slug] = denom.zero? ? 0.0 : primary[group] * slug_dollars[slug] / denom
+          end
+        end
+        allocation
       end
 
       # Standard-object (dmac-meso) rows, resolved to portfolio slugs and
@@ -338,12 +490,13 @@ module PbCli
         [spending, revenue]
       end
 
-      # After the thematic tree (Vol II nodes post-offset + Vol I leaves) is
-      # built, one top-level leaf reconciles the leaf sum to the published
-      # headline so the Sankey spending column equals summary.totalSpending. The
-      # residual is the Vol II gross vs Vol I consolidated difference already
-      # decomposed in reconciliation.json (it equals that file's unattributed
-      # remainder item); FY2024 ≈ -10.9B. Emit nothing when |residual| < $1M.
+      # Guarded fallback (main-page-accrual-basis spec §2): in accrual years the
+      # tree is re-based off Table 3.6 and already sums to the published headline
+      # (residual ≈ 0), so NO leaf is emitted. In fallback years (whose 3.6 total
+      # does not reconcile) the tree mixes Vol II gross + Vol I leaves and this
+      # single top-level leaf reconciles the leaf sum to the headline; the
+      # residual equals reconciliation.json's unattributed remainder item. Emit
+      # nothing when |residual| < $1M.
       def add_accounting_adjustments_leaf(year, themes, total)
         residual = PbCli::Export::Units.round_billions(total - sum_amounts(themes))
         return if residual.abs < 0.001
@@ -373,11 +526,24 @@ module PbCli
         result
       end
 
-      # Vol II-mapped dollars (post-offset) plus any Vol I-sourced amounts.
+      # Vol II-mapped dollars (post-offset; accrual allocations in accrual years)
+      # plus any Vol I-sourced amounts plus any Vol I Table 3.6 segment amounts.
       def leaf_amount(year, node)
         vol2 = @node_year_totals[year][node['id']]
         vol1 = @mapping.vol1_rules_for(node['id']).sum { |r| vol1_rule_dollars(year, r) }
-        PbCli::Export::Units.round_billions((vol2 + vol1) / PbCli::Export::Units::BILLION)
+        segment = @mapping.segment_rules_for(node['id']).sum { |r| segment_rule_dollars(year, r) }
+        PbCli::Export::Units.round_billions((vol2 + vol1 + segment) / PbCli::Export::Units::BILLION)
+      end
+
+      # A `source: segment` node is filled from a Vol I Table 3.6 standalone
+      # segment (Provision for valuation; the 2014–2016 Crown-corporations
+      # lump), restatement-scaled — but only in accrual years, where the tree is
+      # re-based off 3.6 and sums to the headline without an adjustments leaf.
+      # In a (defensive) fallback year it contributes 0.
+      def segment_rule_dollars(year, rule)
+        return 0.0 unless accrual_year?(year)
+
+        @segments.segment_dollars(year, rule['segment_id']) * segment_scale(year)[:factor]
       end
 
       # Province/territory children for a node fed by a single Vol I Table 3.7
@@ -440,9 +606,14 @@ module PbCli
       # double-count. Checked afterwards: a materially negative catch-all means
       # the offsets exceed what the ministry actually spent (a data error).
       def apply_vol1_offsets(year)
+        accrual = accrual_year?(year)
         touched = []
         @mapping.vol1_rules.each do |rule|
-          target = rule['offset_node']
+          # `offset_node` always applies (the Vol I item sits inside a Vol II
+          # lump). `accrual_offset_node` applies only on the accrual basis,
+          # where the item is inside the owning slug's Table 3.6 portfolio total
+          # but outside Vol II appropriations.
+          target = rule['offset_node'] || (accrual ? rule['accrual_offset_node'] : nil)
           next unless target
 
           @node_year_totals[year][target] -= vol1_rule_dollars(year, rule)
@@ -519,16 +690,23 @@ module PbCli
 
       def summary_payload(year)
         total = @vol1.total_spending(year)
+        accrual = accrual_year?(year)
         ministries = slugs_for(year).map do |slug|
-          spend = @slug_year_totals[slug][year]
+          spend = accrual ? @slug_accrual[year][slug] : @slug_year_totals[slug][year]
           {
             'name' => portfolio_name(slug),
             'slug' => slug,
             'totalSpending' => spend,
             'percentage' => pct(spend, total),
-            'basis' => 'vol2_appropriations'
+            'basis' => accrual ? 'vol1_segment_accrual' : 'vol2_appropriations'
           }
         end.sort_by { |m| [-m['totalSpending'], m['slug']] }
+
+        # On the accrual basis, append the Table 3.6 standalone (non-ministerial)
+        # segments — Net actuarial losses, Provision for valuation and other
+        # items — as non-link rows (no slug/href) so the ministry list sums to
+        # the published headline exactly. Their stable id keys the French label.
+        ministries += statement_rows(year, total) if accrual
 
         {
           'name' => 'Government of Canada',
@@ -544,6 +722,41 @@ module PbCli
           'basis' => 'vol1_consolidated',
           'ministries' => ministries
         }
+      end
+
+      # Non-link ministry-list rows for the Vol I statement lumps outside the
+      # ministerial portfolios. No slug/href — the site renders them un-linked;
+      # the `id` matches the corresponding Sankey node so both share one French
+      # key. Net actuarial losses ALWAYS come from the statement line (the
+      # ≤2019 editions predate the segment); the provision and the 2014–2016
+      # Crown-corporations lump are the 3.6 segments, restatement-scaled. With
+      # these rows the list sums to the published headline exactly.
+      def statement_rows(year, total)
+        factor = segment_scale(year)[:factor]
+        rows = [{
+          'name' => 'Net actuarial losses',
+          'id' => 'net-actuarial-losses',
+          'amount' => @vol1.net_actuarial_losses(year)
+        }]
+        @segments.segments(year).each do |seg|
+          next if seg.id == 'net-actuarial-losses'
+
+          rows << {
+            'name' => seg.label, 'id' => seg.id,
+            'amount' => PbCli::Export::Units.dollars_to_billions(seg.dollars * factor)
+          }
+        end
+        rows.reject { |r| r['amount'].abs < 0.0005 }
+            .sort_by { |r| [-r['amount'], r['id']] }
+            .map do |r|
+          {
+            'name' => r['name'],
+            'id' => r['id'],
+            'totalSpending' => PbCli::Export::Units.round_billions(r['amount']),
+            'percentage' => pct(r['amount'], total),
+            'basis' => 'vol1_segment'
+          }
+        end
       end
 
       # --- reconciliation --------------------------------------------------
@@ -850,7 +1063,8 @@ module PbCli
       end
 
       def report_empty?
-        @errors.empty? && @excluded.empty? && @recon_warnings.empty?
+        @errors.empty? && @excluded.empty? && @recon_warnings.empty? &&
+          (@segment_scales || {}).empty?
       end
 
       def write_errors_report(exported)
@@ -864,6 +1078,7 @@ module PbCli
           @excluded.sort.each { |y, reason| lines << "- **#{y}**: #{reason}" }
           lines << ''
         end
+        append_scale_section(lines, exported)
         append_recon_section(lines) unless @recon_warnings.empty?
         unless @errors.empty?
           lines << '## Validation errors' << ''
@@ -875,6 +1090,28 @@ module PbCli
           end
         end
         File.write(@errors_path, lines.join("\n"))
+      end
+
+      # Informational (always reported): per-year Vol I Table 3.6 restatement
+      # scale factors. factor = (statement total − actuarial) / (3.6 total −
+      # actuarial segment); ≤2019 editions predate the net-actuarial split, so
+      # the statement's actuarial amount is carved out of the portfolios by the
+      # same proportional scaling (the "carve" share of the deviation).
+      def append_scale_section(lines, exported)
+        scaled = (@segment_scales || {}).select { |y, _| exported.include?(y) }.sort
+        return if scaled.empty?
+
+        lines << '## Vol I Table 3.6 restatement scaling (informational)' << ''
+        lines << 'Portfolio totals are scaled to tie to the restated Consolidated Statement of ' \
+                 'Operations total (guard: restatement deviation ≤ 1% after the actuarial ' \
+                 'carve-out allowance for editions predating the net-actuarial-losses split).'
+        lines << ''
+        scaled.each do |year, s|
+          lines << format('- **%d**: factor %.5f (deviation %.4f%%, actuarial carve-out %.4f%%, restatement %.4f%%)',
+                          year, s[:factor], s[:deviation] * 100, s[:carve] * 100,
+                          (s[:deviation] - s[:carve]) * 100)
+        end
+        lines << ''
       end
 
       # Non-blocking miniSankey ↔ allotment reconciliation notes. The

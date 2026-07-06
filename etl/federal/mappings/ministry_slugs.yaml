@@ -377,6 +377,51 @@ meso_portfolio_aliases:
   - portfolio: Women, Gender Equality                   # 2023 (truncated label)
     slug: women-and-gender-equality
 
+# Vol I Table 3.6 (cest-eest, "External expenses by segment") portfolio
+# crosswalk. Most 3.6 portfolio labels match a portfolio's ministry-name
+# variants above (resolved space-insensitively, like the meso dataset); only
+# genuinely-different 3.6 wording needs an explicit alias here. Verified
+# against cest-eest-{2014..2025}. The segment resolver falls back to the meso
+# lookup, so meso_portfolio_aliases are honoured too.
+segment_portfolio_aliases:
+  # The Minister of Digital Government's portfolio (2019–2021 editions) is
+  # essentially Shared Services Canada, which sits under the PSPC portfolio in
+  # every year (organization_overrides + the gn-dg correction). Merge it there.
+  - portfolio: Digital Government
+    slug: public-services-and-procurement-canada
+  # Accented "Québec" label (2023/2024 editions) — the ministries: list carries
+  # the unaccented spelling, so an explicit alias resolves it to the merged RDA.
+  - portfolio: Economic Development Agency of Canada for the Regions of Québec
+    slug: regional-economic-development
+  # Source typo in the 2014/2015 editions ("Revenu" without the final "e").
+  - portfolio: Canada Revenu Agency
+    slug: canada-revenue-agency
+
+# When a slug is present in Vol II but has NO 3.6 portfolio of its own that
+# year, its accrual spending is consolidated inside a host portfolio's 3.6
+# total. The host's segment total is then split across {host + absorbed slugs}
+# in proportion to their Vol II expenditure shares that year (spec §2). A slug
+# that DOES have its own 3.6 portfolio that year stays its own group (so the
+# clean FY2024 RDA breakdown is used verbatim, not re-split). The mapping is
+# also used in the reverse (merge) direction: when a 3.6 PORTFOLIO exists but
+# its slug is absent from Vol II that year, its total merges into the host's
+# group (2016: 3.6 has an "Infrastructure and Communities" portfolio while
+# Vol II reports Infrastructure inside the `ic` ISED portfolio). Verified:
+#   - regional-economic-development: RDAs are reported inside the ISED/ISI
+#     portfolio in 2019–2021, 2025 (and all but the Quebec agency in 2023).
+#   - parks-canada: Parks Canada Agency reports under Environment (2025).
+#   - women-and-gender-equality: folded under Canadian Heritage (2025).
+#   - housing-infrastructure-communities: merge direction only (2016).
+segment_hosts:
+  - slug: regional-economic-development
+    host: innovation-science-and-industry
+  - slug: parks-canada
+    host: environment-and-climate-change
+  - slug: women-and-gender-equality
+    host: canadian-heritage
+  - slug: housing-infrastructure-communities
+    host: innovation-science-and-industry
+
 # Rows whose ministry_name_normalized is null or page-title noise
 # ("Public Accounts of Canada"). Resolve by ministry_code; the two ambiguous
 # codes are additionally pinned by year.

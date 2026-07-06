@@ -252,7 +252,7 @@
           {
             "id": "other-major-transfers",
             "name": "Other Major Transfers",
-            "amount": 3.988314
+            "amount": 0.868112
           }
         ]
       },
@@ -269,24 +269,24 @@
                 "name": "Standard of Living",
                 "children": [
                   {
-                    "id": "employment-training",
-                    "name": "Employment + Training",
-                    "amount": 11.97448
-                  },
-                  {
                     "id": "revenue-canada",
                     "name": "Revenue Canada",
-                    "amount": 5.06278
+                    "amount": 10.072176
                   },
                   {
-                    "id": "support-for-veterans",
-                    "name": "Support for Veterans",
-                    "amount": 4.784743
+                    "id": "employment-training",
+                    "name": "Employment + Training",
+                    "amount": 9.164732
                   },
                   {
                     "id": "official-languages-culture",
                     "name": "Official Languages + Culture",
-                    "amount": 3.97989
+                    "amount": 4.308353
+                  },
+                  {
+                    "id": "support-for-veterans",
+                    "name": "Support for Veterans",
+                    "amount": 0.946299
                   },
                   {
                     "id": "carbon-tax-rebate",
@@ -312,7 +312,7 @@
                   {
                     "id": "health-care-systems-protection",
                     "name": "Health Care Systems + Protection",
-                    "amount": 6.150417
+                    "amount": 3.706338
                   },
                   {
                     "id": "food-safety",
@@ -344,7 +344,7 @@
                   {
                     "id": "investment-growth-commercialization",
                     "name": "Investment, Growth and Commercialization",
-                    "amount": 7.809027
+                    "amount": 7.107821
                   },
                   {
                     "id": "other-boards-councils",
@@ -366,17 +366,27 @@
               {
                 "id": "infrastructure-investments",
                 "name": "Infrastructure Investments",
-                "amount": 4.695427
+                "amount": 3.989073
               },
               {
-                "id": "fisheries",
-                "name": "Fisheries",
-                "amount": 2.662862
+                "id": "transportation",
+                "name": "Transportation",
+                "amount": 2.856207
               },
               {
                 "id": "natural-resources-management",
                 "name": "Natural Resources Management",
-                "amount": 2.662686
+                "amount": 2.460954
+              },
+              {
+                "id": "agriculture",
+                "name": "Agriculture",
+                "amount": 2.332088
+              },
+              {
+                "id": "fisheries",
+                "name": "Fisheries",
+                "amount": 2.001268
               },
               {
                 "id": "environment-climate-change",
@@ -385,7 +395,7 @@
                   {
                     "id": "environment-programs",
                     "name": "Other Environment and Climate Change Programs",
-                    "amount": 2.60137
+                    "amount": 1.952222
                   },
                   {
                     "id": "national-parks",
@@ -393,16 +403,6 @@
                     "amount": 0.0
                   }
                 ]
-              },
-              {
-                "id": "transportation",
-                "name": "Transportation",
-                "amount": 2.555665
-              },
-              {
-                "id": "agriculture",
-                "name": "Agriculture",
-                "amount": 2.041507
               },
               {
                 "id": "banking-finance",
@@ -436,6 +436,11 @@
             "id": "net-actuarial-losses",
             "name": "Net actuarial losses",
             "amount": 10.352
+          },
+          {
+            "id": "provision-for-valuation",
+            "name": "Provision for valuation and other items",
+            "amount": 2.733111
           }
         ]
       },
@@ -446,12 +451,28 @@
           {
             "id": "defence-operations",
             "name": "Defence Operations",
-            "amount": 23.907205
+            "amount": 31.073034
           },
           {
             "id": "communications-security-establishment",
             "name": "Communications Security Establishment",
             "amount": 0.0
+          }
+        ]
+      },
+      {
+        "id": "indigenous-priorities",
+        "name": "Indigenous Priorities",
+        "children": [
+          {
+            "id": "crown-indigenous-relations",
+            "name": "Crown-Indigenous Relations",
+            "amount": 12.760465
+          },
+          {
+            "id": "indigenous-well-being",
+            "name": "Indigenous Well-Being + Self Determination",
+            "amount": 6.814652
           }
         ]
       },
@@ -466,12 +487,12 @@
               {
                 "id": "community-safety-emergency",
                 "name": "Community Safety",
-                "amount": 11.386238
+                "amount": 11.768151
               },
               {
                 "id": "justice-system",
                 "name": "Justice System",
-                "amount": 2.064244
+                "amount": 1.666602
               },
               {
                 "id": "csis",
@@ -502,7 +523,7 @@
               {
                 "id": "immigration-services",
                 "name": "Other Immigration Services",
-                "amount": 2.219462
+                "amount": 2.533081
               },
               {
                 "id": "border-security",
@@ -524,7 +545,7 @@
               {
                 "id": "other-public-services-procurement",
                 "name": "Other Public Services + Procurement",
-                "amount": 7.541359
+                "amount": 4.944027
               },
               {
                 "id": "government-it-operations",
@@ -540,22 +561,22 @@
               {
                 "id": "treasury-board",
                 "name": "Treasury Board",
-                "amount": 4.56399
+                "amount": 3.733265
               },
               {
                 "id": "parliament",
                 "name": "Parliament",
-                "amount": 0.762321
+                "amount": 0.697222
               },
               {
                 "id": "privy-council-office",
                 "name": "Privy Council Office",
-                "amount": 0.399431
+                "amount": 0.367364
               },
               {
                 "id": "governor-general",
                 "name": "Office of the Secretary to the Governor General",
-                "amount": 0.023457
+                "amount": 0.02308
               },
               {
                 "id": "audit-agents",
@@ -563,34 +584,18 @@
                 "amount": 0.0
               }
             ]
-          }
-        ]
-      },
-      {
-        "id": "indigenous-priorities",
-        "name": "Indigenous Priorities",
-        "children": [
-          {
-            "id": "crown-indigenous-relations",
-            "name": "Crown-Indigenous Relations",
-            "amount": 8.05332
           },
           {
-            "id": "indigenous-well-being",
-            "name": "Indigenous Well-Being + Self Determination",
-            "amount": 4.300828
+            "id": "crown-corporations-and-other-entities",
+            "name": "Crown corporations and other entities",
+            "amount": 0.0
           }
         ]
       },
       {
         "id": "international-affairs",
         "name": "International Affairs",
-        "amount": 6.811176
-      },
-      {
-        "id": "accounting-basis-adjustments",
-        "name": "Accounting and consolidation adjustments",
-        "amount": 6.378801
+        "amount": 8.501303
       }
     ]
   },

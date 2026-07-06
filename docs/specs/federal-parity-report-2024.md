@@ -16,39 +16,38 @@ Headline change vs the old site (reason `source-correction`): the hardcoded site
 
 ## Sankey theme totals ($B)
 
-| Theme                                    | Current site | Generated |      Δ | Reason                                                                                                                                                                                                                      |
-| ---------------------------------------- | -----------: | --------: | -----: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Economy and Standard of Living           |       120.09 |    118.44 |  -1.65 | basis — Vol II cash vs Vol I accrual for ESDC/ELCC carve-outs; small curation drift                                                                                                                                         |
-| Social Security                          |       120.24 |    120.25 |  +0.01 | rounding                                                                                                                                                                                                                    |
-| Safety                                   |        22.69 |     25.40 |  +2.72 | basis — RCMP/Justice gross Vol II expenditures vs site net program cost                                                                                                                                                     |
-| Other                                    |         6.86 |     17.51 | +10.66 | basis + mapping + source-correction — PSPC/SSC/TBS gross vs net; audit-agents/OAG (+0.14) deliberate addition; net actuarial losses (previously a -7.489B leaf here) relocated to Obligations, raising this theme by ~7.49B |
-| Transfers to Provinces                   |       100.30 |     93.85 |  -6.45 | mapping — Vol I 'other major transfers' kept in administrative ministries to avoid double-count; equalization/fiscal-stabilization vintage offset                                                                           |
-| Obligations                              |        47.27 |     54.76 |  +7.49 | source-correction — Vol I public debt charges (47.273) PLUS net actuarial losses (7.489), relocated here sign-normalized to a positive expense; the curated site showed debt charges only (47.27)                           |
-| Defence                                  |        34.48 |     34.85 |  +0.37 | basis — gross vs net                                                                                                                                                                                                        |
-| Indigenous Priorities                    |        42.84 |     62.96 | +20.12 | source-correction — generated includes the FY2024 $20.00B 'Compensation for First Nations children' ISC payment the curated tree omitted                                                                                    |
-| International Affairs                    |        19.20 |     19.26 |  +0.06 | rounding                                                                                                                                                                                                                    |
-| Accounting and consolidation adjustments |            — |    -25.85 |      — | source-correction — new top-level reconciling leaf making the spending tree sum to the published headline (Vol II gross vs Vol I consolidated difference; == reconciliation.json remainder). No curated counterpart.        |
+| Theme                          | Current site | Generated |      Δ | Reason                                                                                                                                                                                                                                                                              |
+| ------------------------------ | -----------: | --------: | -----: | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Economy and Standard of Living |       120.09 |    127.81 |  +7.72 | basis — Vol I accrual segment allocation (Table 3.6) replaces the curated Vol II tree across ESDC/health/ISED/environment/etc.                                                                                                                                                      |
+| Social Security                |       120.24 |    120.25 |  +0.01 | rounding — Vol I statement leaves (OAS/EI/CCB/CEWS/COVID) are unchanged by the accrual rebasing                                                                                                                                                                                     |
+| Safety                         |        22.69 |     28.02 |  +5.33 | basis — Vol I accrual allocation for Public Safety/RCMP/CBSA/Justice vs the curated site's net program cost                                                                                                                                                                         |
+| Other                          |         6.86 |     13.42 |  +6.57 | basis + source-correction — Vol I accrual allocation (PSPC/SSC/TBS/PCO/Parliament); net actuarial losses (previously a -7.489B leaf here) relocated to Obligations                                                                                                                  |
+| Transfers to Provinces         |       100.30 |     92.87 |  -7.43 | basis + mapping — CHT/CST/equalization scaled to the Vol I statement lines; 'other major transfers' is now the Finance accrual residual (offsets subtract from the accrual allocation)                                                                                              |
+| Obligations                    |        47.27 |     53.03 |  +5.76 | source-correction + basis — Vol I public debt charges (47.273) PLUS net actuarial losses (+7.489) PLUS the provision for valuation and other items (-1.736); the latter two are the Table 3.6 standalone segments now shown here. The curated site showed debt charges only (47.27) |
+| Defence                        |        34.48 |     33.06 |  -1.42 | basis — Vol I accrual (National Defence 33.06) vs the curated Vol II gross tree                                                                                                                                                                                                     |
+| Indigenous Priorities          |        42.84 |     44.70 |  +1.86 | basis — Vol I accrual allocation for the ISC + Crown-Indigenous Relations portfolios (44.70) vs the curated tree (42.84)                                                                                                                                                            |
+| International Affairs          |        19.20 |      8.26 | -10.94 | basis — Global Affairs Vol I accrual external expenses (8.26) vs the curated site's Vol II gross figure (19.20)                                                                                                                                                                     |
 
 ## Department totals & share of federal spending
 
 Current site total = first StatCard on each hardcoded page (or MiniSankey total); current share = `useDepartments` percentage. Generated = `summary.json` ministry (Vol II appropriations).
 
-| Department                               | Cur total $B | Gen total $B |     Δ | Cur % | Gen % |    Δ% | Reason                                                                                                                                           |
-| ---------------------------------------- | -----------: | -----------: | ----: | ----: | ----: | ----: | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| canada-revenue-agency                    |        16.80 |        17.29 | +0.49 |  3.20 |  3.32 | +0.12 | basis — Vol II appropriations (gross) vs the site's curated/net figure                                                                           |
-| department-of-finance                    |       136.10 |       136.11 | +0.01 | 26.40 | 26.10 | -0.30 | basis — Vol II appropriations (gross) vs the site's curated/net figure                                                                           |
-| employment-and-social-development-canada |        94.48 |        97.28 | +2.80 | 18.40 | 18.66 | +0.26 | basis — Vol II appropriations (gross) vs the site's curated/net figure                                                                           |
-| global-affairs-canada                    |        19.20 |        19.26 | +0.06 |  3.70 |  3.69 | -0.01 | rounding                                                                                                                                         |
-| health-canada                            |        13.70 |        13.96 | +0.26 |  2.70 |  2.68 | -0.02 | basis — Vol II appropriations (gross) vs the site's curated/net figure                                                                           |
-| housing-infrastructure-communities       |        14.50 |        14.56 | +0.06 |  2.80 |  2.79 | -0.01 | rounding                                                                                                                                         |
-| immigration-refugees-and-citizenship     |         6.30 |         6.35 | +0.05 |  1.20 |  1.22 | +0.02 | rounding                                                                                                                                         |
-| indigenous-services-and-northern-affairs |        63.00 |        63.03 | +0.03 | 12.30 | 12.09 | -0.21 | source-correction — Public Accounts includes the FY2024 ~$20B ISC First Nations children compensation payment omitted from the curated site tree |
-| innovation-science-and-industry          |        10.20 |        10.01 | -0.19 |  2.00 |  1.92 | -0.08 | basis — Vol II appropriations (gross) vs the site's curated/net figure                                                                           |
-| national-defence                         |        34.50 |        34.85 | +0.35 |  6.70 |  6.68 | -0.02 | basis — Vol II appropriations (gross) vs the site's curated/net figure                                                                           |
-| public-safety-canada                     |        13.90 |        16.09 | +2.19 |  2.70 |  3.09 | +0.39 | basis — Vol II appropriations (gross) vs the site's curated/net figure                                                                           |
-| public-services-and-procurement-canada   |         8.30 |        10.68 | +2.38 |  1.60 |  2.05 | +0.45 | basis — Vol II appropriations (gross) vs the site's curated/net figure                                                                           |
-| transport-canada                         |         5.10 |         5.20 | +0.10 |  1.00 |  1.00 | -0.00 | rounding                                                                                                                                         |
-| veterans-affairs                         |         6.10 |         6.07 | -0.03 |  1.20 |  1.16 | -0.04 | rounding                                                                                                                                         |
+| Department                               | Cur total $B | Gen total $B |      Δ | Cur % | Gen % |    Δ% | Reason                                                                       |
+| ---------------------------------------- | -----------: | -----------: | -----: | ----: | ----: | ----: | ---------------------------------------------------------------------------- |
+| canada-revenue-agency                    |        16.80 |        59.91 | +43.11 |  3.20 | 11.49 | +8.29 | basis — Vol I accrual segment allocation vs the site's curated/Vol II figure |
+| department-of-finance                    |       136.10 |       135.13 |  -0.97 | 26.40 | 25.92 | -0.48 | basis — Vol I accrual segment allocation vs the site's curated/Vol II figure |
+| employment-and-social-development-canada |        94.48 |       124.37 | +29.89 | 18.40 | 23.85 | +5.45 | basis — Vol I accrual segment allocation vs the site's curated/Vol II figure |
+| global-affairs-canada                    |        19.20 |         8.26 | -10.94 |  3.70 |  1.58 | -2.12 | basis — Vol I accrual segment allocation vs the site's curated/Vol II figure |
+| health-canada                            |        13.70 |        14.64 |  +0.95 |  2.70 |  2.81 | +0.11 | basis — Vol I accrual segment allocation vs the site's curated/Vol II figure |
+| housing-infrastructure-communities       |        14.50 |        13.65 |  -0.85 |  2.80 |  2.62 | -0.18 | basis — Vol I accrual segment allocation vs the site's curated/Vol II figure |
+| immigration-refugees-and-citizenship     |         6.30 |         6.80 |  +0.50 |  1.20 |  1.30 | +0.10 | basis — Vol I accrual segment allocation vs the site's curated/Vol II figure |
+| indigenous-services-and-northern-affairs |        63.00 |        44.75 | -18.25 | 12.30 |  8.58 | -3.72 | basis — Vol I accrual segment allocation vs the site's curated/Vol II figure |
+| innovation-science-and-industry          |        10.20 |        10.38 |  +0.18 |  2.00 |  1.99 | -0.01 | basis — Vol I accrual segment allocation vs the site's curated/Vol II figure |
+| national-defence                         |        34.50 |        33.06 |  -1.44 |  6.70 |  6.34 | -0.36 | basis — Vol I accrual segment allocation vs the site's curated/Vol II figure |
+| public-safety-canada                     |        13.90 |        18.78 |  +4.88 |  2.70 |  3.60 | +0.90 | basis — Vol I accrual segment allocation vs the site's curated/Vol II figure |
+| public-services-and-procurement-canada   |         8.30 |         6.88 |  -1.42 |  1.60 |  1.32 | -0.28 | basis — Vol I accrual segment allocation vs the site's curated/Vol II figure |
+| transport-canada                         |         5.10 |         5.36 |  +0.26 |  1.00 |  1.03 | +0.03 | basis — Vol I accrual segment allocation vs the site's curated/Vol II figure |
+| veterans-affairs                         |         6.10 |         0.53 |  -5.57 |  1.20 |  0.10 | -1.10 | basis — Vol I accrual segment allocation vs the site's curated/Vol II figure |
 
 ## Department MiniSankey & entity breakdowns
 
@@ -79,9 +78,8 @@ The hardcoded `FederalSpendingChart` series ran FY1995–2024 (10 of 14 pages ha
 
 Reason-code counts across compared theme + department rows:
 
-- **basis**: 12
-- **mapping**: 1
-- **rounding**: 7
-- **source-correction**: 3
+- **basis**: 21
+- **rounding**: 1
+- **source-correction**: 1
 
 **No `unexplained` rows.** Every material mismatch carries a `basis`, `mapping`, `rounding`, or `source-correction` code, consistent with spec §11 acceptance. All department deltas roll up into the documented theme-level differences (NOTES.md Wave 2.5).

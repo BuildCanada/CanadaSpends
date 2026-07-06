@@ -40,6 +40,14 @@
 #                   without offset_node are OUTSIDE Vol II appropriations
 #                   (tax-system / specified-purpose-account / accrual items)
 #                   and appear in reconciliation.json as named differences.
+#                   accrual_offset_node: <node-id> subtracts the amount ONLY in
+#                   Vol I accrual years (main-page-accrual-basis spec) — used
+#                   for items (EI, CCB, carbon rebate, CEWS, COVID) that are
+#                   OUTSIDE Vol II but INSIDE the owning ministry's Table 3.6
+#                   portfolio total, so on the accrual basis they must be carved
+#                   out of that slug's allocation. Ignored in fallback years.
+#   source: segment node is filled from a Vol I Table 3.6 standalone segment
+#                   (segment_id: its stable id) in accrual years, 0 otherwise.
 #
 # Matching precedence: line > organization > ministry_name > ministry.
 # Two matches at the SAME precedence level = export error (no double count).
@@ -114,6 +122,11 @@ themes:
                     vol1_line:   # label drifts across statement editions
                       - Pollution pricing proceeds returned
                       - Proceeds from the pollution pricing framework returned
+                    # On the Vol I accrual basis the fuel-charge proceeds are
+                    # inside National Revenue's 3.6 portfolio total, so offset
+                    # the CRA catch-all (accrual years only; Vol II does not
+                    # carry this tax-system item, so no offset in fallback years).
+                    accrual_offset_node: revenue-canada
                     vol1_hint: Canada Carbon Rebate / fuel charge proceeds returned (tax system; not in Vol II appropriations)
       - id: economy-infrastructure
         name_en: Economy + Infrastructure
@@ -222,24 +235,34 @@ themes:
         rules:
           - source: vol1
             vol1_line: Employment insurance and support measures
+            # EI is inside ESDC's 3.6 portfolio total on the accrual basis, so
+            # offset the ESDC catch-all (accrual years only); on Vol II it is
+            # paid from the EI Operating Account, outside appropriations.
+            accrual_offset_node: employment-training
             vol1_hint: EI benefits are paid from the EI Operating Account (consolidated specified purpose account), not Vol II appropriations
       - id: childrens-benefits
         name_en: Children's Benefits
         rules:
           - source: vol1
             vol1_line: Children's benefits
+            # CCB is inside National Revenue's 3.6 portfolio total (accrual).
+            accrual_offset_node: revenue-canada
             vol1_hint: Canada Child Benefit — refundable tax credit, tax system
       - id: covid-income-support
         name_en: COVID-19 Income Support
         rules:
           - source: vol1
             vol1_line: COVID-19 income support for workers
+            # CERB/CRB income support is inside ESDC's 3.6 portfolio total.
+            accrual_offset_node: employment-training
             vol1_hint: CERB/CRB recoveries and adjustments (negative in recent years)
       - id: canada-emergency-wage-subsidy
         name_en: Canada Emergency Wage Subsidy
         rules:
           - source: vol1
             vol1_line: Canada emergency wage subsidy
+            # CEWS is inside National Revenue's 3.6 portfolio total (accrual).
+            accrual_offset_node: revenue-canada
             vol1_hint: CEWS — refundable tax credit, tax system
 
   - id: safety
@@ -336,6 +359,16 @@ themes:
             # Finance ministry in Public Accounts and has no current node.
             rules:
               - organization: Office of the Auditor General
+      - id: crown-corporations-and-other-entities
+        name_en: Crown corporations and other entities
+        rules:
+          # The 2014–2016 Table 3.6 editions carry a standalone "Crown
+          # corporations and other entities" segment (no portfolio breakdown);
+          # later editions consolidate those expenses into the portfolios.
+          # Sourced from the 3.6 segment (restatement-scaled), 0 in other years.
+          - source: segment
+            segment_id: crown-corporations-and-other-entities
+            segment_hint: Consolidated Crown corporations lump (Vol I Table 3.6 standalone segment, 2014-2016 editions only)
 
   - id: transfers-to-provinces
     name_en: Transfers to Provinces
@@ -421,6 +454,17 @@ themes:
             vol1_line: Net actuarial losses
             vol1_hint: Net actuarial losses on pensions and future benefits (accrual item, Vol I only)
             negate: true
+      - id: provision-for-valuation
+        name_en: Provision for valuation and other items
+        rules:
+          # A standalone Vol I Table 3.6 segment (not a ministerial portfolio,
+          # not in Vol II appropriations): the year-end provision for valuation
+          # of assets/liabilities and other consolidation items. Sourced from
+          # the 3.6 segment total in accrual years (0 in fallback years, where
+          # the adjustments leaf absorbs it). Can be negative in some years.
+          - source: segment
+            segment_id: provision-for-valuation
+            segment_hint: Provision for valuation and other items (Vol I Table 3.6 standalone segment; accrual, Vol I only)
 
   - id: defence
     name_en: Defence

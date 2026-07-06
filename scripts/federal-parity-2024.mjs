@@ -238,35 +238,38 @@ function loadJson(file) {
   return JSON.parse(fs.readFileSync(file, "utf8"));
 }
 
-// Theme-level reason codes seeded from NOTES.md "Wave 2.5 parity results".
+// Theme-level reason codes. FY2024 is now on the Vol I accrual basis
+// (main-page-accrual-basis spec): each portfolio's Table 3.6 accrual total is
+// spread across its thematic categories, so nearly every theme shifts vs the
+// old curated Vol II tree — reason `basis`. The Vol I statement leaves (Social
+// Security: OAS/EI/CCB/CEWS/COVID) are unchanged; Obligations gains the two
+// Table 3.6 standalone segments (net actuarial losses, provision for valuation).
 const THEME_REASONS = {
   "Economy and Standard of Living":
-    "basis — Vol II cash vs Vol I accrual for ESDC/ELCC carve-outs; small curation drift",
-  "Social Security": "rounding",
+    "basis — Vol I accrual segment allocation (Table 3.6) replaces the curated Vol II tree across ESDC/health/ISED/environment/etc.",
+  "Social Security": "rounding — Vol I statement leaves (OAS/EI/CCB/CEWS/COVID) are unchanged by the accrual rebasing",
   Safety:
-    "basis — RCMP/Justice gross Vol II expenditures vs site net program cost",
+    "basis — Vol I accrual allocation for Public Safety/RCMP/CBSA/Justice vs the curated site's net program cost",
   Other:
-    "basis + mapping + source-correction — PSPC/SSC/TBS gross vs net; audit-agents/OAG (+0.14) deliberate addition; net actuarial losses (previously a -7.489B leaf here) relocated to Obligations, raising this theme by ~7.49B",
+    "basis + source-correction — Vol I accrual allocation (PSPC/SSC/TBS/PCO/Parliament); net actuarial losses (previously a -7.489B leaf here) relocated to Obligations",
   "Transfers to Provinces":
-    "mapping — Vol I 'other major transfers' kept in administrative ministries to avoid double-count; equalization/fiscal-stabilization vintage offset",
+    "basis + mapping — CHT/CST/equalization scaled to the Vol I statement lines; 'other major transfers' is now the Finance accrual residual (offsets subtract from the accrual allocation)",
   Obligations:
-    "source-correction — Vol I public debt charges (47.273) PLUS net actuarial losses (7.489), relocated here sign-normalized to a positive expense; the curated site showed debt charges only (47.27)",
-  Defence: "basis — gross vs net",
+    "source-correction + basis — Vol I public debt charges (47.273) PLUS net actuarial losses (+7.489) PLUS the provision for valuation and other items (-1.736); the latter two are the Table 3.6 standalone segments now shown here. The curated site showed debt charges only (47.27)",
+  Defence: "basis — Vol I accrual (National Defence 33.06) vs the curated Vol II gross tree",
   "Indigenous Priorities":
-    "source-correction — generated includes the FY2024 $20.00B 'Compensation for First Nations children' ISC payment the curated tree omitted",
-  "International Affairs": "rounding",
+    "basis — Vol I accrual allocation for the ISC + Crown-Indigenous Relations portfolios (44.70) vs the curated tree (42.84)",
+  "International Affairs": "basis — Global Affairs Vol I accrual external expenses (8.26) vs the curated site's Vol II gross figure (19.20)",
 };
 
 function reasonForDelta(slug, deltaTotal, deltaPct) {
-  if (slug === "indigenous-services-and-northern-affairs") {
-    return "source-correction — Public Accounts includes the FY2024 ~$20B ISC First Nations children compensation payment omitted from the curated site tree";
-  }
   const smallTotal = Math.abs(deltaTotal) <= 0.15;
   const smallPct = deltaPct == null || Math.abs(deltaPct) <= 0.15;
   if (smallTotal && smallPct) return "rounding";
-  // Departments whose Vol II appropriations are gross where the site used net
-  // program cost, or whose ministry aggregation differs from the site slug.
-  return "basis — Vol II appropriations (gross) vs the site's curated/net figure";
+  // The ministry list is now the Vol I accrual allocation (Table 3.6), not the
+  // Vol II gross appropriations the curated site showed; department pages keep
+  // the Vol II figure.
+  return "basis — Vol I accrual segment allocation vs the site's curated/Vol II figure";
 }
 
 function fmt(n, d = 2) {

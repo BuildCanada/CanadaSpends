@@ -123,7 +123,7 @@ export default async function FederalDepartmentPage({
   }
 
   const department = getFederalDepartment(year, slug, lang);
-  const summary = getFederalSummary(year);
+  const summary = getFederalSummary(year, lang);
   if (!department || !summary) {
     notFound();
   }
@@ -165,7 +165,12 @@ export default async function FederalDepartmentPage({
   }));
 
   const methodologyPath = localizedPath("/federal/spending/methodology", lang);
-  const otherMinistries = summary.ministries.filter((m) => m.slug !== slug);
+  // Only real ministries (with a slug) link out; the appended Vol I statement
+  // rows (Net actuarial losses, Provision) carry no slug and are excluded so
+  // the "other departments" list never links to /undefined.
+  const otherMinistries = summary.ministries.filter(
+    (m) => m.slug && m.slug !== slug,
+  );
 
   const prose = getFederalDepartmentProse(year, slug, lang);
   const proseValues = {

@@ -37,7 +37,7 @@ msgid "{0}"
 msgstr "{0}"
 
 #. placeholder {0}: department.name
-#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:377
+#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:382
 msgid "{0} figures are on a Volume II appropriations basis and will not match the Volume I consolidated headline totals. See the <0>methodology</0> for details."
 msgstr "Les chiffres de {0} sont établis selon les autorisations du volume II et ne correspondront pas aux totaux consolidés du volume I. Consultez la <0>méthodologie</0> pour plus de détails."
 
@@ -94,7 +94,7 @@ msgid "{0}'s Revenue and Spending in Financial Year {1}"
 msgstr "Revenus et dépenses de {0} pour l'exercice financier {1}"
 
 #. placeholder {0}: department.name
-#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:237
+#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:242
 msgid "{0}’s share of federal spending"
 msgstr "Part de {0} dans les dépenses fédérales"
 
@@ -164,7 +164,7 @@ msgstr "À propos de nous"
 msgid "Above {0}"
 msgstr "Au-dessus de {0}"
 
-#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:105
+#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:145
 msgid "Accounting and consolidation adjustments"
 msgstr "Ajustements comptables et de consolidation"
 
@@ -237,7 +237,7 @@ msgstr "Toutes les informations proviennent des bases de données publiques et d
 msgid "All the taxes that apply to your income"
 msgstr "Tous les impôts qui s'appliquent à votre revenu"
 
-#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:240
+#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:279
 #: src/components/LineItemTable.tsx:125
 msgid "Amount"
 msgstr "Montant"
@@ -493,7 +493,7 @@ msgstr "Rémunération par employé"
 msgid "Competition Year"
 msgstr "Année de concours"
 
-#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:256
+#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:261
 msgid "Complete appropriation (vote/allotment) and transfer-payment lines, in dollars. Search, sort, and download the full table."
 msgstr "Lignes complètes des crédits (affectations) et des paiements de transfert, en dollars. Recherchez, triez et téléchargez le tableau complet."
 
@@ -506,11 +506,11 @@ msgstr "Connectez-vous depuis un réseau public comme un café ou une bibliothè
 msgid "Connect with us"
 msgstr "Connectez-vous avec nous"
 
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:152
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:162
 msgid "consolidated federal revenue (Vol I)"
 msgstr "revenus fédéraux consolidés (vol. I)"
 
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:145
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:155
 msgid "consolidated federal spending (Vol I)"
 msgstr "dépenses fédérales consolidées (vol. I)"
 
@@ -548,7 +548,7 @@ msgstr "Soutien au revenu COVID-19"
 msgid "Crown Corporations and other government business enterprises"
 msgstr "Sociétés d'État et autres entreprises publiques"
 
-#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:124
+#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:163
 msgid "Curation differences from the previous site"
 msgstr "Différences de curation par rapport au site précédent"
 
@@ -556,12 +556,12 @@ msgstr "Différences de curation par rapport au site précédent"
 msgid "Customs Import Duties"
 msgstr "Droits de douane à l'importation"
 
-#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:297
+#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:336
 msgid "Data is derived from the Public Accounts of Canada under the Open Government Licence – Canada."
 msgstr "Les données proviennent des Comptes publics du Canada, sous la Licence du gouvernement ouvert – Canada."
 
 #. placeholder {0}: new Date(index.updatedAt).toLocaleDateString( lang === "fr" ? "fr-CA" : "en-CA", { year: "numeric", month: "long", day: "numeric" }, )
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:114
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:124
 msgid "Data updated {0}"
 msgstr "Données mises à jour le {0}"
 
@@ -571,7 +571,7 @@ msgid "Deficit"
 msgstr "Déficit"
 
 #. placeholder {0}: summary.financialYear
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:164
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:172
 msgid "Deficit in FY {0}"
 msgstr "Déficit de l’exercice {0}"
 
@@ -580,7 +580,7 @@ msgstr "Déficit de l’exercice {0}"
 msgid "Department"
 msgstr "Ministère"
 
-#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:186
+#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:191
 #: src/app/[lang]/(main)/municipal/[province]/[municipality]/[year]/departments/[department]/page.tsx:132
 #: src/app/[lang]/(main)/provincial/[province]/[year]/departments/[department]/page.tsx:117
 msgid "Department Spending"
@@ -623,7 +623,7 @@ msgstr "Télécharger le CSV"
 msgid "Duration"
 msgstr "Durée"
 
-#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:216
+#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:255
 msgid "Each year carries a Consumer Price Index multiplier to base-year dollars. The real/nominal toggle scales displayed headline and department figures in the browser; the underlying data is stored in nominal dollars only."
 msgstr "Chaque exercice comporte un multiplicateur fondé sur l’indice des prix à la consommation vers les dollars de l’année de référence. Le sélecteur nominal/réel ajuste les chiffres affichés dans le navigateur; les données sous-jacentes sont conservées en dollars nominaux seulement."
 
@@ -694,6 +694,10 @@ msgstr "Impôt sur le revenu estimé payé au gouvernement provincial"
 msgid "Estimated public service workforce"
 msgstr "Effectifs de la fonction publique estimés"
 
+#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:148
+msgid "Every published year is on the Volume I accrual basis, so the spending Sankey sums to the published headline and no adjustments leaf appears. The mechanism remains as a safeguard: should a residual over $1 million ever arise, a single top-level “Accounting and consolidation adjustments” leaf would reconcile the tree to the published total (it may be negative and equals the unattributed remainder in the reconciliation table below), keeping the Sankey and the reconciliation consistent."
+msgstr "Chaque exercice publié est présenté selon la méthode de comptabilité d'exercice du Volume I; le diagramme de Sankey des dépenses correspond donc au total principal publié et aucune feuille d'ajustement n'apparaît. Le mécanisme demeure à titre de mesure de sauvegarde : si un écart résiduel de plus de 1 million de dollars devait survenir, une seule feuille de premier niveau, « Ajustements comptables et de consolidation », rapprocherait l'arbre du total publié (elle peut être négative et est égale au reste non attribué du tableau de rapprochement ci-dessous), assurant la cohérence entre le diagramme de Sankey et le rapprochement."
+
 #: src/app/[lang]/(main)/about/page.tsx:36
 msgid "Every year, hundreds of billions of dollars move through the Government of Canada's budget. This data is technically available but the information is difficult to understand and spread across PDFs and databases that most Canadians don't know about."
 msgstr "Chaque année, des centaines de milliards de dollars transitent par le budget du gouvernement du Canada. Ces données sont techniquement disponibles, mais l'information est difficile à comprendre et dispersée dans des PDF et des bases de données que la plupart des Canadiens ne connaissent pas."
@@ -754,7 +758,7 @@ msgstr "Explorez des articles approfondis sur les dépenses gouvernementales can
 msgid "Explore Municipal Spending"
 msgstr "Explorer les dépenses municipales"
 
-#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:357
+#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:362
 msgid "Explore other federal departments"
 msgstr "Explorer d’autres ministères fédéraux"
 
@@ -790,7 +794,7 @@ msgstr "Budget fédéral 2025 | Canada Spends"
 msgid "Federal Fall 2025 Government Budget"
 msgstr "Budget gouvernemental fédéral de l'automne 2025"
 
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:96
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:106
 msgid "Federal Government Spending"
 msgstr "Dépenses du gouvernement fédéral"
 
@@ -897,8 +901,8 @@ msgstr "Aperçu de la rémunération des Premières Nations"
 msgid "First Nations Remuneration Overview | Canada Spends"
 msgstr "Aperçu de la rémunération des Premières Nations | Canada Spends"
 
-#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:338
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:109
+#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:343
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:119
 msgid "Fiscal year"
 msgstr "Exercice"
 
@@ -920,7 +924,7 @@ msgstr "Pour une protection maximale, envisagez d'utiliser <0>Tails OS</0>, un s
 msgid "For maximum security and anonymity, access our platform through the Tor network. Tor encrypts your connection and hides your IP address."
 msgstr "Pour une sécurité et un anonymat maximaux, accédez à notre plateforme via le réseau Tor. Tor chiffre votre connexion et masque votre adresse IP."
 
-#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:201
+#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:240
 msgid "French labels use official bilingual terminology from open government data as a glossary; only free-text line-item descriptions are machine-translated, with the glossary supplied as required terminology. Translations are committed and reviewed, not generated at build time."
 msgstr "Les libellés français utilisent la terminologie bilingue officielle des données ouvertes du gouvernement comme glossaire; seules les descriptions libres des postes sont traduites automatiquement, le glossaire étant fourni comme terminologie obligatoire. Les traductions sont versées et révisées, et non générées au moment de la compilation."
 
@@ -933,7 +937,7 @@ msgid "FY"
 msgstr "EF"
 
 #. placeholder {0}: summary.financialYear
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:129
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:139
 msgid "FY {0} Revenue and Spending"
 msgstr "Revenus et dépenses de l’exercice {0}"
 
@@ -943,7 +947,7 @@ msgstr "Revenus et dépenses de l’exercice {0}"
 msgid "Get data-driven insights into how the {0} government’s revenue and spending affect {1} residents and programs."
 msgstr "Obtenez des analyses basées sur les données sur la façon dont les revenus et les dépenses du gouvernement de {0} affectent les résidents et les programmes de {1}."
 
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:99
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:109
 msgid "Get data-driven insights into how the federal government’s revenue and spending affect Canadian lives and programs."
 msgstr "Découvrez, données à l’appui, comment les revenus et les dépenses du gouvernement fédéral influent sur la vie des Canadiens et sur les programmes."
 
@@ -1015,15 +1019,19 @@ msgstr "Vous avez des questions ou des commentaires? Envoyez-nous un courriel à
 msgid "Headcount"
 msgstr "Effectif"
 
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:134
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:237
+msgid "Headline and ministry totals use the Volume I consolidated (accrual) basis; department pages use the Volume II appropriations basis (where the line-level detail lives), so a department’s own total differs from its ministry row here. See the <0>methodology</0> for the allocation method and known differences."
+msgstr "Les totaux principaux et ministériels sont présentés selon la méthode de comptabilité d'exercice consolidée du Volume I; les pages ministérielles utilisent la méthode des crédits du Volume II (où résident les détails par poste), de sorte que le total propre d'un ministère diffère de sa ligne ministérielle présentée ici. Consultez la <0>méthodologie</0> pour la méthode de répartition et les différences connues."
+
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:144
 msgid "Headline totals are on a Volume I consolidated (accrual) basis. Explore revenue and spending categories below."
 msgstr "Les totaux principaux sont établis selon la comptabilité d’exercice consolidée du volume I. Explorez les catégories de revenus et de dépenses ci-dessous."
 
 #: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:70
-msgid "Headline totals on the overview page (total spending, revenue, and deficit) use the Volume I consolidated financial statements, which are prepared on an accrual basis and include consolidated Crown corporations. Department pages use the Volume II appropriations (expenditure) basis, reported ministry by ministry. Because the two bases differ, the sum of Volume II ministry totals will not equal the Volume I consolidated total. The reconciliation below bridges the two."
-msgstr "Les totaux principaux de la page d’aperçu (dépenses totales, revenus et déficit) proviennent des états financiers consolidés du volume I, préparés selon la comptabilité d’exercice et incluant les sociétés d’État consolidées. Les pages des ministères utilisent la base des autorisations (dépenses) du volume II, présentée ministère par ministère. Comme les deux bases diffèrent, la somme des totaux ministériels du volume II n’égalera pas le total consolidé du volume I. Le rapprochement ci-dessous fait le pont entre les deux."
+msgid "Headline totals on the overview page (total spending, revenue, and deficit) use the Volume I consolidated financial statements, which are prepared on an accrual basis and include consolidated Crown corporations. For recent years the overview ministry list and the thematic Sankey are also on this Volume I accrual basis (see the allocation note below), so they sum to the headline exactly. Department pages remain on the Volume II appropriations (expenditure) basis, ministry by ministry, because that is where the line-level vote and transfer-payment detail exists — so a department’s own total differs from its accrual ministry row on the overview. The reconciliation below bridges the two bases."
+msgstr "Les totaux principaux de la page de synthèse (total des dépenses, des revenus et du déficit) sont fondés sur les états financiers consolidés du Volume I, préparés selon la méthode de comptabilité d'exercice et comprenant les sociétés d'État consolidées. Pour les exercices récents, la liste ministérielle et le diagramme de Sankey thématique de la page de synthèse sont eux aussi présentés selon cette méthode de comptabilité d'exercice du Volume I (voir la note sur la répartition ci-dessous); ils totalisent donc exactement le total principal. Les pages ministérielles demeurent présentées selon la méthode des crédits (dépenses) du Volume II, ministère par ministère, car c'est là que se trouvent les détails des crédits et des paiements de transfert par poste — de sorte que le total propre d'un ministère diffère de sa ligne ministérielle en comptabilité d'exercice de la page de synthèse. Le rapprochement ci-dessous fait le pont entre les deux méthodes."
 
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:220
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:247
 msgid "Headline totals use the Volume I consolidated basis; ministry and department figures use the Volume II appropriations basis. These bases differ; see the <0>methodology</0> for the reconciliation and known differences."
 msgstr "Les totaux principaux utilisent la base consolidée du volume I; les chiffres des ministères utilisent la base des autorisations du volume II. Ces bases diffèrent; consultez la <0>méthodologie</0> pour le rapprochement et les écarts connus."
 
@@ -1054,7 +1062,7 @@ msgstr "Logement, Infrastructure et Collectivités Canada"
 
 #. placeholder {0}: department.name
 #. placeholder {1}: summary.financialYear
-#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:328
+#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:333
 msgid "How {0} spent its budget in fiscal year {1}, on a Volume II appropriations basis."
 msgstr "Comment {0} a dépensé son budget au cours de l’exercice {1}, selon les autorisations du volume II."
 
@@ -1068,13 +1076,17 @@ msgstr "Comment puis-je rester informé de votre travail?"
 
 #. placeholder {0}: department.name
 #. placeholder {1}: summary.financialYear
-#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:209
+#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:214
 msgid "How did {0} spend its budget in {1}?"
 msgstr "Comment {0} a-t-il dépensé son budget en {1}?"
 
 #: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:36
 msgid "How federal spending pages are built from Public Accounts of Canada data."
 msgstr "Comment les pages sur les dépenses fédérales sont produites à partir des données des Comptes publics du Canada."
+
+#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:88
+msgid "How ministry and Sankey totals are allocated"
+msgstr "Comment les totaux ministériels et du diagramme de Sankey sont répartis"
 
 #: src/app/[lang]/(main)/whistleblowers/page.tsx:74
 msgid "How to Submit a Tip"
@@ -1105,13 +1117,13 @@ msgstr "Au cours de l'exercice financier {0},"
 
 #. placeholder {0}: summary.financialYear
 #. placeholder {1}: department.reportedAs
-#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:343
+#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:348
 msgid "In FY {0} this was reported as {1}."
 msgstr "Au cours de l’exercice {0}, ces dépenses étaient présentées sous {1}."
 
 #. placeholder {0}: summary.financialYear
-#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:192
 #: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:197
+#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:202
 msgid "In FY {0},"
 msgstr "Au cours de l’exercice {0},"
 
@@ -1135,7 +1147,7 @@ msgstr "Services aux Autochtones Canada + Relations Couronne-Autochtones et Affa
 msgid "Individual Income Tax"
 msgstr "Impôt sur le revenu des particuliers"
 
-#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:213
+#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:252
 msgid "Inflation adjustment"
 msgstr "Rajustement en fonction de l’inflation"
 
@@ -1168,7 +1180,7 @@ msgstr "Est-ce un groupe de pression?"
 msgid "It doesn't have to be this way."
 msgstr "Ça ne doit pas être comme ça."
 
-#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:237
+#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:276
 msgid "Item"
 msgstr "Élément"
 
@@ -1211,7 +1223,7 @@ msgstr "Dernières nouvelles budgétaires et impact"
 msgid "Learn more about the technology at <0>globaleaks.org</0>."
 msgstr "En savoir plus sur la technologie sur <0>globaleaks.org</0>."
 
-#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:253
+#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:258
 msgid "Line items"
 msgstr "Postes détaillés"
 
@@ -1225,7 +1237,7 @@ msgstr "Emplacement"
 msgid "Look back at what {0}'s government made and spent. {1}"
 msgstr "Regardez en arrière ce que le gouvernement de {0} a gagné et dépensé. {1}"
 
-#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:140
+#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:179
 msgid "Machinery-of-government changes"
 msgstr "Changements dans l’appareil gouvernemental"
 
@@ -1245,7 +1257,7 @@ msgstr "Méthodologie"
 msgid "Ministries + Agencies"
 msgstr "Ministères + Organismes"
 
-#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:143
+#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:182
 msgid "Ministries have been renamed and merged between 2013 and 2025 (for example, Indian Affairs became Crown-Indigenous Relations). A normalization crosswalk is the canonical mapping; department pages for earlier years render under the current ministry slug with a note stating how the ministry was reported in that fiscal year."
 msgstr "Des ministères ont été renommés et fusionnés entre 2013 et 2025 (par exemple, Affaires indiennes est devenu Relations Couronne-Autochtones). Une table de correspondance normalisée constitue le mappage canonique; les pages des exercices antérieurs s’affichent sous le nom actuel du ministère, avec une note indiquant comment le ministère était présenté au cours de cet exercice."
 
@@ -1253,9 +1265,13 @@ msgstr "Des ministères ont été renommés et fusionnés entre 2013 et 2025 (pa
 msgid "Ministry"
 msgstr "Ministère"
 
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:208
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:223
 msgid "Ministry totals are on a Volume II appropriations basis. Select a ministry for its programs, entities, and line items."
 msgstr "Les totaux ministériels sont établis selon les autorisations du volume II. Sélectionnez un ministère pour voir ses programmes, ses entités et ses postes détaillés."
+
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:215
+msgid "Ministry totals are on the Volume I consolidated (accrual) basis, allocated to portfolios by segment, and sum to the headline total (including the two non-departmental statement lines below). Select a ministry to see its Volume II appropriations detail."
+msgstr "Les totaux ministériels sont présentés selon la méthode de comptabilité d'exercice consolidée du Volume I, répartis par portefeuille selon le secteur, et totalisent le total principal (y compris les deux lignes d'état non ministérielles ci-dessous). Sélectionnez un ministère pour consulter le détail de ses crédits du Volume II."
 
 #: src/components/first-nations/RemunerationOverview.tsx:655
 #: src/components/first-nations/RemunerationOverview.tsx:803
@@ -1281,7 +1297,7 @@ msgstr "Nom"
 msgid "National Defence"
 msgstr "Défense nationale"
 
-#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:155
+#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:194
 msgid "Negative and adjustment rows"
 msgstr "Lignes négatives et lignes de rajustement"
 
@@ -1289,7 +1305,7 @@ msgstr "Lignes négatives et lignes de rajustement"
 msgid "Net actuarial losses (gains)"
 msgstr "Pertes actuarielles nettes (gains)"
 
-#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:85
+#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:125
 msgid "Net actuarial losses and the published total"
 msgstr "Pertes actuarielles nettes et le total publié"
 
@@ -1386,7 +1402,7 @@ msgstr "Non partisan"
 msgid "Non-Resident Income Tax"
 msgstr "Impôt sur le revenu des non-résidents"
 
-#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:243
+#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:282
 msgid "Note"
 msgstr "Note"
 
@@ -1423,7 +1439,7 @@ msgid "of {0} provincial spending was by {1}"
 msgstr "des dépenses provinciales de {0} ont été effectuées par {1}"
 
 #. placeholder {0}: department.name
-#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:200
+#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:205
 msgid "of federal spending was by {0}"
 msgstr "des dépenses fédérales ont été effectuées par {0}"
 
@@ -1434,6 +1450,10 @@ msgstr "Publication du budget fédéral officiel de l'automne 2025"
 #: src/components/first-nations/RemunerationOverview.tsx:413
 msgid "Officials"
 msgstr "Représentants"
+
+#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:91
+msgid "On the Volume I accrual basis, each ministry’s total comes from Volume I Table 3.6 (“External expenses by segment and by type”), which reports accrual expenses for each ministerial portfolio. Where our portfolio grouping is finer than the table (for example, a regional development agency reported inside a host portfolio), the segment total is split across the affected portfolios in proportion to their Volume II expenditure shares for that year; where it is coarser, the relevant segments are summed. In the thematic Sankey, each portfolio’s accrual total is spread across its thematic categories in the same proportions as its Volume II lines, and the tax-system and statutory items sourced directly from Volume I (Old Age Security, Employment Insurance, the Canada Child Benefit, major transfers to provinces, public debt charges, and so on) are carved out of the owning portfolio so nothing is double counted. Two non-departmental statement lines — net actuarial losses and the provision for valuation and other items — are shown as their own rows and leaves. Because sub-ministry Sankey leaves are allocated this way, they are proportional estimates, not literal Volume II line amounts; the department page carries the exact appropriations detail. For older years, each Table 3.6 edition carries the figures as first published while the headline uses the restated ten-year comparative statement, so the vintage segment figures are scaled proportionally to tie to the restated statement totals exactly (and for editions predating the separate net actuarial losses line, that statement amount is carved out of the portfolios the same way). Every year’s ministry list and Sankey therefore sum to the published headline."
+msgstr "Selon la méthode de comptabilité d'exercice du Volume I, le total de chaque ministère provient du tableau 3.6 du Volume I (« Charges externes par secteur et par type »), qui présente les charges d'exercice de chaque portefeuille ministériel. Lorsque notre regroupement de portefeuilles est plus fin que le tableau (par exemple, une agence de développement régional présentée à l'intérieur d'un portefeuille hôte), le total du secteur est réparti entre les portefeuilles concernés au prorata de leur part des dépenses du Volume II pour l'exercice; lorsqu'il est plus large, les secteurs pertinents sont additionnés. Dans le diagramme de Sankey thématique, le total en comptabilité d'exercice de chaque portefeuille est réparti entre ses catégories thématiques dans les mêmes proportions que ses postes du Volume II, et les éléments du régime fiscal et les éléments législatifs provenant directement du Volume I (la Sécurité de la vieillesse, l'assurance-emploi, l'Allocation canadienne pour enfants, les principaux transferts aux provinces, les frais de la dette publique, etc.) sont retranchés du portefeuille auquel ils appartiennent afin d'éviter tout double comptage. Deux lignes d'état non ministérielles — les pertes actuarielles nettes et la provision pour évaluation et autres éléments — sont présentées comme leurs propres lignes et feuilles. Comme les feuilles sous-ministérielles du diagramme de Sankey sont réparties de cette façon, il s'agit d'estimations proportionnelles et non de montants littéraux des postes du Volume II; la page ministérielle contient le détail exact des crédits. Pour les exercices antérieurs, chaque édition du tableau 3.6 présente les chiffres tels que publiés initialement, tandis que le total principal repose sur l'état comparatif décennal redressé; les chiffres sectoriels d'époque sont donc mis à l'échelle proportionnellement pour correspondre exactement aux totaux redressés de l'état (et, pour les éditions antérieures à la présentation distincte des pertes actuarielles nettes, ce montant de l'état est retranché des portefeuilles de la même manière). La liste ministérielle et le diagramme de Sankey de chaque exercice totalisent donc le total principal publié."
 
 #: src/components/first-nations/RemunerationOverview.tsx:389
 #: src/components/first-nations/RemunerationOverview.tsx:562
@@ -1500,7 +1520,7 @@ msgstr "Notre gouvernement devra faire des choix difficiles concernant les dépe
 msgid "Overview"
 msgstr "Aperçu"
 
-#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:158
+#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:197
 msgid "Parenthesized negatives, internal consolidation adjustments, and total or subtotal rows are flagged and excluded from Sankey leaves to avoid double counting, but they are retained in the line-item tables so the full detail remains available."
 msgstr "Les montants négatifs entre parenthèses, les rajustements de consolidation internes et les lignes de total ou de sous-total sont signalés et exclus des feuilles du diagramme de Sankey afin d’éviter le double comptage, mais ils sont conservés dans les tableaux de postes détaillés afin que le détail complet demeure accessible."
 
@@ -1527,7 +1547,7 @@ msgstr "par résident"
 
 #. placeholder {0}: shareData[0].Year
 #. placeholder {1}: shareData[shareData.length - 1].Year
-#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:240
+#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:245
 msgid "Percentage of federal spending, {0}–{1}"
 msgstr "Pourcentage des dépenses fédérales, {0}–{1}"
 
@@ -1628,7 +1648,7 @@ msgstr "Impôt provincial"
 msgid "Public Accounts of {0} FY {1}"
 msgstr "Comptes publics de {0} exercice {1}"
 
-#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:302
+#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:341
 msgid "Public Accounts of Canada"
 msgstr "Comptes publics du Canada"
 
@@ -1720,7 +1740,7 @@ msgstr "Revenus"
 msgid "Revenue and Expenses FY {fiscalYear}"
 msgstr "Revenus et dépenses EF {fiscalYear}"
 
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:160
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:168
 msgid "revenue minus spending (Vol I)"
 msgstr "revenus moins dépenses (vol. I)"
 
@@ -1797,13 +1817,13 @@ msgstr "Sécurité sociale"
 msgid "Social Transfer to Provinces"
 msgstr "Transfert social aux provinces"
 
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:187
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:193
 #: src/components/first-nations/RemunerationOverview.tsx:460
 #: src/components/JurisdictionPageContent.tsx:385
 msgid "Source"
 msgstr "Source"
 
-#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:294
+#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:333
 msgid "Source and licence"
 msgstr "Source et licence"
 
@@ -1811,7 +1831,7 @@ msgstr "Source et licence"
 msgid "Source PDF"
 msgstr "PDF source"
 
-#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:172
+#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:211
 msgid "Source tables arrive in mixed units (Volume I in millions, Volume II in dollars, open data CSVs in thousands). All chart data is normalized to billions of dollars; line-item tables are shown in dollars. Each JSON file records its units explicitly."
 msgstr "Les tableaux sources utilisent des unités mixtes (volume I en millions, volume II en dollars, fichiers CSV de données ouvertes en milliers). Toutes les données des graphiques sont normalisées en milliards de dollars; les tableaux de postes détaillés sont présentés en dollars. Chaque fichier JSON indique explicitement ses unités."
 
@@ -1847,12 +1867,12 @@ msgid "Spending Breakdown Coming Soon"
 msgstr "Répartition des dépenses à venir"
 
 #. placeholder {0}: summary.financialYear
-#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:226
+#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:231
 msgid "Spending by entity, FY {0}"
 msgstr "Dépenses par entité, exercice {0}"
 
 #. placeholder {0}: summary.financialYear
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:205
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:211
 msgid "Spending by ministry, FY {0}"
 msgstr "Dépenses par ministère, exercice {0}"
 
@@ -1866,7 +1886,7 @@ msgstr "Les données de dépenses ne sont pas encore disponibles pour cette comb
 msgid "Spending Database"
 msgstr "Base de données des dépenses"
 
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:168
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:174
 msgid "spending minus revenue (Vol I)"
 msgstr "dépenses moins revenus (vol. I)"
 
@@ -1915,7 +1935,7 @@ msgstr "Sous-total - Dépenses"
 msgid "Subtotal - Remuneration"
 msgstr "Sous-total - Rémunération"
 
-#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:259
+#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:298
 msgid "Sum of Volume II ministry totals"
 msgstr "Somme des totaux ministériels du volume II"
 
@@ -1924,7 +1944,7 @@ msgid "Summary"
 msgstr "Résumé"
 
 #. placeholder {0}: summary.financialYear
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:156
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:166
 msgid "Surplus in FY {0}"
 msgstr "Excédent de l’exercice {0}"
 
@@ -2005,23 +2025,19 @@ msgstr "La différence entre les revenus et les dépenses. Un excédent indique 
 msgid "The difference between total revenue and total expenses. A surplus indicates revenue exceeded expenses."
 msgstr "La différence entre les revenus totaux et les dépenses totales. Un excédent indique que les revenus ont dépassé les dépenses."
 
-#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:127
+#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:166
 msgid "The previous hand-authored pages contained curated aggregations — for example, hand-massaged negative leaves and thematic groupings that split a single ministry across categories. Every node where the generated tree differs from the previous values is enumerated in the parity report with a reason code (basis, mapping, rounding, or source correction)."
 msgstr "Les pages précédentes, rédigées à la main, contenaient des agrégations organisées — par exemple, des feuilles négatives ajustées manuellement et des regroupements thématiques répartissant un même ministère entre plusieurs catégories. Chaque nœud où l’arborescence générée diffère des valeurs précédentes est recensé dans le rapport de parité avec un code de motif (base comptable, mappage, arrondissement ou correction à la source)."
 
-#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:186
+#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:225
 msgid "The Sankey uses a curated thematic tree. A maintained mapping assigns each Public Accounts line to a thematic node, mostly at the ministry or organization level with line-level overrides where needed. Each node is truncated to its largest children with the remainder rolled into an “Other” aggregate."
 msgstr "Le diagramme de Sankey utilise une arborescence thématique organisée. Un mappage tenu à jour attribue chaque ligne des Comptes publics à un nœud thématique, principalement au niveau du ministère ou de l’organisation, avec des exceptions au niveau des lignes au besoin. Chaque nœud est tronqué à ses plus grands enfants, le reste étant regroupé dans un agrégat « Autre »."
-
-#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:108
-msgid "The spending Sankey mixes Volume II gross ministry expenditures with Volume I consolidated items, so its leaves do not naturally sum to the Volume I headline. A single top-level “Accounting and consolidation adjustments” leaf reconciles the tree to the published total; it captures the gross (Volume II) versus consolidated net (Volume I) difference and may be negative. This leaf equals the unattributed remainder in the reconciliation table below, so the Sankey and the reconciliation stay consistent."
-msgstr "Le diagramme de Sankey des dépenses combine les dépenses ministérielles brutes du volume II et les postes consolidés du volume I; ses feuilles ne totalisent donc pas naturellement le total principal du volume I. Une seule feuille de premier niveau, « Ajustements comptables et de consolidation », réconcilie l’arbre avec le total publié; elle rend compte de l’écart entre la présentation brute (volume II) et la présentation nette consolidée (volume I) et peut être négative. Cette feuille est égale au reste non attribué du tableau de rapprochement ci-dessous, de sorte que le diagramme de Sankey et le rapprochement demeurent cohérents."
 
 #: src/app/[lang]/(main)/federal/budget/page.tsx:196
 msgid "The values you see here are based on the FY 2024 Budget with preliminary updates based on government announcements, memos, and leaks, and are meant to provide a rough idea of the budget. Once the official Fall 2025 Budget is released on November 4th, we will update this page to reflect the official budget."
 msgstr "Les valeurs que vous voyez ici sont basées sur le budget de l'exercice 2024 avec des mises à jour préliminaires basées sur les annonces gouvernementales, les notes de service et les fuites, et sont destinées à donner une idée générale du budget. Une fois le budget officiel de l'automne 2025 publié le 4 novembre, nous mettrons à jour cette page pour refléter le budget officiel."
 
-#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:183
+#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:222
 msgid "Thematic mapping"
 msgstr "Mappage thématique"
 
@@ -2098,7 +2114,7 @@ msgstr "Dette totale"
 msgid "Total Debt is the government's complete outstanding debt. This is the figure on which interest payments are calculated."
 msgstr "La dette totale est la dette complète en cours du gouvernement. C'est le chiffre sur lequel les paiements d'intérêts sont calculés."
 
-#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:279
+#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:318
 msgid "Total difference"
 msgstr "Écart total"
 
@@ -2159,7 +2175,7 @@ msgid "Total revenue in {0}"
 msgstr "Revenus totaux en {0}"
 
 #. placeholder {0}: summary.financialYear
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:149
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:159
 msgid "Total revenue in FY {0}"
 msgstr "Revenus totaux de l’exercice {0}"
 
@@ -2175,7 +2191,7 @@ msgstr "Dépenses totales"
 msgid "Total spending divided by population. Useful for comparing municipal efficiency across cities."
 msgstr "Dépenses totales divisées par la population. Utile pour comparer l'efficacité municipale entre les villes."
 
-#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:88
+#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:128
 msgid "Total spending equals the published Consolidated Statement of Operations total expenses, which include net actuarial losses on pensions and future benefits. In the source statement this line is stored sign-inverted (a loss is shown as a negative number), so we normalize it to a positive cost and place it under Obligations, alongside net interest on debt. With this line included, headline total spending, total revenue, and the deficit match the published statement exactly, and revenue minus spending equals the published Annual operating deficit for every year (a surplus year would show a negative deficit, labelled as a surplus)."
 msgstr "Les dépenses totales correspondent au total des charges de l’État consolidé des résultats publié, qui comprend les pertes actuarielles nettes sur les régimes de retraite et les avantages futurs. Dans l’état source, ce poste est inscrit avec un signe inversé (une perte est présentée comme un nombre négatif); nous le normalisons donc en un coût positif et le classons sous Obligations, aux côtés des intérêts nets sur la dette. Une fois ce poste inclus, les dépenses totales, les revenus totaux et le déficit affichés correspondent exactement à l’état publié, et les revenus moins les dépenses égalent le déficit annuel de fonctionnement publié pour chaque exercice (une année excédentaire afficherait un déficit négatif, étiqueté comme un excédent)."
 
@@ -2185,11 +2201,11 @@ msgid "Total spending in {0}"
 msgstr "Dépenses totales en {0}"
 
 #. placeholder {0}: summary.financialYear
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:142
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:152
 msgid "Total spending in FY {0}"
 msgstr "Dépenses totales de l’exercice {0}"
 
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:180
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:186
 msgid "Total spending:"
 msgstr "Dépenses totales :"
 
@@ -2210,7 +2226,7 @@ msgstr "Paiements de transfert"
 msgid "Transfers to Provinces"
 msgstr "Transferts aux provinces"
 
-#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:198
+#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:237
 msgid "Translation"
 msgstr "Traduction"
 
@@ -2235,7 +2251,7 @@ msgstr "Type d'emploi"
 msgid "Understanding Your Tax Contribution"
 msgstr "Comprendre votre contribution fiscale"
 
-#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:169
+#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:208
 msgid "Units"
 msgstr "Unités"
 
@@ -2280,7 +2296,7 @@ msgstr "Voir les données sources"
 
 #: src/app/[lang]/(main)/budget/page.tsx:242
 #: src/app/[lang]/(main)/federal/budget/page.tsx:281
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:198
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:204
 #: src/components/JurisdictionPageContent.tsx:393
 msgid "View this chart in full screen"
 msgstr "Voir ce graphique en plein écran"
@@ -2290,12 +2306,12 @@ msgstr "Voir ce graphique en plein écran"
 msgid "Visual breakdown of {0}'s revenue sources and how funds were spent during fiscal year {fiscalYear}."
 msgstr "Répartition visuelle des sources de revenus de {0} et de la façon dont les fonds ont été dépensés au cours de l'exercice {fiscalYear}."
 
-#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:250
+#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:289
 msgid "Volume I consolidated total"
 msgstr "Total consolidé du volume I"
 
 #. placeholder {0}: summary.financialYear
-#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:228
+#: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:267
 msgid "Volume I to Volume II reconciliation, FY {0}"
 msgstr "Rapprochement du volume I au volume II, exercice {0}"
 
@@ -2316,7 +2332,7 @@ msgid "Want even more anonymity?"
 msgstr "Vous voulez encore plus d'anonymat?"
 
 #. placeholder {0}: department.name
-#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:194
+#: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:199
 #: src/app/[lang]/(main)/municipal/[province]/[municipality]/[year]/departments/[department]/page.tsx:141
 #: src/app/[lang]/(main)/provincial/[province]/[year]/departments/[department]/page.tsx:126
 msgid "was spent by {0}"

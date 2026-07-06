@@ -245,14 +245,14 @@
             ]
           },
           {
-            "id": "other-major-transfers",
-            "name": "Other Major Transfers",
-            "amount": 4.546612
-          },
-          {
             "id": "quebec-tax-offset",
             "name": "Quebec Tax Offset",
             "amount": -4.425
+          },
+          {
+            "id": "other-major-transfers",
+            "name": "Other Major Transfers",
+            "amount": 3.867781
           }
         ]
       },
@@ -271,22 +271,22 @@
                   {
                     "id": "employment-training",
                     "name": "Employment + Training",
-                    "amount": 14.926767
+                    "amount": 10.322563
                   },
                   {
                     "id": "revenue-canada",
                     "name": "Revenue Canada",
-                    "amount": 5.130294
-                  },
-                  {
-                    "id": "support-for-veterans",
-                    "name": "Support for Veterans",
-                    "amount": 3.781044
+                    "amount": 7.616353
                   },
                   {
                     "id": "official-languages-culture",
                     "name": "Official Languages + Culture",
-                    "amount": 3.713838
+                    "amount": 3.939014
+                  },
+                  {
+                    "id": "support-for-veterans",
+                    "name": "Support for Veterans",
+                    "amount": 0.918268
                   },
                   {
                     "id": "carbon-tax-rebate",
@@ -312,7 +312,7 @@
                   {
                     "id": "health-care-systems-protection",
                     "name": "Health Care Systems + Protection",
-                    "amount": 7.078566
+                    "amount": 6.50207
                   },
                   {
                     "id": "food-safety",
@@ -344,7 +344,7 @@
                   {
                     "id": "investment-growth-commercialization",
                     "name": "Investment, Growth and Commercialization",
-                    "amount": 7.815187
+                    "amount": 7.119709
                   },
                   {
                     "id": "other-boards-councils",
@@ -366,27 +366,27 @@
               {
                 "id": "infrastructure-investments",
                 "name": "Infrastructure Investments",
-                "amount": 3.835403
+                "amount": 3.495778
               },
               {
                 "id": "agriculture",
                 "name": "Agriculture",
-                "amount": 2.724613
+                "amount": 2.893556
               },
               {
                 "id": "transportation",
                 "name": "Transportation",
-                "amount": 2.578855
+                "amount": 2.192088
               },
               {
                 "id": "fisheries",
                 "name": "Fisheries",
-                "amount": 2.434022
+                "amount": 1.959871
               },
               {
                 "id": "natural-resources-management",
                 "name": "Natural Resources Management",
-                "amount": 2.411632
+                "amount": 1.937709
               },
               {
                 "id": "environment-climate-change",
@@ -395,7 +395,7 @@
                   {
                     "id": "environment-programs",
                     "name": "Other Environment and Climate Change Programs",
-                    "amount": 2.390837
+                    "amount": 1.73729
                   },
                   {
                     "id": "national-parks",
@@ -436,6 +436,11 @@
             "id": "net-actuarial-losses",
             "name": "Net actuarial losses",
             "amount": 9.904
+          },
+          {
+            "id": "provision-for-valuation",
+            "name": "Provision for valuation and other items",
+            "amount": 1.961798
           }
         ]
       },
@@ -446,7 +451,7 @@
           {
             "id": "defence-operations",
             "name": "Defence Operations",
-            "amount": 20.102858
+            "amount": 24.87225
           },
           {
             "id": "communications-security-establishment",
@@ -466,12 +471,12 @@
               {
                 "id": "community-safety-emergency",
                 "name": "Community Safety",
-                "amount": 12.972428
+                "amount": 11.051014
               },
               {
                 "id": "justice-system",
                 "name": "Justice System",
-                "amount": 2.328713
+                "amount": 1.59083
               },
               {
                 "id": "csis",
@@ -502,7 +507,7 @@
               {
                 "id": "immigration-services",
                 "name": "Other Immigration Services",
-                "amount": 1.96836
+                "amount": 2.220031
               },
               {
                 "id": "border-security",
@@ -512,6 +517,27 @@
             ]
           }
         ]
+      },
+      {
+        "id": "indigenous-priorities",
+        "name": "Indigenous Priorities",
+        "children": [
+          {
+            "id": "crown-indigenous-relations",
+            "name": "Crown-Indigenous Relations",
+            "amount": 11.981809
+          },
+          {
+            "id": "indigenous-well-being",
+            "name": "Indigenous Well-Being + Self Determination",
+            "amount": 0.0
+          }
+        ]
+      },
+      {
+        "id": "international-affairs",
+        "name": "International Affairs",
+        "amount": 8.421472
       },
       {
         "id": "other",
@@ -524,7 +550,7 @@
               {
                 "id": "other-public-services-procurement",
                 "name": "Other Public Services + Procurement",
-                "amount": 9.078814
+                "amount": 4.254096
               },
               {
                 "id": "government-it-operations",
@@ -540,22 +566,22 @@
               {
                 "id": "treasury-board",
                 "name": "Treasury Board",
-                "amount": 4.309162
+                "amount": 3.025563
               },
               {
                 "id": "parliament",
                 "name": "Parliament",
-                "amount": 0.684789
+                "amount": 0.605113
               },
               {
                 "id": "privy-council-office",
                 "name": "Privy Council Office",
-                "amount": 0.316963
+                "amount": 0.296775
               },
               {
                 "id": "governor-general",
                 "name": "Office of the Secretary to the Governor General",
-                "amount": 0.022663
+                "amount": 0.021198
               },
               {
                 "id": "audit-agents",
@@ -563,34 +589,13 @@
                 "amount": 0.0
               }
             ]
-          }
-        ]
-      },
-      {
-        "id": "indigenous-priorities",
-        "name": "Indigenous Priorities",
-        "children": [
-          {
-            "id": "crown-indigenous-relations",
-            "name": "Crown-Indigenous Relations",
-            "amount": 9.1529
           },
           {
-            "id": "indigenous-well-being",
-            "name": "Indigenous Well-Being + Self Determination",
+            "id": "crown-corporations-and-other-entities",
+            "name": "Crown corporations and other entities",
             "amount": 0.0
           }
         ]
-      },
-      {
-        "id": "international-affairs",
-        "name": "International Affairs",
-        "amount": 6.492335
-      },
-      {
-        "id": "accounting-basis-adjustments",
-        "name": "Accounting and consolidation adjustments",
-        "amount": -5.993655
       }
     ]
   },

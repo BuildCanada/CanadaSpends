@@ -1,12 +1,29 @@
 # Federal export report
 
-Generated: 2026-07-06T16:34:58Z
+Generated: 2026-07-06T19:38:12Z
 
 Shipped years: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025
 
 ## Excluded years
 
 - **2013**: no Vol I consolidated statement data (edition unavailable)
+
+## Vol I Table 3.6 restatement scaling (informational)
+
+Portfolio totals are scaled to tie to the restated Consolidated Statement of Operations total (guard: restatement deviation ≤ 1% after the actuarial carve-out allowance for editions predating the net-actuarial-losses split).
+
+- **2014**: factor 0.93344 (deviation 6.6561%, actuarial carve-out 7.0707%, restatement -0.4146%)
+- **2015**: factor 0.97303 (deviation 2.6972%, actuarial carve-out 2.7042%, restatement -0.0069%)
+- **2016**: factor 0.96277 (deviation 3.7225%, actuarial carve-out 3.4061%, restatement 0.3164%)
+- **2017**: factor 0.96356 (deviation 3.6445%, actuarial carve-out 3.1966%, restatement 0.4478%)
+- **2018**: factor 0.96169 (deviation 3.8314%, actuarial carve-out 3.1353%, restatement 0.6961%)
+- **2019**: factor 0.97585 (deviation 2.4152%, actuarial carve-out 2.4152%, restatement -0.0000%)
+- **2020**: factor 1.00000 (deviation 0.0000%, actuarial carve-out 0.0000%, restatement 0.0000%)
+- **2021**: factor 1.00000 (deviation 0.0000%, actuarial carve-out 0.0000%, restatement 0.0000%)
+- **2022**: factor 1.00021 (deviation 0.0209%, actuarial carve-out 0.0000%, restatement 0.0209%)
+- **2023**: factor 1.00000 (deviation 0.0000%, actuarial carve-out 0.0000%, restatement 0.0000%)
+- **2024**: factor 1.00000 (deviation 0.0000%, actuarial carve-out 0.0000%, restatement 0.0000%)
+- **2025**: factor 1.00000 (deviation 0.0000%, actuarial carve-out 0.0000%, restatement 0.0000%)
 
 ## miniSankey standard-object reconciliation (non-blocking)
 
