@@ -1,9 +1,51 @@
 "use client";
 
 import { InternalLink } from "@/components/Layout";
-import { useDepartments } from "@/hooks/useDepartments";
 import { Department, Jurisdiction } from "@/lib/jurisdictions";
 import { Trans, useLingui } from "@lingui/react/macro";
+
+// Federal department list for the budget pages' "Government Departments
+// explained" section. Slugs link to the legacy yearless department URL, which
+// next.config redirects to the data-driven /federal/spending/{defaultYear}/{slug}
+// page. (The federal spending pages themselves are fully data-driven and no
+// longer use this component.)
+const useFederalDepartments = () => {
+  const { t } = useLingui();
+  return [
+    { name: t`Finance Canada`, slug: "department-of-finance" },
+    {
+      name: t`Employment and Social Development Canada`,
+      slug: "employment-and-social-development-canada",
+    },
+    {
+      name: t`Indigenous Services Canada + Crown-Indigenous Relations and Northern Affairs Canada`,
+      slug: "indigenous-services-and-northern-affairs",
+    },
+    { name: t`National Defence`, slug: "national-defence" },
+    { name: t`Global Affairs Canada`, slug: "global-affairs-canada" },
+    { name: t`Canada Revenue Agency`, slug: "canada-revenue-agency" },
+    {
+      name: t`Housing, Infrastructure and Communities Canada`,
+      slug: "housing-infrastructure-communities",
+    },
+    { name: t`Public Safety Canada`, slug: "public-safety-canada" },
+    { name: t`Health Canada`, slug: "health-canada" },
+    {
+      name: t`Innovation, Science and Industry`,
+      slug: "innovation-science-and-industry",
+    },
+    {
+      name: t`Public Services and Procurement Canada`,
+      slug: "public-services-and-procurement-canada",
+    },
+    {
+      name: t`Immigration, Refugees and Citizenship`,
+      slug: "immigration-refugees-and-citizenship",
+    },
+    { name: t`Veterans Affairs`, slug: "veterans-affairs" },
+    { name: t`Transport Canada`, slug: "transport-canada" },
+  ];
+};
 
 interface DepartmentProps {
   name: string;
@@ -26,9 +68,9 @@ const DepartmentItem = ({ name, slug }: DepartmentProps) => {
 };
 
 export const DepartmentList = (props: { current?: string }) => {
-  const departments = useDepartments();
+  const departments = useFederalDepartments();
   const BrowsableDepartment = departments
-    .filter((d) => !!d.href && !!d.slug && !!d.name)
+    .filter((d) => !!d.slug && !!d.name)
     .sort((a, b) => (a.name ?? "").localeCompare(b.name ?? "")) as {
     name: string;
     slug: string;

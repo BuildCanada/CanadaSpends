@@ -6,7 +6,6 @@ import { curveBumpX, area } from "d3-shape";
 import { cumsum, pairs, rollups, sum } from "d3-array";
 import { hierarchy } from "d3-hierarchy";
 import { formatNumber } from "./utils";
-import { nodeToDepartment } from "@/lib/sankeyDepartmentMappings";
 import { colours } from "@/styles/colours";
 
 export type SankeyNode = {
@@ -234,7 +233,10 @@ export class SankeyChartD3 {
       .on("mouseover", (e, d) => {
         const target = e.currentTarget as HTMLElement;
         const rect = target.getBoundingClientRect();
-        const departmentSlug = nodeToDepartment[d.displayName];
+        // Department deep-link comes from the node's own data (spec §7 — stable
+        // id → slug carried in the generated JSON), replacing the old
+        // string-matched sankeyDepartmentMappings table.
+        const departmentSlug = d.departmentSlug;
 
         this.highlightNode(d);
         this.params.onMouseOver({ ...d, departmentSlug, blockRect: rect }, e);

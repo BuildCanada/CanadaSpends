@@ -1,23 +1,25 @@
-"use client";
+import { getFederalDefaultYear } from "@/lib/federal";
+import { locales } from "@/lib/constants";
+import { localizedPath } from "@/lib/utils";
+import { notFound, redirect } from "next/navigation";
 
-import { ExternalLink } from "@/components/Layout";
-import NoSSR from "@/components/NoSSR";
-import { Sankey } from "@/components/Sankey";
+// Yearless mobile full-screen Sankey redirects to the latest (default) year's
+// data-driven full-screen page (spec §10).
+export const dynamicParams = false;
 
-export default function SankeyFull() {
-  return (
-    <div className="sankey-chart-container min-w-[1280px]">
-      <NoSSR>
-        <Sankey />
-      </NoSSR>
-      <div className="absolute bottom-3 left-6">
-        <ExternalLink
-          className="text-xs text-gray-400"
-          href="https://www.canada.ca/en/public-services-procurement/services/payments-accounting/public-accounts/2024.html"
-        >
-          Source
-        </ExternalLink>
-      </div>
-    </div>
-  );
+export async function generateStaticParams() {
+  return locales.map((lang) => ({ lang }));
+}
+
+export default async function FederalSpendingFullScreenRedirect({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
+  const { lang } = await params;
+  const defaultYear = getFederalDefaultYear();
+  if (!defaultYear) {
+    notFound();
+  }
+  redirect(localizedPath(`/federal/spending-full-screen/${defaultYear}`, lang));
 }

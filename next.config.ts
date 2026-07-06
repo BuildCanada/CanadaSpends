@@ -1,10 +1,26 @@
 import type { NextConfig } from "next";
 import createMDX from "@next/mdx";
 import rehypeSlug from "rehype-slug";
+import fs from "fs";
+import path from "path";
 import {
   getProvincialSlugs,
   getMunicipalitiesByProvince,
 } from "./src/lib/jurisdictions";
+
+// Read the federal default fiscal year from the committed data at config time.
+// next.config redirects are static, so the destination year is baked in at
+// build; reading index.json keeps it in sync with the data without a manual
+// bump. Falls back to 2025 if the file is absent (e.g. before the pipeline runs).
+function getFederalDefaultYearForConfig(): number {
+  try {
+    const indexPath = path.join(process.cwd(), "data/federal/index.json");
+    const index = JSON.parse(fs.readFileSync(indexPath, "utf8"));
+    return index.defaultYear ?? index.latestYear ?? 2025;
+  } catch {
+    return 2025;
+  }
+}
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -101,6 +117,43 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
     );
+
+    // ========================================================================
+    // FEDERAL DATA-DRIVEN MIGRATION (spec §10)
+    // ------------------------------------------------------------------------
+    // The 14 hardcoded department folders under
+    // src/app/[lang]/(main)/federal/spending/{slug}/ have been deleted in
+    // favour of the data-driven /federal/spending/[year]/[department] route.
+    // These redirects resolve the legacy yearless department URLs to the
+    // default fiscal year's data-driven page. The destination year is read from
+    // data/federal/index.json at config time (see getFederalDefaultYearForConfig
+    // above); if you ever hardcode it instead, it MUST be bumped whenever the
+    // defaultYear in index.json changes.
+    // ========================================================================
+    const federalDefaultYear = getFederalDefaultYearForConfig();
+    const legacyFederalSlugs = [
+      "canada-revenue-agency",
+      "department-of-finance",
+      "employment-and-social-development-canada",
+      "global-affairs-canada",
+      "health-canada",
+      "housing-infrastructure-communities",
+      "immigration-refugees-and-citizenship",
+      "indigenous-services-and-northern-affairs",
+      "innovation-science-and-industry",
+      "national-defence",
+      "public-safety-canada",
+      "public-services-and-procurement-canada",
+      "transport-canada",
+      "veterans-affairs",
+    ];
+    for (const slug of legacyFederalSlugs) {
+      redirects.push({
+        source: `/:locale/federal/spending/${slug}`,
+        destination: `/:locale/federal/spending/${federalDefaultYear}/${slug}`,
+        permanent: true,
+      });
+    }
 
     // Add redirects for old provincial URLs
     for (const province of provinces) {

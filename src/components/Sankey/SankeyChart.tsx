@@ -7,10 +7,6 @@ import "./SankeyChart.css";
 import { SankeyData } from "./SankeyChartD3";
 import { SankeyChartSingle } from "./SankeyChartSingle";
 import { formatNumber, sortNodesByAmount, transformToIdBased } from "./utils";
-import {
-  departmentNames,
-  nodeToDepartment,
-} from "@/lib/sankeyDepartmentMappings";
 import { colours } from "@/styles/colours";
 
 // Dynamically import React Select to avoid SSR hydration issues
@@ -207,24 +203,10 @@ export function SankeyChart(props: SankeyChartProps) {
             inputId="sankey-search-input"
             value={searchedNode}
             options={flatData
-              ?.flatMap((d) => {
-                const base = {
-                  value: d.id!,
-                  label: d.displayName || d.name || "Unknown",
-                };
-
-                const deptSlug = nodeToDepartment[d.displayName];
-                if (deptSlug && departmentNames[deptSlug] && d.children) {
-                  return [
-                    base,
-                    {
-                      value: d.id!,
-                      label: departmentNames[deptSlug],
-                    },
-                  ];
-                }
-                return [base];
-              })
+              ?.map((d) => ({
+                value: d.id!,
+                label: d.displayName || d.name || "Unknown",
+              }))
               .filter((d) => d.value && d.label)}
             onChange={handleSearch}
             isClearable={true}
