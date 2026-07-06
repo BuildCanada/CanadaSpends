@@ -1,0 +1,376 @@
+# Ministry → site-slug crosswalk for federal Public Accounts data.
+#
+# Each portfolio entry maps every `ministry_name_normalized` variant (and the
+# raw `ministry_code` values) that appears in the extracted Vol II data
+# (2013–2025) to a single canonical URL slug. Many-ministries→one-slug is
+# supported via the `ministries:` list.
+#
+# HARD CONSTRAINT: the 14 slugs marked `existing_page: true` are live site
+# URLs and must never change.
+#
+# Matching contract for the export command:
+#   0. Match `organization` against `organization_overrides:` (exact, after
+#      dash normalization) — highest precedence, follows an agency across
+#      whichever host ministry reports it in a given year.
+#   1. Match `ministry_name_normalized` against `ministries:` (exact, after
+#      normalizing U+2011/U+2013 dashes to "-").
+#   2. If the name is null or a known noise value ("Public Accounts of
+#      Canada"), fall back to `overrides:` below (code, optionally + year).
+#   3. The `consolidated` ministry_code (2013–2014 Vol III pages) is shared
+#      across portfolios — always resolve those rows by name, never by code.
+#   4. Any row that resolves to no portfolio is an export error.
+#
+# name_fr values come from the official bilingual open.canada.ca Public
+# Accounts CSVs (amo-ame-*.csv) where available; a few were completed from
+# official usage where the CSV value was truncated (marked with a comment).
+
+portfolios:
+  - slug: department-of-finance
+    existing_page: true
+    name_en: Finance
+    name_fr: Finances
+    ministries:
+      - Finance
+      - inance                # extraction artifact, fin 2020–2021
+    codes: [fin]
+
+  - slug: employment-and-social-development-canada
+    existing_page: true
+    name_en: Employment and Social Development
+    name_fr: Emploi et Développement social   # portfolio dept name; CSV ministry label truncated
+    ministries:
+      - Employment and Workforce Development
+      - Employment, Workforce Development and Disability Inclusion
+      - Families, Children and Social Development
+    codes: [edsc-esdc, edip-ewddi, feds-fcsd, rhdcc-hrsdc]
+
+  # Aggregates BOTH successor ministries of the former Indian Affairs and
+  # Northern Development portfolio (split in 2017/2019). The existing site
+  # page covers the combined portfolio, so both map to one slug.
+  - slug: indigenous-services-and-northern-affairs
+    existing_page: true
+    name_en: Indigenous Services and Crown-Indigenous Relations
+    name_fr: Services aux Autochtones et Relations Couronne-Autochtones
+    ministries:
+      - Indigenous Services
+      - Crown-Indigenous Relations and Northern Affairs
+      - Crown-Indigenous Relations
+    codes: [sa-is, rcaanc-cirnac, aadnc-aandc, aanc-inac]
+
+  - slug: national-defence
+    existing_page: true
+    name_en: National Defence
+    name_fr: Défense nationale
+    ministries:
+      - National Defence
+    codes: [mdn-dnd]
+
+  - slug: global-affairs-canada
+    existing_page: true
+    name_en: Global Affairs
+    name_fr: Affaires mondiales
+    ministries:
+      - Global Affairs
+    codes: [amc-gac, maeci-dfait]
+
+  # The ministry is "National Revenue" in most years; the CRA is its only
+  # organization. Both labels map here.
+  - slug: canada-revenue-agency
+    existing_page: true
+    name_en: National Revenue
+    name_fr: Revenu national
+    ministries:
+      - National Revenue
+      - Canada Revenue Agency
+    codes: [rn-nr, arc-cra]
+
+  - slug: housing-infrastructure-communities
+    existing_page: true
+    name_en: Housing, Infrastructure and Communities
+    name_fr: Logement, Infrastructures et Collectivités
+    ministries:
+      - Housing, Infrastructure and Communities
+      - Infrastructure and Communities
+      - Intergovernmental Affairs, Infrastructure and Communities
+      - Infrastructure et Collectivités       # French leak in 2024 extraction
+      - Office of Infrastructure of Canada
+    codes: [infra, bic-oic]
+
+  - slug: public-safety-canada
+    existing_page: true
+    name_en: Public Safety
+    name_fr: Sécurité publique
+    ministries:
+      - Public Safety and Emergency Preparedness
+      - Public Safety
+      - Public Safety, Democratic Institutions and Intergovernmental Affairs
+    codes: [sp-ps]
+
+  - slug: health-canada
+    existing_page: true
+    name_en: Health
+    name_fr: Santé
+    ministries:
+      - Health
+    codes: [sc-hc]
+
+  - slug: innovation-science-and-industry
+    existing_page: true
+    name_en: Innovation, Science and Industry
+    name_fr: Innovation, Sciences et Industrie
+    ministries:
+      - Innovation, Science and Economic Development
+      - Innovation, Science and Industry
+      - Industry
+      - Science
+    codes: [isde-ised, isi, sci, ic]   # `ic` = Industry in early years; see overrides + NOTES for the ic collision
+
+  - slug: public-services-and-procurement-canada
+    existing_page: true
+    name_en: Public Services and Procurement
+    name_fr: Services publics et Approvisionnement
+    ministries:
+      - Public Services and Procurement
+      - Public Works and Government Services
+    codes: [spac-pspc, tpsgc-pwgsc]
+
+  - slug: immigration-refugees-and-citizenship
+    existing_page: true
+    name_en: Immigration, Refugees and Citizenship
+    name_fr: Immigration, Réfugiés et Citoyenneté
+    ministries:
+      - Immigration, Refugees and Citizenship
+      - Citizenship and Immigration
+    codes: [ircc, cic]
+
+  - slug: veterans-affairs
+    existing_page: true
+    name_en: Veterans Affairs
+    name_fr: Anciens Combattants
+    ministries:
+      - Veterans Affairs
+    codes: [acc-vac]
+
+  - slug: transport-canada
+    existing_page: true
+    name_en: Transport
+    name_fr: Transports
+    ministries:
+      - Transport
+    codes: [tc]
+
+  # ---- Portfolios without existing pages (new slugs) ----
+
+  - slug: agriculture-and-agri-food
+    existing_page: false
+    name_en: Agriculture and Agri-Food
+    name_fr: Agriculture et Agroalimentaire
+    ministries:
+      - Agriculture and Agri-Food
+      - Agriculture and Agri        # truncated extraction, 2013–2015
+    codes: [agr]
+
+  - slug: canadian-heritage
+    existing_page: false
+    name_en: Canadian Heritage
+    name_fr: Patrimoine canadien
+    ministries:
+      - Canadian Heritage
+      - Canadian Heritage and Multiculturalism
+    codes: [pch]
+
+  - slug: environment-and-climate-change
+    existing_page: false
+    name_en: Environment and Climate Change
+    name_fr: Environnement et Changement climatique
+    ministries:
+      - Environment and Climate Change
+      - Environment
+    codes: [eccc, ec]
+
+  - slug: fisheries-and-oceans
+    existing_page: false
+    name_en: Fisheries, Oceans and the Canadian Coast Guard
+    name_fr: Pêches, Océans et Garde côtière canadienne
+    ministries:
+      - Fisheries and Oceans
+      - Fisheries, Oceans and the Canadian Coast Guard
+    codes: [mpo-dfo, pogcc-foccg]
+
+  - slug: justice
+    existing_page: false
+    name_en: Justice
+    name_fr: Justice
+    ministries:
+      - Justice
+    codes: [justice]
+
+  - slug: natural-resources
+    existing_page: false
+    name_en: Energy and Natural Resources
+    name_fr: Énergie et Ressources naturelles
+    ministries:
+      - Natural Resources
+      - Energy and Natural Resources
+    codes: [rncan-nrcan]
+
+  - slug: privy-council
+    existing_page: false
+    name_en: Privy Council
+    name_fr: Conseil privé
+    ministries:
+      - Privy Council
+      - Privy Council Office
+    codes: [bcp-pco, cp-pc]
+
+  - slug: treasury-board
+    existing_page: false
+    name_en: Treasury Board
+    name_fr: Conseil du Trésor
+    ministries:
+      - Treasury Board
+    codes: [sct-tbs]
+
+  - slug: parliament
+    existing_page: false
+    name_en: Parliament
+    name_fr: Parlement
+    ministries:
+      - Parliament
+    codes: [parl]
+
+  - slug: governor-general
+    existing_page: false
+    name_en: Governor General
+    name_fr: Gouverneur général
+    ministries:
+      - Governor General
+      - Office of the Governor General's Secretary
+    codes: [gg, bsgg-oggs, gn-dg]
+
+  - slug: women-and-gender-equality
+    existing_page: false
+    name_en: Women, Gender Equality and Youth
+    name_fr: Femmes, Égalité des genres et Jeunesse
+    ministries:
+      - Women and Gender Equality
+      - Women, Gender Equality and Youth
+    codes: [feg-wge]
+
+  - slug: democratic-institutions
+    existing_page: false
+    name_en: Democratic Institutions
+    name_fr: Institutions démocratiques
+    ministries:
+      - Democratic Institutions
+    codes: [id-di]
+
+  # All regional development agencies merged into ONE portfolio (2026-07-06).
+  # They appear as standalone ministries in some years and as organizations
+  # nested inside host ministries (ISED/ISI, Industry, Privy Council, Global
+  # Affairs, Health) in others; the organization_overrides section below
+  # follows them across hosts. Known gaps, both documented in NOTES.md:
+  #   - FedNor is delivered inside the Department of Industry itself and
+  #     cannot be separated from Vol II data.
+  #   - 2016–2018 Vol II has no organization breakdown at all, so RDA
+  #     spending stays inside the ISED portfolio for those years and this
+  #     slug has no page there.
+  # aggregate: true suppresses the reportedAs banner (a synthetic grouping
+  # has no single historical name; the prose names the constituent agencies).
+  - slug: regional-economic-development
+    existing_page: false
+    aggregate: true
+    name_en: Regional Economic Development Agencies
+    name_fr: Agences de développement régional
+    ministries:
+      - Atlantic Canada Opportunities Agency
+      - Economic Development Agency of Canada for the Regions of Quebec
+      - Western Economic Diversification
+      - Prairies and Canadian Northern Economic Development
+      - Canadian Northern Economic Development Agency
+    codes: [apeca-acoa, adrq-edrq, dec-ced, derq-edrq, deo-wd, deo-wed, poean-cannor]
+
+  - slug: parks-canada
+    existing_page: false
+    name_en: Parks Canada
+    name_fr: Parcs Canada
+    ministries:
+      - Parks Canada
+    codes: [pc]
+
+# Organizations that must resolve to a portfolio regardless of which host
+# ministry reports them in a given year (highest precedence). Currently the
+# regional development agencies, whose host portfolio varies by year.
+organization_overrides:
+  - organization: Atlantic Canada Opportunities Agency
+    slug: regional-economic-development
+  - organization: Economic Development Agency of Canada for the Regions of Quebec
+    slug: regional-economic-development
+  - organization: Department of Western Economic Diversification
+    slug: regional-economic-development
+  - organization: Pacific Economic Development Agency of Canada
+    slug: regional-economic-development
+  - organization: Canadian Northern Economic Development Agency
+    slug: regional-economic-development
+  - organization: Federal Economic Development Agency for Southern Ontario
+    slug: regional-economic-development
+
+# Transfer rows have no organization column, so agency transfer payments
+# reported under a host ministry are moved by (host ministry + description
+# regex, case-insensitive). Applied only in years where the target slug has
+# allotment data (2016–2018 Vol II has no org breakdown, so those years' rows
+# stay with the host). Patterns are RDA program names verified against
+# 2014–2025 data; deliberately NOT matched: APEC Secretariat (Global Affairs),
+# Canada 150 Research Chairs (research, not RDA), Territorial Health
+# Investment Fund (Health), Northern Ontario Development Program (FedNor,
+# inseparable from Industry — see NOTES.md).
+transfer_reattributions:
+  - slug: regional-economic-development
+    host_ministries:
+      - Privy Council
+      - Innovation, Science and Industry
+      - Innovation, Science and Economic Development
+      - Industry
+      - Global Affairs
+      - Health
+    description_patterns:
+      - Regional Economic Growth through Innovation
+      - Growth through Regional Innovation
+      - Community Futures
+      - Western Diversification Program
+      - Women['’]s Enterprise Initiative
+      - Southern Ontario (Prosperity|Development)
+      - Atlantic Innovation Fund
+      - Innovative [Cc]ommunities [Ff]und
+      - Business Development Program
+      - Quebec Economic Development [Pp]rogram
+      - Economic [Dd]evelopment [Ii]nitiative
+      - Aboriginal participation in the northern economy
+      - Inclusive Diversification and Economic Advancement in the North
+      - Northern Indigenous Economic Opportunities
+      - Canada 150 [Cc]ommunity [Ii]nfrastructure
+      - Canadian Northern Economic Development Agency
+      - Federal Economic Development Agency for Southern Ontario
+      - Pacific Economic Development Agency
+
+# Rows whose ministry_name_normalized is null or page-title noise
+# ("Public Accounts of Canada"). Resolve by ministry_code; the two ambiguous
+# codes are additionally pinned by year.
+overrides:
+  - code: ec
+    slug: environment-and-climate-change     # null-name rows, 2014–2015
+  - code: mdn-dnd
+    slug: national-defence                   # null-name rows, 2014–2015
+  - code: justice
+    slug: justice                            # null-name rows, 2014–2015
+  - code: gg
+    slug: governor-general
+  - code: bsgg-oggs
+    slug: governor-general
+  - code: gn-dg
+    slug: governor-general                   # "Public Accounts of Canada" noise, 2020–2021
+  - code: edip-ewddi
+    slug: employment-and-social-development-canada   # noise, 2021–2022
+  - code: ic
+    years: [2016]
+    slug: innovation-science-and-industry    # noise; ic = Industry in 2016

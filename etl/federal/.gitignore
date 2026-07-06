@@ -1,0 +1,11 @@
+/raw/
+/vendor/
+/.bundle/
+/open_tables/data/*.csv
+# Vol I consolidated statement editions needed by `pb export` are committed for
+# reproducibility (headline totals, revenue lines, and the six vol1-sourced
+# thematic nodes). Un-ignore just those, keeping the ~1GB of other open CSVs out.
+!/open_tables/data/cdeif-tycfi-2023-eng.csv
+!/open_tables/data/cdeif-tycfi-2024.csv
+!/open_tables/data/cdeif-tycfi-2025.csv
+/tmp/
