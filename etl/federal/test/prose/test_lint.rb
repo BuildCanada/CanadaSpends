@@ -40,4 +40,42 @@ class TestProseLint < Minitest::Test
     violations = PbCli::Prose::Lint.check('It cost $5 million, about 3% of the budget, via {{bogus}}.')
     assert_equal 3, violations.size
   end
+
+  def test_supported_section_tokens_pass
+    text = <<~PROSE
+      {{name}} is a department.
+
+      {{section:stats}}
+
+      It spent {{totalSpending}}.
+
+      {{section:miniSankey}}
+
+      {{section:entities}}
+
+      {{section:historicalShare}}
+
+      {{section:lineItems}}
+    PROSE
+    assert_empty PbCli::Prose::Lint.check(text)
+    assert PbCli::Prose::Lint.clean?(text)
+  end
+
+  def test_rejects_unknown_section_token
+    violations = PbCli::Prose::Lint.check("Intro.\n\n{{section:bogusChart}}\n\nMore.")
+    assert(violations.any? { |v| v.include?('unknown section token') && v.include?('bogusChart') })
+  end
+
+  def test_section_token_is_not_flagged_as_unsupported_placeholder
+    # A section token must be validated by the section rule, never mistaken for
+    # a figure placeholder like {{topProgram.name}}.
+    violations = PbCli::Prose::Lint.check('Intro.
+
+{{section:miniSankey}}')
+    refute(violations.any? { |v| v.include?('unsupported placeholder') })
+  end
+
+  def test_section_token_does_not_trip_figure_checks
+    assert_empty PbCli::Prose::Lint.check("Intro paragraph.\n\n{{section:stats}}\n\n{{section:lineItems}}")
+  end
 end

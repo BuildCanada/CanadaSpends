@@ -57,169 +57,171 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "transport-canada",
       "name": "Transport",
       "children": [
         {
-          "id": "transport-canada-org-department-of-transport",
+          "id": "transport-canada-2022-department-of-transport",
           "name": "Department of Transport",
           "children": [
             {
-              "id": "transport-canada-department-of-transport-vote10",
-              "name": "Grants and contributions—Efficient Transportation System",
-              "vote": "Vote 10",
-              "children": [
-                {
-                  "id": "transport-canada-department-of-transport-vote10-grants-and-contributions",
-                  "name": "Grants and contributions",
-                  "amount": 1.008344
-                },
-                {
-                  "id": "transport-canada-department-of-transport-vote10-innovative-solutions-canada",
-                  "name": "Innovative Solutions Canada",
-                  "amount": 0.001015
-                }
-              ]
+              "id": "transport-canada-2022-department-of-transport-obj-10",
+              "name": "Transfer payments",
+              "amount": 1.081965
             },
             {
-              "id": "transport-canada-department-of-transport-vote1",
-              "name": "Operating expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "transport-canada-department-of-transport-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.868928
-                },
-                {
-                  "id": "transport-canada-department-of-transport-vote1-tanker-safety-inspection-program",
-                  "name": "Tanker Safety Inspection Program",
-                  "amount": 0.001971
-                }
-              ]
+              "id": "transport-canada-2022-department-of-transport-obj-1",
+              "name": "Personnel",
+              "amount": 0.710813
             },
             {
-              "id": "transport-canada-department-of-transport-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.281914
+              "id": "transport-canada-2022-department-of-transport-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.190241
             },
             {
-              "id": "transport-canada-department-of-transport-vote5",
-              "name": "Capital expenditures",
-              "vote": "Vote 5",
-              "amount": 0.104942
+              "id": "transport-canada-2022-department-of-transport-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.085256
+            },
+            {
+              "id": "transport-canada-2022-department-of-transport-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.07415
+            },
+            {
+              "id": "transport-canada-2022-department-of-transport-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.058189
+            },
+            {
+              "id": "transport-canada-2022-department-of-transport-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.047778
+            },
+            {
+              "id": "transport-canada-2022-department-of-transport-external-revenues",
+              "name": "External revenues",
+              "amount": -0.036129
+            },
+            {
+              "id": "transport-canada-2022-department-of-transport-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.01894
+            },
+            {
+              "name": "Other",
+              "id": "transport-canada-2022-department-of-transport-other",
+              "amount": 0.017766,
+              "isAggregate": true,
+              "count": 2
+            },
+            {
+              "id": "transport-canada-2022-department-of-transport-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.014938
+            },
+            {
+              "id": "transport-canada-2022-department-of-transport-obj-5",
+              "name": "Rentals",
+              "amount": 0.014855
             }
           ]
         },
         {
-          "id": "transport-canada-org-canadian-air-transport-security-authority",
+          "id": "transport-canada-2022-canadian-air-transport-security-authority",
           "name": "Canadian Air Transport Security Authority",
           "children": [
             {
-              "id": "transport-canada-canadian-air-transport-security-authority-vote1",
-              "name": "Payments to the authority for operating and capital expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "transport-canada-canadian-air-transport-security-authority-vote1-payments-to-crown-corporation",
-                  "name": "Payments to Crown Corporation",
-                  "amount": 0.675979
-                },
-                {
-                  "id": "transport-canada-canadian-air-transport-security-authority-vote1-capital-budget",
-                  "name": "Capital budget",
-                  "amount": 0.010136
-                }
-              ]
+              "id": "transport-canada-2022-canadian-air-transport-security-authority-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.686115
             }
           ]
         },
         {
-          "id": "transport-canada-org-via-rail-canada-inc",
+          "id": "transport-canada-2022-via-rail-canada-inc",
           "name": "VIA Rail Canada Inc.",
           "children": [
             {
-              "id": "transport-canada-via-rail-canada-inc-vote1",
-              "name": "Payments to the Corporation",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "transport-canada-via-rail-canada-inc-vote1-payments-to-crown-corporation",
-                  "name": "Payments to Crown Corporation",
-                  "amount": 0.394588
-                },
-                {
-                  "id": "transport-canada-via-rail-canada-inc-vote1-capital-budget",
-                  "name": "Capital budget",
-                  "amount": 0.234268
-                }
-              ]
+              "id": "transport-canada-2022-via-rail-canada-inc-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.628856
             }
           ]
         },
         {
-          "id": "transport-canada-org-marine-atlantic-inc",
+          "id": "transport-canada-2022-marine-atlantic-inc",
           "name": "Marine Atlantic Inc.",
           "children": [
             {
-              "id": "transport-canada-marine-atlantic-inc-vote1",
-              "name": "Payments to the Corporation",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "transport-canada-marine-atlantic-inc-vote1-payments-to-crown-corporation",
-                  "name": "Payments to Crown Corporation",
-                  "amount": 0.092974
-                },
-                {
-                  "id": "transport-canada-marine-atlantic-inc-vote1-capital-budget",
-                  "name": "Capital budget",
-                  "amount": 0.037836
-                }
-              ]
+              "id": "transport-canada-2022-marine-atlantic-inc-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.13081
             }
           ]
         },
         {
-          "id": "transport-canada-org-canadian-transportation-agency",
+          "id": "transport-canada-2022-canadian-transportation-agency",
           "name": "Canadian Transportation Agency",
           "children": [
             {
-              "id": "transport-canada-canadian-transportation-agency-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.038454
+              "id": "transport-canada-2022-canadian-transportation-agency-obj-1",
+              "name": "Personnel",
+              "amount": 0.035525
             },
             {
-              "id": "transport-canada-canadian-transportation-agency-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.004434
+              "id": "transport-canada-2022-canadian-transportation-agency-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.004511
+            },
+            {
+              "id": "transport-canada-2022-canadian-transportation-agency-obj-5",
+              "name": "Rentals",
+              "amount": 0.001292
+            },
+            {
+              "id": "transport-canada-2022-canadian-transportation-agency-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000966
+            },
+            {
+              "id": "transport-canada-2022-canadian-transportation-agency-obj-3",
+              "name": "Information",
+              "amount": 0.000359
+            },
+            {
+              "id": "transport-canada-2022-canadian-transportation-agency-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000128
+            },
+            {
+              "id": "transport-canada-2022-canadian-transportation-agency-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 6.1e-5
+            },
+            {
+              "id": "transport-canada-2022-canadian-transportation-agency-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 2.7e-5
+            },
+            {
+              "id": "transport-canada-2022-canadian-transportation-agency-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 1.9e-5
             }
           ]
         },
         {
-          "id": "transport-canada-org-the-federal-bridge-corporation-limited",
+          "id": "transport-canada-2022-the-federal-bridge-corporation-limited",
           "name": "The Federal Bridge Corporation Limited",
           "children": [
             {
-              "id": "transport-canada-the-federal-bridge-corporation-limited-vote1",
-              "name": "Payments to the Corporation",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "transport-canada-the-federal-bridge-corporation-limited-vote1-payments-to-crown-corporation",
-                  "name": "Payments to Crown Corporation",
-                  "amount": 0.00875
-                },
-                {
-                  "id": "transport-canada-the-federal-bridge-corporation-limited-vote1-capital-budget",
-                  "name": "Capital budget",
-                  "amount": 0.000374
-                }
-              ]
+              "id": "transport-canada-2022-the-federal-bridge-corporation-limited-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.009124
             }
           ]
         }

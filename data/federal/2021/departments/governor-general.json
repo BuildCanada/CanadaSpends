@@ -57,91 +57,64 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "governor-general",
       "name": "Governor General",
       "children": [
         {
-          "id": "governor-general-org-shared-services-canada",
-          "name": "Shared Services Canada",
-          "children": [
-            {
-              "id": "governor-general-shared-services-canada-vote1",
-              "name": "Operating expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "governor-general-shared-services-canada-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 2.419974
-                },
-                {
-                  "id": "governor-general-shared-services-canada-vote1-service-integrity-staffing-and-professional-services",
-                  "name": "Service integrity—Staffing and professional services",
-                  "amount": 0.093757
-                },
-                {
-                  "id": "governor-general-shared-services-canada-vote1-funding-for-the-refresh-of-infrastructure-technology",
-                  "name": "Funding for the refresh of infrastructure technology",
-                  "amount": 0.079114
-                },
-                {
-                  "id": "governor-general-shared-services-canada-vote1-secure-canada-s-government-information-technology-infrastructure-and-information",
-                  "name": "Secure Canada's government information technology infrastructure and information",
-                  "amount": 0.010803
-                },
-                {
-                  "id": "governor-general-shared-services-canada-vote1-innovative-solutions-canada",
-                  "name": "Innovative Solutions Canada",
-                  "amount": 0.004442
-                }
-              ]
-            },
-            {
-              "id": "governor-general-shared-services-canada-vote5",
-              "name": "Capital expenditures",
-              "vote": "Vote 5",
-              "children": [
-                {
-                  "id": "governor-general-shared-services-canada-vote5-capital-budget",
-                  "name": "Capital budget",
-                  "amount": 0.328454
-                },
-                {
-                  "id": "governor-general-shared-services-canada-vote5-funding-for-the-refresh-of-infrastructure-technology",
-                  "name": "Funding for the Refresh of Infrastructure Technology",
-                  "amount": 0.118833
-                },
-                {
-                  "id": "governor-general-shared-services-canada-vote5-secure-canada-s-government-information-technology-infrastructure-and-information",
-                  "name": "Secure Canada's government information technology infrastructure and information",
-                  "amount": 0.000285
-                }
-              ]
-            },
-            {
-              "id": "governor-general-shared-services-canada-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.122017
-            }
-          ]
-        },
-        {
-          "id": "governor-general-org-office-of-the-governor-general-s-secretary",
+          "id": "governor-general-2021-office-of-the-governor-general-s-secretary",
           "name": "Office of the Governor General's Secretary",
           "children": [
             {
-              "id": "governor-general-office-of-the-governor-general-s-secretary-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.021299
+              "id": "governor-general-2021-office-of-the-governor-general-s-secretary-obj-1",
+              "name": "Personnel",
+              "amount": 0.018075
             },
             {
-              "id": "governor-general-office-of-the-governor-general-s-secretary-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.003379
+              "id": "governor-general-2021-office-of-the-governor-general-s-secretary-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.002413
+            },
+            {
+              "id": "governor-general-2021-office-of-the-governor-general-s-secretary-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000947
+            },
+            {
+              "id": "governor-general-2021-office-of-the-governor-general-s-secretary-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.00079
+            },
+            {
+              "id": "governor-general-2021-office-of-the-governor-general-s-secretary-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000528
+            },
+            {
+              "id": "governor-general-2021-office-of-the-governor-general-s-secretary-obj-5",
+              "name": "Rentals",
+              "amount": 0.000495
+            },
+            {
+              "id": "governor-general-2021-office-of-the-governor-general-s-secretary-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.00048
+            },
+            {
+              "id": "governor-general-2021-office-of-the-governor-general-s-secretary-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000472
+            },
+            {
+              "id": "governor-general-2021-office-of-the-governor-general-s-secretary-obj-3",
+              "name": "Information",
+              "amount": 0.000413
+            },
+            {
+              "id": "governor-general-2021-office-of-the-governor-general-s-secretary-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 6.4e-5
             }
           ]
         }

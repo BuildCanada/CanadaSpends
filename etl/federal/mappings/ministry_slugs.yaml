@@ -353,6 +353,26 @@ transfer_reattributions:
       - Federal Economic Development Agency for Southern Ontario
       - Pacific Economic Development Agency
 
+# Standard-object (dmac-meso) dataset portfolio crosswalk. The meso CSVs label
+# the ministry portfolio with its Public-Accounts-era wording, which the
+# allotment extraction modernized (so the ministries: lists above don't carry
+# these variants). Space/comma/footnote artifacts are handled by the meso
+# resolver's space-insensitive matching; only genuinely-renamed portfolios need
+# an explicit alias here. Verified against dmac-meso-{2014..2025}.
+meso_portfolio_aliases:
+  - portfolio: Employment and Social Development        # 2014–2015
+    slug: employment-and-social-development-canada
+  - portfolio: Foreign Affairs, Trade and Development   # 2014–2015 (Global Affairs)
+    slug: global-affairs-canada
+  - portfolio: Indian Affairs and Northern Development  # 2014–2015
+    slug: indigenous-services-and-northern-affairs
+  - portfolio: Indigenous and Northern Affairs          # 2016–2018
+    slug: indigenous-services-and-northern-affairs
+  - portfolio: Office of the Governor                   # 2015 (truncated label)
+    slug: governor-general
+  - portfolio: Women, Gender Equality                   # 2023 (truncated label)
+    slug: women-and-gender-equality
+
 # Rows whose ministry_name_normalized is null or page-title noise
 # ("Public Accounts of Canada"). Resolve by ministry_code; the two ambiguous
 # codes are additionally pinned by year.

@@ -57,122 +57,203 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "environment-and-climate-change",
       "name": "Environment and Climate Change",
       "children": [
         {
-          "id": "environment-and-climate-change-org-department-of-the-environment",
+          "id": "environment-and-climate-change-2022-department-of-the-environment",
           "name": "Department of the Environment",
           "children": [
             {
-              "id": "environment-and-climate-change-department-of-the-environment-vote1",
-              "name": "Operating expenditures",
-              "vote": "Vote 1",
-              "amount": 1.004428
+              "id": "environment-and-climate-change-2022-department-of-the-environment-obj-1",
+              "name": "Personnel",
+              "amount": 0.840409
             },
             {
-              "id": "environment-and-climate-change-department-of-the-environment-vote10",
-              "name": "Grants and contributions",
-              "vote": "Vote 10",
-              "children": [
-                {
-                  "id": "environment-and-climate-change-department-of-the-environment-vote10-grants-and-contributions",
-                  "name": "Grants and contributions",
-                  "amount": 0.566454
-                },
-                {
-                  "id": "environment-and-climate-change-department-of-the-environment-vote10-international-assistance-envelope",
-                  "name": "International Assistance Envelope",
-                  "amount": 0.010428
-                },
-                {
-                  "id": "environment-and-climate-change-department-of-the-environment-vote10-innovative-solutions-canada",
-                  "name": "Innovative Solutions Canada",
-                  "amount": 0.0004
-                }
-              ]
+              "id": "environment-and-climate-change-2022-department-of-the-environment-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.577282
             },
             {
-              "id": "environment-and-climate-change-department-of-the-environment-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.10153
+              "id": "environment-and-climate-change-2022-department-of-the-environment-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.204451
             },
             {
-              "id": "environment-and-climate-change-department-of-the-environment-vote5",
-              "name": "Capital expenditures",
-              "vote": "Vote 5",
-              "amount": 0.093639
+              "id": "environment-and-climate-change-2022-department-of-the-environment-external-revenues",
+              "name": "External revenues",
+              "amount": -0.041775
+            },
+            {
+              "id": "environment-and-climate-change-2022-department-of-the-environment-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.034906
+            },
+            {
+              "id": "environment-and-climate-change-2022-department-of-the-environment-obj-5",
+              "name": "Rentals",
+              "amount": 0.034542
+            },
+            {
+              "id": "environment-and-climate-change-2022-department-of-the-environment-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.032085
+            },
+            {
+              "id": "environment-and-climate-change-2022-department-of-the-environment-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.022215
+            },
+            {
+              "id": "environment-and-climate-change-2022-department-of-the-environment-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.01908
+            },
+            {
+              "id": "environment-and-climate-change-2022-department-of-the-environment-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.014725
+            },
+            {
+              "id": "environment-and-climate-change-2022-department-of-the-environment-obj-3",
+              "name": "Information",
+              "amount": 0.01189
+            },
+            {
+              "name": "Other",
+              "id": "environment-and-climate-change-2022-department-of-the-environment-other",
+              "amount": 0.007508,
+              "isAggregate": true,
+              "count": 3
             }
           ]
         },
         {
-          "id": "environment-and-climate-change-org-parks-canada-agency",
+          "id": "environment-and-climate-change-2022-parks-canada-agency",
           "name": "Parks Canada Agency",
           "children": [
             {
-              "id": "environment-and-climate-change-parks-canada-agency-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "environment-and-climate-change-parks-canada-agency-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.588156
-                },
-                {
-                  "id": "environment-and-climate-change-parks-canada-agency-vote1-capital-budget",
-                  "name": "Capital budget",
-                  "amount": 0.299214
-                },
-                {
-                  "id": "environment-and-climate-change-parks-canada-agency-vote1-grants-and-contributions",
-                  "name": "Grants and contributions",
-                  "amount": 0.078229
-                },
-                {
-                  "id": "environment-and-climate-change-parks-canada-agency-vote1-advertising-initiatives",
-                  "name": "Advertising Initiatives",
-                  "amount": 0.000995
-                }
-              ]
+              "id": "environment-and-climate-change-2022-parks-canada-agency-obj-1",
+              "name": "Personnel",
+              "amount": 0.519438
             },
             {
-              "id": "environment-and-climate-change-parks-canada-agency-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.146376
+              "id": "environment-and-climate-change-2022-parks-canada-agency-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.216021
             },
             {
-              "id": "environment-and-climate-change-parks-canada-agency-vote5",
-              "name": "Payments to the New Parks and Historic Sites Account",
-              "vote": "Vote 5",
-              "amount": 0.050989
+              "id": "environment-and-climate-change-2022-parks-canada-agency-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.132213
+            },
+            {
+              "id": "environment-and-climate-change-2022-parks-canada-agency-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.078229
+            },
+            {
+              "id": "environment-and-climate-change-2022-parks-canada-agency-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.075052
+            },
+            {
+              "id": "environment-and-climate-change-2022-parks-canada-agency-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.054636
+            },
+            {
+              "id": "environment-and-climate-change-2022-parks-canada-agency-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.029897
+            },
+            {
+              "id": "environment-and-climate-change-2022-parks-canada-agency-obj-5",
+              "name": "Rentals",
+              "amount": 0.02272
+            },
+            {
+              "id": "environment-and-climate-change-2022-parks-canada-agency-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.01831
+            },
+            {
+              "id": "environment-and-climate-change-2022-parks-canada-agency-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.010436
+            },
+            {
+              "id": "environment-and-climate-change-2022-parks-canada-agency-obj-3",
+              "name": "Information",
+              "amount": 0.006932
+            },
+            {
+              "id": "environment-and-climate-change-2022-parks-canada-agency-obj-11",
+              "name": "Public debt charges",
+              "amount": 7.5e-5
             }
           ]
         },
         {
-          "id": "environment-and-climate-change-org-impact-assessment-agency-of-canada",
+          "id": "environment-and-climate-change-2022-impact-assessment-agency-of-canada",
           "name": "Impact Assessment Agency of Canada",
           "children": [
             {
-              "id": "environment-and-climate-change-impact-assessment-agency-of-canada-vote1",
-              "name": "Operating expenditures",
-              "vote": "Vote 1",
-              "amount": 0.051232
+              "id": "environment-and-climate-change-2022-impact-assessment-agency-of-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.048994
             },
             {
-              "id": "environment-and-climate-change-impact-assessment-agency-of-canada-vote5",
-              "name": "Grants and contributions",
-              "vote": "Vote 5",
+              "id": "environment-and-climate-change-2022-impact-assessment-agency-of-canada-obj-10",
+              "name": "Transfer payments",
               "amount": 0.017015
             },
             {
-              "id": "environment-and-climate-change-impact-assessment-agency-of-canada-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.006154
+              "id": "environment-and-climate-change-2022-impact-assessment-agency-of-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.006909
+            },
+            {
+              "id": "environment-and-climate-change-2022-impact-assessment-agency-of-canada-external-revenues",
+              "name": "External revenues",
+              "amount": -0.002401
+            },
+            {
+              "id": "environment-and-climate-change-2022-impact-assessment-agency-of-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000416
+            },
+            {
+              "id": "environment-and-climate-change-2022-impact-assessment-agency-of-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000365
+            },
+            {
+              "id": "environment-and-climate-change-2022-impact-assessment-agency-of-canada-obj-3",
+              "name": "Information",
+              "amount": 0.000341
+            },
+            {
+              "id": "environment-and-climate-change-2022-impact-assessment-agency-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000161
+            },
+            {
+              "id": "environment-and-climate-change-2022-impact-assessment-agency-of-canada-obj-5",
+              "name": "Rentals",
+              "amount": 9.4e-5
+            },
+            {
+              "id": "environment-and-climate-change-2022-impact-assessment-agency-of-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 8.9e-5
+            },
+            {
+              "id": "environment-and-climate-change-2022-impact-assessment-agency-of-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 1.8e-5
             }
           ]
         }

@@ -57,290 +57,486 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "justice",
       "name": "Justice",
       "children": [
         {
-          "id": "justice-org-department-of-justice",
+          "id": "justice-2020-department-of-justice",
           "name": "Department of Justice",
           "children": [
             {
-              "id": "justice-department-of-justice-vote1",
-              "name": "Operating expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "justice-department-of-justice-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.639724
-                },
-                {
-                  "id": "justice-department-of-justice-vote1-immigration-and-refugee-protection-act",
-                  "name": "Immigration and Refugee Protection Act",
-                  "amount": 0.000932
-                }
-              ]
+              "id": "justice-2020-department-of-justice-obj-1",
+              "name": "Personnel",
+              "amount": 0.629364
             },
             {
-              "id": "justice-department-of-justice-vote5",
-              "name": "Grants and contributions",
-              "vote": "Vote 5",
-              "children": [
-                {
-                  "id": "justice-department-of-justice-vote5-grants-and-contributions",
-                  "name": "Grants and contributions",
-                  "amount": 0.440027
-                },
-                {
-                  "id": "justice-department-of-justice-vote5-immigration-and-refugee-protection-act",
-                  "name": "Immigration and Refugee Protection Act",
-                  "amount": 2.2e-5
-                }
-              ]
+              "id": "justice-2020-department-of-justice-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.440049
             },
             {
-              "id": "justice-department-of-justice-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.077249
+              "id": "justice-2020-department-of-justice-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.344174
             },
             {
-              "id": "justice-department-of-justice-vote10",
-              "name": "Bringing Innovation to Regulations",
-              "vote": "Vote 10",
-              "amount": 0.0
+              "id": "justice-2020-department-of-justice-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.037923
             },
             {
-              "id": "justice-department-of-justice-vote15",
-              "name": "Enhancing the Integrity of Canada's Borders and Asylum System",
-              "vote": "Vote 15",
-              "amount": 0.0
+              "id": "justice-2020-department-of-justice-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.012882
+            },
+            {
+              "id": "justice-2020-department-of-justice-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.009987
+            },
+            {
+              "id": "justice-2020-department-of-justice-obj-5",
+              "name": "Rentals",
+              "amount": 0.008177
+            },
+            {
+              "id": "justice-2020-department-of-justice-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.00795
+            },
+            {
+              "id": "justice-2020-department-of-justice-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.005875
+            },
+            {
+              "id": "justice-2020-department-of-justice-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.0031
+            },
+            {
+              "id": "justice-2020-department-of-justice-obj-3",
+              "name": "Information",
+              "amount": 0.002647
+            },
+            {
+              "id": "justice-2020-department-of-justice-external-revenues",
+              "name": "External revenues",
+              "amount": -0.001059
             }
           ]
         },
         {
-          "id": "justice-org-office-of-the-commissioner-for-federal-judicial-affairs",
+          "id": "justice-2020-office-of-the-commissioner-for-federal-judicial-affairs",
           "name": "Office of the Commissioner for Federal Judicial Affairs",
           "children": [
             {
-              "id": "justice-office-of-the-commissioner-for-federal-judicial-affairs-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.615518
+              "id": "justice-2020-office-of-the-commissioner-for-federal-judicial-affairs-obj-1",
+              "name": "Personnel",
+              "amount": 0.58205
             },
             {
-              "id": "justice-office-of-the-commissioner-for-federal-judicial-affairs-vote1",
-              "name": "Commissioner for Federal Judicial Affairs—Operating expenditures",
-              "vote": "Vote 1",
-              "amount": 0.01003
+              "id": "justice-2020-office-of-the-commissioner-for-federal-judicial-affairs-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.022677
             },
             {
-              "id": "justice-office-of-the-commissioner-for-federal-judicial-affairs-vote5",
-              "name": "Canadian Judicial Council—Operating expenditures",
-              "vote": "Vote 5",
-              "amount": 0.002551
+              "id": "justice-2020-office-of-the-commissioner-for-federal-judicial-affairs-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.016429
             },
             {
-              "id": "justice-office-of-the-commissioner-for-federal-judicial-affairs-vote10",
-              "name": "Enhancing the Integrity of Canada's Borders and Asylum System",
-              "vote": "Vote 10",
-              "amount": 0.0
+              "id": "justice-2020-office-of-the-commissioner-for-federal-judicial-affairs-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.005903
             },
             {
-              "id": "justice-office-of-the-commissioner-for-federal-judicial-affairs-vote15",
-              "name": "Supporting Judicial Advisory Committee Members",
-              "vote": "Vote 15",
-              "amount": 0.0
+              "id": "justice-2020-office-of-the-commissioner-for-federal-judicial-affairs-obj-5",
+              "name": "Rentals",
+              "amount": 0.00044
+            },
+            {
+              "id": "justice-2020-office-of-the-commissioner-for-federal-judicial-affairs-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000268
+            },
+            {
+              "id": "justice-2020-office-of-the-commissioner-for-federal-judicial-affairs-obj-3",
+              "name": "Information",
+              "amount": 0.000149
+            },
+            {
+              "id": "justice-2020-office-of-the-commissioner-for-federal-judicial-affairs-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000121
+            },
+            {
+              "id": "justice-2020-office-of-the-commissioner-for-federal-judicial-affairs-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 6.1e-5
+            },
+            {
+              "id": "justice-2020-office-of-the-commissioner-for-federal-judicial-affairs-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -4.0e-5
             }
           ]
         },
         {
-          "id": "justice-org-office-of-the-director-of-public-prosecutions",
+          "id": "justice-2020-office-of-the-director-of-public-prosecutions",
           "name": "Office of the Director of Public Prosecutions",
           "children": [
             {
-              "id": "justice-office-of-the-director-of-public-prosecutions-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "justice-office-of-the-director-of-public-prosecutions-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.192334
-                },
-                {
-                  "id": "justice-office-of-the-director-of-public-prosecutions-vote1-fine-recovery-costs",
-                  "name": "Fine recovery costs",
-                  "amount": 0.000729
-                }
-              ]
+              "id": "justice-2020-office-of-the-director-of-public-prosecutions-obj-1",
+              "name": "Personnel",
+              "amount": 0.13677
             },
             {
-              "id": "justice-office-of-the-director-of-public-prosecutions-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.016794
+              "id": "justice-2020-office-of-the-director-of-public-prosecutions-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.055234
             },
             {
-              "id": "justice-office-of-the-director-of-public-prosecutions-vote5",
-              "name": "Supporting the Public Prosecution Service of Canada",
-              "vote": "Vote 5",
-              "amount": 0.0
+              "id": "justice-2020-office-of-the-director-of-public-prosecutions-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.016638
+            },
+            {
+              "id": "justice-2020-office-of-the-director-of-public-prosecutions-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.007458
+            },
+            {
+              "id": "justice-2020-office-of-the-director-of-public-prosecutions-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.003079
+            },
+            {
+              "id": "justice-2020-office-of-the-director-of-public-prosecutions-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.002233
+            },
+            {
+              "id": "justice-2020-office-of-the-director-of-public-prosecutions-obj-5",
+              "name": "Rentals",
+              "amount": 0.00212
+            },
+            {
+              "id": "justice-2020-office-of-the-director-of-public-prosecutions-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.001562
+            },
+            {
+              "id": "justice-2020-office-of-the-director-of-public-prosecutions-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000866
+            },
+            {
+              "id": "justice-2020-office-of-the-director-of-public-prosecutions-obj-3",
+              "name": "Information",
+              "amount": 0.000537
+            },
+            {
+              "id": "justice-2020-office-of-the-director-of-public-prosecutions-external-revenues",
+              "name": "External revenues",
+              "amount": -0.000289
             }
           ]
         },
         {
-          "id": "justice-org-courts-administration-service",
+          "id": "justice-2020-courts-administration-service",
           "name": "Courts Administration Service",
           "children": [
             {
-              "id": "justice-courts-administration-service-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "justice-courts-administration-service-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.083452
-                },
-                {
-                  "id": "justice-courts-administration-service-vote1-immigration-and-refugee-protection-act",
-                  "name": "Immigration and Refugee Protection Act",
-                  "amount": 0.003794
-                }
-              ]
+              "id": "justice-2020-courts-administration-service-obj-1",
+              "name": "Personnel",
+              "amount": 0.064844
             },
             {
-              "id": "justice-courts-administration-service-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.008081
+              "id": "justice-2020-courts-administration-service-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.014198
             },
             {
-              "id": "justice-courts-administration-service-vote5",
-              "name": "Enhancing the Integrity of Canada's Borders and Asylum System",
-              "vote": "Vote 5",
-              "amount": 0.0
+              "id": "justice-2020-courts-administration-service-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.003828
             },
             {
-              "id": "justice-courts-administration-service-vote10",
-              "name": "Supporting the Delivery of Justice through the Courts Administration Service",
-              "vote": "Vote 10",
-              "amount": 0.0
+              "id": "justice-2020-courts-administration-service-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.003119
+            },
+            {
+              "id": "justice-2020-courts-administration-service-obj-5",
+              "name": "Rentals",
+              "amount": 0.003077
+            },
+            {
+              "id": "justice-2020-courts-administration-service-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.002567
+            },
+            {
+              "id": "justice-2020-courts-administration-service-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.002173
+            },
+            {
+              "id": "justice-2020-courts-administration-service-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000893
+            },
+            {
+              "id": "justice-2020-courts-administration-service-obj-3",
+              "name": "Information",
+              "amount": 0.000511
+            },
+            {
+              "id": "justice-2020-courts-administration-service-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000117
             }
           ]
         },
         {
-          "id": "justice-org-administrative-tribunals-support-service-of-canada",
+          "id": "justice-2020-administrative-tribunals-support-service-of-canada",
           "name": "Administrative Tribunals Support Service of Canada",
           "children": [
             {
-              "id": "justice-administrative-tribunals-support-service-of-canada-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "justice-administrative-tribunals-support-service-of-canada-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.080317
-                },
-                {
-                  "id": "justice-administrative-tribunals-support-service-of-canada-vote1-translation-costs-devinat-case",
-                  "name": "Translation costs (Devinat case)",
-                  "amount": 0.00012
-                }
-              ]
+              "id": "justice-2020-administrative-tribunals-support-service-of-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.071421
             },
             {
-              "id": "justice-administrative-tribunals-support-service-of-canada-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.008788
+              "id": "justice-2020-administrative-tribunals-support-service-of-canada-external-revenues",
+              "name": "External revenues",
+              "amount": -0.012443
             },
             {
-              "id": "justice-administrative-tribunals-support-service-of-canada-vote5",
-              "name": "Resolving Income Security Program Disputes More Quickly and Easily",
-              "vote": "Vote 5",
-              "amount": 0.0
+              "id": "justice-2020-administrative-tribunals-support-service-of-canada-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.011734
+            },
+            {
+              "id": "justice-2020-administrative-tribunals-support-service-of-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.008607
+            },
+            {
+              "id": "justice-2020-administrative-tribunals-support-service-of-canada-obj-5",
+              "name": "Rentals",
+              "amount": 0.003336
+            },
+            {
+              "id": "justice-2020-administrative-tribunals-support-service-of-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.003124
+            },
+            {
+              "id": "justice-2020-administrative-tribunals-support-service-of-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000892
+            },
+            {
+              "id": "justice-2020-administrative-tribunals-support-service-of-canada-obj-3",
+              "name": "Information",
+              "amount": 0.000728
+            },
+            {
+              "id": "justice-2020-administrative-tribunals-support-service-of-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000553
+            },
+            {
+              "id": "justice-2020-administrative-tribunals-support-service-of-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000398
+            },
+            {
+              "id": "justice-2020-administrative-tribunals-support-service-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000166
             }
           ]
         },
         {
-          "id": "justice-org-offices-of-the-information-and-privacy-commissioners-of-canada",
+          "id": "justice-2020-offices-of-the-information-and-privacy-commissioners-of-canada",
           "name": "Offices of the Information and Privacy Commissioners of Canada",
           "children": [
             {
-              "id": "justice-offices-of-the-information-and-privacy-commissioners-of-canada-vote5",
-              "name": "Office of the Privacy Commissioner of Canada—Program expenditures",
-              "vote": "Vote 5",
-              "amount": 0.026141
+              "id": "justice-2020-offices-of-the-information-and-privacy-commissioners-of-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.031635
             },
             {
-              "id": "justice-offices-of-the-information-and-privacy-commissioners-of-canada-vote1",
-              "name": "Office of the Information Commissioner of Canada—Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.013147
+              "id": "justice-2020-offices-of-the-information-and-privacy-commissioners-of-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.006529
             },
             {
-              "id": "justice-offices-of-the-information-and-privacy-commissioners-of-canada-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.003829
+              "id": "justice-2020-offices-of-the-information-and-privacy-commissioners-of-canada-obj-5",
+              "name": "Rentals",
+              "amount": 0.001259
             },
             {
-              "id": "justice-offices-of-the-information-and-privacy-commissioners-of-canada-vote15",
-              "name": "Protecting the Privacy of Canadians—Office of the Privacy Commissioner of Canada",
-              "vote": "Vote 15",
-              "amount": 0.0
+              "id": "justice-2020-offices-of-the-information-and-privacy-commissioners-of-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000962
             },
             {
-              "id": "justice-offices-of-the-information-and-privacy-commissioners-of-canada-vote10",
-              "name": "Support for Access to Information—Office of the Information Commissioner of Canada",
-              "vote": "Vote 10",
-              "amount": 0.0
+              "id": "justice-2020-offices-of-the-information-and-privacy-commissioners-of-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000823
+            },
+            {
+              "id": "justice-2020-offices-of-the-information-and-privacy-commissioners-of-canada-obj-3",
+              "name": "Information",
+              "amount": 0.000598
+            },
+            {
+              "id": "justice-2020-offices-of-the-information-and-privacy-commissioners-of-canada-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.000493
+            },
+            {
+              "id": "justice-2020-offices-of-the-information-and-privacy-commissioners-of-canada-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.000346
+            },
+            {
+              "id": "justice-2020-offices-of-the-information-and-privacy-commissioners-of-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000206
+            },
+            {
+              "id": "justice-2020-offices-of-the-information-and-privacy-commissioners-of-canada-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.000194
+            },
+            {
+              "id": "justice-2020-offices-of-the-information-and-privacy-commissioners-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000177
+            },
+            {
+              "id": "justice-2020-offices-of-the-information-and-privacy-commissioners-of-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 9.0e-5
             }
           ]
         },
         {
-          "id": "justice-org-registrar-of-the-supreme-court-of-canada",
+          "id": "justice-2020-registrar-of-the-supreme-court-of-canada",
           "name": "Registrar of the Supreme Court of Canada",
           "children": [
             {
-              "id": "justice-registrar-of-the-supreme-court-of-canada-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.02625
+              "id": "justice-2020-registrar-of-the-supreme-court-of-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.030182
             },
             {
-              "id": "justice-registrar-of-the-supreme-court-of-canada-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.011532
+              "id": "justice-2020-registrar-of-the-supreme-court-of-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.002821
+            },
+            {
+              "id": "justice-2020-registrar-of-the-supreme-court-of-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.001534
+            },
+            {
+              "id": "justice-2020-registrar-of-the-supreme-court-of-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.001124
+            },
+            {
+              "id": "justice-2020-registrar-of-the-supreme-court-of-canada-obj-5",
+              "name": "Rentals",
+              "amount": 0.001073
+            },
+            {
+              "id": "justice-2020-registrar-of-the-supreme-court-of-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000464
+            },
+            {
+              "id": "justice-2020-registrar-of-the-supreme-court-of-canada-obj-3",
+              "name": "Information",
+              "amount": 0.000262
+            },
+            {
+              "id": "justice-2020-registrar-of-the-supreme-court-of-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.00024
+            },
+            {
+              "id": "justice-2020-registrar-of-the-supreme-court-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 8.2e-5
             }
           ]
         },
         {
-          "id": "justice-org-canadian-human-rights-commission",
+          "id": "justice-2020-canadian-human-rights-commission",
           "name": "Canadian Human Rights Commission",
           "children": [
             {
-              "id": "justice-canadian-human-rights-commission-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.02379
+              "id": "justice-2020-canadian-human-rights-commission-obj-1",
+              "name": "Personnel",
+              "amount": 0.02227
             },
             {
-              "id": "justice-canadian-human-rights-commission-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.00274
+              "id": "justice-2020-canadian-human-rights-commission-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.002322
             },
             {
-              "id": "justice-canadian-human-rights-commission-vote5",
-              "name": "Supporting the Canadian Human Rights Commission and Access to Justice",
-              "vote": "Vote 5",
-              "amount": 0.0
+              "id": "justice-2020-canadian-human-rights-commission-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.001488
+            },
+            {
+              "id": "justice-2020-canadian-human-rights-commission-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000791
+            },
+            {
+              "id": "justice-2020-canadian-human-rights-commission-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000456
+            },
+            {
+              "id": "justice-2020-canadian-human-rights-commission-obj-5",
+              "name": "Rentals",
+              "amount": 0.000352
+            },
+            {
+              "id": "justice-2020-canadian-human-rights-commission-obj-3",
+              "name": "Information",
+              "amount": 0.000138
+            },
+            {
+              "id": "justice-2020-canadian-human-rights-commission-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000122
+            },
+            {
+              "id": "justice-2020-canadian-human-rights-commission-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 3.3e-5
+            },
+            {
+              "id": "justice-2020-canadian-human-rights-commission-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 2.5e-5
+            },
+            {
+              "id": "justice-2020-canadian-human-rights-commission-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 2.1e-5
             }
           ]
         }

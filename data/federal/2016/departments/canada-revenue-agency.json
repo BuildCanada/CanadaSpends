@@ -57,60 +57,74 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "canada-revenue-agency",
       "name": "National Revenue",
       "children": [
         {
-          "id": "canada-revenue-agency-org-national-revenue",
-          "name": "National Revenue",
+          "id": "canada-revenue-agency-2016-canada-revenue-agency",
+          "name": "Canada Revenue Agency",
           "children": [
             {
-              "id": "canada-revenue-agency-national-revenue-vote",
-              "name": "Total appropriations (vote-level detail not published for this edition)",
-              "vote": "All votes",
-              "children": [
-                {
-                  "id": "canada-revenue-agency-national-revenue-vote-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 2.884224
-                },
-                {
-                  "id": "canada-revenue-agency-national-revenue-vote-statutory-amounts",
-                  "name": "Statutory amounts",
-                  "amount": 1.03415
-                },
-                {
-                  "id": "canada-revenue-agency-national-revenue-vote-less-revenues-netted-against-expenditures",
-                  "name": "Less: revenues netted against expenditures",
-                  "amount": 0.322404
-                },
-                {
-                  "id": "canada-revenue-agency-national-revenue-vote-real-property-accommodation-and-services",
-                  "name": "Real property accommodation and services",
-                  "amount": 0.312833
-                },
-                {
-                  "id": "canada-revenue-agency-national-revenue-vote-payments-to-quebec-for-gst-administration",
-                  "name": "Payments to Quebec for GST administration",
-                  "amount": 0.142275
-                },
-                {
-                  "id": "canada-revenue-agency-national-revenue-vote-capital-budget",
-                  "name": "Capital budget",
-                  "amount": 0.076133
-                },
-                {
-                  "id": "canada-revenue-agency-national-revenue-vote-foreign-investment-entities-and-non-resident-trusts",
-                  "name": "Foreign investment entities and non-resident trusts",
-                  "amount": 0.017904
-                },
-                {
-                  "id": "canada-revenue-agency-national-revenue-vote-advertising-initiatives",
-                  "name": "Advertising initiatives",
-                  "amount": 0.001873
-                }
-              ]
+              "id": "canada-revenue-agency-2016-canada-revenue-agency-obj-1",
+              "name": "Personnel",
+              "amount": 3.165393
+            },
+            {
+              "id": "canada-revenue-agency-2016-canada-revenue-agency-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.430654
+            },
+            {
+              "id": "canada-revenue-agency-2016-canada-revenue-agency-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.354206
+            },
+            {
+              "id": "canada-revenue-agency-2016-canada-revenue-agency-obj-5",
+              "name": "Rentals",
+              "amount": 0.298385
+            },
+            {
+              "id": "canada-revenue-agency-2016-canada-revenue-agency-internal-revenues",
+              "name": "Internal revenues",
+              "amount": 0.179196
+            },
+            {
+              "id": "canada-revenue-agency-2016-canada-revenue-agency-external-revenues",
+              "name": "External revenues",
+              "amount": 0.143208
+            },
+            {
+              "id": "canada-revenue-agency-2016-canada-revenue-agency-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.128559
+            },
+            {
+              "id": "canada-revenue-agency-2016-canada-revenue-agency-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.045915
+            },
+            {
+              "id": "canada-revenue-agency-2016-canada-revenue-agency-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.020304
+            },
+            {
+              "id": "canada-revenue-agency-2016-canada-revenue-agency-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.019891
+            },
+            {
+              "id": "canada-revenue-agency-2016-canada-revenue-agency-obj-3",
+              "name": "Information",
+              "amount": 0.004651
+            },
+            {
+              "id": "canada-revenue-agency-2016-canada-revenue-agency-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.001433
             }
           ]
         }

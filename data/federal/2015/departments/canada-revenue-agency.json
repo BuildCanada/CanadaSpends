@@ -57,56 +57,74 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "canada-revenue-agency",
       "name": "National Revenue",
       "children": [
         {
-          "id": "canada-revenue-agency-org-canada-revenue-agency",
+          "id": "canada-revenue-agency-2015-canada-revenue-agency",
           "name": "Canada Revenue Agency",
           "children": [
             {
-              "id": "canada-revenue-agency-canada-revenue-agency-vote1",
-              "name": "Operating expenditures, contributions and recoverable expenditures on behalf of the Canada Pension Plan and the Employment Insurance Act",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "canada-revenue-agency-canada-revenue-agency-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 2.992569
-                },
-                {
-                  "id": "canada-revenue-agency-canada-revenue-agency-vote1-real-property-accommodation-and-services",
-                  "name": "Real property accommodation and services",
-                  "amount": 0.328273
-                },
-                {
-                  "id": "canada-revenue-agency-canada-revenue-agency-vote1-less-revenues-netted-against-expenditures",
-                  "name": "Less: revenues netted against expenditures",
-                  "amount": 0.315544
-                },
-                {
-                  "id": "canada-revenue-agency-canada-revenue-agency-vote1-payments-to-quebec-for-gst",
-                  "name": "Payments to Quebec for GST",
-                  "amount": 0.142133
-                },
-                {
-                  "id": "canada-revenue-agency-canada-revenue-agency-vote1-foreign-investment-entities-and-non-resident-trusts",
-                  "name": "Foreign investment entities and non‑resident trusts",
-                  "amount": 0.01267
-                },
-                {
-                  "id": "canada-revenue-agency-canada-revenue-agency-vote1-advertising-initiatives",
-                  "name": "Advertising initiatives",
-                  "amount": 0.007329
-                }
-              ]
+              "id": "canada-revenue-agency-2015-canada-revenue-agency-obj-1",
+              "name": "Personnel",
+              "amount": 3.195454
             },
             {
-              "id": "canada-revenue-agency-canada-revenue-agency-vote5",
-              "name": "Capital expenditures and recoverable expenditures on behalf of the Canada Pension Plan and the Employment Insurance Act",
-              "vote": "Vote 5",
-              "amount": 0.893404
+              "id": "canada-revenue-agency-2015-canada-revenue-agency-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.354724
+            },
+            {
+              "id": "canada-revenue-agency-2015-canada-revenue-agency-obj-5",
+              "name": "Rentals",
+              "amount": 0.32497
+            },
+            {
+              "id": "canada-revenue-agency-2015-canada-revenue-agency-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.199643
+            },
+            {
+              "id": "canada-revenue-agency-2015-canada-revenue-agency-internal-revenues",
+              "name": "Internal revenues",
+              "amount": 0.174319
+            },
+            {
+              "id": "canada-revenue-agency-2015-canada-revenue-agency-external-revenues",
+              "name": "External revenues",
+              "amount": 0.141224
+            },
+            {
+              "id": "canada-revenue-agency-2015-canada-revenue-agency-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.127714
+            },
+            {
+              "id": "canada-revenue-agency-2015-canada-revenue-agency-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.092086
+            },
+            {
+              "id": "canada-revenue-agency-2015-canada-revenue-agency-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.035469
+            },
+            {
+              "id": "canada-revenue-agency-2015-canada-revenue-agency-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.01939
+            },
+            {
+              "id": "canada-revenue-agency-2015-canada-revenue-agency-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.018937
+            },
+            {
+              "id": "canada-revenue-agency-2015-canada-revenue-agency-obj-3",
+              "name": "Information",
+              "amount": 0.00799
             }
           ]
         }

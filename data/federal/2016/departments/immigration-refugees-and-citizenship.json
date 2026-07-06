@@ -57,70 +57,125 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "immigration-refugees-and-citizenship",
       "name": "Immigration, Refugees and Citizenship",
       "children": [
         {
-          "id": "immigration-refugees-and-citizenship-org-immigration-refugees-and-citizenship",
-          "name": "Immigration, Refugees and Citizenship",
+          "id": "immigration-refugees-and-citizenship-2016-citizenship-and-immigration",
+          "name": "Citizenship and Immigration",
           "children": [
             {
-              "id": "immigration-refugees-and-citizenship-immigration-refugees-and-citizenship-vote",
-              "name": "Total appropriations (vote-level detail not published for this edition)",
-              "vote": "All votes",
-              "children": [
-                {
-                  "id": "immigration-refugees-and-citizenship-immigration-refugees-and-citizenship-vote-grants-and-contributions",
-                  "name": "Grants and contributions",
-                  "amount": 0.982252
-                },
-                {
-                  "id": "immigration-refugees-and-citizenship-immigration-refugees-and-citizenship-vote-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.602485
-                },
-                {
-                  "id": "immigration-refugees-and-citizenship-immigration-refugees-and-citizenship-vote-resettlement-of-syrian-refugees",
-                  "name": "Resettlement of Syrian refugees",
-                  "amount": 0.184041
-                },
-                {
-                  "id": "immigration-refugees-and-citizenship-immigration-refugees-and-citizenship-vote-interim-federal-health-program",
-                  "name": "Interim federal health program",
-                  "amount": 0.032664
-                },
-                {
-                  "id": "immigration-refugees-and-citizenship-immigration-refugees-and-citizenship-vote-statutory-amounts",
-                  "name": "Statutory amounts",
-                  "amount": 0.011966
-                },
-                {
-                  "id": "immigration-refugees-and-citizenship-immigration-refugees-and-citizenship-vote-less-revenues-netted-against-expenditures",
-                  "name": "Less: revenues netted against expenditures",
-                  "amount": 0.009694
-                },
-                {
-                  "id": "immigration-refugees-and-citizenship-immigration-refugees-and-citizenship-vote-translation-costs-devinat-case",
-                  "name": "Translation costs (Devinat case)",
-                  "amount": 0.007745
-                },
-                {
-                  "id": "immigration-refugees-and-citizenship-immigration-refugees-and-citizenship-vote-capital-budget",
-                  "name": "Capital budget",
-                  "amount": 0.006777
-                },
-                {
-                  "id": "immigration-refugees-and-citizenship-immigration-refugees-and-citizenship-vote-immigration-and-refugee-protection-act",
-                  "name": "Immigration and Refugee Protection Act",
-                  "amount": 0.003217
-                },
-                {
-                  "id": "immigration-refugees-and-citizenship-immigration-refugees-and-citizenship-vote-global-assistance-for-irregular-migrants",
-                  "name": "Global assistance for irregular migrants",
-                  "amount": 0.00067
-                }
-              ]
+              "id": "immigration-refugees-and-citizenship-2016-citizenship-and-immigration-obj-10",
+              "name": "Transfer payments",
+              "amount": 1.083445
+            },
+            {
+              "id": "immigration-refugees-and-citizenship-2016-citizenship-and-immigration-external-revenues",
+              "name": "External revenues",
+              "amount": 0.61638
+            },
+            {
+              "id": "immigration-refugees-and-citizenship-2016-citizenship-and-immigration-obj-1",
+              "name": "Personnel",
+              "amount": 0.52318
+            },
+            {
+              "id": "immigration-refugees-and-citizenship-2016-citizenship-and-immigration-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.389452
+            },
+            {
+              "id": "immigration-refugees-and-citizenship-2016-citizenship-and-immigration-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.054896
+            },
+            {
+              "id": "immigration-refugees-and-citizenship-2016-citizenship-and-immigration-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.034117
+            },
+            {
+              "id": "immigration-refugees-and-citizenship-2016-citizenship-and-immigration-obj-5",
+              "name": "Rentals",
+              "amount": 0.024665
+            },
+            {
+              "id": "immigration-refugees-and-citizenship-2016-citizenship-and-immigration-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.016937
+            },
+            {
+              "id": "immigration-refugees-and-citizenship-2016-citizenship-and-immigration-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.013565
+            },
+            {
+              "id": "immigration-refugees-and-citizenship-2016-citizenship-and-immigration-obj-3",
+              "name": "Information",
+              "amount": 0.009894
+            },
+            {
+              "id": "immigration-refugees-and-citizenship-2016-citizenship-and-immigration-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.006501
+            },
+            {
+              "id": "immigration-refugees-and-citizenship-2016-citizenship-and-immigration-internal-revenues",
+              "name": "Internal revenues",
+              "amount": 0.003775
+            }
+          ]
+        },
+        {
+          "id": "immigration-refugees-and-citizenship-2016-immigration-and-refugee-board",
+          "name": "Immigration and Refugee board",
+          "children": [
+            {
+              "id": "immigration-refugees-and-citizenship-2016-immigration-and-refugee-board-obj-1",
+              "name": "Personnel",
+              "amount": 0.088327
+            },
+            {
+              "id": "immigration-refugees-and-citizenship-2016-immigration-and-refugee-board-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.017523
+            },
+            {
+              "id": "immigration-refugees-and-citizenship-2016-immigration-and-refugee-board-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.001957
+            },
+            {
+              "id": "immigration-refugees-and-citizenship-2016-immigration-and-refugee-board-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.001664
+            },
+            {
+              "id": "immigration-refugees-and-citizenship-2016-immigration-and-refugee-board-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.001118
+            },
+            {
+              "id": "immigration-refugees-and-citizenship-2016-immigration-and-refugee-board-obj-5",
+              "name": "Rentals",
+              "amount": 0.000799
+            },
+            {
+              "id": "immigration-refugees-and-citizenship-2016-immigration-and-refugee-board-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000542
+            },
+            {
+              "id": "immigration-refugees-and-citizenship-2016-immigration-and-refugee-board-obj-3",
+              "name": "Information",
+              "amount": 0.000338
+            },
+            {
+              "id": "immigration-refugees-and-citizenship-2016-immigration-and-refugee-board-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000129
             }
           ]
         }

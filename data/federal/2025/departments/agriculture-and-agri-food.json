@@ -57,77 +57,147 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "agriculture-and-agri-food",
       "name": "Agriculture and Agri-Food",
       "children": [
         {
-          "id": "agriculture-and-agri-food-org-department-of-agriculture-and-agri-food",
+          "id": "agriculture-and-agri-food-2025-department-of-agriculture-and-agri-food",
           "name": "Department of Agriculture and Agri-Food",
           "children": [
             {
-              "id": "agriculture-and-agri-food-department-of-agriculture-and-agri-food-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 2.354608
+              "id": "agriculture-and-agri-food-2025-department-of-agriculture-and-agri-food-obj-10",
+              "name": "Transfer payments",
+              "amount": 3.158421
             },
             {
-              "id": "agriculture-and-agri-food-department-of-agriculture-and-agri-food-vote10",
-              "name": "Grants and contributions",
-              "vote": "Vote 10",
-              "children": [
-                {
-                  "id": "agriculture-and-agri-food-department-of-agriculture-and-agri-food-vote10-grants-and-contributions",
-                  "name": "Grants and contributions",
-                  "amount": 0.88786
-                },
-                {
-                  "id": "agriculture-and-agri-food-department-of-agriculture-and-agri-food-vote10-innovative-solutions-canada",
-                  "name": "Innovative Solutions Canada",
-                  "amount": 0.00243
-                }
-              ]
+              "id": "agriculture-and-agri-food-2025-department-of-agriculture-and-agri-food-obj-1",
+              "name": "Personnel",
+              "amount": 0.635072
             },
             {
-              "id": "agriculture-and-agri-food-department-of-agriculture-and-agri-food-vote1",
-              "name": "Operating expenditures",
-              "vote": "Vote 1",
-              "amount": 0.76169
+              "id": "agriculture-and-agri-food-2025-department-of-agriculture-and-agri-food-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.115016
             },
             {
-              "id": "agriculture-and-agri-food-department-of-agriculture-and-agri-food-vote5",
-              "name": "Capital expenditures",
-              "vote": "Vote 5",
-              "amount": 0.067789
+              "id": "agriculture-and-agri-food-2025-department-of-agriculture-and-agri-food-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.039794
+            },
+            {
+              "id": "agriculture-and-agri-food-2025-department-of-agriculture-and-agri-food-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.035807
+            },
+            {
+              "id": "agriculture-and-agri-food-2025-department-of-agriculture-and-agri-food-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.034678
+            },
+            {
+              "id": "agriculture-and-agri-food-2025-department-of-agriculture-and-agri-food-external-revenues",
+              "name": "External revenues",
+              "amount": -0.029928
+            },
+            {
+              "id": "agriculture-and-agri-food-2025-department-of-agriculture-and-agri-food-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.021511
+            },
+            {
+              "name": "Other",
+              "id": "agriculture-and-agri-food-2025-department-of-agriculture-and-agri-food-other",
+              "amount": 0.021257,
+              "isAggregate": true,
+              "count": 2
+            },
+            {
+              "id": "agriculture-and-agri-food-2025-department-of-agriculture-and-agri-food-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.015508
+            },
+            {
+              "id": "agriculture-and-agri-food-2025-department-of-agriculture-and-agri-food-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.014547
+            },
+            {
+              "id": "agriculture-and-agri-food-2025-department-of-agriculture-and-agri-food-obj-5",
+              "name": "Rentals",
+              "amount": 0.01184
             }
           ]
         },
         {
-          "id": "agriculture-and-agri-food-org-canadian-grain-commission",
+          "id": "agriculture-and-agri-food-2025-canadian-grain-commission",
           "name": "Canadian Grain Commission",
           "children": [
             {
-              "id": "agriculture-and-agri-food-canadian-grain-commission-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.010597
+              "id": "agriculture-and-agri-food-2025-canadian-grain-commission-external-revenues",
+              "name": "External revenues",
+              "amount": -0.059214
             },
             {
-              "id": "agriculture-and-agri-food-canadian-grain-commission-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.006288
+              "id": "agriculture-and-agri-food-2025-canadian-grain-commission-obj-1",
+              "name": "Personnel",
+              "amount": 0.056761
+            },
+            {
+              "id": "agriculture-and-agri-food-2025-canadian-grain-commission-obj-5",
+              "name": "Rentals",
+              "amount": 0.006005
+            },
+            {
+              "id": "agriculture-and-agri-food-2025-canadian-grain-commission-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.00393
+            },
+            {
+              "id": "agriculture-and-agri-food-2025-canadian-grain-commission-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.003096
+            },
+            {
+              "id": "agriculture-and-agri-food-2025-canadian-grain-commission-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.002755
+            },
+            {
+              "id": "agriculture-and-agri-food-2025-canadian-grain-commission-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.002611
+            },
+            {
+              "id": "agriculture-and-agri-food-2025-canadian-grain-commission-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.001184
+            },
+            {
+              "id": "agriculture-and-agri-food-2025-canadian-grain-commission-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.000385
+            },
+            {
+              "id": "agriculture-and-agri-food-2025-canadian-grain-commission-obj-3",
+              "name": "Information",
+              "amount": 0.000227
+            },
+            {
+              "id": "agriculture-and-agri-food-2025-canadian-grain-commission-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": -8.5e-5
             }
           ]
         },
         {
-          "id": "agriculture-and-agri-food-org-canadian-dairy-commission",
+          "id": "agriculture-and-agri-food-2025-canadian-dairy-commission",
           "name": "Canadian Dairy Commission",
           "children": [
             {
-              "id": "agriculture-and-agri-food-canadian-dairy-commission-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
+              "id": "agriculture-and-agri-food-2025-canadian-dairy-commission-obj-12",
+              "name": "Other subsidies and payments",
               "amount": 0.005149
             }
           ]

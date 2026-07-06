@@ -57,65 +57,76 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "fisheries-and-oceans",
       "name": "Fisheries, Oceans and the Canadian Coast Guard",
       "children": [
         {
-          "id": "fisheries-and-oceans-org-department-of-fisheries-and-oceans",
+          "id": "fisheries-and-oceans-2021-department-of-fisheries-and-oceans",
           "name": "Department of Fisheries and Oceans",
           "children": [
             {
-              "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote1",
-              "name": "Operating expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 1.998628
-                },
-                {
-                  "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote1-self-employed-fish-harvesters-affected-by-covid-19",
-                  "name": "Self-employed Fish Harvesters affected by COVID-19",
-                  "amount": 0.003256
-                }
-              ]
+              "id": "fisheries-and-oceans-2021-department-of-fisheries-and-oceans-obj-1",
+              "name": "Personnel",
+              "amount": 1.399895
             },
             {
-              "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote5",
-              "name": "Capital expenditures",
-              "vote": "Vote 5",
-              "amount": 0.773359
+              "id": "fisheries-and-oceans-2021-department-of-fisheries-and-oceans-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.662681
             },
             {
-              "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.317744
+              "id": "fisheries-and-oceans-2021-department-of-fisheries-and-oceans-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.421263
             },
             {
-              "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote10",
-              "name": "Grants and contributions",
-              "vote": "Vote 10",
-              "children": [
-                {
-                  "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote10-grants-and-contributions",
-                  "name": "Grants and contributions",
-                  "amount": 0.291247
-                },
-                {
-                  "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote10-innovative-solutions-canada",
-                  "name": "Innovative Solutions Canada",
-                  "amount": 0.000611
-                }
-              ]
+              "id": "fisheries-and-oceans-2021-department-of-fisheries-and-oceans-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.340767
             },
             {
-              "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote15",
-              "name": "Debt Write-off",
-              "vote": "Vote 15",
-              "amount": 0.003028
+              "id": "fisheries-and-oceans-2021-department-of-fisheries-and-oceans-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.183576
+            },
+            {
+              "id": "fisheries-and-oceans-2021-department-of-fisheries-and-oceans-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.119607
+            },
+            {
+              "id": "fisheries-and-oceans-2021-department-of-fisheries-and-oceans-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.118686
+            },
+            {
+              "id": "fisheries-and-oceans-2021-department-of-fisheries-and-oceans-obj-5",
+              "name": "Rentals",
+              "amount": 0.051169
+            },
+            {
+              "id": "fisheries-and-oceans-2021-department-of-fisheries-and-oceans-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.051005
+            },
+            {
+              "id": "fisheries-and-oceans-2021-department-of-fisheries-and-oceans-external-revenues",
+              "name": "External revenues",
+              "amount": -0.040887
+            },
+            {
+              "id": "fisheries-and-oceans-2021-department-of-fisheries-and-oceans-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.035142
+            },
+            {
+              "name": "Other",
+              "id": "fisheries-and-oceans-2021-department-of-fisheries-and-oceans-other",
+              "amount": 0.004083,
+              "isAggregate": true,
+              "count": 2
             }
           ]
         }

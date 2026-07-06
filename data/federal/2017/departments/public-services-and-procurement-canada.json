@@ -57,87 +57,209 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "public-services-and-procurement-canada",
       "name": "Public Services and Procurement",
       "children": [
         {
-          "id": "public-services-and-procurement-canada-org-public-services-and-procurement",
-          "name": "Public Services and Procurement",
+          "id": "public-services-and-procurement-canada-2017-department-of-public-works-and-government-services",
+          "name": "Department of Public Works and Government Services",
           "children": [
             {
-              "id": "public-services-and-procurement-canada-public-services-and-procurement-vote",
-              "name": "Total appropriations (vote-level detail not published for this edition)",
-              "vote": "All votes",
-              "children": [
-                {
-                  "id": "public-services-and-procurement-canada-public-services-and-procurement-vote-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 2.90971
-                },
-                {
-                  "id": "public-services-and-procurement-canada-public-services-and-procurement-vote-real-property-services",
-                  "name": "Real property services",
-                  "amount": 2.055393
-                },
-                {
-                  "id": "public-services-and-procurement-canada-public-services-and-procurement-vote-less-revenues-netted-against-expenditures",
-                  "name": "Less: revenues netted against expenditures",
-                  "amount": 2.047762
-                },
-                {
-                  "id": "public-services-and-procurement-canada-public-services-and-procurement-vote-capital-budget",
-                  "name": "Capital budget",
-                  "amount": 1.125338
-                },
-                {
-                  "id": "public-services-and-procurement-canada-public-services-and-procurement-vote-refresh-of-the-mission-critical-infrastructure-technology",
-                  "name": "Refresh of the mission critical infrastructure technology",
-                  "amount": 0.230991
-                },
-                {
-                  "id": "public-services-and-procurement-canada-public-services-and-procurement-vote-statutory-amounts",
-                  "name": "Statutory amounts",
-                  "amount": 0.171269
-                },
-                {
-                  "id": "public-services-and-procurement-canada-public-services-and-procurement-vote-real-property-capital-leases",
-                  "name": "Real property capital leases",
-                  "amount": 0.148744
-                },
-                {
-                  "id": "public-services-and-procurement-canada-public-services-and-procurement-vote-real-property-refit-fit-up",
-                  "name": "Real property refit / fit-up",
-                  "amount": 0.139486
-                },
-                {
-                  "id": "public-services-and-procurement-canada-public-services-and-procurement-vote-receiver-general-and-central-compensation-administration-function",
-                  "name": "Receiver General and central compensation administration function",
-                  "amount": 0.084464
-                },
-                {
-                  "id": "public-services-and-procurement-canada-public-services-and-procurement-vote-post-implementation-of-pay-system",
-                  "name": "Post implementation of pay system",
-                  "amount": 0.04436
-                },
-                {
-                  "id": "public-services-and-procurement-canada-public-services-and-procurement-vote-cape-breton-operation",
-                  "name": "Cape Breton operation",
-                  "amount": 0.034514
-                },
-                {
-                  "id": "public-services-and-procurement-canada-public-services-and-procurement-vote-linguistic-services",
-                  "name": "Linguistic services",
-                  "amount": 0.030452
-                },
-                {
-                  "name": "Other",
-                  "id": "public-services-and-procurement-canada-public-services-and-procurement-vote-other",
-                  "amount": 0.056331,
-                  "isAggregate": true,
-                  "count": 8
-                }
-              ]
+              "id": "public-services-and-procurement-canada-2017-department-of-public-works-and-government-services-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -3.295222
+            },
+            {
+              "id": "public-services-and-procurement-canada-2017-department-of-public-works-and-government-services-obj-4",
+              "name": "Professional and special services",
+              "amount": 1.809797
+            },
+            {
+              "id": "public-services-and-procurement-canada-2017-department-of-public-works-and-government-services-obj-5",
+              "name": "Rentals",
+              "amount": 1.189518
+            },
+            {
+              "id": "public-services-and-procurement-canada-2017-department-of-public-works-and-government-services-obj-1",
+              "name": "Personnel",
+              "amount": 1.168485
+            },
+            {
+              "id": "public-services-and-procurement-canada-2017-department-of-public-works-and-government-services-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 1.152716
+            },
+            {
+              "id": "public-services-and-procurement-canada-2017-department-of-public-works-and-government-services-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.560459
+            },
+            {
+              "id": "public-services-and-procurement-canada-2017-department-of-public-works-and-government-services-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.427276
+            },
+            {
+              "id": "public-services-and-procurement-canada-2017-department-of-public-works-and-government-services-external-revenues",
+              "name": "External revenues",
+              "amount": -0.283892
+            },
+            {
+              "id": "public-services-and-procurement-canada-2017-department-of-public-works-and-government-services-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.233543
+            },
+            {
+              "id": "public-services-and-procurement-canada-2017-department-of-public-works-and-government-services-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.118455
+            },
+            {
+              "id": "public-services-and-procurement-canada-2017-department-of-public-works-and-government-services-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.072455
+            },
+            {
+              "name": "Other",
+              "id": "public-services-and-procurement-canada-2017-department-of-public-works-and-government-services-other",
+              "amount": 0.051837,
+              "isAggregate": true,
+              "count": 2
+            }
+          ]
+        },
+        {
+          "id": "public-services-and-procurement-canada-2017-shared-services-canada",
+          "name": "Shared Services Canada",
+          "children": [
+            {
+              "id": "public-services-and-procurement-canada-2017-shared-services-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.575618
+            },
+            {
+              "id": "public-services-and-procurement-canada-2017-shared-services-canada-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.547215
+            },
+            {
+              "id": "public-services-and-procurement-canada-2017-shared-services-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.518598
+            },
+            {
+              "id": "public-services-and-procurement-canada-2017-shared-services-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.397751
+            },
+            {
+              "id": "public-services-and-procurement-canada-2017-shared-services-canada-obj-5",
+              "name": "Rentals",
+              "amount": 0.381611
+            },
+            {
+              "id": "public-services-and-procurement-canada-2017-shared-services-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.219766
+            },
+            {
+              "id": "public-services-and-procurement-canada-2017-shared-services-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.128079
+            },
+            {
+              "id": "public-services-and-procurement-canada-2017-shared-services-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.007916
+            },
+            {
+              "id": "public-services-and-procurement-canada-2017-shared-services-canada-external-revenues",
+              "name": "External revenues",
+              "amount": -0.005421
+            },
+            {
+              "id": "public-services-and-procurement-canada-2017-shared-services-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.003305
+            },
+            {
+              "id": "public-services-and-procurement-canada-2017-shared-services-canada-obj-3",
+              "name": "Information",
+              "amount": 0.001362
+            }
+          ]
+        },
+        {
+          "id": "public-services-and-procurement-canada-2017-public-service-commission",
+          "name": "Public Service Commission",
+          "children": [
+            {
+              "id": "public-services-and-procurement-canada-2017-public-service-commission-obj-1",
+              "name": "Personnel",
+              "amount": 0.070363
+            },
+            {
+              "id": "public-services-and-procurement-canada-2017-public-service-commission-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.008438
+            },
+            {
+              "id": "public-services-and-procurement-canada-2017-public-service-commission-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.008223
+            },
+            {
+              "id": "public-services-and-procurement-canada-2017-public-service-commission-obj-5",
+              "name": "Rentals",
+              "amount": 0.001956
+            },
+            {
+              "id": "public-services-and-procurement-canada-2017-public-service-commission-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.001281
+            },
+            {
+              "id": "public-services-and-procurement-canada-2017-public-service-commission-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000827
+            },
+            {
+              "id": "public-services-and-procurement-canada-2017-public-service-commission-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000782
+            },
+            {
+              "id": "public-services-and-procurement-canada-2017-public-service-commission-obj-3",
+              "name": "Information",
+              "amount": 0.000388
+            },
+            {
+              "id": "public-services-and-procurement-canada-2017-public-service-commission-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000291
+            },
+            {
+              "id": "public-services-and-procurement-canada-2017-public-service-commission-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000218
+            },
+            {
+              "id": "public-services-and-procurement-canada-2017-public-service-commission-external-revenues",
+              "name": "External revenues",
+              "amount": -6.8e-5
+            }
+          ]
+        },
+        {
+          "id": "public-services-and-procurement-canada-2017-canada-post-corporation",
+          "name": "Canada Post Corporation",
+          "children": [
+            {
+              "id": "public-services-and-procurement-canada-2017-canada-post-corporation-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.02221
             }
           ]
         }

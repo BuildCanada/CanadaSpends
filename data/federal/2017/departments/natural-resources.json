@@ -57,70 +57,230 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "natural-resources",
       "name": "Energy and Natural Resources",
       "children": [
         {
-          "id": "natural-resources-org-natural-resources",
-          "name": "Natural Resources",
+          "id": "natural-resources-2017-department-of-natural-resources",
+          "name": "Department of Natural Resources",
           "children": [
             {
-              "id": "natural-resources-natural-resources-vote",
-              "name": "Total appropriations (vote-level detail not published for this edition)",
-              "vote": "All votes",
-              "children": [
-                {
-                  "id": "natural-resources-natural-resources-vote-vote-1-payments-to-atomic-energy-of-canada-limited-for-operating-and-capital-expenditures-payments-to-crown-corporation",
-                  "name": "Vote 1—Payments to Atomic Energy of Canada Limited for operating and capital expenditures—Payments to Crown Corporation",
-                  "amount": 0.645933
-                },
-                {
-                  "id": "natural-resources-natural-resources-vote-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.64164
-                },
-                {
-                  "id": "natural-resources-natural-resources-vote-statutory-amounts",
-                  "name": "Statutory amounts",
-                  "amount": 0.63466
-                },
-                {
-                  "id": "natural-resources-natural-resources-vote-grants-and-contributions",
-                  "name": "Grants and contributions",
-                  "amount": 0.236733
-                },
-                {
-                  "id": "natural-resources-natural-resources-vote-capital-budget",
-                  "name": "Capital budget",
-                  "amount": 0.213203
-                },
-                {
-                  "id": "natural-resources-natural-resources-vote-less-revenues-netted-against-expenditures",
-                  "name": "Less: revenues netted against expenditures",
-                  "amount": 0.023751
-                },
-                {
-                  "id": "natural-resources-natural-resources-vote-soldier-settlement-board-manitoba",
-                  "name": "Soldier settlement board—Manitoba",
-                  "amount": 0.013113
-                },
-                {
-                  "id": "natural-resources-natural-resources-vote-international-boundary-commission-canadian-section",
-                  "name": "International Boundary Commission—Canadian section",
-                  "amount": 0.001757
-                },
-                {
-                  "id": "natural-resources-natural-resources-vote-advertising-initiatives",
-                  "name": "Advertising initiatives",
-                  "amount": 0.000499
-                },
-                {
-                  "id": "natural-resources-natural-resources-vote-translation-costs-devinat-case",
-                  "name": "Translation costs (Devinat case)",
-                  "amount": 0.000343
-                }
-              ]
+              "id": "natural-resources-2017-department-of-natural-resources-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.709792
+            },
+            {
+              "id": "natural-resources-2017-department-of-natural-resources-obj-1",
+              "name": "Personnel",
+              "amount": 0.400299
+            },
+            {
+              "id": "natural-resources-2017-department-of-natural-resources-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.103108
+            },
+            {
+              "id": "natural-resources-2017-department-of-natural-resources-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.03345
+            },
+            {
+              "id": "natural-resources-2017-department-of-natural-resources-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.028436
+            },
+            {
+              "id": "natural-resources-2017-department-of-natural-resources-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.026516
+            },
+            {
+              "name": "Other",
+              "id": "natural-resources-2017-department-of-natural-resources-other",
+              "amount": 0.024588,
+              "isAggregate": true,
+              "count": 2
+            },
+            {
+              "id": "natural-resources-2017-department-of-natural-resources-external-revenues",
+              "name": "External revenues",
+              "amount": -0.023551
+            },
+            {
+              "id": "natural-resources-2017-department-of-natural-resources-obj-5",
+              "name": "Rentals",
+              "amount": 0.023316
+            },
+            {
+              "id": "natural-resources-2017-department-of-natural-resources-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.022326
+            },
+            {
+              "id": "natural-resources-2017-department-of-natural-resources-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.015578
+            },
+            {
+              "id": "natural-resources-2017-department-of-natural-resources-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.005859
+            }
+          ]
+        },
+        {
+          "id": "natural-resources-2017-atomic-energy-of-canada-limited",
+          "name": "Atomic Energy of Canada Limited",
+          "children": [
+            {
+              "id": "natural-resources-2017-atomic-energy-of-canada-limited-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.784133
+            }
+          ]
+        },
+        {
+          "id": "natural-resources-2017-canadian-nuclear-safety-commission",
+          "name": "Canadian Nuclear Safety Commission",
+          "children": [
+            {
+              "id": "natural-resources-2017-canadian-nuclear-safety-commission-obj-1",
+              "name": "Personnel",
+              "amount": 0.099327
+            },
+            {
+              "id": "natural-resources-2017-canadian-nuclear-safety-commission-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.017085
+            },
+            {
+              "id": "natural-resources-2017-canadian-nuclear-safety-commission-obj-5",
+              "name": "Rentals",
+              "amount": 0.005334
+            },
+            {
+              "id": "natural-resources-2017-canadian-nuclear-safety-commission-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.005027
+            },
+            {
+              "id": "natural-resources-2017-canadian-nuclear-safety-commission-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.004835
+            },
+            {
+              "id": "natural-resources-2017-canadian-nuclear-safety-commission-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.001868
+            },
+            {
+              "id": "natural-resources-2017-canadian-nuclear-safety-commission-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.001671
+            },
+            {
+              "id": "natural-resources-2017-canadian-nuclear-safety-commission-obj-3",
+              "name": "Information",
+              "amount": 0.001173
+            },
+            {
+              "id": "natural-resources-2017-canadian-nuclear-safety-commission-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000693
+            },
+            {
+              "id": "natural-resources-2017-canadian-nuclear-safety-commission-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000113
+            }
+          ]
+        },
+        {
+          "id": "natural-resources-2017-national-energy-board",
+          "name": "National Energy Board",
+          "children": [
+            {
+              "id": "natural-resources-2017-national-energy-board-obj-1",
+              "name": "Personnel",
+              "amount": 0.063768
+            },
+            {
+              "id": "natural-resources-2017-national-energy-board-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.011151
+            },
+            {
+              "id": "natural-resources-2017-national-energy-board-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.003621
+            },
+            {
+              "id": "natural-resources-2017-national-energy-board-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.001982
+            },
+            {
+              "id": "natural-resources-2017-national-energy-board-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.001181
+            },
+            {
+              "id": "natural-resources-2017-national-energy-board-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.000794
+            },
+            {
+              "id": "natural-resources-2017-national-energy-board-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000694
+            },
+            {
+              "id": "natural-resources-2017-national-energy-board-obj-5",
+              "name": "Rentals",
+              "amount": 0.000624
+            },
+            {
+              "id": "natural-resources-2017-national-energy-board-obj-3",
+              "name": "Information",
+              "amount": 0.000534
+            },
+            {
+              "id": "natural-resources-2017-national-energy-board-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000139
+            },
+            {
+              "id": "natural-resources-2017-national-energy-board-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.000129
+            }
+          ]
+        },
+        {
+          "id": "natural-resources-2017-northern-pipeline-agency",
+          "name": "Northern Pipeline Agency",
+          "children": [
+            {
+              "id": "natural-resources-2017-northern-pipeline-agency-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.000218
+            },
+            {
+              "id": "natural-resources-2017-northern-pipeline-agency-obj-1",
+              "name": "Personnel",
+              "amount": 2.4e-5
+            },
+            {
+              "id": "natural-resources-2017-northern-pipeline-agency-obj-5",
+              "name": "Rentals",
+              "amount": 1.0e-5
+            },
+            {
+              "id": "natural-resources-2017-northern-pipeline-agency-obj-2",
+              "name": "Transportation and communications",
+              "amount": 2.0e-6
             }
           ]
         }

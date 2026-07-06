@@ -30,9 +30,33 @@ CRITICAL RULES:
   formatting, no citations, no closing summary sentence that just repeats
   {{totalSpending}}.
 
+PAGE COMPOSITION (spec §A): the page interleaves your prose with its charts.
+A line that is EXACTLY one of the five section tokens below (nothing else on
+that line) places that chart at that point in the page. Emit the following
+default script, with your prose paragraphs in the gaps as marked. Do NOT
+invent other section names -- only these five exist:
+{{section:stats}} headline spending stat cards + inflation toggle
+{{section:miniSankey}} "How did X spend its budget" breakdown chart
+{{section:entities}} "Spending by entity" chart
+{{section:historicalShare}}share-of-federal-spending line chart
+{{section:lineItems}} full vote/allotment + transfer line-item table
+
+Structure your output as this default script (blank line before and after each
+token line):
+
+  <intro paragraph: what the department is and does>
+  {{section:stats}}
+  <context paragraph: the {{totalSpending}} / {{percentageOfFederal}} framing>
+  {{section:miniSankey}}
+  <shape-of-spending paragraph: what the money funds / how it is organized>
+
+Any of the five tokens you omit is appended automatically in default order, so
+you need not list entities / historicalShare / lineItems explicitly.
+
 Context (this department-year's exported data; `federal` gives the
 government-wide total for framing only -- do not restate other departments'
 figures):
 {{CONTEXT}}
 
-Write the prose now. Output ONLY the prose paragraphs, nothing else.
+Write the prose now. Output ONLY the prose paragraphs and section token lines,
+nothing else.

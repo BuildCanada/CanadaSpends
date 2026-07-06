@@ -57,60 +57,76 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "fisheries-and-oceans",
       "name": "Fisheries, Oceans and the Canadian Coast Guard",
       "children": [
         {
-          "id": "fisheries-and-oceans-org-fisheries-oceans-and-the-canadian-coast-guard",
-          "name": "Fisheries, Oceans and the Canadian Coast Guard",
+          "id": "fisheries-and-oceans-2016-fisheries-and-oceans",
+          "name": "Fisheries and Oceans",
           "children": [
             {
-              "id": "fisheries-and-oceans-fisheries-oceans-and-the-canadian-coast-guard-vote",
-              "name": "Total appropriations (vote-level detail not published for this edition)",
-              "vote": "All votes",
-              "children": [
-                {
-                  "id": "fisheries-and-oceans-fisheries-oceans-and-the-canadian-coast-guard-vote-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 1.286021
-                },
-                {
-                  "id": "fisheries-and-oceans-fisheries-oceans-and-the-canadian-coast-guard-vote-capital-budget",
-                  "name": "Capital budget",
-                  "amount": 0.704347
-                },
-                {
-                  "id": "fisheries-and-oceans-fisheries-oceans-and-the-canadian-coast-guard-vote-statutory-amounts",
-                  "name": "Statutory amounts",
-                  "amount": 0.1194
-                },
-                {
-                  "id": "fisheries-and-oceans-fisheries-oceans-and-the-canadian-coast-guard-vote-grants-and-contributions",
-                  "name": "Grants and contributions",
-                  "amount": 0.094266
-                },
-                {
-                  "id": "fisheries-and-oceans-fisheries-oceans-and-the-canadian-coast-guard-vote-less-revenues-netted-against-expenditures",
-                  "name": "Less: revenues netted against expenditures",
-                  "amount": 0.040298
-                },
-                {
-                  "id": "fisheries-and-oceans-fisheries-oceans-and-the-canadian-coast-guard-vote-canada-s-sustainable-aquaculture-program",
-                  "name": "Canada's sustainable aquaculture program",
-                  "amount": 0.008153
-                },
-                {
-                  "id": "fisheries-and-oceans-fisheries-oceans-and-the-canadian-coast-guard-vote-canada-s-sustainable-aquaculture-program-capital",
-                  "name": "Canada's sustainable aquaculture program—Capital",
-                  "amount": 0.000555
-                },
-                {
-                  "id": "fisheries-and-oceans-fisheries-oceans-and-the-canadian-coast-guard-vote-canadian-coast-guard-replacement-air-cushion-vehicles",
-                  "name": "Canadian Coast Guard replacement air cushion vehicles",
-                  "amount": 0.000354
-                }
-              ]
+              "id": "fisheries-and-oceans-2016-fisheries-and-oceans-obj-1",
+              "name": "Personnel",
+              "amount": 0.898924
+            },
+            {
+              "id": "fisheries-and-oceans-2016-fisheries-and-oceans-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.355005
+            },
+            {
+              "id": "fisheries-and-oceans-2016-fisheries-and-oceans-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.262048
+            },
+            {
+              "id": "fisheries-and-oceans-2016-fisheries-and-oceans-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.248487
+            },
+            {
+              "id": "fisheries-and-oceans-2016-fisheries-and-oceans-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.161945
+            },
+            {
+              "id": "fisheries-and-oceans-2016-fisheries-and-oceans-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.094266
+            },
+            {
+              "id": "fisheries-and-oceans-2016-fisheries-and-oceans-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.093864
+            },
+            {
+              "id": "fisheries-and-oceans-2016-fisheries-and-oceans-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.057603
+            },
+            {
+              "id": "fisheries-and-oceans-2016-fisheries-and-oceans-external-revenues",
+              "name": "External revenues",
+              "amount": 0.040292
+            },
+            {
+              "id": "fisheries-and-oceans-2016-fisheries-and-oceans-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.021681
+            },
+            {
+              "name": "Other",
+              "id": "fisheries-and-oceans-2016-fisheries-and-oceans-other",
+              "amount": 0.019273,
+              "isAggregate": true,
+              "count": 2
+            },
+            {
+              "id": "fisheries-and-oceans-2016-fisheries-and-oceans-internal-revenues",
+              "name": "Internal revenues",
+              "amount": 6.0e-6
             }
           ]
         }

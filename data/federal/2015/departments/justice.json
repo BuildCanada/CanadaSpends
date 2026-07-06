@@ -57,225 +57,527 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "justice",
       "name": "Justice",
       "children": [
         {
-          "id": "justice-org-justice",
-          "name": "Justice",
+          "id": "justice-2015-justice-department",
+          "name": "Justice Department",
           "children": [
             {
-              "id": "justice-justice-vote1",
-              "name": "Operating expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "justice-justice-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.575735
-                },
-                {
-                  "id": "justice-justice-vote1-less-revenues-netted-against-expenditures",
-                  "name": "Less: revenues netted against expenditures",
-                  "amount": 0.297181
-                },
-                {
-                  "id": "justice-justice-vote1-immigration-and-refugee-protection-act",
-                  "name": "Immigration and Refugee Protection Act",
-                  "amount": 0.00388
-                }
-              ]
+              "id": "justice-2015-justice-department-obj-1",
+              "name": "Personnel",
+              "amount": 0.570726
             },
             {
-              "id": "justice-justice-vote5",
-              "name": "Grants and contributions",
-              "vote": "Vote 5",
-              "children": [
-                {
-                  "id": "justice-justice-vote5-grants-and-contributions",
-                  "name": "Grants and contributions",
-                  "amount": 0.348204
-                },
-                {
-                  "id": "justice-justice-vote5-immigration-and-refugee-protection-act",
-                  "name": "Immigration and Refugee Protection Act",
-                  "amount": 0.000559
-                }
-              ]
+              "id": "justice-2015-justice-department-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.348763
             },
             {
-              "id": "justice-justice-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.077654
+              "id": "justice-2015-justice-department-internal-revenues",
+              "name": "Internal revenues",
+              "amount": 0.29636
+            },
+            {
+              "id": "justice-2015-justice-department-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.035427
+            },
+            {
+              "id": "justice-2015-justice-department-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.020874
+            },
+            {
+              "id": "justice-2015-justice-department-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.007117
+            },
+            {
+              "id": "justice-2015-justice-department-obj-5",
+              "name": "Rentals",
+              "amount": 0.00573
+            },
+            {
+              "id": "justice-2015-justice-department-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.005596
+            },
+            {
+              "id": "justice-2015-justice-department-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.004552
+            },
+            {
+              "id": "justice-2015-justice-department-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.004285
+            },
+            {
+              "id": "justice-2015-justice-department-obj-3",
+              "name": "Information",
+              "amount": 0.002963
+            },
+            {
+              "id": "justice-2015-justice-department-external-revenues",
+              "name": "External revenues",
+              "amount": 0.000821
             }
           ]
         },
         {
-          "id": "justice-org-office-of-the-commissioner-for-federal-judicial-affairs",
+          "id": "justice-2015-office-of-the-commissioner-for-federal-judicial-affairs",
           "name": "Office of the Commissioner for Federal Judicial Affairs",
           "children": [
             {
-              "id": "justice-office-of-the-commissioner-for-federal-judicial-affairs-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.506515
+              "id": "justice-2015-office-of-the-commissioner-for-federal-judicial-affairs-obj-1",
+              "name": "Personnel",
+              "amount": 0.478622
             },
             {
-              "id": "justice-office-of-the-commissioner-for-federal-judicial-affairs-vote1",
-              "name": "Commissioner for Federal Judicial Affairs — Operating expenditures",
-              "vote": "Vote 1",
-              "amount": 0.008216
+              "id": "justice-2015-office-of-the-commissioner-for-federal-judicial-affairs-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.028334
             },
             {
-              "id": "justice-office-of-the-commissioner-for-federal-judicial-affairs-vote5",
-              "name": "Canadian Judicial Council — Operating expenditures",
-              "vote": "Vote 5",
-              "amount": 0.002945
+              "id": "justice-2015-office-of-the-commissioner-for-federal-judicial-affairs-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.005488
+            },
+            {
+              "id": "justice-2015-office-of-the-commissioner-for-federal-judicial-affairs-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.004617
+            },
+            {
+              "id": "justice-2015-office-of-the-commissioner-for-federal-judicial-affairs-obj-5",
+              "name": "Rentals",
+              "amount": 0.000223
+            },
+            {
+              "id": "justice-2015-office-of-the-commissioner-for-federal-judicial-affairs-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000163
+            },
+            {
+              "id": "justice-2015-office-of-the-commissioner-for-federal-judicial-affairs-obj-3",
+              "name": "Information",
+              "amount": 7.7e-5
+            },
+            {
+              "id": "justice-2015-office-of-the-commissioner-for-federal-judicial-affairs-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 6.8e-5
+            },
+            {
+              "id": "justice-2015-office-of-the-commissioner-for-federal-judicial-affairs-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 5.6e-5
+            },
+            {
+              "id": "justice-2015-office-of-the-commissioner-for-federal-judicial-affairs-internal-revenues",
+              "name": "Internal revenues",
+              "amount": 2.8e-5
             }
           ]
         },
         {
-          "id": "justice-org-office-of-the-director-of-public-prosecutions",
+          "id": "justice-2015-office-of-the-director-of-public-prosecutions",
           "name": "Office of the Director of Public Prosecutions",
           "children": [
             {
-              "id": "justice-office-of-the-director-of-public-prosecutions-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.194411
+              "id": "justice-2015-office-of-the-director-of-public-prosecutions-obj-1",
+              "name": "Personnel",
+              "amount": 0.124848
             },
             {
-              "id": "justice-office-of-the-director-of-public-prosecutions-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.019259
+              "id": "justice-2015-office-of-the-director-of-public-prosecutions-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.048103
+            },
+            {
+              "id": "justice-2015-office-of-the-director-of-public-prosecutions-internal-revenues",
+              "name": "Internal revenues",
+              "amount": 0.019093
+            },
+            {
+              "id": "justice-2015-office-of-the-director-of-public-prosecutions-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.007617
+            },
+            {
+              "id": "justice-2015-office-of-the-director-of-public-prosecutions-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.006776
+            },
+            {
+              "id": "justice-2015-office-of-the-director-of-public-prosecutions-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.001918
+            },
+            {
+              "id": "justice-2015-office-of-the-director-of-public-prosecutions-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.001688
+            },
+            {
+              "id": "justice-2015-office-of-the-director-of-public-prosecutions-obj-5",
+              "name": "Rentals",
+              "amount": 0.001576
+            },
+            {
+              "id": "justice-2015-office-of-the-director-of-public-prosecutions-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.001356
+            },
+            {
+              "id": "justice-2015-office-of-the-director-of-public-prosecutions-obj-3",
+              "name": "Information",
+              "amount": 0.000576
+            },
+            {
+              "id": "justice-2015-office-of-the-director-of-public-prosecutions-external-revenues",
+              "name": "External revenues",
+              "amount": 0.000118
             }
           ]
         },
         {
-          "id": "justice-org-courts-administration-service",
+          "id": "justice-2015-courts-administration-service",
           "name": "Courts Administration Service",
           "children": [
             {
-              "id": "justice-courts-administration-service-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "justice-courts-administration-service-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.058839
-                },
-                {
-                  "id": "justice-courts-administration-service-vote1-immigration-and-refugee-protection-act",
-                  "name": "Immigration and Refugee Protection Act",
-                  "amount": 0.003294
-                }
-              ]
+              "id": "justice-2015-courts-administration-service-obj-1",
+              "name": "Personnel",
+              "amount": 0.050107
             },
             {
-              "id": "justice-courts-administration-service-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.007018
+              "id": "justice-2015-courts-administration-service-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.008563
+            },
+            {
+              "id": "justice-2015-courts-administration-service-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.002506
+            },
+            {
+              "id": "justice-2015-courts-administration-service-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.002136
+            },
+            {
+              "id": "justice-2015-courts-administration-service-obj-5",
+              "name": "Rentals",
+              "amount": 0.001724
+            },
+            {
+              "id": "justice-2015-courts-administration-service-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.001639
+            },
+            {
+              "id": "justice-2015-courts-administration-service-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.001601
+            },
+            {
+              "id": "justice-2015-courts-administration-service-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000332
+            },
+            {
+              "id": "justice-2015-courts-administration-service-obj-3",
+              "name": "Information",
+              "amount": 0.000292
+            },
+            {
+              "id": "justice-2015-courts-administration-service-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.00025
             }
           ]
         },
         {
-          "id": "justice-org-administrative-tribunals-support-service-of-canada",
+          "id": "justice-2015-administrative-tribunals-support-service-of-canada",
           "name": "Administrative Tribunals Support Service of Canada",
           "children": [
             {
-              "id": "justice-administrative-tribunals-support-service-of-canada-vote2",
-              "name": "Program expenditures",
-              "vote": "Vote 2",
-              "amount": 0.041958
+              "id": "justice-2015-administrative-tribunals-support-service-of-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.027244
             },
             {
-              "id": "justice-administrative-tribunals-support-service-of-canada-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.003735
+              "id": "justice-2015-administrative-tribunals-support-service-of-canada-external-revenues",
+              "name": "External revenues",
+              "amount": 0.005838
+            },
+            {
+              "id": "justice-2015-administrative-tribunals-support-service-of-canada-internal-revenues",
+              "name": "Internal revenues",
+              "amount": 0.00364
+            },
+            {
+              "id": "justice-2015-administrative-tribunals-support-service-of-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.003473
+            },
+            {
+              "id": "justice-2015-administrative-tribunals-support-service-of-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.002591
+            },
+            {
+              "id": "justice-2015-administrative-tribunals-support-service-of-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.001656
+            },
+            {
+              "id": "justice-2015-administrative-tribunals-support-service-of-canada-obj-5",
+              "name": "Rentals",
+              "amount": 0.000828
+            },
+            {
+              "id": "justice-2015-administrative-tribunals-support-service-of-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000318
+            },
+            {
+              "id": "justice-2015-administrative-tribunals-support-service-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": -0.000211
+            },
+            {
+              "id": "justice-2015-administrative-tribunals-support-service-of-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000166
+            },
+            {
+              "id": "justice-2015-administrative-tribunals-support-service-of-canada-obj-3",
+              "name": "Information",
+              "amount": 0.00015
             }
           ]
         },
         {
-          "id": "justice-org-offices-of-the-information-and-privacy-commissioners-of-canada",
+          "id": "justice-2015-offices-of-the-information-and-privacy-commissioners-of-canada",
           "name": "Offices of the Information and Privacy Commissioners of Canada",
           "children": [
             {
-              "id": "justice-offices-of-the-information-and-privacy-commissioners-of-canada-vote5",
-              "name": "Office of the Privacy Commissioner of Canada — Program expenditures",
-              "vote": "Vote 5",
-              "amount": 0.023066
+              "id": "justice-2015-offices-of-the-information-and-privacy-commissioners-of-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.027705
             },
             {
-              "id": "justice-offices-of-the-information-and-privacy-commissioners-of-canada-vote1",
-              "name": "Office of the Information Commissioner of Canada — Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.010487
+              "id": "justice-2015-offices-of-the-information-and-privacy-commissioners-of-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.004445
             },
             {
-              "id": "justice-offices-of-the-information-and-privacy-commissioners-of-canada-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.003788
+              "id": "justice-2015-offices-of-the-information-and-privacy-commissioners-of-canada-obj-5",
+              "name": "Rentals",
+              "amount": 0.001052
+            },
+            {
+              "id": "justice-2015-offices-of-the-information-and-privacy-commissioners-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000846
+            },
+            {
+              "id": "justice-2015-offices-of-the-information-and-privacy-commissioners-of-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000823
+            },
+            {
+              "id": "justice-2015-offices-of-the-information-and-privacy-commissioners-of-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.00065
+            },
+            {
+              "id": "justice-2015-offices-of-the-information-and-privacy-commissioners-of-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000536
+            },
+            {
+              "id": "justice-2015-offices-of-the-information-and-privacy-commissioners-of-canada-obj-3",
+              "name": "Information",
+              "amount": 0.000504
+            },
+            {
+              "id": "justice-2015-offices-of-the-information-and-privacy-commissioners-of-canada-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.000482
+            },
+            {
+              "id": "justice-2015-offices-of-the-information-and-privacy-commissioners-of-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000298
             }
           ]
         },
         {
-          "id": "justice-org-registrar-of-the-supreme-court-of-canada",
+          "id": "justice-2015-registrar-of-the-supreme-court-of-canada",
           "name": "Registrar of the Supreme Court of Canada",
           "children": [
             {
-              "id": "justice-registrar-of-the-supreme-court-of-canada-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.0227
+              "id": "justice-2015-registrar-of-the-supreme-court-of-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.026006
             },
             {
-              "id": "justice-registrar-of-the-supreme-court-of-canada-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.009293
+              "id": "justice-2015-registrar-of-the-supreme-court-of-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.001632
+            },
+            {
+              "id": "justice-2015-registrar-of-the-supreme-court-of-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.001228
+            },
+            {
+              "id": "justice-2015-registrar-of-the-supreme-court-of-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000941
+            },
+            {
+              "id": "justice-2015-registrar-of-the-supreme-court-of-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.00075
+            },
+            {
+              "id": "justice-2015-registrar-of-the-supreme-court-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000623
+            },
+            {
+              "id": "justice-2015-registrar-of-the-supreme-court-of-canada-obj-5",
+              "name": "Rentals",
+              "amount": 0.000601
+            },
+            {
+              "id": "justice-2015-registrar-of-the-supreme-court-of-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000117
+            },
+            {
+              "id": "justice-2015-registrar-of-the-supreme-court-of-canada-obj-3",
+              "name": "Information",
+              "amount": 9.5e-5
             }
           ]
         },
         {
-          "id": "justice-org-canadian-human-rights-commission",
+          "id": "justice-2015-canadian-human-rights-commission",
           "name": "Canadian Human Rights Commission",
           "children": [
             {
-              "id": "justice-canadian-human-rights-commission-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.022828
+              "id": "justice-2015-canadian-human-rights-commission-obj-1",
+              "name": "Personnel",
+              "amount": 0.019688
             },
             {
-              "id": "justice-canadian-human-rights-commission-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.002678
+              "id": "justice-2015-canadian-human-rights-commission-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.001846
+            },
+            {
+              "id": "justice-2015-canadian-human-rights-commission-internal-revenues",
+              "name": "Internal revenues",
+              "amount": 0.001143
+            },
+            {
+              "id": "justice-2015-canadian-human-rights-commission-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000761
+            },
+            {
+              "id": "justice-2015-canadian-human-rights-commission-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000633
+            },
+            {
+              "id": "justice-2015-canadian-human-rights-commission-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000437
+            },
+            {
+              "id": "justice-2015-canadian-human-rights-commission-obj-5",
+              "name": "Rentals",
+              "amount": 0.00032
+            },
+            {
+              "id": "justice-2015-canadian-human-rights-commission-obj-3",
+              "name": "Information",
+              "amount": 0.000285
+            },
+            {
+              "id": "justice-2015-canadian-human-rights-commission-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.000154
+            },
+            {
+              "id": "justice-2015-canadian-human-rights-commission-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.00013
+            },
+            {
+              "id": "justice-2015-canadian-human-rights-commission-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000108
             }
           ]
         },
         {
-          "id": "justice-org-canadian-human-rights-tribunal",
+          "id": "justice-2015-canadian-human-rights-tribunal",
           "name": "Canadian Human Rights Tribunal",
           "children": [
             {
-              "id": "justice-canadian-human-rights-tribunal-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.002243
+              "id": "justice-2015-canadian-human-rights-tribunal-obj-1",
+              "name": "Personnel",
+              "amount": 0.001345
             },
             {
-              "id": "justice-canadian-human-rights-tribunal-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.000226
+              "id": "justice-2015-canadian-human-rights-tribunal-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.000795
+            },
+            {
+              "id": "justice-2015-canadian-human-rights-tribunal-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000193
+            },
+            {
+              "id": "justice-2015-canadian-human-rights-tribunal-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 6.5e-5
+            },
+            {
+              "id": "justice-2015-canadian-human-rights-tribunal-obj-5",
+              "name": "Rentals",
+              "amount": 4.2e-5
+            },
+            {
+              "id": "justice-2015-canadian-human-rights-tribunal-obj-3",
+              "name": "Information",
+              "amount": 1.3e-5
+            },
+            {
+              "id": "justice-2015-canadian-human-rights-tribunal-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 1.3e-5
+            },
+            {
+              "id": "justice-2015-canadian-human-rights-tribunal-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 2.0e-6
+            },
+            {
+              "id": "justice-2015-canadian-human-rights-tribunal-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 1.0e-6
             }
           ]
         }

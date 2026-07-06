@@ -57,124 +57,214 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "national-defence",
       "name": "National Defence",
       "children": [
         {
-          "id": "national-defence-org-department-of-national-defence",
+          "id": "national-defence-2022-department-of-national-defence",
           "name": "Department of National Defence",
           "children": [
             {
-              "id": "national-defence-department-of-national-defence-vote1",
-              "name": "Operating expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "national-defence-department-of-national-defence-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 17.302983
-                },
-                {
-                  "id": "national-defence-department-of-national-defence-vote1-heyder-and-beattie-class-actions",
-                  "name": "Heyder and Beattie Class Actions",
-                  "amount": 0.047282
-                },
-                {
-                  "id": "national-defence-department-of-national-defence-vote1-innovative-solutions-canada",
-                  "name": "Innovative Solutions Canada",
-                  "amount": 0.009402
-                }
-              ]
+              "id": "national-defence-2022-department-of-national-defence-obj-1",
+              "name": "Personnel",
+              "amount": 11.045285
             },
             {
-              "id": "national-defence-department-of-national-defence-vote5",
-              "name": "Capital expenditures",
-              "vote": "Vote 5",
-              "amount": 4.641317
+              "id": "national-defence-2022-department-of-national-defence-obj-4",
+              "name": "Professional and special services",
+              "amount": 4.597556
             },
             {
-              "id": "national-defence-department-of-national-defence-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 1.628065
+              "id": "national-defence-2022-department-of-national-defence-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 3.307811
             },
             {
-              "id": "national-defence-department-of-national-defence-vote15",
-              "name": "Payments in respect of the long-term disability and life insurance plan for members of the Canadian Forces",
-              "vote": "Vote 15",
-              "amount": 0.517142
+              "id": "national-defence-2022-department-of-national-defence-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 1.745363
             },
             {
-              "id": "national-defence-department-of-national-defence-vote10",
-              "name": "Grants and contributions",
-              "vote": "Vote 10",
-              "amount": 0.313285
+              "id": "national-defence-2022-department-of-national-defence-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 1.080683
+            },
+            {
+              "id": "national-defence-2022-department-of-national-defence-obj-5",
+              "name": "Rentals",
+              "amount": 0.635659
+            },
+            {
+              "id": "national-defence-2022-department-of-national-defence-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.631796
+            },
+            {
+              "id": "national-defence-2022-department-of-national-defence-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.572249
+            },
+            {
+              "id": "national-defence-2022-department-of-national-defence-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.500066
+            },
+            {
+              "name": "Other",
+              "id": "national-defence-2022-department-of-national-defence-other",
+              "amount": 0.343009,
+              "isAggregate": true,
+              "count": 3
+            },
+            {
+              "id": "national-defence-2022-department-of-national-defence-external-revenues",
+              "name": "External revenues",
+              "amount": -0.321406
+            },
+            {
+              "id": "national-defence-2022-department-of-national-defence-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.011926
             }
           ]
         },
         {
-          "id": "national-defence-org-communications-security-establishment",
+          "id": "national-defence-2022-communications-security-establishment",
           "name": "Communications Security Establishment",
           "children": [
             {
-              "id": "national-defence-communications-security-establishment-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "national-defence-communications-security-establishment-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.646663
-                },
-                {
-                  "id": "national-defence-communications-security-establishment-vote1-communications-security-establishment-long-term-accommodation-project",
-                  "name": "Communications Security Establishment long-term accommodation project",
-                  "amount": 0.116135
-                }
-              ]
+              "id": "national-defence-2022-communications-security-establishment-obj-1",
+              "name": "Personnel",
+              "amount": 0.424687
             },
             {
-              "id": "national-defence-communications-security-establishment-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.0533
+              "id": "national-defence-2022-communications-security-establishment-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.31507
+            },
+            {
+              "id": "national-defence-2022-communications-security-establishment-obj-11",
+              "name": "Public debt charges",
+              "amount": 0.063912
+            },
+            {
+              "id": "national-defence-2022-communications-security-establishment-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.014763
+            },
+            {
+              "id": "national-defence-2022-communications-security-establishment-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.012429
+            },
+            {
+              "id": "national-defence-2022-communications-security-establishment-external-revenues",
+              "name": "External revenues",
+              "amount": -0.000344
             }
           ]
         },
         {
-          "id": "national-defence-org-military-grievances-external-review-committee",
+          "id": "national-defence-2022-military-grievances-external-review-committee",
           "name": "Military Grievances External Review Committee",
           "children": [
             {
-              "id": "national-defence-military-grievances-external-review-committee-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.006283
+              "id": "national-defence-2022-military-grievances-external-review-committee-obj-1",
+              "name": "Personnel",
+              "amount": 0.005966
             },
             {
-              "id": "national-defence-military-grievances-external-review-committee-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.000742
+              "id": "national-defence-2022-military-grievances-external-review-committee-obj-5",
+              "name": "Rentals",
+              "amount": 0.000525
+            },
+            {
+              "id": "national-defence-2022-military-grievances-external-review-committee-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.000324
+            },
+            {
+              "id": "national-defence-2022-military-grievances-external-review-committee-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000142
+            },
+            {
+              "id": "national-defence-2022-military-grievances-external-review-committee-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 2.5e-5
+            },
+            {
+              "id": "national-defence-2022-military-grievances-external-review-committee-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 1.7e-5
+            },
+            {
+              "id": "national-defence-2022-military-grievances-external-review-committee-obj-2",
+              "name": "Transportation and communications",
+              "amount": 1.1e-5
+            },
+            {
+              "id": "national-defence-2022-military-grievances-external-review-committee-obj-3",
+              "name": "Information",
+              "amount": 8.0e-6
+            },
+            {
+              "id": "national-defence-2022-military-grievances-external-review-committee-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 7.0e-6
             }
           ]
         },
         {
-          "id": "national-defence-org-military-police-complaints-commission",
+          "id": "national-defence-2022-military-police-complaints-commission",
           "name": "Military Police Complaints Commission",
           "children": [
             {
-              "id": "national-defence-military-police-complaints-commission-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.004336
+              "id": "national-defence-2022-military-police-complaints-commission-obj-1",
+              "name": "Personnel",
+              "amount": 0.003552
             },
             {
-              "id": "national-defence-military-police-complaints-commission-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.000439
+              "id": "national-defence-2022-military-police-complaints-commission-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.000565
+            },
+            {
+              "id": "national-defence-2022-military-police-complaints-commission-obj-5",
+              "name": "Rentals",
+              "amount": 0.000396
+            },
+            {
+              "id": "national-defence-2022-military-police-complaints-commission-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000139
+            },
+            {
+              "id": "national-defence-2022-military-police-complaints-commission-obj-3",
+              "name": "Information",
+              "amount": 5.8e-5
+            },
+            {
+              "id": "national-defence-2022-military-police-complaints-commission-obj-2",
+              "name": "Transportation and communications",
+              "amount": 5.4e-5
+            },
+            {
+              "id": "national-defence-2022-military-police-complaints-commission-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 6.0e-6
+            },
+            {
+              "id": "national-defence-2022-military-police-complaints-commission-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 6.0e-6
+            },
+            {
+              "id": "national-defence-2022-military-police-complaints-commission-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": -1.0e-6
             }
           ]
         }

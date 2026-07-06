@@ -57,19 +57,324 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "parliament",
       "name": "Parliament",
       "children": [
         {
-          "id": "parliament-org-parliament",
-          "name": "Parliament",
+          "id": "parliament-2016-house-of-commons",
+          "name": "House of Commons",
           "children": [
             {
-              "id": "parliament-parliament-vote",
-              "name": "Total appropriations (vote-level detail not published for this edition)",
-              "vote": "All votes",
-              "amount": 0.600079
+              "id": "parliament-2016-house-of-commons-obj-1",
+              "name": "Personnel",
+              "amount": 0.318405
+            },
+            {
+              "id": "parliament-2016-house-of-commons-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.032908
+            },
+            {
+              "id": "parliament-2016-house-of-commons-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.020243
+            },
+            {
+              "id": "parliament-2016-house-of-commons-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.017456
+            },
+            {
+              "id": "parliament-2016-house-of-commons-obj-5",
+              "name": "Rentals",
+              "amount": 0.017445
+            },
+            {
+              "id": "parliament-2016-house-of-commons-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.00647
+            },
+            {
+              "id": "parliament-2016-house-of-commons-obj-3",
+              "name": "Information",
+              "amount": 0.0051
+            },
+            {
+              "id": "parliament-2016-house-of-commons-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.004719
+            },
+            {
+              "id": "parliament-2016-house-of-commons-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.001184
+            },
+            {
+              "id": "parliament-2016-house-of-commons-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.001012
+            },
+            {
+              "id": "parliament-2016-house-of-commons-external-revenues",
+              "name": "External revenues",
+              "amount": 0.000622
+            },
+            {
+              "id": "parliament-2016-house-of-commons-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -1.1e-5
+            }
+          ]
+        },
+        {
+          "id": "parliament-2016-senate",
+          "name": "Senate",
+          "children": [
+            {
+              "id": "parliament-2016-senate-obj-1",
+              "name": "Personnel",
+              "amount": 0.061159
+            },
+            {
+              "id": "parliament-2016-senate-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.005437
+            },
+            {
+              "id": "parliament-2016-senate-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.002903
+            },
+            {
+              "id": "parliament-2016-senate-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.001479
+            },
+            {
+              "id": "parliament-2016-senate-obj-5",
+              "name": "Rentals",
+              "amount": 0.001433
+            },
+            {
+              "id": "parliament-2016-senate-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000591
+            },
+            {
+              "id": "parliament-2016-senate-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000566
+            },
+            {
+              "id": "parliament-2016-senate-obj-3",
+              "name": "Information",
+              "amount": 0.000531
+            },
+            {
+              "id": "parliament-2016-senate-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.000466
+            },
+            {
+              "id": "parliament-2016-senate-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 7.0e-6
+            }
+          ]
+        },
+        {
+          "id": "parliament-2016-parliamentary-protective-service",
+          "name": "Parliamentary Protective Service",
+          "children": [
+            {
+              "id": "parliament-2016-parliamentary-protective-service-obj-1",
+              "name": "Personnel",
+              "amount": 0.025958
+            },
+            {
+              "id": "parliament-2016-parliamentary-protective-service-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.022858
+            },
+            {
+              "id": "parliament-2016-parliamentary-protective-service-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.001244
+            },
+            {
+              "id": "parliament-2016-parliamentary-protective-service-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000252
+            },
+            {
+              "id": "parliament-2016-parliamentary-protective-service-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000104
+            },
+            {
+              "id": "parliament-2016-parliamentary-protective-service-obj-5",
+              "name": "Rentals",
+              "amount": 3.2e-5
+            },
+            {
+              "id": "parliament-2016-parliamentary-protective-service-obj-3",
+              "name": "Information",
+              "amount": 1.3e-5
+            },
+            {
+              "id": "parliament-2016-parliamentary-protective-service-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 6.0e-6
+            },
+            {
+              "id": "parliament-2016-parliamentary-protective-service-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 4.0e-6
+            }
+          ]
+        },
+        {
+          "id": "parliament-2016-library-of-parliament",
+          "name": "Library of Parliament",
+          "children": [
+            {
+              "id": "parliament-2016-library-of-parliament-obj-1",
+              "name": "Personnel",
+              "amount": 0.035016
+            },
+            {
+              "id": "parliament-2016-library-of-parliament-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.002534
+            },
+            {
+              "id": "parliament-2016-library-of-parliament-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.002451
+            },
+            {
+              "id": "parliament-2016-library-of-parliament-obj-5",
+              "name": "Rentals",
+              "amount": 0.000708
+            },
+            {
+              "id": "parliament-2016-library-of-parliament-external-revenues",
+              "name": "External revenues",
+              "amount": 0.000669
+            },
+            {
+              "id": "parliament-2016-library-of-parliament-obj-3",
+              "name": "Information",
+              "amount": 0.000593
+            },
+            {
+              "id": "parliament-2016-library-of-parliament-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.0005
+            },
+            {
+              "id": "parliament-2016-library-of-parliament-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000498
+            },
+            {
+              "id": "parliament-2016-library-of-parliament-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": -2.8e-5
+            },
+            {
+              "id": "parliament-2016-library-of-parliament-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 1.6e-5
+            }
+          ]
+        },
+        {
+          "id": "parliament-2016-office-of-the-conflict-of-interest-and-ethics-commissioner",
+          "name": "Office of the Conflict of Interest and Ethics Commissioner",
+          "children": [
+            {
+              "id": "parliament-2016-office-of-the-conflict-of-interest-and-ethics-commissioner-obj-1",
+              "name": "Personnel",
+              "amount": 0.004676
+            },
+            {
+              "id": "parliament-2016-office-of-the-conflict-of-interest-and-ethics-commissioner-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.000844
+            },
+            {
+              "id": "parliament-2016-office-of-the-conflict-of-interest-and-ethics-commissioner-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 6.8e-5
+            },
+            {
+              "id": "parliament-2016-office-of-the-conflict-of-interest-and-ethics-commissioner-obj-5",
+              "name": "Rentals",
+              "amount": 6.3e-5
+            },
+            {
+              "id": "parliament-2016-office-of-the-conflict-of-interest-and-ethics-commissioner-obj-2",
+              "name": "Transportation and communications",
+              "amount": 4.2e-5
+            },
+            {
+              "id": "parliament-2016-office-of-the-conflict-of-interest-and-ethics-commissioner-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 3.7e-5
+            },
+            {
+              "id": "parliament-2016-office-of-the-conflict-of-interest-and-ethics-commissioner-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 2.5e-5
+            },
+            {
+              "id": "parliament-2016-office-of-the-conflict-of-interest-and-ethics-commissioner-obj-3",
+              "name": "Information",
+              "amount": 4.0e-6
+            },
+            {
+              "id": "parliament-2016-office-of-the-conflict-of-interest-and-ethics-commissioner-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": -1.0e-6
+            }
+          ]
+        },
+        {
+          "id": "parliament-2016-senate-ethics-officer",
+          "name": "Senate Ethics Officer",
+          "children": [
+            {
+              "id": "parliament-2016-senate-ethics-officer-obj-1",
+              "name": "Personnel",
+              "amount": 0.00069
+            },
+            {
+              "id": "parliament-2016-senate-ethics-officer-obj-4",
+              "name": "Professional and special services",
+              "amount": 5.5e-5
+            },
+            {
+              "id": "parliament-2016-senate-ethics-officer-obj-5",
+              "name": "Rentals",
+              "amount": 1.1e-5
+            },
+            {
+              "id": "parliament-2016-senate-ethics-officer-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 5.0e-6
+            },
+            {
+              "id": "parliament-2016-senate-ethics-officer-obj-2",
+              "name": "Transportation and communications",
+              "amount": 4.0e-6
+            },
+            {
+              "id": "parliament-2016-senate-ethics-officer-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 1.0e-6
             }
           ]
         }

@@ -57,167 +57,232 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "treasury-board",
       "name": "Treasury Board",
       "children": [
         {
-          "id": "treasury-board-org-treasury-board-secretariat",
+          "id": "treasury-board-2024-treasury-board-secretariat",
           "name": "Treasury Board Secretariat",
           "children": [
             {
-              "id": "treasury-board-treasury-board-secretariat-vote20",
-              "name": "Public Service Insurance",
-              "vote": "Vote 20",
-              "children": [
-                {
-                  "id": "treasury-board-treasury-board-secretariat-vote20-vote-20-non-discretionary-program-costs",
-                  "name": "Vote 20 Non-Discretionary Program Costs",
-                  "amount": 4.751342
-                },
-                {
-                  "id": "treasury-board-treasury-board-secretariat-vote20-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.004484
-                },
-                {
-                  "id": "treasury-board-treasury-board-secretariat-vote20-capital-budget",
-                  "name": "Capital budget",
-                  "amount": 0.000341
-                }
-              ]
+              "id": "treasury-board-2024-treasury-board-secretariat-obj-1",
+              "name": "Personnel",
+              "amount": 5.006889
             },
             {
-              "id": "treasury-board-treasury-board-secretariat-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "treasury-board-treasury-board-secretariat-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.382941
-                },
-                {
-                  "id": "treasury-board-treasury-board-secretariat-vote1-digital-comptrollership-program",
-                  "name": "Digital Comptrollership Program",
-                  "amount": 0.010216
-                },
-                {
-                  "id": "treasury-board-treasury-board-secretariat-vote1-post-implementation-of-pay-system",
-                  "name": "Post implementation of pay system",
-                  "amount": 0.010094
-                },
-                {
-                  "id": "treasury-board-treasury-board-secretariat-vote1-capital-budget",
-                  "name": "Capital budget",
-                  "amount": 0.002536
-                },
-                {
-                  "id": "treasury-board-treasury-board-secretariat-vote1-centralized-enabling-workplace-fund",
-                  "name": "Centralized Enabling Workplace Fund",
-                  "amount": 0.002398
-                },
-                {
-                  "id": "treasury-board-treasury-board-secretariat-vote1-grants-and-contributions",
-                  "name": "Grants and contributions",
-                  "amount": 0.000707
-                },
-                {
-                  "id": "treasury-board-treasury-board-secretariat-vote1-greening-government-fund",
-                  "name": "Greening Government Fund",
-                  "amount": 0.000401
-                }
-              ]
+              "id": "treasury-board-2024-treasury-board-secretariat-external-revenues",
+              "name": "External revenues",
+              "amount": -0.59665
             },
             {
-              "id": "treasury-board-treasury-board-secretariat-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.045883
+              "id": "treasury-board-2024-treasury-board-secretariat-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.36436
             },
             {
-              "id": "treasury-board-treasury-board-secretariat-vote35",
-              "name": "Capital Budget Carry Forward",
-              "vote": "Vote 35",
-              "amount": 0.0
+              "id": "treasury-board-2024-treasury-board-secretariat-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.18161
             },
             {
-              "id": "treasury-board-treasury-board-secretariat-vote5",
-              "name": "Government Contingencies",
-              "vote": "Vote 5",
-              "amount": 0.0
+              "id": "treasury-board-2024-treasury-board-secretariat-obj-5",
+              "name": "Rentals",
+              "amount": 0.034474
             },
             {
-              "id": "treasury-board-treasury-board-secretariat-vote10",
-              "name": "Government-wide Initiatives",
-              "vote": "Vote 10",
-              "amount": 0.0
+              "id": "treasury-board-2024-treasury-board-secretariat-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": -0.0211
             },
             {
-              "id": "treasury-board-treasury-board-secretariat-vote25",
-              "name": "Operating Budget Carry Forward",
-              "vote": "Vote 25",
-              "amount": 0.0
+              "id": "treasury-board-2024-treasury-board-secretariat-obj-3",
+              "name": "Information",
+              "amount": 0.00348
             },
             {
-              "id": "treasury-board-treasury-board-secretariat-vote30",
-              "name": "Paylist Requirements",
-              "vote": "Vote 30",
-              "amount": 0.0
+              "id": "treasury-board-2024-treasury-board-secretariat-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.001754
+            },
+            {
+              "id": "treasury-board-2024-treasury-board-secretariat-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.001488
+            },
+            {
+              "id": "treasury-board-2024-treasury-board-secretariat-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.001358
+            },
+            {
+              "id": "treasury-board-2024-treasury-board-secretariat-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.001018
+            },
+            {
+              "id": "treasury-board-2024-treasury-board-secretariat-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000373
             }
           ]
         },
         {
-          "id": "treasury-board-org-canada-school-of-public-service",
+          "id": "treasury-board-2024-canada-school-of-public-service",
           "name": "Canada School of Public Service",
           "children": [
             {
-              "id": "treasury-board-canada-school-of-public-service-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.073086
+              "id": "treasury-board-2024-canada-school-of-public-service-obj-1",
+              "name": "Personnel",
+              "amount": 0.085677
             },
             {
-              "id": "treasury-board-canada-school-of-public-service-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.021691
+              "id": "treasury-board-2024-canada-school-of-public-service-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": -0.012614
+            },
+            {
+              "id": "treasury-board-2024-canada-school-of-public-service-obj-5",
+              "name": "Rentals",
+              "amount": 0.010066
+            },
+            {
+              "id": "treasury-board-2024-canada-school-of-public-service-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.007548
+            },
+            {
+              "id": "treasury-board-2024-canada-school-of-public-service-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.002461
+            },
+            {
+              "id": "treasury-board-2024-canada-school-of-public-service-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000803
+            },
+            {
+              "id": "treasury-board-2024-canada-school-of-public-service-obj-3",
+              "name": "Information",
+              "amount": 0.000575
+            },
+            {
+              "id": "treasury-board-2024-canada-school-of-public-service-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000184
+            },
+            {
+              "id": "treasury-board-2024-canada-school-of-public-service-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 7.7e-5
             }
           ]
         },
         {
-          "id": "treasury-board-org-office-of-the-public-sector-integrity-commissioner",
+          "id": "treasury-board-2024-office-of-the-public-sector-integrity-commissioner",
           "name": "Office of the Public Sector Integrity Commissioner",
           "children": [
             {
-              "id": "treasury-board-office-of-the-public-sector-integrity-commissioner-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.006096
+              "id": "treasury-board-2024-office-of-the-public-sector-integrity-commissioner-obj-1",
+              "name": "Personnel",
+              "amount": 0.005301
             },
             {
-              "id": "treasury-board-office-of-the-public-sector-integrity-commissioner-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.000681
+              "id": "treasury-board-2024-office-of-the-public-sector-integrity-commissioner-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.001005
+            },
+            {
+              "id": "treasury-board-2024-office-of-the-public-sector-integrity-commissioner-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000178
+            },
+            {
+              "id": "treasury-board-2024-office-of-the-public-sector-integrity-commissioner-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000129
+            },
+            {
+              "id": "treasury-board-2024-office-of-the-public-sector-integrity-commissioner-obj-5",
+              "name": "Rentals",
+              "amount": 9.3e-5
+            },
+            {
+              "id": "treasury-board-2024-office-of-the-public-sector-integrity-commissioner-obj-3",
+              "name": "Information",
+              "amount": 2.8e-5
+            },
+            {
+              "id": "treasury-board-2024-office-of-the-public-sector-integrity-commissioner-obj-10",
+              "name": "Transfer payments",
+              "amount": 2.1e-5
+            },
+            {
+              "id": "treasury-board-2024-office-of-the-public-sector-integrity-commissioner-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 1.4e-5
+            },
+            {
+              "id": "treasury-board-2024-office-of-the-public-sector-integrity-commissioner-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 4.0e-6
+            },
+            {
+              "id": "treasury-board-2024-office-of-the-public-sector-integrity-commissioner-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 4.0e-6
             }
           ]
         },
         {
-          "id": "treasury-board-org-office-of-the-commissioner-of-lobbying",
+          "id": "treasury-board-2024-office-of-the-commissioner-of-lobbying",
           "name": "Office of the Commissioner of Lobbying",
           "children": [
             {
-              "id": "treasury-board-office-of-the-commissioner-of-lobbying-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.005237
+              "id": "treasury-board-2024-office-of-the-commissioner-of-lobbying-obj-1",
+              "name": "Personnel",
+              "amount": 0.00417
             },
             {
-              "id": "treasury-board-office-of-the-commissioner-of-lobbying-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.00053
+              "id": "treasury-board-2024-office-of-the-commissioner-of-lobbying-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.001327
+            },
+            {
+              "id": "treasury-board-2024-office-of-the-commissioner-of-lobbying-obj-2",
+              "name": "Transportation and communications",
+              "amount": 7.6e-5
+            },
+            {
+              "id": "treasury-board-2024-office-of-the-commissioner-of-lobbying-obj-5",
+              "name": "Rentals",
+              "amount": 7.4e-5
+            },
+            {
+              "id": "treasury-board-2024-office-of-the-commissioner-of-lobbying-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 6.3e-5
+            },
+            {
+              "id": "treasury-board-2024-office-of-the-commissioner-of-lobbying-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 2.2e-5
+            },
+            {
+              "id": "treasury-board-2024-office-of-the-commissioner-of-lobbying-obj-3",
+              "name": "Information",
+              "amount": 1.9e-5
+            },
+            {
+              "id": "treasury-board-2024-office-of-the-commissioner-of-lobbying-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 9.0e-6
+            },
+            {
+              "id": "treasury-board-2024-office-of-the-commissioner-of-lobbying-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 7.0e-6
             }
           ]
         }

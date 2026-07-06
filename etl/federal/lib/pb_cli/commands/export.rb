@@ -1,10 +1,12 @@
 require 'cli/ui'
 require 'fileutils'
 require 'json'
+require 'set'
 require 'time'
 require_relative '../export/cpi'
 require_relative '../export/major_transfers'
 require_relative '../export/mapping'
+require_relative '../export/standard_objects'
 require_relative '../export/truncation'
 require_relative '../export/units'
 require_relative '../export/vol1_statement'
@@ -25,21 +27,13 @@ module PbCli
       BASE_YEAR = 2025
       MINI_SANKEY_TOP_N = 12
       HEADLINE_TOLERANCE = 0.005 # 0.5%
-
-      # Administrative/residual allotment labels that carry no descriptive value
-      # on their own. A vote whose spending allotments are all generic is emitted
-      # as a leaf; a generic row alongside informative ones stays as the residual
-      # child (keeping sums exact). Compared case-insensitively; the spec's
-      # minimum set is extended with the always-zero admin sub-lines so a rare
-      # non-zero admin row can't spuriously fan out a vote.
-      GENERIC_ALLOTMENT_LABELS = [
-        'operating budget', 'capital budget', 'capital',
-        'grants and contributions', 'grants', 'contributions',
-        'statutory amounts', 'reprofile', 'reprofiled', 'total', 'frozen',
-        'reduction', 'other', 'other authority', 'transferred or reallocated',
-        'revenues netted against expenditures',
-        'less: revenues netted against expenditures'
-      ].freeze
+      # Per-department miniSankey reconciliation floor (spec §B): the larger of
+      # 2% or $50M. Compared against Vol II allotment expenditures, which equal
+      # the standard-object GROSS total (Σ objects) for the same ministerial
+      # scope — verified exact for e.g. National Defence / Justice / Treasury
+      # Board. Systematic exceedances (net-voted common services, pre-2018
+      # presentation, scope) are documented, not blocking (see NOTES.md).
+      MESO_RECON_TOLERANCE_B = 0.05
 
       # Known published consolidated totals ($B) for headline validation.
       # 2024 is the site's current anchor; others documented in export_errors.md.
@@ -70,7 +64,9 @@ module PbCli
 
         @errors = []
         @excluded = {}
+        @recon_warnings = []
         precompute_year_totals(candidate_years)
+        precompute_meso(candidate_years)
 
         exported = []
         ::CLI::UI::Frame.open("Exporting federal JSON to #{@out_dir}") do
@@ -137,6 +133,7 @@ module PbCli
         @mapping = PbCli::Export::Mapping.new(@slugs_path, @tree_path)
         @vol1 = PbCli::Export::Vol1Statement.new(@open_tables_dir)
         @major_transfers = PbCli::Export::MajorTransfers.new(@major_transfers_path)
+        @standard_objects = PbCli::Export::StandardObjects.new(@open_tables_dir)
         @cpi = PbCli::Export::Cpi.new(@cpi_path, base_year: BASE_YEAR)
       end
 
@@ -189,6 +186,47 @@ module PbCli
         end
       end
 
+      # Standard-object (dmac-meso) rows, resolved to portfolio slugs and
+      # aggregated per (year, slug, organization). Feeds the department
+      # miniSankey and the per-department reconciliation. Runs after
+      # precompute_year_totals so the RDA org-override guard can consult which
+      # slugs actually have allotment data in a given year.
+      def precompute_meso(years)
+        @meso_by_slug = Hash.new { |h, k| h[k] = {} }
+        @meso_gross = Hash.new { |h, k| h[k] = Hash.new(0.0) }
+        @meso_orphans = Hash.new(0.0)
+
+        years.each do |year|
+          next unless @standard_objects.year?(year)
+
+          valid = @slug_year_totals.keys.select { |s| @slug_year_totals[s].key?(year) }.to_set
+          @standard_objects.rows(year).each do |row|
+            slug = meso_slug(row, valid)
+            if slug.nil? || !valid.include?(slug)
+              @meso_orphans[year] += row.gross
+              next
+            end
+            org = ((@meso_by_slug[year][slug] ||= {})[row.organization] ||=
+              { objects: Hash.new(0.0), external: 0.0, internal: 0.0 })
+            row.objects.each { |name, dollars| org[:objects][name] += dollars }
+            org[:external] += row.external
+            org[:internal] += row.internal
+            @meso_gross[year][slug] += row.gross
+          end
+        end
+      end
+
+      # Portfolio slug for a meso row. Organization overrides (the RDA merge)
+      # win, but only when the target slug has allotment data that year — in
+      # 2016–2018 RDAs have no separate page, so those rows fall back to the
+      # host portfolio, exactly as the allotment side keeps them (NOTES.md).
+      def meso_slug(row, valid_slugs)
+        override = @mapping.organization_override_slug(row.organization)
+        return override if override && valid_slugs.include?(override)
+
+        @mapping.meso_portfolio_slug(row.portfolio)
+      end
+
       # A year cannot be exported if it has mapping errors or lacks Vol I data.
       def year_blocker(year)
         return "coverage errors (#{@errors.count { |e| e[:year] == year }})" if @errors.any? { |e| e[:year] == year }
@@ -237,6 +275,31 @@ module PbCli
 
         slugs_for(year).each do |slug|
           write_json(File.join(dir, 'departments', "#{slug}.json"), department_payload(year, slug))
+        end
+        validate_meso_reconciliation(year)
+      end
+
+      # Per-department miniSankey ↔ allotment check (spec §B). Compares the
+      # standard-object GROSS total against Vol II allotment expenditures (the
+      # like-for-like quantity). Out-of-tolerance department-years are recorded
+      # as non-blocking, documented report lines — the systematic causes
+      # (net-voted common services, pre-2018 presentation basis, portfolio
+      # scope, the FY2020–21 governor-general allotment code-noise artifact) are
+      # written up in the export report and NOTES.md rather than dropping years.
+      def validate_meso_reconciliation(year)
+        return unless @standard_objects.year?(year)
+
+        slugs_for(year).each do |slug|
+          allot = @slug_year_totals[slug][year]
+          gross = PbCli::Export::Units.dollars_to_billions(@meso_gross[year][slug])
+          delta = PbCli::Export::Units.round_billions(gross - allot)
+          tolerance = [0.02 * allot.abs, MESO_RECON_TOLERANCE_B].max
+          next if delta.abs <= tolerance
+
+          @recon_warnings << {
+            year: year, slug: slug, allotment: allot, gross: gross,
+            delta: delta, tolerance: PbCli::Export::Units.round_billions(tolerance)
+          }
         end
       end
 
@@ -495,7 +558,10 @@ module PbCli
           'totalSpending' => total,
           'percentageOfFederal' => pct(total, vol1_total),
           'historicalShare' => historical_share(slug),
-          'miniSankey' => { 'spending_data' => strip_parent_amounts(mini_sankey(year, slug, rows)) },
+          'miniSankey' => {
+            'breakdown' => 'standard_object',
+            'spending_data' => strip_parent_amounts(mini_sankey(year, slug))
+          },
           'entities' => entities(slug, year, rows),
           'votes' => votes(slug, year, rows),
           'transferPayments' => transfer_payments(slug, year),
@@ -602,104 +668,70 @@ module PbCli
         end
       end
 
-      # Tree: department → organization → vote (named by its DESCRIPTION, not
-      # its number) → allotments (only when they add information). Vote nodes
-      # keep the vote number in their id and carry a secondary `vote` field.
-      def mini_sankey(year, slug, rows)
-        org_index = {}
+      # Tree: department → organization → standard-object leaves (spec §B).
+      # Object leaves are the twelve GC standard objects (positive gross
+      # amounts); external and internal revenues are emitted as NEGATIVE leaves,
+      # so each organization sums to its net expenditure and the chart matches
+      # the old production breakdown. Zero leaves are dropped (keeping sums
+      # exact); ids are stable/deterministic ({slug}-{year}-{org}-obj-{n}),
+      # independent of label translation. Truncation + leaf-only amounts
+      # (strip_parent_amounts) apply as for every other Sankey.
+      def mini_sankey(year, slug)
         root = { 'id' => slug, 'name' => portfolio_name(slug), 'children' => [] }
-        rows.each do |r|
-          org = org_label(r)
-          org_node = org_index[org]
-          unless org_node
-            org_node = { 'id' => "#{slug}-org-#{slugify(org)}", 'name' => org, 'children' => [], '_votes' => {} }
-            org_index[org] = org_node
-            root['children'] << org_node
-          end
-          vkey = r['vote_number']
-          vote_node = org_node['_votes'][vkey]
-          unless vote_node
-            label, desc = split_vote(r['vote'].to_s)
-            vote_node = {
-              'id' => "#{slug}-#{slugify(org)}-vote#{vkey}",
-              'name' => desc, 'vote' => label, '_allotments' => []
-            }
-            org_node['_votes'][vkey] = vote_node
-            org_node['children'] << vote_node
-          end
-          vote_node['_allotments'] << r
+        (@meso_by_slug[year][slug] || {}).each do |org_name, agg|
+          org_id = "#{slug}-#{year}-#{slugify(org_name)}"
+          leaves = org_leaves(org_id, agg)
+          next if leaves.empty?
+
+          root['children'] << { 'id' => org_id, 'name' => org_name, 'children' => leaves }
         end
-        disambiguate_sibling_votes(root)
-        finalize_mini(root)
+        # Org children of the root are truncated to top-N (departments can hold
+        # 20+ agencies); each org already holds ≤ top-N leaves so this recursion
+        # is a no-op at the leaf level.
         PbCli::Export::Truncation.truncate(assign_parent_amounts_ref(root), top_n: MINI_SANKEY_TOP_N)
       end
 
-      # Sibling votes of the same organization that share a description are
-      # disambiguated by appending the vote label (e.g. "Program expenditures
-      # (Vote 15)"), so no two children of an org node collide.
-      def disambiguate_sibling_votes(root)
-        root['children'].each do |org_node|
-          org_node['children'].group_by { |v| v['name'] }.each_value do |group|
-            next if group.size < 2
+      # An organization's leaves: standard-object leaves truncated to fit within
+      # top-N, PLUS the external/internal revenue leaves, which always survive
+      # (the net presentation — and matching the old chart — needs them, so they
+      # are never rolled into "Other"). Total leaf count stays within top-N.
+      def org_leaves(org_id, agg)
+        objects = object_leaves(org_id, agg[:objects])
+        revenues = revenue_leaves(org_id, agg)
+        slots = MINI_SANKEY_TOP_N - revenues.size
+        return objects + revenues if objects.size <= slots
 
-            group.each { |v| v['name'] = "#{v['name']} (#{v['vote']})" }
-          end
-        end
+        kept = PbCli::Export::Truncation.truncate({ 'id' => org_id, 'children' => objects }, top_n: slots - 1)
+        kept['children'] + revenues
       end
 
-      # Collapses the working tree into serialized form: org nodes drop their
-      # vote index; each vote node either becomes a leaf (amount) or gains
-      # allotment children when those add information.
-      def finalize_mini(root)
-        root['children'].each do |org_node|
-          org_node.delete('_votes')
-          org_node['children'].each { |vote_node| finalize_vote(vote_node) }
-        end
-      end
+      # Positive standard-object leaves in the canonical 1..12 order; the object
+      # number is kept in the id so leaves are stable across editions/languages.
+      def object_leaves(org_id, objects)
+        PbCli::Export::StandardObjects::OBJECTS.each_with_index.filter_map do |name, i|
+          dollars = objects[name]
+          next if PbCli::Export::Units.round_dollars(dollars).zero?
 
-      def finalize_vote(vote_node)
-        allotments = vote_node.delete('_allotments')
-        children = allotment_children(vote_node, allotments)
-        if children
-          vote_node['children'] = children
-        else
-          dollars = allotments.sum { |r| r['expenditures'].to_f }
-          vote_node['amount'] = PbCli::Export::Units.dollars_to_billions(dollars)
-        end
-      end
-
-      # Allotment leaf children for a vote, or nil when the vote should stay a
-      # leaf. Rows are aggregated by description (case-insensitively, first-seen
-      # casing wins) and zero-dollar rows are dropped — both keep the parent sum
-      # exact. A vote is a leaf when it has ≤1 spending allotment or every
-      # spending allotment is a generic/administrative shell (incl. one named
-      # like the vote). Otherwise all spending allotments become children so the
-      # informative ones surface and the generic residual keeps the sum exact.
-      def allotment_children(vote_node, allotments)
-        by_key = {}
-        order = []
-        allotments.each do |r|
-          desc = r['description'].to_s.strip
-          key = desc.downcase
-          unless by_key.key?(key)
-            by_key[key] = { 'display' => desc, 'dollars' => 0.0 }
-            order << key
-          end
-          by_key[key]['dollars'] += r['expenditures'].to_f
-        end
-        spending = order.reject { |k| PbCli::Export::Units.round_dollars(by_key[k]['dollars']).zero? }
-        return nil if spending.size <= 1
-
-        vote_name = vote_node['name'].to_s.strip.downcase
-        informative = spending.reject { |k| GENERIC_ALLOTMENT_LABELS.include?(k) || k == vote_name }
-        return nil if informative.empty?
-
-        spending.map do |k|
-          entry = by_key[k]
           {
-            'id' => "#{vote_node['id']}-#{slugify(entry['display'])}",
-            'name' => entry['display'],
-            'amount' => PbCli::Export::Units.dollars_to_billions(entry['dollars'])
+            'id' => "#{org_id}-obj-#{i + 1}",
+            'name' => name,
+            'amount' => PbCli::Export::Units.dollars_to_billions(dollars)
+          }
+        end
+      end
+
+      # External/internal revenues as NEGATIVE leaves (net presentation).
+      def revenue_leaves(org_id, agg)
+        [
+          [agg[:external], 'external-revenues', PbCli::Export::StandardObjects::EXTERNAL_REVENUE_LABEL],
+          [agg[:internal], 'internal-revenues', PbCli::Export::StandardObjects::INTERNAL_REVENUE_LABEL]
+        ].filter_map do |dollars, id_suffix, name|
+          next if PbCli::Export::Units.round_dollars(dollars).zero?
+
+          {
+            'id' => "#{org_id}-#{id_suffix}",
+            'name' => name,
+            'amount' => -PbCli::Export::Units.dollars_to_billions(dollars)
           }
         end
       end
@@ -750,6 +782,9 @@ module PbCli
 
       def finalize(exported)
         write_errors_report(exported)
+        unless @recon_warnings.empty?
+          puts ::CLI::UI.fmt("{{i}} #{@recon_warnings.size} miniSankey reconciliation note(s) (non-blocking). See #{@errors_path}")
+        end
         if @errors.empty? && @excluded.empty?
           puts ::CLI::UI.fmt("{{v}} Exported #{exported.size} year(s): #{exported.sort.join(', ')}")
           return 0
@@ -760,9 +795,13 @@ module PbCli
         @errors.empty? ? 0 : 1
       end
 
+      def report_empty?
+        @errors.empty? && @excluded.empty? && @recon_warnings.empty?
+      end
+
       def write_errors_report(exported)
-        return File.delete(@errors_path) if @errors.empty? && @excluded.empty? && File.exist?(@errors_path)
-        return if @errors.empty? && @excluded.empty?
+        return File.delete(@errors_path) if report_empty? && File.exist?(@errors_path)
+        return if report_empty?
 
         lines = ["# Federal export report", '', "Generated: #{@timestamp}", '',
                  "Shipped years: #{exported.sort.join(', ')}", '']
@@ -771,6 +810,7 @@ module PbCli
           @excluded.sort.each { |y, reason| lines << "- **#{y}**: #{reason}" }
           lines << ''
         end
+        append_recon_section(lines) unless @recon_warnings.empty?
         unless @errors.empty?
           lines << '## Validation errors' << ''
           @errors.group_by { |e| e[:year] }.sort.each do |year, errs|
@@ -781,6 +821,28 @@ module PbCli
           end
         end
         File.write(@errors_path, lines.join("\n"))
+      end
+
+      # Non-blocking miniSankey ↔ allotment reconciliation notes. The
+      # standard-object GROSS total should track Vol II allotment expenditures
+      # within max(2%, $50M); documented systematic causes exceed that floor
+      # without invalidating the breakdown (see NOTES.md "Standard-object
+      # reconciliation").
+      def append_recon_section(lines)
+        lines << '## miniSankey standard-object reconciliation (non-blocking)' << ''
+        lines << 'Standard-object GROSS total vs Vol II allotment expenditures, $B. ' \
+                 'Out-of-tolerance department-years below have documented systematic causes ' \
+                 '(net-voted common services, pre-2018 presentation basis, portfolio scope, ' \
+                 'and the FY2020–21 governor-general allotment code-noise artifact — see NOTES.md).'
+        lines << ''
+        @recon_warnings.group_by { |w| w[:year] }.sort.each do |year, ws|
+          lines << "### #{year} (#{ws.size})" << ''
+          ws.sort_by { |w| w[:slug] }.each do |w|
+            lines << format('- **%s**: allotment %.3f, standard-object gross %.3f, Δ %+.3f (tol ±%.3f)',
+                            w[:slug], w[:allotment], w[:gross], w[:delta], w[:tolerance])
+          end
+          lines << ''
+        end
       end
 
       # --- helpers ---------------------------------------------------------

@@ -57,133 +57,385 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "parliament",
       "name": "Parliament",
       "children": [
         {
-          "id": "parliament-org-house-of-commons",
+          "id": "parliament-2025-house-of-commons",
           "name": "House of Commons",
           "children": [
             {
-              "id": "parliament-house-of-commons-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.506303
+              "id": "parliament-2025-house-of-commons-obj-1",
+              "name": "Personnel",
+              "amount": 0.497812
             },
             {
-              "id": "parliament-house-of-commons-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.174494
+              "id": "parliament-2025-house-of-commons-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.045808
+            },
+            {
+              "id": "parliament-2025-house-of-commons-obj-5",
+              "name": "Rentals",
+              "amount": 0.034174
+            },
+            {
+              "id": "parliament-2025-house-of-commons-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.033193
+            },
+            {
+              "id": "parliament-2025-house-of-commons-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.031434
+            },
+            {
+              "id": "parliament-2025-house-of-commons-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.031305
+            },
+            {
+              "id": "parliament-2025-house-of-commons-obj-3",
+              "name": "Information",
+              "amount": 0.015568
+            },
+            {
+              "id": "parliament-2025-house-of-commons-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.011769
+            },
+            {
+              "id": "parliament-2025-house-of-commons-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.010462
+            },
+            {
+              "id": "parliament-2025-house-of-commons-external-revenues",
+              "name": "External revenues",
+              "amount": -0.003502
+            },
+            {
+              "id": "parliament-2025-house-of-commons-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.001471
+            },
+            {
+              "id": "parliament-2025-house-of-commons-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000994
             }
           ]
         },
         {
-          "id": "parliament-org-senate",
+          "id": "parliament-2025-senate",
           "name": "Senate",
           "children": [
             {
-              "id": "parliament-senate-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.090301
+              "id": "parliament-2025-senate-obj-1",
+              "name": "Personnel",
+              "amount": 0.104588
             },
             {
-              "id": "parliament-senate-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.039639
+              "id": "parliament-2025-senate-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.009524
+            },
+            {
+              "id": "parliament-2025-senate-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.005116
+            },
+            {
+              "id": "parliament-2025-senate-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.003893
+            },
+            {
+              "id": "parliament-2025-senate-obj-5",
+              "name": "Rentals",
+              "amount": 0.00238
+            },
+            {
+              "id": "parliament-2025-senate-obj-3",
+              "name": "Information",
+              "amount": 0.001661
+            },
+            {
+              "id": "parliament-2025-senate-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.001531
+            },
+            {
+              "id": "parliament-2025-senate-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000638
+            },
+            {
+              "id": "parliament-2025-senate-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.000567
+            },
+            {
+              "id": "parliament-2025-senate-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 4.2e-5
             }
           ]
         },
         {
-          "id": "parliament-org-parliamentary-protective-service",
+          "id": "parliament-2025-parliamentary-protective-service",
           "name": "Parliamentary Protective Service",
           "children": [
             {
-              "id": "parliament-parliamentary-protective-service-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.097475
+              "id": "parliament-2025-parliamentary-protective-service-obj-1",
+              "name": "Personnel",
+              "amount": 0.096583
             },
             {
-              "id": "parliament-parliamentary-protective-service-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.011939
+              "id": "parliament-2025-parliamentary-protective-service-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.005001
+            },
+            {
+              "id": "parliament-2025-parliamentary-protective-service-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.00349
+            },
+            {
+              "id": "parliament-2025-parliamentary-protective-service-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.001645
+            },
+            {
+              "id": "parliament-2025-parliamentary-protective-service-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.001445
+            },
+            {
+              "id": "parliament-2025-parliamentary-protective-service-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000957
+            },
+            {
+              "id": "parliament-2025-parliamentary-protective-service-obj-5",
+              "name": "Rentals",
+              "amount": 0.000767
+            },
+            {
+              "id": "parliament-2025-parliamentary-protective-service-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000536
+            },
+            {
+              "id": "parliament-2025-parliamentary-protective-service-obj-3",
+              "name": "Information",
+              "amount": 0.000228
+            },
+            {
+              "id": "parliament-2025-parliamentary-protective-service-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000207
+            },
+            {
+              "id": "parliament-2025-parliamentary-protective-service-external-revenues",
+              "name": "External revenues",
+              "amount": -0.000144
             }
           ]
         },
         {
-          "id": "parliament-org-library-of-parliament",
+          "id": "parliament-2025-library-of-parliament",
           "name": "Library of Parliament",
           "children": [
             {
-              "id": "parliament-library-of-parliament-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.056304
+              "id": "parliament-2025-library-of-parliament-obj-1",
+              "name": "Personnel",
+              "amount": 0.053792
             },
             {
-              "id": "parliament-library-of-parliament-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.006637
+              "id": "parliament-2025-library-of-parliament-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.003826
+            },
+            {
+              "id": "parliament-2025-library-of-parliament-obj-3",
+              "name": "Information",
+              "amount": 0.002291
+            },
+            {
+              "id": "parliament-2025-library-of-parliament-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.001145
+            },
+            {
+              "id": "parliament-2025-library-of-parliament-external-revenues",
+              "name": "External revenues",
+              "amount": -0.000861
+            },
+            {
+              "id": "parliament-2025-library-of-parliament-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000718
+            },
+            {
+              "id": "parliament-2025-library-of-parliament-obj-5",
+              "name": "Rentals",
+              "amount": 0.000632
+            },
+            {
+              "id": "parliament-2025-library-of-parliament-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000439
+            },
+            {
+              "id": "parliament-2025-library-of-parliament-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 8.7e-5
+            },
+            {
+              "id": "parliament-2025-library-of-parliament-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 1.0e-5
             }
           ]
         },
         {
-          "id": "parliament-org-office-of-the-conflict-of-interest-and-ethics-commissioner",
+          "id": "parliament-2025-office-of-the-conflict-of-interest-and-ethics-commissioner",
           "name": "Office of the Conflict of Interest and Ethics Commissioner",
           "children": [
             {
-              "id": "parliament-office-of-the-conflict-of-interest-and-ethics-commissioner-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.007594
+              "id": "parliament-2025-office-of-the-conflict-of-interest-and-ethics-commissioner-obj-1",
+              "name": "Personnel",
+              "amount": 0.007169
             },
             {
-              "id": "parliament-office-of-the-conflict-of-interest-and-ethics-commissioner-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.000939
+              "id": "parliament-2025-office-of-the-conflict-of-interest-and-ethics-commissioner-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.000882
+            },
+            {
+              "id": "parliament-2025-office-of-the-conflict-of-interest-and-ethics-commissioner-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000196
+            },
+            {
+              "id": "parliament-2025-office-of-the-conflict-of-interest-and-ethics-commissioner-obj-5",
+              "name": "Rentals",
+              "amount": 0.000103
+            },
+            {
+              "id": "parliament-2025-office-of-the-conflict-of-interest-and-ethics-commissioner-obj-2",
+              "name": "Transportation and communications",
+              "amount": 9.3e-5
+            },
+            {
+              "id": "parliament-2025-office-of-the-conflict-of-interest-and-ethics-commissioner-obj-3",
+              "name": "Information",
+              "amount": 7.4e-5
+            },
+            {
+              "id": "parliament-2025-office-of-the-conflict-of-interest-and-ethics-commissioner-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 1.4e-5
+            },
+            {
+              "id": "parliament-2025-office-of-the-conflict-of-interest-and-ethics-commissioner-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 1.0e-6
+            },
+            {
+              "id": "parliament-2025-office-of-the-conflict-of-interest-and-ethics-commissioner-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 1.0e-6
             }
           ]
         },
         {
-          "id": "parliament-org-office-of-the-parliamentary-budget-officer",
+          "id": "parliament-2025-office-of-the-parliamentary-budget-officer",
           "name": "Office of the Parliamentary Budget Officer",
           "children": [
             {
-              "id": "parliament-office-of-the-parliamentary-budget-officer-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.005973
+              "id": "parliament-2025-office-of-the-parliamentary-budget-officer-obj-1",
+              "name": "Personnel",
+              "amount": 0.005547
             },
             {
-              "id": "parliament-office-of-the-parliamentary-budget-officer-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.000678
+              "id": "parliament-2025-office-of-the-parliamentary-budget-officer-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.000395
+            },
+            {
+              "id": "parliament-2025-office-of-the-parliamentary-budget-officer-obj-5",
+              "name": "Rentals",
+              "amount": 0.000274
+            },
+            {
+              "id": "parliament-2025-office-of-the-parliamentary-budget-officer-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000173
+            },
+            {
+              "id": "parliament-2025-office-of-the-parliamentary-budget-officer-obj-3",
+              "name": "Information",
+              "amount": 0.000115
+            },
+            {
+              "id": "parliament-2025-office-of-the-parliamentary-budget-officer-obj-2",
+              "name": "Transportation and communications",
+              "amount": 7.4e-5
+            },
+            {
+              "id": "parliament-2025-office-of-the-parliamentary-budget-officer-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 6.7e-5
+            },
+            {
+              "id": "parliament-2025-office-of-the-parliamentary-budget-officer-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 5.0e-6
             }
           ]
         },
         {
-          "id": "parliament-org-office-of-the-senate-ethics-officer",
+          "id": "parliament-2025-office-of-the-senate-ethics-officer",
           "name": "Office of the Senate Ethics Officer",
           "children": [
             {
-              "id": "parliament-office-of-the-senate-ethics-officer-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.000993
+              "id": "parliament-2025-office-of-the-senate-ethics-officer-obj-1",
+              "name": "Personnel",
+              "amount": 0.000926
             },
             {
-              "id": "parliament-office-of-the-senate-ethics-officer-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.000111
+              "id": "parliament-2025-office-of-the-senate-ethics-officer-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.000136
+            },
+            {
+              "id": "parliament-2025-office-of-the-senate-ethics-officer-obj-2",
+              "name": "Transportation and communications",
+              "amount": 2.4e-5
+            },
+            {
+              "id": "parliament-2025-office-of-the-senate-ethics-officer-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 7.0e-6
+            },
+            {
+              "id": "parliament-2025-office-of-the-senate-ethics-officer-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 6.0e-6
+            },
+            {
+              "id": "parliament-2025-office-of-the-senate-ethics-officer-obj-5",
+              "name": "Rentals",
+              "amount": 5.0e-6
+            },
+            {
+              "id": "parliament-2025-office-of-the-senate-ethics-officer-obj-3",
+              "name": "Information",
+              "amount": 1.0e-6
             }
           ]
         }

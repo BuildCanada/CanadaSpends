@@ -57,194 +57,229 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "transport-canada",
       "name": "Transport",
       "children": [
         {
-          "id": "transport-canada-org-transport",
-          "name": "Transport",
+          "id": "transport-canada-2015-transport-department",
+          "name": "Transport Department",
           "children": [
             {
-              "id": "transport-canada-transport-vote1",
-              "name": "Operating expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "transport-canada-transport-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.713869
-                },
-                {
-                  "id": "transport-canada-transport-vote1-less-revenues-netted-against-expenditures",
-                  "name": "Less: revenues netted against expenditures",
-                  "amount": 0.089268
-                },
-                {
-                  "id": "transport-canada-transport-vote1-duties-payable",
-                  "name": "Duties payable",
-                  "amount": 0.010679
-                }
-              ]
+              "id": "transport-canada-2015-transport-department-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.646894
             },
             {
-              "id": "transport-canada-transport-vote10",
-              "name": "Grants and contributions",
-              "vote": "Vote 10",
-              "amount": 0.581862
+              "id": "transport-canada-2015-transport-department-obj-1",
+              "name": "Personnel",
+              "amount": 0.533551
             },
             {
-              "id": "transport-canada-transport-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.263849
+              "id": "transport-canada-2015-transport-department-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.166322
             },
             {
-              "id": "transport-canada-transport-vote5",
-              "name": "Capital expenditures",
-              "vote": "Vote 5",
-              "amount": 0.124091
+              "id": "transport-canada-2015-transport-department-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.14666
+            },
+            {
+              "id": "transport-canada-2015-transport-department-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.080386
+            },
+            {
+              "id": "transport-canada-2015-transport-department-external-revenues",
+              "name": "External revenues",
+              "amount": 0.054642
+            },
+            {
+              "id": "transport-canada-2015-transport-department-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.041813
+            },
+            {
+              "id": "transport-canada-2015-transport-department-internal-revenues",
+              "name": "Internal revenues",
+              "amount": 0.034626
+            },
+            {
+              "id": "transport-canada-2015-transport-department-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.032082
+            },
+            {
+              "id": "transport-canada-2015-transport-department-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.018063
+            },
+            {
+              "id": "transport-canada-2015-transport-department-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.016137
+            },
+            {
+              "name": "Other",
+              "id": "transport-canada-2015-transport-department-other",
+              "amount": 0.012441,
+              "isAggregate": true,
+              "count": 2
             }
           ]
         },
         {
-          "id": "transport-canada-org-canadian-air-transport-security-authority",
+          "id": "transport-canada-2015-canadian-air-transport-security-authority",
           "name": "Canadian Air Transport Security Authority",
           "children": [
             {
-              "id": "transport-canada-canadian-air-transport-security-authority-vote1",
-              "name": "Payments to the Canadian Air Transport Security Authority for operating and capital expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "transport-canada-canadian-air-transport-security-authority-vote1-payments-to-crown-corporation",
-                  "name": "Payments to Crown Corporation",
-                  "amount": 0.545487
-                },
-                {
-                  "id": "transport-canada-canadian-air-transport-security-authority-vote1-capital-budget",
-                  "name": "Capital budget",
-                  "amount": 0.07841
-                }
-              ]
+              "id": "transport-canada-2015-canadian-air-transport-security-authority-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.623897
             }
           ]
         },
         {
-          "id": "transport-canada-org-via-rail-canada-inc",
+          "id": "transport-canada-2015-via-rail-canada-inc",
           "name": "VIA Rail Canada Inc.",
           "children": [
             {
-              "id": "transport-canada-via-rail-canada-inc-vote1",
-              "name": "Payments to VIA Rail Canada Inc.",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "transport-canada-via-rail-canada-inc-vote1-payments-to-crown-corporation",
-                  "name": "Payments to Crown Corporation",
-                  "amount": 0.316168
-                },
-                {
-                  "id": "transport-canada-via-rail-canada-inc-vote1-capital-budget",
-                  "name": "Capital budget",
-                  "amount": 0.090042
-                }
-              ]
+              "id": "transport-canada-2015-via-rail-canada-inc-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.40621
             }
           ]
         },
         {
-          "id": "transport-canada-org-marine-atlantic-inc",
+          "id": "transport-canada-2015-marine-atlantic-inc",
           "name": "Marine Atlantic Inc.",
           "children": [
             {
-              "id": "transport-canada-marine-atlantic-inc-vote1",
-              "name": "Payments to Marine Atlantic Inc.",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "transport-canada-marine-atlantic-inc-vote1-payments-to-crown-corporation",
-                  "name": "Payments to Crown Corporation",
-                  "amount": 0.109354
-                },
-                {
-                  "id": "transport-canada-marine-atlantic-inc-vote1-capital-budget",
-                  "name": "Capital budget",
-                  "amount": 0.01813
-                }
-              ]
+              "id": "transport-canada-2015-marine-atlantic-inc-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.127484
             }
           ]
         },
         {
-          "id": "transport-canada-org-canadian-transportation-agency",
+          "id": "transport-canada-2015-canadian-transportation-agency",
           "name": "Canadian Transportation Agency",
           "children": [
             {
-              "id": "transport-canada-canadian-transportation-agency-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.025548
+              "id": "transport-canada-2015-canadian-transportation-agency-obj-1",
+              "name": "Personnel",
+              "amount": 0.023172
             },
             {
-              "id": "transport-canada-canadian-transportation-agency-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.00323
+              "id": "transport-canada-2015-canadian-transportation-agency-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.002245
+            },
+            {
+              "id": "transport-canada-2015-canadian-transportation-agency-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000704
+            },
+            {
+              "id": "transport-canada-2015-canadian-transportation-agency-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000698
+            },
+            {
+              "id": "transport-canada-2015-canadian-transportation-agency-obj-3",
+              "name": "Information",
+              "amount": 0.000598
+            },
+            {
+              "id": "transport-canada-2015-canadian-transportation-agency-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000546
+            },
+            {
+              "id": "transport-canada-2015-canadian-transportation-agency-obj-5",
+              "name": "Rentals",
+              "amount": 0.000541
+            },
+            {
+              "id": "transport-canada-2015-canadian-transportation-agency-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000184
+            },
+            {
+              "id": "transport-canada-2015-canadian-transportation-agency-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 9.0e-5
             }
           ]
         },
         {
-          "id": "transport-canada-org-canada-post-corporation",
+          "id": "transport-canada-2015-canada-post-corporation",
           "name": "Canada Post Corporation",
           "children": [
             {
-              "id": "transport-canada-canada-post-corporation-vote1",
-              "name": "Payments to the Canada Post Corporation for special purposes",
-              "vote": "Vote 1",
+              "id": "transport-canada-2015-canada-post-corporation-obj-12",
+              "name": "Other subsidies and payments",
               "amount": 0.02221
             }
           ]
         },
         {
-          "id": "transport-canada-org-the-federal-bridge-corporation-limited",
+          "id": "transport-canada-2015-the-federal-bridge-corporation-limited",
           "name": "The Federal Bridge Corporation Limited",
           "children": [
             {
-              "id": "transport-canada-the-federal-bridge-corporation-limited-vote1",
-              "name": "Payments to The Federal Bridge Corporation Limited",
-              "vote": "Vote 1",
+              "id": "transport-canada-2015-the-federal-bridge-corporation-limited-obj-12",
+              "name": "Other subsidies and payments",
               "amount": 0.008138
             }
           ]
         },
         {
-          "id": "transport-canada-org-windsor-detroit-bridge-authority",
-          "name": "Windsor‑Detroit Bridge Authority",
+          "id": "transport-canada-2015-windsor-detroit-bridge-authority",
+          "name": "Windsor-Detroit Bridge Authority",
           "children": [
             {
-              "id": "transport-canada-windsor-detroit-bridge-authority-vote3",
-              "name": "Payments to the Windsor‑Detroit Bridge Authority",
-              "vote": "Vote 3",
+              "id": "transport-canada-2015-windsor-detroit-bridge-authority-obj-12",
+              "name": "Other subsidies and payments",
               "amount": 0.008059
             }
           ]
         },
         {
-          "id": "transport-canada-org-transportation-appeal-tribunal-of-canada",
+          "id": "transport-canada-2015-transportation-appeal-tribunal-of-canada",
           "name": "Transportation Appeal Tribunal of Canada",
           "children": [
             {
-              "id": "transport-canada-transportation-appeal-tribunal-of-canada-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.000814
+              "id": "transport-canada-2015-transportation-appeal-tribunal-of-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.000551
             },
             {
-              "id": "transport-canada-transportation-appeal-tribunal-of-canada-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 7.0e-5
+              "id": "transport-canada-2015-transportation-appeal-tribunal-of-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.000181
+            },
+            {
+              "id": "transport-canada-2015-transportation-appeal-tribunal-of-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 9.7e-5
+            },
+            {
+              "id": "transport-canada-2015-transportation-appeal-tribunal-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 2.8e-5
+            },
+            {
+              "id": "transport-canada-2015-transportation-appeal-tribunal-of-canada-obj-5",
+              "name": "Rentals",
+              "amount": 2.3e-5
+            },
+            {
+              "id": "transport-canada-2015-transportation-appeal-tribunal-of-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 5.0e-6
             }
           ]
         }

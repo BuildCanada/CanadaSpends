@@ -45,137 +45,299 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "regional-economic-development",
       "name": "Regional Economic Development Agencies",
       "children": [
         {
-          "id": "regional-economic-development-org-atlantic-canada-opportunities-agency",
-          "name": "Atlantic Canada Opportunities Agency",
+          "id": "regional-economic-development-2015-atlantic-canada-opportunities-agency-department",
+          "name": "Atlantic Canada Opportunities Agency Department",
           "children": [
             {
-              "id": "regional-economic-development-atlantic-canada-opportunities-agency-vote5",
-              "name": "Grants and contributions",
-              "vote": "Vote 5",
+              "id": "regional-economic-development-2015-atlantic-canada-opportunities-agency-department-obj-10",
+              "name": "Transfer payments",
               "amount": 0.231079
             },
             {
-              "id": "regional-economic-development-atlantic-canada-opportunities-agency-vote1",
-              "name": "Operating expenditures",
-              "vote": "Vote 1",
-              "amount": 0.065978
+              "id": "regional-economic-development-2015-atlantic-canada-opportunities-agency-department-obj-1",
+              "name": "Personnel",
+              "amount": 0.060117
             },
             {
-              "id": "regional-economic-development-atlantic-canada-opportunities-agency-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.008216
+              "id": "regional-economic-development-2015-atlantic-canada-opportunities-agency-department-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.005406
+            },
+            {
+              "id": "regional-economic-development-2015-atlantic-canada-opportunities-agency-department-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.002383
+            },
+            {
+              "id": "regional-economic-development-2015-atlantic-canada-opportunities-agency-department-obj-5",
+              "name": "Rentals",
+              "amount": 0.002062
+            },
+            {
+              "id": "regional-economic-development-2015-atlantic-canada-opportunities-agency-department-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.001854
+            },
+            {
+              "id": "regional-economic-development-2015-atlantic-canada-opportunities-agency-department-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000909
+            },
+            {
+              "id": "regional-economic-development-2015-atlantic-canada-opportunities-agency-department-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000685
+            },
+            {
+              "id": "regional-economic-development-2015-atlantic-canada-opportunities-agency-department-obj-3",
+              "name": "Information",
+              "amount": 0.000426
+            },
+            {
+              "id": "regional-economic-development-2015-atlantic-canada-opportunities-agency-department-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000352
             }
           ]
         },
         {
-          "id": "regional-economic-development-org-economic-development-agency-of-canada-for-the-regions-of-quebec",
+          "id": "regional-economic-development-2015-economic-development-agency-of-canada-for-the-regions-of-quebec",
           "name": "Economic Development Agency of Canada for the Regions of Quebec",
           "children": [
             {
-              "id": "regional-economic-development-economic-development-agency-of-canada-for-the-regions-of-quebec-vote5",
-              "name": "Grants and contributions",
-              "vote": "Vote 5",
-              "amount": 0.216412
+              "id": "regional-economic-development-2015-economic-development-agency-of-canada-for-the-regions-of-quebec-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.212168
             },
             {
-              "id": "regional-economic-development-economic-development-agency-of-canada-for-the-regions-of-quebec-vote1",
-              "name": "Operating expenditures",
-              "vote": "Vote 1",
-              "amount": 0.037486
+              "id": "regional-economic-development-2015-economic-development-agency-of-canada-for-the-regions-of-quebec-obj-1",
+              "name": "Personnel",
+              "amount": 0.033376
+            },
+            {
+              "id": "regional-economic-development-2015-economic-development-agency-of-canada-for-the-regions-of-quebec-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.004737
+            },
+            {
+              "id": "regional-economic-development-2015-economic-development-agency-of-canada-for-the-regions-of-quebec-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000979
+            },
+            {
+              "id": "regional-economic-development-2015-economic-development-agency-of-canada-for-the-regions-of-quebec-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000859
+            },
+            {
+              "id": "regional-economic-development-2015-economic-development-agency-of-canada-for-the-regions-of-quebec-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.00081
+            },
+            {
+              "id": "regional-economic-development-2015-economic-development-agency-of-canada-for-the-regions-of-quebec-obj-5",
+              "name": "Rentals",
+              "amount": 0.000492
+            },
+            {
+              "id": "regional-economic-development-2015-economic-development-agency-of-canada-for-the-regions-of-quebec-obj-3",
+              "name": "Information",
+              "amount": 0.000316
+            },
+            {
+              "id": "regional-economic-development-2015-economic-development-agency-of-canada-for-the-regions-of-quebec-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000138
+            },
+            {
+              "id": "regional-economic-development-2015-economic-development-agency-of-canada-for-the-regions-of-quebec-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 2.3e-5
             }
           ]
         },
         {
-          "id": "regional-economic-development-org-western-economic-diversification",
+          "id": "regional-economic-development-2015-western-economic-diversification",
           "name": "Western Economic Diversification",
           "children": [
             {
-              "id": "regional-economic-development-western-economic-diversification-vote5",
-              "name": "Grants and contributions",
-              "vote": "Vote 5",
-              "amount": 0.125946
+              "id": "regional-economic-development-2015-western-economic-diversification-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.121698
             },
             {
-              "id": "regional-economic-development-western-economic-diversification-vote1",
-              "name": "Operating expenditures",
-              "vote": "Vote 1",
-              "amount": 0.036056
+              "id": "regional-economic-development-2015-western-economic-diversification-obj-1",
+              "name": "Personnel",
+              "amount": 0.031039
+            },
+            {
+              "id": "regional-economic-development-2015-western-economic-diversification-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.005026
+            },
+            {
+              "id": "regional-economic-development-2015-western-economic-diversification-obj-5",
+              "name": "Rentals",
+              "amount": 0.001261
+            },
+            {
+              "id": "regional-economic-development-2015-western-economic-diversification-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000974
+            },
+            {
+              "id": "regional-economic-development-2015-western-economic-diversification-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.00097
+            },
+            {
+              "id": "regional-economic-development-2015-western-economic-diversification-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000648
+            },
+            {
+              "id": "regional-economic-development-2015-western-economic-diversification-obj-3",
+              "name": "Information",
+              "amount": 0.000212
+            },
+            {
+              "id": "regional-economic-development-2015-western-economic-diversification-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.00015
+            },
+            {
+              "id": "regional-economic-development-2015-western-economic-diversification-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 2.4e-5
             }
           ]
         },
         {
-          "id": "regional-economic-development-org-federal-economic-development-agency-for-southern-ontario",
+          "id": "regional-economic-development-2015-federal-economic-development-agency-for-southern-ontario",
           "name": "Federal Economic Development Agency for Southern Ontario",
           "children": [
             {
-              "id": "regional-economic-development-federal-economic-development-agency-for-southern-ontario-vote5",
-              "name": "Grants and contributions",
-              "vote": "Vote 5",
+              "id": "regional-economic-development-2015-federal-economic-development-agency-for-southern-ontario-obj-10",
+              "name": "Transfer payments",
               "amount": 0.074386
             },
             {
-              "id": "regional-economic-development-federal-economic-development-agency-for-southern-ontario-vote1",
-              "name": "Operating expenditures",
-              "vote": "Vote 1",
-              "amount": 0.02666
+              "id": "regional-economic-development-2015-federal-economic-development-agency-for-southern-ontario-obj-1",
+              "name": "Personnel",
+              "amount": 0.022175
             },
             {
-              "id": "regional-economic-development-federal-economic-development-agency-for-southern-ontario-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.003057
+              "id": "regional-economic-development-2015-federal-economic-development-agency-for-southern-ontario-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.004032
+            },
+            {
+              "id": "regional-economic-development-2015-federal-economic-development-agency-for-southern-ontario-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000928
+            },
+            {
+              "id": "regional-economic-development-2015-federal-economic-development-agency-for-southern-ontario-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000837
+            },
+            {
+              "id": "regional-economic-development-2015-federal-economic-development-agency-for-southern-ontario-obj-3",
+              "name": "Information",
+              "amount": 0.000607
+            },
+            {
+              "id": "regional-economic-development-2015-federal-economic-development-agency-for-southern-ontario-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000587
+            },
+            {
+              "id": "regional-economic-development-2015-federal-economic-development-agency-for-southern-ontario-obj-5",
+              "name": "Rentals",
+              "amount": 0.000402
+            },
+            {
+              "id": "regional-economic-development-2015-federal-economic-development-agency-for-southern-ontario-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 9.5e-5
+            },
+            {
+              "id": "regional-economic-development-2015-federal-economic-development-agency-for-southern-ontario-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 5.4e-5
             }
           ]
         },
         {
-          "id": "regional-economic-development-org-canadian-northern-economic-development-agency",
+          "id": "regional-economic-development-2015-canadian-northern-economic-development-agency",
           "name": "Canadian Northern Economic Development Agency",
           "children": [
             {
-              "id": "regional-economic-development-canadian-northern-economic-development-agency-vote5",
-              "name": "Contributions",
-              "vote": "Vote 5",
-              "amount": 0.035582
+              "id": "regional-economic-development-2015-canadian-northern-economic-development-agency-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.03412
             },
             {
-              "id": "regional-economic-development-canadian-northern-economic-development-agency-vote1",
-              "name": "Operating expenditures",
-              "vote": "Vote 1",
-              "amount": 0.013539
+              "id": "regional-economic-development-2015-canadian-northern-economic-development-agency-obj-1",
+              "name": "Personnel",
+              "amount": 0.010586
+            },
+            {
+              "id": "regional-economic-development-2015-canadian-northern-economic-development-agency-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.002239
+            },
+            {
+              "id": "regional-economic-development-2015-canadian-northern-economic-development-agency-obj-5",
+              "name": "Rentals",
+              "amount": 0.000844
+            },
+            {
+              "id": "regional-economic-development-2015-canadian-northern-economic-development-agency-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000821
+            },
+            {
+              "id": "regional-economic-development-2015-canadian-northern-economic-development-agency-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000274
+            },
+            {
+              "id": "regional-economic-development-2015-canadian-northern-economic-development-agency-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000115
+            },
+            {
+              "id": "regional-economic-development-2015-canadian-northern-economic-development-agency-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 7.0e-5
+            },
+            {
+              "id": "regional-economic-development-2015-canadian-northern-economic-development-agency-obj-3",
+              "name": "Information",
+              "amount": 4.3e-5
+            },
+            {
+              "id": "regional-economic-development-2015-canadian-northern-economic-development-agency-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 9.0e-6
             }
           ]
         },
         {
-          "id": "regional-economic-development-org-enterprise-cape-breton-corporation",
+          "id": "regional-economic-development-2015-enterprise-cape-breton-corporation",
           "name": "Enterprise Cape Breton Corporation",
           "children": [
             {
-              "id": "regional-economic-development-enterprise-cape-breton-corporation-vote1",
-              "name": "Payments to the Enterprise Cape Breton Corporation",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "regional-economic-development-enterprise-cape-breton-corporation-vote1-environmental-and-human-resources-obligations",
-                  "name": "Environmental and human resources obligations",
-                  "amount": 0.00814
-                },
-                {
-                  "id": "regional-economic-development-enterprise-cape-breton-corporation-vote1-payments-to-crown-corporation",
-                  "name": "Payments to Crown Corporation",
-                  "amount": 0.001698
-                },
-                {
-                  "id": "regional-economic-development-enterprise-cape-breton-corporation-vote1-capital-budget",
-                  "name": "Capital budget",
-                  "amount": 2.7e-5
-                }
-              ]
+              "id": "regional-economic-development-2015-enterprise-cape-breton-corporation-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.009866
             }
           ]
         }

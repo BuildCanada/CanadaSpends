@@ -57,80 +57,120 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "veterans-affairs",
       "name": "Veterans Affairs",
       "children": [
         {
-          "id": "veterans-affairs-org-department-of-veterans-affairs",
+          "id": "veterans-affairs-2019-department-of-veterans-affairs",
           "name": "Department of Veterans Affairs",
           "children": [
             {
-              "id": "veterans-affairs-department-of-veterans-affairs-vote5",
-              "name": "Grants and contributions",
-              "vote": "Vote 5",
-              "amount": 3.655819
+              "id": "veterans-affairs-2019-department-of-veterans-affairs-obj-10",
+              "name": "Transfer payments",
+              "amount": 3.655865
             },
             {
-              "id": "veterans-affairs-department-of-veterans-affairs-vote1",
-              "name": "Operating expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "veterans-affairs-department-of-veterans-affairs-vote1-other-health-purchased-services",
-                  "name": "Other Health Purchased Services",
-                  "amount": 0.621638
-                },
-                {
-                  "id": "veterans-affairs-department-of-veterans-affairs-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.313357
-                },
-                {
-                  "id": "veterans-affairs-department-of-veterans-affairs-vote1-veterans-support-services",
-                  "name": "Veterans Support Services",
-                  "amount": 0.053173
-                },
-                {
-                  "id": "veterans-affairs-department-of-veterans-affairs-vote1-budget-2017-outreach-strategy",
-                  "name": "Budget 2017 Outreach Strategy",
-                  "amount": 0.005848
-                },
-                {
-                  "id": "veterans-affairs-department-of-veterans-affairs-vote1-ste-anne-s-hospital",
-                  "name": "Ste. Anne's Hospital",
-                  "amount": 0.005489
-                },
-                {
-                  "id": "veterans-affairs-department-of-veterans-affairs-vote1-advertising-initiatives",
-                  "name": "Advertising Initiatives",
-                  "amount": 0.002135
-                }
-              ]
+              "id": "veterans-affairs-2019-department-of-veterans-affairs-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.48598
             },
             {
-              "id": "veterans-affairs-department-of-veterans-affairs-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.033004
+              "id": "veterans-affairs-2019-department-of-veterans-affairs-obj-1",
+              "name": "Personnel",
+              "amount": 0.257606
+            },
+            {
+              "id": "veterans-affairs-2019-department-of-veterans-affairs-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.219005
+            },
+            {
+              "id": "veterans-affairs-2019-department-of-veterans-affairs-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.044314
+            },
+            {
+              "id": "veterans-affairs-2019-department-of-veterans-affairs-obj-5",
+              "name": "Rentals",
+              "amount": 0.009109
+            },
+            {
+              "id": "veterans-affairs-2019-department-of-veterans-affairs-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.00698
+            },
+            {
+              "id": "veterans-affairs-2019-department-of-veterans-affairs-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.004874
+            },
+            {
+              "id": "veterans-affairs-2019-department-of-veterans-affairs-obj-3",
+              "name": "Information",
+              "amount": 0.004556
+            },
+            {
+              "id": "veterans-affairs-2019-department-of-veterans-affairs-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.001696
+            },
+            {
+              "id": "veterans-affairs-2019-department-of-veterans-affairs-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.000478
             }
           ]
         },
         {
-          "id": "veterans-affairs-org-veterans-review-and-appeal-board",
+          "id": "veterans-affairs-2019-veterans-review-and-appeal-board",
           "name": "Veterans Review and Appeal Board",
           "children": [
             {
-              "id": "veterans-affairs-veterans-review-and-appeal-board-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.008817
+              "id": "veterans-affairs-2019-veterans-review-and-appeal-board-obj-1",
+              "name": "Personnel",
+              "amount": 0.008264
             },
             {
-              "id": "veterans-affairs-veterans-review-and-appeal-board-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.001089
+              "id": "veterans-affairs-2019-veterans-review-and-appeal-board-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000687
+            },
+            {
+              "id": "veterans-affairs-2019-veterans-review-and-appeal-board-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.00055
+            },
+            {
+              "id": "veterans-affairs-2019-veterans-review-and-appeal-board-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.00016
+            },
+            {
+              "id": "veterans-affairs-2019-veterans-review-and-appeal-board-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 9.5e-5
+            },
+            {
+              "id": "veterans-affairs-2019-veterans-review-and-appeal-board-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 8.4e-5
+            },
+            {
+              "id": "veterans-affairs-2019-veterans-review-and-appeal-board-obj-5",
+              "name": "Rentals",
+              "amount": 3.6e-5
+            },
+            {
+              "id": "veterans-affairs-2019-veterans-review-and-appeal-board-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 2.6e-5
+            },
+            {
+              "id": "veterans-affairs-2019-veterans-review-and-appeal-board-obj-3",
+              "name": "Information",
+              "amount": 4.0e-6
             }
           ]
         }

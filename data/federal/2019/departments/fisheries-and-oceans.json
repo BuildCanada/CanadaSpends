@@ -57,48 +57,76 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "fisheries-and-oceans",
       "name": "Fisheries, Oceans and the Canadian Coast Guard",
       "children": [
         {
-          "id": "fisheries-and-oceans-org-department-of-fisheries-and-oceans",
+          "id": "fisheries-and-oceans-2019-department-of-fisheries-and-oceans",
           "name": "Department of Fisheries and Oceans",
           "children": [
             {
-              "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote1",
-              "name": "Operating expenditures",
-              "vote": "Vote 1",
-              "amount": 1.704183
+              "id": "fisheries-and-oceans-2019-department-of-fisheries-and-oceans-obj-1",
+              "name": "Personnel",
+              "amount": 1.16463
             },
             {
-              "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote5",
-              "name": "Capital expenditures",
-              "vote": "Vote 5",
-              "amount": 1.280687
+              "id": "fisheries-and-oceans-2019-department-of-fisheries-and-oceans-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.988201
             },
             {
-              "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote10",
-              "name": "Grants and contributions",
-              "vote": "Vote 10",
-              "children": [
-                {
-                  "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote10-grants-and-contributions",
-                  "name": "Grants and contributions",
-                  "amount": 0.185075
-                },
-                {
-                  "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote10-whales-innovation-challenge",
-                  "name": "Whales Innovation Challenge",
-                  "amount": 0.0003
-                }
-              ]
+              "id": "fisheries-and-oceans-2019-department-of-fisheries-and-oceans-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.392895
             },
             {
-              "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.153875
+              "id": "fisheries-and-oceans-2019-department-of-fisheries-and-oceans-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.185375
+            },
+            {
+              "id": "fisheries-and-oceans-2019-department-of-fisheries-and-oceans-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.159277
+            },
+            {
+              "id": "fisheries-and-oceans-2019-department-of-fisheries-and-oceans-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.148557
+            },
+            {
+              "id": "fisheries-and-oceans-2019-department-of-fisheries-and-oceans-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.120447
+            },
+            {
+              "id": "fisheries-and-oceans-2019-department-of-fisheries-and-oceans-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.09523
+            },
+            {
+              "id": "fisheries-and-oceans-2019-department-of-fisheries-and-oceans-external-revenues",
+              "name": "External revenues",
+              "amount": -0.041197
+            },
+            {
+              "id": "fisheries-and-oceans-2019-department-of-fisheries-and-oceans-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.03617
+            },
+            {
+              "name": "Other",
+              "id": "fisheries-and-oceans-2019-department-of-fisheries-and-oceans-other",
+              "amount": 0.033338,
+              "isAggregate": true,
+              "count": 3
+            },
+            {
+              "id": "fisheries-and-oceans-2019-department-of-fisheries-and-oceans-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -1.2e-5
             }
           ]
         }

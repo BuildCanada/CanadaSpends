@@ -180,3 +180,58 @@ published table, reason-coded source-correction).
 - **HICC 2023 entities:** Office of the Chief Electoral Officer + Commissioner of
   Official Languages appear under housing-infrastructure-communities — verify the
   portfolio grouping for that year.
+
+## Standard-object miniSankey reconciliation (2026-07-06)
+
+The department miniSankey is the **standard-object** breakdown (department →
+organization → the twelve GC standard objects, with negative external/internal
+revenue leaves), sourced from the `dmac-meso` open dataset (one edition per PA
+year 2014–2025). Vote/allotment data continues to feed `votes[]` and the
+line-item table unchanged.
+
+**Reconciliation basis.** Vol II allotment `expenditures` equal the
+standard-object **GROSS** total (Σ of the twelve objects) for the same
+ministerial scope — verified exact for e.g. National Defence, Justice and
+Treasury Board (allotment − gross ≈ 0.000). So the per-department check
+compares standard-object GROSS to allotment expenditures, floor
+`max(2%, $50M)`. The revenue leaves are a display device (net presentation);
+they are NOT netted for reconciliation. Out-of-tolerance department-years are
+written to `export_errors.md` (non-blocking) — all 12 years still ship.
+
+**Systematic out-of-tolerance causes (documented, not data errors):**
+
+- **Net-voted common services** (public-services-and-procurement-canada
+  +25–45%; also public-safety, treasury-board): allotment reflects net-voted
+  authorities while the standard-object table reports gross object spending, so
+  gross > allotment. Structural, every year.
+- **Pre-2018 presentation basis:** in editions ≤2017 many departments’
+  standard-object gross runs a few % _below_ allotment (CRA, justice,
+  public-safety, ESDC, health, DND ~2–15%). Whole-of-year presentation change;
+  the ≥2018 editions reconcile cleanly.
+- **Portfolio scope (immigration-refugees-and-citizenship, +8–27%):** the meso
+  portfolio pools the Immigration and Refugee Board / settlement bodies that the
+  allotment side resolves elsewhere.
+- **FY2020–21 governor-general (−99%):** an ALLOTMENT-side artifact — code
+  `gn-dg` is page-title noise ("Public Accounts of Canada") mapped to
+  governor-general, pulling ~$2.7–3.2B (Shared Services Canada) into the
+  portfolio total. The standard-object figure (~$25M) is the accurate one. See
+  the Governor General note above.
+- **2016 innovation/transport lumping:** the org-less 2016–2018 allotment lumps
+  agencies at ministry level, so the standard-object org split diverges.
+
+**Orphaned meso spending (excluded, no allotment page that year):** Shared
+Services Canada ("Digital Government", FY2020–21, ~$2B) and Infrastructure
+(FY2016, ~$3.5B) have no allotment portfolio page those years, so their meso
+rows are dropped from the breakdown (they belong to no shipped department).
+
+**RDA reattribution.** Regional development agencies (PacifiCan, FedDev, CanNor,
+ACOA, WD, EDC-Quebec) are moved to `regional-economic-development` via the
+organization overrides extended to the meso dataset, guarded by year: the
+override only wins when that slug has allotment data (2014–2015, 2019+), so in
+2016–2018 (no separate RDA page) they stay with the host portfolio, matching
+the allotment side.
+
+**Portfolio label crosswalk.** The meso portfolio column carries PA-era wording
+that the allotment extraction modernized; matching is space/comma/footnote
+insensitive, with a small `meso_portfolio_aliases` list for genuinely renamed
+portfolios (e.g. "Foreign Affairs, Trade and Development" → global-affairs).

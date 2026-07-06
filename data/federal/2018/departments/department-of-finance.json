@@ -57,40 +57,283 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "department-of-finance",
       "name": "Finance",
       "children": [
         {
-          "id": "department-of-finance-org-finance",
-          "name": "Finance",
+          "id": "department-of-finance-2018-department-of-finance",
+          "name": "Department of Finance",
           "children": [
             {
-              "id": "department-of-finance-finance-vote",
-              "name": "Total appropriations (vote-level detail not published for this edition)",
-              "vote": "All votes",
-              "children": [
-                {
-                  "id": "department-of-finance-finance-vote-statutory-amounts",
-                  "name": "Statutory amounts",
-                  "amount": 90.384837
-                },
-                {
-                  "id": "department-of-finance-finance-vote-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.225278
-                },
-                {
-                  "id": "department-of-finance-finance-vote-grants-and-contributions",
-                  "name": "Grants and contributions",
-                  "amount": 0.030183
-                },
-                {
-                  "id": "department-of-finance-finance-vote-canada-s-2018-g7-presidency",
-                  "name": "Canada's 2018 G7 Presidency",
-                  "amount": 0.001015
-                }
-              ]
+              "id": "department-of-finance-2018-department-of-finance-obj-10",
+              "name": "Transfer payments",
+              "amount": 68.970039
+            },
+            {
+              "id": "department-of-finance-2018-department-of-finance-obj-11",
+              "name": "Public debt charges",
+              "amount": 20.838325
+            },
+            {
+              "id": "department-of-finance-2018-department-of-finance-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.313146
+            },
+            {
+              "id": "department-of-finance-2018-department-of-finance-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.094439
+            },
+            {
+              "id": "department-of-finance-2018-department-of-finance-obj-1",
+              "name": "Personnel",
+              "amount": 0.089885
+            },
+            {
+              "id": "department-of-finance-2018-department-of-finance-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.011967
+            },
+            {
+              "id": "department-of-finance-2018-department-of-finance-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.002901
+            },
+            {
+              "id": "department-of-finance-2018-department-of-finance-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.00212
+            },
+            {
+              "id": "department-of-finance-2018-department-of-finance-obj-3",
+              "name": "Information",
+              "amount": 0.00206
+            },
+            {
+              "id": "department-of-finance-2018-department-of-finance-obj-5",
+              "name": "Rentals",
+              "amount": 0.001475
+            },
+            {
+              "id": "department-of-finance-2018-department-of-finance-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000361
+            }
+          ]
+        },
+        {
+          "id": "department-of-finance-2018-office-of-the-superintendent-of-financial-institutions",
+          "name": "Office of the Superintendent of Financial Institutions",
+          "children": [
+            {
+              "id": "department-of-finance-2018-office-of-the-superintendent-of-financial-institutions-obj-1",
+              "name": "Personnel",
+              "amount": 0.117114
+            },
+            {
+              "id": "department-of-finance-2018-office-of-the-superintendent-of-financial-institutions-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.014714
+            },
+            {
+              "id": "department-of-finance-2018-office-of-the-superintendent-of-financial-institutions-obj-5",
+              "name": "Rentals",
+              "amount": 0.011381
+            },
+            {
+              "id": "department-of-finance-2018-office-of-the-superintendent-of-financial-institutions-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.004138
+            },
+            {
+              "id": "department-of-finance-2018-office-of-the-superintendent-of-financial-institutions-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.004025
+            },
+            {
+              "id": "department-of-finance-2018-office-of-the-superintendent-of-financial-institutions-obj-3",
+              "name": "Information",
+              "amount": 0.001479
+            },
+            {
+              "id": "department-of-finance-2018-office-of-the-superintendent-of-financial-institutions-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.000938
+            },
+            {
+              "id": "department-of-finance-2018-office-of-the-superintendent-of-financial-institutions-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000835
+            },
+            {
+              "id": "department-of-finance-2018-office-of-the-superintendent-of-financial-institutions-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.00033
+            },
+            {
+              "id": "department-of-finance-2018-office-of-the-superintendent-of-financial-institutions-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 4.8e-5
+            }
+          ]
+        },
+        {
+          "id": "department-of-finance-2018-office-of-the-auditor-general",
+          "name": "Office of the Auditor General",
+          "children": [
+            {
+              "id": "department-of-finance-2018-office-of-the-auditor-general-obj-1",
+              "name": "Personnel",
+              "amount": 0.070701
+            },
+            {
+              "id": "department-of-finance-2018-office-of-the-auditor-general-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.005632
+            },
+            {
+              "id": "department-of-finance-2018-office-of-the-auditor-general-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.003469
+            },
+            {
+              "id": "department-of-finance-2018-office-of-the-auditor-general-obj-5",
+              "name": "Rentals",
+              "amount": 0.001156
+            },
+            {
+              "id": "department-of-finance-2018-office-of-the-auditor-general-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000851
+            },
+            {
+              "id": "department-of-finance-2018-office-of-the-auditor-general-obj-3",
+              "name": "Information",
+              "amount": 0.00064
+            },
+            {
+              "id": "department-of-finance-2018-office-of-the-auditor-general-external-revenues",
+              "name": "External revenues",
+              "amount": -0.000398
+            },
+            {
+              "id": "department-of-finance-2018-office-of-the-auditor-general-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.00021
+            },
+            {
+              "id": "department-of-finance-2018-office-of-the-auditor-general-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000159
+            },
+            {
+              "id": "department-of-finance-2018-office-of-the-auditor-general-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 1.0e-5
+            }
+          ]
+        },
+        {
+          "id": "department-of-finance-2018-financial-transactions-and-reports-analysis-centre-of-canada",
+          "name": "Financial Transactions and Reports Analysis Centre of Canada",
+          "children": [
+            {
+              "id": "department-of-finance-2018-financial-transactions-and-reports-analysis-centre-of-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.041897
+            },
+            {
+              "id": "department-of-finance-2018-financial-transactions-and-reports-analysis-centre-of-canada-obj-5",
+              "name": "Rentals",
+              "amount": 0.005534
+            },
+            {
+              "id": "department-of-finance-2018-financial-transactions-and-reports-analysis-centre-of-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.004205
+            },
+            {
+              "id": "department-of-finance-2018-financial-transactions-and-reports-analysis-centre-of-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.001379
+            },
+            {
+              "id": "department-of-finance-2018-financial-transactions-and-reports-analysis-centre-of-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.001071
+            },
+            {
+              "id": "department-of-finance-2018-financial-transactions-and-reports-analysis-centre-of-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000427
+            },
+            {
+              "id": "department-of-finance-2018-financial-transactions-and-reports-analysis-centre-of-canada-obj-3",
+              "name": "Information",
+              "amount": 0.00038
+            },
+            {
+              "id": "department-of-finance-2018-financial-transactions-and-reports-analysis-centre-of-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000279
+            },
+            {
+              "id": "department-of-finance-2018-financial-transactions-and-reports-analysis-centre-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 7.6e-5
+            }
+          ]
+        },
+        {
+          "id": "department-of-finance-2018-financial-consumer-agency-of-canada",
+          "name": "Financial Consumer Agency of Canada",
+          "children": [
+            {
+              "id": "department-of-finance-2018-financial-consumer-agency-of-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.013983
+            },
+            {
+              "id": "department-of-finance-2018-financial-consumer-agency-of-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.003721
+            },
+            {
+              "id": "department-of-finance-2018-financial-consumer-agency-of-canada-obj-3",
+              "name": "Information",
+              "amount": 0.001092
+            },
+            {
+              "id": "department-of-finance-2018-financial-consumer-agency-of-canada-obj-5",
+              "name": "Rentals",
+              "amount": 0.001044
+            },
+            {
+              "id": "department-of-finance-2018-financial-consumer-agency-of-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000772
+            },
+            {
+              "id": "department-of-finance-2018-financial-consumer-agency-of-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000697
+            },
+            {
+              "id": "department-of-finance-2018-financial-consumer-agency-of-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 7.6e-5
+            },
+            {
+              "id": "department-of-finance-2018-financial-consumer-agency-of-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 6.8e-5
+            },
+            {
+              "id": "department-of-finance-2018-financial-consumer-agency-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 6.5e-5
             }
           ]
         }

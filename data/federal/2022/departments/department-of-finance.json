@@ -57,149 +57,288 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "department-of-finance",
       "name": "Finance",
       "children": [
         {
-          "id": "department-of-finance-org-department-of-finance",
+          "id": "department-of-finance-2022-department-of-finance",
           "name": "Department of Finance",
           "children": [
             {
-              "id": "department-of-finance-department-of-finance-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 106.259274
+              "id": "department-of-finance-2022-department-of-finance-obj-10",
+              "name": "Transfer payments",
+              "amount": 82.869367
             },
             {
-              "id": "department-of-finance-department-of-finance-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "department-of-finance-department-of-finance-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.11511
-                },
-                {
-                  "id": "department-of-finance-department-of-finance-vote1-advertising-initiatives",
-                  "name": "Advertising Initiatives",
-                  "amount": 0.009417
-                },
-                {
-                  "id": "department-of-finance-department-of-finance-vote1-grants-and-contributions",
-                  "name": "Grants and contributions",
-                  "amount": 0.004251
-                }
-              ]
+              "id": "department-of-finance-2022-department-of-finance-obj-11",
+              "name": "Public debt charges",
+              "amount": 22.98797
             },
             {
-              "id": "department-of-finance-department-of-finance-vote5",
-              "name": "Authority for amount by way of direct payments to the International Development Association pursuant to Bretton Woods and Related Agreements Act",
-              "vote": "Vote 5",
-              "amount": 0.0
+              "id": "department-of-finance-2022-department-of-finance-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.308848
+            },
+            {
+              "id": "department-of-finance-2022-department-of-finance-obj-1",
+              "name": "Personnel",
+              "amount": 0.11121
+            },
+            {
+              "id": "department-of-finance-2022-department-of-finance-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.084798
+            },
+            {
+              "id": "department-of-finance-2022-department-of-finance-obj-3",
+              "name": "Information",
+              "amount": 0.011516
+            },
+            {
+              "id": "department-of-finance-2022-department-of-finance-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.010326
+            },
+            {
+              "id": "department-of-finance-2022-department-of-finance-obj-5",
+              "name": "Rentals",
+              "amount": 0.001548
+            },
+            {
+              "id": "department-of-finance-2022-department-of-finance-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.001377
+            },
+            {
+              "id": "department-of-finance-2022-department-of-finance-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000832
+            },
+            {
+              "id": "department-of-finance-2022-department-of-finance-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000211
+            },
+            {
+              "id": "department-of-finance-2022-department-of-finance-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 4.9e-5
             }
           ]
         },
         {
-          "id": "department-of-finance-org-office-of-the-superintendent-of-financial-institutions",
+          "id": "department-of-finance-2022-office-of-the-superintendent-of-financial-institutions",
           "name": "Office of the Superintendent of Financial Institutions",
           "children": [
             {
-              "id": "department-of-finance-office-of-the-superintendent-of-financial-institutions-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.206384
+              "id": "department-of-finance-2022-office-of-the-superintendent-of-financial-institutions-obj-1",
+              "name": "Personnel",
+              "amount": 0.166769
             },
             {
-              "id": "department-of-finance-office-of-the-superintendent-of-financial-institutions-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.001244
+              "id": "department-of-finance-2022-office-of-the-superintendent-of-financial-institutions-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.018155
+            },
+            {
+              "id": "department-of-finance-2022-office-of-the-superintendent-of-financial-institutions-obj-5",
+              "name": "Rentals",
+              "amount": 0.014822
+            },
+            {
+              "id": "department-of-finance-2022-office-of-the-superintendent-of-financial-institutions-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.003496
+            },
+            {
+              "id": "department-of-finance-2022-office-of-the-superintendent-of-financial-institutions-obj-3",
+              "name": "Information",
+              "amount": 0.001823
+            },
+            {
+              "id": "department-of-finance-2022-office-of-the-superintendent-of-financial-institutions-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.00123
+            },
+            {
+              "id": "department-of-finance-2022-office-of-the-superintendent-of-financial-institutions-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000883
+            },
+            {
+              "id": "department-of-finance-2022-office-of-the-superintendent-of-financial-institutions-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.000311
+            },
+            {
+              "id": "department-of-finance-2022-office-of-the-superintendent-of-financial-institutions-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000126
+            },
+            {
+              "id": "department-of-finance-2022-office-of-the-superintendent-of-financial-institutions-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 1.4e-5
             }
           ]
         },
         {
-          "id": "department-of-finance-org-office-of-the-auditor-general",
+          "id": "department-of-finance-2022-office-of-the-auditor-general",
           "name": "Office of the Auditor General",
           "children": [
             {
-              "id": "department-of-finance-office-of-the-auditor-general-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.100707
+              "id": "department-of-finance-2022-office-of-the-auditor-general-obj-1",
+              "name": "Personnel",
+              "amount": 0.095282
             },
             {
-              "id": "department-of-finance-office-of-the-auditor-general-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.011611
+              "id": "department-of-finance-2022-office-of-the-auditor-general-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.011672
+            },
+            {
+              "id": "department-of-finance-2022-office-of-the-auditor-general-obj-5",
+              "name": "Rentals",
+              "amount": 0.002106
+            },
+            {
+              "id": "department-of-finance-2022-office-of-the-auditor-general-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.001268
+            },
+            {
+              "id": "department-of-finance-2022-office-of-the-auditor-general-obj-3",
+              "name": "Information",
+              "amount": 0.001019
+            },
+            {
+              "id": "department-of-finance-2022-office-of-the-auditor-general-external-revenues",
+              "name": "External revenues",
+              "amount": -0.000947
+            },
+            {
+              "id": "department-of-finance-2022-office-of-the-auditor-general-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000699
+            },
+            {
+              "id": "department-of-finance-2022-office-of-the-auditor-general-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000132
+            },
+            {
+              "id": "department-of-finance-2022-office-of-the-auditor-general-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000103
+            },
+            {
+              "id": "department-of-finance-2022-office-of-the-auditor-general-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 3.7e-5
             }
           ]
         },
         {
-          "id": "department-of-finance-org-financial-transactions-and-reports-analysis-centre-of-canada",
+          "id": "department-of-finance-2022-financial-transactions-and-reports-analysis-centre-of-canada",
           "name": "Financial Transactions and Reports Analysis Centre of Canada",
           "children": [
             {
-              "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.0611
-                },
-                {
-                  "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote1-critical-im-it-infrastructure-systems-and-services",
-                  "name": "Critical IM/IT Infrastructure Systems and Services",
-                  "amount": 0.005672
-                },
-                {
-                  "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote1-support-accommodation-for-public-services-and-procurement-canada-arrangement",
-                  "name": "Support Accommodation for Public Services and Procurement Canada arrangement",
-                  "amount": 0.001401
-                },
-                {
-                  "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote1-strengthening-compliance-outreach-and-examinations",
-                  "name": "Strengthening Compliance Outreach and Examinations",
-                  "amount": 0.000853
-                },
-                {
-                  "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote1-support-accommodation-for-headquarters-relocation",
-                  "name": "Support Accommodation for Headquarters Relocation",
-                  "amount": 0.000688
-                },
-                {
-                  "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote1-expanding-public-private-partnership-projects",
-                  "name": "Expanding Public Private Partnership Projects",
-                  "amount": 0.000394
-                },
-                {
-                  "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote1-support-im-it-for-headquarters-relocation",
-                  "name": "Support IM/IT for Headquarters Relocation",
-                  "amount": 0.000181
-                }
-              ]
+              "id": "department-of-finance-2022-financial-transactions-and-reports-analysis-centre-of-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.054962
             },
             {
-              "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.006739
+              "id": "department-of-finance-2022-financial-transactions-and-reports-analysis-centre-of-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.00965
+            },
+            {
+              "id": "department-of-finance-2022-financial-transactions-and-reports-analysis-centre-of-canada-obj-5",
+              "name": "Rentals",
+              "amount": 0.007572
+            },
+            {
+              "id": "department-of-finance-2022-financial-transactions-and-reports-analysis-centre-of-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.001578
+            },
+            {
+              "id": "department-of-finance-2022-financial-transactions-and-reports-analysis-centre-of-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.001087
+            },
+            {
+              "id": "department-of-finance-2022-financial-transactions-and-reports-analysis-centre-of-canada-obj-3",
+              "name": "Information",
+              "amount": 0.001057
+            },
+            {
+              "id": "department-of-finance-2022-financial-transactions-and-reports-analysis-centre-of-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.00085
+            },
+            {
+              "id": "department-of-finance-2022-financial-transactions-and-reports-analysis-centre-of-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000281
+            },
+            {
+              "id": "department-of-finance-2022-financial-transactions-and-reports-analysis-centre-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": -9.0e-6
             }
           ]
         },
         {
-          "id": "department-of-finance-org-financial-consumer-agency-of-canada",
+          "id": "department-of-finance-2022-financial-consumer-agency-of-canada",
           "name": "Financial Consumer Agency of Canada",
           "children": [
             {
-              "id": "department-of-finance-financial-consumer-agency-of-canada-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.038658
+              "id": "department-of-finance-2022-financial-consumer-agency-of-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.025369
+            },
+            {
+              "id": "department-of-finance-2022-financial-consumer-agency-of-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.007729
+            },
+            {
+              "id": "department-of-finance-2022-financial-consumer-agency-of-canada-obj-5",
+              "name": "Rentals",
+              "amount": 0.002746
+            },
+            {
+              "id": "department-of-finance-2022-financial-consumer-agency-of-canada-obj-3",
+              "name": "Information",
+              "amount": 0.001606
+            },
+            {
+              "id": "department-of-finance-2022-financial-consumer-agency-of-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000934
+            },
+            {
+              "id": "department-of-finance-2022-financial-consumer-agency-of-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000183
+            },
+            {
+              "id": "department-of-finance-2022-financial-consumer-agency-of-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 5.7e-5
+            },
+            {
+              "id": "department-of-finance-2022-financial-consumer-agency-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 1.8e-5
+            },
+            {
+              "id": "department-of-finance-2022-financial-consumer-agency-of-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 1.6e-5
             }
           ]
         }

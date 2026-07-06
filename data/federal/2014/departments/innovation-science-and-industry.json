@@ -57,239 +57,478 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "innovation-science-and-industry",
       "name": "Innovation, Science and Industry",
       "children": [
         {
-          "id": "innovation-science-and-industry-org-industry",
-          "name": "Industry",
+          "id": "innovation-science-and-industry-2014-industry-department",
+          "name": "Industry Department",
           "children": [
             {
-              "id": "innovation-science-and-industry-industry-vote10",
-              "name": "Grants and contributions",
-              "vote": "Vote 10",
-              "amount": 0.557546
+              "id": "innovation-science-and-industry-2014-industry-department-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.661152
             },
             {
-              "id": "innovation-science-and-industry-industry-vote1",
-              "name": "Operating expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "innovation-science-and-industry-industry-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.437634
-                },
-                {
-                  "id": "innovation-science-and-industry-industry-vote1-less-revenues-netted-against-expenditures",
-                  "name": "Less: revenues netted against expenditures",
-                  "amount": 0.072135
-                },
-                {
-                  "id": "innovation-science-and-industry-industry-vote1-advertising-initiatives",
-                  "name": "Advertising initiatives",
-                  "amount": 0.007933
-                }
-              ]
+              "id": "innovation-science-and-industry-2014-industry-department-obj-1",
+              "name": "Personnel",
+              "amount": 0.513692
             },
             {
-              "id": "innovation-science-and-industry-industry-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.161001
+              "id": "innovation-science-and-industry-2014-industry-department-external-revenues",
+              "name": "External revenues",
+              "amount": 0.207866
             },
             {
-              "id": "innovation-science-and-industry-industry-vote5",
-              "name": "Capital expenditures",
-              "vote": "Vote 5",
-              "amount": 0.023497
+              "id": "innovation-science-and-industry-2014-industry-department-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.088645
+            },
+            {
+              "id": "innovation-science-and-industry-2014-industry-department-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.019195
+            },
+            {
+              "id": "innovation-science-and-industry-2014-industry-department-obj-3",
+              "name": "Information",
+              "amount": 0.014486
+            },
+            {
+              "id": "innovation-science-and-industry-2014-industry-department-obj-5",
+              "name": "Rentals",
+              "amount": 0.014366
+            },
+            {
+              "id": "innovation-science-and-industry-2014-industry-department-internal-revenues",
+              "name": "Internal revenues",
+              "amount": 0.01336
+            },
+            {
+              "id": "innovation-science-and-industry-2014-industry-department-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.010443
+            },
+            {
+              "id": "innovation-science-and-industry-2014-industry-department-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.006692
+            },
+            {
+              "id": "innovation-science-and-industry-2014-industry-department-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.005538
+            },
+            {
+              "id": "innovation-science-and-industry-2014-industry-department-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.002493
             }
           ]
         },
         {
-          "id": "innovation-science-and-industry-org-natural-sciences-and-engineering-research-council",
+          "id": "innovation-science-and-industry-2014-natural-sciences-and-engineering-research-council",
           "name": "Natural Sciences and Engineering Research Council",
           "children": [
             {
-              "id": "innovation-science-and-industry-natural-sciences-and-engineering-research-council-vote80",
-              "name": "Grants",
-              "vote": "Vote 80",
+              "id": "innovation-science-and-industry-2014-natural-sciences-and-engineering-research-council-obj-10",
+              "name": "Transfer payments",
               "amount": 1.018904
             },
             {
-              "id": "innovation-science-and-industry-natural-sciences-and-engineering-research-council-vote75",
-              "name": "Operating expenditures",
-              "vote": "Vote 75",
-              "amount": 0.042995
+              "id": "innovation-science-and-industry-2014-natural-sciences-and-engineering-research-council-obj-1",
+              "name": "Personnel",
+              "amount": 0.03669
             },
             {
-              "id": "innovation-science-and-industry-natural-sciences-and-engineering-research-council-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.005108
+              "id": "innovation-science-and-industry-2014-natural-sciences-and-engineering-research-council-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.004945
+            },
+            {
+              "id": "innovation-science-and-industry-2014-natural-sciences-and-engineering-research-council-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.003031
+            },
+            {
+              "id": "innovation-science-and-industry-2014-natural-sciences-and-engineering-research-council-obj-5",
+              "name": "Rentals",
+              "amount": 0.001757
+            },
+            {
+              "id": "innovation-science-and-industry-2014-natural-sciences-and-engineering-research-council-obj-3",
+              "name": "Information",
+              "amount": 0.000671
+            },
+            {
+              "id": "innovation-science-and-industry-2014-natural-sciences-and-engineering-research-council-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000547
+            },
+            {
+              "id": "innovation-science-and-industry-2014-natural-sciences-and-engineering-research-council-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000188
+            },
+            {
+              "id": "innovation-science-and-industry-2014-natural-sciences-and-engineering-research-council-internal-revenues",
+              "name": "Internal revenues",
+              "amount": 0.000164
+            },
+            {
+              "id": "innovation-science-and-industry-2014-natural-sciences-and-engineering-research-council-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 5.6e-5
+            },
+            {
+              "id": "innovation-science-and-industry-2014-natural-sciences-and-engineering-research-council-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 5.4e-5
             }
           ]
         },
         {
-          "id": "innovation-science-and-industry-org-national-research-council-of-canada",
+          "id": "innovation-science-and-industry-2014-national-research-council-of-canada",
           "name": "National Research Council of Canada",
           "children": [
             {
-              "id": "innovation-science-and-industry-national-research-council-of-canada-vote60",
-              "name": "Operating expenditures",
-              "vote": "Vote 60",
-              "amount": 0.389042
+              "id": "innovation-science-and-industry-2014-national-research-council-of-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.388793
             },
             {
-              "id": "innovation-science-and-industry-national-research-council-of-canada-vote70",
-              "name": "Grants and contributions",
-              "vote": "Vote 70",
+              "id": "innovation-science-and-industry-2014-national-research-council-of-canada-obj-10",
+              "name": "Transfer payments",
               "amount": 0.284037
             },
             {
-              "id": "innovation-science-and-industry-national-research-council-of-canada-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.189031
+              "id": "innovation-science-and-industry-2014-national-research-council-of-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.05908
             },
             {
-              "id": "innovation-science-and-industry-national-research-council-of-canada-vote65",
-              "name": "Capital expenditures",
-              "vote": "Vote 65",
-              "amount": 0.032308
+              "id": "innovation-science-and-industry-2014-national-research-council-of-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.046824
+            },
+            {
+              "id": "innovation-science-and-industry-2014-national-research-council-of-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.035822
+            },
+            {
+              "id": "innovation-science-and-industry-2014-national-research-council-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.019774
+            },
+            {
+              "id": "innovation-science-and-industry-2014-national-research-council-of-canada-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.019138
+            },
+            {
+              "id": "innovation-science-and-industry-2014-national-research-council-of-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.018641
+            },
+            {
+              "id": "innovation-science-and-industry-2014-national-research-council-of-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.012948
+            },
+            {
+              "id": "innovation-science-and-industry-2014-national-research-council-of-canada-obj-5",
+              "name": "Rentals",
+              "amount": 0.008051
+            },
+            {
+              "id": "innovation-science-and-industry-2014-national-research-council-of-canada-obj-3",
+              "name": "Information",
+              "amount": 0.00131
             }
           ]
         },
         {
-          "id": "innovation-science-and-industry-org-social-sciences-and-humanities-research-council",
+          "id": "innovation-science-and-industry-2014-social-sciences-and-humanities-research-council",
           "name": "Social Sciences and Humanities Research Council",
           "children": [
             {
-              "id": "innovation-science-and-industry-social-sciences-and-humanities-research-council-vote95",
-              "name": "Grants",
-              "vote": "Vote 95",
+              "id": "innovation-science-and-industry-2014-social-sciences-and-humanities-research-council-obj-10",
+              "name": "Transfer payments",
               "amount": 0.670383
             },
             {
-              "id": "innovation-science-and-industry-social-sciences-and-humanities-research-council-vote90",
-              "name": "Operating expenditures",
-              "vote": "Vote 90",
-              "amount": 0.022722
+              "id": "innovation-science-and-industry-2014-social-sciences-and-humanities-research-council-obj-1",
+              "name": "Personnel",
+              "amount": 0.020001
             },
             {
-              "id": "innovation-science-and-industry-social-sciences-and-humanities-research-council-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.002799
+              "id": "innovation-science-and-industry-2014-social-sciences-and-humanities-research-council-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.002956
+            },
+            {
+              "id": "innovation-science-and-industry-2014-social-sciences-and-humanities-research-council-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000927
+            },
+            {
+              "id": "innovation-science-and-industry-2014-social-sciences-and-humanities-research-council-obj-5",
+              "name": "Rentals",
+              "amount": 0.000671
+            },
+            {
+              "id": "innovation-science-and-industry-2014-social-sciences-and-humanities-research-council-obj-3",
+              "name": "Information",
+              "amount": 0.000601
+            },
+            {
+              "id": "innovation-science-and-industry-2014-social-sciences-and-humanities-research-council-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000129
+            },
+            {
+              "id": "innovation-science-and-industry-2014-social-sciences-and-humanities-research-council-internal-revenues",
+              "name": "Internal revenues",
+              "amount": 9.2e-5
+            },
+            {
+              "id": "innovation-science-and-industry-2014-social-sciences-and-humanities-research-council-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 8.7e-5
+            },
+            {
+              "id": "innovation-science-and-industry-2014-social-sciences-and-humanities-research-council-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 2.9e-5
+            },
+            {
+              "id": "innovation-science-and-industry-2014-social-sciences-and-humanities-research-council-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 2.8e-5
             }
           ]
         },
         {
-          "id": "innovation-science-and-industry-org-statistics-canada",
+          "id": "innovation-science-and-industry-2014-statistics-canada",
           "name": "Statistics Canada",
           "children": [
             {
-              "id": "innovation-science-and-industry-statistics-canada-vote105",
-              "name": "Program expenditures",
-              "vote": "Vote 105",
-              "amount": 0.588264
+              "id": "innovation-science-and-industry-2014-statistics-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.493855
             },
             {
-              "id": "innovation-science-and-industry-statistics-canada-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.067809
+              "id": "innovation-science-and-industry-2014-statistics-canada-internal-revenues",
+              "name": "Internal revenues",
+              "amount": 0.074698
+            },
+            {
+              "id": "innovation-science-and-industry-2014-statistics-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.027263
+            },
+            {
+              "id": "innovation-science-and-industry-2014-statistics-canada-external-revenues",
+              "name": "External revenues",
+              "amount": 0.017583
+            },
+            {
+              "id": "innovation-science-and-industry-2014-statistics-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.013459
+            },
+            {
+              "id": "innovation-science-and-industry-2014-statistics-canada-obj-5",
+              "name": "Rentals",
+              "amount": 0.012687
+            },
+            {
+              "id": "innovation-science-and-industry-2014-statistics-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.009749
+            },
+            {
+              "id": "innovation-science-and-industry-2014-statistics-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.003162
+            },
+            {
+              "id": "innovation-science-and-industry-2014-statistics-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.002356
+            },
+            {
+              "id": "innovation-science-and-industry-2014-statistics-canada-obj-3",
+              "name": "Information",
+              "amount": 0.001222
+            },
+            {
+              "id": "innovation-science-and-industry-2014-statistics-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 4.0e-5
             }
           ]
         },
         {
-          "id": "innovation-science-and-industry-org-canadian-space-agency",
+          "id": "innovation-science-and-industry-2014-canadian-space-agency",
           "name": "Canadian Space Agency",
           "children": [
             {
-              "id": "innovation-science-and-industry-canadian-space-agency-vote30",
-              "name": "Capital expenditures",
-              "vote": "Vote 30",
-              "amount": 0.20082
+              "id": "innovation-science-and-industry-2014-canadian-space-agency-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.191858
             },
             {
-              "id": "innovation-science-and-industry-canadian-space-agency-vote25",
-              "name": "Operating expenditures",
-              "vote": "Vote 25",
-              "amount": 0.165009
+              "id": "innovation-science-and-industry-2014-canadian-space-agency-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.087484
             },
             {
-              "id": "innovation-science-and-industry-canadian-space-agency-vote35",
-              "name": "Grants and contributions",
-              "vote": "Vote 35",
+              "id": "innovation-science-and-industry-2014-canadian-space-agency-obj-1",
+              "name": "Personnel",
+              "amount": 0.075208
+            },
+            {
+              "id": "innovation-science-and-industry-2014-canadian-space-agency-obj-10",
+              "name": "Transfer payments",
               "amount": 0.032682
             },
             {
-              "id": "innovation-science-and-industry-canadian-space-agency-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.010204
+              "id": "innovation-science-and-industry-2014-canadian-space-agency-obj-5",
+              "name": "Rentals",
+              "amount": 0.005217
+            },
+            {
+              "id": "innovation-science-and-industry-2014-canadian-space-agency-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.003863
+            },
+            {
+              "id": "innovation-science-and-industry-2014-canadian-space-agency-obj-3",
+              "name": "Information",
+              "amount": 0.00385
+            },
+            {
+              "id": "innovation-science-and-industry-2014-canadian-space-agency-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.003313
+            },
+            {
+              "id": "innovation-science-and-industry-2014-canadian-space-agency-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.003014
+            },
+            {
+              "id": "innovation-science-and-industry-2014-canadian-space-agency-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.002226
             }
           ]
         },
         {
-          "id": "innovation-science-and-industry-org-canadian-tourism-commission",
+          "id": "innovation-science-and-industry-2014-canadian-tourism-commission",
           "name": "Canadian Tourism Commission",
           "children": [
             {
-              "id": "innovation-science-and-industry-canadian-tourism-commission-vote40",
-              "name": "Payments to the Canadian Tourism Commission",
-              "vote": "Vote 40",
+              "id": "innovation-science-and-industry-2014-canadian-tourism-commission-obj-12",
+              "name": "Other subsidies and payments",
               "amount": 0.057976
             }
           ]
         },
         {
-          "id": "innovation-science-and-industry-org-standards-council-of-canada",
+          "id": "innovation-science-and-industry-2014-standards-council-of-canada",
           "name": "Standards Council of Canada",
           "children": [
             {
-              "id": "innovation-science-and-industry-standards-council-of-canada-vote100",
-              "name": "Payments to the Standards Council of Canada",
-              "vote": "Vote 100",
+              "id": "innovation-science-and-industry-2014-standards-council-of-canada-obj-12",
+              "name": "Other subsidies and payments",
               "amount": 0.008081
             }
           ]
         },
         {
-          "id": "innovation-science-and-industry-org-copyright-board",
+          "id": "innovation-science-and-industry-2014-copyright-board",
           "name": "Copyright Board",
           "children": [
             {
-              "id": "innovation-science-and-industry-copyright-board-vote45",
-              "name": "Program expenditures",
-              "vote": "Vote 45",
-              "amount": 0.002532
+              "id": "innovation-science-and-industry-2014-copyright-board-obj-1",
+              "name": "Personnel",
+              "amount": 0.001797
             },
             {
-              "id": "innovation-science-and-industry-copyright-board-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.000248
+              "id": "innovation-science-and-industry-2014-copyright-board-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.000535
+            },
+            {
+              "id": "innovation-science-and-industry-2014-copyright-board-obj-3",
+              "name": "Information",
+              "amount": 0.000203
+            },
+            {
+              "id": "innovation-science-and-industry-2014-copyright-board-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000126
+            },
+            {
+              "id": "innovation-science-and-industry-2014-copyright-board-obj-5",
+              "name": "Rentals",
+              "amount": 7.3e-5
+            },
+            {
+              "id": "innovation-science-and-industry-2014-copyright-board-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 2.6e-5
+            },
+            {
+              "id": "innovation-science-and-industry-2014-copyright-board-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 2.0e-5
             }
           ]
         },
         {
-          "id": "innovation-science-and-industry-org-registry-of-the-competition-tribunal",
+          "id": "innovation-science-and-industry-2014-registry-of-the-competition-tribunal",
           "name": "Registry of the Competition Tribunal",
           "children": [
             {
-              "id": "innovation-science-and-industry-registry-of-the-competition-tribunal-vote85",
-              "name": "Program expenditures",
-              "vote": "Vote 85",
-              "amount": 0.001029
+              "id": "innovation-science-and-industry-2014-registry-of-the-competition-tribunal-obj-1",
+              "name": "Personnel",
+              "amount": 0.000891
             },
             {
-              "id": "innovation-science-and-industry-registry-of-the-competition-tribunal-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.000126
+              "id": "innovation-science-and-industry-2014-registry-of-the-competition-tribunal-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.000134
+            },
+            {
+              "id": "innovation-science-and-industry-2014-registry-of-the-competition-tribunal-obj-2",
+              "name": "Transportation and communications",
+              "amount": 5.6e-5
+            },
+            {
+              "id": "innovation-science-and-industry-2014-registry-of-the-competition-tribunal-obj-3",
+              "name": "Information",
+              "amount": 3.1e-5
+            },
+            {
+              "id": "innovation-science-and-industry-2014-registry-of-the-competition-tribunal-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 2.5e-5
+            },
+            {
+              "id": "innovation-science-and-industry-2014-registry-of-the-competition-tribunal-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 1.2e-5
+            },
+            {
+              "id": "innovation-science-and-industry-2014-registry-of-the-competition-tribunal-obj-5",
+              "name": "Rentals",
+              "amount": 6.0e-6
             }
           ]
         }

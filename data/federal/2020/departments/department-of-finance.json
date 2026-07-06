@@ -57,137 +57,288 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "department-of-finance",
       "name": "Finance",
       "children": [
         {
-          "id": "department-of-finance-org-department-of-finance",
+          "id": "department-of-finance-2020-department-of-finance",
           "name": "Department of Finance",
           "children": [
             {
-              "id": "department-of-finance-department-of-finance-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 98.735528
+              "id": "department-of-finance-2020-department-of-finance-obj-10",
+              "name": "Transfer payments",
+              "amount": 74.049499
             },
             {
-              "id": "department-of-finance-department-of-finance-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.107153
+              "id": "department-of-finance-2020-department-of-finance-obj-11",
+              "name": "Public debt charges",
+              "amount": 23.788859
             },
             {
-              "id": "department-of-finance-department-of-finance-vote5",
-              "name": "Authority for amount by way of direct payments to the International Development Association pursuant to Bretton Woods and Related Agreements Act",
-              "vote": "Vote 5",
-              "amount": 0.0
+              "id": "department-of-finance-2020-department-of-finance-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.79961
             },
             {
-              "id": "department-of-finance-department-of-finance-vote10",
-              "name": "Introducing a Financial Consumer Agency of Canada Governance Council",
-              "vote": "Vote 10",
-              "amount": 0.0
+              "id": "department-of-finance-2020-department-of-finance-obj-1",
+              "name": "Personnel",
+              "amount": 0.100711
             },
             {
-              "id": "department-of-finance-department-of-finance-vote15",
-              "name": "Protecting Canadians' Pensions",
-              "vote": "Vote 15",
-              "amount": 0.0
+              "id": "department-of-finance-2020-department-of-finance-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.086628
             },
             {
-              "id": "department-of-finance-department-of-finance-vote20",
-              "name": "Strengthening Canada's Anti-Money Laundering and Anti-Terrorist Financing Regime",
-              "vote": "Vote 20",
-              "amount": 0.0
+              "id": "department-of-finance-2020-department-of-finance-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.010626
+            },
+            {
+              "id": "department-of-finance-2020-department-of-finance-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.002695
+            },
+            {
+              "id": "department-of-finance-2020-department-of-finance-obj-3",
+              "name": "Information",
+              "amount": 0.001374
+            },
+            {
+              "id": "department-of-finance-2020-department-of-finance-obj-5",
+              "name": "Rentals",
+              "amount": 0.001342
+            },
+            {
+              "id": "department-of-finance-2020-department-of-finance-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000879
+            },
+            {
+              "id": "department-of-finance-2020-department-of-finance-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000456
+            },
+            {
+              "id": "department-of-finance-2020-department-of-finance-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 2.0e-6
             }
           ]
         },
         {
-          "id": "department-of-finance-org-office-of-the-superintendent-of-financial-institutions",
+          "id": "department-of-finance-2020-office-of-the-superintendent-of-financial-institutions",
           "name": "Office of the Superintendent of Financial Institutions",
           "children": [
             {
-              "id": "department-of-finance-office-of-the-superintendent-of-financial-institutions-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.192133
+              "id": "department-of-finance-2020-office-of-the-superintendent-of-financial-institutions-obj-1",
+              "name": "Personnel",
+              "amount": 0.142158
             },
             {
-              "id": "department-of-finance-office-of-the-superintendent-of-financial-institutions-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.001501
+              "id": "department-of-finance-2020-office-of-the-superintendent-of-financial-institutions-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.02421
+            },
+            {
+              "id": "department-of-finance-2020-office-of-the-superintendent-of-financial-institutions-obj-5",
+              "name": "Rentals",
+              "amount": 0.013102
+            },
+            {
+              "id": "department-of-finance-2020-office-of-the-superintendent-of-financial-institutions-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.004733
+            },
+            {
+              "id": "department-of-finance-2020-office-of-the-superintendent-of-financial-institutions-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.004392
+            },
+            {
+              "id": "department-of-finance-2020-office-of-the-superintendent-of-financial-institutions-obj-3",
+              "name": "Information",
+              "amount": 0.001721
+            },
+            {
+              "id": "department-of-finance-2020-office-of-the-superintendent-of-financial-institutions-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.001585
+            },
+            {
+              "id": "department-of-finance-2020-office-of-the-superintendent-of-financial-institutions-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.00106
+            },
+            {
+              "id": "department-of-finance-2020-office-of-the-superintendent-of-financial-institutions-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000592
+            },
+            {
+              "id": "department-of-finance-2020-office-of-the-superintendent-of-financial-institutions-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 8.1e-5
             }
           ]
         },
         {
-          "id": "department-of-finance-org-office-of-the-auditor-general",
+          "id": "department-of-finance-2020-office-of-the-auditor-general",
           "name": "Office of the Auditor General",
           "children": [
             {
-              "id": "department-of-finance-office-of-the-auditor-general-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.079696
+              "id": "department-of-finance-2020-office-of-the-auditor-general-obj-1",
+              "name": "Personnel",
+              "amount": 0.074462
             },
             {
-              "id": "department-of-finance-office-of-the-auditor-general-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.009335
+              "id": "department-of-finance-2020-office-of-the-auditor-general-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.006814
+            },
+            {
+              "id": "department-of-finance-2020-office-of-the-auditor-general-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.003775
+            },
+            {
+              "id": "department-of-finance-2020-office-of-the-auditor-general-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.001461
+            },
+            {
+              "id": "department-of-finance-2020-office-of-the-auditor-general-external-revenues",
+              "name": "External revenues",
+              "amount": -0.001376
+            },
+            {
+              "id": "department-of-finance-2020-office-of-the-auditor-general-obj-5",
+              "name": "Rentals",
+              "amount": 0.001278
+            },
+            {
+              "id": "department-of-finance-2020-office-of-the-auditor-general-obj-3",
+              "name": "Information",
+              "amount": 0.000798
+            },
+            {
+              "id": "department-of-finance-2020-office-of-the-auditor-general-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000216
+            },
+            {
+              "id": "department-of-finance-2020-office-of-the-auditor-general-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000208
+            },
+            {
+              "id": "department-of-finance-2020-office-of-the-auditor-general-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 1.8e-5
             }
           ]
         },
         {
-          "id": "department-of-finance-org-financial-transactions-and-reports-analysis-centre-of-canada",
+          "id": "department-of-finance-2020-financial-transactions-and-reports-analysis-centre-of-canada",
           "name": "Financial Transactions and Reports Analysis Centre of Canada",
           "children": [
             {
-              "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.049361
-                },
-                {
-                  "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote1-strengthening-fintrac-compliance-outreach-and-examinations",
-                  "name": "Strengthening FINTRAC Compliance Outreach and Examinations",
-                  "amount": 0.000723
-                },
-                {
-                  "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote1-expanding-fintrac-public-private-partnership-projects",
-                  "name": "Expanding FINTRAC Public Private Partnership Projects",
-                  "amount": 0.000384
-                }
-              ]
+              "id": "department-of-finance-2020-financial-transactions-and-reports-analysis-centre-of-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.041394
             },
             {
-              "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.004814
+              "id": "department-of-finance-2020-financial-transactions-and-reports-analysis-centre-of-canada-obj-5",
+              "name": "Rentals",
+              "amount": 0.006047
             },
             {
-              "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote5",
-              "name": "Strengthening Canada's Anti-Money Laundering and Anti-Terrorist Financing Regime",
-              "vote": "Vote 5",
-              "amount": 0.0
+              "id": "department-of-finance-2020-financial-transactions-and-reports-analysis-centre-of-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.003854
+            },
+            {
+              "id": "department-of-finance-2020-financial-transactions-and-reports-analysis-centre-of-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.001224
+            },
+            {
+              "id": "department-of-finance-2020-financial-transactions-and-reports-analysis-centre-of-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.00106
+            },
+            {
+              "id": "department-of-finance-2020-financial-transactions-and-reports-analysis-centre-of-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000909
+            },
+            {
+              "id": "department-of-finance-2020-financial-transactions-and-reports-analysis-centre-of-canada-obj-3",
+              "name": "Information",
+              "amount": 0.000428
+            },
+            {
+              "id": "department-of-finance-2020-financial-transactions-and-reports-analysis-centre-of-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.00036
+            },
+            {
+              "id": "department-of-finance-2020-financial-transactions-and-reports-analysis-centre-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 7.0e-6
             }
           ]
         },
         {
-          "id": "department-of-finance-org-financial-consumer-agency-of-canada",
+          "id": "department-of-finance-2020-financial-consumer-agency-of-canada",
           "name": "Financial Consumer Agency of Canada",
           "children": [
             {
-              "id": "department-of-finance-financial-consumer-agency-of-canada-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.030331
+              "id": "department-of-finance-2020-financial-consumer-agency-of-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.019872
+            },
+            {
+              "id": "department-of-finance-2020-financial-consumer-agency-of-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.004802
+            },
+            {
+              "id": "department-of-finance-2020-financial-consumer-agency-of-canada-obj-5",
+              "name": "Rentals",
+              "amount": 0.001646
+            },
+            {
+              "id": "department-of-finance-2020-financial-consumer-agency-of-canada-obj-3",
+              "name": "Information",
+              "amount": 0.001493
+            },
+            {
+              "id": "department-of-finance-2020-financial-consumer-agency-of-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.001325
+            },
+            {
+              "id": "department-of-finance-2020-financial-consumer-agency-of-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000495
+            },
+            {
+              "id": "department-of-finance-2020-financial-consumer-agency-of-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000412
+            },
+            {
+              "id": "department-of-finance-2020-financial-consumer-agency-of-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000164
+            },
+            {
+              "id": "department-of-finance-2020-financial-consumer-agency-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000122
             }
           ]
         }

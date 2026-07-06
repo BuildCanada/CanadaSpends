@@ -57,124 +57,288 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "privy-council",
       "name": "Privy Council",
       "children": [
         {
-          "id": "privy-council-org-privy-council-office",
+          "id": "privy-council-2022-privy-council-office",
           "name": "Privy Council Office",
           "children": [
             {
-              "id": "privy-council-privy-council-office-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "privy-council-privy-council-office-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.178456
-                },
-                {
-                  "id": "privy-council-privy-council-office-vote1-joint-public-inquiry-nova-scotia-tragedy",
-                  "name": "Joint Public Inquiry Nova Scotia Tragedy",
-                  "amount": 0.010729
-                },
-                {
-                  "id": "privy-council-privy-council-office-vote1-secure-mobile-communications",
-                  "name": "Secure Mobile Communications",
-                  "amount": 0.001819
-                }
-              ]
+              "id": "privy-council-2022-privy-council-office-obj-1",
+              "name": "Personnel",
+              "amount": 0.156579
             },
             {
-              "id": "privy-council-privy-council-office-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.019566
+              "id": "privy-council-2022-privy-council-office-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.02233
+            },
+            {
+              "id": "privy-council-2022-privy-council-office-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.010321
+            },
+            {
+              "id": "privy-council-2022-privy-council-office-obj-5",
+              "name": "Rentals",
+              "amount": 0.006986
+            },
+            {
+              "id": "privy-council-2022-privy-council-office-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.006875
+            },
+            {
+              "id": "privy-council-2022-privy-council-office-obj-3",
+              "name": "Information",
+              "amount": 0.004837
+            },
+            {
+              "id": "privy-council-2022-privy-council-office-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.004695
+            },
+            {
+              "id": "privy-council-2022-privy-council-office-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.002551
+            },
+            {
+              "id": "privy-council-2022-privy-council-office-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.001397
+            },
+            {
+              "id": "privy-council-2022-privy-council-office-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000559
+            },
+            {
+              "id": "privy-council-2022-privy-council-office-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000315
+            },
+            {
+              "id": "privy-council-2022-privy-council-office-external-revenues",
+              "name": "External revenues",
+              "amount": -8.0e-5
             }
           ]
         },
         {
-          "id": "privy-council-org-public-service-commission",
+          "id": "privy-council-2022-public-service-commission",
           "name": "Public Service Commission",
           "children": [
             {
-              "id": "privy-council-public-service-commission-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.08458
+              "id": "privy-council-2022-public-service-commission-obj-1",
+              "name": "Personnel",
+              "amount": 0.083948
             },
             {
-              "id": "privy-council-public-service-commission-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.010332
+              "id": "privy-council-2022-public-service-commission-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.008847
+            },
+            {
+              "id": "privy-council-2022-public-service-commission-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.007266
+            },
+            {
+              "id": "privy-council-2022-public-service-commission-obj-5",
+              "name": "Rentals",
+              "amount": 0.001473
+            },
+            {
+              "id": "privy-council-2022-public-service-commission-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.001212
+            },
+            {
+              "id": "privy-council-2022-public-service-commission-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000359
+            },
+            {
+              "id": "privy-council-2022-public-service-commission-obj-3",
+              "name": "Information",
+              "amount": 0.000356
+            },
+            {
+              "id": "privy-council-2022-public-service-commission-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000188
+            },
+            {
+              "id": "privy-council-2022-public-service-commission-obj-2",
+              "name": "Transportation and communications",
+              "amount": 7.4e-5
+            },
+            {
+              "id": "privy-council-2022-public-service-commission-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 3.6e-5
+            },
+            {
+              "id": "privy-council-2022-public-service-commission-external-revenues",
+              "name": "External revenues",
+              "amount": -1.5e-5
             }
           ]
         },
         {
-          "id": "privy-council-org-canadian-transportation-accident-investigation-and-safety-board",
+          "id": "privy-council-2022-canadian-transportation-accident-investigation-and-safety-board",
           "name": "Canadian Transportation Accident Investigation and Safety Board",
           "children": [
             {
-              "id": "privy-council-canadian-transportation-accident-investigation-and-safety-board-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.032156
+              "id": "privy-council-2022-canadian-transportation-accident-investigation-and-safety-board-obj-1",
+              "name": "Personnel",
+              "amount": 0.030309
             },
             {
-              "id": "privy-council-canadian-transportation-accident-investigation-and-safety-board-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.00378
+              "id": "privy-council-2022-canadian-transportation-accident-investigation-and-safety-board-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.003132
+            },
+            {
+              "id": "privy-council-2022-canadian-transportation-accident-investigation-and-safety-board-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000585
+            },
+            {
+              "id": "privy-council-2022-canadian-transportation-accident-investigation-and-safety-board-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000563
+            },
+            {
+              "id": "privy-council-2022-canadian-transportation-accident-investigation-and-safety-board-obj-5",
+              "name": "Rentals",
+              "amount": 0.000536
+            },
+            {
+              "id": "privy-council-2022-canadian-transportation-accident-investigation-and-safety-board-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000448
+            },
+            {
+              "id": "privy-council-2022-canadian-transportation-accident-investigation-and-safety-board-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000197
+            },
+            {
+              "id": "privy-council-2022-canadian-transportation-accident-investigation-and-safety-board-obj-3",
+              "name": "Information",
+              "amount": 0.000142
+            },
+            {
+              "id": "privy-council-2022-canadian-transportation-accident-investigation-and-safety-board-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 2.0e-5
+            },
+            {
+              "id": "privy-council-2022-canadian-transportation-accident-investigation-and-safety-board-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 5.0e-6
             }
           ]
         },
         {
-          "id": "privy-council-org-national-security-and-intelligence-review-agency-secretariat",
-          "name": "National Security and Intelligence Review Agency Secretariat",
+          "id": "privy-council-2022-national-security-and-intelligence-review",
+          "name": "National Security and Intelligence Review",
           "children": [
             {
-              "id": "privy-council-national-security-and-intelligence-review-agency-secretariat-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "privy-council-national-security-and-intelligence-review-agency-secretariat-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.015799
-                },
-                {
-                  "id": "privy-council-national-security-and-intelligence-review-agency-secretariat-vote1-information-management-and-information-technology-modernization-project",
-                  "name": "Information Management and Information Technology Modernization Project",
-                  "amount": 0.000314
-                }
-              ]
+              "id": "privy-council-2022-national-security-and-intelligence-review-obj-1",
+              "name": "Personnel",
+              "amount": 0.009614
             },
             {
-              "id": "privy-council-national-security-and-intelligence-review-agency-secretariat-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.001176
+              "id": "privy-council-2022-national-security-and-intelligence-review-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.003497
+            },
+            {
+              "id": "privy-council-2022-national-security-and-intelligence-review-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.003108
+            },
+            {
+              "id": "privy-council-2022-national-security-and-intelligence-review-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000453
+            },
+            {
+              "id": "privy-council-2022-national-security-and-intelligence-review-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000214
+            },
+            {
+              "id": "privy-council-2022-national-security-and-intelligence-review-obj-3",
+              "name": "Information",
+              "amount": 0.00018
+            },
+            {
+              "id": "privy-council-2022-national-security-and-intelligence-review-obj-5",
+              "name": "Rentals",
+              "amount": 0.000179
+            },
+            {
+              "id": "privy-council-2022-national-security-and-intelligence-review-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 3.0e-5
+            },
+            {
+              "id": "privy-council-2022-national-security-and-intelligence-review-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 1.5e-5
             }
           ]
         },
         {
-          "id": "privy-council-org-office-of-the-intelligence-commissioner",
+          "id": "privy-council-2022-office-of-the-intelligence-commissioner",
           "name": "Office of the Intelligence Commissioner",
           "children": [
             {
-              "id": "privy-council-office-of-the-intelligence-commissioner-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.001914
+              "id": "privy-council-2022-office-of-the-intelligence-commissioner-obj-1",
+              "name": "Personnel",
+              "amount": 0.001118
             },
             {
-              "id": "privy-council-office-of-the-intelligence-commissioner-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.000138
+              "id": "privy-council-2022-office-of-the-intelligence-commissioner-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.000573
+            },
+            {
+              "id": "privy-council-2022-office-of-the-intelligence-commissioner-obj-5",
+              "name": "Rentals",
+              "amount": 0.000308
+            },
+            {
+              "id": "privy-council-2022-office-of-the-intelligence-commissioner-obj-3",
+              "name": "Information",
+              "amount": 1.7e-5
+            },
+            {
+              "id": "privy-council-2022-office-of-the-intelligence-commissioner-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 1.3e-5
+            },
+            {
+              "id": "privy-council-2022-office-of-the-intelligence-commissioner-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 1.1e-5
+            },
+            {
+              "id": "privy-council-2022-office-of-the-intelligence-commissioner-obj-2",
+              "name": "Transportation and communications",
+              "amount": 1.1e-5
+            },
+            {
+              "id": "privy-council-2022-office-of-the-intelligence-commissioner-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 1.0e-6
             }
           ]
         }

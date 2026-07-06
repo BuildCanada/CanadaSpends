@@ -57,67 +57,148 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "agriculture-and-agri-food",
       "name": "Agriculture and Agri-Food",
       "children": [
         {
-          "id": "agriculture-and-agri-food-org-department-of-agriculture-and-agri-food",
+          "id": "agriculture-and-agri-food-2019-department-of-agriculture-and-agri-food",
           "name": "Department of Agriculture and Agri-Food",
           "children": [
             {
-              "id": "agriculture-and-agri-food-department-of-agriculture-and-agri-food-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 1.13416
+              "id": "agriculture-and-agri-food-2019-department-of-agriculture-and-agri-food-obj-10",
+              "name": "Transfer payments",
+              "amount": 1.427729
             },
             {
-              "id": "agriculture-and-agri-food-department-of-agriculture-and-agri-food-vote1",
-              "name": "Operating expenditures",
-              "vote": "Vote 1",
-              "amount": 0.648928
+              "id": "agriculture-and-agri-food-2019-department-of-agriculture-and-agri-food-obj-1",
+              "name": "Personnel",
+              "amount": 0.480672
             },
             {
-              "id": "agriculture-and-agri-food-department-of-agriculture-and-agri-food-vote10",
-              "name": "Grants and contributions",
-              "vote": "Vote 10",
-              "amount": 0.361216
+              "id": "agriculture-and-agri-food-2019-department-of-agriculture-and-agri-food-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.10254
             },
             {
-              "id": "agriculture-and-agri-food-department-of-agriculture-and-agri-food-vote5",
-              "name": "Capital expenditures",
-              "vote": "Vote 5",
-              "amount": 0.056936
+              "id": "agriculture-and-agri-food-2019-department-of-agriculture-and-agri-food-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.050024
+            },
+            {
+              "id": "agriculture-and-agri-food-2019-department-of-agriculture-and-agri-food-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.045222
+            },
+            {
+              "id": "agriculture-and-agri-food-2019-department-of-agriculture-and-agri-food-external-revenues",
+              "name": "External revenues",
+              "amount": -0.035115
+            },
+            {
+              "id": "agriculture-and-agri-food-2019-department-of-agriculture-and-agri-food-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.033814
+            },
+            {
+              "id": "agriculture-and-agri-food-2019-department-of-agriculture-and-agri-food-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.025607
+            },
+            {
+              "id": "agriculture-and-agri-food-2019-department-of-agriculture-and-agri-food-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.017755
+            },
+            {
+              "name": "Other",
+              "id": "agriculture-and-agri-food-2019-department-of-agriculture-and-agri-food-other",
+              "amount": 0.016781,
+              "isAggregate": true,
+              "count": 2
+            },
+            {
+              "id": "agriculture-and-agri-food-2019-department-of-agriculture-and-agri-food-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.014543
+            },
+            {
+              "id": "agriculture-and-agri-food-2019-department-of-agriculture-and-agri-food-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.013884
             }
           ]
         },
         {
-          "id": "agriculture-and-agri-food-org-canadian-grain-commission",
-          "name": "Canadian Grain Commission",
-          "children": [
-            {
-              "id": "agriculture-and-agri-food-canadian-grain-commission-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.005145
-            },
-            {
-              "id": "agriculture-and-agri-food-canadian-grain-commission-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.0
-            }
-          ]
-        },
-        {
-          "id": "agriculture-and-agri-food-org-canadian-dairy-commission",
+          "id": "agriculture-and-agri-food-2019-canadian-dairy-commission",
           "name": "Canadian Dairy Commission",
           "children": [
             {
-              "id": "agriculture-and-agri-food-canadian-dairy-commission-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
+              "id": "agriculture-and-agri-food-2019-canadian-dairy-commission-obj-12",
+              "name": "Other subsidies and payments",
               "amount": 0.003979
+            }
+          ]
+        },
+        {
+          "id": "agriculture-and-agri-food-2019-canadian-grain-commission",
+          "name": "Canadian Grain Commission",
+          "children": [
+            {
+              "id": "agriculture-and-agri-food-2019-canadian-grain-commission-external-revenues",
+              "name": "External revenues",
+              "amount": -0.06158
+            },
+            {
+              "id": "agriculture-and-agri-food-2019-canadian-grain-commission-obj-1",
+              "name": "Personnel",
+              "amount": 0.044835
+            },
+            {
+              "id": "agriculture-and-agri-food-2019-canadian-grain-commission-obj-5",
+              "name": "Rentals",
+              "amount": 0.005894
+            },
+            {
+              "id": "agriculture-and-agri-food-2019-canadian-grain-commission-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.003293
+            },
+            {
+              "id": "agriculture-and-agri-food-2019-canadian-grain-commission-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.002807
+            },
+            {
+              "id": "agriculture-and-agri-food-2019-canadian-grain-commission-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.002799
+            },
+            {
+              "id": "agriculture-and-agri-food-2019-canadian-grain-commission-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.002521
+            },
+            {
+              "id": "agriculture-and-agri-food-2019-canadian-grain-commission-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.001679
+            },
+            {
+              "id": "agriculture-and-agri-food-2019-canadian-grain-commission-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.000604
+            },
+            {
+              "id": "agriculture-and-agri-food-2019-canadian-grain-commission-obj-3",
+              "name": "Information",
+              "amount": 0.000271
+            },
+            {
+              "id": "agriculture-and-agri-food-2019-canadian-grain-commission-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000238
             }
           ]
         }

@@ -57,87 +57,312 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "health-canada",
       "name": "Health",
       "children": [
         {
-          "id": "health-canada-org-health",
-          "name": "Health",
+          "id": "health-canada-2017-department-of-health",
+          "name": "Department of Health",
           "children": [
             {
-              "id": "health-canada-health-vote",
-              "name": "Total appropriations (vote-level detail not published for this edition)",
-              "vote": "All votes",
-              "children": [
-                {
-                  "id": "health-canada-health-vote-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 2.074133
-                },
-                {
-                  "id": "health-canada-health-vote-grants-and-contributions",
-                  "name": "Grants and contributions",
-                  "amount": 1.882498
-                },
-                {
-                  "id": "health-canada-health-vote-non-insured-health-benefits",
-                  "name": "Non-insured health benefits",
-                  "amount": 1.203223
-                },
-                {
-                  "id": "health-canada-health-vote-grants",
-                  "name": "Grants",
-                  "amount": 1.024249
-                },
-                {
-                  "id": "health-canada-health-vote-statutory-amounts",
-                  "name": "Statutory amounts",
-                  "amount": 0.411545
-                },
-                {
-                  "id": "health-canada-health-vote-less-revenues-netted-against-expenditures",
-                  "name": "Less: revenues netted against expenditures",
-                  "amount": 0.244378
-                },
-                {
-                  "id": "health-canada-health-vote-capital-budget",
-                  "name": "Capital budget",
-                  "amount": 0.082827
-                },
-                {
-                  "id": "health-canada-health-vote-indian-residential-schools-resolution-health-support",
-                  "name": "Indian residential schools resolution health support",
-                  "amount": 0.066391
-                },
-                {
-                  "id": "health-canada-health-vote-canadian-strategy-for-cancer-control",
-                  "name": "Canadian strategy for cancer control",
-                  "amount": 0.0475
-                },
-                {
-                  "id": "health-canada-health-vote-non-insured-health-benefits-mcivor",
-                  "name": "Non-insured health benefits—McIvor",
-                  "amount": 0.021774
-                },
-                {
-                  "id": "health-canada-health-vote-non-insured-health-benefits-qalipu",
-                  "name": "Non-insured health benefits—Qalipu",
-                  "amount": 0.013251
-                },
-                {
-                  "id": "health-canada-health-vote-ebola-virus-disease-outbreak",
-                  "name": "Ebola virus disease outbreak",
-                  "amount": 0.002146
-                },
-                {
-                  "name": "Other",
-                  "id": "health-canada-health-vote-other",
-                  "amount": 0.004651,
-                  "isAggregate": true,
-                  "count": 3
-                }
-              ]
+              "id": "health-canada-2017-department-of-health-obj-10",
+              "name": "Transfer payments",
+              "amount": 2.031885
+            },
+            {
+              "id": "health-canada-2017-department-of-health-obj-1",
+              "name": "Personnel",
+              "amount": 0.888085
+            },
+            {
+              "id": "health-canada-2017-department-of-health-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.55608
+            },
+            {
+              "id": "health-canada-2017-department-of-health-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.509666
+            },
+            {
+              "id": "health-canada-2017-department-of-health-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.286507
+            },
+            {
+              "id": "health-canada-2017-department-of-health-external-revenues",
+              "name": "External revenues",
+              "amount": -0.228048
+            },
+            {
+              "id": "health-canada-2017-department-of-health-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.060725
+            },
+            {
+              "id": "health-canada-2017-department-of-health-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.017179
+            },
+            {
+              "id": "health-canada-2017-department-of-health-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.016602
+            },
+            {
+              "id": "health-canada-2017-department-of-health-obj-5",
+              "name": "Rentals",
+              "amount": 0.016187
+            },
+            {
+              "id": "health-canada-2017-department-of-health-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.015735
+            },
+            {
+              "name": "Other",
+              "id": "health-canada-2017-department-of-health-other",
+              "amount": 0.014084,
+              "isAggregate": true,
+              "count": 2
+            }
+          ]
+        },
+        {
+          "id": "health-canada-2017-canadian-institutes-of-health-research",
+          "name": "Canadian Institutes of Health Research",
+          "children": [
+            {
+              "id": "health-canada-2017-canadian-institutes-of-health-research-obj-10",
+              "name": "Transfer payments",
+              "amount": 1.024249
+            },
+            {
+              "id": "health-canada-2017-canadian-institutes-of-health-research-obj-1",
+              "name": "Personnel",
+              "amount": 0.045392
+            },
+            {
+              "id": "health-canada-2017-canadian-institutes-of-health-research-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.005383
+            },
+            {
+              "id": "health-canada-2017-canadian-institutes-of-health-research-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.00248
+            },
+            {
+              "id": "health-canada-2017-canadian-institutes-of-health-research-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.001783
+            },
+            {
+              "id": "health-canada-2017-canadian-institutes-of-health-research-obj-5",
+              "name": "Rentals",
+              "amount": 0.001098
+            },
+            {
+              "id": "health-canada-2017-canadian-institutes-of-health-research-obj-3",
+              "name": "Information",
+              "amount": 0.000588
+            },
+            {
+              "id": "health-canada-2017-canadian-institutes-of-health-research-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000208
+            },
+            {
+              "id": "health-canada-2017-canadian-institutes-of-health-research-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000126
+            },
+            {
+              "id": "health-canada-2017-canadian-institutes-of-health-research-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 2.3e-5
+            }
+          ]
+        },
+        {
+          "id": "health-canada-2017-canadian-food-inspection-agency",
+          "name": "Canadian Food Inspection Agency",
+          "children": [
+            {
+              "id": "health-canada-2017-canadian-food-inspection-agency-obj-1",
+              "name": "Personnel",
+              "amount": 0.55816
+            },
+            {
+              "id": "health-canada-2017-canadian-food-inspection-agency-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.082201
+            },
+            {
+              "id": "health-canada-2017-canadian-food-inspection-agency-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.042112
+            },
+            {
+              "id": "health-canada-2017-canadian-food-inspection-agency-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.020402
+            },
+            {
+              "id": "health-canada-2017-canadian-food-inspection-agency-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.018865
+            },
+            {
+              "id": "health-canada-2017-canadian-food-inspection-agency-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.018757
+            },
+            {
+              "id": "health-canada-2017-canadian-food-inspection-agency-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.017458
+            },
+            {
+              "id": "health-canada-2017-canadian-food-inspection-agency-obj-5",
+              "name": "Rentals",
+              "amount": 0.012872
+            },
+            {
+              "id": "health-canada-2017-canadian-food-inspection-agency-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.011716
+            },
+            {
+              "id": "health-canada-2017-canadian-food-inspection-agency-obj-3",
+              "name": "Information",
+              "amount": 0.003213
+            },
+            {
+              "id": "health-canada-2017-canadian-food-inspection-agency-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.000156
+            }
+          ]
+        },
+        {
+          "id": "health-canada-2017-public-health-agency-of-canada",
+          "name": "Public Health Agency of Canada",
+          "children": [
+            {
+              "id": "health-canada-2017-public-health-agency-of-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.210343
+            },
+            {
+              "id": "health-canada-2017-public-health-agency-of-canada-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.189506
+            },
+            {
+              "id": "health-canada-2017-public-health-agency-of-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.084312
+            },
+            {
+              "id": "health-canada-2017-public-health-agency-of-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.031169
+            },
+            {
+              "id": "health-canada-2017-public-health-agency-of-canada-obj-3",
+              "name": "Information",
+              "amount": 0.018693
+            },
+            {
+              "id": "health-canada-2017-public-health-agency-of-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.008696
+            },
+            {
+              "id": "health-canada-2017-public-health-agency-of-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.007743
+            },
+            {
+              "id": "health-canada-2017-public-health-agency-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.004798
+            },
+            {
+              "id": "health-canada-2017-public-health-agency-of-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.002729
+            },
+            {
+              "name": "Other",
+              "id": "health-canada-2017-public-health-agency-of-canada-other",
+              "amount": 0.001823,
+              "isAggregate": true,
+              "count": 2
+            },
+            {
+              "id": "health-canada-2017-public-health-agency-of-canada-external-revenues",
+              "name": "External revenues",
+              "amount": -0.000535
+            },
+            {
+              "id": "health-canada-2017-public-health-agency-of-canada-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -6.0e-5
+            }
+          ]
+        },
+        {
+          "id": "health-canada-2017-patented-medicine-prices-review-board",
+          "name": "Patented Medicine Prices Review Board",
+          "children": [
+            {
+              "id": "health-canada-2017-patented-medicine-prices-review-board-obj-1",
+              "name": "Personnel",
+              "amount": 0.006987
+            },
+            {
+              "id": "health-canada-2017-patented-medicine-prices-review-board-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.002246
+            },
+            {
+              "id": "health-canada-2017-patented-medicine-prices-review-board-obj-3",
+              "name": "Information",
+              "amount": 0.000467
+            },
+            {
+              "id": "health-canada-2017-patented-medicine-prices-review-board-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000196
+            },
+            {
+              "id": "health-canada-2017-patented-medicine-prices-review-board-obj-5",
+              "name": "Rentals",
+              "amount": 9.9e-5
+            },
+            {
+              "id": "health-canada-2017-patented-medicine-prices-review-board-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 5.0e-5
+            },
+            {
+              "id": "health-canada-2017-patented-medicine-prices-review-board-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 3.7e-5
+            },
+            {
+              "id": "health-canada-2017-patented-medicine-prices-review-board-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 3.6e-5
+            },
+            {
+              "id": "health-canada-2017-patented-medicine-prices-review-board-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 1.6e-5
             }
           ]
         }

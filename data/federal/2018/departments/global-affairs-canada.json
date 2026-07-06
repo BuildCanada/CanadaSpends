@@ -57,87 +57,190 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "global-affairs-canada",
       "name": "Global Affairs",
       "children": [
         {
-          "id": "global-affairs-canada-org-global-affairs",
-          "name": "Global Affairs",
+          "id": "global-affairs-canada-2018-department-of-foreign-affairs-trade-and-development",
+          "name": "Department of Foreign Affairs, Trade and Development",
           "children": [
             {
-              "id": "global-affairs-canada-global-affairs-vote",
-              "name": "Total appropriations (vote-level detail not published for this edition)",
-              "vote": "All votes",
-              "children": [
-                {
-                  "id": "global-affairs-canada-global-affairs-vote-international-assistance-envelope",
-                  "name": "International assistance envelope",
-                  "amount": 3.890014
-                },
-                {
-                  "id": "global-affairs-canada-global-affairs-vote-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 1.296739
-                },
-                {
-                  "id": "global-affairs-canada-global-affairs-vote-grants-and-contributions",
-                  "name": "Grants and contributions",
-                  "amount": 0.488428
-                },
-                {
-                  "id": "global-affairs-canada-global-affairs-vote-statutory-amounts",
-                  "name": "Statutory amounts",
-                  "amount": 0.45388
-                },
-                {
-                  "id": "global-affairs-canada-global-affairs-vote-crisis-pool-quick-release-mechanism",
-                  "name": "Crisis pool quick release mechanism",
-                  "amount": 0.21
-                },
-                {
-                  "id": "global-affairs-canada-global-affairs-vote-payments-to-crown-corporation",
-                  "name": "Payments to Crown Corporation",
-                  "amount": 0.139952
-                },
-                {
-                  "id": "global-affairs-canada-global-affairs-vote-duty-of-care-at-missions-abroad",
-                  "name": "Duty of care at missions abroad",
-                  "amount": 0.126664
-                },
-                {
-                  "id": "global-affairs-canada-global-affairs-vote-capital-budget",
-                  "name": "Capital budget",
-                  "amount": 0.099722
-                },
-                {
-                  "id": "global-affairs-canada-global-affairs-vote-other-authority",
-                  "name": "Other authority",
-                  "amount": 0.065625
-                },
-                {
-                  "id": "global-affairs-canada-global-affairs-vote-canada-s-2018-g7-presidency",
-                  "name": "Canada's 2018 G7 Presidency",
-                  "amount": 0.019075
-                },
-                {
-                  "id": "global-affairs-canada-global-affairs-vote-softwood-lumber-legal-and-litigation",
-                  "name": "Softwood lumber legal and litigation",
-                  "amount": 0.01382
-                },
-                {
-                  "id": "global-affairs-canada-global-affairs-vote-softwood-lumber",
-                  "name": "Softwood lumber",
-                  "amount": 0.005052
-                },
-                {
-                  "name": "Other",
-                  "id": "global-affairs-canada-global-affairs-vote-other",
-                  "amount": 0.002206,
-                  "isAggregate": true,
-                  "count": 3
-                }
-              ]
+              "id": "global-affairs-canada-2018-department-of-foreign-affairs-trade-and-development-obj-10",
+              "name": "Transfer payments",
+              "amount": 4.539007
+            },
+            {
+              "id": "global-affairs-canada-2018-department-of-foreign-affairs-trade-and-development-obj-1",
+              "name": "Personnel",
+              "amount": 1.174392
+            },
+            {
+              "id": "global-affairs-canada-2018-department-of-foreign-affairs-trade-and-development-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.272681
+            },
+            {
+              "id": "global-affairs-canada-2018-department-of-foreign-affairs-trade-and-development-obj-5",
+              "name": "Rentals",
+              "amount": 0.187603
+            },
+            {
+              "id": "global-affairs-canada-2018-department-of-foreign-affairs-trade-and-development-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.125965
+            },
+            {
+              "id": "global-affairs-canada-2018-department-of-foreign-affairs-trade-and-development-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.081699
+            },
+            {
+              "id": "global-affairs-canada-2018-department-of-foreign-affairs-trade-and-development-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.071543
+            },
+            {
+              "id": "global-affairs-canada-2018-department-of-foreign-affairs-trade-and-development-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.064076
+            },
+            {
+              "name": "Other",
+              "id": "global-affairs-canada-2018-department-of-foreign-affairs-trade-and-development-other",
+              "amount": 0.047171,
+              "isAggregate": true,
+              "count": 2
+            },
+            {
+              "id": "global-affairs-canada-2018-department-of-foreign-affairs-trade-and-development-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.046437
+            },
+            {
+              "id": "global-affairs-canada-2018-department-of-foreign-affairs-trade-and-development-external-revenues",
+              "name": "External revenues",
+              "amount": -0.035142
+            },
+            {
+              "id": "global-affairs-canada-2018-department-of-foreign-affairs-trade-and-development-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.001145
+            }
+          ]
+        },
+        {
+          "id": "global-affairs-canada-2018-international-development-research-centre",
+          "name": "International Development Research Centre",
+          "children": [
+            {
+              "id": "global-affairs-canada-2018-international-development-research-centre-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.139952
+            }
+          ]
+        },
+        {
+          "id": "global-affairs-canada-2018-export-development-canada-canada-account",
+          "name": "Export Development Canada (Canada Account)",
+          "children": [
+            {
+              "id": "global-affairs-canada-2018-export-development-canada-canada-account-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.04561
+            },
+            {
+              "id": "global-affairs-canada-2018-export-development-canada-canada-account-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.005588
+            }
+          ]
+        },
+        {
+          "id": "global-affairs-canada-2018-international-joint-commission-canadian-section",
+          "name": "International Joint Commission (Canadian Section)",
+          "children": [
+            {
+              "id": "global-affairs-canada-2018-international-joint-commission-canadian-section-obj-1",
+              "name": "Personnel",
+              "amount": 0.004211
+            },
+            {
+              "id": "global-affairs-canada-2018-international-joint-commission-canadian-section-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.001761
+            },
+            {
+              "id": "global-affairs-canada-2018-international-joint-commission-canadian-section-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000473
+            },
+            {
+              "id": "global-affairs-canada-2018-international-joint-commission-canadian-section-obj-5",
+              "name": "Rentals",
+              "amount": 0.000443
+            },
+            {
+              "id": "global-affairs-canada-2018-international-joint-commission-canadian-section-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000312
+            },
+            {
+              "id": "global-affairs-canada-2018-international-joint-commission-canadian-section-obj-3",
+              "name": "Information",
+              "amount": 0.000142
+            },
+            {
+              "id": "global-affairs-canada-2018-international-joint-commission-canadian-section-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 6.4e-5
+            },
+            {
+              "id": "global-affairs-canada-2018-international-joint-commission-canadian-section-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 8.0e-6
+            },
+            {
+              "id": "global-affairs-canada-2018-international-joint-commission-canadian-section-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 5.0e-6
+            }
+          ]
+        },
+        {
+          "id": "global-affairs-canada-2018-invest-in-canada-hub",
+          "name": "Invest in Canada Hub",
+          "children": [
+            {
+              "id": "global-affairs-canada-2018-invest-in-canada-hub-obj-3",
+              "name": "Information",
+              "amount": 0.000769
+            },
+            {
+              "id": "global-affairs-canada-2018-invest-in-canada-hub-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.000483
+            },
+            {
+              "id": "global-affairs-canada-2018-invest-in-canada-hub-obj-5",
+              "name": "Rentals",
+              "amount": 0.000321
+            },
+            {
+              "id": "global-affairs-canada-2018-invest-in-canada-hub-obj-1",
+              "name": "Personnel",
+              "amount": 0.000284
+            },
+            {
+              "id": "global-affairs-canada-2018-invest-in-canada-hub-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000162
+            },
+            {
+              "id": "global-affairs-canada-2018-invest-in-canada-hub-obj-2",
+              "name": "Transportation and communications",
+              "amount": 1.4e-5
             }
           ]
         }

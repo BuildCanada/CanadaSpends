@@ -57,19 +57,64 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "governor-general",
       "name": "Governor General",
       "children": [
         {
-          "id": "governor-general-org-governor-general",
+          "id": "governor-general-2014-governor-general",
           "name": "Governor General",
           "children": [
             {
-              "id": "governor-general-governor-general-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.020307
+              "id": "governor-general-2014-governor-general-obj-1",
+              "name": "Personnel",
+              "amount": 0.015738
+            },
+            {
+              "id": "governor-general-2014-governor-general-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.001461
+            },
+            {
+              "id": "governor-general-2014-governor-general-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000975
+            },
+            {
+              "id": "governor-general-2014-governor-general-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000612
+            },
+            {
+              "id": "governor-general-2014-governor-general-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.000545
+            },
+            {
+              "id": "governor-general-2014-governor-general-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000309
+            },
+            {
+              "id": "governor-general-2014-governor-general-obj-3",
+              "name": "Information",
+              "amount": 0.000273
+            },
+            {
+              "id": "governor-general-2014-governor-general-obj-5",
+              "name": "Rentals",
+              "amount": 0.00027
+            },
+            {
+              "id": "governor-general-2014-governor-general-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 9.9e-5
+            },
+            {
+              "id": "governor-general-2014-governor-general-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 2.5e-5
             }
           ]
         }

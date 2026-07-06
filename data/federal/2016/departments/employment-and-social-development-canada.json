@@ -57,75 +57,147 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "employment-and-social-development-canada",
       "name": "Employment and Social Development",
       "children": [
         {
-          "id": "employment-and-social-development-canada-org-families-children-and-social-development",
-          "name": "Families, Children and Social Development",
+          "id": "employment-and-social-development-canada-2016-employment-and-social-development",
+          "name": "Employment and Social Development",
           "children": [
             {
-              "id": "employment-and-social-development-canada-families-children-and-social-development-vote",
-              "name": "Total appropriations (vote-level detail not published for this edition)",
-              "vote": "All votes",
-              "children": [
-                {
-                  "id": "employment-and-social-development-canada-families-children-and-social-development-vote-statutory-amounts",
-                  "name": "Statutory amounts",
-                  "amount": 57.243146
-                },
-                {
-                  "id": "employment-and-social-development-canada-families-children-and-social-development-vote-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 2.317877
-                },
-                {
-                  "id": "employment-and-social-development-canada-families-children-and-social-development-vote-other-authority",
-                  "name": "Other authority",
-                  "amount": 2.008369
-                },
-                {
-                  "id": "employment-and-social-development-canada-families-children-and-social-development-vote-less-revenues-netted-against-expenditures",
-                  "name": "Less: revenues netted against expenditures",
-                  "amount": 1.698401
-                },
-                {
-                  "id": "employment-and-social-development-canada-families-children-and-social-development-vote-grants-and-contributions",
-                  "name": "Grants and contributions",
-                  "amount": 1.559678
-                },
-                {
-                  "id": "employment-and-social-development-canada-families-children-and-social-development-vote-debt-write-off-canada-student-loans-account",
-                  "name": "Debt write-off Canada Student Loans account",
-                  "amount": 0.172045
-                },
-                {
-                  "id": "employment-and-social-development-canada-families-children-and-social-development-vote-payments-to-crown-corporation",
-                  "name": "Payments to Crown Corporation",
-                  "amount": 0.052146
-                },
-                {
-                  "id": "employment-and-social-development-canada-families-children-and-social-development-vote-bill-c-51-implementation",
-                  "name": "Bill C-51 implementation",
-                  "amount": 0.006828
-                },
-                {
-                  "id": "employment-and-social-development-canada-families-children-and-social-development-vote-advertising-initiatives",
-                  "name": "Advertising initiatives",
-                  "amount": 0.004412
-                },
-                {
-                  "id": "employment-and-social-development-canada-families-children-and-social-development-vote-job-bank-2014-implementation",
-                  "name": "Job Bank 2014 implementation",
-                  "amount": 0.0023
-                },
-                {
-                  "id": "employment-and-social-development-canada-families-children-and-social-development-vote-debt-write-off-government-annuities-account",
-                  "name": "Debt write-off Government Annuities account",
-                  "amount": 6.2e-5
-                }
-              ]
+              "id": "employment-and-social-development-canada-2016-employment-and-social-development-obj-10",
+              "name": "Transfer payments",
+              "amount": 58.43206
+            },
+            {
+              "id": "employment-and-social-development-canada-2016-employment-and-social-development-obj-1",
+              "name": "Personnel",
+              "amount": 1.818158
+            },
+            {
+              "id": "employment-and-social-development-canada-2016-employment-and-social-development-internal-revenues",
+              "name": "Internal revenues",
+              "amount": 1.490687
+            },
+            {
+              "id": "employment-and-social-development-canada-2016-employment-and-social-development-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.613405
+            },
+            {
+              "id": "employment-and-social-development-canada-2016-employment-and-social-development-external-revenues",
+              "name": "External revenues",
+              "amount": 0.335328
+            },
+            {
+              "id": "employment-and-social-development-canada-2016-employment-and-social-development-obj-5",
+              "name": "Rentals",
+              "amount": 0.218035
+            },
+            {
+              "id": "employment-and-social-development-canada-2016-employment-and-social-development-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.174645
+            },
+            {
+              "id": "employment-and-social-development-canada-2016-employment-and-social-development-obj-3",
+              "name": "Information",
+              "amount": 0.066601
+            },
+            {
+              "id": "employment-and-social-development-canada-2016-employment-and-social-development-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.055909
+            },
+            {
+              "id": "employment-and-social-development-canada-2016-employment-and-social-development-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.031151
+            },
+            {
+              "id": "employment-and-social-development-canada-2016-employment-and-social-development-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.0086
+            },
+            {
+              "id": "employment-and-social-development-canada-2016-employment-and-social-development-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.00548
+            }
+          ]
+        },
+        {
+          "id": "employment-and-social-development-canada-2016-canada-mortgage-and-housing-corporation",
+          "name": "Canada Mortgage and Housing Corporation",
+          "children": [
+            {
+              "id": "employment-and-social-development-canada-2016-canada-mortgage-and-housing-corporation-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 2.008369
+            }
+          ]
+        },
+        {
+          "id": "employment-and-social-development-canada-2016-national-capital-commission",
+          "name": "National Capital Commission",
+          "children": [
+            {
+              "id": "employment-and-social-development-canada-2016-national-capital-commission-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.052146
+            }
+          ]
+        },
+        {
+          "id": "employment-and-social-development-canada-2016-canadian-centre-for-occupational-health-and-safety",
+          "name": "Canadian Centre for Occupational Health and Safety",
+          "children": [
+            {
+              "id": "employment-and-social-development-canada-2016-canadian-centre-for-occupational-health-and-safety-obj-1",
+              "name": "Personnel",
+              "amount": 0.00762
+            },
+            {
+              "id": "employment-and-social-development-canada-2016-canadian-centre-for-occupational-health-and-safety-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.001431
+            },
+            {
+              "id": "employment-and-social-development-canada-2016-canadian-centre-for-occupational-health-and-safety-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000271
+            },
+            {
+              "id": "employment-and-social-development-canada-2016-canadian-centre-for-occupational-health-and-safety-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000236
+            },
+            {
+              "id": "employment-and-social-development-canada-2016-canadian-centre-for-occupational-health-and-safety-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.00013
+            },
+            {
+              "id": "employment-and-social-development-canada-2016-canadian-centre-for-occupational-health-and-safety-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 9.1e-5
+            },
+            {
+              "id": "employment-and-social-development-canada-2016-canadian-centre-for-occupational-health-and-safety-obj-3",
+              "name": "Information",
+              "amount": 8.2e-5
+            },
+            {
+              "id": "employment-and-social-development-canada-2016-canadian-centre-for-occupational-health-and-safety-obj-5",
+              "name": "Rentals",
+              "amount": 5.2e-5
+            },
+            {
+              "id": "employment-and-social-development-canada-2016-canadian-centre-for-occupational-health-and-safety-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 5.0e-6
             }
           ]
         }

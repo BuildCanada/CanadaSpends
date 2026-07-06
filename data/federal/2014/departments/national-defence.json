@@ -57,157 +57,250 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "national-defence",
       "name": "National Defence",
       "children": [
         {
-          "id": "national-defence-org-national-defence",
-          "name": "National Defence",
+          "id": "national-defence-2014-national-defence-department",
+          "name": "National Defence Department",
           "children": [
             {
-              "id": "national-defence-national-defence-vote1",
-              "name": "Operating expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "national-defence-national-defence-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 13.899843
-                },
-                {
-                  "id": "national-defence-national-defence-vote1-security-insurance-plan-long-term-disability",
-                  "name": "Security insurance plan long‑term disability",
-                  "amount": 0.51
-                },
-                {
-                  "id": "national-defence-national-defence-vote1-less-revenues-netted-against-expenditures",
-                  "name": "Less: revenues netted against expenditures",
-                  "amount": 0.417178
-                }
-              ]
+              "id": "national-defence-2014-national-defence-department-obj-1",
+              "name": "Personnel",
+              "amount": 9.50241
             },
             {
-              "id": "national-defence-national-defence-vote5",
-              "name": "Capital expenditures",
-              "vote": "Vote 5",
-              "amount": 2.855755
+              "id": "national-defence-2014-national-defence-department-obj-4",
+              "name": "Professional and special services",
+              "amount": 3.021223
             },
             {
-              "id": "national-defence-national-defence-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 1.751329
+              "id": "national-defence-2014-national-defence-department-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 1.973913
             },
             {
-              "id": "national-defence-national-defence-vote10",
-              "name": "Grants and contributions",
-              "vote": "Vote 10",
-              "amount": 0.164625
+              "id": "national-defence-2014-national-defence-department-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 1.217745
+            },
+            {
+              "id": "national-defence-2014-national-defence-department-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.96561
+            },
+            {
+              "id": "national-defence-2014-national-defence-department-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.746536
+            },
+            {
+              "id": "national-defence-2014-national-defence-department-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.689103
+            },
+            {
+              "id": "national-defence-2014-national-defence-department-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.548372
+            },
+            {
+              "id": "national-defence-2014-national-defence-department-external-revenues",
+              "name": "External revenues",
+              "amount": 0.395061
+            },
+            {
+              "id": "national-defence-2014-national-defence-department-obj-5",
+              "name": "Rentals",
+              "amount": 0.335863
+            },
+            {
+              "name": "Other",
+              "id": "national-defence-2014-national-defence-department-other",
+              "amount": 0.180779,
+              "isAggregate": true,
+              "count": 2
+            },
+            {
+              "id": "national-defence-2014-national-defence-department-internal-revenues",
+              "name": "Internal revenues",
+              "amount": 0.022118
             }
           ]
         },
         {
-          "id": "national-defence-org-communications-security-establishment-canada",
-          "name": "Communications Security Establishment Canada",
+          "id": "national-defence-2014-communications-security-establishment",
+          "name": "Communications Security Establishment",
           "children": [
             {
-              "id": "national-defence-communications-security-establishment-canada-vote20",
-              "name": "Program expenditures",
-              "vote": "Vote 20",
-              "children": [
-                {
-                  "id": "national-defence-communications-security-establishment-canada-vote20-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.396562
-                },
-                {
-                  "id": "national-defence-communications-security-establishment-canada-vote20-communications-security-establishment-canada-long-term-accommodation-project",
-                  "name": "Communications Security Establishment Canada Long‑Term Accommodation Project",
-                  "amount": 0.013532
-                },
-                {
-                  "id": "national-defence-communications-security-establishment-canada-vote20-less-revenues-netted-against-expenditures",
-                  "name": "Less: revenues netted against expenditures",
-                  "amount": 0.000606
-                }
-              ]
+              "id": "national-defence-2014-communications-security-establishment-obj-1",
+              "name": "Personnel",
+              "amount": 0.239352
             },
             {
-              "id": "national-defence-communications-security-establishment-canada-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.034186
+              "id": "national-defence-2014-communications-security-establishment-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.204927
+            },
+            {
+              "id": "national-defence-2014-communications-security-establishment-internal-revenues",
+              "name": "Internal revenues",
+              "amount": 0.000572
+            },
+            {
+              "id": "national-defence-2014-communications-security-establishment-external-revenues",
+              "name": "External revenues",
+              "amount": 3.4e-5
             }
           ]
         },
         {
-          "id": "national-defence-org-military-grievances-external-review-committee",
+          "id": "national-defence-2014-military-grievances-external-review-committee",
           "name": "Military Grievances External Review Committee",
           "children": [
             {
-              "id": "national-defence-military-grievances-external-review-committee-vote15",
-              "name": "Program expenditures",
-              "vote": "Vote 15",
-              "amount": 0.005356
+              "id": "national-defence-2014-military-grievances-external-review-committee-obj-1",
+              "name": "Personnel",
+              "amount": 0.004404
             },
             {
-              "id": "national-defence-military-grievances-external-review-committee-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.000625
+              "id": "national-defence-2014-military-grievances-external-review-committee-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.000671
+            },
+            {
+              "id": "national-defence-2014-military-grievances-external-review-committee-obj-5",
+              "name": "Rentals",
+              "amount": 0.000605
+            },
+            {
+              "id": "national-defence-2014-military-grievances-external-review-committee-obj-2",
+              "name": "Transportation and communications",
+              "amount": 9.9e-5
+            },
+            {
+              "id": "national-defence-2014-military-grievances-external-review-committee-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 8.1e-5
+            },
+            {
+              "id": "national-defence-2014-military-grievances-external-review-committee-obj-3",
+              "name": "Information",
+              "amount": 6.0e-5
+            },
+            {
+              "id": "national-defence-2014-military-grievances-external-review-committee-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 4.4e-5
+            },
+            {
+              "id": "national-defence-2014-military-grievances-external-review-committee-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 1.7e-5
             }
           ]
         },
         {
-          "id": "national-defence-org-military-police-complaints-commission",
+          "id": "national-defence-2014-military-police-complaints-commission",
           "name": "Military Police Complaints Commission",
           "children": [
             {
-              "id": "national-defence-military-police-complaints-commission-vote25",
-              "name": "Program expenditures",
-              "vote": "Vote 25",
-              "children": [
-                {
-                  "id": "national-defence-military-police-complaints-commission-vote25-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.003799
-                },
-                {
-                  "id": "national-defence-military-police-complaints-commission-vote25-public-interest-hearing",
-                  "name": "Public interest hearing",
-                  "amount": 0.000876
-                },
-                {
-                  "id": "national-defence-military-police-complaints-commission-vote25-conduct-review",
-                  "name": "Conduct review",
-                  "amount": 0.000484
-                }
-              ]
+              "id": "national-defence-2014-military-police-complaints-commission-obj-1",
+              "name": "Personnel",
+              "amount": 0.002525
             },
             {
-              "id": "national-defence-military-police-complaints-commission-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.00036
+              "id": "national-defence-2014-military-police-complaints-commission-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.00228
+            },
+            {
+              "id": "national-defence-2014-military-police-complaints-commission-obj-5",
+              "name": "Rentals",
+              "amount": 0.000374
+            },
+            {
+              "id": "national-defence-2014-military-police-complaints-commission-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000163
+            },
+            {
+              "id": "national-defence-2014-military-police-complaints-commission-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000103
+            },
+            {
+              "id": "national-defence-2014-military-police-complaints-commission-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 5.1e-5
+            },
+            {
+              "id": "national-defence-2014-military-police-complaints-commission-obj-3",
+              "name": "Information",
+              "amount": 1.9e-5
+            },
+            {
+              "id": "national-defence-2014-military-police-complaints-commission-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 4.0e-6
+            },
+            {
+              "id": "national-defence-2014-military-police-complaints-commission-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 1.0e-6
             }
           ]
         },
         {
-          "id": "national-defence-org-office-of-the-communications-security-establishment-commissioner",
+          "id": "national-defence-2014-office-of-the-communications-security-establishment-commissioner",
           "name": "Office of the Communications Security Establishment Commissioner",
           "children": [
             {
-              "id": "national-defence-office-of-the-communications-security-establishment-commissioner-vote30",
-              "name": "Program expenditures",
-              "vote": "Vote 30",
-              "amount": 0.001775
+              "id": "national-defence-2014-office-of-the-communications-security-establishment-commissioner-obj-1",
+              "name": "Personnel",
+              "amount": 0.001159
             },
             {
-              "id": "national-defence-office-of-the-communications-security-establishment-commissioner-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.000168
+              "id": "national-defence-2014-office-of-the-communications-security-establishment-commissioner-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.000351
+            },
+            {
+              "id": "national-defence-2014-office-of-the-communications-security-establishment-commissioner-obj-5",
+              "name": "Rentals",
+              "amount": 0.000329
+            },
+            {
+              "id": "national-defence-2014-office-of-the-communications-security-establishment-commissioner-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 5.5e-5
+            },
+            {
+              "id": "national-defence-2014-office-of-the-communications-security-establishment-commissioner-obj-2",
+              "name": "Transportation and communications",
+              "amount": 1.6e-5
+            },
+            {
+              "id": "national-defence-2014-office-of-the-communications-security-establishment-commissioner-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 1.6e-5
+            },
+            {
+              "id": "national-defence-2014-office-of-the-communications-security-establishment-commissioner-obj-3",
+              "name": "Information",
+              "amount": 1.3e-5
+            },
+            {
+              "id": "national-defence-2014-office-of-the-communications-security-establishment-commissioner-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 3.0e-6
+            },
+            {
+              "id": "national-defence-2014-office-of-the-communications-security-establishment-commissioner-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 1.0e-6
             }
           ]
         }

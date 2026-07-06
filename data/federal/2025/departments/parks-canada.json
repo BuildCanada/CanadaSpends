@@ -13,53 +13,74 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "parks-canada",
       "name": "Parks Canada",
       "children": [
         {
-          "id": "parks-canada-org-parks-canada-agency",
+          "id": "parks-canada-2025-parks-canada-agency",
           "name": "Parks Canada Agency",
           "children": [
             {
-              "id": "parks-canada-parks-canada-agency-vote1",
-              "name": "Operating expenditures, grants and contributions",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "parks-canada-parks-canada-agency-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.631531
-                },
-                {
-                  "id": "parks-canada-parks-canada-agency-vote1-grants-and-contributions",
-                  "name": "Grants and contributions",
-                  "amount": 0.103618
-                },
-                {
-                  "id": "parks-canada-parks-canada-agency-vote1-advertising-initiatives",
-                  "name": "Advertising Initiatives",
-                  "amount": 0.002999
-                }
-              ]
+              "id": "parks-canada-2025-parks-canada-agency-obj-1",
+              "name": "Personnel",
+              "amount": 0.626664
             },
             {
-              "id": "parks-canada-parks-canada-agency-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.333114
+              "id": "parks-canada-2025-parks-canada-agency-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.184496
             },
             {
-              "id": "parks-canada-parks-canada-agency-vote5",
-              "name": "Capital expenditures",
-              "vote": "Vote 5",
-              "amount": 0.261834
+              "id": "parks-canada-2025-parks-canada-agency-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.173566
             },
             {
-              "id": "parks-canada-parks-canada-agency-vote10",
-              "name": "Payments to the New Parks and Historic Sites Account",
-              "vote": "Vote 10",
-              "amount": 0.03565
+              "id": "parks-canada-2025-parks-canada-agency-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.103618
+            },
+            {
+              "id": "parks-canada-2025-parks-canada-agency-obj-5",
+              "name": "Rentals",
+              "amount": 0.066749
+            },
+            {
+              "id": "parks-canada-2025-parks-canada-agency-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.06327
+            },
+            {
+              "id": "parks-canada-2025-parks-canada-agency-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.060892
+            },
+            {
+              "id": "parks-canada-2025-parks-canada-agency-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.038687
+            },
+            {
+              "id": "parks-canada-2025-parks-canada-agency-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.023154
+            },
+            {
+              "id": "parks-canada-2025-parks-canada-agency-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.019718
+            },
+            {
+              "id": "parks-canada-2025-parks-canada-agency-obj-3",
+              "name": "Information",
+              "amount": 0.00793
+            },
+            {
+              "id": "parks-canada-2025-parks-canada-agency-obj-11",
+              "name": "Public debt charges",
+              "amount": 2.0e-6
             }
           ]
         }

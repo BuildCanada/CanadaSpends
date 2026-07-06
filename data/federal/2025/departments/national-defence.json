@@ -57,129 +57,204 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "national-defence",
       "name": "National Defence",
       "children": [
         {
-          "id": "national-defence-org-department-of-national-defence",
+          "id": "national-defence-2025-department-of-national-defence",
           "name": "Department of National Defence",
           "children": [
             {
-              "id": "national-defence-department-of-national-defence-vote1",
-              "name": "Operating expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "national-defence-department-of-national-defence-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 21.510964
-                },
-                {
-                  "id": "national-defence-department-of-national-defence-vote1-heyder-and-beattie-class-actions",
-                  "name": "Heyder and Beattie Class Actions",
-                  "amount": 0.066626
-                },
-                {
-                  "id": "national-defence-department-of-national-defence-vote1-innovative-solutions-canada",
-                  "name": "Innovative Solutions Canada",
-                  "amount": 0.014294
-                },
-                {
-                  "id": "national-defence-department-of-national-defence-vote1-lesbian-gay-bisexual-and-transgender-purge-class-action-settlement",
-                  "name": "Lesbian, Gay, Bisexual and Transgender Purge Class Action Settlement",
-                  "amount": 0.000328
-                }
-              ]
+              "id": "national-defence-2025-department-of-national-defence-obj-1",
+              "name": "Personnel",
+              "amount": 12.729101
             },
             {
-              "id": "national-defence-department-of-national-defence-vote5",
-              "name": "Capital expenditures",
-              "vote": "Vote 5",
-              "amount": 8.761989
+              "id": "national-defence-2025-department-of-national-defence-obj-4",
+              "name": "Professional and special services",
+              "amount": 6.925234
             },
             {
-              "id": "national-defence-department-of-national-defence-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 1.856027
+              "id": "national-defence-2025-department-of-national-defence-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 6.55778
             },
             {
-              "id": "national-defence-department-of-national-defence-vote10",
-              "name": "Grants and contributions",
-              "vote": "Vote 10",
-              "amount": 1.592299
+              "id": "national-defence-2025-department-of-national-defence-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 2.173514
             },
             {
-              "id": "national-defence-department-of-national-defence-vote15",
-              "name": "Payments in respect of the long-term disability and life insurance plan for members of the Canadian Forces",
-              "vote": "Vote 15",
-              "amount": 0.446728
+              "id": "national-defence-2025-department-of-national-defence-obj-10",
+              "name": "Transfer payments",
+              "amount": 1.592695
+            },
+            {
+              "id": "national-defence-2025-department-of-national-defence-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 1.354937
+            },
+            {
+              "id": "national-defence-2025-department-of-national-defence-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.867202
+            },
+            {
+              "id": "national-defence-2025-department-of-national-defence-obj-5",
+              "name": "Rentals",
+              "amount": 0.847943
+            },
+            {
+              "id": "national-defence-2025-department-of-national-defence-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.843592
+            },
+            {
+              "name": "Other",
+              "id": "national-defence-2025-department-of-national-defence-other",
+              "amount": 0.357257,
+              "isAggregate": true,
+              "count": 3
+            },
+            {
+              "id": "national-defence-2025-department-of-national-defence-external-revenues",
+              "name": "External revenues",
+              "amount": -0.310924
+            },
+            {
+              "id": "national-defence-2025-department-of-national-defence-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.013536
             }
           ]
         },
         {
-          "id": "national-defence-org-communications-security-establishment",
+          "id": "national-defence-2025-communications-security-establishment",
           "name": "Communications Security Establishment",
           "children": [
             {
-              "id": "national-defence-communications-security-establishment-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "national-defence-communications-security-establishment-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.911115
-                },
-                {
-                  "id": "national-defence-communications-security-establishment-vote1-communications-security-establishment-long-term-accommodation-project",
-                  "name": "Communications Security Establishment long-term accommodation project",
-                  "amount": 0.129854
-                }
-              ]
+              "id": "national-defence-2025-communications-security-establishment-obj-1",
+              "name": "Personnel",
+              "amount": 0.523227
             },
             {
-              "id": "national-defence-communications-security-establishment-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.067837
+              "id": "national-defence-2025-communications-security-establishment-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.509237
+            },
+            {
+              "id": "national-defence-2025-communications-security-establishment-obj-11",
+              "name": "Public debt charges",
+              "amount": 0.06057
+            },
+            {
+              "id": "national-defence-2025-communications-security-establishment-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.019454
+            },
+            {
+              "id": "national-defence-2025-communications-security-establishment-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.015771
+            },
+            {
+              "id": "national-defence-2025-communications-security-establishment-external-revenues",
+              "name": "External revenues",
+              "amount": -0.000819
             }
           ]
         },
         {
-          "id": "national-defence-org-military-grievances-external-review-committee",
+          "id": "national-defence-2025-military-grievances-external-review-committee",
           "name": "Military Grievances External Review Committee",
           "children": [
             {
-              "id": "national-defence-military-grievances-external-review-committee-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.007465
+              "id": "national-defence-2025-military-grievances-external-review-committee-obj-1",
+              "name": "Personnel",
+              "amount": 0.00728
             },
             {
-              "id": "national-defence-military-grievances-external-review-committee-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.000938
+              "id": "national-defence-2025-military-grievances-external-review-committee-obj-5",
+              "name": "Rentals",
+              "amount": 0.000496
+            },
+            {
+              "id": "national-defence-2025-military-grievances-external-review-committee-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.000483
+            },
+            {
+              "id": "national-defence-2025-military-grievances-external-review-committee-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 7.3e-5
+            },
+            {
+              "id": "national-defence-2025-military-grievances-external-review-committee-obj-2",
+              "name": "Transportation and communications",
+              "amount": 3.0e-5
+            },
+            {
+              "id": "national-defence-2025-military-grievances-external-review-committee-obj-3",
+              "name": "Information",
+              "amount": 1.6e-5
+            },
+            {
+              "id": "national-defence-2025-military-grievances-external-review-committee-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 1.4e-5
+            },
+            {
+              "id": "national-defence-2025-military-grievances-external-review-committee-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 1.1e-5
             }
           ]
         },
         {
-          "id": "national-defence-org-military-police-complaints-commission",
+          "id": "national-defence-2025-military-police-complaints-commission",
           "name": "Military Police Complaints Commission",
           "children": [
             {
-              "id": "national-defence-military-police-complaints-commission-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.005184
+              "id": "national-defence-2025-military-police-complaints-commission-obj-1",
+              "name": "Personnel",
+              "amount": 0.004672
             },
             {
-              "id": "national-defence-military-police-complaints-commission-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.000593
+              "id": "national-defence-2025-military-police-complaints-commission-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.000525
+            },
+            {
+              "id": "national-defence-2025-military-police-complaints-commission-obj-5",
+              "name": "Rentals",
+              "amount": 0.000406
+            },
+            {
+              "id": "national-defence-2025-military-police-complaints-commission-obj-2",
+              "name": "Transportation and communications",
+              "amount": 6.4e-5
+            },
+            {
+              "id": "national-defence-2025-military-police-complaints-commission-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 5.1e-5
+            },
+            {
+              "id": "national-defence-2025-military-police-complaints-commission-obj-3",
+              "name": "Information",
+              "amount": 4.8e-5
+            },
+            {
+              "id": "national-defence-2025-military-police-complaints-commission-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 8.0e-6
+            },
+            {
+              "id": "national-defence-2025-military-police-complaints-commission-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 3.0e-6
             }
           ]
         }

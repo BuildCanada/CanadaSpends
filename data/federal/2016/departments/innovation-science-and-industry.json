@@ -57,110 +57,664 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "innovation-science-and-industry",
       "name": "Innovation, Science and Industry",
       "children": [
         {
-          "id": "innovation-science-and-industry-org-innovation-science-and-economic-development",
-          "name": "Innovation, Science and Economic Development",
+          "id": "innovation-science-and-industry-2016-industry",
+          "name": "Industry",
           "children": [
             {
-              "id": "innovation-science-and-industry-innovation-science-and-economic-development-vote",
-              "name": "Total appropriations (vote-level detail not published for this edition)",
-              "vote": "All votes",
-              "children": [
-                {
-                  "id": "innovation-science-and-industry-innovation-science-and-economic-development-vote-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 1.777325
-                },
-                {
-                  "id": "innovation-science-and-industry-innovation-science-and-economic-development-vote-grants",
-                  "name": "Grants",
-                  "amount": 1.761759
-                },
-                {
-                  "id": "innovation-science-and-industry-innovation-science-and-economic-development-vote-grants-and-contributions",
-                  "name": "Grants and contributions",
-                  "amount": 1.707692
-                },
-                {
-                  "id": "innovation-science-and-industry-innovation-science-and-economic-development-vote-statutory-amounts",
-                  "name": "Statutory amounts",
-                  "amount": 0.486034
-                },
-                {
-                  "id": "innovation-science-and-industry-innovation-science-and-economic-development-vote-capital-budget",
-                  "name": "Capital budget",
-                  "amount": 0.24741
-                },
-                {
-                  "id": "innovation-science-and-industry-innovation-science-and-economic-development-vote-less-revenues-netted-against-expenditures",
-                  "name": "Less: revenues netted against expenditures",
-                  "amount": 0.175223
-                },
-                {
-                  "id": "innovation-science-and-industry-innovation-science-and-economic-development-vote-payments-to-crown-corporation",
-                  "name": "Payments to Crown Corporation",
-                  "amount": 0.073171
-                },
-                {
-                  "id": "innovation-science-and-industry-innovation-science-and-economic-development-vote-contributions",
-                  "name": "Contributions",
-                  "amount": 0.032291
-                }
-              ]
+              "id": "innovation-science-and-industry-2016-industry-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.757787
+            },
+            {
+              "id": "innovation-science-and-industry-2016-industry-obj-1",
+              "name": "Personnel",
+              "amount": 0.480643
+            },
+            {
+              "id": "innovation-science-and-industry-2016-industry-external-revenues",
+              "name": "External revenues",
+              "amount": 0.216936
+            },
+            {
+              "id": "innovation-science-and-industry-2016-industry-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.085412
+            },
+            {
+              "id": "innovation-science-and-industry-2016-industry-obj-5",
+              "name": "Rentals",
+              "amount": 0.018823
+            },
+            {
+              "id": "innovation-science-and-industry-2016-industry-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.015342
+            },
+            {
+              "id": "innovation-science-and-industry-2016-industry-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.011496
+            },
+            {
+              "id": "innovation-science-and-industry-2016-industry-internal-revenues",
+              "name": "Internal revenues",
+              "amount": 0.010021
+            },
+            {
+              "id": "innovation-science-and-industry-2016-industry-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.009466
+            },
+            {
+              "id": "innovation-science-and-industry-2016-industry-obj-3",
+              "name": "Information",
+              "amount": 0.009071
+            },
+            {
+              "id": "innovation-science-and-industry-2016-industry-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.005996
+            },
+            {
+              "id": "innovation-science-and-industry-2016-industry-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.002755
             }
           ]
         },
         {
-          "id": "innovation-science-and-industry-org-infrastructure-and-communities",
-          "name": "Infrastructure and Communities",
+          "id": "innovation-science-and-industry-2016-natural-sciences-and-engineering-research-council",
+          "name": "Natural Sciences and Engineering Research Council",
           "children": [
             {
-              "id": "innovation-science-and-industry-infrastructure-and-communities-vote",
-              "name": "Total appropriations (vote-level detail not published for this edition)",
-              "vote": "All votes",
-              "children": [
-                {
-                  "id": "innovation-science-and-industry-infrastructure-and-communities-vote-statutory-amounts",
-                  "name": "Statutory amounts",
-                  "amount": 1.978538
-                },
-                {
-                  "id": "innovation-science-and-industry-infrastructure-and-communities-vote-contributions",
-                  "name": "Contributions",
-                  "amount": 1.104706
-                },
-                {
-                  "id": "innovation-science-and-industry-infrastructure-and-communities-vote-payments-to-crown-corporation",
-                  "name": "Payments to Crown Corporation",
-                  "amount": 0.241104
-                },
-                {
-                  "id": "innovation-science-and-industry-infrastructure-and-communities-vote-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.058768
-                },
-                {
-                  "id": "innovation-science-and-industry-infrastructure-and-communities-vote-capital-expenditures",
-                  "name": "Capital expenditures",
-                  "amount": 0.04843
-                },
-                {
-                  "id": "innovation-science-and-industry-infrastructure-and-communities-vote-payments-to-crown-corporation-capital",
-                  "name": "Payments to Crown Corporation—Capital",
-                  "amount": 0.046224
-                },
-                {
-                  "id": "innovation-science-and-industry-infrastructure-and-communities-vote-capital-budget",
-                  "name": "Capital budget",
-                  "amount": 0.025
-                }
-              ]
+              "id": "innovation-science-and-industry-2016-natural-sciences-and-engineering-research-council-obj-10",
+              "name": "Transfer payments",
+              "amount": 1.068045
+            },
+            {
+              "id": "innovation-science-and-industry-2016-natural-sciences-and-engineering-research-council-obj-1",
+              "name": "Personnel",
+              "amount": 0.037724
+            },
+            {
+              "id": "innovation-science-and-industry-2016-natural-sciences-and-engineering-research-council-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.00376
+            },
+            {
+              "id": "innovation-science-and-industry-2016-natural-sciences-and-engineering-research-council-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.003035
+            },
+            {
+              "id": "innovation-science-and-industry-2016-natural-sciences-and-engineering-research-council-obj-5",
+              "name": "Rentals",
+              "amount": 0.001046
+            },
+            {
+              "id": "innovation-science-and-industry-2016-natural-sciences-and-engineering-research-council-obj-3",
+              "name": "Information",
+              "amount": 0.000945
+            },
+            {
+              "id": "innovation-science-and-industry-2016-natural-sciences-and-engineering-research-council-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000679
+            },
+            {
+              "id": "innovation-science-and-industry-2016-natural-sciences-and-engineering-research-council-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000156
+            },
+            {
+              "id": "innovation-science-and-industry-2016-natural-sciences-and-engineering-research-council-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000138
+            },
+            {
+              "id": "innovation-science-and-industry-2016-natural-sciences-and-engineering-research-council-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000125
             }
           ]
+        },
+        {
+          "id": "innovation-science-and-industry-2016-national-research-council-of-canada",
+          "name": "National Research Council of Canada",
+          "children": [
+            {
+              "id": "innovation-science-and-industry-2016-national-research-council-of-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.396216
+            },
+            {
+              "id": "innovation-science-and-industry-2016-national-research-council-of-canada-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.302517
+            },
+            {
+              "id": "innovation-science-and-industry-2016-national-research-council-of-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.060509
+            },
+            {
+              "id": "innovation-science-and-industry-2016-national-research-council-of-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.047454
+            },
+            {
+              "id": "innovation-science-and-industry-2016-national-research-council-of-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.046594
+            },
+            {
+              "id": "innovation-science-and-industry-2016-national-research-council-of-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.025406
+            },
+            {
+              "id": "innovation-science-and-industry-2016-national-research-council-of-canada-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.023779
+            },
+            {
+              "id": "innovation-science-and-industry-2016-national-research-council-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.017169
+            },
+            {
+              "id": "innovation-science-and-industry-2016-national-research-council-of-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.014866
+            },
+            {
+              "id": "innovation-science-and-industry-2016-national-research-council-of-canada-obj-5",
+              "name": "Rentals",
+              "amount": 0.008797
+            },
+            {
+              "id": "innovation-science-and-industry-2016-national-research-council-of-canada-obj-3",
+              "name": "Information",
+              "amount": 0.001771
+            }
+          ]
+        },
+        {
+          "id": "innovation-science-and-industry-2016-statistics-canada",
+          "name": "Statistics Canada",
+          "children": [
+            {
+              "id": "innovation-science-and-industry-2016-statistics-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.517853
+            },
+            {
+              "id": "innovation-science-and-industry-2016-statistics-canada-internal-revenues",
+              "name": "Internal revenues",
+              "amount": 0.085713
+            },
+            {
+              "id": "innovation-science-and-industry-2016-statistics-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.028435
+            },
+            {
+              "id": "innovation-science-and-industry-2016-statistics-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.025539
+            },
+            {
+              "id": "innovation-science-and-industry-2016-statistics-canada-obj-3",
+              "name": "Information",
+              "amount": 0.021155
+            },
+            {
+              "id": "innovation-science-and-industry-2016-statistics-canada-external-revenues",
+              "name": "External revenues",
+              "amount": 0.018622
+            },
+            {
+              "id": "innovation-science-and-industry-2016-statistics-canada-obj-5",
+              "name": "Rentals",
+              "amount": 0.017348
+            },
+            {
+              "id": "innovation-science-and-industry-2016-statistics-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.006043
+            },
+            {
+              "id": "innovation-science-and-industry-2016-statistics-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.003439
+            },
+            {
+              "id": "innovation-science-and-industry-2016-statistics-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.001776
+            },
+            {
+              "id": "innovation-science-and-industry-2016-statistics-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000308
+            }
+          ]
+        },
+        {
+          "id": "innovation-science-and-industry-2016-social-sciences-and-humanities-research-council",
+          "name": "Social Sciences and Humanities Research Council",
+          "children": [
+            {
+              "id": "innovation-science-and-industry-2016-social-sciences-and-humanities-research-council-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.693713
+            },
+            {
+              "id": "innovation-science-and-industry-2016-social-sciences-and-humanities-research-council-obj-1",
+              "name": "Personnel",
+              "amount": 0.020779
+            },
+            {
+              "id": "innovation-science-and-industry-2016-social-sciences-and-humanities-research-council-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.002528
+            },
+            {
+              "id": "innovation-science-and-industry-2016-social-sciences-and-humanities-research-council-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.001079
+            },
+            {
+              "id": "innovation-science-and-industry-2016-social-sciences-and-humanities-research-council-obj-3",
+              "name": "Information",
+              "amount": 0.000949
+            },
+            {
+              "id": "innovation-science-and-industry-2016-social-sciences-and-humanities-research-council-obj-5",
+              "name": "Rentals",
+              "amount": 0.000519
+            },
+            {
+              "id": "innovation-science-and-industry-2016-social-sciences-and-humanities-research-council-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000378
+            },
+            {
+              "id": "innovation-science-and-industry-2016-social-sciences-and-humanities-research-council-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000193
+            },
+            {
+              "id": "innovation-science-and-industry-2016-social-sciences-and-humanities-research-council-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 7.9e-5
+            },
+            {
+              "id": "innovation-science-and-industry-2016-social-sciences-and-humanities-research-council-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 7.5e-5
+            }
+          ]
+        },
+        {
+          "id": "innovation-science-and-industry-2016-canadian-space-agency",
+          "name": "Canadian Space Agency",
+          "children": [
+            {
+              "id": "innovation-science-and-industry-2016-canadian-space-agency-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.163705
+            },
+            {
+              "id": "innovation-science-and-industry-2016-canadian-space-agency-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.10899
+            },
+            {
+              "id": "innovation-science-and-industry-2016-canadian-space-agency-obj-1",
+              "name": "Personnel",
+              "amount": 0.066097
+            },
+            {
+              "id": "innovation-science-and-industry-2016-canadian-space-agency-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.044568
+            },
+            {
+              "id": "innovation-science-and-industry-2016-canadian-space-agency-obj-3",
+              "name": "Information",
+              "amount": 0.011548
+            },
+            {
+              "id": "innovation-science-and-industry-2016-canadian-space-agency-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.005213
+            },
+            {
+              "id": "innovation-science-and-industry-2016-canadian-space-agency-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.004114
+            },
+            {
+              "id": "innovation-science-and-industry-2016-canadian-space-agency-obj-5",
+              "name": "Rentals",
+              "amount": 0.003853
+            },
+            {
+              "id": "innovation-science-and-industry-2016-canadian-space-agency-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.002856
+            },
+            {
+              "id": "innovation-science-and-industry-2016-canadian-space-agency-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.001855
+            }
+          ]
+        },
+        {
+          "id": "innovation-science-and-industry-2016-atlantic-canada-opportunities-agency",
+          "name": "Atlantic Canada Opportunities Agency",
+          "children": [
+            {
+              "id": "innovation-science-and-industry-2016-atlantic-canada-opportunities-agency-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.230746
+            },
+            {
+              "id": "innovation-science-and-industry-2016-atlantic-canada-opportunities-agency-obj-1",
+              "name": "Personnel",
+              "amount": 0.060225
+            },
+            {
+              "id": "innovation-science-and-industry-2016-atlantic-canada-opportunities-agency-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.004225
+            },
+            {
+              "id": "innovation-science-and-industry-2016-atlantic-canada-opportunities-agency-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.002409
+            },
+            {
+              "id": "innovation-science-and-industry-2016-atlantic-canada-opportunities-agency-obj-5",
+              "name": "Rentals",
+              "amount": 0.002157
+            },
+            {
+              "id": "innovation-science-and-industry-2016-atlantic-canada-opportunities-agency-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000648
+            },
+            {
+              "id": "innovation-science-and-industry-2016-atlantic-canada-opportunities-agency-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000455
+            },
+            {
+              "id": "innovation-science-and-industry-2016-atlantic-canada-opportunities-agency-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000401
+            },
+            {
+              "id": "innovation-science-and-industry-2016-atlantic-canada-opportunities-agency-obj-3",
+              "name": "Information",
+              "amount": 0.000336
+            },
+            {
+              "id": "innovation-science-and-industry-2016-atlantic-canada-opportunities-agency-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 7.0e-6
+            }
+          ]
+        },
+        {
+          "id": "innovation-science-and-industry-2016-economic-development-agency-of-canada-for-the-regions-of-quebec",
+          "name": "Economic Development Agency of Canada for the Regions of Quebec",
+          "children": [
+            {
+              "id": "innovation-science-and-industry-2016-economic-development-agency-of-canada-for-the-regions-of-quebec-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.218494
+            },
+            {
+              "id": "innovation-science-and-industry-2016-economic-development-agency-of-canada-for-the-regions-of-quebec-obj-1",
+              "name": "Personnel",
+              "amount": 0.033282
+            },
+            {
+              "id": "innovation-science-and-industry-2016-economic-development-agency-of-canada-for-the-regions-of-quebec-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.004739
+            },
+            {
+              "id": "innovation-science-and-industry-2016-economic-development-agency-of-canada-for-the-regions-of-quebec-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.00097
+            },
+            {
+              "id": "innovation-science-and-industry-2016-economic-development-agency-of-canada-for-the-regions-of-quebec-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000634
+            },
+            {
+              "id": "innovation-science-and-industry-2016-economic-development-agency-of-canada-for-the-regions-of-quebec-obj-5",
+              "name": "Rentals",
+              "amount": 0.000601
+            },
+            {
+              "id": "innovation-science-and-industry-2016-economic-development-agency-of-canada-for-the-regions-of-quebec-obj-3",
+              "name": "Information",
+              "amount": 0.000299
+            },
+            {
+              "id": "innovation-science-and-industry-2016-economic-development-agency-of-canada-for-the-regions-of-quebec-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000147
+            },
+            {
+              "id": "innovation-science-and-industry-2016-economic-development-agency-of-canada-for-the-regions-of-quebec-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 2.8e-5
+            },
+            {
+              "id": "innovation-science-and-industry-2016-economic-development-agency-of-canada-for-the-regions-of-quebec-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 3.0e-6
+            }
+          ]
+        },
+        {
+          "id": "innovation-science-and-industry-2016-federal-economic-development-agency-for-southern-ontario",
+          "name": "Federal Economic Development Agency for Southern Ontario",
+          "children": [
+            {
+              "id": "innovation-science-and-industry-2016-federal-economic-development-agency-for-southern-ontario-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.15988
+            },
+            {
+              "id": "innovation-science-and-industry-2016-federal-economic-development-agency-for-southern-ontario-obj-1",
+              "name": "Personnel",
+              "amount": 0.023662
+            },
+            {
+              "id": "innovation-science-and-industry-2016-federal-economic-development-agency-for-southern-ontario-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.00436
+            },
+            {
+              "id": "innovation-science-and-industry-2016-federal-economic-development-agency-for-southern-ontario-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000767
+            },
+            {
+              "id": "innovation-science-and-industry-2016-federal-economic-development-agency-for-southern-ontario-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000404
+            },
+            {
+              "id": "innovation-science-and-industry-2016-federal-economic-development-agency-for-southern-ontario-obj-3",
+              "name": "Information",
+              "amount": 0.000335
+            },
+            {
+              "id": "innovation-science-and-industry-2016-federal-economic-development-agency-for-southern-ontario-obj-5",
+              "name": "Rentals",
+              "amount": 0.000184
+            },
+            {
+              "id": "innovation-science-and-industry-2016-federal-economic-development-agency-for-southern-ontario-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000128
+            },
+            {
+              "id": "innovation-science-and-industry-2016-federal-economic-development-agency-for-southern-ontario-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 5.5e-5
+            },
+            {
+              "id": "innovation-science-and-industry-2016-federal-economic-development-agency-for-southern-ontario-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 2.2e-5
+            }
+          ]
+        },
+        {
+          "id": "innovation-science-and-industry-2016-western-economic-diversification",
+          "name": "Western Economic Diversification",
+          "children": [
+            {
+              "id": "innovation-science-and-industry-2016-western-economic-diversification-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.116333
+            },
+            {
+              "id": "innovation-science-and-industry-2016-western-economic-diversification-obj-1",
+              "name": "Personnel",
+              "amount": 0.030288
+            },
+            {
+              "id": "innovation-science-and-industry-2016-western-economic-diversification-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.005555
+            },
+            {
+              "id": "innovation-science-and-industry-2016-western-economic-diversification-obj-5",
+              "name": "Rentals",
+              "amount": 0.001163
+            },
+            {
+              "id": "innovation-science-and-industry-2016-western-economic-diversification-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.00092
+            },
+            {
+              "id": "innovation-science-and-industry-2016-western-economic-diversification-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000859
+            },
+            {
+              "id": "innovation-science-and-industry-2016-western-economic-diversification-obj-3",
+              "name": "Information",
+              "amount": 0.000235
+            },
+            {
+              "id": "innovation-science-and-industry-2016-western-economic-diversification-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.00018
+            },
+            {
+              "id": "innovation-science-and-industry-2016-western-economic-diversification-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000141
+            },
+            {
+              "id": "innovation-science-and-industry-2016-western-economic-diversification-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 1.7e-5
+            }
+          ]
+        },
+        {
+          "id": "innovation-science-and-industry-2016-canadian-tourism-commission",
+          "name": "Canadian Tourism Commission",
+          "children": [
+            {
+              "id": "innovation-science-and-industry-2016-canadian-tourism-commission-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.062976
+            }
+          ]
+        },
+        {
+          "id": "innovation-science-and-industry-2016-canadian-northern-economic-development-agency",
+          "name": "Canadian Northern Economic Development Agency",
+          "children": [
+            {
+              "id": "innovation-science-and-industry-2016-canadian-northern-economic-development-agency-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.032291
+            },
+            {
+              "id": "innovation-science-and-industry-2016-canadian-northern-economic-development-agency-obj-1",
+              "name": "Personnel",
+              "amount": 0.010496
+            },
+            {
+              "id": "innovation-science-and-industry-2016-canadian-northern-economic-development-agency-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.001999
+            },
+            {
+              "id": "innovation-science-and-industry-2016-canadian-northern-economic-development-agency-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000911
+            },
+            {
+              "id": "innovation-science-and-industry-2016-canadian-northern-economic-development-agency-obj-5",
+              "name": "Rentals",
+              "amount": 0.000877
+            },
+            {
+              "id": "innovation-science-and-industry-2016-canadian-northern-economic-development-agency-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000125
+            },
+            {
+              "id": "innovation-science-and-industry-2016-canadian-northern-economic-development-agency-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000113
+            },
+            {
+              "id": "innovation-science-and-industry-2016-canadian-northern-economic-development-agency-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 6.6e-5
+            },
+            {
+              "id": "innovation-science-and-industry-2016-canadian-northern-economic-development-agency-obj-3",
+              "name": "Information",
+              "amount": 5.9e-5
+            },
+            {
+              "id": "innovation-science-and-industry-2016-canadian-northern-economic-development-agency-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 1.1e-5
+            }
+          ]
+        },
+        {
+          "name": "Other",
+          "id": "innovation-science-and-industry-other",
+          "amount": 0.013024,
+          "isAggregate": true,
+          "count": 2
         }
       ]
     }

@@ -17,43 +17,100 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "democratic-institutions",
       "name": "Democratic Institutions",
       "children": [
         {
-          "id": "democratic-institutions-org-office-of-the-chief-electoral-officer",
+          "id": "democratic-institutions-2019-office-of-the-chief-electoral-officer",
           "name": "Office of the Chief Electoral Officer",
           "children": [
             {
-              "id": "democratic-institutions-office-of-the-chief-electoral-officer-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.151504
+              "id": "democratic-institutions-2019-office-of-the-chief-electoral-officer-obj-1",
+              "name": "Personnel",
+              "amount": 0.078567
             },
             {
-              "id": "democratic-institutions-office-of-the-chief-electoral-officer-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.032244
+              "id": "democratic-institutions-2019-office-of-the-chief-electoral-officer-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.053059
+            },
+            {
+              "id": "democratic-institutions-2019-office-of-the-chief-electoral-officer-obj-5",
+              "name": "Rentals",
+              "amount": 0.025264
+            },
+            {
+              "id": "democratic-institutions-2019-office-of-the-chief-electoral-officer-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.010866
+            },
+            {
+              "id": "democratic-institutions-2019-office-of-the-chief-electoral-officer-obj-3",
+              "name": "Information",
+              "amount": 0.006048
+            },
+            {
+              "id": "democratic-institutions-2019-office-of-the-chief-electoral-officer-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.004248
+            },
+            {
+              "id": "democratic-institutions-2019-office-of-the-chief-electoral-officer-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.002637
+            },
+            {
+              "id": "democratic-institutions-2019-office-of-the-chief-electoral-officer-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.001489
+            },
+            {
+              "id": "democratic-institutions-2019-office-of-the-chief-electoral-officer-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.000855
+            },
+            {
+              "id": "democratic-institutions-2019-office-of-the-chief-electoral-officer-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000452
+            },
+            {
+              "id": "democratic-institutions-2019-office-of-the-chief-electoral-officer-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000258
+            },
+            {
+              "id": "democratic-institutions-2019-office-of-the-chief-electoral-officer-obj-11",
+              "name": "Public debt charges",
+              "amount": 5.0e-6
             }
           ]
         },
         {
-          "id": "democratic-institutions-org-leaders-debates-commission",
+          "id": "democratic-institutions-2019-leaders-debates-commission",
           "name": "Leaders' Debates Commission",
           "children": [
             {
-              "id": "democratic-institutions-leaders-debates-commission-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.000127
+              "id": "democratic-institutions-2019-leaders-debates-commission-obj-1",
+              "name": "Personnel",
+              "amount": 0.00012
             },
             {
-              "id": "democratic-institutions-leaders-debates-commission-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 1.5e-5
+              "id": "democratic-institutions-2019-leaders-debates-commission-obj-2",
+              "name": "Transportation and communications",
+              "amount": 1.3e-5
+            },
+            {
+              "id": "democratic-institutions-2019-leaders-debates-commission-obj-4",
+              "name": "Professional and special services",
+              "amount": 8.0e-6
+            },
+            {
+              "id": "democratic-institutions-2019-leaders-debates-commission-obj-5",
+              "name": "Rentals",
+              "amount": 1.0e-6
             }
           ]
         }

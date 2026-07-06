@@ -57,50 +57,486 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "justice",
       "name": "Justice",
       "children": [
         {
-          "id": "justice-org-justice",
+          "id": "justice-2016-justice",
           "name": "Justice",
           "children": [
             {
-              "id": "justice-justice-vote",
-              "name": "Total appropriations (vote-level detail not published for this edition)",
-              "vote": "All votes",
-              "children": [
-                {
-                  "id": "justice-justice-vote-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.939166
-                },
-                {
-                  "id": "justice-justice-vote-statutory-amounts",
-                  "name": "Statutory amounts",
-                  "amount": 0.657557
-                },
-                {
-                  "id": "justice-justice-vote-grants-and-contributions",
-                  "name": "Grants and contributions",
-                  "amount": 0.349723
-                },
-                {
-                  "id": "justice-justice-vote-less-revenues-netted-against-expenditures",
-                  "name": "Less: revenues netted against expenditures",
-                  "amount": 0.335169
-                },
-                {
-                  "id": "justice-justice-vote-immigration-and-refugee-protection-act",
-                  "name": "Immigration and Refugee Protection Act",
-                  "amount": 0.006352
-                },
-                {
-                  "id": "justice-justice-vote-translation-costs-devinat-case",
-                  "name": "Translation costs (Devinat case)",
-                  "amount": 0.0
-                }
-              ]
+              "id": "justice-2016-justice-obj-1",
+              "name": "Personnel",
+              "amount": 0.549538
+            },
+            {
+              "id": "justice-2016-justice-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.349695
+            },
+            {
+              "id": "justice-2016-justice-internal-revenues",
+              "name": "Internal revenues",
+              "amount": 0.292833
+            },
+            {
+              "id": "justice-2016-justice-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.035426
+            },
+            {
+              "id": "justice-2016-justice-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.009459
+            },
+            {
+              "id": "justice-2016-justice-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.009098
+            },
+            {
+              "id": "justice-2016-justice-obj-5",
+              "name": "Rentals",
+              "amount": 0.007684
+            },
+            {
+              "id": "justice-2016-justice-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.005722
+            },
+            {
+              "id": "justice-2016-justice-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.004111
+            },
+            {
+              "id": "justice-2016-justice-obj-3",
+              "name": "Information",
+              "amount": 0.003182
+            },
+            {
+              "id": "justice-2016-justice-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.00283
+            },
+            {
+              "id": "justice-2016-justice-external-revenues",
+              "name": "External revenues",
+              "amount": 0.000692
+            }
+          ]
+        },
+        {
+          "id": "justice-2016-office-of-the-commissioner-for-federal-judicial-affairs",
+          "name": "Office of the Commissioner for Federal Judicial Affairs",
+          "children": [
+            {
+              "id": "justice-2016-office-of-the-commissioner-for-federal-judicial-affairs-obj-1",
+              "name": "Personnel",
+              "amount": 0.504108
+            },
+            {
+              "id": "justice-2016-office-of-the-commissioner-for-federal-judicial-affairs-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.019898
+            },
+            {
+              "id": "justice-2016-office-of-the-commissioner-for-federal-judicial-affairs-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.012359
+            },
+            {
+              "id": "justice-2016-office-of-the-commissioner-for-federal-judicial-affairs-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.006314
+            },
+            {
+              "id": "justice-2016-office-of-the-commissioner-for-federal-judicial-affairs-obj-5",
+              "name": "Rentals",
+              "amount": 0.000277
+            },
+            {
+              "id": "justice-2016-office-of-the-commissioner-for-federal-judicial-affairs-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.00019
+            },
+            {
+              "id": "justice-2016-office-of-the-commissioner-for-federal-judicial-affairs-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000161
+            },
+            {
+              "id": "justice-2016-office-of-the-commissioner-for-federal-judicial-affairs-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 7.6e-5
+            },
+            {
+              "id": "justice-2016-office-of-the-commissioner-for-federal-judicial-affairs-obj-3",
+              "name": "Information",
+              "amount": 7.2e-5
+            },
+            {
+              "id": "justice-2016-office-of-the-commissioner-for-federal-judicial-affairs-internal-revenues",
+              "name": "Internal revenues",
+              "amount": 2.8e-5
+            }
+          ]
+        },
+        {
+          "id": "justice-2016-office-of-the-director-of-public-prosecutions",
+          "name": "Office of the Director of Public Prosecutions",
+          "children": [
+            {
+              "id": "justice-2016-office-of-the-director-of-public-prosecutions-obj-1",
+              "name": "Personnel",
+              "amount": 0.123719
+            },
+            {
+              "id": "justice-2016-office-of-the-director-of-public-prosecutions-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.049637
+            },
+            {
+              "id": "justice-2016-office-of-the-director-of-public-prosecutions-internal-revenues",
+              "name": "Internal revenues",
+              "amount": 0.018111
+            },
+            {
+              "id": "justice-2016-office-of-the-director-of-public-prosecutions-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.007745
+            },
+            {
+              "id": "justice-2016-office-of-the-director-of-public-prosecutions-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.003869
+            },
+            {
+              "id": "justice-2016-office-of-the-director-of-public-prosecutions-obj-5",
+              "name": "Rentals",
+              "amount": 0.002121
+            },
+            {
+              "id": "justice-2016-office-of-the-director-of-public-prosecutions-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.00147
+            },
+            {
+              "id": "justice-2016-office-of-the-director-of-public-prosecutions-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000706
+            },
+            {
+              "id": "justice-2016-office-of-the-director-of-public-prosecutions-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000627
+            },
+            {
+              "id": "justice-2016-office-of-the-director-of-public-prosecutions-obj-3",
+              "name": "Information",
+              "amount": 0.000561
+            },
+            {
+              "id": "justice-2016-office-of-the-director-of-public-prosecutions-external-revenues",
+              "name": "External revenues",
+              "amount": 0.00022
+            }
+          ]
+        },
+        {
+          "id": "justice-2016-administrative-tribunals-support-service-of-canada",
+          "name": "Administrative Tribunals Support Service of Canada",
+          "children": [
+            {
+              "id": "justice-2016-administrative-tribunals-support-service-of-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.064259
+            },
+            {
+              "id": "justice-2016-administrative-tribunals-support-service-of-canada-external-revenues",
+              "name": "External revenues",
+              "amount": 0.014841
+            },
+            {
+              "id": "justice-2016-administrative-tribunals-support-service-of-canada-internal-revenues",
+              "name": "Internal revenues",
+              "amount": 0.007122
+            },
+            {
+              "id": "justice-2016-administrative-tribunals-support-service-of-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.007071
+            },
+            {
+              "id": "justice-2016-administrative-tribunals-support-service-of-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.002903
+            },
+            {
+              "id": "justice-2016-administrative-tribunals-support-service-of-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.001537
+            },
+            {
+              "id": "justice-2016-administrative-tribunals-support-service-of-canada-obj-5",
+              "name": "Rentals",
+              "amount": 0.001344
+            },
+            {
+              "id": "justice-2016-administrative-tribunals-support-service-of-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000629
+            },
+            {
+              "id": "justice-2016-administrative-tribunals-support-service-of-canada-obj-3",
+              "name": "Information",
+              "amount": 0.000605
+            },
+            {
+              "id": "justice-2016-administrative-tribunals-support-service-of-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000234
+            },
+            {
+              "id": "justice-2016-administrative-tribunals-support-service-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000233
+            }
+          ]
+        },
+        {
+          "id": "justice-2016-courts-administration-service",
+          "name": "Courts Administration Service",
+          "children": [
+            {
+              "id": "justice-2016-courts-administration-service-obj-1",
+              "name": "Personnel",
+              "amount": 0.049886
+            },
+            {
+              "id": "justice-2016-courts-administration-service-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.010535
+            },
+            {
+              "id": "justice-2016-courts-administration-service-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.003446
+            },
+            {
+              "id": "justice-2016-courts-administration-service-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.002568
+            },
+            {
+              "id": "justice-2016-courts-administration-service-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.002398
+            },
+            {
+              "id": "justice-2016-courts-administration-service-obj-5",
+              "name": "Rentals",
+              "amount": 0.001632
+            },
+            {
+              "id": "justice-2016-courts-administration-service-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.000915
+            },
+            {
+              "id": "justice-2016-courts-administration-service-obj-3",
+              "name": "Information",
+              "amount": 0.000452
+            },
+            {
+              "id": "justice-2016-courts-administration-service-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000396
+            },
+            {
+              "id": "justice-2016-courts-administration-service-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 6.7e-5
+            }
+          ]
+        },
+        {
+          "id": "justice-2016-offices-of-the-information-and-privacy-commissioners-of-canada",
+          "name": "Offices of the Information and Privacy Commissioners of Canada",
+          "children": [
+            {
+              "id": "justice-2016-offices-of-the-information-and-privacy-commissioners-of-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.026791
+            },
+            {
+              "id": "justice-2016-offices-of-the-information-and-privacy-commissioners-of-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.003933
+            },
+            {
+              "id": "justice-2016-offices-of-the-information-and-privacy-commissioners-of-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.001292
+            },
+            {
+              "id": "justice-2016-offices-of-the-information-and-privacy-commissioners-of-canada-obj-5",
+              "name": "Rentals",
+              "amount": 0.00081
+            },
+            {
+              "id": "justice-2016-offices-of-the-information-and-privacy-commissioners-of-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000783
+            },
+            {
+              "id": "justice-2016-offices-of-the-information-and-privacy-commissioners-of-canada-obj-3",
+              "name": "Information",
+              "amount": 0.000616
+            },
+            {
+              "id": "justice-2016-offices-of-the-information-and-privacy-commissioners-of-canada-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.000469
+            },
+            {
+              "id": "justice-2016-offices-of-the-information-and-privacy-commissioners-of-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000223
+            },
+            {
+              "id": "justice-2016-offices-of-the-information-and-privacy-commissioners-of-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000113
+            },
+            {
+              "id": "justice-2016-offices-of-the-information-and-privacy-commissioners-of-canada-internal-revenues",
+              "name": "Internal revenues",
+              "amount": 2.5e-5
+            },
+            {
+              "id": "justice-2016-offices-of-the-information-and-privacy-commissioners-of-canada-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 1.2e-5
+            },
+            {
+              "id": "justice-2016-offices-of-the-information-and-privacy-commissioners-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 2.0e-6
+            }
+          ]
+        },
+        {
+          "id": "justice-2016-registrar-of-the-supreme-court-of-canada",
+          "name": "Registrar of the Supreme Court of Canada",
+          "children": [
+            {
+              "id": "justice-2016-registrar-of-the-supreme-court-of-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.026059
+            },
+            {
+              "id": "justice-2016-registrar-of-the-supreme-court-of-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.001877
+            },
+            {
+              "id": "justice-2016-registrar-of-the-supreme-court-of-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.001404
+            },
+            {
+              "id": "justice-2016-registrar-of-the-supreme-court-of-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.001362
+            },
+            {
+              "id": "justice-2016-registrar-of-the-supreme-court-of-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000722
+            },
+            {
+              "id": "justice-2016-registrar-of-the-supreme-court-of-canada-obj-5",
+              "name": "Rentals",
+              "amount": 0.000684
+            },
+            {
+              "id": "justice-2016-registrar-of-the-supreme-court-of-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000116
+            },
+            {
+              "id": "justice-2016-registrar-of-the-supreme-court-of-canada-obj-3",
+              "name": "Information",
+              "amount": 8.5e-5
+            },
+            {
+              "id": "justice-2016-registrar-of-the-supreme-court-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 3.1e-5
+            }
+          ]
+        },
+        {
+          "id": "justice-2016-canadian-human-rights-commission",
+          "name": "Canadian Human Rights Commission",
+          "children": [
+            {
+              "id": "justice-2016-canadian-human-rights-commission-obj-1",
+              "name": "Personnel",
+              "amount": 0.019807
+            },
+            {
+              "id": "justice-2016-canadian-human-rights-commission-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.0017
+            },
+            {
+              "id": "justice-2016-canadian-human-rights-commission-internal-revenues",
+              "name": "Internal revenues",
+              "amount": 0.001297
+            },
+            {
+              "id": "justice-2016-canadian-human-rights-commission-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000856
+            },
+            {
+              "id": "justice-2016-canadian-human-rights-commission-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000431
+            },
+            {
+              "id": "justice-2016-canadian-human-rights-commission-obj-5",
+              "name": "Rentals",
+              "amount": 0.000376
+            },
+            {
+              "id": "justice-2016-canadian-human-rights-commission-obj-3",
+              "name": "Information",
+              "amount": 0.000201
+            },
+            {
+              "id": "justice-2016-canadian-human-rights-commission-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000155
+            },
+            {
+              "id": "justice-2016-canadian-human-rights-commission-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 7.5e-5
+            },
+            {
+              "id": "justice-2016-canadian-human-rights-commission-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 4.1e-5
+            },
+            {
+              "id": "justice-2016-canadian-human-rights-commission-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 7.0e-6
             }
           ]
         }

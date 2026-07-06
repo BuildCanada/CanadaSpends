@@ -57,183 +57,160 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "transport-canada",
       "name": "Transport",
       "children": [
         {
-          "id": "transport-canada-org-department-of-transport",
+          "id": "transport-canada-2020-department-of-transport",
           "name": "Department of Transport",
           "children": [
             {
-              "id": "transport-canada-department-of-transport-vote1",
-              "name": "Operating expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "transport-canada-department-of-transport-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.833274
-                },
-                {
-                  "id": "transport-canada-department-of-transport-vote1-tanker-safety-inspection-program",
-                  "name": "Tanker Safety Inspection Program",
-                  "amount": 0.002145
-                }
-              ]
+              "id": "transport-canada-2020-department-of-transport-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.680094
             },
             {
-              "id": "transport-canada-department-of-transport-vote10",
-              "name": "Grants and contributions—Efficient Transportation System",
-              "vote": "Vote 10",
-              "amount": 0.371542
+              "id": "transport-canada-2020-department-of-transport-obj-1",
+              "name": "Personnel",
+              "amount": 0.661045
             },
             {
-              "id": "transport-canada-department-of-transport-vote15",
-              "name": "Grants and contributions—Green and Innovative Transportation System",
-              "vote": "Vote 15",
-              "amount": 0.213982
+              "id": "transport-canada-2020-department-of-transport-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.179829
             },
             {
-              "id": "transport-canada-department-of-transport-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.209024
+              "id": "transport-canada-2020-department-of-transport-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.086319
             },
             {
-              "id": "transport-canada-department-of-transport-vote5",
-              "name": "Capital expenditures",
-              "vote": "Vote 5",
-              "amount": 0.132602
+              "id": "transport-canada-2020-department-of-transport-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.077309
             },
             {
-              "id": "transport-canada-department-of-transport-vote20",
-              "name": "Grants and contributions—Safe and Secure Transportation System",
-              "vote": "Vote 20",
-              "amount": 0.024271
+              "id": "transport-canada-2020-department-of-transport-external-revenues",
+              "name": "External revenues",
+              "amount": -0.042814
             },
             {
-              "id": "transport-canada-department-of-transport-vote25",
-              "name": "Bringing Innovation to Regulations",
-              "vote": "Vote 25",
-              "amount": 0.0
+              "id": "transport-canada-2020-department-of-transport-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.038805
             },
             {
-              "id": "transport-canada-department-of-transport-vote30",
-              "name": "Canada's Marine Safety Response",
-              "vote": "Vote 30",
-              "amount": 0.0
+              "id": "transport-canada-2020-department-of-transport-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.030223
             },
             {
-              "id": "transport-canada-department-of-transport-vote35",
-              "name": "Delivering Better Service for Air Travellers",
-              "vote": "Vote 35",
-              "amount": 0.0
+              "id": "transport-canada-2020-department-of-transport-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.023913
             },
             {
-              "id": "transport-canada-department-of-transport-vote40",
-              "name": "Encouraging Canadians to Use Zero Emission Vehicles",
-              "vote": "Vote 40",
-              "amount": 0.0
+              "name": "Other",
+              "id": "transport-canada-2020-department-of-transport-other",
+              "amount": 0.018966,
+              "isAggregate": true,
+              "count": 2
             },
             {
-              "id": "transport-canada-department-of-transport-vote45",
-              "name": "Protecting Canada's Critical Infrastructure from Cyber Threats",
-              "vote": "Vote 45",
-              "amount": 0.0
+              "id": "transport-canada-2020-department-of-transport-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.017068
             },
             {
-              "id": "transport-canada-department-of-transport-vote50",
-              "name": "Safe and Secure Road and Rail Transportation",
-              "vote": "Vote 50",
-              "amount": 0.0
+              "id": "transport-canada-2020-department-of-transport-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.012074
             }
           ]
         },
         {
-          "id": "transport-canada-org-canadian-air-transport-security-authority",
+          "id": "transport-canada-2020-canadian-air-transport-security-authority",
           "name": "Canadian Air Transport Security Authority",
           "children": [
             {
-              "id": "transport-canada-canadian-air-transport-security-authority-vote1",
-              "name": "Payments to the Canadian Air Transport Security Authority for operating and capital expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "transport-canada-canadian-air-transport-security-authority-vote1-payments-to-crown-corporation",
-                  "name": "Payments to Crown Corporation",
-                  "amount": 0.743499
-                },
-                {
-                  "id": "transport-canada-canadian-air-transport-security-authority-vote1-capital-budget",
-                  "name": "Capital budget",
-                  "amount": 0.104363
-                }
-              ]
+              "id": "transport-canada-2020-canadian-air-transport-security-authority-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.847862
             }
           ]
         },
         {
-          "id": "transport-canada-org-via-rail-canada-inc",
+          "id": "transport-canada-2020-via-rail-canada-inc",
           "name": "VIA Rail Canada Inc.",
           "children": [
             {
-              "id": "transport-canada-via-rail-canada-inc-vote1",
-              "name": "Payments to VIA Rail Canada Inc.",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "transport-canada-via-rail-canada-inc-vote1-payments-to-crown-corporation",
-                  "name": "Payments to Crown Corporation",
-                  "amount": 0.301404
-                },
-                {
-                  "id": "transport-canada-via-rail-canada-inc-vote1-capital-budget",
-                  "name": "Capital budget",
-                  "amount": 0.204944
-                }
-              ]
+              "id": "transport-canada-2020-via-rail-canada-inc-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.506347
             }
           ]
         },
         {
-          "id": "transport-canada-org-marine-atlantic-inc",
+          "id": "transport-canada-2020-marine-atlantic-inc",
           "name": "Marine Atlantic Inc.",
           "children": [
             {
-              "id": "transport-canada-marine-atlantic-inc-vote1",
-              "name": "Payments to Marine Atlantic Inc.",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "transport-canada-marine-atlantic-inc-vote1-payments-to-crown-corporation",
-                  "name": "Payments to Crown Corporation",
-                  "amount": 0.082069
-                },
-                {
-                  "id": "transport-canada-marine-atlantic-inc-vote1-capital-budget",
-                  "name": "Capital budget",
-                  "amount": 0.048835
-                }
-              ]
+              "id": "transport-canada-2020-marine-atlantic-inc-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.130904
             }
           ]
         },
         {
-          "id": "transport-canada-org-canadian-transportation-agency",
+          "id": "transport-canada-2020-canadian-transportation-agency",
           "name": "Canadian Transportation Agency",
           "children": [
             {
-              "id": "transport-canada-canadian-transportation-agency-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.031493
+              "id": "transport-canada-2020-canadian-transportation-agency-obj-1",
+              "name": "Personnel",
+              "amount": 0.031132
             },
             {
-              "id": "transport-canada-canadian-transportation-agency-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.003785
+              "id": "transport-canada-2020-canadian-transportation-agency-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.001637
+            },
+            {
+              "id": "transport-canada-2020-canadian-transportation-agency-obj-5",
+              "name": "Rentals",
+              "amount": 0.000755
+            },
+            {
+              "id": "transport-canada-2020-canadian-transportation-agency-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000605
+            },
+            {
+              "id": "transport-canada-2020-canadian-transportation-agency-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000604
+            },
+            {
+              "id": "transport-canada-2020-canadian-transportation-agency-obj-3",
+              "name": "Information",
+              "amount": 0.000426
+            },
+            {
+              "id": "transport-canada-2020-canadian-transportation-agency-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 8.6e-5
+            },
+            {
+              "id": "transport-canada-2020-canadian-transportation-agency-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 3.9e-5
+            },
+            {
+              "id": "transport-canada-2020-canadian-transportation-agency-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": -6.0e-6
             }
           ]
         }

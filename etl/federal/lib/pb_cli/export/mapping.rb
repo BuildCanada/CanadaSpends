@@ -49,6 +49,36 @@ module PbCli
         nil
       end
 
+      # --- standard-object (meso dataset) resolution ----------------------
+
+      # The dmac-meso dataset carries raw Public Accounts portfolio labels
+      # (e.g. "Innovation,Science and Economic Development", "Foreign
+      # Affairs,Trade and Development") that differ from the modernized
+      # `ministry_name_normalized` values the allotment extraction produced,
+      # and it leaves footnote/whitespace artifacts. These two helpers resolve
+      # a meso row the same way the allotment side resolves, tolerating those
+      # differences: matching is done on a space-insensitive normalized key
+      # (dashes unified, <sup> stripped, whitespace and case removed) so
+      # "Innovation,Science…" and "Innovation, Science…" collide, and a small
+      # crosswalk (meso_portfolio_aliases) covers genuinely renamed portfolios.
+      #
+      # Organization overrides (the RDA merge) apply directly — meso rows DO
+      # carry an organization column — but the caller guards them by year (an
+      # override only wins when its target slug has allotment data that year),
+      # mirroring transfer_reattribution_slug so meso and allotment stay
+      # consistent in the 2016–2018 window where RDAs have no separate page.
+
+      # Slug for a meso organization via organization_overrides, or nil.
+      def organization_override_slug(organization)
+        @org_to_slug_ci[normalize_ci(organization)]
+      end
+
+      # Slug for a meso portfolio label (ministries list + meso aliases), or nil.
+      def meso_portfolio_slug(portfolio)
+        key = normalize_ci(portfolio)
+        @meso_alias_ci[key] || @name_to_slug_ci[key]
+      end
+
       # Transfer rows carry no organization column, so organization_overrides
       # cannot follow an agency's transfer payments into its host ministry.
       # transfer_reattributions moves rows by (host ministry + description
@@ -99,6 +129,11 @@ module PbCli
         str.to_s.gsub(DASH_RE, '-')
       end
 
+      # Space-insensitive key for meso label matching (see the meso helpers).
+      def normalize_ci(str)
+        str.to_s.gsub(%r{<sup>.*?</sup>}, '').gsub(DASH_RE, '-').downcase.gsub(/\s+/, '')
+      end
+
       private
 
       def build_slug_lookup
@@ -112,8 +147,21 @@ module PbCli
         @override_lookup = {}
         (@slugs['overrides'] || []).each { |o| @override_lookup[o['code']] = o }
         @org_to_slug = {}
+        @org_to_slug_ci = {}
         (@slugs['organization_overrides'] || []).each do |o|
           @org_to_slug[normalize_dashes(o['organization'])] = o['slug']
+          @org_to_slug_ci[normalize_ci(o['organization'])] = o['slug']
+        end
+        # Space-insensitive portfolio + meso-alias lookups for the standard
+        # object (meso) dataset, whose labels carry PA-era wording and
+        # footnote/whitespace artifacts (see the meso resolution helpers).
+        @name_to_slug_ci = {}
+        @portfolios.each do |p|
+          p['ministries'].each { |m| @name_to_slug_ci[normalize_ci(m)] = p['slug'] }
+        end
+        @meso_alias_ci = {}
+        (@slugs['meso_portfolio_aliases'] || []).each do |a|
+          @meso_alias_ci[normalize_ci(a['portfolio'])] = a['slug']
         end
         @transfer_reattributions = (@slugs['transfer_reattributions'] || []).map do |r|
           {

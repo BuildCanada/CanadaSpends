@@ -57,80 +57,110 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "veterans-affairs",
       "name": "Veterans Affairs",
       "children": [
         {
-          "id": "veterans-affairs-org-department-of-veterans-affairs",
+          "id": "veterans-affairs-2022-department-of-veterans-affairs",
           "name": "Department of Veterans Affairs",
           "children": [
             {
-              "id": "veterans-affairs-department-of-veterans-affairs-vote5",
-              "name": "Grants and contributions",
-              "vote": "Vote 5",
-              "amount": 4.194785
+              "id": "veterans-affairs-2022-department-of-veterans-affairs-obj-10",
+              "name": "Transfer payments",
+              "amount": 4.194786
             },
             {
-              "id": "veterans-affairs-department-of-veterans-affairs-vote1",
-              "name": "Operating expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "veterans-affairs-department-of-veterans-affairs-vote1-other-health-purchased-services",
-                  "name": "Other Health Purchased Services",
-                  "amount": 0.699812
-                },
-                {
-                  "id": "veterans-affairs-department-of-veterans-affairs-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.371913
-                },
-                {
-                  "id": "veterans-affairs-department-of-veterans-affairs-vote1-veterans-support-services",
-                  "name": "Veterans Support Services",
-                  "amount": 0.079738
-                },
-                {
-                  "id": "veterans-affairs-department-of-veterans-affairs-vote1-solkin",
-                  "name": "Solkin",
-                  "amount": 0.013
-                },
-                {
-                  "id": "veterans-affairs-department-of-veterans-affairs-vote1-advertising-initiatives",
-                  "name": "Advertising Initiatives",
-                  "amount": 0.004066
-                },
-                {
-                  "id": "veterans-affairs-department-of-veterans-affairs-vote1-ste-anne-s-hospital",
-                  "name": "Ste. Anne's Hospital",
-                  "amount": 0.000623
-                }
-              ]
+              "id": "veterans-affairs-2022-department-of-veterans-affairs-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.507423
             },
             {
-              "id": "veterans-affairs-department-of-veterans-affairs-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.042455
+              "id": "veterans-affairs-2022-department-of-veterans-affairs-obj-1",
+              "name": "Personnel",
+              "amount": 0.348625
+            },
+            {
+              "id": "veterans-affairs-2022-department-of-veterans-affairs-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.282728
+            },
+            {
+              "id": "veterans-affairs-2022-department-of-veterans-affairs-obj-5",
+              "name": "Rentals",
+              "amount": 0.023481
+            },
+            {
+              "id": "veterans-affairs-2022-department-of-veterans-affairs-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.022356
+            },
+            {
+              "id": "veterans-affairs-2022-department-of-veterans-affairs-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.013987
+            },
+            {
+              "id": "veterans-affairs-2022-department-of-veterans-affairs-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.006079
+            },
+            {
+              "id": "veterans-affairs-2022-department-of-veterans-affairs-obj-3",
+              "name": "Information",
+              "amount": 0.004868
+            },
+            {
+              "id": "veterans-affairs-2022-department-of-veterans-affairs-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.002059
             }
           ]
         },
         {
-          "id": "veterans-affairs-org-veterans-review-and-appeal-board",
+          "id": "veterans-affairs-2022-veterans-review-and-appeal-board",
           "name": "Veterans Review and Appeal Board",
           "children": [
             {
-              "id": "veterans-affairs-veterans-review-and-appeal-board-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.009812
+              "id": "veterans-affairs-2022-veterans-review-and-appeal-board-obj-1",
+              "name": "Personnel",
+              "amount": 0.010577
             },
             {
-              "id": "veterans-affairs-veterans-review-and-appeal-board-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.001292
+              "id": "veterans-affairs-2022-veterans-review-and-appeal-board-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.000293
+            },
+            {
+              "id": "veterans-affairs-2022-veterans-review-and-appeal-board-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000109
+            },
+            {
+              "id": "veterans-affairs-2022-veterans-review-and-appeal-board-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 5.0e-5
+            },
+            {
+              "id": "veterans-affairs-2022-veterans-review-and-appeal-board-obj-2",
+              "name": "Transportation and communications",
+              "amount": 3.4e-5
+            },
+            {
+              "id": "veterans-affairs-2022-veterans-review-and-appeal-board-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 1.7e-5
+            },
+            {
+              "id": "veterans-affairs-2022-veterans-review-and-appeal-board-obj-5",
+              "name": "Rentals",
+              "amount": 1.7e-5
+            },
+            {
+              "id": "veterans-affairs-2022-veterans-review-and-appeal-board-obj-3",
+              "name": "Information",
+              "amount": 7.0e-6
             }
           ]
         }

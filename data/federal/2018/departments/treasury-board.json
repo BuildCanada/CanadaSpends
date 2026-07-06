@@ -57,55 +57,237 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "treasury-board",
       "name": "Treasury Board",
       "children": [
         {
-          "id": "treasury-board-org-treasury-board",
-          "name": "Treasury Board",
+          "id": "treasury-board-2018-treasury-board-secretariat",
+          "name": "Treasury Board Secretariat",
           "children": [
             {
-              "id": "treasury-board-treasury-board-vote",
-              "name": "Total appropriations (vote-level detail not published for this edition)",
-              "vote": "All votes",
-              "children": [
-                {
-                  "id": "treasury-board-treasury-board-vote-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 4.146357
-                },
-                {
-                  "id": "treasury-board-treasury-board-vote-statutory-amounts",
-                  "name": "Statutory amounts",
-                  "amount": 0.379146
-                },
-                {
-                  "id": "treasury-board-treasury-board-vote-back-office-transformation-initiative",
-                  "name": "Back office transformation initiative",
-                  "amount": 0.02916
-                },
-                {
-                  "id": "treasury-board-treasury-board-vote-tbs-moving-and-accommodations-expenses",
-                  "name": "TBS moving and accommodations expenses",
-                  "amount": 0.00667
-                },
-                {
-                  "id": "treasury-board-treasury-board-vote-post-implementation-of-pay-system",
-                  "name": "Post implementation of pay system",
-                  "amount": 0.001277
-                },
-                {
-                  "id": "treasury-board-treasury-board-vote-grants-and-contributions",
-                  "name": "Grants and contributions",
-                  "amount": 0.001108
-                },
-                {
-                  "id": "treasury-board-treasury-board-vote-legal-fees-for-court-challenge",
-                  "name": "Legal fees for court challenge",
-                  "amount": 0.000272
-                }
-              ]
+              "id": "treasury-board-2018-treasury-board-secretariat-obj-1",
+              "name": "Personnel",
+              "amount": 4.340899
+            },
+            {
+              "id": "treasury-board-2018-treasury-board-secretariat-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.658443
+            },
+            {
+              "id": "treasury-board-2018-treasury-board-secretariat-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.119381
+            },
+            {
+              "id": "treasury-board-2018-treasury-board-secretariat-external-revenues",
+              "name": "External revenues",
+              "amount": -0.012633
+            },
+            {
+              "id": "treasury-board-2018-treasury-board-secretariat-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.006666
+            },
+            {
+              "id": "treasury-board-2018-treasury-board-secretariat-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.004948
+            },
+            {
+              "id": "treasury-board-2018-treasury-board-secretariat-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": -0.003836
+            },
+            {
+              "id": "treasury-board-2018-treasury-board-secretariat-obj-5",
+              "name": "Rentals",
+              "amount": 0.003692
+            },
+            {
+              "id": "treasury-board-2018-treasury-board-secretariat-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.002633
+            },
+            {
+              "id": "treasury-board-2018-treasury-board-secretariat-obj-3",
+              "name": "Information",
+              "amount": 0.001843
+            },
+            {
+              "id": "treasury-board-2018-treasury-board-secretariat-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.001076
+            },
+            {
+              "id": "treasury-board-2018-treasury-board-secretariat-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000676
+            }
+          ]
+        },
+        {
+          "id": "treasury-board-2018-canada-school-of-public-service",
+          "name": "Canada School of Public Service",
+          "children": [
+            {
+              "id": "treasury-board-2018-canada-school-of-public-service-obj-1",
+              "name": "Personnel",
+              "amount": 0.056069
+            },
+            {
+              "id": "treasury-board-2018-canada-school-of-public-service-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.012186
+            },
+            {
+              "id": "treasury-board-2018-canada-school-of-public-service-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.002061
+            },
+            {
+              "id": "treasury-board-2018-canada-school-of-public-service-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.001379
+            },
+            {
+              "id": "treasury-board-2018-canada-school-of-public-service-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.001215
+            },
+            {
+              "id": "treasury-board-2018-canada-school-of-public-service-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.001128
+            },
+            {
+              "id": "treasury-board-2018-canada-school-of-public-service-obj-3",
+              "name": "Information",
+              "amount": 0.000793
+            },
+            {
+              "id": "treasury-board-2018-canada-school-of-public-service-obj-5",
+              "name": "Rentals",
+              "amount": 0.000739
+            },
+            {
+              "id": "treasury-board-2018-canada-school-of-public-service-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000373
+            },
+            {
+              "id": "treasury-board-2018-canada-school-of-public-service-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000347
+            }
+          ]
+        },
+        {
+          "id": "treasury-board-2018-office-of-the-public-sector-integrity-commissioner",
+          "name": "Office of the Public Sector Integrity Commissioner",
+          "children": [
+            {
+              "id": "treasury-board-2018-office-of-the-public-sector-integrity-commissioner-obj-1",
+              "name": "Personnel",
+              "amount": 0.003647
+            },
+            {
+              "id": "treasury-board-2018-office-of-the-public-sector-integrity-commissioner-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.000945
+            },
+            {
+              "id": "treasury-board-2018-office-of-the-public-sector-integrity-commissioner-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000103
+            },
+            {
+              "id": "treasury-board-2018-office-of-the-public-sector-integrity-commissioner-obj-3",
+              "name": "Information",
+              "amount": 7.1e-5
+            },
+            {
+              "id": "treasury-board-2018-office-of-the-public-sector-integrity-commissioner-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 6.1e-5
+            },
+            {
+              "id": "treasury-board-2018-office-of-the-public-sector-integrity-commissioner-obj-10",
+              "name": "Transfer payments",
+              "amount": 4.8e-5
+            },
+            {
+              "id": "treasury-board-2018-office-of-the-public-sector-integrity-commissioner-obj-5",
+              "name": "Rentals",
+              "amount": 4.1e-5
+            },
+            {
+              "id": "treasury-board-2018-office-of-the-public-sector-integrity-commissioner-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 1.8e-5
+            },
+            {
+              "id": "treasury-board-2018-office-of-the-public-sector-integrity-commissioner-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 1.4e-5
+            },
+            {
+              "id": "treasury-board-2018-office-of-the-public-sector-integrity-commissioner-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 2.0e-6
+            }
+          ]
+        },
+        {
+          "id": "treasury-board-2018-office-of-the-commissioner-of-lobbying",
+          "name": "Office of the Commissioner of Lobbying",
+          "children": [
+            {
+              "id": "treasury-board-2018-office-of-the-commissioner-of-lobbying-obj-1",
+              "name": "Personnel",
+              "amount": 0.002907
+            },
+            {
+              "id": "treasury-board-2018-office-of-the-commissioner-of-lobbying-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.001417
+            },
+            {
+              "id": "treasury-board-2018-office-of-the-commissioner-of-lobbying-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000252
+            },
+            {
+              "id": "treasury-board-2018-office-of-the-commissioner-of-lobbying-obj-2",
+              "name": "Transportation and communications",
+              "amount": 8.1e-5
+            },
+            {
+              "id": "treasury-board-2018-office-of-the-commissioner-of-lobbying-obj-3",
+              "name": "Information",
+              "amount": 4.8e-5
+            },
+            {
+              "id": "treasury-board-2018-office-of-the-commissioner-of-lobbying-obj-5",
+              "name": "Rentals",
+              "amount": 3.2e-5
+            },
+            {
+              "id": "treasury-board-2018-office-of-the-commissioner-of-lobbying-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 1.8e-5
+            },
+            {
+              "id": "treasury-board-2018-office-of-the-commissioner-of-lobbying-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 1.3e-5
+            },
+            {
+              "id": "treasury-board-2018-office-of-the-commissioner-of-lobbying-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 4.0e-6
             }
           ]
         }

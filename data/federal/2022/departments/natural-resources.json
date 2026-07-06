@@ -57,193 +57,225 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "natural-resources",
       "name": "Energy and Natural Resources",
       "children": [
         {
-          "id": "natural-resources-org-department-of-natural-resources",
+          "id": "natural-resources-2022-department-of-natural-resources",
           "name": "Department of Natural Resources",
           "children": [
             {
-              "id": "natural-resources-department-of-natural-resources-vote10",
-              "name": "Grants and contributions",
-              "vote": "Vote 10",
-              "children": [
-                {
-                  "id": "natural-resources-department-of-natural-resources-vote10-grants-and-contributions",
-                  "name": "Grants and contributions",
-                  "amount": 0.834064
-                },
-                {
-                  "id": "natural-resources-department-of-natural-resources-vote10-energuide-energy-assessment",
-                  "name": "EnerGuide Energy Assessment",
-                  "amount": 0.011993
-                },
-                {
-                  "id": "natural-resources-department-of-natural-resources-vote10-innovative-solutions-canada",
-                  "name": "Innovative Solutions Canada",
-                  "amount": 0.002
-                }
-              ]
+              "id": "natural-resources-2022-department-of-natural-resources-obj-10",
+              "name": "Transfer payments",
+              "amount": 1.3941
             },
             {
-              "id": "natural-resources-department-of-natural-resources-vote1",
-              "name": "Operating expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "natural-resources-department-of-natural-resources-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.658125
-                },
-                {
-                  "id": "natural-resources-department-of-natural-resources-vote1-international-boundary-commission",
-                  "name": "International Boundary Commission",
-                  "amount": 0.00162
-                },
-                {
-                  "id": "natural-resources-department-of-natural-resources-vote1-softwood-lumber-operating-expenditures",
-                  "name": "Softwood lumber operating expenditures",
-                  "amount": 0.001561
-                },
-                {
-                  "id": "natural-resources-department-of-natural-resources-vote1-innovative-solutions-canada",
-                  "name": "Innovative Solutions Canada",
-                  "amount": 0.000918
-                },
-                {
-                  "id": "natural-resources-department-of-natural-resources-vote1-atomic-workers-recognition-program",
-                  "name": "Atomic Workers Recognition Program",
-                  "amount": 0.000245
-                },
-                {
-                  "id": "natural-resources-department-of-natural-resources-vote1-energuide-energy-assessment",
-                  "name": "EnerGuide Energy Assessment",
-                  "amount": 0.000175
-                },
-                {
-                  "id": "natural-resources-department-of-natural-resources-vote1-soldier-settlement-board-manitoba",
-                  "name": "Soldier settlement board—Manitoba",
-                  "amount": 3.0e-5
-                }
-              ]
+              "id": "natural-resources-2022-department-of-natural-resources-obj-1",
+              "name": "Personnel",
+              "amount": 0.518208
             },
             {
-              "id": "natural-resources-department-of-natural-resources-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.607207
+              "id": "natural-resources-2022-department-of-natural-resources-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.124433
             },
             {
-              "id": "natural-resources-department-of-natural-resources-vote5",
-              "name": "Capital expenditures",
-              "vote": "Vote 5",
-              "children": [
-                {
-                  "id": "natural-resources-department-of-natural-resources-vote5-capital-budget",
-                  "name": "Capital budget",
-                  "amount": 0.020449
-                },
-                {
-                  "id": "natural-resources-department-of-natural-resources-vote5-international-boundary-commission-canadian-section",
-                  "name": "International Boundary Commission—Canadian section",
-                  "amount": 0.000115
-                }
-              ]
+              "id": "natural-resources-2022-department-of-natural-resources-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.027304
+            },
+            {
+              "id": "natural-resources-2022-department-of-natural-resources-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.023466
+            },
+            {
+              "id": "natural-resources-2022-department-of-natural-resources-obj-5",
+              "name": "Rentals",
+              "amount": 0.020968
+            },
+            {
+              "id": "natural-resources-2022-department-of-natural-resources-external-revenues",
+              "name": "External revenues",
+              "amount": -0.018063
+            },
+            {
+              "id": "natural-resources-2022-department-of-natural-resources-obj-3",
+              "name": "Information",
+              "amount": 0.015218
+            },
+            {
+              "name": "Other",
+              "id": "natural-resources-2022-department-of-natural-resources-other",
+              "amount": 0.009484,
+              "isAggregate": true,
+              "count": 2
+            },
+            {
+              "id": "natural-resources-2022-department-of-natural-resources-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.006709
+            },
+            {
+              "id": "natural-resources-2022-department-of-natural-resources-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.00643
+            },
+            {
+              "id": "natural-resources-2022-department-of-natural-resources-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.005815
             }
           ]
         },
         {
-          "id": "natural-resources-org-atomic-energy-of-canada-limited",
+          "id": "natural-resources-2022-atomic-energy-of-canada-limited",
           "name": "Atomic Energy of Canada Limited",
           "children": [
             {
-              "id": "natural-resources-atomic-energy-of-canada-limited-vote1",
-              "name": "Payments to the corporation for operating and capital expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "natural-resources-atomic-energy-of-canada-limited-vote1-payments-to-crown-corporation",
-                  "name": "Payments to Crown Corporation",
-                  "amount": 0.896014
-                },
-                {
-                  "id": "natural-resources-atomic-energy-of-canada-limited-vote1-capital-budget",
-                  "name": "Capital budget",
-                  "amount": 0.112755
-                }
-              ]
+              "id": "natural-resources-2022-atomic-energy-of-canada-limited-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 1.008769
             }
           ]
         },
         {
-          "id": "natural-resources-org-canadian-nuclear-safety-commission",
+          "id": "natural-resources-2022-canadian-nuclear-safety-commission",
           "name": "Canadian Nuclear Safety Commission",
           "children": [
             {
-              "id": "natural-resources-canadian-nuclear-safety-commission-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.108428
+              "id": "natural-resources-2022-canadian-nuclear-safety-commission-obj-1",
+              "name": "Personnel",
+              "amount": 0.115065
             },
             {
-              "id": "natural-resources-canadian-nuclear-safety-commission-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.035112
+              "id": "natural-resources-2022-canadian-nuclear-safety-commission-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.01669
+            },
+            {
+              "id": "natural-resources-2022-canadian-nuclear-safety-commission-obj-5",
+              "name": "Rentals",
+              "amount": 0.004022
+            },
+            {
+              "id": "natural-resources-2022-canadian-nuclear-safety-commission-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.002916
+            },
+            {
+              "id": "natural-resources-2022-canadian-nuclear-safety-commission-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.001832
+            },
+            {
+              "id": "natural-resources-2022-canadian-nuclear-safety-commission-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000977
+            },
+            {
+              "id": "natural-resources-2022-canadian-nuclear-safety-commission-obj-3",
+              "name": "Information",
+              "amount": 0.000911
+            },
+            {
+              "id": "natural-resources-2022-canadian-nuclear-safety-commission-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000728
+            },
+            {
+              "id": "natural-resources-2022-canadian-nuclear-safety-commission-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.00032
+            },
+            {
+              "id": "natural-resources-2022-canadian-nuclear-safety-commission-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 7.9e-5
             }
           ]
         },
         {
-          "id": "natural-resources-org-canadian-energy-regulator",
+          "id": "natural-resources-2022-canadian-energy-regulator",
           "name": "Canadian Energy Regulator",
           "children": [
             {
-              "id": "natural-resources-canadian-energy-regulator-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "natural-resources-canadian-energy-regulator-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.097176
-                },
-                {
-                  "id": "natural-resources-canadian-energy-regulator-vote1-grants-and-contributions",
-                  "name": "Grants and contributions",
-                  "amount": 0.001043
-                },
-                {
-                  "id": "natural-resources-canadian-energy-regulator-vote1-translation-costs-devinat-case",
-                  "name": "Translation costs (Devinat case)",
-                  "amount": 0.000147
-                }
-              ]
+              "id": "natural-resources-2022-canadian-energy-regulator-obj-1",
+              "name": "Personnel",
+              "amount": 0.085703
             },
             {
-              "id": "natural-resources-canadian-energy-regulator-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.011003
+              "id": "natural-resources-2022-canadian-energy-regulator-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.0169
+            },
+            {
+              "id": "natural-resources-2022-canadian-energy-regulator-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.001632
+            },
+            {
+              "id": "natural-resources-2022-canadian-energy-regulator-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.001279
+            },
+            {
+              "id": "natural-resources-2022-canadian-energy-regulator-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.001138
+            },
+            {
+              "id": "natural-resources-2022-canadian-energy-regulator-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.001043
+            },
+            {
+              "id": "natural-resources-2022-canadian-energy-regulator-obj-5",
+              "name": "Rentals",
+              "amount": 0.000537
+            },
+            {
+              "id": "natural-resources-2022-canadian-energy-regulator-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.00053
+            },
+            {
+              "id": "natural-resources-2022-canadian-energy-regulator-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000359
+            },
+            {
+              "id": "natural-resources-2022-canadian-energy-regulator-obj-3",
+              "name": "Information",
+              "amount": 0.000156
+            },
+            {
+              "id": "natural-resources-2022-canadian-energy-regulator-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 9.2e-5
             }
           ]
         },
         {
-          "id": "natural-resources-org-northern-pipeline-agency",
+          "id": "natural-resources-2022-northern-pipeline-agency",
           "name": "Northern Pipeline Agency",
           "children": [
             {
-              "id": "natural-resources-northern-pipeline-agency-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.000248
+              "id": "natural-resources-2022-northern-pipeline-agency-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.000185
             },
             {
-              "id": "natural-resources-northern-pipeline-agency-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 8.0e-6
+              "id": "natural-resources-2022-northern-pipeline-agency-obj-1",
+              "name": "Personnel",
+              "amount": 6.0e-5
+            },
+            {
+              "id": "natural-resources-2022-northern-pipeline-agency-obj-5",
+              "name": "Rentals",
+              "amount": 1.1e-5
             }
           ]
         }

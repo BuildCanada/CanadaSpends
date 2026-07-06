@@ -57,136 +57,214 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "national-defence",
       "name": "National Defence",
       "children": [
         {
-          "id": "national-defence-org-department-of-national-defence",
+          "id": "national-defence-2021-department-of-national-defence",
           "name": "Department of National Defence",
           "children": [
             {
-              "id": "national-defence-department-of-national-defence-vote1",
-              "name": "Operating expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "national-defence-department-of-national-defence-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 17.142173
-                },
-                {
-                  "id": "national-defence-department-of-national-defence-vote1-innovative-solutions-canada",
-                  "name": "Innovative Solutions Canada",
-                  "amount": 0.057357
-                },
-                {
-                  "id": "national-defence-department-of-national-defence-vote1-heyder-and-beattie-class-actions",
-                  "name": "Heyder and Beattie Class Actions",
-                  "amount": 0.00698
-                }
-              ]
+              "id": "national-defence-2021-department-of-national-defence-obj-1",
+              "name": "Personnel",
+              "amount": 14.266657
             },
             {
-              "id": "national-defence-department-of-national-defence-vote5",
-              "name": "Capital expenditures",
-              "vote": "Vote 5",
-              "amount": 4.953763
+              "id": "national-defence-2021-department-of-national-defence-obj-4",
+              "name": "Professional and special services",
+              "amount": 4.226192
             },
             {
-              "id": "national-defence-department-of-national-defence-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 4.35311
+              "id": "national-defence-2021-department-of-national-defence-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 3.999686
             },
             {
-              "id": "national-defence-department-of-national-defence-vote15",
-              "name": "Payments in respect of the long-term disability and life insurance plan for members of the Canadian Forces",
-              "vote": "Vote 15",
-              "amount": 0.417578
+              "id": "national-defence-2021-department-of-national-defence-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 1.660541
             },
             {
-              "id": "national-defence-department-of-national-defence-vote10",
-              "name": "Grants and contributions",
-              "vote": "Vote 10",
-              "amount": 0.263296
+              "id": "national-defence-2021-department-of-national-defence-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.922824
             },
             {
-              "id": "national-defence-department-of-national-defence-vote25",
-              "name": "Debt forgiveness",
-              "vote": "Vote 25",
-              "amount": 0.0
+              "id": "national-defence-2021-department-of-national-defence-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.564514
             },
             {
-              "id": "national-defence-department-of-national-defence-vote20",
-              "name": "Debt write-off",
-              "vote": "Vote 20",
-              "amount": 0.0
+              "id": "national-defence-2021-department-of-national-defence-obj-5",
+              "name": "Rentals",
+              "amount": 0.555267
+            },
+            {
+              "id": "national-defence-2021-department-of-national-defence-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.479536
+            },
+            {
+              "id": "national-defence-2021-department-of-national-defence-external-revenues",
+              "name": "External revenues",
+              "amount": -0.357206
+            },
+            {
+              "id": "national-defence-2021-department-of-national-defence-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.264279
+            },
+            {
+              "name": "Other",
+              "id": "national-defence-2021-department-of-national-defence-other",
+              "amount": 0.254761,
+              "isAggregate": true,
+              "count": 3
+            },
+            {
+              "id": "national-defence-2021-department-of-national-defence-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.010013
             }
           ]
         },
         {
-          "id": "national-defence-org-communications-security-establishment",
+          "id": "national-defence-2021-communications-security-establishment",
           "name": "Communications Security Establishment",
           "children": [
             {
-              "id": "national-defence-communications-security-establishment-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "national-defence-communications-security-establishment-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.637353
-                },
-                {
-                  "id": "national-defence-communications-security-establishment-vote1-communications-security-establishment-long-term-accommodation-project",
-                  "name": "Communications Security Establishment long-term accommodation project",
-                  "amount": 0.110124
-                }
-              ]
+              "id": "national-defence-2021-communications-security-establishment-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.365673
             },
             {
-              "id": "national-defence-communications-security-establishment-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.045898
+              "id": "national-defence-2021-communications-security-establishment-obj-1",
+              "name": "Personnel",
+              "amount": 0.35136
+            },
+            {
+              "id": "national-defence-2021-communications-security-establishment-obj-11",
+              "name": "Public debt charges",
+              "amount": 0.06486
+            },
+            {
+              "id": "national-defence-2021-communications-security-establishment-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.013361
+            },
+            {
+              "id": "national-defence-2021-communications-security-establishment-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.011481
+            },
+            {
+              "id": "national-defence-2021-communications-security-establishment-external-revenues",
+              "name": "External revenues",
+              "amount": -0.000327
             }
           ]
         },
         {
-          "id": "national-defence-org-military-grievances-external-review-committee",
+          "id": "national-defence-2021-military-grievances-external-review-committee",
           "name": "Military Grievances External Review Committee",
           "children": [
             {
-              "id": "national-defence-military-grievances-external-review-committee-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.006393
+              "id": "national-defence-2021-military-grievances-external-review-committee-obj-1",
+              "name": "Personnel",
+              "amount": 0.00621
             },
             {
-              "id": "national-defence-military-grievances-external-review-committee-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.000803
+              "id": "national-defence-2021-military-grievances-external-review-committee-obj-5",
+              "name": "Rentals",
+              "amount": 0.0005
+            },
+            {
+              "id": "national-defence-2021-military-grievances-external-review-committee-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.000294
+            },
+            {
+              "id": "national-defence-2021-military-grievances-external-review-committee-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000133
+            },
+            {
+              "id": "national-defence-2021-military-grievances-external-review-committee-obj-2",
+              "name": "Transportation and communications",
+              "amount": 2.0e-5
+            },
+            {
+              "id": "national-defence-2021-military-grievances-external-review-committee-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 1.5e-5
+            },
+            {
+              "id": "national-defence-2021-military-grievances-external-review-committee-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 1.3e-5
+            },
+            {
+              "id": "national-defence-2021-military-grievances-external-review-committee-obj-3",
+              "name": "Information",
+              "amount": 8.0e-6
+            },
+            {
+              "id": "national-defence-2021-military-grievances-external-review-committee-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 2.0e-6
             }
           ]
         },
         {
-          "id": "national-defence-org-military-police-complaints-commission",
+          "id": "national-defence-2021-military-police-complaints-commission",
           "name": "Military Police Complaints Commission",
           "children": [
             {
-              "id": "national-defence-military-police-complaints-commission-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.004479
+              "id": "national-defence-2021-military-police-complaints-commission-obj-1",
+              "name": "Personnel",
+              "amount": 0.00365
             },
             {
-              "id": "national-defence-military-police-complaints-commission-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.000467
+              "id": "national-defence-2021-military-police-complaints-commission-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.00071
+            },
+            {
+              "id": "national-defence-2021-military-police-complaints-commission-obj-5",
+              "name": "Rentals",
+              "amount": 0.000384
+            },
+            {
+              "id": "national-defence-2021-military-police-complaints-commission-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 6.3e-5
+            },
+            {
+              "id": "national-defence-2021-military-police-complaints-commission-obj-2",
+              "name": "Transportation and communications",
+              "amount": 5.4e-5
+            },
+            {
+              "id": "national-defence-2021-military-police-complaints-commission-obj-3",
+              "name": "Information",
+              "amount": 4.6e-5
+            },
+            {
+              "id": "national-defence-2021-military-police-complaints-commission-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 2.2e-5
+            },
+            {
+              "id": "national-defence-2021-military-police-complaints-commission-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 1.4e-5
+            },
+            {
+              "id": "national-defence-2021-military-police-complaints-commission-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 4.0e-6
             }
           ]
         }

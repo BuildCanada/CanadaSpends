@@ -57,50 +57,270 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "national-defence",
       "name": "National Defence",
       "children": [
         {
-          "id": "national-defence-org-national-defence",
-          "name": "National Defence",
+          "id": "national-defence-2018-department-of-national-defence",
+          "name": "Department of National Defence",
           "children": [
             {
-              "id": "national-defence-national-defence-vote",
-              "name": "Total appropriations (vote-level detail not published for this edition)",
-              "vote": "All votes",
-              "children": [
-                {
-                  "id": "national-defence-national-defence-vote-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 16.444376
-                },
-                {
-                  "id": "national-defence-national-defence-vote-capital-budget",
-                  "name": "Capital budget",
-                  "amount": 3.722931
-                },
-                {
-                  "id": "national-defence-national-defence-vote-statutory-amounts",
-                  "name": "Statutory amounts",
-                  "amount": 3.474886
-                },
-                {
-                  "id": "national-defence-national-defence-vote-grants-and-contributions",
-                  "name": "Grants and contributions",
-                  "amount": 0.15282
-                },
-                {
-                  "id": "national-defence-national-defence-vote-communications-security-establishment-long-term-accommodation-project",
-                  "name": "Communications Security Establishment long-term accommodation project",
-                  "amount": 0.109638
-                },
-                {
-                  "id": "national-defence-national-defence-vote-canada-s-2018-g7-presidency",
-                  "name": "Canada's 2018 G7 Presidency",
-                  "amount": 0.002553
-                }
-              ]
+              "id": "national-defence-2018-department-of-national-defence-obj-1",
+              "name": "Personnel",
+              "amount": 12.00539
+            },
+            {
+              "id": "national-defence-2018-department-of-national-defence-obj-4",
+              "name": "Professional and special services",
+              "amount": 3.955503
+            },
+            {
+              "id": "national-defence-2018-department-of-national-defence-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 2.884456
+            },
+            {
+              "id": "national-defence-2018-department-of-national-defence-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 1.404018
+            },
+            {
+              "id": "national-defence-2018-department-of-national-defence-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.994626
+            },
+            {
+              "id": "national-defence-2018-department-of-national-defence-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.750225
+            },
+            {
+              "id": "national-defence-2018-department-of-national-defence-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.49186
+            },
+            {
+              "id": "national-defence-2018-department-of-national-defence-obj-5",
+              "name": "Rentals",
+              "amount": 0.394386
+            },
+            {
+              "id": "national-defence-2018-department-of-national-defence-external-revenues",
+              "name": "External revenues",
+              "amount": -0.377375
+            },
+            {
+              "id": "national-defence-2018-department-of-national-defence-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.205812
+            },
+            {
+              "name": "Other",
+              "id": "national-defence-2018-department-of-national-defence-other",
+              "amount": 0.184669,
+              "isAggregate": true,
+              "count": 3
+            },
+            {
+              "id": "national-defence-2018-department-of-national-defence-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.016483
+            }
+          ]
+        },
+        {
+          "id": "national-defence-2018-communications-security-establishment",
+          "name": "Communications Security Establishment",
+          "children": [
+            {
+              "id": "national-defence-2018-communications-security-establishment-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.333829
+            },
+            {
+              "id": "national-defence-2018-communications-security-establishment-obj-1",
+              "name": "Personnel",
+              "amount": 0.280152
+            },
+            {
+              "id": "national-defence-2018-communications-security-establishment-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.009049
+            },
+            {
+              "id": "national-defence-2018-communications-security-establishment-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.000499
+            },
+            {
+              "id": "national-defence-2018-communications-security-establishment-external-revenues",
+              "name": "External revenues",
+              "amount": -5.8e-5
+            }
+          ]
+        },
+        {
+          "id": "national-defence-2018-military-grievances-external-review-committee",
+          "name": "Military Grievances External Review Committee",
+          "children": [
+            {
+              "id": "national-defence-2018-military-grievances-external-review-committee-obj-1",
+              "name": "Personnel",
+              "amount": 0.004405
+            },
+            {
+              "id": "national-defence-2018-military-grievances-external-review-committee-obj-5",
+              "name": "Rentals",
+              "amount": 0.000686
+            },
+            {
+              "id": "national-defence-2018-military-grievances-external-review-committee-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.000654
+            },
+            {
+              "id": "national-defence-2018-military-grievances-external-review-committee-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.000508
+            },
+            {
+              "id": "national-defence-2018-military-grievances-external-review-committee-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.00038
+            },
+            {
+              "id": "national-defence-2018-military-grievances-external-review-committee-obj-2",
+              "name": "Transportation and communications",
+              "amount": 5.2e-5
+            },
+            {
+              "id": "national-defence-2018-military-grievances-external-review-committee-obj-3",
+              "name": "Information",
+              "amount": 2.4e-5
+            },
+            {
+              "id": "national-defence-2018-military-grievances-external-review-committee-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 1.0e-5
+            },
+            {
+              "id": "national-defence-2018-military-grievances-external-review-committee-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 6.0e-6
+            },
+            {
+              "id": "national-defence-2018-military-grievances-external-review-committee-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 1.0e-6
+            }
+          ]
+        },
+        {
+          "id": "national-defence-2018-military-police-complaints-commission",
+          "name": "Military Police Complaints Commission",
+          "children": [
+            {
+              "id": "national-defence-2018-military-police-complaints-commission-obj-1",
+              "name": "Personnel",
+              "amount": 0.002949
+            },
+            {
+              "id": "national-defence-2018-military-police-complaints-commission-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.000736
+            },
+            {
+              "id": "national-defence-2018-military-police-complaints-commission-obj-5",
+              "name": "Rentals",
+              "amount": 0.000367
+            },
+            {
+              "id": "national-defence-2018-military-police-complaints-commission-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000194
+            },
+            {
+              "id": "national-defence-2018-military-police-complaints-commission-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 9.6e-5
+            },
+            {
+              "id": "national-defence-2018-military-police-complaints-commission-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 7.9e-5
+            },
+            {
+              "id": "national-defence-2018-military-police-complaints-commission-obj-3",
+              "name": "Information",
+              "amount": 7.0e-5
+            },
+            {
+              "id": "national-defence-2018-military-police-complaints-commission-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 3.9e-5
+            },
+            {
+              "id": "national-defence-2018-military-police-complaints-commission-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 8.0e-6
+            },
+            {
+              "id": "national-defence-2018-military-police-complaints-commission-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": -2.0e-6
+            }
+          ]
+        },
+        {
+          "id": "national-defence-2018-office-of-the-communications-security-establishment-commissioner",
+          "name": "Office of the Communications Security Establishment Commissioner",
+          "children": [
+            {
+              "id": "national-defence-2018-office-of-the-communications-security-establishment-commissioner-obj-1",
+              "name": "Personnel",
+              "amount": 0.001238
+            },
+            {
+              "id": "national-defence-2018-office-of-the-communications-security-establishment-commissioner-obj-5",
+              "name": "Rentals",
+              "amount": 0.000322
+            },
+            {
+              "id": "national-defence-2018-office-of-the-communications-security-establishment-commissioner-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.000287
+            },
+            {
+              "id": "national-defence-2018-office-of-the-communications-security-establishment-commissioner-obj-3",
+              "name": "Information",
+              "amount": 3.8e-5
+            },
+            {
+              "id": "national-defence-2018-office-of-the-communications-security-establishment-commissioner-obj-2",
+              "name": "Transportation and communications",
+              "amount": 2.6e-5
+            },
+            {
+              "id": "national-defence-2018-office-of-the-communications-security-establishment-commissioner-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 1.9e-5
+            },
+            {
+              "id": "national-defence-2018-office-of-the-communications-security-establishment-commissioner-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 1.8e-5
+            },
+            {
+              "id": "national-defence-2018-office-of-the-communications-security-establishment-commissioner-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 1.7e-5
+            },
+            {
+              "id": "national-defence-2018-office-of-the-communications-security-establishment-commissioner-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 2.0e-6
             }
           ]
         }

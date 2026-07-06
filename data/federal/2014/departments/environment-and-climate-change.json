@@ -57,79 +57,198 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "environment-and-climate-change",
       "name": "Environment and Climate Change",
       "children": [
         {
-          "id": "environment-and-climate-change-org-environment",
-          "name": "Environment",
+          "id": "environment-and-climate-change-2014-environment-department",
+          "name": "Environment Department",
           "children": [
             {
-              "id": "environment-and-climate-change-environment-vote1",
-              "name": "Operating expenditures",
-              "vote": "Vote 1",
-              "amount": 0.944108
+              "id": "environment-and-climate-change-2014-environment-department-obj-1",
+              "name": "Personnel",
+              "amount": 0.684266
             },
             {
-              "id": "environment-and-climate-change-environment-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.105709
+              "id": "environment-and-climate-change-2014-environment-department-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.133092
             },
             {
-              "id": "environment-and-climate-change-environment-vote10",
-              "name": "Grants and contributions",
-              "vote": "Vote 10",
-              "amount": 0.067998
+              "id": "environment-and-climate-change-2014-environment-department-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.079206
             },
             {
-              "id": "environment-and-climate-change-environment-vote5",
-              "name": "Capital expenditures",
-              "vote": "Vote 5",
-              "amount": 0.050014
+              "id": "environment-and-climate-change-2014-environment-department-external-revenues",
+              "name": "External revenues",
+              "amount": 0.06804
+            },
+            {
+              "id": "environment-and-climate-change-2014-environment-department-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.045072
+            },
+            {
+              "id": "environment-and-climate-change-2014-environment-department-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.039211
+            },
+            {
+              "id": "environment-and-climate-change-2014-environment-department-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.035821
+            },
+            {
+              "id": "environment-and-climate-change-2014-environment-department-obj-5",
+              "name": "Rentals",
+              "amount": 0.026852
+            },
+            {
+              "id": "environment-and-climate-change-2014-environment-department-internal-revenues",
+              "name": "Internal revenues",
+              "amount": 0.0264
+            },
+            {
+              "id": "environment-and-climate-change-2014-environment-department-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.020558
+            },
+            {
+              "name": "Other",
+              "id": "environment-and-climate-change-2014-environment-department-other",
+              "amount": 0.004684,
+              "isAggregate": true,
+              "count": 2
+            },
+            {
+              "id": "environment-and-climate-change-2014-environment-department-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.004628
             }
           ]
         },
         {
-          "id": "environment-and-climate-change-org-parks-canada-agency",
+          "id": "environment-and-climate-change-2014-parks-canada-agency",
           "name": "Parks Canada Agency",
           "children": [
             {
-              "id": "environment-and-climate-change-parks-canada-agency-vote20",
-              "name": "Program expenditures",
-              "vote": "Vote 20",
-              "amount": 0.523351
+              "id": "environment-and-climate-change-2014-parks-canada-agency-obj-1",
+              "name": "Personnel",
+              "amount": 0.362794
             },
             {
-              "id": "environment-and-climate-change-parks-canada-agency-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.167091
+              "id": "environment-and-climate-change-2014-parks-canada-agency-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.104123
             },
             {
-              "id": "environment-and-climate-change-parks-canada-agency-vote25",
-              "name": "Payments to the New Parks and Historic Sites Account",
-              "vote": "Vote 25",
-              "amount": 0.0005
+              "id": "environment-and-climate-change-2014-parks-canada-agency-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.066041
+            },
+            {
+              "id": "environment-and-climate-change-2014-parks-canada-agency-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.046244
+            },
+            {
+              "id": "environment-and-climate-change-2014-parks-canada-agency-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.025346
+            },
+            {
+              "id": "environment-and-climate-change-2014-parks-canada-agency-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.024511
+            },
+            {
+              "id": "environment-and-climate-change-2014-parks-canada-agency-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.01443
+            },
+            {
+              "id": "environment-and-climate-change-2014-parks-canada-agency-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.013573
+            },
+            {
+              "id": "environment-and-climate-change-2014-parks-canada-agency-obj-5",
+              "name": "Rentals",
+              "amount": 0.013336
+            },
+            {
+              "id": "environment-and-climate-change-2014-parks-canada-agency-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.012486
+            },
+            {
+              "id": "environment-and-climate-change-2014-parks-canada-agency-obj-3",
+              "name": "Information",
+              "amount": 0.008057
             }
           ]
         },
         {
-          "id": "environment-and-climate-change-org-canadian-environmental-assessment-agency",
+          "id": "environment-and-climate-change-2014-canadian-environmental-assessment-agency",
           "name": "Canadian Environmental Assessment Agency",
           "children": [
             {
-              "id": "environment-and-climate-change-canadian-environmental-assessment-agency-vote15",
-              "name": "Program expenditures",
-              "vote": "Vote 15",
-              "amount": 0.039304
+              "id": "environment-and-climate-change-2014-canadian-environmental-assessment-agency-obj-1",
+              "name": "Personnel",
+              "amount": 0.026159
             },
             {
-              "id": "environment-and-climate-change-canadian-environmental-assessment-agency-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.003057
+              "id": "environment-and-climate-change-2014-canadian-environmental-assessment-agency-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.00599
+            },
+            {
+              "id": "environment-and-climate-change-2014-canadian-environmental-assessment-agency-external-revenues",
+              "name": "External revenues",
+              "amount": 0.004363
+            },
+            {
+              "id": "environment-and-climate-change-2014-canadian-environmental-assessment-agency-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.002764
+            },
+            {
+              "id": "environment-and-climate-change-2014-canadian-environmental-assessment-agency-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.001423
+            },
+            {
+              "id": "environment-and-climate-change-2014-canadian-environmental-assessment-agency-internal-revenues",
+              "name": "Internal revenues",
+              "amount": 0.000503
+            },
+            {
+              "id": "environment-and-climate-change-2014-canadian-environmental-assessment-agency-obj-3",
+              "name": "Information",
+              "amount": 0.000437
+            },
+            {
+              "id": "environment-and-climate-change-2014-canadian-environmental-assessment-agency-obj-5",
+              "name": "Rentals",
+              "amount": 0.000366
+            },
+            {
+              "id": "environment-and-climate-change-2014-canadian-environmental-assessment-agency-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000225
+            },
+            {
+              "id": "environment-and-climate-change-2014-canadian-environmental-assessment-agency-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000114
+            },
+            {
+              "id": "environment-and-climate-change-2014-canadian-environmental-assessment-agency-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 1.6e-5
             }
           ]
         }

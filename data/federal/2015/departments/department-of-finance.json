@@ -57,160 +57,352 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "department-of-finance",
       "name": "Finance",
       "children": [
         {
-          "id": "department-of-finance-org-finance",
-          "name": "Finance",
+          "id": "department-of-finance-2015-finance-department",
+          "name": "Finance Department",
           "children": [
             {
-              "id": "department-of-finance-finance-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 85.563214
+              "id": "department-of-finance-2015-finance-department-obj-10",
+              "name": "Transfer payments",
+              "amount": 61.955648
             },
             {
-              "id": "department-of-finance-finance-vote1",
-              "name": "Operating expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "department-of-finance-finance-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.096548
-                },
-                {
-                  "id": "department-of-finance-finance-vote1-move-to-90-elgin-street-building",
-                  "name": "Move to 90 Elgin street building",
-                  "amount": 0.009786
-                },
-                {
-                  "id": "department-of-finance-finance-vote1-advertising-initiatives",
-                  "name": "Advertising initiatives",
-                  "amount": 0.008708
-                },
-                {
-                  "id": "department-of-finance-finance-vote1-less-revenues-netted-against-expenditures",
-                  "name": "Less: revenues netted against expenditures",
-                  "amount": 0.000101
-                }
-              ]
+              "id": "department-of-finance-2015-finance-department-obj-11",
+              "name": "Public debt charges",
+              "amount": 23.487916
             },
             {
-              "id": "department-of-finance-finance-vote5",
-              "name": "Grants and contributions",
-              "vote": "Vote 5",
-              "amount": 0.005
+              "id": "department-of-finance-2015-finance-department-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.106185
             },
             {
-              "id": "department-of-finance-finance-vote6",
-              "name": "Authority for amount by way of direct payments to the International Development Association pursuant to Bretton Woods and Related Agreements Act",
-              "vote": "Vote 6",
-              "amount": 0.0
+              "id": "department-of-finance-2015-finance-department-obj-1",
+              "name": "Personnel",
+              "amount": 0.08675
             },
             {
-              "id": "department-of-finance-finance-vote9",
-              "name": "To amend subsection 14(1) of the Canadian Securities Regulation Regime Transition Office Act",
-              "vote": "Vote 9",
-              "amount": 0.0
+              "id": "department-of-finance-2015-finance-department-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.012945
+            },
+            {
+              "id": "department-of-finance-2015-finance-department-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.010011
+            },
+            {
+              "id": "department-of-finance-2015-finance-department-obj-3",
+              "name": "Information",
+              "amount": 0.01
+            },
+            {
+              "id": "department-of-finance-2015-finance-department-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.005851
+            },
+            {
+              "id": "department-of-finance-2015-finance-department-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.003498
+            },
+            {
+              "id": "department-of-finance-2015-finance-department-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.002834
+            },
+            {
+              "name": "Other",
+              "id": "department-of-finance-2015-finance-department-other",
+              "amount": 0.001618,
+              "isAggregate": true,
+              "count": 2
+            },
+            {
+              "id": "department-of-finance-2015-finance-department-internal-revenues",
+              "name": "Internal revenues",
+              "amount": 0.000101
             }
           ]
         },
         {
-          "id": "department-of-finance-org-ppp-canada-inc",
+          "id": "department-of-finance-2015-ppp-canada-inc",
           "name": "PPP Canada Inc.",
           "children": [
             {
-              "id": "department-of-finance-ppp-canada-inc-vote3",
-              "name": "Payments to PPP Canada Inc. for PPP Canada Fund investments",
-              "vote": "Vote 3",
-              "amount": 0.1977
+              "id": "department-of-finance-2015-ppp-canada-inc-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.2095
             }
           ]
         },
         {
-          "id": "department-of-finance-org-office-of-the-superintendent-of-financial-institutions",
+          "id": "department-of-finance-2015-office-of-the-superintendent-of-financial-institutions",
           "name": "Office of the Superintendent of Financial Institutions",
           "children": [
             {
-              "id": "department-of-finance-office-of-the-superintendent-of-financial-institutions-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.145364
+              "id": "department-of-finance-2015-office-of-the-superintendent-of-financial-institutions-obj-1",
+              "name": "Personnel",
+              "amount": 0.107497
             },
             {
-              "id": "department-of-finance-office-of-the-superintendent-of-financial-institutions-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.000945
+              "id": "department-of-finance-2015-office-of-the-superintendent-of-financial-institutions-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.016346
+            },
+            {
+              "id": "department-of-finance-2015-office-of-the-superintendent-of-financial-institutions-obj-5",
+              "name": "Rentals",
+              "amount": 0.009952
+            },
+            {
+              "id": "department-of-finance-2015-office-of-the-superintendent-of-financial-institutions-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.004193
+            },
+            {
+              "id": "department-of-finance-2015-office-of-the-superintendent-of-financial-institutions-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.002826
+            },
+            {
+              "id": "department-of-finance-2015-office-of-the-superintendent-of-financial-institutions-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.002786
+            },
+            {
+              "id": "department-of-finance-2015-office-of-the-superintendent-of-financial-institutions-obj-3",
+              "name": "Information",
+              "amount": 0.001235
+            },
+            {
+              "id": "department-of-finance-2015-office-of-the-superintendent-of-financial-institutions-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000505
+            },
+            {
+              "id": "department-of-finance-2015-office-of-the-superintendent-of-financial-institutions-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000503
+            },
+            {
+              "id": "department-of-finance-2015-office-of-the-superintendent-of-financial-institutions-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.000466
             }
           ]
         },
         {
-          "id": "department-of-finance-org-office-of-the-auditor-general",
+          "id": "department-of-finance-2015-office-of-the-auditor-general",
           "name": "Office of the Auditor General",
           "children": [
             {
-              "id": "department-of-finance-office-of-the-auditor-general-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.074999
+              "id": "department-of-finance-2015-office-of-the-auditor-general-obj-1",
+              "name": "Personnel",
+              "amount": 0.068737
             },
             {
-              "id": "department-of-finance-office-of-the-auditor-general-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.009124
+              "id": "department-of-finance-2015-office-of-the-auditor-general-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.0058
+            },
+            {
+              "id": "department-of-finance-2015-office-of-the-auditor-general-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.003504
+            },
+            {
+              "id": "department-of-finance-2015-office-of-the-auditor-general-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.002196
+            },
+            {
+              "id": "department-of-finance-2015-office-of-the-auditor-general-external-revenues",
+              "name": "External revenues",
+              "amount": 0.001129
+            },
+            {
+              "id": "department-of-finance-2015-office-of-the-auditor-general-obj-5",
+              "name": "Rentals",
+              "amount": 0.001078
+            },
+            {
+              "id": "department-of-finance-2015-office-of-the-auditor-general-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000741
+            },
+            {
+              "id": "department-of-finance-2015-office-of-the-auditor-general-obj-3",
+              "name": "Information",
+              "amount": 0.000454
+            },
+            {
+              "id": "department-of-finance-2015-office-of-the-auditor-general-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000245
+            },
+            {
+              "id": "department-of-finance-2015-office-of-the-auditor-general-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000237
             }
           ]
         },
         {
-          "id": "department-of-finance-org-financial-transactions-and-reports-analysis-centre-of-canada",
+          "id": "department-of-finance-2015-financial-transactions-and-reports-analysis-centre-of-canada",
           "name": "Financial Transactions and Reports Analysis Centre of Canada",
           "children": [
             {
-              "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.046418
+              "id": "department-of-finance-2015-financial-transactions-and-reports-analysis-centre-of-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.036924
             },
             {
-              "id": "department-of-finance-financial-transactions-and-reports-analysis-centre-of-canada-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.004987
+              "id": "department-of-finance-2015-financial-transactions-and-reports-analysis-centre-of-canada-obj-5",
+              "name": "Rentals",
+              "amount": 0.005924
+            },
+            {
+              "id": "department-of-finance-2015-financial-transactions-and-reports-analysis-centre-of-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.003452
+            },
+            {
+              "id": "department-of-finance-2015-financial-transactions-and-reports-analysis-centre-of-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.001476
+            },
+            {
+              "id": "department-of-finance-2015-financial-transactions-and-reports-analysis-centre-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.001205
+            },
+            {
+              "id": "department-of-finance-2015-financial-transactions-and-reports-analysis-centre-of-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.001054
+            },
+            {
+              "id": "department-of-finance-2015-financial-transactions-and-reports-analysis-centre-of-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000761
+            },
+            {
+              "id": "department-of-finance-2015-financial-transactions-and-reports-analysis-centre-of-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000319
+            },
+            {
+              "id": "department-of-finance-2015-financial-transactions-and-reports-analysis-centre-of-canada-obj-3",
+              "name": "Information",
+              "amount": 0.000289
             }
           ]
         },
         {
-          "id": "department-of-finance-org-financial-consumer-agency-of-canada",
+          "id": "department-of-finance-2015-financial-consumer-agency-of-canada",
           "name": "Financial Consumer Agency of Canada",
           "children": [
             {
-              "id": "department-of-finance-financial-consumer-agency-of-canada-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.01789
+              "id": "department-of-finance-2015-financial-consumer-agency-of-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.009781
+            },
+            {
+              "id": "department-of-finance-2015-financial-consumer-agency-of-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.003346
+            },
+            {
+              "id": "department-of-finance-2015-financial-consumer-agency-of-canada-obj-3",
+              "name": "Information",
+              "amount": 0.001886
+            },
+            {
+              "id": "department-of-finance-2015-financial-consumer-agency-of-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.001084
+            },
+            {
+              "id": "department-of-finance-2015-financial-consumer-agency-of-canada-obj-5",
+              "name": "Rentals",
+              "amount": 0.000823
+            },
+            {
+              "id": "department-of-finance-2015-financial-consumer-agency-of-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000513
+            },
+            {
+              "id": "department-of-finance-2015-financial-consumer-agency-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000328
+            },
+            {
+              "id": "department-of-finance-2015-financial-consumer-agency-of-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 9.7e-5
+            },
+            {
+              "id": "department-of-finance-2015-financial-consumer-agency-of-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 3.2e-5
             }
           ]
         },
         {
-          "id": "department-of-finance-org-canadian-international-trade-tribunal",
+          "id": "department-of-finance-2015-canadian-international-trade-tribunal",
           "name": "Canadian International Trade Tribunal",
           "children": [
             {
-              "id": "department-of-finance-canadian-international-trade-tribunal-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.005041
+              "id": "department-of-finance-2015-canadian-international-trade-tribunal-obj-1",
+              "name": "Personnel",
+              "amount": 0.004845
             },
             {
-              "id": "department-of-finance-canadian-international-trade-tribunal-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.000683
+              "id": "department-of-finance-2015-canadian-international-trade-tribunal-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.00033
+            },
+            {
+              "id": "department-of-finance-2015-canadian-international-trade-tribunal-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000243
+            },
+            {
+              "id": "department-of-finance-2015-canadian-international-trade-tribunal-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000119
+            },
+            {
+              "id": "department-of-finance-2015-canadian-international-trade-tribunal-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 7.9e-5
+            },
+            {
+              "id": "department-of-finance-2015-canadian-international-trade-tribunal-obj-5",
+              "name": "Rentals",
+              "amount": 4.4e-5
+            },
+            {
+              "id": "department-of-finance-2015-canadian-international-trade-tribunal-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 3.0e-5
+            },
+            {
+              "id": "department-of-finance-2015-canadian-international-trade-tribunal-obj-3",
+              "name": "Information",
+              "amount": 2.4e-5
+            },
+            {
+              "id": "department-of-finance-2015-canadian-international-trade-tribunal-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 1.1e-5
             }
           ]
         }

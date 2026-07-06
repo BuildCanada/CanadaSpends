@@ -57,224 +57,491 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "justice",
       "name": "Justice",
       "children": [
         {
-          "id": "justice-org-department-of-justice",
+          "id": "justice-2019-department-of-justice",
           "name": "Department of Justice",
           "children": [
             {
-              "id": "justice-department-of-justice-vote1",
-              "name": "Operating expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "justice-department-of-justice-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.640355
-                },
-                {
-                  "id": "justice-department-of-justice-vote1-immigration-and-refugee-protection-act",
-                  "name": "Immigration and Refugee Protection Act",
-                  "amount": 0.000779
-                }
-              ]
+              "id": "justice-2019-department-of-justice-obj-1",
+              "name": "Personnel",
+              "amount": 0.626082
             },
             {
-              "id": "justice-department-of-justice-vote5",
-              "name": "Grants and contributions",
-              "vote": "Vote 5",
-              "children": [
-                {
-                  "id": "justice-department-of-justice-vote5-grants-and-contributions",
-                  "name": "Grants and contributions",
-                  "amount": 0.400163
-                },
-                {
-                  "id": "justice-department-of-justice-vote5-immigration-and-refugee-protection-act",
-                  "name": "Immigration and Refugee Protection Act",
-                  "amount": 3.1e-5
-                }
-              ]
+              "id": "justice-2019-department-of-justice-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.400195
             },
             {
-              "id": "justice-department-of-justice-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.077594
+              "id": "justice-2019-department-of-justice-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.329772
+            },
+            {
+              "id": "justice-2019-department-of-justice-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.039583
+            },
+            {
+              "id": "justice-2019-department-of-justice-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.011393
+            },
+            {
+              "id": "justice-2019-department-of-justice-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.010797
+            },
+            {
+              "id": "justice-2019-department-of-justice-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.009712
+            },
+            {
+              "id": "justice-2019-department-of-justice-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.007537
+            },
+            {
+              "id": "justice-2019-department-of-justice-obj-5",
+              "name": "Rentals",
+              "amount": 0.007296
+            },
+            {
+              "id": "justice-2019-department-of-justice-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.003692
+            },
+            {
+              "id": "justice-2019-department-of-justice-obj-3",
+              "name": "Information",
+              "amount": 0.002636
+            },
+            {
+              "id": "justice-2019-department-of-justice-external-revenues",
+              "name": "External revenues",
+              "amount": -0.000344
             }
           ]
         },
         {
-          "id": "justice-org-office-of-the-commissioner-for-federal-judicial-affairs",
+          "id": "justice-2019-office-of-the-commissioner-for-federal-judicial-affairs",
           "name": "Office of the Commissioner for Federal Judicial Affairs",
           "children": [
             {
-              "id": "justice-office-of-the-commissioner-for-federal-judicial-affairs-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.583821
+              "id": "justice-2019-office-of-the-commissioner-for-federal-judicial-affairs-obj-1",
+              "name": "Personnel",
+              "amount": 0.554209
             },
             {
-              "id": "justice-office-of-the-commissioner-for-federal-judicial-affairs-vote1",
-              "name": "Commissioner for Federal Judicial Affairs—Operating expenditures",
-              "vote": "Vote 1",
-              "amount": 0.008778
+              "id": "justice-2019-office-of-the-commissioner-for-federal-judicial-affairs-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.022011
             },
             {
-              "id": "justice-office-of-the-commissioner-for-federal-judicial-affairs-vote5",
-              "name": "Canadian Judicial Council—Operating expenditures",
-              "vote": "Vote 5",
-              "amount": 0.002918
+              "id": "justice-2019-office-of-the-commissioner-for-federal-judicial-affairs-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.0129
+            },
+            {
+              "id": "justice-2019-office-of-the-commissioner-for-federal-judicial-affairs-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.005703
+            },
+            {
+              "id": "justice-2019-office-of-the-commissioner-for-federal-judicial-affairs-obj-5",
+              "name": "Rentals",
+              "amount": 0.000304
+            },
+            {
+              "id": "justice-2019-office-of-the-commissioner-for-federal-judicial-affairs-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000151
+            },
+            {
+              "id": "justice-2019-office-of-the-commissioner-for-federal-judicial-affairs-obj-3",
+              "name": "Information",
+              "amount": 0.000151
+            },
+            {
+              "id": "justice-2019-office-of-the-commissioner-for-federal-judicial-affairs-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 6.1e-5
+            },
+            {
+              "id": "justice-2019-office-of-the-commissioner-for-federal-judicial-affairs-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -4.0e-5
+            },
+            {
+              "id": "justice-2019-office-of-the-commissioner-for-federal-judicial-affairs-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 2.7e-5
             }
           ]
         },
         {
-          "id": "justice-org-office-of-the-director-of-public-prosecutions",
+          "id": "justice-2019-office-of-the-director-of-public-prosecutions",
           "name": "Office of the Director of Public Prosecutions",
           "children": [
             {
-              "id": "justice-office-of-the-director-of-public-prosecutions-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "justice-office-of-the-director-of-public-prosecutions-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.192227
-                },
-                {
-                  "id": "justice-office-of-the-director-of-public-prosecutions-vote1-fine-recovery-costs",
-                  "name": "Fine recovery costs",
-                  "amount": 0.000389
-                }
-              ]
+              "id": "justice-2019-office-of-the-director-of-public-prosecutions-obj-1",
+              "name": "Personnel",
+              "amount": 0.137092
             },
             {
-              "id": "justice-office-of-the-director-of-public-prosecutions-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.020269
+              "id": "justice-2019-office-of-the-director-of-public-prosecutions-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.053811
+            },
+            {
+              "id": "justice-2019-office-of-the-director-of-public-prosecutions-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.015889
+            },
+            {
+              "id": "justice-2019-office-of-the-director-of-public-prosecutions-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.007581
+            },
+            {
+              "id": "justice-2019-office-of-the-director-of-public-prosecutions-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.004605
+            },
+            {
+              "id": "justice-2019-office-of-the-director-of-public-prosecutions-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.003973
+            },
+            {
+              "id": "justice-2019-office-of-the-director-of-public-prosecutions-obj-5",
+              "name": "Rentals",
+              "amount": 0.002288
+            },
+            {
+              "id": "justice-2019-office-of-the-director-of-public-prosecutions-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.00167
+            },
+            {
+              "id": "justice-2019-office-of-the-director-of-public-prosecutions-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.001457
+            },
+            {
+              "id": "justice-2019-office-of-the-director-of-public-prosecutions-obj-3",
+              "name": "Information",
+              "amount": 0.000408
+            },
+            {
+              "id": "justice-2019-office-of-the-director-of-public-prosecutions-external-revenues",
+              "name": "External revenues",
+              "amount": -0.000228
             }
           ]
         },
         {
-          "id": "justice-org-administrative-tribunals-support-service-of-canada",
-          "name": "Administrative Tribunals Support Service of Canada",
-          "children": [
-            {
-              "id": "justice-administrative-tribunals-support-service-of-canada-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "justice-administrative-tribunals-support-service-of-canada-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.087139
-                },
-                {
-                  "id": "justice-administrative-tribunals-support-service-of-canada-vote1-translation-costs-devinat-case",
-                  "name": "Translation costs (Devinat case)",
-                  "amount": 0.00012
-                }
-              ]
-            },
-            {
-              "id": "justice-administrative-tribunals-support-service-of-canada-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.008779
-            }
-          ]
-        },
-        {
-          "id": "justice-org-courts-administration-service",
+          "id": "justice-2019-courts-administration-service",
           "name": "Courts Administration Service",
           "children": [
             {
-              "id": "justice-courts-administration-service-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "justice-courts-administration-service-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.074105
-                },
-                {
-                  "id": "justice-courts-administration-service-vote1-immigration-and-refugee-protection-act",
-                  "name": "Immigration and Refugee Protection Act",
-                  "amount": 0.003812
-                }
-              ]
+              "id": "justice-2019-courts-administration-service-obj-1",
+              "name": "Personnel",
+              "amount": 0.058172
             },
             {
-              "id": "justice-courts-administration-service-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.007402
+              "id": "justice-2019-courts-administration-service-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.010916
+            },
+            {
+              "id": "justice-2019-courts-administration-service-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.003803
+            },
+            {
+              "id": "justice-2019-courts-administration-service-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.003207
+            },
+            {
+              "id": "justice-2019-courts-administration-service-obj-5",
+              "name": "Rentals",
+              "amount": 0.00306
+            },
+            {
+              "id": "justice-2019-courts-administration-service-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.002563
+            },
+            {
+              "id": "justice-2019-courts-administration-service-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.00174
+            },
+            {
+              "id": "justice-2019-courts-administration-service-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.001083
+            },
+            {
+              "id": "justice-2019-courts-administration-service-obj-3",
+              "name": "Information",
+              "amount": 0.000515
+            },
+            {
+              "id": "justice-2019-courts-administration-service-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.00026
             }
           ]
         },
         {
-          "id": "justice-org-offices-of-the-information-and-privacy-commissioners-of-canada",
+          "id": "justice-2019-administrative-tribunals-support-service-of-canada",
+          "name": "Administrative Tribunals Support Service of Canada",
+          "children": [
+            {
+              "id": "justice-2019-administrative-tribunals-support-service-of-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.072324
+            },
+            {
+              "id": "justice-2019-administrative-tribunals-support-service-of-canada-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.015486
+            },
+            {
+              "id": "justice-2019-administrative-tribunals-support-service-of-canada-external-revenues",
+              "name": "External revenues",
+              "amount": -0.01102
+            },
+            {
+              "id": "justice-2019-administrative-tribunals-support-service-of-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.006793
+            },
+            {
+              "id": "justice-2019-administrative-tribunals-support-service-of-canada-obj-5",
+              "name": "Rentals",
+              "amount": 0.003934
+            },
+            {
+              "id": "justice-2019-administrative-tribunals-support-service-of-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.003482
+            },
+            {
+              "id": "justice-2019-administrative-tribunals-support-service-of-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.003165
+            },
+            {
+              "id": "justice-2019-administrative-tribunals-support-service-of-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.002684
+            },
+            {
+              "id": "justice-2019-administrative-tribunals-support-service-of-canada-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.002153
+            },
+            {
+              "id": "justice-2019-administrative-tribunals-support-service-of-canada-obj-3",
+              "name": "Information",
+              "amount": 0.000874
+            },
+            {
+              "id": "justice-2019-administrative-tribunals-support-service-of-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000605
+            },
+            {
+              "id": "justice-2019-administrative-tribunals-support-service-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 2.3e-5
+            }
+          ]
+        },
+        {
+          "id": "justice-2019-offices-of-the-information-and-privacy-commissioners-of-canada",
           "name": "Offices of the Information and Privacy Commissioners of Canada",
           "children": [
             {
-              "id": "justice-offices-of-the-information-and-privacy-commissioners-of-canada-vote5",
-              "name": "Office of the Privacy Commissioner of Canada—Program expenditures",
-              "vote": "Vote 5",
-              "amount": 0.023162
+              "id": "justice-2019-offices-of-the-information-and-privacy-commissioners-of-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.028618
             },
             {
-              "id": "justice-offices-of-the-information-and-privacy-commissioners-of-canada-vote1",
-              "name": "Office of the Information Commissioner of Canada—Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.013317
+              "id": "justice-2019-offices-of-the-information-and-privacy-commissioners-of-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.006768
             },
             {
-              "id": "justice-offices-of-the-information-and-privacy-commissioners-of-canada-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.003434
+              "id": "justice-2019-offices-of-the-information-and-privacy-commissioners-of-canada-obj-5",
+              "name": "Rentals",
+              "amount": 0.001093
+            },
+            {
+              "id": "justice-2019-offices-of-the-information-and-privacy-commissioners-of-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.001002
+            },
+            {
+              "id": "justice-2019-offices-of-the-information-and-privacy-commissioners-of-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000799
+            },
+            {
+              "id": "justice-2019-offices-of-the-information-and-privacy-commissioners-of-canada-obj-3",
+              "name": "Information",
+              "amount": 0.000587
+            },
+            {
+              "id": "justice-2019-offices-of-the-information-and-privacy-commissioners-of-canada-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.000498
+            },
+            {
+              "id": "justice-2019-offices-of-the-information-and-privacy-commissioners-of-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000218
+            },
+            {
+              "id": "justice-2019-offices-of-the-information-and-privacy-commissioners-of-canada-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.000177
+            },
+            {
+              "id": "justice-2019-offices-of-the-information-and-privacy-commissioners-of-canada-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.000174
+            },
+            {
+              "id": "justice-2019-offices-of-the-information-and-privacy-commissioners-of-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000104
+            },
+            {
+              "id": "justice-2019-offices-of-the-information-and-privacy-commissioners-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 4.9e-5
             }
           ]
         },
         {
-          "id": "justice-org-registrar-of-the-supreme-court-of-canada",
+          "id": "justice-2019-registrar-of-the-supreme-court-of-canada",
           "name": "Registrar of the Supreme Court of Canada",
           "children": [
             {
-              "id": "justice-registrar-of-the-supreme-court-of-canada-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.026576
+              "id": "justice-2019-registrar-of-the-supreme-court-of-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.03017
             },
             {
-              "id": "justice-registrar-of-the-supreme-court-of-canada-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.011173
+              "id": "justice-2019-registrar-of-the-supreme-court-of-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.002672
+            },
+            {
+              "id": "justice-2019-registrar-of-the-supreme-court-of-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.001467
+            },
+            {
+              "id": "justice-2019-registrar-of-the-supreme-court-of-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.00116
+            },
+            {
+              "id": "justice-2019-registrar-of-the-supreme-court-of-canada-obj-5",
+              "name": "Rentals",
+              "amount": 0.000842
+            },
+            {
+              "id": "justice-2019-registrar-of-the-supreme-court-of-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000817
+            },
+            {
+              "id": "justice-2019-registrar-of-the-supreme-court-of-canada-obj-3",
+              "name": "Information",
+              "amount": 0.000292
+            },
+            {
+              "id": "justice-2019-registrar-of-the-supreme-court-of-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000262
+            },
+            {
+              "id": "justice-2019-registrar-of-the-supreme-court-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 6.6e-5
             }
           ]
         },
         {
-          "id": "justice-org-canadian-human-rights-commission",
+          "id": "justice-2019-canadian-human-rights-commission",
           "name": "Canadian Human Rights Commission",
           "children": [
             {
-              "id": "justice-canadian-human-rights-commission-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.022001
+              "id": "justice-2019-canadian-human-rights-commission-obj-1",
+              "name": "Personnel",
+              "amount": 0.020362
             },
             {
-              "id": "justice-canadian-human-rights-commission-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.002437
+              "id": "justice-2019-canadian-human-rights-commission-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.001859
+            },
+            {
+              "id": "justice-2019-canadian-human-rights-commission-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.001725
+            },
+            {
+              "id": "justice-2019-canadian-human-rights-commission-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.00075
+            },
+            {
+              "id": "justice-2019-canadian-human-rights-commission-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000556
+            },
+            {
+              "id": "justice-2019-canadian-human-rights-commission-obj-5",
+              "name": "Rentals",
+              "amount": 0.00035
+            },
+            {
+              "id": "justice-2019-canadian-human-rights-commission-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.000157
+            },
+            {
+              "id": "justice-2019-canadian-human-rights-commission-obj-3",
+              "name": "Information",
+              "amount": 0.000147
+            },
+            {
+              "id": "justice-2019-canadian-human-rights-commission-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000117
+            },
+            {
+              "id": "justice-2019-canadian-human-rights-commission-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000115
+            },
+            {
+              "id": "justice-2019-canadian-human-rights-commission-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 2.5e-5
             }
           ]
         }

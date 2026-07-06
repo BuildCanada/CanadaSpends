@@ -57,55 +57,491 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "justice",
       "name": "Justice",
       "children": [
         {
-          "id": "justice-org-justice",
-          "name": "Justice",
+          "id": "justice-2018-department-of-justice",
+          "name": "Department of Justice",
           "children": [
             {
-              "id": "justice-justice-vote",
-              "name": "Total appropriations (vote-level detail not published for this edition)",
-              "vote": "All votes",
-              "children": [
-                {
-                  "id": "justice-justice-vote-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.996219
-                },
-                {
-                  "id": "justice-justice-vote-statutory-amounts",
-                  "name": "Statutory amounts",
-                  "amount": 0.674041
-                },
-                {
-                  "id": "justice-justice-vote-grants-and-contributions",
-                  "name": "Grants and contributions",
-                  "amount": 0.387668
-                },
-                {
-                  "id": "justice-justice-vote-immigration-and-refugee-protection-act",
-                  "name": "Immigration and Refugee Protection Act",
-                  "amount": 0.005358
-                },
-                {
-                  "id": "justice-justice-vote-inventory-reduction",
-                  "name": "Inventory reduction",
-                  "amount": 0.000441
-                },
-                {
-                  "id": "justice-justice-vote-fine-recovery-costs",
-                  "name": "Fine recovery costs",
-                  "amount": 0.000398
-                },
-                {
-                  "id": "justice-justice-vote-translation-costs-devinat-case",
-                  "name": "Translation costs (Devinat case)",
-                  "amount": 0.00012
-                }
-              ]
+              "id": "justice-2018-department-of-justice-obj-1",
+              "name": "Personnel",
+              "amount": 0.552182
+            },
+            {
+              "id": "justice-2018-department-of-justice-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.387257
+            },
+            {
+              "id": "justice-2018-department-of-justice-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.315851
+            },
+            {
+              "id": "justice-2018-department-of-justice-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.037763
+            },
+            {
+              "id": "justice-2018-department-of-justice-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.010175
+            },
+            {
+              "id": "justice-2018-department-of-justice-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.009081
+            },
+            {
+              "id": "justice-2018-department-of-justice-obj-5",
+              "name": "Rentals",
+              "amount": 0.008368
+            },
+            {
+              "id": "justice-2018-department-of-justice-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.007379
+            },
+            {
+              "id": "justice-2018-department-of-justice-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.004818
+            },
+            {
+              "id": "justice-2018-department-of-justice-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.003579
+            },
+            {
+              "id": "justice-2018-department-of-justice-obj-3",
+              "name": "Information",
+              "amount": 0.002712
+            },
+            {
+              "id": "justice-2018-department-of-justice-external-revenues",
+              "name": "External revenues",
+              "amount": -0.000461
+            }
+          ]
+        },
+        {
+          "id": "justice-2018-office-of-the-commissioner-for-federal-judicial-affairs",
+          "name": "Office of the Commissioner for Federal Judicial Affairs",
+          "children": [
+            {
+              "id": "justice-2018-office-of-the-commissioner-for-federal-judicial-affairs-obj-1",
+              "name": "Personnel",
+              "amount": 0.527449
+            },
+            {
+              "id": "justice-2018-office-of-the-commissioner-for-federal-judicial-affairs-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.020005
+            },
+            {
+              "id": "justice-2018-office-of-the-commissioner-for-federal-judicial-affairs-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.014639
+            },
+            {
+              "id": "justice-2018-office-of-the-commissioner-for-federal-judicial-affairs-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.005502
+            },
+            {
+              "id": "justice-2018-office-of-the-commissioner-for-federal-judicial-affairs-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000321
+            },
+            {
+              "id": "justice-2018-office-of-the-commissioner-for-federal-judicial-affairs-obj-5",
+              "name": "Rentals",
+              "amount": 0.000271
+            },
+            {
+              "id": "justice-2018-office-of-the-commissioner-for-federal-judicial-affairs-obj-3",
+              "name": "Information",
+              "amount": 0.000187
+            },
+            {
+              "id": "justice-2018-office-of-the-commissioner-for-federal-judicial-affairs-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 6.1e-5
+            },
+            {
+              "id": "justice-2018-office-of-the-commissioner-for-federal-judicial-affairs-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 5.5e-5
+            },
+            {
+              "id": "justice-2018-office-of-the-commissioner-for-federal-judicial-affairs-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -4.0e-5
+            }
+          ]
+        },
+        {
+          "id": "justice-2018-office-of-the-director-of-public-prosecutions",
+          "name": "Office of the Director of Public Prosecutions",
+          "children": [
+            {
+              "id": "justice-2018-office-of-the-director-of-public-prosecutions-obj-1",
+              "name": "Personnel",
+              "amount": 0.127474
+            },
+            {
+              "id": "justice-2018-office-of-the-director-of-public-prosecutions-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.052471
+            },
+            {
+              "id": "justice-2018-office-of-the-director-of-public-prosecutions-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.01742
+            },
+            {
+              "id": "justice-2018-office-of-the-director-of-public-prosecutions-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.007644
+            },
+            {
+              "id": "justice-2018-office-of-the-director-of-public-prosecutions-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.004117
+            },
+            {
+              "id": "justice-2018-office-of-the-director-of-public-prosecutions-obj-5",
+              "name": "Rentals",
+              "amount": 0.00214
+            },
+            {
+              "id": "justice-2018-office-of-the-director-of-public-prosecutions-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.001787
+            },
+            {
+              "id": "justice-2018-office-of-the-director-of-public-prosecutions-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.001579
+            },
+            {
+              "id": "justice-2018-office-of-the-director-of-public-prosecutions-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.001385
+            },
+            {
+              "id": "justice-2018-office-of-the-director-of-public-prosecutions-obj-3",
+              "name": "Information",
+              "amount": 0.000532
+            },
+            {
+              "id": "justice-2018-office-of-the-director-of-public-prosecutions-external-revenues",
+              "name": "External revenues",
+              "amount": -0.000208
+            }
+          ]
+        },
+        {
+          "id": "justice-2018-courts-administration-service",
+          "name": "Courts Administration Service",
+          "children": [
+            {
+              "id": "justice-2018-courts-administration-service-obj-1",
+              "name": "Personnel",
+              "amount": 0.054534
+            },
+            {
+              "id": "justice-2018-courts-administration-service-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.010108
+            },
+            {
+              "id": "justice-2018-courts-administration-service-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.006407
+            },
+            {
+              "id": "justice-2018-courts-administration-service-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.002859
+            },
+            {
+              "id": "justice-2018-courts-administration-service-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.0028
+            },
+            {
+              "id": "justice-2018-courts-administration-service-obj-5",
+              "name": "Rentals",
+              "amount": 0.002724
+            },
+            {
+              "id": "justice-2018-courts-administration-service-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.002299
+            },
+            {
+              "id": "justice-2018-courts-administration-service-obj-3",
+              "name": "Information",
+              "amount": 0.000561
+            },
+            {
+              "id": "justice-2018-courts-administration-service-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000416
+            },
+            {
+              "id": "justice-2018-courts-administration-service-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 8.3e-5
+            }
+          ]
+        },
+        {
+          "id": "justice-2018-administrative-tribunals-support-service-of-canada",
+          "name": "Administrative Tribunals Support Service of Canada",
+          "children": [
+            {
+              "id": "justice-2018-administrative-tribunals-support-service-of-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.068136
+            },
+            {
+              "id": "justice-2018-administrative-tribunals-support-service-of-canada-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.011616
+            },
+            {
+              "id": "justice-2018-administrative-tribunals-support-service-of-canada-external-revenues",
+              "name": "External revenues",
+              "amount": -0.011561
+            },
+            {
+              "id": "justice-2018-administrative-tribunals-support-service-of-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.007157
+            },
+            {
+              "id": "justice-2018-administrative-tribunals-support-service-of-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.003979
+            },
+            {
+              "id": "justice-2018-administrative-tribunals-support-service-of-canada-obj-5",
+              "name": "Rentals",
+              "amount": 0.003507
+            },
+            {
+              "id": "justice-2018-administrative-tribunals-support-service-of-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.002633
+            },
+            {
+              "id": "justice-2018-administrative-tribunals-support-service-of-canada-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.001482
+            },
+            {
+              "id": "justice-2018-administrative-tribunals-support-service-of-canada-obj-3",
+              "name": "Information",
+              "amount": 0.000718
+            },
+            {
+              "id": "justice-2018-administrative-tribunals-support-service-of-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000521
+            },
+            {
+              "id": "justice-2018-administrative-tribunals-support-service-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000311
+            },
+            {
+              "id": "justice-2018-administrative-tribunals-support-service-of-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000248
+            }
+          ]
+        },
+        {
+          "id": "justice-2018-offices-of-the-information-and-privacy-commissioners-of-canada",
+          "name": "Offices of the Information and Privacy Commissioners of Canada",
+          "children": [
+            {
+              "id": "justice-2018-offices-of-the-information-and-privacy-commissioners-of-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.029338
+            },
+            {
+              "id": "justice-2018-offices-of-the-information-and-privacy-commissioners-of-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.005314
+            },
+            {
+              "id": "justice-2018-offices-of-the-information-and-privacy-commissioners-of-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.001652
+            },
+            {
+              "id": "justice-2018-offices-of-the-information-and-privacy-commissioners-of-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000787
+            },
+            {
+              "id": "justice-2018-offices-of-the-information-and-privacy-commissioners-of-canada-obj-5",
+              "name": "Rentals",
+              "amount": 0.000781
+            },
+            {
+              "id": "justice-2018-offices-of-the-information-and-privacy-commissioners-of-canada-obj-3",
+              "name": "Information",
+              "amount": 0.000738
+            },
+            {
+              "id": "justice-2018-offices-of-the-information-and-privacy-commissioners-of-canada-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.000476
+            },
+            {
+              "id": "justice-2018-offices-of-the-information-and-privacy-commissioners-of-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000164
+            },
+            {
+              "id": "justice-2018-offices-of-the-information-and-privacy-commissioners-of-canada-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.00015
+            },
+            {
+              "id": "justice-2018-offices-of-the-information-and-privacy-commissioners-of-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 9.0e-5
+            },
+            {
+              "id": "justice-2018-offices-of-the-information-and-privacy-commissioners-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 6.9e-5
+            },
+            {
+              "id": "justice-2018-offices-of-the-information-and-privacy-commissioners-of-canada-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 5.9e-5
+            }
+          ]
+        },
+        {
+          "id": "justice-2018-registrar-of-the-supreme-court-of-canada",
+          "name": "Registrar of the Supreme Court of Canada",
+          "children": [
+            {
+              "id": "justice-2018-registrar-of-the-supreme-court-of-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.029285
+            },
+            {
+              "id": "justice-2018-registrar-of-the-supreme-court-of-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.002428
+            },
+            {
+              "id": "justice-2018-registrar-of-the-supreme-court-of-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.001898
+            },
+            {
+              "id": "justice-2018-registrar-of-the-supreme-court-of-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.001493
+            },
+            {
+              "id": "justice-2018-registrar-of-the-supreme-court-of-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.001324
+            },
+            {
+              "id": "justice-2018-registrar-of-the-supreme-court-of-canada-obj-5",
+              "name": "Rentals",
+              "amount": 0.000712
+            },
+            {
+              "id": "justice-2018-registrar-of-the-supreme-court-of-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.00038
+            },
+            {
+              "id": "justice-2018-registrar-of-the-supreme-court-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": -0.000192
+            },
+            {
+              "id": "justice-2018-registrar-of-the-supreme-court-of-canada-obj-3",
+              "name": "Information",
+              "amount": 8.9e-5
+            }
+          ]
+        },
+        {
+          "id": "justice-2018-canadian-human-rights-commission",
+          "name": "Canadian Human Rights Commission",
+          "children": [
+            {
+              "id": "justice-2018-canadian-human-rights-commission-obj-1",
+              "name": "Personnel",
+              "amount": 0.020166
+            },
+            {
+              "id": "justice-2018-canadian-human-rights-commission-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.002036
+            },
+            {
+              "id": "justice-2018-canadian-human-rights-commission-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.001714
+            },
+            {
+              "id": "justice-2018-canadian-human-rights-commission-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.001002
+            },
+            {
+              "id": "justice-2018-canadian-human-rights-commission-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000803
+            },
+            {
+              "id": "justice-2018-canadian-human-rights-commission-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000384
+            },
+            {
+              "id": "justice-2018-canadian-human-rights-commission-obj-5",
+              "name": "Rentals",
+              "amount": 0.000315
+            },
+            {
+              "id": "justice-2018-canadian-human-rights-commission-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.000182
+            },
+            {
+              "id": "justice-2018-canadian-human-rights-commission-obj-3",
+              "name": "Information",
+              "amount": 0.000134
+            },
+            {
+              "id": "justice-2018-canadian-human-rights-commission-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000132
+            },
+            {
+              "id": "justice-2018-canadian-human-rights-commission-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000111
             }
           ]
         }

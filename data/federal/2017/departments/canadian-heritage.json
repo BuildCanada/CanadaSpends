@@ -57,62 +57,356 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "canadian-heritage",
       "name": "Canadian Heritage",
       "children": [
         {
-          "id": "canadian-heritage-org-canadian-heritage",
-          "name": "Canadian Heritage",
+          "id": "canadian-heritage-2017-department-of-canadian-heritage",
+          "name": "Department of Canadian Heritage",
           "children": [
             {
-              "id": "canadian-heritage-canadian-heritage-vote",
-              "name": "Total appropriations (vote-level detail not published for this edition)",
-              "vote": "All votes",
-              "children": [
-                {
-                  "id": "canadian-heritage-canadian-heritage-vote-payments-to-crown-corporation",
-                  "name": "Payments to Crown Corporation",
-                  "amount": 1.86965
-                },
-                {
-                  "id": "canadian-heritage-canadian-heritage-vote-grants-and-contributions",
-                  "name": "Grants and contributions",
-                  "amount": 1.204513
-                },
-                {
-                  "id": "canadian-heritage-canadian-heritage-vote-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.415972
-                },
-                {
-                  "id": "canadian-heritage-canadian-heritage-vote-capital-budget",
-                  "name": "Capital budget",
-                  "amount": 0.105395
-                },
-                {
-                  "id": "canadian-heritage-canadian-heritage-vote-less-revenues-netted-against-expenditures",
-                  "name": "Less: revenues netted against expenditures",
-                  "amount": 0.061967
-                },
-                {
-                  "id": "canadian-heritage-canadian-heritage-vote-statutory-amounts",
-                  "name": "Statutory amounts",
-                  "amount": 0.045147
-                },
-                {
-                  "id": "canadian-heritage-canadian-heritage-vote-contribution-to-employee-benefits-plans",
-                  "name": "Contribution to employee benefits plans",
-                  "amount": 0.007472
-                },
-                {
-                  "id": "canadian-heritage-canadian-heritage-vote-advertising-initiatives",
-                  "name": "Advertising initiatives",
-                  "amount": 0.003722
-                }
-              ]
+              "id": "canadian-heritage-2017-department-of-canadian-heritage-obj-10",
+              "name": "Transfer payments",
+              "amount": 1.183587
+            },
+            {
+              "id": "canadian-heritage-2017-department-of-canadian-heritage-obj-1",
+              "name": "Personnel",
+              "amount": 0.166092
+            },
+            {
+              "id": "canadian-heritage-2017-department-of-canadian-heritage-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.023255
+            },
+            {
+              "id": "canadian-heritage-2017-department-of-canadian-heritage-obj-3",
+              "name": "Information",
+              "amount": 0.008432
+            },
+            {
+              "id": "canadian-heritage-2017-department-of-canadian-heritage-external-revenues",
+              "name": "External revenues",
+              "amount": -0.006932
+            },
+            {
+              "id": "canadian-heritage-2017-department-of-canadian-heritage-obj-5",
+              "name": "Rentals",
+              "amount": 0.004499
+            },
+            {
+              "id": "canadian-heritage-2017-department-of-canadian-heritage-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.004112
+            },
+            {
+              "id": "canadian-heritage-2017-department-of-canadian-heritage-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.004069
+            },
+            {
+              "id": "canadian-heritage-2017-department-of-canadian-heritage-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.003943
+            },
+            {
+              "id": "canadian-heritage-2017-department-of-canadian-heritage-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.003889
+            },
+            {
+              "id": "canadian-heritage-2017-department-of-canadian-heritage-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.002739
+            },
+            {
+              "id": "canadian-heritage-2017-department-of-canadian-heritage-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.001061
             }
           ]
+        },
+        {
+          "id": "canadian-heritage-2017-canadian-broadcasting-corporation",
+          "name": "Canadian Broadcasting Corporation",
+          "children": [
+            {
+              "id": "canadian-heritage-2017-canadian-broadcasting-corporation-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 1.113024
+            }
+          ]
+        },
+        {
+          "id": "canadian-heritage-2017-canada-council-for-the-arts",
+          "name": "Canada Council for the Arts",
+          "children": [
+            {
+              "id": "canadian-heritage-2017-canada-council-for-the-arts-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.222574
+            }
+          ]
+        },
+        {
+          "id": "canadian-heritage-2017-national-arts-centre-corporation",
+          "name": "National Arts Centre Corporation",
+          "children": [
+            {
+              "id": "canadian-heritage-2017-national-arts-centre-corporation-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.135309
+            }
+          ]
+        },
+        {
+          "id": "canadian-heritage-2017-library-and-archives-of-canada",
+          "name": "Library and Archives of Canada",
+          "children": [
+            {
+              "id": "canadian-heritage-2017-library-and-archives-of-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.076969
+            },
+            {
+              "id": "canadian-heritage-2017-library-and-archives-of-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.014327
+            },
+            {
+              "id": "canadian-heritage-2017-library-and-archives-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.005663
+            },
+            {
+              "id": "canadian-heritage-2017-library-and-archives-of-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.004728
+            },
+            {
+              "id": "canadian-heritage-2017-library-and-archives-of-canada-obj-5",
+              "name": "Rentals",
+              "amount": 0.00274
+            },
+            {
+              "id": "canadian-heritage-2017-library-and-archives-of-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.002693
+            },
+            {
+              "id": "canadian-heritage-2017-library-and-archives-of-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.002082
+            },
+            {
+              "name": "Other",
+              "id": "canadian-heritage-2017-library-and-archives-of-canada-other",
+              "amount": 0.002055,
+              "isAggregate": true,
+              "count": 2
+            },
+            {
+              "id": "canadian-heritage-2017-library-and-archives-of-canada-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.002021
+            },
+            {
+              "id": "canadian-heritage-2017-library-and-archives-of-canada-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.001538
+            },
+            {
+              "id": "canadian-heritage-2017-library-and-archives-of-canada-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.000173
+            },
+            {
+              "id": "canadian-heritage-2017-library-and-archives-of-canada-external-revenues",
+              "name": "External revenues",
+              "amount": -0.000142
+            }
+          ]
+        },
+        {
+          "id": "canadian-heritage-2017-national-museum-of-science-and-technology",
+          "name": "National Museum of Science and Technology",
+          "children": [
+            {
+              "id": "canadian-heritage-2017-national-museum-of-science-and-technology-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.108103
+            }
+          ]
+        },
+        {
+          "id": "canadian-heritage-2017-telefilm-canada",
+          "name": "Telefilm Canada",
+          "children": [
+            {
+              "id": "canadian-heritage-2017-telefilm-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.097454
+            }
+          ]
+        },
+        {
+          "id": "canadian-heritage-2017-national-capital-commission",
+          "name": "National Capital Commission",
+          "children": [
+            {
+              "id": "canadian-heritage-2017-national-capital-commission-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.090623
+            }
+          ]
+        },
+        {
+          "id": "canadian-heritage-2017-canadian-museum-of-history",
+          "name": "Canadian Museum of History",
+          "children": [
+            {
+              "id": "canadian-heritage-2017-canadian-museum-of-history-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.077747
+            }
+          ]
+        },
+        {
+          "id": "canadian-heritage-2017-national-film-board",
+          "name": "National Film Board",
+          "children": [
+            {
+              "id": "canadian-heritage-2017-national-film-board-obj-1",
+              "name": "Personnel",
+              "amount": 0.037456
+            },
+            {
+              "id": "canadian-heritage-2017-national-film-board-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.013232
+            },
+            {
+              "id": "canadian-heritage-2017-national-film-board-obj-5",
+              "name": "Rentals",
+              "amount": 0.006541
+            },
+            {
+              "id": "canadian-heritage-2017-national-film-board-external-revenues",
+              "name": "External revenues",
+              "amount": -0.004238
+            },
+            {
+              "id": "canadian-heritage-2017-national-film-board-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.00296
+            },
+            {
+              "id": "canadian-heritage-2017-national-film-board-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.002547
+            },
+            {
+              "id": "canadian-heritage-2017-national-film-board-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.002201
+            },
+            {
+              "id": "canadian-heritage-2017-national-film-board-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.001398
+            },
+            {
+              "id": "canadian-heritage-2017-national-film-board-obj-3",
+              "name": "Information",
+              "amount": 0.001288
+            },
+            {
+              "id": "canadian-heritage-2017-national-film-board-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000588
+            },
+            {
+              "id": "canadian-heritage-2017-national-film-board-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -5.9e-5
+            }
+          ]
+        },
+        {
+          "id": "canadian-heritage-2017-national-gallery-of-canada",
+          "name": "National Gallery of Canada",
+          "children": [
+            {
+              "id": "canadian-heritage-2017-national-gallery-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.046127
+            }
+          ]
+        },
+        {
+          "id": "canadian-heritage-2017-office-of-the-co-ordinator-status-of-women",
+          "name": "Office of the Co-ordinator,Status of Women",
+          "children": [
+            {
+              "id": "canadian-heritage-2017-office-of-the-co-ordinator-status-of-women-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.02048
+            },
+            {
+              "id": "canadian-heritage-2017-office-of-the-co-ordinator-status-of-women-obj-1",
+              "name": "Personnel",
+              "amount": 0.011075
+            },
+            {
+              "id": "canadian-heritage-2017-office-of-the-co-ordinator-status-of-women-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.001376
+            },
+            {
+              "id": "canadian-heritage-2017-office-of-the-co-ordinator-status-of-women-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.000954
+            },
+            {
+              "id": "canadian-heritage-2017-office-of-the-co-ordinator-status-of-women-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000736
+            },
+            {
+              "id": "canadian-heritage-2017-office-of-the-co-ordinator-status-of-women-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000277
+            },
+            {
+              "id": "canadian-heritage-2017-office-of-the-co-ordinator-status-of-women-obj-3",
+              "name": "Information",
+              "amount": 0.000192
+            },
+            {
+              "id": "canadian-heritage-2017-office-of-the-co-ordinator-status-of-women-obj-5",
+              "name": "Rentals",
+              "amount": 0.000121
+            },
+            {
+              "id": "canadian-heritage-2017-office-of-the-co-ordinator-status-of-women-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 5.3e-5
+            },
+            {
+              "id": "canadian-heritage-2017-office-of-the-co-ordinator-status-of-women-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 6.0e-6
+            }
+          ]
+        },
+        {
+          "name": "Other",
+          "id": "canadian-heritage-other",
+          "amount": 0.09199,
+          "isAggregate": true,
+          "count": 5
         }
       ]
     }

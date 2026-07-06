@@ -57,78 +57,69 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "canada-revenue-agency",
       "name": "National Revenue",
       "children": [
         {
-          "id": "canada-revenue-agency-org-canada-revenue-agency",
+          "id": "canada-revenue-agency-2022-canada-revenue-agency",
           "name": "Canada Revenue Agency",
           "children": [
             {
-              "id": "canada-revenue-agency-canada-revenue-agency-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 5.381048
+              "id": "canada-revenue-agency-2022-canada-revenue-agency-obj-1",
+              "name": "Personnel",
+              "amount": 4.66649
             },
             {
-              "id": "canada-revenue-agency-canada-revenue-agency-vote1",
-              "name": "Operating expenditures, contributions and recoverable expenditures in relation to the application of the Canada Pension Plan and the Employment Insurance Act",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "canada-revenue-agency-canada-revenue-agency-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 4.003343
-                },
-                {
-                  "id": "canada-revenue-agency-canada-revenue-agency-vote1-real-property-accommodation-and-services",
-                  "name": "Real property accommodation and services",
-                  "amount": 0.30962
-                },
-                {
-                  "id": "canada-revenue-agency-canada-revenue-agency-vote1-payments-to-quebec-for-gst-administration",
-                  "name": "Payments to Quebec for GST administration",
-                  "amount": 0.142054
-                },
-                {
-                  "id": "canada-revenue-agency-canada-revenue-agency-vote1-non-resident-trusts-and-offshore-investment-fund-properties",
-                  "name": "Non-resident trusts and offshore investment fund properties",
-                  "amount": 0.01612
-                },
-                {
-                  "id": "canada-revenue-agency-canada-revenue-agency-vote1-advertising-initiatives",
-                  "name": "Advertising initiatives",
-                  "amount": 0.008206
-                },
-                {
-                  "id": "canada-revenue-agency-canada-revenue-agency-vote1-international-assistance-envelope",
-                  "name": "International Assistance Envelope",
-                  "amount": 0.0013
-                },
-                {
-                  "id": "canada-revenue-agency-canada-revenue-agency-vote1-grants-and-contributions",
-                  "name": "Grants and Contributions",
-                  "amount": 0.000937
-                }
-              ]
+              "id": "canada-revenue-agency-2022-canada-revenue-agency-obj-10",
+              "name": "Transfer payments",
+              "amount": 4.187717
             },
             {
-              "id": "canada-revenue-agency-canada-revenue-agency-vote5",
-              "name": "Capital expenditures and recoverable expenditures in relation to the application of the Canada Pension Plan and the Employment Insurance Act",
-              "vote": "Vote 5",
-              "children": [
-                {
-                  "id": "canada-revenue-agency-canada-revenue-agency-vote5-capital-budget",
-                  "name": "Capital budget",
-                  "amount": 0.06776
-                },
-                {
-                  "id": "canada-revenue-agency-canada-revenue-agency-vote5-international-assistance-envelope",
-                  "name": "International Assistance Envelope",
-                  "amount": 0.002426
-                }
-              ]
+              "id": "canada-revenue-agency-2022-canada-revenue-agency-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.523126
+            },
+            {
+              "id": "canada-revenue-agency-2022-canada-revenue-agency-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.443518
+            },
+            {
+              "id": "canada-revenue-agency-2022-canada-revenue-agency-obj-5",
+              "name": "Rentals",
+              "amount": 0.287267
+            },
+            {
+              "id": "canada-revenue-agency-2022-canada-revenue-agency-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.081386
+            },
+            {
+              "id": "canada-revenue-agency-2022-canada-revenue-agency-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.071372
+            },
+            {
+              "id": "canada-revenue-agency-2022-canada-revenue-agency-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.060614
+            },
+            {
+              "id": "canada-revenue-agency-2022-canada-revenue-agency-obj-3",
+              "name": "Information",
+              "amount": 0.021709
+            },
+            {
+              "id": "canada-revenue-agency-2022-canada-revenue-agency-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.020334
+            },
+            {
+              "id": "canada-revenue-agency-2022-canada-revenue-agency-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.012798
             }
           ]
         }

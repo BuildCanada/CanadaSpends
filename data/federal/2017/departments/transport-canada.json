@@ -57,50 +57,171 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "transport-canada",
       "name": "Transport",
       "children": [
         {
-          "id": "transport-canada-org-transport",
-          "name": "Transport",
+          "id": "transport-canada-2017-department-of-transport",
+          "name": "Department of Transport",
           "children": [
             {
-              "id": "transport-canada-transport-vote",
-              "name": "Total appropriations (vote-level detail not published for this edition)",
-              "vote": "All votes",
-              "children": [
-                {
-                  "id": "transport-canada-transport-vote-payments-to-crown-corporation",
-                  "name": "Payments to Crown Corporation",
-                  "amount": 0.989516
-                },
-                {
-                  "id": "transport-canada-transport-vote-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.63196
-                },
-                {
-                  "id": "transport-canada-transport-vote-capital-budget",
-                  "name": "Capital budget",
-                  "amount": 0.314462
-                },
-                {
-                  "id": "transport-canada-transport-vote-grants-and-contributions",
-                  "name": "Grants and contributions",
-                  "amount": 0.312301
-                },
-                {
-                  "id": "transport-canada-transport-vote-statutory-amounts",
-                  "name": "Statutory amounts",
-                  "amount": 0.257462
-                },
-                {
-                  "id": "transport-canada-transport-vote-less-revenues-netted-against-expenditures",
-                  "name": "Less: revenues netted against expenditures",
-                  "amount": 0.073154
-                }
-              ]
+              "id": "transport-canada-2017-department-of-transport-obj-1",
+              "name": "Personnel",
+              "amount": 0.489914
+            },
+            {
+              "id": "transport-canada-2017-department-of-transport-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.379189
+            },
+            {
+              "id": "transport-canada-2017-department-of-transport-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.14001
+            },
+            {
+              "id": "transport-canada-2017-department-of-transport-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.128924
+            },
+            {
+              "id": "transport-canada-2017-department-of-transport-external-revenues",
+              "name": "External revenues",
+              "amount": -0.044352
+            },
+            {
+              "id": "transport-canada-2017-department-of-transport-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.038885
+            },
+            {
+              "id": "transport-canada-2017-department-of-transport-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.029747
+            },
+            {
+              "id": "transport-canada-2017-department-of-transport-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.028802
+            },
+            {
+              "id": "transport-canada-2017-department-of-transport-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.02046
+            },
+            {
+              "id": "transport-canada-2017-department-of-transport-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.01373
+            },
+            {
+              "name": "Other",
+              "id": "transport-canada-2017-department-of-transport-other",
+              "amount": 0.013552,
+              "isAggregate": true,
+              "count": 2
+            },
+            {
+              "id": "transport-canada-2017-department-of-transport-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.009902
+            }
+          ]
+        },
+        {
+          "id": "transport-canada-2017-canadian-air-transport-security-authority",
+          "name": "Canadian Air Transport Security Authority",
+          "children": [
+            {
+              "id": "transport-canada-2017-canadian-air-transport-security-authority-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.725304
+            }
+          ]
+        },
+        {
+          "id": "transport-canada-2017-via-rail-canada-inc",
+          "name": "VIA Rail Canada Inc.",
+          "children": [
+            {
+              "id": "transport-canada-2017-via-rail-canada-inc-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.348387
+            }
+          ]
+        },
+        {
+          "id": "transport-canada-2017-marine-atlantic-inc",
+          "name": "Marine Atlantic Inc.",
+          "children": [
+            {
+              "id": "transport-canada-2017-marine-atlantic-inc-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.098967
+            }
+          ]
+        },
+        {
+          "id": "transport-canada-2017-the-federal-bridge-corporation-limited",
+          "name": "The Federal Bridge Corporation Limited",
+          "children": [
+            {
+              "id": "transport-canada-2017-the-federal-bridge-corporation-limited-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.041782
+            }
+          ]
+        },
+        {
+          "id": "transport-canada-2017-canadian-transportation-agency",
+          "name": "Canadian Transportation Agency",
+          "children": [
+            {
+              "id": "transport-canada-2017-canadian-transportation-agency-obj-1",
+              "name": "Personnel",
+              "amount": 0.023238
+            },
+            {
+              "id": "transport-canada-2017-canadian-transportation-agency-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.001733
+            },
+            {
+              "id": "transport-canada-2017-canadian-transportation-agency-obj-5",
+              "name": "Rentals",
+              "amount": 0.000649
+            },
+            {
+              "id": "transport-canada-2017-canadian-transportation-agency-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000571
+            },
+            {
+              "id": "transport-canada-2017-canadian-transportation-agency-obj-3",
+              "name": "Information",
+              "amount": 0.000365
+            },
+            {
+              "id": "transport-canada-2017-canadian-transportation-agency-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000235
+            },
+            {
+              "id": "transport-canada-2017-canadian-transportation-agency-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000104
+            },
+            {
+              "id": "transport-canada-2017-canadian-transportation-agency-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 4.4e-5
+            },
+            {
+              "id": "transport-canada-2017-canadian-transportation-agency-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 9.0e-6
             }
           ]
         }

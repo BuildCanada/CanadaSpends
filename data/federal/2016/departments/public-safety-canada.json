@@ -57,87 +57,481 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "public-safety-canada",
       "name": "Public Safety",
       "children": [
         {
-          "id": "public-safety-canada-org-public-safety-and-emergency-preparedness",
+          "id": "public-safety-canada-2016-royal-canadian-mounted-police",
+          "name": "Royal Canadian Mounted Police",
+          "children": [
+            {
+              "id": "public-safety-canada-2016-royal-canadian-mounted-police-obj-1",
+              "name": "Personnel",
+              "amount": 3.222802
+            },
+            {
+              "id": "public-safety-canada-2016-royal-canadian-mounted-police-external-revenues",
+              "name": "External revenues",
+              "amount": 1.873797
+            },
+            {
+              "id": "public-safety-canada-2016-royal-canadian-mounted-police-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.422305
+            },
+            {
+              "id": "public-safety-canada-2016-royal-canadian-mounted-police-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.242144
+            },
+            {
+              "id": "public-safety-canada-2016-royal-canadian-mounted-police-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.194892
+            },
+            {
+              "id": "public-safety-canada-2016-royal-canadian-mounted-police-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.193434
+            },
+            {
+              "id": "public-safety-canada-2016-royal-canadian-mounted-police-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.128692
+            },
+            {
+              "id": "public-safety-canada-2016-royal-canadian-mounted-police-obj-5",
+              "name": "Rentals",
+              "amount": 0.102397
+            },
+            {
+              "id": "public-safety-canada-2016-royal-canadian-mounted-police-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.088833
+            },
+            {
+              "id": "public-safety-canada-2016-royal-canadian-mounted-police-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.082215
+            },
+            {
+              "name": "Other",
+              "id": "public-safety-canada-2016-royal-canadian-mounted-police-other",
+              "amount": 0.075734,
+              "isAggregate": true,
+              "count": 2
+            },
+            {
+              "id": "public-safety-canada-2016-royal-canadian-mounted-police-internal-revenues",
+              "name": "Internal revenues",
+              "amount": 0.023423
+            }
+          ]
+        },
+        {
+          "id": "public-safety-canada-2016-correctional-service-of-canada",
+          "name": "Correctional Service of Canada",
+          "children": [
+            {
+              "id": "public-safety-canada-2016-correctional-service-of-canada-obj-1",
+              "name": "Personnel",
+              "amount": 1.662834
+            },
+            {
+              "id": "public-safety-canada-2016-correctional-service-of-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.314127
+            },
+            {
+              "id": "public-safety-canada-2016-correctional-service-of-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.159613
+            },
+            {
+              "id": "public-safety-canada-2016-correctional-service-of-canada-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.119876
+            },
+            {
+              "id": "public-safety-canada-2016-correctional-service-of-canada-internal-revenues",
+              "name": "Internal revenues",
+              "amount": 0.086771
+            },
+            {
+              "id": "public-safety-canada-2016-correctional-service-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.056725
+            },
+            {
+              "id": "public-safety-canada-2016-correctional-service-of-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.052492
+            },
+            {
+              "id": "public-safety-canada-2016-correctional-service-of-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.032075
+            },
+            {
+              "id": "public-safety-canada-2016-correctional-service-of-canada-obj-5",
+              "name": "Rentals",
+              "amount": 0.024557
+            },
+            {
+              "id": "public-safety-canada-2016-correctional-service-of-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.02309
+            },
+            {
+              "id": "public-safety-canada-2016-correctional-service-of-canada-external-revenues",
+              "name": "External revenues",
+              "amount": 0.007336
+            },
+            {
+              "name": "Other",
+              "id": "public-safety-canada-2016-correctional-service-of-canada-other",
+              "amount": 0.006502,
+              "isAggregate": true,
+              "count": 2
+            }
+          ]
+        },
+        {
+          "id": "public-safety-canada-2016-canada-border-services-agency",
+          "name": "Canada Border Services Agency",
+          "children": [
+            {
+              "id": "public-safety-canada-2016-canada-border-services-agency-obj-1",
+              "name": "Personnel",
+              "amount": 1.359593
+            },
+            {
+              "id": "public-safety-canada-2016-canada-border-services-agency-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.276274
+            },
+            {
+              "id": "public-safety-canada-2016-canada-border-services-agency-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.049989
+            },
+            {
+              "id": "public-safety-canada-2016-canada-border-services-agency-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.043983
+            },
+            {
+              "id": "public-safety-canada-2016-canada-border-services-agency-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.034703
+            },
+            {
+              "id": "public-safety-canada-2016-canada-border-services-agency-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.021196
+            },
+            {
+              "id": "public-safety-canada-2016-canada-border-services-agency-external-revenues",
+              "name": "External revenues",
+              "amount": 0.019868
+            },
+            {
+              "id": "public-safety-canada-2016-canada-border-services-agency-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.013066
+            },
+            {
+              "id": "public-safety-canada-2016-canada-border-services-agency-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.008778
+            },
+            {
+              "id": "public-safety-canada-2016-canada-border-services-agency-obj-5",
+              "name": "Rentals",
+              "amount": 0.007556
+            },
+            {
+              "id": "public-safety-canada-2016-canada-border-services-agency-obj-3",
+              "name": "Information",
+              "amount": 0.001023
+            }
+          ]
+        },
+        {
+          "id": "public-safety-canada-2016-canadian-security-intelligence-service",
+          "name": "Canadian Security Intelligence Service",
+          "children": [
+            {
+              "id": "public-safety-canada-2016-canadian-security-intelligence-service-obj-1",
+              "name": "Personnel",
+              "amount": 0.341593
+            },
+            {
+              "id": "public-safety-canada-2016-canadian-security-intelligence-service-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.194971
+            }
+          ]
+        },
+        {
+          "id": "public-safety-canada-2016-public-safety-and-emergency-preparedness",
           "name": "Public Safety and Emergency Preparedness",
           "children": [
             {
-              "id": "public-safety-canada-public-safety-and-emergency-preparedness-vote",
-              "name": "Total appropriations (vote-level detail not published for this edition)",
-              "vote": "All votes",
-              "children": [
-                {
-                  "id": "public-safety-canada-public-safety-and-emergency-preparedness-vote-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 5.457071
-                },
-                {
-                  "id": "public-safety-canada-public-safety-and-emergency-preparedness-vote-contract-policing-services",
-                  "name": "Contract policing services",
-                  "amount": 2.372762
-                },
-                {
-                  "id": "public-safety-canada-public-safety-and-emergency-preparedness-vote-less-revenues-netted-against-expenditures",
-                  "name": "Less: revenues netted against expenditures",
-                  "amount": 1.923053
-                },
-                {
-                  "id": "public-safety-canada-public-safety-and-emergency-preparedness-vote-statutory-amounts",
-                  "name": "Statutory amounts",
-                  "amount": 1.001024
-                },
-                {
-                  "id": "public-safety-canada-public-safety-and-emergency-preparedness-vote-grants-and-contributions",
-                  "name": "Grants and contributions",
-                  "amount": 0.462185
-                },
-                {
-                  "id": "public-safety-canada-public-safety-and-emergency-preparedness-vote-capital-budget",
-                  "name": "Capital budget",
-                  "amount": 0.433992
-                },
-                {
-                  "id": "public-safety-canada-public-safety-and-emergency-preparedness-vote-restoring-effectiveness-of-federal-policing",
-                  "name": "Restoring effectiveness of federal policing",
-                  "amount": 0.156438
-                },
-                {
-                  "id": "public-safety-canada-public-safety-and-emergency-preparedness-vote-international-police-peacekeeping-and-peace-operations",
-                  "name": "International police peacekeeping and peace operations",
-                  "amount": 0.029312
-                },
-                {
-                  "id": "public-safety-canada-public-safety-and-emergency-preparedness-vote-biology-casework-analysis-agreements",
-                  "name": "Biology casework analysis agreements",
-                  "amount": 0.009707
-                },
-                {
-                  "id": "public-safety-canada-public-safety-and-emergency-preparedness-vote-resettlement-of-syrian-refugees",
-                  "name": "Resettlement of Syrian refugees",
-                  "amount": 0.008566
-                },
-                {
-                  "id": "public-safety-canada-public-safety-and-emergency-preparedness-vote-immigration-and-refugee-protection-act",
-                  "name": "Immigration and Refugee Protection Act",
-                  "amount": 0.00316
-                },
-                {
-                  "id": "public-safety-canada-public-safety-and-emergency-preparedness-vote-national-security-and-emergency-management-initiatives-under-the-action-plan-for-perimeter-security-and-economic-competitiveness",
-                  "name": "National security and emergency management initiatives under the action plan for perimeter security and economic competitiveness",
-                  "amount": 0.001901
-                },
-                {
-                  "name": "Other",
-                  "id": "public-safety-canada-public-safety-and-emergency-preparedness-vote-other",
-                  "amount": 0.002721,
-                  "isAggregate": true,
-                  "count": 2
-                }
-              ]
+              "id": "public-safety-canada-2016-public-safety-and-emergency-preparedness-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.271862
+            },
+            {
+              "id": "public-safety-canada-2016-public-safety-and-emergency-preparedness-obj-1",
+              "name": "Personnel",
+              "amount": 0.10417
+            },
+            {
+              "id": "public-safety-canada-2016-public-safety-and-emergency-preparedness-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.016933
+            },
+            {
+              "id": "public-safety-canada-2016-public-safety-and-emergency-preparedness-obj-5",
+              "name": "Rentals",
+              "amount": 0.004391
+            },
+            {
+              "id": "public-safety-canada-2016-public-safety-and-emergency-preparedness-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.003709
+            },
+            {
+              "id": "public-safety-canada-2016-public-safety-and-emergency-preparedness-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.003578
+            },
+            {
+              "id": "public-safety-canada-2016-public-safety-and-emergency-preparedness-obj-3",
+              "name": "Information",
+              "amount": 0.001862
+            },
+            {
+              "id": "public-safety-canada-2016-public-safety-and-emergency-preparedness-internal-revenues",
+              "name": "Internal revenues",
+              "amount": 0.001569
+            },
+            {
+              "id": "public-safety-canada-2016-public-safety-and-emergency-preparedness-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.001255
+            },
+            {
+              "id": "public-safety-canada-2016-public-safety-and-emergency-preparedness-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000703
+            },
+            {
+              "id": "public-safety-canada-2016-public-safety-and-emergency-preparedness-external-revenues",
+              "name": "External revenues",
+              "amount": 0.000213
+            },
+            {
+              "id": "public-safety-canada-2016-public-safety-and-emergency-preparedness-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000102
+            }
+          ]
+        },
+        {
+          "id": "public-safety-canada-2016-parole-board-of-canada",
+          "name": "Parole Board of Canada",
+          "children": [
+            {
+              "id": "public-safety-canada-2016-parole-board-of-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.043813
+            },
+            {
+              "id": "public-safety-canada-2016-parole-board-of-canada-external-revenues",
+              "name": "External revenues",
+              "amount": 0.004183
+            },
+            {
+              "id": "public-safety-canada-2016-parole-board-of-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.002824
+            },
+            {
+              "id": "public-safety-canada-2016-parole-board-of-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.002271
+            },
+            {
+              "id": "public-safety-canada-2016-parole-board-of-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000479
+            },
+            {
+              "id": "public-safety-canada-2016-parole-board-of-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000399
+            },
+            {
+              "id": "public-safety-canada-2016-parole-board-of-canada-obj-3",
+              "name": "Information",
+              "amount": 0.000301
+            },
+            {
+              "id": "public-safety-canada-2016-parole-board-of-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000222
+            },
+            {
+              "id": "public-safety-canada-2016-parole-board-of-canada-obj-5",
+              "name": "Rentals",
+              "amount": 0.000122
+            },
+            {
+              "id": "public-safety-canada-2016-parole-board-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 8.3e-5
+            }
+          ]
+        },
+        {
+          "id": "public-safety-canada-2016-civilian-review-and-complaints-commission-for-the-royal-canadian-mounted-police",
+          "name": "Civilian Review and Complaints Commission for the Royal Canadian Mounted Police",
+          "children": [
+            {
+              "id": "public-safety-canada-2016-civilian-review-and-complaints-commission-for-the-royal-canadian-mounted-police-obj-1",
+              "name": "Personnel",
+              "amount": 0.007402
+            },
+            {
+              "id": "public-safety-canada-2016-civilian-review-and-complaints-commission-for-the-royal-canadian-mounted-police-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.001178
+            },
+            {
+              "id": "public-safety-canada-2016-civilian-review-and-complaints-commission-for-the-royal-canadian-mounted-police-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000383
+            },
+            {
+              "id": "public-safety-canada-2016-civilian-review-and-complaints-commission-for-the-royal-canadian-mounted-police-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000337
+            },
+            {
+              "id": "public-safety-canada-2016-civilian-review-and-complaints-commission-for-the-royal-canadian-mounted-police-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000233
+            },
+            {
+              "id": "public-safety-canada-2016-civilian-review-and-complaints-commission-for-the-royal-canadian-mounted-police-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 8.9e-5
+            },
+            {
+              "id": "public-safety-canada-2016-civilian-review-and-complaints-commission-for-the-royal-canadian-mounted-police-obj-5",
+              "name": "Rentals",
+              "amount": 6.1e-5
+            },
+            {
+              "id": "public-safety-canada-2016-civilian-review-and-complaints-commission-for-the-royal-canadian-mounted-police-obj-3",
+              "name": "Information",
+              "amount": 3.5e-5
+            }
+          ]
+        },
+        {
+          "id": "public-safety-canada-2016-office-of-the-correctional-investigator-of-canada",
+          "name": "Office of the Correctional Investigator of Canada",
+          "children": [
+            {
+              "id": "public-safety-canada-2016-office-of-the-correctional-investigator-of-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.003897
+            },
+            {
+              "id": "public-safety-canada-2016-office-of-the-correctional-investigator-of-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000294
+            },
+            {
+              "id": "public-safety-canada-2016-office-of-the-correctional-investigator-of-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.000287
+            },
+            {
+              "id": "public-safety-canada-2016-office-of-the-correctional-investigator-of-canada-obj-3",
+              "name": "Information",
+              "amount": 3.4e-5
+            },
+            {
+              "id": "public-safety-canada-2016-office-of-the-correctional-investigator-of-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 2.5e-5
+            },
+            {
+              "id": "public-safety-canada-2016-office-of-the-correctional-investigator-of-canada-obj-5",
+              "name": "Rentals",
+              "amount": 1.8e-5
+            },
+            {
+              "id": "public-safety-canada-2016-office-of-the-correctional-investigator-of-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 1.2e-5
+            },
+            {
+              "id": "public-safety-canada-2016-office-of-the-correctional-investigator-of-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 3.0e-6
+            },
+            {
+              "id": "public-safety-canada-2016-office-of-the-correctional-investigator-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 1.0e-6
+            }
+          ]
+        },
+        {
+          "id": "public-safety-canada-2016-royal-canadian-mounted-police-external-review-committee",
+          "name": "Royal Canadian Mounted Police External Review Committee",
+          "children": [
+            {
+              "id": "public-safety-canada-2016-royal-canadian-mounted-police-external-review-committee-obj-1",
+              "name": "Personnel",
+              "amount": 0.001179
+            },
+            {
+              "id": "public-safety-canada-2016-royal-canadian-mounted-police-external-review-committee-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.000274
+            },
+            {
+              "id": "public-safety-canada-2016-royal-canadian-mounted-police-external-review-committee-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 2.4e-5
+            },
+            {
+              "id": "public-safety-canada-2016-royal-canadian-mounted-police-external-review-committee-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 1.3e-5
+            },
+            {
+              "id": "public-safety-canada-2016-royal-canadian-mounted-police-external-review-committee-obj-3",
+              "name": "Information",
+              "amount": 1.3e-5
+            },
+            {
+              "id": "public-safety-canada-2016-royal-canadian-mounted-police-external-review-committee-obj-2",
+              "name": "Transportation and communications",
+              "amount": 1.2e-5
+            },
+            {
+              "id": "public-safety-canada-2016-royal-canadian-mounted-police-external-review-committee-obj-5",
+              "name": "Rentals",
+              "amount": 3.0e-6
             }
           ]
         }

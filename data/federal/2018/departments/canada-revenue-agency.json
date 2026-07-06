@@ -57,55 +57,74 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "canada-revenue-agency",
       "name": "National Revenue",
       "children": [
         {
-          "id": "canada-revenue-agency-org-national-revenue",
-          "name": "National Revenue",
+          "id": "canada-revenue-agency-2018-canada-revenue-agency",
+          "name": "Canada Revenue Agency",
           "children": [
             {
-              "id": "canada-revenue-agency-national-revenue-vote",
-              "name": "Total appropriations (vote-level detail not published for this edition)",
-              "vote": "All votes",
-              "children": [
-                {
-                  "id": "canada-revenue-agency-national-revenue-vote-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 3.565154
-                },
-                {
-                  "id": "canada-revenue-agency-national-revenue-vote-statutory-amounts",
-                  "name": "Statutory amounts",
-                  "amount": 0.941297
-                },
-                {
-                  "id": "canada-revenue-agency-national-revenue-vote-real-property-accommodation-and-services",
-                  "name": "Real property accommodation and services",
-                  "amount": 0.32054
-                },
-                {
-                  "id": "canada-revenue-agency-national-revenue-vote-payments-to-quebec-for-gst-administration",
-                  "name": "Payments to Quebec for GST administration",
-                  "amount": 0.141822
-                },
-                {
-                  "id": "canada-revenue-agency-national-revenue-vote-capital-budget",
-                  "name": "Capital budget",
-                  "amount": 0.073505
-                },
-                {
-                  "id": "canada-revenue-agency-national-revenue-vote-non-resident-trusts-and-offshore-investment-fund-properties",
-                  "name": "Non-resident trusts and offshore investment fund properties",
-                  "amount": 0.019463
-                },
-                {
-                  "id": "canada-revenue-agency-national-revenue-vote-advertising-initiatives",
-                  "name": "Advertising initiatives",
-                  "amount": 0.000998
-                }
-              ]
+              "id": "canada-revenue-agency-2018-canada-revenue-agency-obj-1",
+              "name": "Personnel",
+              "amount": 3.803613
+            },
+            {
+              "id": "canada-revenue-agency-2018-canada-revenue-agency-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.392319
+            },
+            {
+              "id": "canada-revenue-agency-2018-canada-revenue-agency-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.333553
+            },
+            {
+              "id": "canada-revenue-agency-2018-canada-revenue-agency-obj-5",
+              "name": "Rentals",
+              "amount": 0.291967
+            },
+            {
+              "id": "canada-revenue-agency-2018-canada-revenue-agency-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.185016
+            },
+            {
+              "id": "canada-revenue-agency-2018-canada-revenue-agency-external-revenues",
+              "name": "External revenues",
+              "amount": -0.169997
+            },
+            {
+              "id": "canada-revenue-agency-2018-canada-revenue-agency-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.115606
+            },
+            {
+              "id": "canada-revenue-agency-2018-canada-revenue-agency-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.052346
+            },
+            {
+              "id": "canada-revenue-agency-2018-canada-revenue-agency-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.035011
+            },
+            {
+              "id": "canada-revenue-agency-2018-canada-revenue-agency-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.023323
+            },
+            {
+              "id": "canada-revenue-agency-2018-canada-revenue-agency-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.011698
+            },
+            {
+              "id": "canada-revenue-agency-2018-canada-revenue-agency-obj-3",
+              "name": "Information",
+              "amount": 0.003344
             }
           ]
         }

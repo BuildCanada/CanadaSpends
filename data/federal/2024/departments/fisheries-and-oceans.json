@@ -57,48 +57,76 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "fisheries-and-oceans",
       "name": "Fisheries, Oceans and the Canadian Coast Guard",
       "children": [
         {
-          "id": "fisheries-and-oceans-org-department-of-fisheries-and-oceans",
+          "id": "fisheries-and-oceans-2024-department-of-fisheries-and-oceans",
           "name": "Department of Fisheries and Oceans",
           "children": [
             {
-              "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote1",
-              "name": "Operating expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 2.418985
-                },
-                {
-                  "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote1-innovative-solutions-canada",
-                  "name": "Innovative Solutions Canada",
-                  "amount": 0.000748
-                }
-              ]
+              "id": "fisheries-and-oceans-2024-department-of-fisheries-and-oceans-obj-1",
+              "name": "Personnel",
+              "amount": 1.806117
             },
             {
-              "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote5",
-              "name": "Capital expenditures",
-              "vote": "Vote 5",
-              "amount": 1.344508
+              "id": "fisheries-and-oceans-2024-department-of-fisheries-and-oceans-obj-4",
+              "name": "Professional and special services",
+              "amount": 1.024235
             },
             {
-              "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-vote10",
-              "name": "Grants and contributions",
-              "vote": "Vote 10",
+              "id": "fisheries-and-oceans-2024-department-of-fisheries-and-oceans-obj-10",
+              "name": "Transfer payments",
               "amount": 0.591513
             },
             {
-              "id": "fisheries-and-oceans-department-of-fisheries-and-oceans-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.236619
+              "id": "fisheries-and-oceans-2024-department-of-fisheries-and-oceans-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.393677
+            },
+            {
+              "id": "fisheries-and-oceans-2024-department-of-fisheries-and-oceans-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.24082
+            },
+            {
+              "id": "fisheries-and-oceans-2024-department-of-fisheries-and-oceans-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.166715
+            },
+            {
+              "id": "fisheries-and-oceans-2024-department-of-fisheries-and-oceans-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.158543
+            },
+            {
+              "id": "fisheries-and-oceans-2024-department-of-fisheries-and-oceans-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.097337
+            },
+            {
+              "id": "fisheries-and-oceans-2024-department-of-fisheries-and-oceans-obj-5",
+              "name": "Rentals",
+              "amount": 0.083456
+            },
+            {
+              "id": "fisheries-and-oceans-2024-department-of-fisheries-and-oceans-external-revenues",
+              "name": "External revenues",
+              "amount": -0.04631
+            },
+            {
+              "id": "fisheries-and-oceans-2024-department-of-fisheries-and-oceans-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.017803
+            },
+            {
+              "name": "Other",
+              "id": "fisheries-and-oceans-2024-department-of-fisheries-and-oceans-other",
+              "amount": 0.012156,
+              "isAggregate": true,
+              "count": 2
             }
           ]
         }

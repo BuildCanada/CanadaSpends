@@ -57,260 +57,307 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "health-canada",
       "name": "Health",
       "children": [
         {
-          "id": "health-canada-org-department-of-health",
+          "id": "health-canada-2025-department-of-health",
           "name": "Department of Health",
           "children": [
             {
-              "id": "health-canada-department-of-health-vote10",
-              "name": "Grants and contributions",
-              "vote": "Vote 10",
-              "children": [
-                {
-                  "id": "health-canada-department-of-health-vote10-grants-and-contributions",
-                  "name": "Grants and contributions",
-                  "amount": 5.454038
-                },
-                {
-                  "id": "health-canada-department-of-health-vote10-canadian-strategy-for-cancer-control",
-                  "name": "Canadian strategy for cancer control",
-                  "amount": 0.0475
-                }
-              ]
+              "id": "health-canada-2025-department-of-health-obj-10",
+              "name": "Transfer payments",
+              "amount": 7.175064
             },
             {
-              "id": "health-canada-department-of-health-vote1",
-              "name": "Operating expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "health-canada-department-of-health-vote1-canadian-dental-care-plan-benefits",
-                  "name": "Canadian Dental Care Plan Benefits",
-                  "amount": 1.647931
-                },
-                {
-                  "id": "health-canada-department-of-health-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 1.20358
-                },
-                {
-                  "id": "health-canada-department-of-health-vote1-canadian-dental-care-plan-administration",
-                  "name": "Canadian Dental Care Plan Administration",
-                  "amount": 0.314261
-                },
-                {
-                  "id": "health-canada-department-of-health-vote1-advertising-initiatives",
-                  "name": "Advertising Initiatives",
-                  "amount": 0.0035
-                }
-              ]
+              "id": "health-canada-2025-department-of-health-obj-1",
+              "name": "Personnel",
+              "amount": 1.230999
             },
             {
-              "id": "health-canada-department-of-health-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.303598
+              "id": "health-canada-2025-department-of-health-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.430511
             },
             {
-              "id": "health-canada-department-of-health-vote5",
-              "name": "Capital expenditures",
-              "vote": "Vote 5",
-              "amount": 0.026439
+              "id": "health-canada-2025-department-of-health-external-revenues",
+              "name": "External revenues",
+              "amount": -0.220996
+            },
+            {
+              "id": "health-canada-2025-department-of-health-obj-3",
+              "name": "Information",
+              "amount": 0.035493
+            },
+            {
+              "id": "health-canada-2025-department-of-health-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.035182
+            },
+            {
+              "id": "health-canada-2025-department-of-health-obj-5",
+              "name": "Rentals",
+              "amount": 0.034941
+            },
+            {
+              "id": "health-canada-2025-department-of-health-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.030386
+            },
+            {
+              "id": "health-canada-2025-department-of-health-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.022816
+            },
+            {
+              "id": "health-canada-2025-department-of-health-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.020238
+            },
+            {
+              "id": "health-canada-2025-department-of-health-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.010083
+            },
+            {
+              "name": "Other",
+              "id": "health-canada-2025-department-of-health-other",
+              "amount": 0.00552,
+              "isAggregate": true,
+              "count": 2
             }
           ]
         },
         {
-          "id": "health-canada-org-public-health-agency-of-canada",
+          "id": "health-canada-2025-public-health-agency-of-canada",
           "name": "Public Health Agency of Canada",
           "children": [
             {
-              "id": "health-canada-public-health-agency-of-canada-vote1",
-              "name": "Operating expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "health-canada-public-health-agency-of-canada-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.780544
-                },
-                {
-                  "id": "health-canada-public-health-agency-of-canada-vote1-biomanufacturing-capacity-and-pandemic-vaccine-readiness",
-                  "name": "Biomanufacturing Capacity and Pandemic Vaccine Readiness",
-                  "amount": 0.064647
-                },
-                {
-                  "id": "health-canada-public-health-agency-of-canada-vote1-pandemic-influenza-preparedness",
-                  "name": "Pandemic Influenza Preparedness",
-                  "amount": 0.047121
-                },
-                {
-                  "id": "health-canada-public-health-agency-of-canada-vote1-warehousing-and-national-emergency-strategic-stockpile-maintenance",
-                  "name": "Warehousing and National Emergency Strategic Stockpile Maintenance",
-                  "amount": 0.024524
-                },
-                {
-                  "id": "health-canada-public-health-agency-of-canada-vote1-medicom",
-                  "name": "Medicom",
-                  "amount": 0.023528
-                },
-                {
-                  "id": "health-canada-public-health-agency-of-canada-vote1-3m-n95-mask-procurement",
-                  "name": "3M—N95 Mask Procurement",
-                  "amount": 0.019882
-                },
-                {
-                  "id": "health-canada-public-health-agency-of-canada-vote1-national-microbiology-laboratory-medical-counter-measures-laboratory",
-                  "name": "National Microbiology Laboratory—Medical Counter-Measures Laboratory",
-                  "amount": 0.0186
-                },
-                {
-                  "id": "health-canada-public-health-agency-of-canada-vote1-advertising-initiatives",
-                  "name": "Advertising Initiatives",
-                  "amount": 0.00225
-                }
-              ]
+              "id": "health-canada-2025-public-health-agency-of-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.502813
             },
             {
-              "id": "health-canada-public-health-agency-of-canada-vote10",
-              "name": "Grants and contributions",
-              "vote": "Vote 10",
-              "children": [
-                {
-                  "id": "health-canada-public-health-agency-of-canada-vote10-grants-and-contributions",
-                  "name": "Grants and contributions",
-                  "amount": 0.386558
-                },
-                {
-                  "id": "health-canada-public-health-agency-of-canada-vote10-innovative-solutions-canada",
-                  "name": "Innovative Solutions Canada",
-                  "amount": 0.0005
-                }
-              ]
+              "id": "health-canada-2025-public-health-agency-of-canada-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.46296
             },
             {
-              "id": "health-canada-public-health-agency-of-canada-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.155693
+              "id": "health-canada-2025-public-health-agency-of-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.291243
             },
             {
-              "id": "health-canada-public-health-agency-of-canada-vote5",
-              "name": "Capital expenditures",
-              "vote": "Vote 5",
-              "children": [
-                {
-                  "id": "health-canada-public-health-agency-of-canada-vote5-capital-budget",
-                  "name": "Capital budget",
-                  "amount": 0.010379
-                },
-                {
-                  "id": "health-canada-public-health-agency-of-canada-vote5-national-microbiology-laboratory-medical-counter-measures-laboratory",
-                  "name": "National Microbiology Laboratory—Medical Counter-Measures Laboratory",
-                  "amount": 0.001686
-                }
-              ]
+              "id": "health-canada-2025-public-health-agency-of-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.195982
+            },
+            {
+              "id": "health-canada-2025-public-health-agency-of-canada-obj-3",
+              "name": "Information",
+              "amount": 0.039755
+            },
+            {
+              "id": "health-canada-2025-public-health-agency-of-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.013312
+            },
+            {
+              "id": "health-canada-2025-public-health-agency-of-canada-obj-5",
+              "name": "Rentals",
+              "amount": 0.012432
+            },
+            {
+              "id": "health-canada-2025-public-health-agency-of-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.008376
+            },
+            {
+              "id": "health-canada-2025-public-health-agency-of-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.006579
+            },
+            {
+              "name": "Other",
+              "id": "health-canada-2025-public-health-agency-of-canada-other",
+              "amount": 0.00246,
+              "isAggregate": true,
+              "count": 2
+            },
+            {
+              "id": "health-canada-2025-public-health-agency-of-canada-external-revenues",
+              "name": "External revenues",
+              "amount": -0.000936
+            },
+            {
+              "id": "health-canada-2025-public-health-agency-of-canada-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -6.2e-5
             }
           ]
         },
         {
-          "id": "health-canada-org-canadian-institutes-of-health-research",
+          "id": "health-canada-2025-canadian-institutes-of-health-research",
           "name": "Canadian Institutes of Health Research",
           "children": [
             {
-              "id": "health-canada-canadian-institutes-of-health-research-vote5",
-              "name": "Grants",
-              "vote": "Vote 5",
+              "id": "health-canada-2025-canadian-institutes-of-health-research-obj-10",
+              "name": "Transfer payments",
               "amount": 1.336223
             },
             {
-              "id": "health-canada-canadian-institutes-of-health-research-vote1",
-              "name": "Operating expenditures",
-              "vote": "Vote 1",
-              "amount": 0.078253
+              "id": "health-canada-2025-canadian-institutes-of-health-research-obj-1",
+              "name": "Personnel",
+              "amount": 0.078575
             },
             {
-              "id": "health-canada-canadian-institutes-of-health-research-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.009896
+              "id": "health-canada-2025-canadian-institutes-of-health-research-obj-5",
+              "name": "Rentals",
+              "amount": 0.003505
+            },
+            {
+              "id": "health-canada-2025-canadian-institutes-of-health-research-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.002686
+            },
+            {
+              "id": "health-canada-2025-canadian-institutes-of-health-research-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.001393
+            },
+            {
+              "id": "health-canada-2025-canadian-institutes-of-health-research-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000666
+            },
+            {
+              "id": "health-canada-2025-canadian-institutes-of-health-research-obj-3",
+              "name": "Information",
+              "amount": 0.000629
+            },
+            {
+              "id": "health-canada-2025-canadian-institutes-of-health-research-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000448
+            },
+            {
+              "id": "health-canada-2025-canadian-institutes-of-health-research-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000238
+            },
+            {
+              "id": "health-canada-2025-canadian-institutes-of-health-research-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 1.0e-5
             }
           ]
         },
         {
-          "id": "health-canada-org-canadian-food-inspection-agency",
+          "id": "health-canada-2025-canadian-food-inspection-agency",
           "name": "Canadian Food Inspection Agency",
           "children": [
             {
-              "id": "health-canada-canadian-food-inspection-agency-vote1",
-              "name": "Operating expenditures, grants and contributions",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "health-canada-canadian-food-inspection-agency-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.749277
-                },
-                {
-                  "id": "health-canada-canadian-food-inspection-agency-vote1-canada-s-response-to-h5n1-avian-influenza",
-                  "name": "Canada's Response to H5N1 Avian Influenza",
-                  "amount": 0.020121
-                },
-                {
-                  "id": "health-canada-canadian-food-inspection-agency-vote1-grants-and-contributions",
-                  "name": "Grants and contributions",
-                  "amount": 0.002211
-                },
-                {
-                  "id": "health-canada-canadian-food-inspection-agency-vote1-innovative-solutions-canada",
-                  "name": "Innovative Solutions Canada",
-                  "amount": 0.00105
-                }
-              ]
+              "id": "health-canada-2025-canadian-food-inspection-agency-obj-1",
+              "name": "Personnel",
+              "amount": 0.775166
             },
             {
-              "id": "health-canada-canadian-food-inspection-agency-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.228767
+              "id": "health-canada-2025-canadian-food-inspection-agency-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.106482
             },
             {
-              "id": "health-canada-canadian-food-inspection-agency-vote5",
-              "name": "Capital expenditures",
-              "vote": "Vote 5",
-              "amount": 0.038323
+              "id": "health-canada-2025-canadian-food-inspection-agency-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.076238
+            },
+            {
+              "id": "health-canada-2025-canadian-food-inspection-agency-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.021783
+            },
+            {
+              "id": "health-canada-2025-canadian-food-inspection-agency-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.019883
+            },
+            {
+              "id": "health-canada-2025-canadian-food-inspection-agency-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.01158
+            },
+            {
+              "id": "health-canada-2025-canadian-food-inspection-agency-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.010698
+            },
+            {
+              "id": "health-canada-2025-canadian-food-inspection-agency-obj-5",
+              "name": "Rentals",
+              "amount": 0.009057
+            },
+            {
+              "id": "health-canada-2025-canadian-food-inspection-agency-obj-3",
+              "name": "Information",
+              "amount": 0.005136
+            },
+            {
+              "id": "health-canada-2025-canadian-food-inspection-agency-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.003726
             }
           ]
         },
         {
-          "id": "health-canada-org-patented-medicine-prices-review-board",
+          "id": "health-canada-2025-patented-medicine-prices-review-board",
           "name": "Patented Medicine Prices Review Board",
           "children": [
             {
-              "id": "health-canada-patented-medicine-prices-review-board-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "health-canada-patented-medicine-prices-review-board-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.012136
-                },
-                {
-                  "id": "health-canada-patented-medicine-prices-review-board-vote1-public-interest-hearings",
-                  "name": "Public interest hearings",
-                  "amount": 0.000262
-                }
-              ]
+              "id": "health-canada-2025-patented-medicine-prices-review-board-obj-1",
+              "name": "Personnel",
+              "amount": 0.011138
             },
             {
-              "id": "health-canada-patented-medicine-prices-review-board-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.001289
+              "id": "health-canada-2025-patented-medicine-prices-review-board-obj-3",
+              "name": "Information",
+              "amount": 0.00095
+            },
+            {
+              "id": "health-canada-2025-patented-medicine-prices-review-board-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.000898
+            },
+            {
+              "id": "health-canada-2025-patented-medicine-prices-review-board-obj-5",
+              "name": "Rentals",
+              "amount": 0.000282
+            },
+            {
+              "id": "health-canada-2025-patented-medicine-prices-review-board-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000238
+            },
+            {
+              "id": "health-canada-2025-patented-medicine-prices-review-board-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000127
+            },
+            {
+              "id": "health-canada-2025-patented-medicine-prices-review-board-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 4.4e-5
+            },
+            {
+              "id": "health-canada-2025-patented-medicine-prices-review-board-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 8.0e-6
+            },
+            {
+              "id": "health-canada-2025-patented-medicine-prices-review-board-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 2.0e-6
             }
           ]
         }

@@ -53,55 +53,102 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "housing-infrastructure-communities",
       "name": "Housing, Infrastructure and Communities",
       "children": [
         {
-          "id": "housing-infrastructure-communities-org-infrastructure-and-communities",
-          "name": "Infrastructure and Communities",
+          "id": "housing-infrastructure-communities-2017-office-of-infrastructure-of-canada",
+          "name": "Office of Infrastructure of Canada",
           "children": [
             {
-              "id": "housing-infrastructure-communities-infrastructure-and-communities-vote",
-              "name": "Total appropriations (vote-level detail not published for this edition)",
-              "vote": "All votes",
-              "children": [
-                {
-                  "id": "housing-infrastructure-communities-infrastructure-and-communities-vote-statutory-amounts",
-                  "name": "Statutory amounts",
-                  "amount": 2.077303
-                },
-                {
-                  "id": "housing-infrastructure-communities-infrastructure-and-communities-vote-contributions",
-                  "name": "Contributions",
-                  "amount": 1.047776
-                },
-                {
-                  "id": "housing-infrastructure-communities-infrastructure-and-communities-vote-payments-to-crown-corporation",
-                  "name": "Payments to Crown Corporation",
-                  "amount": 0.2977
-                },
-                {
-                  "id": "housing-infrastructure-communities-infrastructure-and-communities-vote-capital-budget",
-                  "name": "Capital budget",
-                  "amount": 0.2411
-                },
-                {
-                  "id": "housing-infrastructure-communities-infrastructure-and-communities-vote-payments-to-crown-corporation-capital",
-                  "name": "Payments to Crown Corporation—Capital",
-                  "amount": 0.088836
-                },
-                {
-                  "id": "housing-infrastructure-communities-infrastructure-and-communities-vote-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.057324
-                },
-                {
-                  "id": "housing-infrastructure-communities-infrastructure-and-communities-vote-capital-expenditures",
-                  "name": "Capital expenditures",
-                  "amount": 0.025362
-                }
-              ]
+              "id": "housing-infrastructure-communities-2017-office-of-infrastructure-of-canada-obj-10",
+              "name": "Transfer payments",
+              "amount": 3.119709
+            },
+            {
+              "id": "housing-infrastructure-communities-2017-office-of-infrastructure-of-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.040712
+            },
+            {
+              "id": "housing-infrastructure-communities-2017-office-of-infrastructure-of-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.03939
+            },
+            {
+              "id": "housing-infrastructure-communities-2017-office-of-infrastructure-of-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.002044
+            },
+            {
+              "id": "housing-infrastructure-communities-2017-office-of-infrastructure-of-canada-obj-5",
+              "name": "Rentals",
+              "amount": 0.001848
+            },
+            {
+              "id": "housing-infrastructure-communities-2017-office-of-infrastructure-of-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.001388
+            },
+            {
+              "id": "housing-infrastructure-communities-2017-office-of-infrastructure-of-canada-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.000869
+            },
+            {
+              "id": "housing-infrastructure-communities-2017-office-of-infrastructure-of-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000676
+            },
+            {
+              "id": "housing-infrastructure-communities-2017-office-of-infrastructure-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000656
+            },
+            {
+              "id": "housing-infrastructure-communities-2017-office-of-infrastructure-of-canada-obj-3",
+              "name": "Information",
+              "amount": 0.00035
+            },
+            {
+              "id": "housing-infrastructure-communities-2017-office-of-infrastructure-of-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000124
+            }
+          ]
+        },
+        {
+          "id": "housing-infrastructure-communities-2017-windsor-detroit-bridge-authority",
+          "name": "Windsor-Detroit Bridge Authority",
+          "children": [
+            {
+              "id": "housing-infrastructure-communities-2017-windsor-detroit-bridge-authority-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.3345
+            }
+          ]
+        },
+        {
+          "id": "housing-infrastructure-communities-2017-the-jacques-cartier-and-champlain-bridges-inc",
+          "name": "The Jacques-Cartier and Champlain Bridges Inc.",
+          "children": [
+            {
+              "id": "housing-infrastructure-communities-2017-the-jacques-cartier-and-champlain-bridges-inc-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.284287
+            }
+          ]
+        },
+        {
+          "id": "housing-infrastructure-communities-2017-ppp-canada-inc",
+          "name": "PPP Canada Inc.",
+          "children": [
+            {
+              "id": "housing-infrastructure-communities-2017-ppp-canada-inc-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.00885
             }
           ]
         }

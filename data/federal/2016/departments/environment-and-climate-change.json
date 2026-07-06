@@ -57,19 +57,203 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "environment-and-climate-change",
       "name": "Environment and Climate Change",
       "children": [
         {
-          "id": "environment-and-climate-change-org-environment-and-climate-change",
-          "name": "Environment and Climate Change",
+          "id": "environment-and-climate-change-2016-environment",
+          "name": "Environment",
           "children": [
             {
-              "id": "environment-and-climate-change-environment-and-climate-change-vote",
-              "name": "Total appropriations (vote-level detail not published for this edition)",
-              "vote": "All votes",
-              "amount": 2.172406
+              "id": "environment-and-climate-change-2016-environment-obj-1",
+              "name": "Personnel",
+              "amount": 0.622023
+            },
+            {
+              "id": "environment-and-climate-change-2016-environment-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.136119
+            },
+            {
+              "id": "environment-and-climate-change-2016-environment-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.118869
+            },
+            {
+              "id": "environment-and-climate-change-2016-environment-external-revenues",
+              "name": "External revenues",
+              "amount": 0.051925
+            },
+            {
+              "id": "environment-and-climate-change-2016-environment-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.038672
+            },
+            {
+              "id": "environment-and-climate-change-2016-environment-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.034591
+            },
+            {
+              "id": "environment-and-climate-change-2016-environment-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.030175
+            },
+            {
+              "id": "environment-and-climate-change-2016-environment-obj-5",
+              "name": "Rentals",
+              "amount": 0.026404
+            },
+            {
+              "id": "environment-and-climate-change-2016-environment-internal-revenues",
+              "name": "Internal revenues",
+              "amount": 0.025269
+            },
+            {
+              "id": "environment-and-climate-change-2016-environment-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.012829
+            },
+            {
+              "id": "environment-and-climate-change-2016-environment-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.004853
+            },
+            {
+              "name": "Other",
+              "id": "environment-and-climate-change-2016-environment-other",
+              "amount": 0.003586,
+              "isAggregate": true,
+              "count": 2
+            }
+          ]
+        },
+        {
+          "id": "environment-and-climate-change-2016-parks-canada-agency",
+          "name": "Parks Canada Agency",
+          "children": [
+            {
+              "id": "environment-and-climate-change-2016-parks-canada-agency-obj-1",
+              "name": "Personnel",
+              "amount": 0.368099
+            },
+            {
+              "id": "environment-and-climate-change-2016-parks-canada-agency-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.296883
+            },
+            {
+              "id": "environment-and-climate-change-2016-parks-canada-agency-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.174748
+            },
+            {
+              "id": "environment-and-climate-change-2016-parks-canada-agency-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.053244
+            },
+            {
+              "id": "environment-and-climate-change-2016-parks-canada-agency-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.03752
+            },
+            {
+              "id": "environment-and-climate-change-2016-parks-canada-agency-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.026662
+            },
+            {
+              "id": "environment-and-climate-change-2016-parks-canada-agency-obj-5",
+              "name": "Rentals",
+              "amount": 0.021869
+            },
+            {
+              "id": "environment-and-climate-change-2016-parks-canada-agency-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.016894
+            },
+            {
+              "id": "environment-and-climate-change-2016-parks-canada-agency-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.016449
+            },
+            {
+              "id": "environment-and-climate-change-2016-parks-canada-agency-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.015089
+            },
+            {
+              "id": "environment-and-climate-change-2016-parks-canada-agency-obj-3",
+              "name": "Information",
+              "amount": 0.008674
+            }
+          ]
+        },
+        {
+          "id": "environment-and-climate-change-2016-canadian-environmental-assessment-agency",
+          "name": "Canadian Environmental Assessment Agency",
+          "children": [
+            {
+              "id": "environment-and-climate-change-2016-canadian-environmental-assessment-agency-obj-1",
+              "name": "Personnel",
+              "amount": 0.022567
+            },
+            {
+              "id": "environment-and-climate-change-2016-canadian-environmental-assessment-agency-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.004466
+            },
+            {
+              "id": "environment-and-climate-change-2016-canadian-environmental-assessment-agency-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.001684
+            },
+            {
+              "id": "environment-and-climate-change-2016-canadian-environmental-assessment-agency-external-revenues",
+              "name": "External revenues",
+              "amount": 0.000788
+            },
+            {
+              "id": "environment-and-climate-change-2016-canadian-environmental-assessment-agency-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000756
+            },
+            {
+              "id": "environment-and-climate-change-2016-canadian-environmental-assessment-agency-obj-3",
+              "name": "Information",
+              "amount": 0.000234
+            },
+            {
+              "id": "environment-and-climate-change-2016-canadian-environmental-assessment-agency-obj-5",
+              "name": "Rentals",
+              "amount": 0.000139
+            },
+            {
+              "id": "environment-and-climate-change-2016-canadian-environmental-assessment-agency-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000118
+            },
+            {
+              "id": "environment-and-climate-change-2016-canadian-environmental-assessment-agency-internal-revenues",
+              "name": "Internal revenues",
+              "amount": 8.4e-5
+            },
+            {
+              "id": "environment-and-climate-change-2016-canadian-environmental-assessment-agency-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 7.9e-5
+            },
+            {
+              "id": "environment-and-climate-change-2016-canadian-environmental-assessment-agency-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 3.5e-5
+            },
+            {
+              "id": "environment-and-climate-change-2016-canadian-environmental-assessment-agency-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 1.0e-5
             }
           ]
         }

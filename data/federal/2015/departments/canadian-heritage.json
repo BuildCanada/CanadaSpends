@@ -57,282 +57,409 @@
     }
   ],
   "miniSankey": {
+    "breakdown": "standard_object",
     "spending_data": {
       "id": "canadian-heritage",
       "name": "Canadian Heritage",
       "children": [
         {
-          "id": "canadian-heritage-org-canadian-heritage",
-          "name": "Canadian Heritage",
+          "id": "canadian-heritage-2015-canadian-heritage-department",
+          "name": "Canadian Heritage Department",
           "children": [
             {
-              "id": "canadian-heritage-canadian-heritage-vote5",
-              "name": "Grants and contributions",
-              "vote": "Vote 5",
-              "amount": 1.26746
+              "id": "canadian-heritage-2015-canadian-heritage-department-obj-10",
+              "name": "Transfer payments",
+              "amount": 1.268513
             },
             {
-              "id": "canadian-heritage-canadian-heritage-vote1",
-              "name": "Operating expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "canadian-heritage-canadian-heritage-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.190155
-                },
-                {
-                  "id": "canadian-heritage-canadian-heritage-vote1-less-revenues-netted-against-expenditures",
-                  "name": "Less: revenues netted against expenditures",
-                  "amount": 0.008705
-                },
-                {
-                  "id": "canadian-heritage-canadian-heritage-vote1-advertising-initiatives",
-                  "name": "Advertising initiatives",
-                  "amount": 0.006923
-                }
-              ]
+              "id": "canadian-heritage-2015-canadian-heritage-department-obj-1",
+              "name": "Personnel",
+              "amount": 0.166879
             },
             {
-              "id": "canadian-heritage-canadian-heritage-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.026022
+              "id": "canadian-heritage-2015-canadian-heritage-department-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.020337
+            },
+            {
+              "id": "canadian-heritage-2015-canadian-heritage-department-obj-3",
+              "name": "Information",
+              "amount": 0.011692
+            },
+            {
+              "id": "canadian-heritage-2015-canadian-heritage-department-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.00658
+            },
+            {
+              "id": "canadian-heritage-2015-canadian-heritage-department-external-revenues",
+              "name": "External revenues",
+              "amount": 0.006131
+            },
+            {
+              "id": "canadian-heritage-2015-canadian-heritage-department-obj-5",
+              "name": "Rentals",
+              "amount": 0.004424
+            },
+            {
+              "id": "canadian-heritage-2015-canadian-heritage-department-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.004034
+            },
+            {
+              "id": "canadian-heritage-2015-canadian-heritage-department-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.003786
+            },
+            {
+              "id": "canadian-heritage-2015-canadian-heritage-department-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.002662
+            },
+            {
+              "id": "canadian-heritage-2015-canadian-heritage-department-internal-revenues",
+              "name": "Internal revenues",
+              "amount": 0.002574
+            },
+            {
+              "id": "canadian-heritage-2015-canadian-heritage-department-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.001653
             }
           ]
         },
         {
-          "id": "canadian-heritage-org-canadian-broadcasting-corporation",
+          "id": "canadian-heritage-2015-canadian-broadcasting-corporation",
           "name": "Canadian Broadcasting Corporation",
           "children": [
             {
-              "id": "canadian-heritage-canadian-broadcasting-corporation-vote1",
-              "name": "Payments to the Canadian Broadcasting Corporation for operating expenditures",
-              "vote": "Vote 1",
-              "amount": 0.929284
-            },
-            {
-              "id": "canadian-heritage-canadian-broadcasting-corporation-vote10",
-              "name": "Payments to the Canadian Broadcasting Corporation for capital expenditures",
-              "vote": "Vote 10",
-              "amount": 0.10474
-            },
-            {
-              "id": "canadian-heritage-canadian-broadcasting-corporation-vote5",
-              "name": "Payments to the Canadian Broadcasting Corporation for working capital",
-              "vote": "Vote 5",
-              "amount": 0.004
+              "id": "canadian-heritage-2015-canadian-broadcasting-corporation-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 1.038024
             }
           ]
         },
         {
-          "id": "canadian-heritage-org-canada-council-for-the-arts",
+          "id": "canadian-heritage-2015-canada-council-for-the-arts",
           "name": "Canada Council for the Arts",
           "children": [
             {
-              "id": "canadian-heritage-canada-council-for-the-arts-vote1",
-              "name": "Payments to the Canada Council for the Arts",
-              "vote": "Vote 1",
+              "id": "canadian-heritage-2015-canada-council-for-the-arts-obj-12",
+              "name": "Other subsidies and payments",
               "amount": 0.182224
             }
           ]
         },
         {
-          "id": "canadian-heritage-org-library-and-archives-of-canada",
+          "id": "canadian-heritage-2015-library-and-archives-of-canada",
           "name": "Library and Archives of Canada",
           "children": [
             {
-              "id": "canadian-heritage-library-and-archives-of-canada-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.095301
+              "id": "canadian-heritage-2015-library-and-archives-of-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.079617
             },
             {
-              "id": "canadian-heritage-library-and-archives-of-canada-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.011119
+              "id": "canadian-heritage-2015-library-and-archives-of-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.009846
+            },
+            {
+              "id": "canadian-heritage-2015-library-and-archives-of-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.003401
+            },
+            {
+              "id": "canadian-heritage-2015-library-and-archives-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.002716
+            },
+            {
+              "id": "canadian-heritage-2015-library-and-archives-of-canada-obj-3",
+              "name": "Information",
+              "amount": 0.001931
+            },
+            {
+              "id": "canadian-heritage-2015-library-and-archives-of-canada-internal-revenues",
+              "name": "Internal revenues",
+              "amount": 0.001784
+            },
+            {
+              "id": "canadian-heritage-2015-library-and-archives-of-canada-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.001628
+            },
+            {
+              "id": "canadian-heritage-2015-library-and-archives-of-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.001602
+            },
+            {
+              "id": "canadian-heritage-2015-library-and-archives-of-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.001476
+            },
+            {
+              "id": "canadian-heritage-2015-library-and-archives-of-canada-obj-5",
+              "name": "Rentals",
+              "amount": 0.001183
+            },
+            {
+              "name": "Other",
+              "id": "canadian-heritage-2015-library-and-archives-of-canada-other",
+              "amount": 0.001108,
+              "isAggregate": true,
+              "count": 2
+            },
+            {
+              "id": "canadian-heritage-2015-library-and-archives-of-canada-external-revenues",
+              "name": "External revenues",
+              "amount": 0.00013
             }
           ]
         },
         {
-          "id": "canadian-heritage-org-canadian-radio-television-and-telecommunications-commission",
-          "name": "Canadian Radio‑television and Telecommunications Commission",
+          "id": "canadian-heritage-2015-canadian-radio-television-and-telecommunications-commission",
+          "name": "Canadian Radio-television and Telecommunications Commission",
           "children": [
             {
-              "id": "canadian-heritage-canadian-radio-television-and-telecommunications-commission-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.09762
+              "id": "canadian-heritage-2015-canadian-radio-television-and-telecommunications-commission-obj-1",
+              "name": "Personnel",
+              "amount": 0.046665
             },
             {
-              "id": "canadian-heritage-canadian-radio-television-and-telecommunications-commission-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.006471
+              "id": "canadian-heritage-2015-canadian-radio-television-and-telecommunications-commission-external-revenues",
+              "name": "External revenues",
+              "amount": 0.046322
+            },
+            {
+              "id": "canadian-heritage-2015-canadian-radio-television-and-telecommunications-commission-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.005119
+            },
+            {
+              "id": "canadian-heritage-2015-canadian-radio-television-and-telecommunications-commission-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.001417
+            },
+            {
+              "id": "canadian-heritage-2015-canadian-radio-television-and-telecommunications-commission-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.001275
+            },
+            {
+              "id": "canadian-heritage-2015-canadian-radio-television-and-telecommunications-commission-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.001256
+            },
+            {
+              "id": "canadian-heritage-2015-canadian-radio-television-and-telecommunications-commission-obj-3",
+              "name": "Information",
+              "amount": 0.000842
+            },
+            {
+              "id": "canadian-heritage-2015-canadian-radio-television-and-telecommunications-commission-obj-5",
+              "name": "Rentals",
+              "amount": 0.000634
+            },
+            {
+              "id": "canadian-heritage-2015-canadian-radio-television-and-telecommunications-commission-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000286
+            },
+            {
+              "id": "canadian-heritage-2015-canadian-radio-television-and-telecommunications-commission-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000274
             }
           ]
         },
         {
-          "id": "canadian-heritage-org-telefilm-canada",
+          "id": "canadian-heritage-2015-telefilm-canada",
           "name": "Telefilm Canada",
           "children": [
             {
-              "id": "canadian-heritage-telefilm-canada-vote1",
-              "name": "Payments to Telefilm Canada to be used for the purposes set out in the Telefilm Canada Act",
-              "vote": "Vote 1",
+              "id": "canadian-heritage-2015-telefilm-canada-obj-12",
+              "name": "Other subsidies and payments",
               "amount": 0.095454
             }
           ]
         },
         {
-          "id": "canadian-heritage-org-public-service-commission",
+          "id": "canadian-heritage-2015-public-service-commission",
           "name": "Public Service Commission",
           "children": [
             {
-              "id": "canadian-heritage-public-service-commission-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "amount": 0.084791
+              "id": "canadian-heritage-2015-public-service-commission-obj-1",
+              "name": "Personnel",
+              "amount": 0.073099
             },
             {
-              "id": "canadian-heritage-public-service-commission-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.010137
+              "id": "canadian-heritage-2015-public-service-commission-internal-revenues",
+              "name": "Internal revenues",
+              "amount": 0.008651
+            },
+            {
+              "id": "canadian-heritage-2015-public-service-commission-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.006548
+            },
+            {
+              "id": "canadian-heritage-2015-public-service-commission-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.0025
+            },
+            {
+              "id": "canadian-heritage-2015-public-service-commission-obj-5",
+              "name": "Rentals",
+              "amount": 0.00169
+            },
+            {
+              "id": "canadian-heritage-2015-public-service-commission-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.001434
+            },
+            {
+              "id": "canadian-heritage-2015-public-service-commission-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000352
+            },
+            {
+              "id": "canadian-heritage-2015-public-service-commission-obj-3",
+              "name": "Information",
+              "amount": 0.000295
+            },
+            {
+              "id": "canadian-heritage-2015-public-service-commission-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000185
+            },
+            {
+              "id": "canadian-heritage-2015-public-service-commission-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000161
+            },
+            {
+              "id": "canadian-heritage-2015-public-service-commission-external-revenues",
+              "name": "External revenues",
+              "amount": 1.5e-5
             }
           ]
         },
         {
-          "id": "canadian-heritage-org-national-film-board",
+          "id": "canadian-heritage-2015-national-film-board",
           "name": "National Film Board",
           "children": [
             {
-              "id": "canadian-heritage-national-film-board-vote1",
-              "name": "Program expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "canadian-heritage-national-film-board-vote1-operating-budget",
-                  "name": "Operating budget",
-                  "amount": 0.056977
-                },
-                {
-                  "id": "canadian-heritage-national-film-board-vote1-contribution-to-employee-benefits-plans",
-                  "name": "Contribution to employee benefits plans",
-                  "amount": 0.007539
-                },
-                {
-                  "id": "canadian-heritage-national-film-board-vote1-less-revenues-netted-against-expenditures",
-                  "name": "Less: revenues netted against expenditures",
-                  "amount": 0.003573
-                },
-                {
-                  "id": "canadian-heritage-national-film-board-vote1-grants-and-contributions",
-                  "name": "Grants and contributions",
-                  "amount": 8.8e-5
-                }
-              ]
+              "id": "canadian-heritage-2015-national-film-board-obj-1",
+              "name": "Personnel",
+              "amount": 0.038012
             },
             {
-              "id": "canadian-heritage-national-film-board-voteStatutory",
-              "name": "Statutory amounts",
-              "vote": "Statutory amounts",
-              "amount": 0.001531
+              "id": "canadian-heritage-2015-national-film-board-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.011
+            },
+            {
+              "id": "canadian-heritage-2015-national-film-board-obj-5",
+              "name": "Rentals",
+              "amount": 0.007272
+            },
+            {
+              "id": "canadian-heritage-2015-national-film-board-external-revenues",
+              "name": "External revenues",
+              "amount": 0.003471
+            },
+            {
+              "id": "canadian-heritage-2015-national-film-board-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.002764
+            },
+            {
+              "id": "canadian-heritage-2015-national-film-board-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.002113
+            },
+            {
+              "id": "canadian-heritage-2015-national-film-board-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.002064
+            },
+            {
+              "id": "canadian-heritage-2015-national-film-board-obj-3",
+              "name": "Information",
+              "amount": 0.001045
+            },
+            {
+              "id": "canadian-heritage-2015-national-film-board-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.001031
+            },
+            {
+              "id": "canadian-heritage-2015-national-film-board-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000746
+            },
+            {
+              "id": "canadian-heritage-2015-national-film-board-internal-revenues",
+              "name": "Internal revenues",
+              "amount": 0.000101
+            },
+            {
+              "id": "canadian-heritage-2015-national-film-board-obj-10",
+              "name": "Transfer payments",
+              "amount": 8.8e-5
             }
           ]
         },
         {
-          "id": "canadian-heritage-org-canadian-museum-of-history",
+          "id": "canadian-heritage-2015-canadian-museum-of-history",
           "name": "Canadian Museum of History",
           "children": [
             {
-              "id": "canadian-heritage-canadian-museum-of-history-vote1",
-              "name": "Payments to the Canadian Museum of History for operating and capital expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "canadian-heritage-canadian-museum-of-history-vote1-payments-to-crown-corporation",
-                  "name": "Payments to Crown Corporation",
-                  "amount": 0.062424
-                },
-                {
-                  "id": "canadian-heritage-canadian-museum-of-history-vote1-capital-budget",
-                  "name": "Capital budget",
-                  "amount": 0.0065
-                }
-              ]
+              "id": "canadian-heritage-2015-canadian-museum-of-history-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.068924
             }
           ]
         },
         {
-          "id": "canadian-heritage-org-national-gallery-of-canada",
+          "id": "canadian-heritage-2015-national-gallery-of-canada",
           "name": "National Gallery of Canada",
           "children": [
             {
-              "id": "canadian-heritage-national-gallery-of-canada-vote1",
-              "name": "Payments to the National Gallery of Canada for operating and capital expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "canadian-heritage-national-gallery-of-canada-vote1-payments-to-crown-corporation",
-                  "name": "Payments to Crown Corporation",
-                  "amount": 0.035308
-                },
-                {
-                  "id": "canadian-heritage-national-gallery-of-canada-vote1-capital-budget",
-                  "name": "Capital budget",
-                  "amount": 0.001
-                }
-              ]
-            },
-            {
-              "id": "canadian-heritage-national-gallery-of-canada-vote5",
-              "name": "Payment to the National Gallery of Canada for the acquisition of objects for the collection and other costs attributable to this activity",
-              "vote": "Vote 5",
-              "amount": 0.008
+              "id": "canadian-heritage-2015-national-gallery-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.044308
             }
           ]
         },
         {
-          "id": "canadian-heritage-org-national-arts-centre-corporation",
+          "id": "canadian-heritage-2015-national-arts-centre-corporation",
           "name": "National Arts Centre Corporation",
           "children": [
             {
-              "id": "canadian-heritage-national-arts-centre-corporation-vote1",
-              "name": "Payments to the National Arts Centre Corporation for operating expenditures",
-              "vote": "Vote 1",
+              "id": "canadian-heritage-2015-national-arts-centre-corporation-obj-12",
+              "name": "Other subsidies and payments",
               "amount": 0.035321
             }
           ]
         },
         {
-          "id": "canadian-heritage-org-national-museum-of-science-and-technology",
+          "id": "canadian-heritage-2015-national-museum-of-science-and-technology",
           "name": "National Museum of Science and Technology",
           "children": [
             {
-              "id": "canadian-heritage-national-museum-of-science-and-technology-vote1",
-              "name": "Payments to the National Museum of Science and Technology for operating and capital expenditures",
-              "vote": "Vote 1",
-              "children": [
-                {
-                  "id": "canadian-heritage-national-museum-of-science-and-technology-vote1-payments-to-crown-corporation",
-                  "name": "Payments to Crown Corporation",
-                  "amount": 0.03267
-                },
-                {
-                  "id": "canadian-heritage-national-museum-of-science-and-technology-vote1-capital-budget",
-                  "name": "Capital budget",
-                  "amount": 0.0007
-                }
-              ]
+              "id": "canadian-heritage-2015-national-museum-of-science-and-technology-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.03337
             }
           ]
         },
         {
           "name": "Other",
           "id": "canadian-heritage-other",
-          "amount": 0.082044,
+          "amount": 0.082042,
           "isAggregate": true,
           "count": 7
         }
