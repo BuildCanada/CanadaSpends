@@ -11,6 +11,7 @@ require_relative '../export/standard_objects'
 require_relative '../export/truncation'
 require_relative '../export/units'
 require_relative '../export/vol1_statement'
+require_relative '../export/workforce'
 
 module PbCli
   module Commands
@@ -68,6 +69,7 @@ module PbCli
         @tree_path = paths[:tree_path] || File.join(root, 'mappings/thematic_tree.yaml')
         @open_tables_dir = paths[:open_tables_dir] || File.join(root, 'open_tables/data')
         @cpi_path = paths[:cpi_path] || File.join(root, 'reference/cpi_fiscal_year.json')
+        @workforce_path = paths[:workforce_path] || File.join(root, 'reference/workforce.json')
         @out_dir = paths[:out_dir] || File.expand_path(File.join(root, '../../data/federal'))
         @errors_path = paths[:errors_path] || File.join(root, 'export_errors.md')
         @timestamp = paths[:timestamp] || ENV['PB_EXPORT_TIMESTAMP'] || Time.now.utc.iso8601
@@ -155,6 +157,9 @@ module PbCli
         @standard_objects = PbCli::Export::StandardObjects.new(@open_tables_dir)
         @segments = PbCli::Export::SegmentExpenses.new(@open_tables_dir)
         @cpi = PbCli::Export::Cpi.new(@cpi_path, base_year: BASE_YEAR)
+        @workforce = PbCli::Export::Workforce.new(@workforce_path)
+        @workforce_exported = []
+        @meso_org_crosswalk = {}
         @accrual_years = {}
       end
 
@@ -449,7 +454,89 @@ module PbCli
         slugs_for(year).each do |slug|
           write_json(File.join(dir, 'departments', "#{slug}.json"), department_payload(year, slug))
         end
+        write_workforce(year, dir)
         validate_meso_reconciliation(year)
+      end
+
+      # --- workforce -------------------------------------------------------
+
+      # Merges the committed TBS headcount reference (reference/workforce.json,
+      # from `pb workforce`) with the government-wide standard-object Personnel
+      # figure into data/federal/{year}/workforce.json (spec workforce-headcount
+      # -salary). Personnel is a positive standard object, so the government-wide
+      # figure is a plain Σ across every meso row (the net-presentation caveat
+      # does not apply). averagePersonnelCost = personnel dollars ÷ headcount, as
+      # whole dollars, labeled per-employee salaries-and-benefits (NOT "average
+      # salary" — Personnel includes benefits/allowances). Omitted (with a report
+      # line) when the reference lacks the year — never faked.
+      def write_workforce(year, dir)
+        unless @workforce.year?(year)
+          record_workforce_gap(year, 'no TBS headcount in reference/workforce.json')
+          return
+        end
+        headcount = @workforce.headcount(year)
+        if headcount.nil? || headcount <= 0
+          record_workforce_gap(year, 'non-positive headcount in reference')
+          return
+        end
+        unless @standard_objects.year?(year)
+          record_workforce_gap(year, 'no standard-object edition for personnel spending')
+          return
+        end
+
+        personnel = personnel_dollars(year)
+        write_json(File.join(dir, 'workforce.json'), {
+          'financialYearEnding' => year,
+          'headcount' => headcount,
+          'headcountAsOf' => @workforce.entry(year)['headcountAsOf'],
+          'personnelSpending' => PbCli::Export::Units.dollars_to_billions(personnel),
+          'averagePersonnelCost' => (personnel / headcount).round,
+          'source' => @workforce.entry(year)['source'] || @workforce.source,
+          'source_url' => @workforce.entry(year)['source_url'],
+          'headcountByDepartment' => headcount_by_department(year)
+        })
+        @workforce_exported << year
+      end
+
+      # Government-wide Personnel standard object (dollars) = Σ over every meso
+      # row's Personnel object, portfolios resolved or not.
+      def personnel_dollars(year)
+        @standard_objects.rows(year).sum do |row|
+          pair = row.objects.find { |name, _| name == 'Personnel' }
+          pair ? pair[1] : 0.0
+        end
+      end
+
+      # Raw TBS department labels resolved to portfolio slugs where the name
+      # matches a known ministry/organization label (via the meso organization
+      # crosswalk and the Mapping); unresolved labels are kept verbatim with
+      # resolved: false (never forced, never dropped). Sorted by headcount desc.
+      def headcount_by_department(year)
+        crosswalk = meso_org_crosswalk(year)
+        @workforce.departments(year).map do |name, count|
+          slug = @mapping.organization_override_slug(name) ||
+                 crosswalk[@mapping.normalize_ci(name)] ||
+                 @mapping.meso_portfolio_slug(name)
+          row = { 'name' => name, 'headcount' => count, 'resolved' => !slug.nil? }
+          row['slug'] = slug if slug
+          row
+        end.sort_by { |d| [-d['headcount'], d['name']] }
+      end
+
+      # organization label (normalized) -> slug, from the meso rows already
+      # resolved for the year (the same resolution the department pages use).
+      def meso_org_crosswalk(year)
+        @meso_org_crosswalk[year] ||= begin
+          cw = {}
+          (@meso_by_slug[year] || {}).each do |slug, orgs|
+            orgs.each_key { |org| cw[@mapping.normalize_ci(org)] = slug }
+          end
+          cw
+        end
+      end
+
+      def record_workforce_gap(year, reason)
+        (@workforce_gaps ||= []) << { year: year, reason: reason }
       end
 
       # Per-department miniSankey ↔ allotment check (spec §B). Compares the
@@ -1121,6 +1208,12 @@ module PbCli
 
       def finalize(exported)
         write_errors_report(exported)
+        unless @workforce_exported.empty?
+          puts ::CLI::UI.fmt("{{i}} workforce.json written for #{@workforce_exported.size} year(s)")
+        end
+        (@workforce_gaps || []).each do |gap|
+          puts ::CLI::UI.fmt("{{x}} #{gap[:year]}: workforce.json omitted — #{gap[:reason]}")
+        end
         unless @recon_warnings.empty?
           puts ::CLI::UI.fmt("{{i}} #{@recon_warnings.size} miniSankey reconciliation note(s) (non-blocking). See #{@errors_path}")
         end

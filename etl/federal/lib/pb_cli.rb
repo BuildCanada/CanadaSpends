@@ -37,6 +37,9 @@ module PbCli
       when 'prose'
         require 'pb_cli/commands/prose'
         exit(Commands::Prose.new.call(command_args) || 0)
+      when 'workforce'
+        require 'pb_cli/commands/workforce'
+        exit(Commands::Workforce.new.call(command_args) || 0)
       else
         puts "Unknown command: #{command}"
         puts ""
@@ -57,6 +60,7 @@ module PbCli
       puts "  pb harvest-glossary"
       puts "  pb translate [--year N | --all-years]"
       puts "  pb prose [--year N] [--department SLUG]"
+      puts "  pb workforce [--out PATH]"
       puts ""
       puts "Examples:"
       puts "  pb scrape 2025              # Scrape single year"

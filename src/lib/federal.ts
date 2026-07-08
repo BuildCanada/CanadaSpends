@@ -140,6 +140,31 @@ export type FederalProse = {
   reviewed: boolean;
 };
 
+export type FederalWorkforceDepartment = {
+  name: string;
+  slug?: string;
+  headcount: number;
+  resolved: boolean;
+};
+
+export type FederalWorkforce = {
+  financialYearEnding: number;
+  headcount: number;
+  headcountAsOf: string;
+  // Government-wide Personnel standard object, in billions of CAD (nominal).
+  personnelSpending: number;
+  // Personnel dollars ÷ headcount, whole dollars (salaries + benefits).
+  averagePersonnelCost: number;
+  source: string;
+  source_url: string;
+  headcountByDepartment?: FederalWorkforceDepartment[];
+};
+
+export type FederalWorkforcePoint = {
+  year: number;
+  headcount: number;
+};
+
 type FrMap = Record<string, string>;
 
 // ---------------------------------------------------------------------------
@@ -379,6 +404,33 @@ export function getFederalReconciliation(
   return readJson<FederalReconciliation>(
     path.join(yearDir(year), "reconciliation.json"),
   );
+}
+
+/**
+ * Per-year federal workforce (TBS headcount + Public Accounts personnel
+ * spending). Returns null when the year has no workforce.json so the overview
+ * page can guard the workforce strip. Language-independent: department labels
+ * are raw source data, not translated content.
+ */
+export function getFederalWorkforce(
+  year: string | number,
+): FederalWorkforce | null {
+  return readJson<FederalWorkforce>(path.join(yearDir(year), "workforce.json"));
+}
+
+/**
+ * Headcount-over-time series (ascending by year) across every published year
+ * that carries workforce.json. Feeds the overview line chart.
+ */
+export function getFederalWorkforceSeries(): FederalWorkforcePoint[] {
+  return getFederalYears()
+    .slice()
+    .sort((a, b) => a - b)
+    .map((year) => {
+      const wf = getFederalWorkforce(year);
+      return wf ? { year, headcount: wf.headcount } : null;
+    })
+    .filter((p): p is FederalWorkforcePoint => p !== null);
 }
 
 let cachedHistorical: FederalHistoricalPre2013 | null | undefined;

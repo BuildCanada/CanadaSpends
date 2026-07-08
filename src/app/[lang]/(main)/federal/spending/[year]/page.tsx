@@ -1,6 +1,7 @@
 import UpdatedAt from "@/app/[lang]/(main)/federal/spending/_common/updatedAt";
 import { BillionsBarList } from "@/components/BillionsBarList";
 import { FederalWorkforce } from "@/components/FederalWorkforce";
+import { FederalWorkforceStrip } from "@/components/FederalWorkforceStrip";
 import {
   InflationProvider,
   InflationValue,
@@ -26,6 +27,8 @@ import {
   getFederalSankey,
   getFederalLatestYear,
   getFederalSummary,
+  getFederalWorkforce,
+  getFederalWorkforceSeries,
   getFederalYears,
   isValidFederalYear,
 } from "@/lib/federal";
@@ -93,6 +96,8 @@ export default async function FederalYearOverview({
 
   const methodologyPath = localizedPath("/federal/spending/methodology", lang);
   const isLatestYear = yearNum === getFederalLatestYear();
+  const workforce = getFederalWorkforce(year);
+  const workforceSeries = workforce ? getFederalWorkforceSeries() : [];
 
   return (
     <Page>
@@ -228,6 +233,15 @@ export default async function FederalYearOverview({
             </P>
             <BillionsBarList items={ministryItems} />
           </Section>
+
+          {workforce && (
+            <FederalWorkforceStrip
+              workforce={workforce}
+              series={workforceSeries}
+              financialYear={summary.financialYear}
+              lang={lang}
+            />
+          )}
 
           {isLatestYear && <FederalWorkforce />}
 
