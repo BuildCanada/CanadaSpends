@@ -3,17 +3,17 @@
   "slug": "department-of-finance",
   "financialYearEnding": 2018,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 90.641314,
-  "percentageOfFederal": 27.4523,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 90.640916,
+  "percentageOfFederal": 27.4522,
   "historicalShare": [
     {
       "year": 2014,
-      "percentage": 30.9373
+      "percentage": 31.0335
     },
     {
       "year": 2015,
-      "percentage": 30.731
+      "percentage": 30.7352
     },
     {
       "year": 2016,
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 28.6373
+      "percentage": 28.6369
     },
     {
       "year": 2018,
-      "percentage": 27.4523
+      "percentage": 27.4522
     },
     {
       "year": 2019,
-      "percentage": 27.2779
+      "percentage": 27.2778
     },
     {
       "year": 2020,
-      "percentage": 26.5609
+      "percentage": 26.5605
     },
     {
       "year": 2021,
-      "percentage": 18.327
+      "percentage": 18.3268
     },
     {
       "year": 2022,
-      "percentage": 21.2123
+      "percentage": 21.2122
     },
     {
       "year": 2023,
-      "percentage": 24.3876
+      "percentage": 24.3874
     },
     {
       "year": 2024,
-      "percentage": 26.1038
+      "percentage": 26.1034
     },
     {
       "year": 2025,
-      "percentage": 26.2859
+      "percentage": 26.2858
     }
   ],
   "miniSankey": {
@@ -69,7 +69,68 @@
             {
               "id": "department-of-finance-2018-department-of-finance-obj-10",
               "name": "Transfer payments",
-              "amount": 68.970039
+              "children": [
+                {
+                  "id": "department-of-finance-2018-tp-0006",
+                  "name": "Canada Health Transfer (Part V.1—Federal-Provincial Fiscal Arrangements Act)",
+                  "amount": 34.736881
+                },
+                {
+                  "id": "department-of-finance-2018-tp-0009",
+                  "name": "Fiscal Equalization (Part I—Federal-Provincial Fiscal Arrangements Act)",
+                  "amount": 17.079955
+                },
+                {
+                  "id": "department-of-finance-2018-tp-0007",
+                  "name": "Canada Social Transfer (Part V.1—Federal-Provincial Fiscal Arrangements Act)",
+                  "amount": 12.864379
+                },
+                {
+                  "id": "department-of-finance-2018-tp-0013",
+                  "name": "Territorial Financing (Part I.1—Federal-Provincial Fiscal Arrangements Act)",
+                  "amount": 3.445091
+                },
+                {
+                  "id": "department-of-finance-2018-tp-0011",
+                  "name": "Payments to International Development Association",
+                  "amount": 0.413215
+                },
+                {
+                  "id": "department-of-finance-2018-tp-0010",
+                  "name": "Funding for Home Care Services and Mental Health Services",
+                  "amount": 0.28071
+                },
+                {
+                  "id": "department-of-finance-2018-tp-0008",
+                  "name": "Debt payments on behalf of poor countries to International Organizations pursuant to section 18(1) of the Economic Recovery Act",
+                  "amount": 0.047908
+                },
+                {
+                  "id": "department-of-finance-2018-tp-0012",
+                  "name": "Statutory Subsidies (Constitution Acts, 1867–1982, and Other Statutory Authorities)",
+                  "amount": 0.039632
+                },
+                {
+                  "id": "department-of-finance-2018-tp-0000",
+                  "name": "Grant to the Government of Alberta to Support Provincial Actions in Alberta's Resource Sector",
+                  "amount": 0.028071
+                },
+                {
+                  "id": "department-of-finance-2018-tp-0003",
+                  "name": "Additional Fiscal Equalization Offset Payment to Nova Scotia (Nova Scotia and Newfoundland and Labrador Additional Fiscal Equalization Offshore Payments Act)",
+                  "amount": 0.018674
+                },
+                {
+                  "id": "department-of-finance-2018-tp-0004",
+                  "name": "Additional Fiscal Equalization to Nova Scotia (Part I—Federal-Provincial Fiscal Arrangements Act)",
+                  "amount": 0.015352
+                },
+                {
+                  "id": "department-of-finance-2018-tp-0002",
+                  "name": "Research and Policy Initiatives Assistance",
+                  "amount": 0.000171
+                }
+              ]
             },
             {
               "id": "department-of-finance-2018-department-of-finance-obj-11",
@@ -342,19 +403,29 @@
   },
   "entities": [
     {
-      "id": "department-of-finance-2018-entity-finance",
-      "name": "Finance",
-      "value": 90.641314
-    }
-  ],
-  "votes": [
+      "id": "department-of-finance-2018-entity-department-of-finance",
+      "name": "Department of Finance",
+      "value": 90.326718
+    },
     {
-      "id": "department-of-finance-2018-finance-vote",
-      "vote": "All votes",
-      "description": "Total appropriations (vote-level detail not published for this edition)",
-      "totalAvailable": 90787245516,
-      "used": 90641314488,
-      "lapsed": 145931028
+      "id": "department-of-finance-2018-entity-office-of-the-superintendent-of-financial-institutions",
+      "name": "Office of the Superintendent of Financial Institutions",
+      "value": 0.155002
+    },
+    {
+      "id": "department-of-finance-2018-entity-office-of-the-auditor-general",
+      "name": "Office of the Auditor General",
+      "value": 0.08243
+    },
+    {
+      "id": "department-of-finance-2018-entity-financial-transactions-and-reports-analysis-centre-of-canada",
+      "name": "Financial Transactions and Reports Analysis Centre of Canada",
+      "value": 0.055248
+    },
+    {
+      "id": "department-of-finance-2018-entity-financial-consumer-agency-of-canada",
+      "name": "Financial Consumer Agency of Canada",
+      "value": 0.021518
     }
   ],
   "transferPayments": [

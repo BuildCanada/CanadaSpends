@@ -3,9 +3,9 @@
   "slug": "treasury-board",
   "financialYearEnding": 2017,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 4.309162,
-  "percentageOfFederal": 1.3908,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 3.155853,
+  "percentageOfFederal": 1.0186,
   "historicalShare": [
     {
       "year": 2014,
@@ -13,7 +13,7 @@
     },
     {
       "year": 2015,
-      "percentage": 1.49
+      "percentage": 1.4901
     },
     {
       "year": 2016,
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 1.3908
+      "percentage": 1.0186
     },
     {
       "year": 2018,
-      "percentage": 1.3823
+      "percentage": 1.179
     },
     {
       "year": 2019,
-      "percentage": 1.9994
+      "percentage": 1.806
     },
     {
       "year": 2020,
-      "percentage": 1.0185
+      "percentage": 0.8208
     },
     {
       "year": 2021,
-      "percentage": 0.6324
+      "percentage": 0.5159
     },
     {
       "year": 2022,
-      "percentage": 2.3841
+      "percentage": 2.216
     },
     {
       "year": 2023,
-      "percentage": 1.0656
+      "percentage": 0.8822
     },
     {
       "year": 2024,
-      "percentage": 1.02
+      "percentage": 0.8357
     },
     {
       "year": 2025,
-      "percentage": 2.2149
+      "percentage": 2.0369
     }
   ],
   "miniSankey": {
@@ -114,7 +114,33 @@
             {
               "id": "treasury-board-2017-treasury-board-secretariat-obj-10",
               "name": "Transfer payments",
-              "amount": 0.00111
+              "children": [
+                {
+                  "id": "treasury-board-2017-tp-0001",
+                  "name": "Contributions to the Open Government Partnership",
+                  "amount": 0.000519
+                },
+                {
+                  "id": "treasury-board-2017-tp-0004",
+                  "name": "Payments, in the nature of Workers' Compensation, in accordance with the Public Service Income Benefit Plan for Survivors of Employees Slain on Duty",
+                  "amount": 0.000365
+                },
+                {
+                  "id": "treasury-board-2017-tp-0002",
+                  "name": "International Public Sector Accounting Standards Board",
+                  "amount": 0.000196
+                },
+                {
+                  "id": "treasury-board-2017-tp-0000",
+                  "name": "Contributions for access to legal advice under the Public Servants Disclosure Protection Act",
+                  "amount": 2.5e-5
+                },
+                {
+                  "id": "treasury-board-2017-tp-0005",
+                  "name": "Special Indemnity Plan for Spouses of Canadian Forces Attachés",
+                  "amount": 5.0e-6
+                }
+              ]
             },
             {
               "id": "treasury-board-2017-treasury-board-secretariat-obj-7",
@@ -286,19 +312,24 @@
   },
   "entities": [
     {
-      "id": "treasury-board-2017-entity-treasury-board",
-      "name": "Treasury Board",
-      "value": 4.309162
-    }
-  ],
-  "votes": [
+      "id": "treasury-board-2017-entity-treasury-board-secretariat",
+      "name": "Treasury Board Secretariat",
+      "value": 3.064209
+    },
     {
-      "id": "treasury-board-2017-treasury-board-vote",
-      "vote": "All votes",
-      "description": "Total appropriations (vote-level detail not published for this edition)",
-      "totalAvailable": 6630349732,
-      "used": 4309162305,
-      "lapsed": 2321187427
+      "id": "treasury-board-2017-entity-canada-school-of-public-service",
+      "name": "Canada School of Public Service",
+      "value": 0.082784
+    },
+    {
+      "id": "treasury-board-2017-entity-office-of-the-commissioner-of-lobbying",
+      "name": "Office of the Commissioner of Lobbying",
+      "value": 0.004536
+    },
+    {
+      "id": "treasury-board-2017-entity-office-of-the-public-sector-integrity-commissioner",
+      "name": "Office of the Public Sector Integrity Commissioner",
+      "value": 0.004324
     }
   ],
   "transferPayments": [

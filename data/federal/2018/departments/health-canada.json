@@ -3,9 +3,9 @@
   "slug": "health-canada",
   "financialYearEnding": 2018,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 6.150417,
-  "percentageOfFederal": 1.8628,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 5.944073,
+  "percentageOfFederal": 1.8003,
   "historicalShare": [
     {
       "year": 2014,
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 2.2847
+      "percentage": 2.1269
     },
     {
       "year": 2018,
-      "percentage": 1.8628
+      "percentage": 1.8003
     },
     {
       "year": 2019,
-      "percentage": 1.4842
+      "percentage": 1.4439
     },
     {
       "year": 2020,
-      "percentage": 1.521
+      "percentage": 1.482
     },
     {
       "year": 2021,
-      "percentage": 2.2328
+      "percentage": 2.2048
     },
     {
       "year": 2022,
-      "percentage": 3.412
+      "percentage": 3.3701
     },
     {
       "year": 2023,
-      "percentage": 2.6244
+      "percentage": 2.5801
     },
     {
       "year": 2024,
-      "percentage": 2.6767
+      "percentage": 2.6298
     },
     {
       "year": 2025,
-      "percentage": 2.378
+      "percentage": 2.3318
     }
   ],
   "miniSankey": {
@@ -366,19 +366,29 @@
   },
   "entities": [
     {
-      "id": "health-canada-2018-entity-health",
-      "name": "Health",
-      "value": 6.150417
-    }
-  ],
-  "votes": [
+      "id": "health-canada-2018-entity-department-of-health",
+      "name": "Department of Health",
+      "value": 3.491053
+    },
     {
-      "id": "health-canada-2018-health-vote",
-      "vote": "All votes",
-      "description": "Total appropriations (vote-level detail not published for this edition)",
-      "totalAvailable": 6516234810,
-      "used": 6150416832,
-      "lapsed": 365817978
+      "id": "health-canada-2018-entity-canadian-institutes-of-health-research",
+      "name": "Canadian Institutes of Health Research",
+      "value": 1.097161
+    },
+    {
+      "id": "health-canada-2018-entity-canadian-food-inspection-agency",
+      "name": "Canadian Food Inspection Agency",
+      "value": 0.739018
+    },
+    {
+      "id": "health-canada-2018-entity-public-health-agency-of-canada",
+      "name": "Public Health Agency of Canada",
+      "value": 0.607102
+    },
+    {
+      "id": "health-canada-2018-entity-patented-medicine-prices-review-board",
+      "name": "Patented Medicine Prices Review Board",
+      "value": 0.009739
     }
   ],
   "transferPayments": [

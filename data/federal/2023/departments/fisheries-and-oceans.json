@@ -3,9 +3,9 @@
   "slug": "fisheries-and-oceans",
   "financialYearEnding": 2023,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 3.823878,
-  "percentageOfFederal": 0.7915,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 3.776828,
+  "percentageOfFederal": 0.7817,
   "historicalShare": [
     {
       "year": 2014,
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 0.7856
+      "percentage": 0.7594
     },
     {
       "year": 2018,
-      "percentage": 0.8065
+      "percentage": 0.7937
     },
     {
       "year": 2019,
-      "percentage": 0.9602
+      "percentage": 0.9483
     },
     {
       "year": 2020,
-      "percentage": 0.8515
+      "percentage": 0.8396
     },
     {
       "year": 2021,
-      "percentage": 0.5259
+      "percentage": 0.5196
     },
     {
       "year": 2022,
-      "percentage": 0.7545
+      "percentage": 0.7464
     },
     {
       "year": 2023,
-      "percentage": 0.7915
+      "percentage": 0.7817
     },
     {
       "year": 2024,
-      "percentage": 0.8807
+      "percentage": 0.8719
     },
     {
       "year": 2025,
-      "percentage": 0.9614
+      "percentage": 0.9529
     }
   ],
   "miniSankey": {
@@ -79,7 +79,70 @@
             {
               "id": "fisheries-and-oceans-2023-department-of-fisheries-and-oceans-obj-10",
               "name": "Transfer payments",
-              "amount": 0.402101
+              "children": [
+                {
+                  "id": "fisheries-and-oceans-2023-tp-0009",
+                  "name": "Contributions in Support of the Integrated Aboriginal Programs Management Framework",
+                  "amount": 0.137032
+                },
+                {
+                  "id": "fisheries-and-oceans-2023-tp-0003",
+                  "name": "Contributions in Support of Aquatic Species and Aquatic Habitat",
+                  "amount": 0.109282
+                },
+                {
+                  "id": "fisheries-and-oceans-2023-tp-0010",
+                  "name": "Contributions in Support of the Integrated Fish and Seafood Sector Management Framework",
+                  "amount": 0.055226
+                },
+                {
+                  "id": "fisheries-and-oceans-2023-tp-0013",
+                  "name": "Contributions in Support of the Sustainable Management of Canada's Fisheries",
+                  "amount": 0.029901
+                },
+                {
+                  "id": "fisheries-and-oceans-2023-tp-0004",
+                  "name": "Contributions in Support of Ecosystems and Oceans Science",
+                  "amount": 0.028492
+                },
+                {
+                  "id": "fisheries-and-oceans-2023-tp-0008",
+                  "name": "Contributions in Support of the Canadian Coast Guard Integrated Program",
+                  "amount": 0.017876
+                },
+                {
+                  "id": "fisheries-and-oceans-2023-tp-0005",
+                  "name": "Contributions in Support of Indigenous Reconciliation Priorities",
+                  "amount": 0.009007
+                },
+                {
+                  "id": "fisheries-and-oceans-2023-tp-0007",
+                  "name": "Contributions in Support of Salmon Enhancement Programming",
+                  "amount": 0.004607
+                },
+                {
+                  "id": "fisheries-and-oceans-2023-tp-0016",
+                  "name": "Grants in Support of Asset Disposal Programming",
+                  "amount": 0.00292
+                },
+                {
+                  "id": "fisheries-and-oceans-2023-tp-0012",
+                  "name": "Contributions in Support of the Small Craft Harbours Class Program",
+                  "amount": 0.002514
+                },
+                {
+                  "id": "fisheries-and-oceans-2023-tp-0006",
+                  "name": "Contributions in Support of Organizations Associated with Research, Development, Management, and Promotion of Fisheries and Oceans-related Issues",
+                  "amount": 0.001441
+                },
+                {
+                  "id": "fisheries-and-oceans-2023-department-of-fisheries-and-oceans-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.003803,
+                  "isAggregate": true,
+                  "count": 8
+                }
+              ]
             },
             {
               "id": "fisheries-and-oceans-2023-department-of-fisheries-and-oceans-obj-9",
@@ -137,54 +200,7 @@
     {
       "id": "fisheries-and-oceans-2023-entity-department-of-fisheries-and-oceans",
       "name": "Department of Fisheries and Oceans",
-      "value": 3.823878
-    },
-    {
-      "id": "fisheries-and-oceans-2023-entity-freshwater-fish-marketing-corporation",
-      "name": "Freshwater Fish Marketing Corporation",
-      "value": 0.0
-    }
-  ],
-  "votes": [
-    {
-      "id": "fisheries-and-oceans-2023-department-of-fisheries-and-oceans-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 2295151085,
-      "used": 2238751739,
-      "lapsed": 56399346
-    },
-    {
-      "id": "fisheries-and-oceans-2023-department-of-fisheries-and-oceans-vote10",
-      "vote": "Vote 10",
-      "description": "Grants and contributions",
-      "totalAvailable": 967404519,
-      "used": 402101250,
-      "lapsed": 565303269
-    },
-    {
-      "id": "fisheries-and-oceans-2023-department-of-fisheries-and-oceans-vote5",
-      "vote": "Vote 5",
-      "description": "Capital expenditures",
-      "totalAvailable": 1471650349,
-      "used": 986124249,
-      "lapsed": 485526100
-    },
-    {
-      "id": "fisheries-and-oceans-2023-department-of-fisheries-and-oceans-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 200166347,
-      "used": 196901056,
-      "lapsed": 3265291
-    },
-    {
-      "id": "fisheries-and-oceans-2023-freshwater-fish-marketing-corporation-vote1",
-      "vote": "Vote 1",
-      "description": "Authorization to borrow money otherwise than from the Crown",
-      "totalAvailable": 1,
-      "used": 0,
-      "lapsed": 1
+      "value": 3.776828
     }
   ],
   "transferPayments": [

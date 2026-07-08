@@ -3,9 +3,9 @@
   "slug": "fisheries-and-oceans",
   "financialYearEnding": 2022,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 3.799808,
-  "percentageOfFederal": 0.7545,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 3.758867,
+  "percentageOfFederal": 0.7464,
   "historicalShare": [
     {
       "year": 2014,
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 0.7856
+      "percentage": 0.7594
     },
     {
       "year": 2018,
-      "percentage": 0.8065
+      "percentage": 0.7937
     },
     {
       "year": 2019,
-      "percentage": 0.9602
+      "percentage": 0.9483
     },
     {
       "year": 2020,
-      "percentage": 0.8515
+      "percentage": 0.8396
     },
     {
       "year": 2021,
-      "percentage": 0.5259
+      "percentage": 0.5196
     },
     {
       "year": 2022,
-      "percentage": 0.7545
+      "percentage": 0.7464
     },
     {
       "year": 2023,
-      "percentage": 0.7915
+      "percentage": 0.7817
     },
     {
       "year": 2024,
-      "percentage": 0.8807
+      "percentage": 0.8719
     },
     {
       "year": 2025,
-      "percentage": 0.9614
+      "percentage": 0.9529
     }
   ],
   "miniSankey": {
@@ -79,7 +79,70 @@
             {
               "id": "fisheries-and-oceans-2022-department-of-fisheries-and-oceans-obj-10",
               "name": "Transfer payments",
-              "amount": 0.681289
+              "children": [
+                {
+                  "id": "fisheries-and-oceans-2022-tp-0005",
+                  "name": "Contributions in Support of Indigenous Reconciliation Priorities",
+                  "amount": 0.302981
+                },
+                {
+                  "id": "fisheries-and-oceans-2022-tp-0010",
+                  "name": "Contributions in Support of the Integrated Aboriginal Programs Management Framework",
+                  "amount": 0.108605
+                },
+                {
+                  "id": "fisheries-and-oceans-2022-tp-0003",
+                  "name": "Contributions in Support of Aquatic Species and Aquatic Habitat",
+                  "amount": 0.067971
+                },
+                {
+                  "id": "fisheries-and-oceans-2022-tp-0011",
+                  "name": "Contributions in Support of the Integrated Fish and Seafood Sector Management Framework",
+                  "amount": 0.063042
+                },
+                {
+                  "id": "fisheries-and-oceans-2022-tp-0004",
+                  "name": "Contributions in Support of Ecosystems and Oceans Science",
+                  "amount": 0.035956
+                },
+                {
+                  "id": "fisheries-and-oceans-2022-tp-0021",
+                  "name": "Grants in Support of Self-employed Fish Harvesters in Canada Affected by COVID-19",
+                  "amount": 0.032835
+                },
+                {
+                  "id": "fisheries-and-oceans-2022-tp-0014",
+                  "name": "Contributions in Support of the Sustainable Management of Canada's Fisheries",
+                  "amount": 0.024035
+                },
+                {
+                  "id": "fisheries-and-oceans-2022-tp-0008",
+                  "name": "Contributions in Support of the Canadian Coast Guard Integrated Program",
+                  "amount": 0.018573
+                },
+                {
+                  "id": "fisheries-and-oceans-2022-tp-0012",
+                  "name": "Contributions in Support of the Oceans Management Program to Support Development and Implementation of Oceans Conservation and Management Activities",
+                  "amount": 0.016335
+                },
+                {
+                  "id": "fisheries-and-oceans-2022-tp-0007",
+                  "name": "Contributions in Support of Salmon Enhancement Programming",
+                  "amount": 0.003903
+                },
+                {
+                  "id": "fisheries-and-oceans-2022-tp-0006",
+                  "name": "Contributions in Support of Organizations Associated with Research, Development, Management, and Promotion of Fisheries and Oceans-related Issues",
+                  "amount": 0.002223
+                },
+                {
+                  "id": "fisheries-and-oceans-2022-department-of-fisheries-and-oceans-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.00483,
+                  "isAggregate": true,
+                  "count": 9
+                }
+              ]
             },
             {
               "id": "fisheries-and-oceans-2022-department-of-fisheries-and-oceans-obj-9",
@@ -137,41 +200,7 @@
     {
       "id": "fisheries-and-oceans-2022-entity-department-of-fisheries-and-oceans",
       "name": "Department of Fisheries and Oceans",
-      "value": 3.799808
-    }
-  ],
-  "votes": [
-    {
-      "id": "fisheries-and-oceans-2022-department-of-fisheries-and-oceans-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 2206694325,
-      "used": 2100704315,
-      "lapsed": 105990010
-    },
-    {
-      "id": "fisheries-and-oceans-2022-department-of-fisheries-and-oceans-vote10",
-      "vote": "Vote 10",
-      "description": "Grants and contributions",
-      "totalAvailable": 1280768687,
-      "used": 681289122,
-      "lapsed": 599479565
-    },
-    {
-      "id": "fisheries-and-oceans-2022-department-of-fisheries-and-oceans-vote5",
-      "vote": "Vote 5",
-      "description": "Capital expenditures",
-      "totalAvailable": 1467223481,
-      "used": 835175814,
-      "lapsed": 632047667
-    },
-    {
-      "id": "fisheries-and-oceans-2022-department-of-fisheries-and-oceans-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 184957222,
-      "used": 182638649,
-      "lapsed": 2318573
+      "value": 3.758867
     }
   ],
   "transferPayments": [

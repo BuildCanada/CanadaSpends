@@ -3,9 +3,9 @@
   "slug": "justice",
   "financialYearEnding": 2020,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 2.287892,
-  "percentageOfFederal": 0.6125,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 1.899834,
+  "percentageOfFederal": 0.5086,
   "historicalShare": [
     {
       "year": 2014,
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 0.7516
+      "percentage": 0.5289
     },
     {
       "year": 2018,
-      "percentage": 0.6252
+      "percentage": 0.5164
     },
     {
       "year": 2019,
-      "percentage": 0.6386
+      "percentage": 0.5304
     },
     {
       "year": 2020,
-      "percentage": 0.6125
+      "percentage": 0.5086
     },
     {
       "year": 2021,
-      "percentage": 0.364
+      "percentage": 0.3017
     },
     {
       "year": 2022,
-      "percentage": 0.4988
+      "percentage": 0.4122
     },
     {
       "year": 2023,
-      "percentage": 0.5611
+      "percentage": 0.4606
     },
     {
       "year": 2024,
-      "percentage": 0.5695
+      "percentage": 0.4694
     },
     {
       "year": 2025,
-      "percentage": 0.6056
+      "percentage": 0.5085
     }
   ],
   "miniSankey": {
@@ -74,7 +74,70 @@
             {
               "id": "justice-2020-department-of-justice-obj-10",
               "name": "Transfer payments",
-              "amount": 0.440049
+              "children": [
+                {
+                  "id": "justice-2020-tp-0009",
+                  "name": "Contributions to the provinces and territories in support of the youth justice services",
+                  "amount": 0.141534
+                },
+                {
+                  "id": "justice-2020-tp-0011",
+                  "name": "Contributions to the provinces to assist in the operation of criminal legal aid",
+                  "amount": 0.127185
+                },
+                {
+                  "id": "justice-2020-tp-0012",
+                  "name": "Contributions to the provinces to assist in the operation of immigration and refugee legal aid",
+                  "amount": 0.054427
+                },
+                {
+                  "id": "justice-2020-tp-0002",
+                  "name": "Contributions from the Victims Fund",
+                  "amount": 0.026231
+                },
+                {
+                  "id": "justice-2020-tp-0003",
+                  "name": "Contributions in support of the Canadian Family Justice Fund",
+                  "amount": 0.016028
+                },
+                {
+                  "id": "justice-2020-tp-0015",
+                  "name": "Contributions under the Indigenous Justice Program Fund",
+                  "amount": 0.012992
+                },
+                {
+                  "id": "justice-2020-tp-0010",
+                  "name": "Contributions to the provinces and territories in support of the youth justice services—Intensive Rehabilitative Custody and Supervision Program",
+                  "amount": 0.011036
+                },
+                {
+                  "id": "justice-2020-tp-0014",
+                  "name": "Contributions under the Access to Justice in Both Official Languages Support Fund",
+                  "amount": 0.008953
+                },
+                {
+                  "id": "justice-2020-tp-0013",
+                  "name": "Contributions to the provinces under the Indigenous Courtwork Program",
+                  "amount": 0.007981
+                },
+                {
+                  "id": "justice-2020-tp-0000",
+                  "name": "Contributions for Access to Justice Services to the Territories (being Legal Aid, Indigenous Courtwork and Public Legal Education and Information Services)",
+                  "amount": 0.007079
+                },
+                {
+                  "id": "justice-2020-tp-0016",
+                  "name": "Contributions under the Justice Partnership and Innovation Program",
+                  "amount": 0.005586
+                },
+                {
+                  "id": "justice-2020-department-of-justice-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.021017,
+                  "isAggregate": true,
+                  "count": 15
+                }
+              ]
             },
             {
               "id": "justice-2020-department-of-justice-internal-revenues",
@@ -547,17 +610,17 @@
     {
       "id": "justice-2020-entity-department-of-justice",
       "name": "Department of Justice",
-      "value": 1.157954
+      "value": 0.812721
     },
     {
       "id": "justice-2020-entity-office-of-the-commissioner-for-federal-judicial-affairs",
       "name": "Office of the Commissioner for Federal Judicial Affairs",
-      "value": 0.628098
+      "value": 0.628058
     },
     {
       "id": "justice-2020-entity-office-of-the-director-of-public-prosecutions",
       "name": "Office of the Director of Public Prosecutions",
-      "value": 0.209858
+      "value": 0.192932
     },
     {
       "id": "justice-2020-entity-courts-administration-service",
@@ -567,12 +630,12 @@
     {
       "id": "justice-2020-entity-administrative-tribunals-support-service-of-canada",
       "name": "Administrative Tribunals Support Service of Canada",
-      "value": 0.089225
+      "value": 0.065048
     },
     {
       "id": "justice-2020-entity-offices-of-the-information-and-privacy-commissioners-of-canada",
       "name": "Offices of the Information and Privacy Commissioners of Canada",
-      "value": 0.043117
+      "value": 0.042924
     },
     {
       "id": "justice-2020-entity-registrar-of-the-supreme-court-of-canada",
@@ -582,249 +645,7 @@
     {
       "id": "justice-2020-entity-canadian-human-rights-commission",
       "name": "Canadian Human Rights Commission",
-      "value": 0.02653
-    }
-  ],
-  "votes": [
-    {
-      "id": "justice-2020-administrative-tribunals-support-service-of-canada-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 95209867,
-      "used": 80436585,
-      "lapsed": 14773282
-    },
-    {
-      "id": "justice-2020-administrative-tribunals-support-service-of-canada-vote5",
-      "vote": "Vote 5",
-      "description": "Resolving Income Security Program Disputes More Quickly and Easily",
-      "totalAvailable": 88345,
-      "used": 0,
-      "lapsed": 88345
-    },
-    {
-      "id": "justice-2020-administrative-tribunals-support-service-of-canada-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 8789700,
-      "used": 8788235,
-      "lapsed": 1465
-    },
-    {
-      "id": "justice-2020-canadian-human-rights-commission-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 29952910,
-      "used": 23789978,
-      "lapsed": 6162932
-    },
-    {
-      "id": "justice-2020-canadian-human-rights-commission-vote5",
-      "vote": "Vote 5",
-      "description": "Supporting the Canadian Human Rights Commission and Access to Justice",
-      "totalAvailable": 68970,
-      "used": 0,
-      "lapsed": 68970
-    },
-    {
-      "id": "justice-2020-canadian-human-rights-commission-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 2740044,
-      "used": 2740043,
-      "lapsed": 1
-    },
-    {
-      "id": "justice-2020-courts-administration-service-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 90552799,
-      "used": 87245347,
-      "lapsed": 3307452
-    },
-    {
-      "id": "justice-2020-courts-administration-service-vote10",
-      "vote": "Vote 10",
-      "description": "Supporting the Delivery of Justice through the Courts Administration Service",
-      "totalAvailable": 880000,
-      "used": 0,
-      "lapsed": 880000
-    },
-    {
-      "id": "justice-2020-courts-administration-service-vote5",
-      "vote": "Vote 5",
-      "description": "Enhancing the Integrity of Canada's Borders and Asylum System",
-      "totalAvailable": 176175,
-      "used": 0,
-      "lapsed": 176175
-    },
-    {
-      "id": "justice-2020-courts-administration-service-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 8115015,
-      "used": 8081406,
-      "lapsed": 33609
-    },
-    {
-      "id": "justice-2020-department-of-justice-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 651257486,
-      "used": 640655500,
-      "lapsed": 10601986
-    },
-    {
-      "id": "justice-2020-department-of-justice-vote10",
-      "vote": "Vote 10",
-      "description": "Bringing Innovation to Regulations",
-      "totalAvailable": 2677915,
-      "used": 0,
-      "lapsed": 2677915
-    },
-    {
-      "id": "justice-2020-department-of-justice-vote15",
-      "vote": "Vote 15",
-      "description": "Enhancing the Integrity of Canada's Borders and Asylum System",
-      "totalAvailable": 3049,
-      "used": 0,
-      "lapsed": 3049
-    },
-    {
-      "id": "justice-2020-department-of-justice-vote5",
-      "vote": "Vote 5",
-      "description": "Grants and contributions",
-      "totalAvailable": 451303800,
-      "used": 440049591,
-      "lapsed": 11254209
-    },
-    {
-      "id": "justice-2020-department-of-justice-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 77281414,
-      "used": 77249045,
-      "lapsed": 32369
-    },
-    {
-      "id": "justice-2020-office-of-the-commissioner-for-federal-judicial-affairs-vote1",
-      "vote": "Vote 1",
-      "description": "Commissioner for Federal Judicial Affairs—Operating expenditures",
-      "totalAvailable": 10991917,
-      "used": 10029767,
-      "lapsed": 962150
-    },
-    {
-      "id": "justice-2020-office-of-the-commissioner-for-federal-judicial-affairs-vote10",
-      "vote": "Vote 10",
-      "description": "Enhancing the Integrity of Canada's Borders and Asylum System",
-      "totalAvailable": 1168987,
-      "used": 0,
-      "lapsed": 1168987
-    },
-    {
-      "id": "justice-2020-office-of-the-commissioner-for-federal-judicial-affairs-vote15",
-      "vote": "Vote 15",
-      "description": "Supporting Judicial Advisory Committee Members",
-      "totalAvailable": 24684,
-      "used": 0,
-      "lapsed": 24684
-    },
-    {
-      "id": "justice-2020-office-of-the-commissioner-for-federal-judicial-affairs-vote5",
-      "vote": "Vote 5",
-      "description": "Canadian Judicial Council—Operating expenditures",
-      "totalAvailable": 4092490,
-      "used": 2550717,
-      "lapsed": 1541773
-    },
-    {
-      "id": "justice-2020-office-of-the-commissioner-for-federal-judicial-affairs-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 615517700,
-      "used": 615517700,
-      "lapsed": 0
-    },
-    {
-      "id": "justice-2020-office-of-the-director-of-public-prosecutions-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 207943803,
-      "used": 193063664,
-      "lapsed": 14880139
-    },
-    {
-      "id": "justice-2020-office-of-the-director-of-public-prosecutions-vote5",
-      "vote": "Vote 5",
-      "description": "Supporting the Public Prosecution Service of Canada",
-      "totalAvailable": 1200000,
-      "used": 0,
-      "lapsed": 1200000
-    },
-    {
-      "id": "justice-2020-office-of-the-director-of-public-prosecutions-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 16794495,
-      "used": 16794495,
-      "lapsed": 0
-    },
-    {
-      "id": "justice-2020-offices-of-the-information-and-privacy-commissioners-of-canada-vote1",
-      "vote": "Vote 1",
-      "description": "Office of the Information Commissioner of Canada—Program expenditures",
-      "totalAvailable": 14705641,
-      "used": 13146702,
-      "lapsed": 1558939
-    },
-    {
-      "id": "justice-2020-offices-of-the-information-and-privacy-commissioners-of-canada-vote10",
-      "vote": "Vote 10",
-      "description": "Support for Access to Information—Office of the Information Commissioner of Canada",
-      "totalAvailable": 459147,
-      "used": 0,
-      "lapsed": 459147
-    },
-    {
-      "id": "justice-2020-offices-of-the-information-and-privacy-commissioners-of-canada-vote15",
-      "vote": "Vote 15",
-      "description": "Protecting the Privacy of Canadians—Office of the Privacy Commissioner of Canada",
-      "totalAvailable": 1050803,
-      "used": 0,
-      "lapsed": 1050803
-    },
-    {
-      "id": "justice-2020-offices-of-the-information-and-privacy-commissioners-of-canada-vote5",
-      "vote": "Vote 5",
-      "description": "Office of the Privacy Commissioner of Canada—Program expenditures",
-      "totalAvailable": 27791920,
-      "used": 26141426,
-      "lapsed": 1650494
-    },
-    {
-      "id": "justice-2020-offices-of-the-information-and-privacy-commissioners-of-canada-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 3852712,
-      "used": 3829341,
-      "lapsed": 23371
-    },
-    {
-      "id": "justice-2020-registrar-of-the-supreme-court-of-canada-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 27743891,
-      "used": 26250421,
-      "lapsed": 1493470
-    },
-    {
-      "id": "justice-2020-registrar-of-the-supreme-court-of-canada-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 11531671,
-      "used": 11531594,
-      "lapsed": 77
+      "value": 0.025042
     }
   ],
   "transferPayments": [

@@ -3,37 +3,37 @@
   "slug": "immigration-refugees-and-citizenship",
   "financialYearEnding": 2019,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 2.571603,
-  "percentageOfFederal": 0.7428,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 2.562218,
+  "percentageOfFederal": 0.7401,
   "historicalShare": [
     {
       "year": 2014,
-      "percentage": 0.58
+      "percentage": 0.8769
     },
     {
       "year": 2015,
-      "percentage": 0.5996
+      "percentage": 0.9916
     },
     {
       "year": 2016,
-      "percentage": 0.6233
+      "percentage": 0.9778
     },
     {
       "year": 2017,
-      "percentage": 0.6353
+      "percentage": 0.5537
     },
     {
       "year": 2018,
-      "percentage": 0.6722
+      "percentage": 0.6206
     },
     {
       "year": 2019,
-      "percentage": 0.7428
+      "percentage": 0.7401
     },
     {
       "year": 2020,
-      "percentage": 0.8754
+      "percentage": 0.873
     },
     {
       "year": 2021,
@@ -41,19 +41,19 @@
     },
     {
       "year": 2022,
-      "percentage": 0.7394
+      "percentage": 0.7378
     },
     {
       "year": 2023,
-      "percentage": 1.1391
+      "percentage": 1.1373
     },
     {
       "year": 2024,
-      "percentage": 1.2174
+      "percentage": 1.215
     },
     {
       "year": 2025,
-      "percentage": 1.256
+      "percentage": 1.2537
     }
   ],
   "miniSankey": {
@@ -69,7 +69,38 @@
             {
               "id": "immigration-refugees-and-citizenship-2019-department-of-citizenship-and-immigration-obj-10",
               "name": "Transfer payments",
-              "amount": 1.437039
+              "children": [
+                {
+                  "id": "immigration-refugees-and-citizenship-2019-tp-0003",
+                  "name": "Settlement Program",
+                  "amount": 0.758117
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-2019-tp-0005",
+                  "name": "Grant for the Canada-Quebec Accord on Immigration",
+                  "amount": 0.559449
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-2019-tp-0002",
+                  "name": "Resettlement Assistance",
+                  "amount": 0.115731
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-2019-tp-0001",
+                  "name": "International Organization for Migration",
+                  "amount": 0.002176
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-2019-tp-0004",
+                  "name": "Grant for Migration Policy Development",
+                  "amount": 0.000997
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-2019-tp-0000",
+                  "name": "Global Assistance to Irregular Migrants",
+                  "amount": 0.000569
+                }
+              ]
             },
             {
               "id": "immigration-refugees-and-citizenship-2019-department-of-citizenship-and-immigration-obj-1",
@@ -186,70 +217,12 @@
     {
       "id": "immigration-refugees-and-citizenship-2019-entity-department-of-citizenship-and-immigration",
       "name": "Department of Citizenship and Immigration",
-      "value": 2.413244
+      "value": 2.403859
     },
     {
       "id": "immigration-refugees-and-citizenship-2019-entity-immigration-and-refugee-board",
       "name": "Immigration and Refugee Board",
       "value": 0.158359
-    }
-  ],
-  "votes": [
-    {
-      "id": "immigration-refugees-and-citizenship-2019-department-of-citizenship-and-immigration-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 936335065,
-      "used": 888806620,
-      "lapsed": 47528445
-    },
-    {
-      "id": "immigration-refugees-and-citizenship-2019-department-of-citizenship-and-immigration-vote10",
-      "vote": "Vote 10",
-      "description": "Grants and contributions",
-      "totalAvailable": 1588541613,
-      "used": 1437038724,
-      "lapsed": 151502889
-    },
-    {
-      "id": "immigration-refugees-and-citizenship-2019-department-of-citizenship-and-immigration-vote15",
-      "vote": "Vote 15",
-      "description": "Debt write-off—Immigration loans",
-      "totalAvailable": 267245,
-      "used": 262273,
-      "lapsed": 4972
-    },
-    {
-      "id": "immigration-refugees-and-citizenship-2019-department-of-citizenship-and-immigration-vote5",
-      "vote": "Vote 5",
-      "description": "Capital expenditures",
-      "totalAvailable": 31060360,
-      "used": 21317943,
-      "lapsed": 9742417
-    },
-    {
-      "id": "immigration-refugees-and-citizenship-2019-department-of-citizenship-and-immigration-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 1338892681,
-      "used": 65818670,
-      "lapsed": 1273074011
-    },
-    {
-      "id": "immigration-refugees-and-citizenship-2019-immigration-and-refugee-board-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 157714983,
-      "used": 142999378,
-      "lapsed": 14715605
-    },
-    {
-      "id": "immigration-refugees-and-citizenship-2019-immigration-and-refugee-board-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 15359257,
-      "used": 15359257,
-      "lapsed": 0
     }
   ],
   "transferPayments": [

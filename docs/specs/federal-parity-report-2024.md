@@ -51,24 +51,24 @@ Current site total = first StatCard on each hardcoded page (or MiniSankey total)
 
 ## Department MiniSankey & entity breakdowns
 
-The hardcoded MiniSankey leaves were curated program-level groupings; the generated MiniSankey is a Vol II top-N vote/allotment truncation. Leaf sets differ **by construction** (reason `basis`), so only totals and structure are compared here.
+The hardcoded MiniSankey leaves were curated program-level groupings; the generated MiniSankey is a department → organization → standard-object breakdown, net of internal and external revenues, with the Transfer payments object fanned into its named programs. The department stat card, entity list, and chart are all this one net figure (authorities/votes were dropped from department pages). Leaf sets differ **by construction** (reason `basis`), so only totals and structure are compared here.
 
-| Department                               | Cur mini total $B | Gen dept total $B | Cur leaves | Gen leaves | Cur entities | Gen entities | Reason                                                    |
-| ---------------------------------------- | ----------------: | ----------------: | ---------: | ---------: | -----------: | -----------: | --------------------------------------------------------- |
-| canada-revenue-agency                    |             16.80 |             17.29 |         11 |          1 |            — |            1 | basis — Vol II votes/allotments vs curated program leaves |
-| department-of-finance                    |            136.11 |            136.11 |          7 |          5 |            5 |            5 | basis — Vol II votes/allotments vs curated program leaves |
-| employment-and-social-development-canada |             94.48 |             97.28 |         12 |          3 |            3 |            3 | basis — Vol II votes/allotments vs curated program leaves |
-| global-affairs-canada                    |             19.20 |             19.26 |         14 |          6 |            6 |            6 | basis — Vol II votes/allotments vs curated program leaves |
-| health-canada                            |             13.64 |             13.96 |         13 |          5 |            5 |            5 | basis — Vol II votes/allotments vs curated program leaves |
-| housing-infrastructure-communities       |             14.50 |             14.56 |         12 |          4 |            4 |            4 | basis — Vol II votes/allotments vs curated program leaves |
-| immigration-refugees-and-citizenship     |              6.34 |              6.35 |         14 |          2 |            2 |            2 | basis — Vol II votes/allotments vs curated program leaves |
-| indigenous-services-and-northern-affairs |             63.01 |             63.03 |         13 |          4 |            4 |            4 | basis — Vol II votes/allotments vs curated program leaves |
-| innovation-science-and-industry          |             10.22 |             10.01 |         14 |          9 |           10 |            9 | basis — Vol II votes/allotments vs curated program leaves |
-| national-defence                         |             34.49 |             34.85 |         14 |          4 |            4 |            4 | basis — Vol II votes/allotments vs curated program leaves |
-| public-safety-canada                     |             13.91 |             16.09 |         14 |         13 |           14 |           13 | basis — Vol II votes/allotments vs curated program leaves |
-| public-services-and-procurement-canada   |              8.29 |             10.68 |         14 |          4 |            4 |            4 | basis — Vol II votes/allotments vs curated program leaves |
-| transport-canada                         |              5.10 |              5.20 |         14 |          7 |            7 |            7 | basis — Vol II votes/allotments vs curated program leaves |
-| veterans-affairs                         |              6.07 |              6.07 |         12 |          2 |            2 |            2 | basis — Vol II votes/allotments vs curated program leaves |
+| Department                               | Cur mini total $B | Gen dept total $B | Cur leaves | Gen leaves | Cur entities | Gen entities | Reason                                                                 |
+| ---------------------------------------- | ----------------: | ----------------: | ---------: | ---------: | -----------: | -----------: | ---------------------------------------------------------------------- |
+| canada-revenue-agency                    |             16.80 |             16.80 |         11 |          1 |            — |            1 | basis — Vol II net standard-object breakdown vs curated program leaves |
+| department-of-finance                    |            136.11 |            136.11 |          7 |          5 |            5 |            5 | basis — Vol II net standard-object breakdown vs curated program leaves |
+| employment-and-social-development-canada |             94.48 |             94.48 |         12 |          3 |            3 |            3 | basis — Vol II net standard-object breakdown vs curated program leaves |
+| global-affairs-canada                    |             19.20 |             19.20 |         14 |          6 |            6 |            6 | basis — Vol II net standard-object breakdown vs curated program leaves |
+| health-canada                            |             13.64 |             13.71 |         13 |          5 |            5 |            5 | basis — Vol II net standard-object breakdown vs curated program leaves |
+| housing-infrastructure-communities       |             14.50 |             14.50 |         12 |          4 |            4 |            4 | basis — Vol II net standard-object breakdown vs curated program leaves |
+| immigration-refugees-and-citizenship     |              6.34 |              6.34 |         14 |          2 |            2 |            2 | basis — Vol II net standard-object breakdown vs curated program leaves |
+| indigenous-services-and-northern-affairs |             63.01 |             62.94 |         13 |          4 |            4 |            4 | basis — Vol II net standard-object breakdown vs curated program leaves |
+| innovation-science-and-industry          |             10.22 |              9.76 |         14 |          9 |           10 |            9 | basis — Vol II net standard-object breakdown vs curated program leaves |
+| national-defence                         |             34.49 |             34.49 |         14 |          4 |            4 |            4 | basis — Vol II net standard-object breakdown vs curated program leaves |
+| public-safety-canada                     |             13.91 |             13.91 |         14 |         13 |           14 |           13 | basis — Vol II net standard-object breakdown vs curated program leaves |
+| public-services-and-procurement-canada   |              8.29 |              8.29 |         14 |          4 |            4 |            4 | basis — Vol II net standard-object breakdown vs curated program leaves |
+| transport-canada                         |              5.10 |              5.10 |         14 |          7 |            7 |            7 | basis — Vol II net standard-object breakdown vs curated program leaves |
+| veterans-affairs                         |              6.07 |              6.07 |         12 |          2 |            2 |            2 | basis — Vol II net standard-object breakdown vs curated program leaves |
 
 ## Historical department-share charts
 

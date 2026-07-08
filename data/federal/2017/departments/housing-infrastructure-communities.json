@@ -3,7 +3,7 @@
   "slug": "housing-infrastructure-communities",
   "financialYearEnding": 2017,
   "reportedAs": "Infrastructure and Communities",
-  "basis": "vol2_appropriations",
+  "basis": "vol2_standard_object_net",
   "totalSpending": 3.835403,
   "percentageOfFederal": 1.2379,
   "historicalShare": [
@@ -45,11 +45,11 @@
     },
     {
       "year": 2024,
-      "percentage": 2.7917
+      "percentage": 2.78
     },
     {
       "year": 2025,
-      "percentage": 2.6621
+      "percentage": 2.6578
     }
   ],
   "miniSankey": {
@@ -65,7 +65,70 @@
             {
               "id": "housing-infrastructure-communities-2017-office-of-infrastructure-of-canada-obj-10",
               "name": "Transfer payments",
-              "amount": 3.119709
+              "children": [
+                {
+                  "id": "housing-infrastructure-communities-2017-tp-0016",
+                  "name": "Gas Tax Fund",
+                  "amount": 2.071933
+                },
+                {
+                  "id": "housing-infrastructure-communities-2017-tp-0006",
+                  "name": "Contributions under the Building Canada Fund Major Infrastructure Component",
+                  "amount": 0.520695
+                },
+                {
+                  "id": "housing-infrastructure-communities-2017-tp-0013",
+                  "name": "New Building Canada Fund—Provincial-Territorial Infrastructure Component—National and Regional Projects",
+                  "amount": 0.119971
+                },
+                {
+                  "id": "housing-infrastructure-communities-2017-tp-0014",
+                  "name": "New Building Canada Fund—Provincial-Territorial Infrastructure Component—Small Communities Fund",
+                  "amount": 0.113769
+                },
+                {
+                  "id": "housing-infrastructure-communities-2017-tp-0010",
+                  "name": "Inuvik to Tuktoyaktuk Highway Program",
+                  "amount": 0.057
+                },
+                {
+                  "id": "housing-infrastructure-communities-2017-tp-0008",
+                  "name": "Contributions under the Canada Strategic Infrastructure Fund",
+                  "amount": 0.054045
+                },
+                {
+                  "id": "housing-infrastructure-communities-2017-tp-0009",
+                  "name": "Contributions under the Green Infrastructure Fund",
+                  "amount": 0.044958
+                },
+                {
+                  "id": "housing-infrastructure-communities-2017-tp-0005",
+                  "name": "Contributions under the Building Canada Fund Communities Component",
+                  "amount": 0.042627
+                },
+                {
+                  "id": "housing-infrastructure-communities-2017-tp-0015",
+                  "name": "Public Transit Infrastructure Fund",
+                  "amount": 0.037169
+                },
+                {
+                  "id": "housing-infrastructure-communities-2017-tp-0003",
+                  "name": "Contributions for the Gas Tax Fund",
+                  "amount": 0.030155
+                },
+                {
+                  "id": "housing-infrastructure-communities-2017-tp-0012",
+                  "name": "New Building Canada Fund—National Infrastructure Component",
+                  "amount": 0.01538
+                },
+                {
+                  "id": "housing-infrastructure-communities-2017-office-of-infrastructure-of-canada-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.012007,
+                  "isAggregate": true,
+                  "count": 5
+                }
+              ]
             },
             {
               "id": "housing-infrastructure-communities-2017-office-of-infrastructure-of-canada-obj-1",
@@ -157,19 +220,24 @@
   },
   "entities": [
     {
-      "id": "housing-infrastructure-communities-2017-entity-infrastructure-and-communities",
-      "name": "Infrastructure and Communities",
-      "value": 3.835403
-    }
-  ],
-  "votes": [
+      "id": "housing-infrastructure-communities-2017-entity-office-of-infrastructure-of-canada",
+      "name": "Office of Infrastructure of Canada",
+      "value": 3.207766
+    },
     {
-      "id": "housing-infrastructure-communities-2017-infrastructure-and-communities-vote",
-      "vote": "All votes",
-      "description": "Total appropriations (vote-level detail not published for this edition)",
-      "totalAvailable": 6562418150,
-      "used": 3835402804,
-      "lapsed": 2727015346
+      "id": "housing-infrastructure-communities-2017-entity-windsor-detroit-bridge-authority",
+      "name": "Windsor-Detroit Bridge Authority",
+      "value": 0.3345
+    },
+    {
+      "id": "housing-infrastructure-communities-2017-entity-the-jacques-cartier-and-champlain-bridges-inc",
+      "name": "The Jacques-Cartier and Champlain Bridges Inc.",
+      "value": 0.284287
+    },
+    {
+      "id": "housing-infrastructure-communities-2017-entity-ppp-canada-inc",
+      "name": "PPP Canada Inc.",
+      "value": 0.00885
     }
   ],
   "transferPayments": [

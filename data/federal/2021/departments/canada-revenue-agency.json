@@ -3,9 +3,9 @@
   "slug": "canada-revenue-agency",
   "financialYearEnding": 2021,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 10.458187,
-  "percentageOfFederal": 1.6235,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 9.983998,
+  "percentageOfFederal": 1.5499,
   "historicalShare": [
     {
       "year": 2014,
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 1.6559
+      "percentage": 1.4169
     },
     {
       "year": 2018,
-      "percentage": 1.5334
+      "percentage": 1.4258
     },
     {
       "year": 2019,
-      "percentage": 1.5822
+      "percentage": 1.4793
     },
     {
       "year": 2020,
-      "percentage": 2.0314
+      "percentage": 1.9271
     },
     {
       "year": 2021,
-      "percentage": 1.6235
+      "percentage": 1.5499
     },
     {
       "year": 2022,
-      "percentage": 1.9724
+      "percentage": 1.8843
     },
     {
       "year": 2023,
-      "percentage": 2.805
+      "percentage": 2.7138
     },
     {
       "year": 2024,
-      "percentage": 3.3167
+      "percentage": 3.2223
     },
     {
       "year": 2025,
-      "percentage": 4.1413
+      "percentage": 4.0525
     }
   ],
   "miniSankey": {
@@ -69,7 +69,23 @@
             {
               "id": "canada-revenue-agency-2021-canada-revenue-agency-obj-10",
               "name": "Transfer payments",
-              "amount": 4.947247
+              "children": [
+                {
+                  "id": "canada-revenue-agency-2021-tp-0002",
+                  "name": "Distribution of fuel charge (Climate Action Incentive Payment) under section 165 of the Greenhouse Gas Pollution Pricing Act",
+                  "amount": 4.546974
+                },
+                {
+                  "id": "canada-revenue-agency-2021-tp-0000",
+                  "name": "Children's Special Allowance payments (Children's Special Allowance Act)",
+                  "amount": 0.381822
+                },
+                {
+                  "id": "canada-revenue-agency-2021-tp-0001",
+                  "name": "Distribution of fuel and excess emission charges (to provinces and territories) under sections 165 and 188 of the Greenhouse Gas Pollution Pricing Act",
+                  "amount": 0.018451
+                }
+              ]
             },
             {
               "id": "canada-revenue-agency-2021-canada-revenue-agency-obj-1",
@@ -130,33 +146,7 @@
     {
       "id": "canada-revenue-agency-2021-entity-canada-revenue-agency",
       "name": "Canada Revenue Agency",
-      "value": 10.458187
-    }
-  ],
-  "votes": [
-    {
-      "id": "canada-revenue-agency-2021-canada-revenue-agency-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures, contributions and recoverable expenditures in relation to the application of the Canada Pension Plan and the Employment Insurance Act",
-      "totalAvailable": 4853770585,
-      "used": 4378794909,
-      "lapsed": 474975676
-    },
-    {
-      "id": "canada-revenue-agency-2021-canada-revenue-agency-vote5",
-      "vote": "Vote 5",
-      "description": "Capital expenditures and recoverable expenditures in relation to the application of the Canada Pension Plan and the Employment Insurance Act",
-      "totalAvailable": 89114115,
-      "used": 76464375,
-      "lapsed": 12649740
-    },
-    {
-      "id": "canada-revenue-agency-2021-canada-revenue-agency-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 6002927402,
-      "used": 6002927402,
-      "lapsed": 0
+      "value": 9.983998
     }
   ],
   "transferPayments": [

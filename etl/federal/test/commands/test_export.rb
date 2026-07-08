@@ -220,19 +220,80 @@ class TestExport < Minitest::Test
                     'host 3.6 total split across host + absorbed slug'
   end
 
+  # Department figures are now on the net standard-object basis (drop-authorities
+  # spec §1): no votes[] anywhere, basis vol2_standard_object_net, and the stat
+  # card == the entity-list sum == the miniSankey leaf sum are ONE number.
   def test_department_shapes_and_units
     @command.call(['--year', '2024'])
     dept = JSON.parse(File.read(File.join(@out, '2024', 'departments', 'national-defence.json')))
 
-    assert_equal 'vol2_appropriations', dept['basis']
+    assert_equal 'vol2_standard_object_net', dept['basis']
     assert_equal 'dollars_cad', dept['lineItemsUnits']
-    assert dept['votes'].first['used'].is_a?(Integer), 'votes in whole dollars'
+    refute dept.key?('votes'), 'votes[] removed from the department contract'
     assert dept['transferPayments'].all? { |tp| tp['id'] }, 'transfer payments carry ids'
-    # Vote label/description split survives the non-breaking-space separator.
-    assert dept['votes'].any? { |v| v['vote'] =~ /\AVote \d+\z/ && !v['description'].empty? },
-           'at least one vote has a clean "Vote N" label + non-empty description'
+
+    # DND net total ≈ 34.49B (gross 34.85 less internal/external revenues).
+    assert_in_delta 34.494, dept['totalSpending'], 0.01
+    assert_in_delta dept['totalSpending'], dept['entities'].sum { |e| e['value'] }, 0.001,
+                    'stat card == entity list sum'
+    assert_in_delta dept['totalSpending'], leaf_sum(dept['miniSankey']['spending_data']), 0.001,
+                    'stat card == miniSankey leaf sum'
     # historicalShare is expressed in percent, not fraction
     assert(dept['historicalShare'].all? { |p| p['percentage'] > 0.1 })
+  end
+
+  # PSPC is the spec's headline example: its stat card was $10.68B on the old
+  # authorities basis and is $8.29B on the net standard-object basis, tying the
+  # card to the chart (drop-authorities spec §1 / acceptance #1).
+  def test_pspc_card_ties_to_the_net_standard_object_chart
+    @command.call(['--year', '2024'])
+    dept = JSON.parse(File.read(File.join(@out, '2024', 'departments', 'public-services-and-procurement-canada.json')))
+
+    assert_equal 'vol2_standard_object_net', dept['basis']
+    assert_in_delta 8.285, dept['totalSpending'], 0.01
+    assert_in_delta dept['totalSpending'], leaf_sum(dept['miniSankey']['spending_data']), 0.001
+    assert_in_delta dept['totalSpending'], dept['entities'].sum { |e| e['value'] }, 0.001
+  end
+
+  # Bulk identity (drop-authorities acceptance #1): for EVERY department-year
+  # the stat card == entity-list sum == miniSankey leaf sum.
+  def test_every_department_year_card_equals_chart_equals_entities
+    assert_equal 0, @command.call(['--all-years'])
+    index = JSON.parse(File.read(File.join(@out, 'index.json')))
+
+    checked = 0
+    index['years'].each do |year|
+      Dir.glob(File.join(@out, year.to_s, 'departments', '*.json')).each do |path|
+        next if File.basename(path).include?('.prose.')
+
+        dept = JSON.parse(File.read(path))
+        card = dept['totalSpending']
+        entities = dept['entities'].sum { |e| e['value'] }
+        chart = leaf_sum(dept['miniSankey']['spending_data'])
+        assert_in_delta card, entities, 0.001, "#{year}/#{dept['slug']} card==entities"
+        assert_in_delta card, chart, 0.001, "#{year}/#{dept['slug']} card==chart"
+        assert_equal 'vol2_standard_object_net', dept['basis'], "#{year}/#{dept['slug']} basis"
+        refute dept.key?('votes'), "#{year}/#{dept['slug']} has no votes[]"
+        checked += 1
+      end
+    end
+    assert_operator checked, :>, 250, 'exercised every dept-year across all 12 years'
+  end
+
+  # historicalShare is computed from the net standard-object (meso) basis across
+  # every exported meso year (drop-authorities spec §1), not the retired
+  # allotment totals.
+  def test_historical_share_from_meso_all_years
+    assert_equal 0, @command.call(['--all-years'])
+    dept = JSON.parse(File.read(File.join(@out, '2024', 'departments', 'national-defence.json')))
+    years = dept['historicalShare'].map { |h| h['year'] }
+
+    assert_equal (2014..2025).to_a, years, 'a point for every meso year'
+    # 2024 point == that year's net card ÷ Vol I total.
+    summary = JSON.parse(File.read(File.join(@out, '2024', 'summary.json')))
+    point = dept['historicalShare'].find { |h| h['year'] == 2024 }
+    assert_in_delta (dept['totalSpending'] / summary['totalSpending'] * 100),
+                    point['percentage'], 0.01
   end
 
   # miniSankey is the standard-object breakdown (spec §B, acceptance #1):
@@ -263,6 +324,58 @@ class TestExport < Minitest::Test
     refute(leaves.any? { |l| l['name'] =~ /\AVote \d+\z/ }, 'no vote-named leaves remain')
   end
 
+  # Transfer-program fanout (drop-authorities spec §2, acceptance #2): the DND
+  # FY2024 Transfer payments object (~$1.1B) splits into its named contribution
+  # programs (NATO programs, etc.) + "Other transfer programs", summing EXACTLY
+  # to the object's net amount.
+  def test_mini_sankey_fans_transfer_object_into_named_programs
+    @command.call(['--year', '2024'])
+    dept = JSON.parse(File.read(File.join(@out, '2024', 'departments', 'national-defence.json')))
+    dnd = mini_org(dept, 'Department of National Defence')
+    transfer = dnd['children'].find { |l| l['name'] == 'Transfer payments' }
+
+    assert transfer['children'], 'transfer object fans out into program children'
+    programs = transfer['children']
+    names = programs.map { |p| p['name'] }
+    assert(names.any? { |n| n =~ /NATO/ }, 'named NATO contribution programs visible')
+    assert(names.include?('Other transfer programs'), 'truncated tail rolls into Other transfer programs')
+
+    # Program ids reuse the transferPayments ids so existing French resolves.
+    reused = programs.map { |p| p['id'] }.grep(/-tp-\d{4}\z/)
+    tp_ids = dept['transferPayments'].map { |t| t['id'] }
+    assert(reused.all? { |id| tp_ids.include?(id) }, 'program leaf ids are transferPayments ids')
+
+    # Exact sum: Σ program children == the object's net amount (~$1.125B).
+    parent_amount = 1.125459
+    assert_in_delta parent_amount, programs.sum { |p| p['amount'] }, 1e-6,
+                    'program children sum exactly to the transfer object amount'
+    refute transfer.key?('amount'), 'the fanned-out transfer node carries no amount (leaves only)'
+    assert(programs.none? { |p| p['amount'].zero? }, 'zero programs dropped')
+  end
+
+  # The ≥90% attachment rule (drop-authorities spec §2): when no single
+  # organization holds ≥90% of a portfolio's transfer-payments object, the
+  # object stays unsplit and the skip is logged. FY2024 Health Canada is a
+  # genuine split — its transfer payments spread across the Department, PHAC,
+  # CIHR and CFIA (top org only ~73%) — so no organization's transfer object
+  # fans out into programs.
+  def test_transfer_fanout_skips_split_portfolios_and_logs_them
+    assert_equal 0, @command.call(['--all-years'])
+    dept = JSON.parse(File.read(File.join(@out, '2024', 'departments', 'health-canada.json')))
+
+    dept['miniSankey']['spending_data']['children'].each do |org|
+      transfer = (org['children'] || []).find { |l| l['name'] == 'Transfer payments' }
+      next unless transfer
+
+      refute transfer.key?('children'),
+             "#{org['name']} transfer object must stay unsplit (portfolio below 90% dominance)"
+    end
+
+    report = File.read(@errors_path)
+    assert_match(/## Transfer-program fanout skips/, report)
+    assert_match(/\*\*health-canada\*\*: largest organization holds 73\.\d% of the transfer object \(<90%\)/, report)
+  end
+
   # Parents carry no amount (D3 double-counting contract); leaves only.
   def test_mini_sankey_parents_carry_no_amount
     @command.call(['--year', '2024'])
@@ -272,7 +385,10 @@ class TestExport < Minitest::Test
     assert_equal 'national-defence', tree['id']
     assert_no_parent_amounts(tree)
     dnd = mini_org(dept, 'Department of National Defence')
-    assert(dnd['children'].all? { |leaf| leaf.key?('amount') }, 'object/revenue leaves carry amounts')
+    # Every child is either a leaf carrying an amount, or the fanned-out
+    # Transfer payments node (a parent whose program children carry amounts).
+    assert(dnd['children'].all? { |c| c.key?('amount') ^ c.key?('children') },
+           'object/revenue leaves carry amounts; the transfer node carries children')
   end
 
   # RDA reattribution (spec §B): PacifiCan / FedDev / CanNor / etc. land in the

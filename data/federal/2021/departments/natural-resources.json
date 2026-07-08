@@ -3,57 +3,57 @@
   "slug": "natural-resources",
   "financialYearEnding": 2021,
   "reportedAs": "Natural Resources",
-  "basis": "vol2_appropriations",
-  "totalSpending": 2.597667,
-  "percentageOfFederal": 0.4033,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 2.582171,
+  "percentageOfFederal": 0.4008,
   "historicalShare": [
     {
       "year": 2014,
-      "percentage": 0.9919
+      "percentage": 0.9938
     },
     {
       "year": 2015,
-      "percentage": 0.9451
+      "percentage": 0.9463
     },
     {
       "year": 2016,
-      "percentage": 0.7115
+      "percentage": 0.7138
     },
     {
       "year": 2017,
-      "percentage": 0.7784
+      "percentage": 0.7631
     },
     {
       "year": 2018,
-      "percentage": 0.8064
+      "percentage": 0.8002
     },
     {
       "year": 2019,
-      "percentage": 0.7244
+      "percentage": 0.7191
     },
     {
       "year": 2020,
-      "percentage": 0.9611
+      "percentage": 0.9555
     },
     {
       "year": 2021,
-      "percentage": 0.4033
+      "percentage": 0.4008
     },
     {
       "year": 2022,
-      "percentage": 0.6752
+      "percentage": 0.6718
     },
     {
       "year": 2023,
-      "percentage": 0.8086
+      "percentage": 0.8049
     },
     {
       "year": 2024,
-      "percentage": 0.9804
+      "percentage": 0.9772
     },
     {
       "year": 2025,
-      "percentage": 1.1333
+      "percentage": 1.1305
     }
   ],
   "miniSankey": {
@@ -69,7 +69,70 @@
             {
               "id": "natural-resources-2021-department-of-natural-resources-obj-10",
               "name": "Transfer payments",
-              "amount": 0.718901
+              "children": [
+                {
+                  "id": "natural-resources-2021-tp-0042",
+                  "name": "Payments to the Newfoundland Offshore Petroleum Resource Revenue Fund (Canada-Newfoundland Atlantic Accord Implementation Act)",
+                  "amount": 0.210536
+                },
+                {
+                  "id": "natural-resources-2021-tp-0024",
+                  "name": "Contributions in support of ecoENERGY for Renewable Power",
+                  "amount": 0.039066
+                },
+                {
+                  "id": "natural-resources-2021-tp-0033",
+                  "name": "Energy Innovation Program",
+                  "amount": 0.036783
+                },
+                {
+                  "id": "natural-resources-2021-tp-0001",
+                  "name": "Clean Growth in Natural Resource Sectors Innovation Program",
+                  "amount": 0.035697
+                },
+                {
+                  "id": "natural-resources-2021-tp-0032",
+                  "name": "Emerging Renewable Power Program",
+                  "amount": 0.034997
+                },
+                {
+                  "id": "natural-resources-2021-tp-0000",
+                  "name": "Clean Energy for Rural and Remote Communities",
+                  "amount": 0.029784
+                },
+                {
+                  "id": "natural-resources-2021-tp-0026",
+                  "name": "Contributions in support of the Forest Innovation Program",
+                  "amount": 0.029634
+                },
+                {
+                  "id": "natural-resources-2021-tp-0010",
+                  "name": "Contributions in support of COVID-19 Safety Measures in Forest Sector Operations",
+                  "amount": 0.029182
+                },
+                {
+                  "id": "natural-resources-2021-tp-0025",
+                  "name": "Contributions in support of the Emissions Reduction Fund",
+                  "amount": 0.028408
+                },
+                {
+                  "id": "natural-resources-2021-tp-0004",
+                  "name": "Contribution in support of Investments in the Forest Industry Transformation Program",
+                  "amount": 0.020567
+                },
+                {
+                  "id": "natural-resources-2021-tp-0044",
+                  "name": "Smart Grids Programs",
+                  "amount": 0.020161
+                },
+                {
+                  "id": "natural-resources-2021-department-of-natural-resources-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.204086,
+                  "isAggregate": true,
+                  "count": 34
+                }
+              ]
             },
             {
               "id": "natural-resources-2021-department-of-natural-resources-obj-1",
@@ -286,7 +349,7 @@
     {
       "id": "natural-resources-2021-entity-department-of-natural-resources",
       "name": "Department of Natural Resources",
-      "value": 1.41733
+      "value": 1.401834
     },
     {
       "id": "natural-resources-2021-entity-atomic-energy-of-canada-limited",
@@ -307,104 +370,6 @@
       "id": "natural-resources-2021-entity-northern-pipeline-agency",
       "name": "Northern Pipeline Agency",
       "value": 0.000236
-    }
-  ],
-  "votes": [
-    {
-      "id": "natural-resources-2021-atomic-energy-of-canada-limited-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the corporation for operating and capital expenditures",
-      "totalAvailable": 1254166523,
-      "used": 935540678,
-      "lapsed": 318625845
-    },
-    {
-      "id": "natural-resources-2021-atomic-energy-of-canada-limited-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 5200000,
-      "used": 5200000,
-      "lapsed": 0
-    },
-    {
-      "id": "natural-resources-2021-canadian-energy-regulator-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 96713909,
-      "used": 88342824,
-      "lapsed": 8371085
-    },
-    {
-      "id": "natural-resources-2021-canadian-energy-regulator-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 11491103,
-      "used": 11490104,
-      "lapsed": 999
-    },
-    {
-      "id": "natural-resources-2021-canadian-nuclear-safety-commission-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 42678051,
-      "used": 34910780,
-      "lapsed": 7767271
-    },
-    {
-      "id": "natural-resources-2021-canadian-nuclear-safety-commission-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 110506346,
-      "used": 104616241,
-      "lapsed": 5890105
-    },
-    {
-      "id": "natural-resources-2021-department-of-natural-resources-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 678505544,
-      "used": 625511003,
-      "lapsed": 52994541
-    },
-    {
-      "id": "natural-resources-2021-department-of-natural-resources-vote10",
-      "vote": "Vote 10",
-      "description": "Grants and contributions",
-      "totalAvailable": 823663615,
-      "used": 472196692,
-      "lapsed": 351466923
-    },
-    {
-      "id": "natural-resources-2021-department-of-natural-resources-vote5",
-      "vote": "Vote 5",
-      "description": "Capital expenditures",
-      "totalAvailable": 16559513,
-      "used": 12558619,
-      "lapsed": 4000894
-    },
-    {
-      "id": "natural-resources-2021-department-of-natural-resources-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 314991517,
-      "used": 307064108,
-      "lapsed": 7927409
-    },
-    {
-      "id": "natural-resources-2021-northern-pipeline-agency-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 1055000,
-      "used": 228027,
-      "lapsed": 826973
-    },
-    {
-      "id": "natural-resources-2021-northern-pipeline-agency-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 8142,
-      "used": 8142,
-      "lapsed": 0
     }
   ],
   "transferPayments": [

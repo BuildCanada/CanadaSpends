@@ -79,7 +79,8 @@ class TestHarvestGlossary < Minitest::Test
     command.call([])
 
     terms = YAML.load_file(@out_path)
-    assert_empty(terms.reject { |k, _| k == 'Vote' })
+    curated = PbCli::Commands::HarvestGlossary::CURATED_TERMS
+    assert_empty(terms.reject { |k, _| curated.key?(k) })
   end
 
   def test_files_with_no_eng_fra_pairs_are_skipped_without_error

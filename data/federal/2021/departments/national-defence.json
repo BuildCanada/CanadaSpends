@@ -3,9 +3,9 @@
   "slug": "national-defence",
   "financialYearEnding": 2021,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 27.999773,
-  "percentageOfFederal": 4.3466,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 27.618866,
+  "percentageOfFederal": 4.2875,
   "historicalShare": [
     {
       "year": 2014,
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 6.4885
+      "percentage": 6.2
     },
     {
       "year": 2018,
-      "percentage": 7.2407
+      "percentage": 7.1213
     },
     {
       "year": 2019,
-      "percentage": 6.5581
+      "percentage": 6.4448
     },
     {
       "year": 2020,
-      "percentage": 6.421
+      "percentage": 6.3215
     },
     {
       "year": 2021,
-      "percentage": 4.3466
+      "percentage": 4.2875
     },
     {
       "year": 2022,
-      "percentage": 5.0214
+      "percentage": 4.9522
     },
     {
       "year": 2023,
-      "percentage": 5.8453
+      "percentage": 5.7692
     },
     {
       "year": 2024,
-      "percentage": 6.6833
+      "percentage": 6.6153
     },
     {
       "year": 2025,
-      "percentage": 6.4631
+      "percentage": 6.4001
     }
   ],
   "miniSankey": {
@@ -114,7 +114,70 @@
             {
               "id": "national-defence-2021-department-of-national-defence-obj-10",
               "name": "Transfer payments",
-              "amount": 0.264279
+              "children": [
+                {
+                  "id": "national-defence-2021-tp-0007",
+                  "name": "NATO Military Budget (NATO Programs)",
+                  "amount": 0.140001
+                },
+                {
+                  "id": "national-defence-2021-tp-0009",
+                  "name": "NATO Security Investment Program (NATO Programs)",
+                  "amount": 0.060178
+                },
+                {
+                  "id": "national-defence-2021-tp-0004",
+                  "name": "Contributions in support of the Capital Assistance Program",
+                  "amount": 0.03545
+                },
+                {
+                  "id": "national-defence-2021-tp-0005",
+                  "name": "Innovation for Defence Excellence and Security Program",
+                  "amount": 0.012144
+                },
+                {
+                  "id": "national-defence-2021-tp-0008",
+                  "name": "NATO Other Activities",
+                  "amount": 0.004143
+                },
+                {
+                  "id": "national-defence-2021-tp-0003",
+                  "name": "Contributions in Support of the Military Training and Cooperation Program",
+                  "amount": 0.002451
+                },
+                {
+                  "id": "national-defence-2021-tp-0002",
+                  "name": "Contribution to the Civil Air Search and Rescue Association",
+                  "amount": 0.0023
+                },
+                {
+                  "id": "national-defence-2021-tp-0017",
+                  "name": "Mobilizing Insights in Defence and Security Grant program",
+                  "amount": 0.002046
+                },
+                {
+                  "id": "national-defence-2021-tp-0006",
+                  "name": "Mobilizing Insights in Defence and Security Contribution Program",
+                  "amount": 0.0015
+                },
+                {
+                  "id": "national-defence-2021-tp-0011",
+                  "name": "Payments under the Supplementary Retirement Benefits Act",
+                  "amount": 0.00079
+                },
+                {
+                  "id": "national-defence-2021-tp-0015",
+                  "name": "Grants in support of the Compensation for Employers of Reservists Program",
+                  "amount": 0.000647
+                },
+                {
+                  "id": "national-defence-2021-department-of-national-defence-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.002629,
+                  "isAggregate": true,
+                  "count": 9
+                }
+              ]
             },
             {
               "name": "Other",
@@ -275,12 +338,12 @@
     {
       "id": "national-defence-2021-entity-department-of-national-defence",
       "name": "Department of National Defence",
-      "value": 27.194257
+      "value": 26.827038
     },
     {
       "id": "national-defence-2021-entity-communications-security-establishment",
       "name": "Communications Security Establishment",
-      "value": 0.793374
+      "value": 0.779686
     },
     {
       "id": "national-defence-2021-entity-military-grievances-external-review-committee",
@@ -291,112 +354,6 @@
       "id": "national-defence-2021-entity-military-police-complaints-commission",
       "name": "Military Police Complaints Commission",
       "value": 0.004947
-    }
-  ],
-  "votes": [
-    {
-      "id": "national-defence-2021-communications-security-establishment-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 764195987,
-      "used": 747476795,
-      "lapsed": 16719192
-    },
-    {
-      "id": "national-defence-2021-communications-security-establishment-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 45907987,
-      "used": 45897687,
-      "lapsed": 10300
-    },
-    {
-      "id": "national-defence-2021-department-of-national-defence-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 17580906302,
-      "used": 17206510607,
-      "lapsed": 374395695
-    },
-    {
-      "id": "national-defence-2021-department-of-national-defence-vote10",
-      "vote": "Vote 10",
-      "description": "Grants and contributions",
-      "totalAvailable": 279590903,
-      "used": 263295574,
-      "lapsed": 16295329
-    },
-    {
-      "id": "national-defence-2021-department-of-national-defence-vote15",
-      "vote": "Vote 15",
-      "description": "Payments in respect of the long-term disability and life insurance plan for members of the Canadian Forces",
-      "totalAvailable": 423388673,
-      "used": 417577865,
-      "lapsed": 5810808
-    },
-    {
-      "id": "national-defence-2021-department-of-national-defence-vote20",
-      "vote": "Vote 20",
-      "description": "Debt write-off",
-      "totalAvailable": 17188,
-      "used": 0,
-      "lapsed": 17188
-    },
-    {
-      "id": "national-defence-2021-department-of-national-defence-vote25",
-      "vote": "Vote 25",
-      "description": "Debt forgiveness",
-      "totalAvailable": 16686,
-      "used": 0,
-      "lapsed": 16686
-    },
-    {
-      "id": "national-defence-2021-department-of-national-defence-vote5",
-      "vote": "Vote 5",
-      "description": "Capital expenditures",
-      "totalAvailable": 5808835114,
-      "used": 4953763025,
-      "lapsed": 855072089
-    },
-    {
-      "id": "national-defence-2021-department-of-national-defence-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 4353552728,
-      "used": 4353110032,
-      "lapsed": 442696
-    },
-    {
-      "id": "national-defence-2021-military-grievances-external-review-committee-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 6848341,
-      "used": 6392704,
-      "lapsed": 455637
-    },
-    {
-      "id": "national-defence-2021-military-grievances-external-review-committee-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 802516,
-      "used": 802516,
-      "lapsed": 0
-    },
-    {
-      "id": "national-defence-2021-military-police-complaints-commission-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 4669696,
-      "used": 4479351,
-      "lapsed": 190345
-    },
-    {
-      "id": "national-defence-2021-military-police-complaints-commission-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 467402,
-      "used": 467324,
-      "lapsed": 78
     }
   ],
   "transferPayments": [

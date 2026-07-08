@@ -3,57 +3,57 @@
   "slug": "natural-resources",
   "financialYearEnding": 2020,
   "reportedAs": "Natural Resources",
-  "basis": "vol2_appropriations",
-  "totalSpending": 3.589809,
-  "percentageOfFederal": 0.9611,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 3.569132,
+  "percentageOfFederal": 0.9555,
   "historicalShare": [
     {
       "year": 2014,
-      "percentage": 0.9919
+      "percentage": 0.9938
     },
     {
       "year": 2015,
-      "percentage": 0.9451
+      "percentage": 0.9463
     },
     {
       "year": 2016,
-      "percentage": 0.7115
+      "percentage": 0.7138
     },
     {
       "year": 2017,
-      "percentage": 0.7784
+      "percentage": 0.7631
     },
     {
       "year": 2018,
-      "percentage": 0.8064
+      "percentage": 0.8002
     },
     {
       "year": 2019,
-      "percentage": 0.7244
+      "percentage": 0.7191
     },
     {
       "year": 2020,
-      "percentage": 0.9611
+      "percentage": 0.9555
     },
     {
       "year": 2021,
-      "percentage": 0.4033
+      "percentage": 0.4008
     },
     {
       "year": 2022,
-      "percentage": 0.6752
+      "percentage": 0.6718
     },
     {
       "year": 2023,
-      "percentage": 0.8086
+      "percentage": 0.8049
     },
     {
       "year": 2024,
-      "percentage": 0.9804
+      "percentage": 0.9772
     },
     {
       "year": 2025,
-      "percentage": 1.1333
+      "percentage": 1.1305
     }
   ],
   "miniSankey": {
@@ -69,7 +69,70 @@
             {
               "id": "natural-resources-2020-department-of-natural-resources-obj-10",
               "name": "Transfer payments",
-              "amount": 1.76856
+              "children": [
+                {
+                  "id": "natural-resources-2020-tp-0011",
+                  "name": "Contribution to the Federation of Canadian Municipalities for the Green Municipal Fund",
+                  "amount": 0.947509
+                },
+                {
+                  "id": "natural-resources-2020-tp-0038",
+                  "name": "Payments to the Newfoundland Offshore Petroleum Resource Revenue Fund (Canada-Newfoundland Atlantic Accord Implementation Act)",
+                  "amount": 0.363012
+                },
+                {
+                  "id": "natural-resources-2020-tp-0024",
+                  "name": "Contributions in support of ecoENERGY for Renewable Power",
+                  "amount": 0.068948
+                },
+                {
+                  "id": "natural-resources-2020-tp-0030",
+                  "name": "Emerging Renewable Power Program",
+                  "amount": 0.044509
+                },
+                {
+                  "id": "natural-resources-2020-tp-0001",
+                  "name": "Clean Growth in Natural Resource Sectors Innovation Program",
+                  "amount": 0.037284
+                },
+                {
+                  "id": "natural-resources-2020-tp-0000",
+                  "name": "Clean Energy for Rural and Remote Communities",
+                  "amount": 0.032404
+                },
+                {
+                  "id": "natural-resources-2020-tp-0031",
+                  "name": "Energy Innovation Program",
+                  "amount": 0.030754
+                },
+                {
+                  "id": "natural-resources-2020-tp-0025",
+                  "name": "Contributions in support of the Forest Innovation Program",
+                  "amount": 0.026415
+                },
+                {
+                  "id": "natural-resources-2020-tp-0037",
+                  "name": "Payments of the Crown Share Adjustment for Nova Scotia Offshore Petroleum Resources",
+                  "amount": 0.024797
+                },
+                {
+                  "id": "natural-resources-2020-tp-0040",
+                  "name": "Smart Grids Programs",
+                  "amount": 0.024467
+                },
+                {
+                  "id": "natural-resources-2020-tp-0029",
+                  "name": "Electric Vehicle and Alternative Fuel Infrastructure",
+                  "amount": 0.023801
+                },
+                {
+                  "id": "natural-resources-2020-department-of-natural-resources-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.14466,
+                  "isAggregate": true,
+                  "count": 33
+                }
+              ]
             },
             {
               "id": "natural-resources-2020-department-of-natural-resources-obj-1",
@@ -347,7 +410,7 @@
     {
       "id": "natural-resources-2020-entity-department-of-natural-resources",
       "name": "Department of Natural Resources",
-      "value": 2.475468
+      "value": 2.454791
     },
     {
       "id": "natural-resources-2020-entity-atomic-energy-of-canada-limited",
@@ -372,153 +435,7 @@
     {
       "id": "natural-resources-2020-entity-northern-pipeline-agency",
       "name": "Northern Pipeline Agency",
-      "value": 0.000238
-    }
-  ],
-  "votes": [
-    {
-      "id": "natural-resources-2020-atomic-energy-of-canada-limited-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the corporation for operating and capital expenditures",
-      "totalAvailable": 1197832026,
-      "used": 866040000,
-      "lapsed": 331792026
-    },
-    {
-      "id": "natural-resources-2020-atomic-energy-of-canada-limited-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 2100000,
-      "used": 2100000,
-      "lapsed": 0
-    },
-    {
-      "id": "natural-resources-2020-canadian-energy-regulator-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 66559840,
-      "used": 54584284,
-      "lapsed": 11975556
-    },
-    {
-      "id": "natural-resources-2020-canadian-energy-regulator-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 6586037,
-      "used": 6585247,
-      "lapsed": 790
-    },
-    {
-      "id": "natural-resources-2020-canadian-nuclear-safety-commission-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 42218783,
-      "used": 40926404,
-      "lapsed": 1292379
-    },
-    {
-      "id": "natural-resources-2020-canadian-nuclear-safety-commission-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 111825644,
-      "used": 107038979,
-      "lapsed": 4786665
-    },
-    {
-      "id": "natural-resources-2020-department-of-natural-resources-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 654049986,
-      "used": 630003250,
-      "lapsed": 24046736
-    },
-    {
-      "id": "natural-resources-2020-department-of-natural-resources-vote10",
-      "vote": "Vote 10",
-      "description": "Grants and contributions",
-      "totalAvailable": 522629163,
-      "used": 415597935,
-      "lapsed": 107031228
-    },
-    {
-      "id": "natural-resources-2020-department-of-natural-resources-vote15",
-      "vote": "Vote 15",
-      "description": "Encouraging Canadians to Use Zero Emission Vehicles",
-      "totalAvailable": 131402,
-      "used": 0,
-      "lapsed": 131402
-    },
-    {
-      "id": "natural-resources-2020-department-of-natural-resources-vote20",
-      "vote": "Vote 20",
-      "description": "Engaging Indigenous Communities in Major Resource Projects",
-      "totalAvailable": 717249,
-      "used": 0,
-      "lapsed": 717249
-    },
-    {
-      "id": "natural-resources-2020-department-of-natural-resources-vote25",
-      "vote": "Vote 25",
-      "description": "Ensuring Better Disaster Management Preparation and Response",
-      "totalAvailable": 3269440,
-      "used": 0,
-      "lapsed": 3269440
-    },
-    {
-      "id": "natural-resources-2020-department-of-natural-resources-vote35",
-      "vote": "Vote 35",
-      "description": "Protecting Canada's Critical Infrastructure from Cyber Threats",
-      "totalAvailable": 808900,
-      "used": 0,
-      "lapsed": 808900
-    },
-    {
-      "id": "natural-resources-2020-department-of-natural-resources-vote5",
-      "vote": "Vote 5",
-      "description": "Capital expenditures",
-      "totalAvailable": 17142879,
-      "used": 16036366,
-      "lapsed": 1106513
-    },
-    {
-      "id": "natural-resources-2020-department-of-natural-resources-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 1420119772,
-      "used": 1413830365,
-      "lapsed": 6289407
-    },
-    {
-      "id": "natural-resources-2020-national-energy-board-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 33015687,
-      "used": 33015687,
-      "lapsed": 0
-    },
-    {
-      "id": "natural-resources-2020-national-energy-board-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 3811880,
-      "used": 3811772,
-      "lapsed": 108
-    },
-    {
-      "id": "natural-resources-2020-northern-pipeline-agency-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 1055000,
-      "used": 234992,
-      "lapsed": 820008
-    },
-    {
-      "id": "natural-resources-2020-northern-pipeline-agency-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 3475,
-      "used": 3475,
-      "lapsed": 0
+      "value": 0.000239
     }
   ],
   "transferPayments": [

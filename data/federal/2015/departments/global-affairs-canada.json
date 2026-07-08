@@ -2,18 +2,18 @@
   "name": "Global Affairs",
   "slug": "global-affairs-canada",
   "financialYearEnding": 2015,
-  "reportedAs": "Foreign Affairs, Trade and Development",
-  "basis": "vol2_appropriations",
-  "totalSpending": 6.240523,
-  "percentageOfFederal": 2.2251,
+  "reportedAs": "Foreign Affairs,Trade and Development",
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 6.302989,
+  "percentageOfFederal": 2.2474,
   "historicalShare": [
     {
       "year": 2014,
-      "percentage": 2.2651
+      "percentage": 2.3161
     },
     {
       "year": 2015,
-      "percentage": 2.2251
+      "percentage": 2.2474
     },
     {
       "year": 2016,
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 2.0955
+      "percentage": 2.074
     },
     {
       "year": 2018,
-      "percentage": 2.0629
+      "percentage": 2.0519
     },
     {
       "year": 2019,
-      "percentage": 2.0981
+      "percentage": 2.0872
     },
     {
       "year": 2020,
-      "percentage": 1.9817
+      "percentage": 1.9713
     },
     {
       "year": 2021,
-      "percentage": 1.5249
+      "percentage": 1.5181
     },
     {
       "year": 2022,
-      "percentage": 1.9011
+      "percentage": 1.892
     },
     {
       "year": 2023,
-      "percentage": 2.3027
+      "percentage": 2.2922
     },
     {
       "year": 2024,
-      "percentage": 3.6934
+      "percentage": 3.6828
     },
     {
       "year": 2025,
-      "percentage": 1.8109
+      "percentage": 1.7999
     }
   ],
   "miniSankey": {
@@ -69,7 +69,70 @@
             {
               "id": "global-affairs-canada-2015-foreign-affairs-trade-and-development-department-obj-10",
               "name": "Transfer payments",
-              "amount": 3.858024
+              "children": [
+                {
+                  "id": "global-affairs-canada-2015-tp-0074",
+                  "name": "Grants for Multilateral Programming: Grants in support of development assistance, humanitarian assistance or disaster preparedness, for global operations, programs, projects, activities and appeals for the benefit of developing countries or territories or countries in transition",
+                  "amount": 1.894318
+                },
+                {
+                  "id": "global-affairs-canada-2015-tp-0011",
+                  "name": "Contributions for Bilateral Programming: Contributions in support of development assistance, contributions for cooperation with countries in transition and contributions in support of regional or country specific development assistance programs, projects and activities for the benefit of developing countries or territories or countries in transition",
+                  "amount": 0.717585
+                },
+                {
+                  "id": "global-affairs-canada-2015-tp-0049",
+                  "name": "Payments of assessed contributions to International Organizations: United Nations peacekeeping operations (US$226,697,205)",
+                  "amount": 0.271004
+                },
+                {
+                  "id": "global-affairs-canada-2015-tp-0051",
+                  "name": "Payments to International Financial Institutions — Encashment of notes",
+                  "amount": 0.211743
+                },
+                {
+                  "id": "global-affairs-canada-2015-tp-0013",
+                  "name": "Contributions for Partnership with Canadians Programming: Contributions for development assistance programs, projects and activities intended to support development for the benefit of developing countries or territories or countries in transition or to enhance the awareness, understanding, and engagement of Canadians with respect to development",
+                  "amount": 0.188712
+                },
+                {
+                  "id": "global-affairs-canada-2015-tp-0062",
+                  "name": "United Nations Organization (US$96,000,000)",
+                  "amount": 0.109756
+                },
+                {
+                  "id": "global-affairs-canada-2015-tp-0021",
+                  "name": "Global Peace and Security Fund",
+                  "amount": 0.053165
+                },
+                {
+                  "id": "global-affairs-canada-2015-tp-0079",
+                  "name": "Grants in support of the Global Peace and Security Fund and its sub‑programs",
+                  "amount": 0.029947
+                },
+                {
+                  "id": "global-affairs-canada-2015-tp-0039",
+                  "name": "North Atlantic Treaty Organization (NATO) — Civil administration (22,692,543 Euro)",
+                  "amount": 0.027896
+                },
+                {
+                  "id": "global-affairs-canada-2015-tp-0050",
+                  "name": "Payments to International Financial Institutions — Direct payments",
+                  "amount": 0.02728
+                },
+                {
+                  "id": "global-affairs-canada-2015-tp-0075",
+                  "name": "Grants for Partnership with Canadians Programming: Grants for development assistance programs, projects and activities intended to support development for the benefit of developing countries or territories or countries in transition or to enhance the awareness, understanding, and engagement of Canadians with respect to development",
+                  "amount": 0.023073
+                },
+                {
+                  "id": "global-affairs-canada-2015-foreign-affairs-trade-and-development-department-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.303545,
+                  "isAggregate": true,
+                  "count": 63
+                }
+              ]
             },
             {
               "id": "global-affairs-canada-2015-foreign-affairs-trade-and-development-department-obj-1",
@@ -235,8 +298,8 @@
   },
   "entities": [
     {
-      "id": "global-affairs-canada-2015-entity-foreign-affairs-trade-and-development",
-      "name": "Foreign Affairs, Trade and Development",
+      "id": "global-affairs-canada-2015-entity-foreign-affairs-trade-and-development-department",
+      "name": "Foreign Affairs,Trade and Development Department",
       "value": 6.005202
     },
     {
@@ -247,7 +310,7 @@
     {
       "id": "global-affairs-canada-2015-entity-national-capital-commission",
       "name": "National Capital Commission",
-      "value": 0.021696
+      "value": 0.084161
     },
     {
       "id": "global-affairs-canada-2015-entity-canadian-commercial-corporation",
@@ -263,104 +326,6 @@
       "id": "global-affairs-canada-2015-entity-export-development-canada-canada-account",
       "name": "Export Development Canada (Canada Account)",
       "value": 0.002597
-    }
-  ],
-  "votes": [
-    {
-      "id": "global-affairs-canada-2015-canadian-commercial-corporation-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the Canadian Commercial Corporation",
-      "totalAvailable": 15656400,
-      "used": 14240000,
-      "lapsed": 1416400
-    },
-    {
-      "id": "global-affairs-canada-2015-export-development-canada-canada-account-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 2597096,
-      "used": 2597096,
-      "lapsed": 0
-    },
-    {
-      "id": "global-affairs-canada-2015-foreign-affairs-trade-and-development-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 1682556107,
-      "used": 1583217891,
-      "lapsed": 99338216
-    },
-    {
-      "id": "global-affairs-canada-2015-foreign-affairs-trade-and-development-vote10",
-      "vote": "Vote 10",
-      "description": "Grants and contributions",
-      "totalAvailable": 3667074556,
-      "used": 3607883948,
-      "lapsed": 59190608
-    },
-    {
-      "id": "global-affairs-canada-2015-foreign-affairs-trade-and-development-vote12",
-      "vote": "Vote 12",
-      "description": "Pursuant to subsection 12(2) of the International Development (Financial Institutions) Assistance Act, payments to international financial institutions — Direct payments",
-      "totalAvailable": 1,
-      "used": 0,
-      "lapsed": 1
-    },
-    {
-      "id": "global-affairs-canada-2015-foreign-affairs-trade-and-development-vote15",
-      "vote": "Vote 15",
-      "description": "Payments, in respect of pension, insurance and social security programs or other arrangements for employees locally engaged outside of Canada, or in respect of the administration of such programs or arrangements",
-      "totalAvailable": 52532339,
-      "used": 52235785,
-      "lapsed": 296554
-    },
-    {
-      "id": "global-affairs-canada-2015-foreign-affairs-trade-and-development-vote5",
-      "vote": "Vote 5",
-      "description": "Capital expenditures",
-      "totalAvailable": 323433537,
-      "used": 207347828,
-      "lapsed": 116085709
-    },
-    {
-      "id": "global-affairs-canada-2015-foreign-affairs-trade-and-development-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 679409996,
-      "used": 554516187,
-      "lapsed": 124893809
-    },
-    {
-      "id": "global-affairs-canada-2015-international-development-research-centre-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the International Development Research Centre",
-      "totalAvailable": 190023783,
-      "used": 190023783,
-      "lapsed": 0
-    },
-    {
-      "id": "global-affairs-canada-2015-international-joint-commission-canadian-section-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 6714405,
-      "used": 6275459,
-      "lapsed": 438946
-    },
-    {
-      "id": "global-affairs-canada-2015-international-joint-commission-canadian-section-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 489493,
-      "used": 489493,
-      "lapsed": 0
-    },
-    {
-      "id": "global-affairs-canada-2015-national-capital-commission-vote5",
-      "vote": "Vote 5",
-      "description": "Payments to the National Capital Commission for capital expenditures",
-      "totalAvailable": 21695826,
-      "used": 21695826,
-      "lapsed": 0
     }
   ],
   "transferPayments": [

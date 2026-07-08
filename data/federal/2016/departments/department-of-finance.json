@@ -3,17 +3,17 @@
   "slug": "department-of-finance",
   "financialYearEnding": 2016,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 87.315405,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 87.315407,
   "percentageOfFederal": 29.5515,
   "historicalShare": [
     {
       "year": 2014,
-      "percentage": 30.9373
+      "percentage": 31.0335
     },
     {
       "year": 2015,
-      "percentage": 30.731
+      "percentage": 30.7352
     },
     {
       "year": 2016,
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 28.6373
+      "percentage": 28.6369
     },
     {
       "year": 2018,
-      "percentage": 27.4523
+      "percentage": 27.4522
     },
     {
       "year": 2019,
-      "percentage": 27.2779
+      "percentage": 27.2778
     },
     {
       "year": 2020,
-      "percentage": 26.5609
+      "percentage": 26.5605
     },
     {
       "year": 2021,
-      "percentage": 18.327
+      "percentage": 18.3268
     },
     {
       "year": 2022,
-      "percentage": 21.2123
+      "percentage": 21.2122
     },
     {
       "year": 2023,
-      "percentage": 24.3876
+      "percentage": 24.3874
     },
     {
       "year": 2024,
-      "percentage": 26.1038
+      "percentage": 26.1034
     },
     {
       "year": 2025,
-      "percentage": 26.2859
+      "percentage": 26.2858
     }
   ],
   "miniSankey": {
@@ -69,7 +69,70 @@
             {
               "id": "department-of-finance-2016-finance-obj-10",
               "name": "Transfer payments",
-              "amount": 64.105302
+              "children": [
+                {
+                  "id": "department-of-finance-2016-tp-0005",
+                  "name": "Canada Health Transfer",
+                  "amount": 31.667687
+                },
+                {
+                  "id": "department-of-finance-2016-tp-0008",
+                  "name": "Fiscal Equalization",
+                  "amount": 16.140054
+                },
+                {
+                  "id": "department-of-finance-2016-tp-0006",
+                  "name": "Canada Social Transfer",
+                  "amount": 12.061481
+                },
+                {
+                  "id": "department-of-finance-2016-tp-0015",
+                  "name": "Territorial Financing",
+                  "amount": 3.314356
+                },
+                {
+                  "id": "department-of-finance-2016-tp-0012",
+                  "name": "Payments to International Development Association",
+                  "amount": 0.411019
+                },
+                {
+                  "id": "department-of-finance-2016-tp-0009",
+                  "name": "Fiscal Stabilization",
+                  "amount": 0.263452
+                },
+                {
+                  "id": "department-of-finance-2016-tp-0003",
+                  "name": "Additional Fiscal Equalization to Nova Scotia",
+                  "amount": 0.082077
+                },
+                {
+                  "id": "department-of-finance-2016-tp-0010",
+                  "name": "Incentive for provinces to eliminate taxes on capital",
+                  "amount": 0.048491
+                },
+                {
+                  "id": "department-of-finance-2016-tp-0007",
+                  "name": "Debt payments on behalf of poor countries to International Organizations pursuant to section 18(1) of the Economic Recovery Act",
+                  "amount": 0.047653
+                },
+                {
+                  "id": "department-of-finance-2016-tp-0002",
+                  "name": "Additional Fiscal Equalization Offset Payment to Nova Scotia",
+                  "amount": 0.034231
+                },
+                {
+                  "id": "department-of-finance-2016-tp-0014",
+                  "name": "Statutory Subsidies",
+                  "amount": 0.031982
+                },
+                {
+                  "id": "department-of-finance-2016-finance-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.002819,
+                  "isAggregate": true,
+                  "count": 2
+                }
+              ]
             },
             {
               "id": "department-of-finance-2016-finance-obj-11",
@@ -362,17 +425,32 @@
     {
       "id": "department-of-finance-2016-entity-finance",
       "name": "Finance",
-      "value": 87.315405
-    }
-  ],
-  "votes": [
+      "value": 87.007516
+    },
     {
-      "id": "department-of-finance-2016-finance-vote",
-      "vote": "All votes",
-      "description": "Total appropriations (vote-level detail not published for this edition)",
-      "totalAvailable": 87693242129,
-      "used": 87315405128,
-      "lapsed": 377837001
+      "id": "department-of-finance-2016-entity-office-of-the-superintendent-of-financial-institutions",
+      "name": "Office of the Superintendent of Financial Institutions",
+      "value": 0.144219
+    },
+    {
+      "id": "department-of-finance-2016-entity-office-of-the-auditor-general",
+      "name": "Office of the Auditor General",
+      "value": 0.080647
+    },
+    {
+      "id": "department-of-finance-2016-entity-financial-transactions-and-reports-analysis-centre-of-canada",
+      "name": "Financial Transactions and Reports Analysis Centre of Canada",
+      "value": 0.054952
+    },
+    {
+      "id": "department-of-finance-2016-entity-financial-consumer-agency-of-canada",
+      "name": "Financial Consumer Agency of Canada",
+      "value": 0.016273
+    },
+    {
+      "id": "department-of-finance-2016-entity-ppp-canada-inc",
+      "name": "PPP Canada Inc.",
+      "value": 0.0118
     }
   ],
   "transferPayments": [

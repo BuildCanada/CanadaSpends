@@ -3,9 +3,9 @@
   "slug": "fisheries-and-oceans",
   "financialYearEnding": 2019,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 3.32412,
-  "percentageOfFederal": 0.9602,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 3.282911,
+  "percentageOfFederal": 0.9483,
   "historicalShare": [
     {
       "year": 2014,
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 0.7856
+      "percentage": 0.7594
     },
     {
       "year": 2018,
-      "percentage": 0.8065
+      "percentage": 0.7937
     },
     {
       "year": 2019,
-      "percentage": 0.9602
+      "percentage": 0.9483
     },
     {
       "year": 2020,
-      "percentage": 0.8515
+      "percentage": 0.8396
     },
     {
       "year": 2021,
-      "percentage": 0.5259
+      "percentage": 0.5196
     },
     {
       "year": 2022,
-      "percentage": 0.7545
+      "percentage": 0.7464
     },
     {
       "year": 2023,
-      "percentage": 0.7915
+      "percentage": 0.7817
     },
     {
       "year": 2024,
-      "percentage": 0.8807
+      "percentage": 0.8719
     },
     {
       "year": 2025,
-      "percentage": 0.9614
+      "percentage": 0.9529
     }
   ],
   "miniSankey": {
@@ -84,7 +84,70 @@
             {
               "id": "fisheries-and-oceans-2019-department-of-fisheries-and-oceans-obj-10",
               "name": "Transfer payments",
-              "amount": 0.185375
+              "children": [
+                {
+                  "id": "fisheries-and-oceans-2019-tp-0008",
+                  "name": "Contributions to support increased Native participation in commercial fisheries, cooperative fisheries management arrangements and consultations respecting Aboriginal fisheries agreements",
+                  "amount": 0.062681
+                },
+                {
+                  "id": "fisheries-and-oceans-2019-tp-0019",
+                  "name": "Ocean and Freshwater Science Contribution Program",
+                  "amount": 0.025137
+                },
+                {
+                  "id": "fisheries-and-oceans-2019-tp-0016",
+                  "name": "Contributions under the Aboriginal Aquatic Resource and Oceans Management Program",
+                  "amount": 0.021122
+                },
+                {
+                  "id": "fisheries-and-oceans-2019-tp-0000",
+                  "name": "Coastal Restoration Fund",
+                  "amount": 0.015319
+                },
+                {
+                  "id": "fisheries-and-oceans-2019-tp-0002",
+                  "name": "Contribution Program to support Atlantic Canada's fish and seafood sector",
+                  "amount": 0.013707
+                },
+                {
+                  "id": "fisheries-and-oceans-2019-tp-0003",
+                  "name": "Contribution agreements to permit the Canadian Coast Guard Auxiliary Associations to carry out authorized activities related to maritime Search and Rescue operations, Search and Rescue prevention and other safety related activities",
+                  "amount": 0.007456
+                },
+                {
+                  "id": "fisheries-and-oceans-2019-tp-0014",
+                  "name": "Contributions to support the Recreational Fisheries Conservation Partnerships Program",
+                  "amount": 0.007112
+                },
+                {
+                  "id": "fisheries-and-oceans-2019-tp-0023",
+                  "name": "Grant to Pacific Salmon Endowment Fund",
+                  "amount": 0.005
+                },
+                {
+                  "id": "fisheries-and-oceans-2019-tp-0011",
+                  "name": "Contributions to support the Adoption of Clean Technology within the Fisheries and Aquaculture Industry through the Fisheries and Aquaculture Clean Technology Adoption Program",
+                  "amount": 0.004085
+                },
+                {
+                  "id": "fisheries-and-oceans-2019-tp-0013",
+                  "name": "Contributions to support the Community Involvement Program",
+                  "amount": 0.003758
+                },
+                {
+                  "id": "fisheries-and-oceans-2019-tp-0015",
+                  "name": "Contributions to support the Small Craft Harbours Class Contribution Program",
+                  "amount": 0.002929
+                },
+                {
+                  "id": "fisheries-and-oceans-2019-department-of-fisheries-and-oceans-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.017069,
+                  "isAggregate": true,
+                  "count": 15
+                }
+              ]
             },
             {
               "id": "fisheries-and-oceans-2019-department-of-fisheries-and-oceans-obj-8",
@@ -137,41 +200,7 @@
     {
       "id": "fisheries-and-oceans-2019-entity-department-of-fisheries-and-oceans",
       "name": "Department of Fisheries and Oceans",
-      "value": 3.32412
-    }
-  ],
-  "votes": [
-    {
-      "id": "fisheries-and-oceans-2019-department-of-fisheries-and-oceans-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 1742069914,
-      "used": 1704182862,
-      "lapsed": 37887052
-    },
-    {
-      "id": "fisheries-and-oceans-2019-department-of-fisheries-and-oceans-vote10",
-      "vote": "Vote 10",
-      "description": "Grants and contributions",
-      "totalAvailable": 272932472,
-      "used": 185375377,
-      "lapsed": 87557095
-    },
-    {
-      "id": "fisheries-and-oceans-2019-department-of-fisheries-and-oceans-vote5",
-      "vote": "Vote 5",
-      "description": "Capital expenditures",
-      "totalAvailable": 1641325364,
-      "used": 1280686640,
-      "lapsed": 360638724
-    },
-    {
-      "id": "fisheries-and-oceans-2019-department-of-fisheries-and-oceans-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 157978800,
-      "used": 153875171,
-      "lapsed": 4103629
+      "value": 3.282911
     }
   ],
   "transferPayments": [

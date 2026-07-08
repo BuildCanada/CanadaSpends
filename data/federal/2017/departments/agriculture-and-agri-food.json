@@ -3,57 +3,57 @@
   "slug": "agriculture-and-agri-food",
   "financialYearEnding": 2017,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 2.724613,
-  "percentageOfFederal": 0.8794,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 2.59811,
+  "percentageOfFederal": 0.8386,
   "historicalShare": [
     {
       "year": 2014,
-      "percentage": 0.9064
+      "percentage": 0.9497
     },
     {
       "year": 2015,
-      "percentage": 0.7583
+      "percentage": 0.8114
     },
     {
       "year": 2016,
-      "percentage": 0.692
+      "percentage": 0.7419
     },
     {
       "year": 2017,
-      "percentage": 0.8794
+      "percentage": 0.8386
     },
     {
       "year": 2018,
-      "percentage": 0.6183
+      "percentage": 0.6015
     },
     {
       "year": 2019,
-      "percentage": 0.6385
+      "percentage": 0.6251
     },
     {
       "year": 2020,
-      "percentage": 0.7011
+      "percentage": 0.6893
     },
     {
       "year": 2021,
-      "percentage": 0.4797
+      "percentage": 0.4704
     },
     {
       "year": 2022,
-      "percentage": 0.6996
+      "percentage": 0.6915
     },
     {
       "year": 2023,
-      "percentage": 0.7625
+      "percentage": 0.7522
     },
     {
       "year": 2024,
-      "percentage": 0.8122
+      "percentage": 0.8044
     },
     {
       "year": 2025,
-      "percentage": 0.7485
+      "percentage": 0.7405
     }
   ],
   "miniSankey": {
@@ -69,7 +69,70 @@
             {
               "id": "agriculture-and-agri-food-2017-department-of-agriculture-and-agri-food-obj-10",
               "name": "Transfer payments",
-              "amount": 1.573797
+              "children": [
+                {
+                  "id": "agriculture-and-agri-food-2017-tp-0003",
+                  "name": "Contribution payments for the AgriInsurance program",
+                  "amount": 0.692013
+                },
+                {
+                  "id": "agriculture-and-agri-food-2017-tp-0006",
+                  "name": "Contribution payments for the AgriStability program",
+                  "amount": 0.307316
+                },
+                {
+                  "id": "agriculture-and-agri-food-2017-tp-0024",
+                  "name": "Grant payments for the AgriInvest program",
+                  "amount": 0.15022
+                },
+                {
+                  "id": "agriculture-and-agri-food-2017-tp-0011",
+                  "name": "Contributions for Cost-Shared Strategic Initiatives programming in Innovation under Growing Forward 2",
+                  "amount": 0.099165
+                },
+                {
+                  "id": "agriculture-and-agri-food-2017-tp-0010",
+                  "name": "Contributions for Cost-Shared Strategic Initiatives programming in Competitiveness and Market Development under Growing Forward 2",
+                  "amount": 0.090552
+                },
+                {
+                  "id": "agriculture-and-agri-food-2017-tp-0002",
+                  "name": "Contribution payments for the AgriInnovation program under Growing Forward 2",
+                  "amount": 0.060823
+                },
+                {
+                  "id": "agriculture-and-agri-food-2017-tp-0026",
+                  "name": "Grant payments for the AgriStability program",
+                  "amount": 0.034895
+                },
+                {
+                  "id": "agriculture-and-agri-food-2017-tp-0005",
+                  "name": "Contribution payments for the AgriMarketing program under Growing Forward 2",
+                  "amount": 0.033787
+                },
+                {
+                  "id": "agriculture-and-agri-food-2017-tp-0009",
+                  "name": "Contributions for Cost-Shared Strategic Initiatives programming in Adaptability and Industry Capacity under Growing Forward 2",
+                  "amount": 0.026797
+                },
+                {
+                  "id": "agriculture-and-agri-food-2017-tp-0020",
+                  "name": "Payments in connection with the Agricultural Marketing Programs Act",
+                  "amount": 0.025324
+                },
+                {
+                  "id": "agriculture-and-agri-food-2017-tp-0004",
+                  "name": "Contribution payments for the AgriInvest program",
+                  "amount": 0.024648
+                },
+                {
+                  "id": "agriculture-and-agri-food-2017-department-of-agriculture-and-agri-food-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.028257,
+                  "isAggregate": true,
+                  "count": 9
+                }
+              ]
             },
             {
               "id": "agriculture-and-agri-food-2017-department-of-agriculture-and-agri-food-obj-1",
@@ -207,19 +270,19 @@
   },
   "entities": [
     {
-      "id": "agriculture-and-agri-food-2017-entity-agriculture-and-agri-food",
-      "name": "Agriculture and Agri-Food",
-      "value": 2.724613
-    }
-  ],
-  "votes": [
+      "id": "agriculture-and-agri-food-2017-entity-department-of-agriculture-and-agri-food",
+      "name": "Department of Agriculture and Agri-Food",
+      "value": 2.61491
+    },
     {
-      "id": "agriculture-and-agri-food-2017-agriculture-and-agri-food-vote",
-      "vote": "All votes",
-      "description": "Total appropriations (vote-level detail not published for this edition)",
-      "totalAvailable": 2910192878,
-      "used": 2724612776,
-      "lapsed": 185580102
+      "id": "agriculture-and-agri-food-2017-entity-canadian-dairy-commission",
+      "name": "Canadian Dairy Commission",
+      "value": 0.003773
+    },
+    {
+      "id": "agriculture-and-agri-food-2017-entity-canadian-grain-commission",
+      "name": "Canadian Grain Commission",
+      "value": -0.020573
     }
   ],
   "transferPayments": [

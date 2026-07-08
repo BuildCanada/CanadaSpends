@@ -3,57 +3,57 @@
   "slug": "natural-resources",
   "financialYearEnding": 2018,
   "reportedAs": "Natural Resources",
-  "basis": "vol2_appropriations",
-  "totalSpending": 2.662686,
-  "percentageOfFederal": 0.8064,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 2.642015,
+  "percentageOfFederal": 0.8002,
   "historicalShare": [
     {
       "year": 2014,
-      "percentage": 0.9919
+      "percentage": 0.9938
     },
     {
       "year": 2015,
-      "percentage": 0.9451
+      "percentage": 0.9463
     },
     {
       "year": 2016,
-      "percentage": 0.7115
+      "percentage": 0.7138
     },
     {
       "year": 2017,
-      "percentage": 0.7784
+      "percentage": 0.7631
     },
     {
       "year": 2018,
-      "percentage": 0.8064
+      "percentage": 0.8002
     },
     {
       "year": 2019,
-      "percentage": 0.7244
+      "percentage": 0.7191
     },
     {
       "year": 2020,
-      "percentage": 0.9611
+      "percentage": 0.9555
     },
     {
       "year": 2021,
-      "percentage": 0.4033
+      "percentage": 0.4008
     },
     {
       "year": 2022,
-      "percentage": 0.6752
+      "percentage": 0.6718
     },
     {
       "year": 2023,
-      "percentage": 0.8086
+      "percentage": 0.8049
     },
     {
       "year": 2024,
-      "percentage": 0.9804
+      "percentage": 0.9772
     },
     {
       "year": 2025,
-      "percentage": 1.1333
+      "percentage": 1.1305
     }
   ],
   "miniSankey": {
@@ -69,7 +69,70 @@
             {
               "id": "natural-resources-2018-department-of-natural-resources-obj-10",
               "name": "Transfer payments",
-              "amount": 0.905717
+              "children": [
+                {
+                  "id": "natural-resources-2018-tp-0028",
+                  "name": "Payments to the Nova Scotia Offshore Revenue Account",
+                  "amount": 0.273781
+                },
+                {
+                  "id": "natural-resources-2018-tp-0027",
+                  "name": "Payments to the Newfoundland Offshore Petroleum Resource Revenue Fund",
+                  "amount": 0.245359
+                },
+                {
+                  "id": "natural-resources-2018-tp-0013",
+                  "name": "Contributions in support of ecoENERGY for Renewable Power",
+                  "amount": 0.106622
+                },
+                {
+                  "id": "natural-resources-2018-tp-0016",
+                  "name": "Contributions in support of the Energy Innovation Program",
+                  "amount": 0.093658
+                },
+                {
+                  "id": "natural-resources-2018-tp-0006",
+                  "name": "Contribution to the Federation of Canadian Municipalities for the Green Municipal Fund",
+                  "amount": 0.062151
+                },
+                {
+                  "id": "natural-resources-2018-tp-0001",
+                  "name": "Contribution in support of Investments in the Forest Industry Transformation Program",
+                  "amount": 0.034925
+                },
+                {
+                  "id": "natural-resources-2018-tp-0017",
+                  "name": "Contributions in support of the Forest Innovation Program",
+                  "amount": 0.023762
+                },
+                {
+                  "id": "natural-resources-2018-tp-0012",
+                  "name": "Contributions in support of Transportation and Alternative Fuels",
+                  "amount": 0.013275
+                },
+                {
+                  "id": "natural-resources-2018-tp-0000",
+                  "name": "Contribution Program for expanding market opportunities",
+                  "amount": 0.012464
+                },
+                {
+                  "id": "natural-resources-2018-tp-0030",
+                  "name": "Youth Employment Strategy",
+                  "amount": 0.007552
+                },
+                {
+                  "id": "natural-resources-2018-tp-0015",
+                  "name": "Contributions in support of the Energy Efficiency program",
+                  "amount": 0.004686
+                },
+                {
+                  "id": "natural-resources-2018-department-of-natural-resources-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.027482,
+                  "isAggregate": true,
+                  "count": 22
+                }
+              ]
             },
             {
               "id": "natural-resources-2018-department-of-natural-resources-obj-1",
@@ -294,19 +357,29 @@
   },
   "entities": [
     {
-      "id": "natural-resources-2018-entity-natural-resources",
-      "name": "Natural Resources",
-      "value": 2.662686
-    }
-  ],
-  "votes": [
+      "id": "natural-resources-2018-entity-department-of-natural-resources",
+      "name": "Department of Natural Resources",
+      "value": 1.566252
+    },
     {
-      "id": "natural-resources-2018-natural-resources-vote",
-      "vote": "All votes",
-      "description": "Total appropriations (vote-level detail not published for this edition)",
-      "totalAvailable": 2904187972,
-      "used": 2662685830,
-      "lapsed": 241502142
+      "id": "natural-resources-2018-entity-atomic-energy-of-canada-limited",
+      "name": "Atomic Energy of Canada Limited",
+      "value": 0.826595
+    },
+    {
+      "id": "natural-resources-2018-entity-canadian-nuclear-safety-commission",
+      "name": "Canadian Nuclear Safety Commission",
+      "value": 0.149794
+    },
+    {
+      "id": "natural-resources-2018-entity-national-energy-board",
+      "name": "National Energy Board",
+      "value": 0.093833
+    },
+    {
+      "id": "natural-resources-2018-entity-northern-pipeline-agency",
+      "name": "Northern Pipeline Agency",
+      "value": 0.005541
     }
   ],
   "transferPayments": [

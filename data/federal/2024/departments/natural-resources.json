@@ -3,57 +3,57 @@
   "slug": "natural-resources",
   "financialYearEnding": 2024,
   "reportedAs": "Natural Resources",
-  "basis": "vol2_appropriations",
-  "totalSpending": 5.112227,
-  "percentageOfFederal": 0.9804,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 5.095379,
+  "percentageOfFederal": 0.9772,
   "historicalShare": [
     {
       "year": 2014,
-      "percentage": 0.9919
+      "percentage": 0.9938
     },
     {
       "year": 2015,
-      "percentage": 0.9451
+      "percentage": 0.9463
     },
     {
       "year": 2016,
-      "percentage": 0.7115
+      "percentage": 0.7138
     },
     {
       "year": 2017,
-      "percentage": 0.7784
+      "percentage": 0.7631
     },
     {
       "year": 2018,
-      "percentage": 0.8064
+      "percentage": 0.8002
     },
     {
       "year": 2019,
-      "percentage": 0.7244
+      "percentage": 0.7191
     },
     {
       "year": 2020,
-      "percentage": 0.9611
+      "percentage": 0.9555
     },
     {
       "year": 2021,
-      "percentage": 0.4033
+      "percentage": 0.4008
     },
     {
       "year": 2022,
-      "percentage": 0.6752
+      "percentage": 0.6718
     },
     {
       "year": 2023,
-      "percentage": 0.8086
+      "percentage": 0.8049
     },
     {
       "year": 2024,
-      "percentage": 0.9804
+      "percentage": 0.9772
     },
     {
       "year": 2025,
-      "percentage": 1.1333
+      "percentage": 1.1305
     }
   ],
   "miniSankey": {
@@ -69,7 +69,70 @@
             {
               "id": "natural-resources-2024-department-of-natural-resources-obj-10",
               "name": "Transfer payments",
-              "amount": 2.442523
+              "children": [
+                {
+                  "id": "natural-resources-2024-tp-0052",
+                  "name": "Payments to the Newfoundland Offshore Petroleum Resource Revenue Fund (Canada-Newfoundland Atlantic Accord Implementation Act)",
+                  "amount": 0.635212
+                },
+                {
+                  "id": "natural-resources-2024-tp-0030",
+                  "name": "Contributions in support of Smart Renewables and Electrification Pathways projects",
+                  "amount": 0.388758
+                },
+                {
+                  "id": "natural-resources-2024-tp-0021",
+                  "name": "Contributions in support of Home Retrofits",
+                  "amount": 0.359873
+                },
+                {
+                  "id": "natural-resources-2024-tp-0060",
+                  "name": "Grants in support of Home Retrofits",
+                  "amount": 0.329503
+                },
+                {
+                  "id": "natural-resources-2024-tp-0034",
+                  "name": "Contributions in support of Zero Emission Vehicle Infrastructure",
+                  "amount": 0.137829
+                },
+                {
+                  "id": "natural-resources-2024-tp-0008",
+                  "name": "Contributions in Support of the Clean Fuels Fund and Codes and Standards Program",
+                  "amount": 0.12656
+                },
+                {
+                  "id": "natural-resources-2024-tp-0006",
+                  "name": "Contributions for Growing Canada's Forests—2 Billion Trees",
+                  "amount": 0.099471
+                },
+                {
+                  "id": "natural-resources-2024-tp-0016",
+                  "name": "Contributions in support of Energy Innovation Program",
+                  "amount": 0.053224
+                },
+                {
+                  "id": "natural-resources-2024-tp-0010",
+                  "name": "Contributions in support of Clean Energy for Rural and Remote Communities",
+                  "amount": 0.04732
+                },
+                {
+                  "id": "natural-resources-2024-tp-0017",
+                  "name": "Contributions in support of Fighting and Managing Wildfires in a Changing Climate",
+                  "amount": 0.036495
+                },
+                {
+                  "id": "natural-resources-2024-tp-0007",
+                  "name": "Contributions in Support of Electricity Pre-Development Projects",
+                  "amount": 0.024468
+                },
+                {
+                  "id": "natural-resources-2024-department-of-natural-resources-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.20381,
+                  "isAggregate": true,
+                  "count": 50
+                }
+              ]
             },
             {
               "id": "natural-resources-2024-department-of-natural-resources-obj-1",
@@ -281,7 +344,7 @@
     {
       "id": "natural-resources-2024-entity-department-of-natural-resources",
       "name": "Department of Natural Resources",
-      "value": 3.483458
+      "value": 3.46661
     },
     {
       "id": "natural-resources-2024-entity-atomic-energy-of-canada-limited",
@@ -302,96 +365,6 @@
       "id": "natural-resources-2024-entity-northern-pipeline-agency",
       "name": "Northern Pipeline Agency",
       "value": 0.000336
-    }
-  ],
-  "votes": [
-    {
-      "id": "natural-resources-2024-atomic-energy-of-canada-limited-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the corporation for operating and capital expenditures",
-      "totalAvailable": 1547315307,
-      "used": 1344720000,
-      "lapsed": 202595307
-    },
-    {
-      "id": "natural-resources-2024-canadian-energy-regulator-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 108248581,
-      "used": 101808167,
-      "lapsed": 6440414
-    },
-    {
-      "id": "natural-resources-2024-canadian-energy-regulator-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 11860709,
-      "used": 11860098,
-      "lapsed": 611
-    },
-    {
-      "id": "natural-resources-2024-canadian-nuclear-safety-commission-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 55064118,
-      "used": 48542441,
-      "lapsed": 6521677
-    },
-    {
-      "id": "natural-resources-2024-canadian-nuclear-safety-commission-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 125968169,
-      "used": 121502148,
-      "lapsed": 4466021
-    },
-    {
-      "id": "natural-resources-2024-department-of-natural-resources-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 988111283,
-      "used": 918953483,
-      "lapsed": 69157800
-    },
-    {
-      "id": "natural-resources-2024-department-of-natural-resources-vote10",
-      "vote": "Vote 10",
-      "description": "Grants and contributions",
-      "totalAvailable": 2813051099,
-      "used": 1802371719,
-      "lapsed": 1010679380
-    },
-    {
-      "id": "natural-resources-2024-department-of-natural-resources-vote5",
-      "vote": "Vote 5",
-      "description": "Capital expenditures",
-      "totalAvailable": 54855951,
-      "used": 36334211,
-      "lapsed": 18521740
-    },
-    {
-      "id": "natural-resources-2024-department-of-natural-resources-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 734370320,
-      "used": 725798404,
-      "lapsed": 8571916
-    },
-    {
-      "id": "natural-resources-2024-northern-pipeline-agency-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 539949,
-      "used": 330687,
-      "lapsed": 209262
-    },
-    {
-      "id": "natural-resources-2024-northern-pipeline-agency-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 5306,
-      "used": 5306,
-      "lapsed": 0
     }
   ],
   "transferPayments": [

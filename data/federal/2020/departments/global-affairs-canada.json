@@ -3,17 +3,17 @@
   "slug": "global-affairs-canada",
   "financialYearEnding": 2020,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 7.402151,
-  "percentageOfFederal": 1.9817,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 7.363428,
+  "percentageOfFederal": 1.9713,
   "historicalShare": [
     {
       "year": 2014,
-      "percentage": 2.2651
+      "percentage": 2.3161
     },
     {
       "year": 2015,
-      "percentage": 2.2251
+      "percentage": 2.2474
     },
     {
       "year": 2016,
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 2.0955
+      "percentage": 2.074
     },
     {
       "year": 2018,
-      "percentage": 2.0629
+      "percentage": 2.0519
     },
     {
       "year": 2019,
-      "percentage": 2.0981
+      "percentage": 2.0872
     },
     {
       "year": 2020,
-      "percentage": 1.9817
+      "percentage": 1.9713
     },
     {
       "year": 2021,
-      "percentage": 1.5249
+      "percentage": 1.5181
     },
     {
       "year": 2022,
-      "percentage": 1.9011
+      "percentage": 1.892
     },
     {
       "year": 2023,
-      "percentage": 2.3027
+      "percentage": 2.2922
     },
     {
       "year": 2024,
-      "percentage": 3.6934
+      "percentage": 3.6828
     },
     {
       "year": 2025,
-      "percentage": 1.8109
+      "percentage": 1.7999
     }
   ],
   "miniSankey": {
@@ -69,7 +69,70 @@
             {
               "id": "global-affairs-canada-2020-department-of-foreign-affairs-trade-and-development-obj-10",
               "name": "Transfer payments",
-              "amount": 4.925247
+              "children": [
+                {
+                  "id": "global-affairs-canada-2020-tp-0066",
+                  "name": "Grants from the International Development Assistance for Multilateral Programming",
+                  "amount": 2.176912
+                },
+                {
+                  "id": "global-affairs-canada-2020-tp-0011",
+                  "name": "Contributions from the International Development Assistance for Bilateral Programming to support regional or country specific",
+                  "amount": 0.716738
+                },
+                {
+                  "id": "global-affairs-canada-2020-tp-0012",
+                  "name": "Contributions from the International Development Assistance for Multilateral Programming",
+                  "amount": 0.424642
+                },
+                {
+                  "id": "global-affairs-canada-2020-tp-0013",
+                  "name": "Contributions from the International Development Assistance for Partnerships with Canadians Programming",
+                  "amount": 0.377413
+                },
+                {
+                  "id": "global-affairs-canada-2020-tp-0056",
+                  "name": "United Nations peacekeeping operations (US$193,852,698)",
+                  "amount": 0.252128
+                },
+                {
+                  "id": "global-affairs-canada-2020-tp-0077",
+                  "name": "Payments to International Financial Institutions—Direct payments (International Development (Financial Institutions) Assistance Act)",
+                  "amount": 0.250366
+                },
+                {
+                  "id": "global-affairs-canada-2020-tp-0071",
+                  "name": "Grants in support of the Peace and Stabilization Operations Program",
+                  "amount": 0.102816
+                },
+                {
+                  "id": "global-affairs-canada-2020-tp-0054",
+                  "name": "United Nations Organization (US$81,267,690)",
+                  "amount": 0.102736
+                },
+                {
+                  "id": "global-affairs-canada-2020-tp-0016",
+                  "name": "Contributions in support of the Peace and Stabilization Operations Program",
+                  "amount": 0.049618
+                },
+                {
+                  "id": "global-affairs-canada-2020-tp-0017",
+                  "name": "Contributions under the Weapons Threat Reduction Program",
+                  "amount": 0.038029
+                },
+                {
+                  "id": "global-affairs-canada-2020-tp-0067",
+                  "name": "Grants from the International Development Assistance for Partnerships with Canadians Programming",
+                  "amount": 0.037745
+                },
+                {
+                  "id": "global-affairs-canada-2020-department-of-foreign-affairs-trade-and-development-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.396104,
+                  "isAggregate": true,
+                  "count": 65
+                }
+              ]
             },
             {
               "id": "global-affairs-canada-2020-department-of-foreign-affairs-trade-and-development-obj-1",
@@ -266,7 +329,7 @@
     {
       "id": "global-affairs-canada-2020-entity-department-of-foreign-affairs-trade-and-development",
       "name": "Department of Foreign Affairs, Trade and Development",
-      "value": 7.215626
+      "value": 7.176903
     },
     {
       "id": "global-affairs-canada-2020-entity-international-development-research-centre",
@@ -287,136 +350,6 @@
       "id": "global-affairs-canada-2020-entity-export-development-canada-canada-account",
       "name": "Export Development Canada (Canada Account)",
       "value": 0.00859
-    }
-  ],
-  "votes": [
-    {
-      "id": "global-affairs-canada-2020-department-of-foreign-affairs-trade-and-development-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 2047643597,
-      "used": 1922086342,
-      "lapsed": 125557255
-    },
-    {
-      "id": "global-affairs-canada-2020-department-of-foreign-affairs-trade-and-development-vote10",
-      "vote": "Vote 10",
-      "description": "Grants and contributions",
-      "totalAvailable": 4970141490,
-      "used": 4674051462,
-      "lapsed": 296090028
-    },
-    {
-      "id": "global-affairs-canada-2020-department-of-foreign-affairs-trade-and-development-vote15",
-      "vote": "Vote 15",
-      "description": "Payments, in respect of pension, insurance and social security programs or other arrangements for employees locally engaged outside of Canada, or in respect of the administration of such programs or arrangements",
-      "totalAvailable": 68874000,
-      "used": 68493656,
-      "lapsed": 380344
-    },
-    {
-      "id": "global-affairs-canada-2020-department-of-foreign-affairs-trade-and-development-vote20",
-      "vote": "Vote 20",
-      "description": "Pursuant to subsection 12(2) of the International Development (Financial Institutions) Assistance Act, payments to international financial institutions—Direct payments",
-      "totalAvailable": 2,
-      "used": 0,
-      "lapsed": 2
-    },
-    {
-      "id": "global-affairs-canada-2020-department-of-foreign-affairs-trade-and-development-vote30",
-      "vote": "Vote 30",
-      "description": "Administration of new free trade agreement measures and steel safeguards",
-      "totalAvailable": 11446936,
-      "used": 0,
-      "lapsed": 11446936
-    },
-    {
-      "id": "global-affairs-canada-2020-department-of-foreign-affairs-trade-and-development-vote35",
-      "vote": "Vote 35",
-      "description": "Protecting Canada's National Security",
-      "totalAvailable": 443260,
-      "used": 0,
-      "lapsed": 443260
-    },
-    {
-      "id": "global-affairs-canada-2020-department-of-foreign-affairs-trade-and-development-vote40",
-      "vote": "Vote 40",
-      "description": "Protecting Democracy",
-      "totalAvailable": 104280,
-      "used": 0,
-      "lapsed": 104280
-    },
-    {
-      "id": "global-affairs-canada-2020-department-of-foreign-affairs-trade-and-development-vote45",
-      "vote": "Vote 45",
-      "description": "Renewing Canada's Middle East Strategy",
-      "totalAvailable": 2021487,
-      "used": 0,
-      "lapsed": 2021487
-    },
-    {
-      "id": "global-affairs-canada-2020-department-of-foreign-affairs-trade-and-development-vote5",
-      "vote": "Vote 5",
-      "description": "Capital expenditures",
-      "totalAvailable": 130319951,
-      "used": 108543093,
-      "lapsed": 21776858
-    },
-    {
-      "id": "global-affairs-canada-2020-department-of-foreign-affairs-trade-and-development-vote50",
-      "vote": "Vote 50",
-      "description": "Enhancing Canada's Global Arctic Leadership",
-      "totalAvailable": 6133109,
-      "used": 0,
-      "lapsed": 6133109
-    },
-    {
-      "id": "global-affairs-canada-2020-department-of-foreign-affairs-trade-and-development-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 464709334,
-      "used": 442451726,
-      "lapsed": 22257608
-    },
-    {
-      "id": "global-affairs-canada-2020-export-development-canada-canada-account-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 8589503,
-      "used": 8589503,
-      "lapsed": 0
-    },
-    {
-      "id": "global-affairs-canada-2020-international-development-research-centre-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the International Development Research Centre",
-      "totalAvailable": 142907117,
-      "used": 142907117,
-      "lapsed": 0
-    },
-    {
-      "id": "global-affairs-canada-2020-international-joint-commission-canadian-section-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 11177071,
-      "used": 8404880,
-      "lapsed": 2772191
-    },
-    {
-      "id": "global-affairs-canada-2020-international-joint-commission-canadian-section-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 526799,
-      "used": 526799,
-      "lapsed": 0
-    },
-    {
-      "id": "global-affairs-canada-2020-invest-in-canada-hub-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 37166761,
-      "used": 26096450,
-      "lapsed": 11070311
     }
   ],
   "transferPayments": [

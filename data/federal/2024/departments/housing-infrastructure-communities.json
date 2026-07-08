@@ -2,10 +2,10 @@
   "name": "Housing, Infrastructure and Communities",
   "slug": "housing-infrastructure-communities",
   "financialYearEnding": 2024,
-  "reportedAs": "Infrastructure et Collectivités",
-  "basis": "vol2_appropriations",
-  "totalSpending": 14.556604,
-  "percentageOfFederal": 2.7917,
+  "reportedAs": "Infrastructure and Communities",
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 14.495762,
+  "percentageOfFederal": 2.78,
   "historicalShare": [
     {
       "year": 2014,
@@ -45,11 +45,11 @@
     },
     {
       "year": 2024,
-      "percentage": 2.7917
+      "percentage": 2.78
     },
     {
       "year": 2025,
-      "percentage": 2.6621
+      "percentage": 2.6578
     }
   ],
   "miniSankey": {
@@ -65,7 +65,70 @@
             {
               "id": "housing-infrastructure-communities-2024-office-of-infrastructure-of-canada-obj-10",
               "name": "Transfer payments",
-              "amount": 7.298586
+              "children": [
+                {
+                  "id": "housing-infrastructure-communities-2024-tp-0028",
+                  "name": "Contributions related to the Canada Community-Building Fund (Keeping Canada's Economy and Jobs Growing Act)",
+                  "amount": 2.367617
+                },
+                {
+                  "id": "housing-infrastructure-communities-2024-tp-0012",
+                  "name": "Investing in Canada Infrastructure Program",
+                  "amount": 2.040641
+                },
+                {
+                  "id": "housing-infrastructure-communities-2024-tp-0015",
+                  "name": "New Building Canada Fund—Provincial-Territorial Infrastructure Component—National and Regional Projects",
+                  "amount": 0.996804
+                },
+                {
+                  "id": "housing-infrastructure-communities-2024-tp-0003",
+                  "name": "Contributions to not-for-profit organizations, individuals, municipal governments, Band/tribal councils and other Indigenous organizations, public health and educational institutions, Régies régionales, for-profit enterprises, research organizations and research institutes to support activities to help alleviate and prevent homelessness across Canada and to carry out research on homelessness to help communities better understand and more effectively address homelessness issues",
+                  "amount": 0.583057
+                },
+                {
+                  "id": "housing-infrastructure-communities-2024-tp-0010",
+                  "name": "Disaster Mitigation and Adaptation Fund",
+                  "amount": 0.331017
+                },
+                {
+                  "id": "housing-infrastructure-communities-2024-tp-0017",
+                  "name": "Payments for commitments of Public-Private Partnerships Canada Fund of Public-Private Partnerships Canada",
+                  "amount": 0.239495
+                },
+                {
+                  "id": "housing-infrastructure-communities-2024-tp-0011",
+                  "name": "Green and Inclusive Community Buildings Program",
+                  "amount": 0.231822
+                },
+                {
+                  "id": "housing-infrastructure-communities-2024-tp-0014",
+                  "name": "New Building Canada Fund—National Infrastructure Component",
+                  "amount": 0.135321
+                },
+                {
+                  "id": "housing-infrastructure-communities-2024-tp-0006",
+                  "name": "Contributions under the Building Canada Fund Major Infrastructure Component",
+                  "amount": 0.132078
+                },
+                {
+                  "id": "housing-infrastructure-communities-2024-tp-0016",
+                  "name": "New Building Canada Fund—Provincial-Territorial Infrastructure Component—Small Communities Fund",
+                  "amount": 0.078113
+                },
+                {
+                  "id": "housing-infrastructure-communities-2024-tp-0018",
+                  "name": "Permanent Public Transit Program",
+                  "amount": 0.048469
+                },
+                {
+                  "id": "housing-infrastructure-communities-2024-office-of-infrastructure-of-canada-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.114152,
+                  "isAggregate": true,
+                  "count": 17
+                }
+              ]
             },
             {
               "id": "housing-infrastructure-communities-2024-office-of-infrastructure-of-canada-obj-1",
@@ -169,7 +232,7 @@
     {
       "id": "housing-infrastructure-communities-2024-entity-canada-mortgage-and-housing-corporation",
       "name": "Canada Mortgage and Housing Corporation",
-      "value": 5.491113
+      "value": 5.430271
     },
     {
       "id": "housing-infrastructure-communities-2024-entity-windsor-detroit-bridge-authority",
@@ -180,72 +243,6 @@
       "id": "housing-infrastructure-communities-2024-entity-the-jacques-cartier-and-champlain-bridges-inc",
       "name": "The Jacques-Cartier and Champlain Bridges Inc.",
       "value": 0.156303
-    }
-  ],
-  "votes": [
-    {
-      "id": "housing-infrastructure-communities-2024-canada-mortgage-and-housing-corporation-vote1",
-      "vote": "Vote 1",
-      "description": "Reimbursement under the provisions of the National Housing Act and the Canada Mortgage and Housing Corporation Act",
-      "totalAvailable": 6572172963,
-      "used": 5491113368,
-      "lapsed": 1081059595
-    },
-    {
-      "id": "housing-infrastructure-communities-2024-canada-mortgage-and-housing-corporation-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 0,
-      "used": 0,
-      "lapsed": 0
-    },
-    {
-      "id": "housing-infrastructure-communities-2024-office-of-infrastructure-of-canada-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 298582690,
-      "used": 285303151,
-      "lapsed": 13279539
-    },
-    {
-      "id": "housing-infrastructure-communities-2024-office-of-infrastructure-of-canada-vote10",
-      "vote": "Vote 10",
-      "description": "Grants and contributions",
-      "totalAvailable": 7162793282,
-      "used": 4930969163,
-      "lapsed": 2231824119
-    },
-    {
-      "id": "housing-infrastructure-communities-2024-office-of-infrastructure-of-canada-vote5",
-      "vote": "Vote 5",
-      "description": "Capital expenditures",
-      "totalAvailable": 97072128,
-      "used": 10412472,
-      "lapsed": 86659656
-    },
-    {
-      "id": "housing-infrastructure-communities-2024-office-of-infrastructure-of-canada-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 2393075182,
-      "used": 2393040373,
-      "lapsed": 34809
-    },
-    {
-      "id": "housing-infrastructure-communities-2024-the-jacques-cartier-and-champlain-bridges-inc-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the corporation",
-      "totalAvailable": 231671430,
-      "used": 156303193,
-      "lapsed": 75368237
-    },
-    {
-      "id": "housing-infrastructure-communities-2024-windsor-detroit-bridge-authority-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the Authority",
-      "totalAvailable": 1727843809,
-      "used": 1289462758,
-      "lapsed": 438381051
     }
   ],
   "transferPayments": [

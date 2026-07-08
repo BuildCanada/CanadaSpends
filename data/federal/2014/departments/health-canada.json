@@ -3,8 +3,8 @@
   "slug": "health-canada",
   "financialYearEnding": 2014,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 6.640166,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 6.640167,
   "percentageOfFederal": 2.388,
   "historicalShare": [
     {
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 2.2847
+      "percentage": 2.1269
     },
     {
       "year": 2018,
-      "percentage": 1.8628
+      "percentage": 1.8003
     },
     {
       "year": 2019,
-      "percentage": 1.4842
+      "percentage": 1.4439
     },
     {
       "year": 2020,
-      "percentage": 1.521
+      "percentage": 1.482
     },
     {
       "year": 2021,
-      "percentage": 2.2328
+      "percentage": 2.2048
     },
     {
       "year": 2022,
-      "percentage": 3.412
+      "percentage": 3.3701
     },
     {
       "year": 2023,
-      "percentage": 2.6244
+      "percentage": 2.5801
     },
     {
       "year": 2024,
-      "percentage": 2.6767
+      "percentage": 2.6298
     },
     {
       "year": 2025,
-      "percentage": 2.378
+      "percentage": 2.3318
     }
   ],
   "miniSankey": {
@@ -371,14 +371,19 @@
   },
   "entities": [
     {
-      "id": "health-canada-2014-entity-health",
-      "name": "Health",
-      "value": 5.009146
+      "id": "health-canada-2014-entity-health-department",
+      "name": "Health Department",
+      "value": 4.203395
     },
     {
       "id": "health-canada-2014-entity-canadian-institutes-of-health-research",
       "name": "Canadian Institutes of Health Research",
       "value": 0.997972
+    },
+    {
+      "id": "health-canada-2014-entity-canadian-food-inspection-agency",
+      "name": "Canadian Food Inspection Agency",
+      "value": 0.805752
     },
     {
       "id": "health-canada-2014-entity-public-health-agency-of-canada",
@@ -388,129 +393,7 @@
     {
       "id": "health-canada-2014-entity-patented-medicine-prices-review-board",
       "name": "Patented Medicine Prices Review Board",
-      "value": 0.010541
-    }
-  ],
-  "votes": [
-    {
-      "id": "health-canada-2014-canadian-institutes-of-health-research-vote15",
-      "vote": "Vote 15",
-      "description": "Operating expenditures",
-      "totalAvailable": 50749581,
-      "used": 48129248,
-      "lapsed": 2620333
-    },
-    {
-      "id": "health-canada-2014-canadian-institutes-of-health-research-vote20",
-      "vote": "Vote 20",
-      "description": "Grants",
-      "totalAvailable": 944401906,
-      "used": 943955266,
-      "lapsed": 446640
-    },
-    {
-      "id": "health-canada-2014-canadian-institutes-of-health-research-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 5887474,
-      "used": 5887474,
-      "lapsed": 0
-    },
-    {
-      "id": "health-canada-2014-health-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 2493699069,
-      "used": 2238280198,
-      "lapsed": 255418871
-    },
-    {
-      "id": "health-canada-2014-health-vote10",
-      "vote": "Vote 10",
-      "description": "Grants and contributions",
-      "totalAvailable": 1660583534,
-      "used": 1640642661,
-      "lapsed": 19940873
-    },
-    {
-      "id": "health-canada-2014-health-vote11",
-      "vote": "Vote 11",
-      "description": "Operating expenditures and contributions",
-      "totalAvailable": 600051819,
-      "used": 590256209,
-      "lapsed": 9795610
-    },
-    {
-      "id": "health-canada-2014-health-vote13",
-      "vote": "Vote 13",
-      "description": "Capital expenditures",
-      "totalAvailable": 26075622,
-      "used": 21464985,
-      "lapsed": 4610637
-    },
-    {
-      "id": "health-canada-2014-health-vote5",
-      "vote": "Vote 5",
-      "description": "Capital expenditures",
-      "totalAvailable": 27576593,
-      "used": 21683176,
-      "lapsed": 5893417
-    },
-    {
-      "id": "health-canada-2014-health-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 532510716,
-      "used": 496818379,
-      "lapsed": 35692337
-    },
-    {
-      "id": "health-canada-2014-patented-medicine-prices-review-board-vote40",
-      "vote": "Vote 40",
-      "description": "Program expenditures",
-      "totalAvailable": 10501868,
-      "used": 6807076,
-      "lapsed": 3694792
-    },
-    {
-      "id": "health-canada-2014-patented-medicine-prices-review-board-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 3733491,
-      "used": 3733491,
-      "lapsed": 0
-    },
-    {
-      "id": "health-canada-2014-public-health-agency-of-canada-vote45",
-      "vote": "Vote 45",
-      "description": "Operating expenditures",
-      "totalAvailable": 376547413,
-      "used": 361694499,
-      "lapsed": 14852914
-    },
-    {
-      "id": "health-canada-2014-public-health-agency-of-canada-vote50",
-      "vote": "Vote 50",
-      "description": "Capital expenditures",
-      "totalAvailable": 13849226,
-      "used": 11357101,
-      "lapsed": 2492125
-    },
-    {
-      "id": "health-canada-2014-public-health-agency-of-canada-vote55",
-      "vote": "Vote 55",
-      "description": "Grants and contributions",
-      "totalAvailable": 208048310,
-      "used": 205633323,
-      "lapsed": 2414987
-    },
-    {
-      "id": "health-canada-2014-public-health-agency-of-canada-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 43829577,
-      "used": 43823211,
-      "lapsed": 6366
+      "value": 0.01054
     }
   ],
   "transferPayments": [

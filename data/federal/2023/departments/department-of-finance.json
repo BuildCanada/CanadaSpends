@@ -3,17 +3,17 @@
   "slug": "department-of-finance",
   "financialYearEnding": 2023,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 117.825332,
-  "percentageOfFederal": 24.3876,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 117.824697,
+  "percentageOfFederal": 24.3874,
   "historicalShare": [
     {
       "year": 2014,
-      "percentage": 30.9373
+      "percentage": 31.0335
     },
     {
       "year": 2015,
-      "percentage": 30.731
+      "percentage": 30.7352
     },
     {
       "year": 2016,
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 28.6373
+      "percentage": 28.6369
     },
     {
       "year": 2018,
-      "percentage": 27.4523
+      "percentage": 27.4522
     },
     {
       "year": 2019,
-      "percentage": 27.2779
+      "percentage": 27.2778
     },
     {
       "year": 2020,
-      "percentage": 26.5609
+      "percentage": 26.5605
     },
     {
       "year": 2021,
-      "percentage": 18.327
+      "percentage": 18.3268
     },
     {
       "year": 2022,
-      "percentage": 21.2123
+      "percentage": 21.2122
     },
     {
       "year": 2023,
-      "percentage": 24.3876
+      "percentage": 24.3874
     },
     {
       "year": 2024,
-      "percentage": 26.1038
+      "percentage": 26.1034
     },
     {
       "year": 2025,
-      "percentage": 26.2859
+      "percentage": 26.2858
     }
   ],
   "miniSankey": {
@@ -69,7 +69,70 @@
             {
               "id": "department-of-finance-2023-department-of-finance-obj-10",
               "name": "Transfer payments",
-              "amount": 84.882269
+              "children": [
+                {
+                  "id": "department-of-finance-2023-tp-0005",
+                  "name": "Canada Health Transfer (Part V.1—Federal-Provincial Fiscal Arrangements Act)",
+                  "amount": 41.776965
+                },
+                {
+                  "id": "department-of-finance-2023-tp-0009",
+                  "name": "Fiscal Equalization (Part I—Federal-Provincial Fiscal Arrangements Act)",
+                  "amount": 20.286819
+                },
+                {
+                  "id": "department-of-finance-2023-tp-0006",
+                  "name": "Canada Social Transfer (Part V.1—Federal-Provincial Fiscal Arrangements Act)",
+                  "amount": 14.750513
+                },
+                {
+                  "id": "department-of-finance-2023-tp-0019",
+                  "name": "Territorial Financing (Part I.1 - Federal-Provincial Fiscal Arrangements Act)",
+                  "amount": 4.213531
+                },
+                {
+                  "id": "department-of-finance-2023-tp-0015",
+                  "name": "Payments related to Canada health transfer (Section 24.72—Federal-Provincial Fiscal Arrangements Act)",
+                  "amount": 1.850968
+                },
+                {
+                  "id": "department-of-finance-2023-tp-0016",
+                  "name": "Payments to International Development Association (Bretton Woods and Related Agreements Act)",
+                  "amount": 0.84352
+                },
+                {
+                  "id": "department-of-finance-2023-tp-0013",
+                  "name": "Payments in relation to Transit and Housing (Budget Implementation Act, 2022, No.1)",
+                  "amount": 0.694113
+                },
+                {
+                  "id": "department-of-finance-2023-tp-0017",
+                  "name": "Payments to World Bank—Ukraine Multi-Donor Trust Fund",
+                  "amount": 0.106431
+                },
+                {
+                  "id": "department-of-finance-2023-tp-0002",
+                  "name": "2020 Hibernia Dividend Backed Annuity Agreement Payment",
+                  "amount": 0.093227
+                },
+                {
+                  "id": "department-of-finance-2023-tp-0012",
+                  "name": "Payments for school ventilation improvement (Economic and Fiscal Update Implementation Act, 2021)",
+                  "amount": 0.092548
+                },
+                {
+                  "id": "department-of-finance-2023-tp-0008",
+                  "name": "Debt payments on behalf of poor countries to International Organizations pursuant to subsection 18(1) of the Economic Recovery Act",
+                  "amount": 0.052585
+                },
+                {
+                  "id": "department-of-finance-2023-department-of-finance-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.121049,
+                  "isAggregate": true,
+                  "count": 5
+                }
+              ]
             },
             {
               "id": "department-of-finance-2023-department-of-finance-obj-11",
@@ -359,7 +422,7 @@
     {
       "id": "department-of-finance-2023-entity-office-of-the-auditor-general",
       "name": "Office of the Auditor General",
-      "value": 0.128491
+      "value": 0.127856
     },
     {
       "id": "department-of-finance-2023-entity-financial-transactions-and-reports-analysis-centre-of-canada",
@@ -369,97 +432,7 @@
     {
       "id": "department-of-finance-2023-entity-financial-consumer-agency-of-canada",
       "name": "Financial Consumer Agency of Canada",
-      "value": 0.053951
-    }
-  ],
-  "votes": [
-    {
-      "id": "department-of-finance-2023-department-of-finance-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 345753278,
-      "used": 329319150,
-      "lapsed": 16434128
-    },
-    {
-      "id": "department-of-finance-2023-department-of-finance-vote15",
-      "vote": "Vote 15",
-      "description": "Authority for amount by way of grants to the World Bank's Multi-Donor Trust Fund for Ukraine pursuant to the Bretton Woods and Related Agreements Act",
-      "totalAvailable": 1,
-      "used": 0,
-      "lapsed": 1
-    },
-    {
-      "id": "department-of-finance-2023-department-of-finance-vote5",
-      "vote": "Vote 5",
-      "description": "Authority for amount by way of direct payments to the International Development Association pursuant to Bretton Woods and Related Agreements Act",
-      "totalAvailable": 1,
-      "used": 0,
-      "lapsed": 1
-    },
-    {
-      "id": "department-of-finance-2023-department-of-finance-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 117054243319,
-      "used": 116985671198,
-      "lapsed": 68572121
-    },
-    {
-      "id": "department-of-finance-2023-financial-consumer-agency-of-canada-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 53951383,
-      "used": 53951383,
-      "lapsed": 0
-    },
-    {
-      "id": "department-of-finance-2023-financial-transactions-and-reports-analysis-centre-of-canada-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 88082006,
-      "used": 80513411,
-      "lapsed": 7568595
-    },
-    {
-      "id": "department-of-finance-2023-financial-transactions-and-reports-analysis-centre-of-canada-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 7640716,
-      "used": 7639968,
-      "lapsed": 748
-    },
-    {
-      "id": "department-of-finance-2023-office-of-the-auditor-general-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 125257182,
-      "used": 115535026,
-      "lapsed": 9722156
-    },
-    {
-      "id": "department-of-finance-2023-office-of-the-auditor-general-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 12958843,
-      "used": 12956173,
-      "lapsed": 2670
-    },
-    {
-      "id": "department-of-finance-2023-office-of-the-superintendent-of-financial-institutions-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 1244352,
-      "used": 1244352,
-      "lapsed": 0
-    },
-    {
-      "id": "department-of-finance-2023-office-of-the-superintendent-of-financial-institutions-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 312967849,
-      "used": 238501788,
-      "lapsed": 74466061
+      "value": 0.053952
     }
   ],
   "transferPayments": [

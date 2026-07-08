@@ -1,6 +1,6 @@
 # Federal export report
 
-Generated: 2026-07-06T19:38:12Z
+Generated: 2026-07-08T19:25:05Z
 
 Shipped years: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025
 
@@ -24,6 +24,124 @@ Portfolio totals are scaled to tie to the restated Consolidated Statement of Ope
 - **2023**: factor 1.00000 (deviation 0.0000%, actuarial carve-out 0.0000%, restatement 0.0000%)
 - **2024**: factor 1.00000 (deviation 0.0000%, actuarial carve-out 0.0000%, restatement 0.0000%)
 - **2025**: factor 1.00000 (deviation 0.0000%, actuarial carve-out 0.0000%, restatement 0.0000%)
+
+## Transfer-program fanout skips (non-blocking)
+
+Transfer objects left unsplit because no organization holds ≥90% of the portfolio's transfer-payments object that year (program children can only attach to a single dominant organization — the transfers dataset is ministry-keyed).
+
+### 2014 (8)
+
+- **environment-and-climate-change**: largest organization holds 82.9% of the transfer object (<90%)
+- **global-affairs-canada**: largest organization holds 81.1% of the transfer object (<90%)
+- **health-canada**: largest organization holds 59.1% of the transfer object (<90%)
+- **innovation-science-and-industry**: largest organization holds 38.2% of the transfer object (<90%)
+- **parliament**: largest organization holds 67.8% of the transfer object (<90%)
+- **public-safety-canada**: largest organization holds 88.0% of the transfer object (<90%)
+- **public-services-and-procurement-canada**: largest organization holds -0.0% of the transfer object (<90%)
+- **regional-economic-development**: largest organization holds 28.0% of the transfer object (<90%)
+
+### 2015 (6)
+
+- **environment-and-climate-change**: largest organization holds 87.8% of the transfer object (<90%)
+- **health-canada**: largest organization holds 59.7% of the transfer object (<90%)
+- **innovation-science-and-industry**: largest organization holds 38.4% of the transfer object (<90%)
+- **parliament**: largest organization holds 67.9% of the transfer object (<90%)
+- **public-safety-canada**: largest organization holds 75.5% of the transfer object (<90%)
+- **regional-economic-development**: largest organization holds 34.3% of the transfer object (<90%)
+
+### 2016 (5)
+
+- **environment-and-climate-change**: largest organization holds 87.6% of the transfer object (<90%)
+- **health-canada**: largest organization holds 61.1% of the transfer object (<90%)
+- **innovation-science-and-industry**: largest organization holds 29.5% of the transfer object (<90%)
+- **parliament**: largest organization holds 68.5% of the transfer object (<90%)
+- **public-safety-canada**: largest organization holds 57.5% of the transfer object (<90%)
+
+### 2017 (5)
+
+- **environment-and-climate-change**: largest organization holds 88.1% of the transfer object (<90%)
+- **health-canada**: largest organization holds 61.8% of the transfer object (<90%)
+- **innovation-science-and-industry**: largest organization holds 34.2% of the transfer object (<90%)
+- **parliament**: largest organization holds 67.8% of the transfer object (<90%)
+- **public-safety-canada**: largest organization holds 82.6% of the transfer object (<90%)
+
+### 2018 (6)
+
+- **environment-and-climate-change**: largest organization holds 89.7% of the transfer object (<90%)
+- **health-canada**: largest organization holds 57.8% of the transfer object (<90%)
+- **indigenous-services-and-northern-affairs**: largest organization holds 66.8% of the transfer object (<90%)
+- **innovation-science-and-industry**: largest organization holds 36.2% of the transfer object (<90%)
+- **parliament**: largest organization holds 65.7% of the transfer object (<90%)
+- **public-safety-canada**: largest organization holds 77.0% of the transfer object (<90%)
+
+### 2019 (8)
+
+- **health-canada**: largest organization holds 50.5% of the transfer object (<90%)
+- **indigenous-services-and-northern-affairs**: largest organization holds 73.3% of the transfer object (<90%)
+- **innovation-science-and-industry**: largest organization holds 40.9% of the transfer object (<90%)
+- **parliament**: largest organization holds 67.9% of the transfer object (<90%)
+- **public-safety-canada**: largest organization holds 65.3% of the transfer object (<90%)
+- **public-services-and-procurement-canada**: largest organization holds -0.0% of the transfer object (<90%)
+- **regional-economic-development**: largest organization holds 28.7% of the transfer object (<90%)
+- **women-and-gender-equality**: largest organization holds 51.1% of the transfer object (<90%)
+
+### 2020 (6)
+
+- **health-canada**: largest organization holds 52.9% of the transfer object (<90%)
+- **indigenous-services-and-northern-affairs**: largest organization holds 79.9% of the transfer object (<90%)
+- **innovation-science-and-industry**: largest organization holds 40.4% of the transfer object (<90%)
+- **parliament**: largest organization holds 70.8% of the transfer object (<90%)
+- **public-safety-canada**: largest organization holds 68.7% of the transfer object (<90%)
+- **regional-economic-development**: largest organization holds 25.5% of the transfer object (<90%)
+
+### 2021 (7)
+
+- **health-canada**: largest organization holds 51.3% of the transfer object (<90%)
+- **indigenous-services-and-northern-affairs**: largest organization holds 78.0% of the transfer object (<90%)
+- **innovation-science-and-industry**: largest organization holds 37.8% of the transfer object (<90%)
+- **parliament**: largest organization holds 68.9% of the transfer object (<90%)
+- **privy-council**: largest organization holds -0.0% of the transfer object (<90%)
+- **public-safety-canada**: largest organization holds 60.3% of the transfer object (<90%)
+- **regional-economic-development**: largest organization holds 33.0% of the transfer object (<90%)
+
+### 2022 (7)
+
+- **environment-and-climate-change**: largest organization holds 85.8% of the transfer object (<90%)
+- **health-canada**: largest organization holds 63.7% of the transfer object (<90%)
+- **indigenous-services-and-northern-affairs**: largest organization holds 84.0% of the transfer object (<90%)
+- **innovation-science-and-industry**: largest organization holds 44.8% of the transfer object (<90%)
+- **parliament**: largest organization holds 69.2% of the transfer object (<90%)
+- **public-safety-canada**: largest organization holds 64.1% of the transfer object (<90%)
+- **regional-economic-development**: largest organization holds 22.8% of the transfer object (<90%)
+
+### 2023 (8)
+
+- **environment-and-climate-change**: largest organization holds 87.9% of the transfer object (<90%)
+- **health-canada**: largest organization holds 49.2% of the transfer object (<90%)
+- **indigenous-services-and-northern-affairs**: largest organization holds 71.0% of the transfer object (<90%)
+- **innovation-science-and-industry**: largest organization holds 49.1% of the transfer object (<90%)
+- **parliament**: largest organization holds 69.6% of the transfer object (<90%)
+- **public-safety-canada**: largest organization holds 85.0% of the transfer object (<90%)
+- **public-services-and-procurement-canada**: largest organization holds -0.0% of the transfer object (<90%)
+- **regional-economic-development**: largest organization holds 26.1% of the transfer object (<90%)
+
+### 2024 (7)
+
+- **environment-and-climate-change**: largest organization holds 89.5% of the transfer object (<90%)
+- **health-canada**: largest organization holds 73.1% of the transfer object (<90%)
+- **indigenous-services-and-northern-affairs**: largest organization holds 75.8% of the transfer object (<90%)
+- **innovation-science-and-industry**: largest organization holds 53.1% of the transfer object (<90%)
+- **parliament**: largest organization holds 74.7% of the transfer object (<90%)
+- **public-safety-canada**: largest organization holds 62.9% of the transfer object (<90%)
+- **regional-economic-development**: largest organization holds 27.2% of the transfer object (<90%)
+
+### 2025 (5)
+
+- **health-canada**: largest organization holds 79.3% of the transfer object (<90%)
+- **indigenous-services-and-northern-affairs**: largest organization holds 65.7% of the transfer object (<90%)
+- **innovation-science-and-industry**: largest organization holds 54.6% of the transfer object (<90%)
+- **parliament**: largest organization holds 72.2% of the transfer object (<90%)
+- **regional-economic-development**: largest organization holds 24.6% of the transfer object (<90%)
 
 ## miniSankey standard-object reconciliation (non-blocking)
 

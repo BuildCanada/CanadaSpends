@@ -3,9 +3,9 @@
   "slug": "parliament",
   "financialYearEnding": 2019,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 0.765701,
-  "percentageOfFederal": 0.2212,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 0.731599,
+  "percentageOfFederal": 0.2113,
   "historicalShare": [
     {
       "year": 2014,
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 0.221
+      "percentage": 0.2066
     },
     {
       "year": 2018,
-      "percentage": 0.2309
+      "percentage": 0.2209
     },
     {
       "year": 2019,
-      "percentage": 0.2212
+      "percentage": 0.2113
     },
     {
       "year": 2020,
-      "percentage": 0.2108
+      "percentage": 0.203
     },
     {
       "year": 2021,
-      "percentage": 0.1384
+      "percentage": 0.1345
     },
     {
       "year": 2022,
-      "percentage": 0.1565
+      "percentage": 0.151
     },
     {
       "year": 2023,
-      "percentage": 0.1784
+      "percentage": 0.1717
     },
     {
       "year": 2024,
-      "percentage": 0.1849
+      "percentage": 0.1784
     },
     {
       "year": 2025,
-      "percentage": 0.1826
+      "percentage": 0.1754
     }
   ],
   "miniSankey": {
@@ -492,7 +492,7 @@
     {
       "id": "parliament-2019-entity-house-of-commons",
       "name": "House of Commons",
-      "value": 0.520036
+      "value": 0.487413
     },
     {
       "id": "parliament-2019-entity-senate",
@@ -502,12 +502,12 @@
     {
       "id": "parliament-2019-entity-parliamentary-protective-service",
       "name": "Parliamentary Protective Service",
-      "value": 0.084456
+      "value": 0.083845
     },
     {
       "id": "parliament-2019-entity-library-of-parliament",
       "name": "Library of Parliament",
-      "value": 0.048396
+      "value": 0.047529
     },
     {
       "id": "parliament-2019-entity-office-of-the-conflict-of-interest-and-ethics-commissioner",
@@ -528,136 +528,6 @@
       "id": "parliament-2019-entity-office-of-the-senate-ethics-officer",
       "name": "Office of the Senate Ethics Officer",
       "value": 0.001141
-    }
-  ],
-  "votes": [
-    {
-      "id": "parliament-2019-house-of-commons-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 395533998,
-      "used": 376559351,
-      "lapsed": 18974647
-    },
-    {
-      "id": "parliament-2019-house-of-commons-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 143476755,
-      "used": 143476755,
-      "lapsed": 0
-    },
-    {
-      "id": "parliament-2019-library-of-parliament-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 44409962,
-      "used": 43748445,
-      "lapsed": 661517
-    },
-    {
-      "id": "parliament-2019-library-of-parliament-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 4647901,
-      "used": 4647901,
-      "lapsed": 0
-    },
-    {
-      "id": "parliament-2019-office-of-the-conflict-of-interest-and-ethics-commissioner-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 6134141,
-      "used": 5826882,
-      "lapsed": 307259
-    },
-    {
-      "id": "parliament-2019-office-of-the-conflict-of-interest-and-ethics-commissioner-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 690883,
-      "used": 690883,
-      "lapsed": 0
-    },
-    {
-      "id": "parliament-2019-office-of-the-parliamentary-budget-officer-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 6983524,
-      "used": 5046675,
-      "lapsed": 1936849
-    },
-    {
-      "id": "parliament-2019-office-of-the-parliamentary-budget-officer-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 384730,
-      "used": 384730,
-      "lapsed": 0
-    },
-    {
-      "id": "parliament-2019-office-of-the-senate-ethics-officer-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 1264777,
-      "used": 1045612,
-      "lapsed": 219165
-    },
-    {
-      "id": "parliament-2019-office-of-the-senate-ethics-officer-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 95667,
-      "used": 95667,
-      "lapsed": 0
-    },
-    {
-      "id": "parliament-2019-parliamentary-protective-service-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 85791418,
-      "used": 78095817,
-      "lapsed": 7695601
-    },
-    {
-      "id": "parliament-2019-parliamentary-protective-service-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 6359742,
-      "used": 6359742,
-      "lapsed": 0
-    },
-    {
-      "id": "parliament-2019-secretariat-of-the-national-security-and-intelligence-committee-of-parliamentarians-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 6572965,
-      "used": 3487129,
-      "lapsed": 3085836
-    },
-    {
-      "id": "parliament-2019-secretariat-of-the-national-security-and-intelligence-committee-of-parliamentarians-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 145143,
-      "used": 145143,
-      "lapsed": 0
-    },
-    {
-      "id": "parliament-2019-senate-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 74151222,
-      "used": 63714122,
-      "lapsed": 10437100
-    },
-    {
-      "id": "parliament-2019-senate-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 32376009,
-      "used": 32376009,
-      "lapsed": 0
     }
   ],
   "transferPayments": [

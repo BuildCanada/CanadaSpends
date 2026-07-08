@@ -3,57 +3,57 @@
   "slug": "agriculture-and-agri-food",
   "financialYearEnding": 2025,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 4.096411,
-  "percentageOfFederal": 0.7485,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 4.052535,
+  "percentageOfFederal": 0.7405,
   "historicalShare": [
     {
       "year": 2014,
-      "percentage": 0.9064
+      "percentage": 0.9497
     },
     {
       "year": 2015,
-      "percentage": 0.7583
+      "percentage": 0.8114
     },
     {
       "year": 2016,
-      "percentage": 0.692
+      "percentage": 0.7419
     },
     {
       "year": 2017,
-      "percentage": 0.8794
+      "percentage": 0.8386
     },
     {
       "year": 2018,
-      "percentage": 0.6183
+      "percentage": 0.6015
     },
     {
       "year": 2019,
-      "percentage": 0.6385
+      "percentage": 0.6251
     },
     {
       "year": 2020,
-      "percentage": 0.7011
+      "percentage": 0.6893
     },
     {
       "year": 2021,
-      "percentage": 0.4797
+      "percentage": 0.4704
     },
     {
       "year": 2022,
-      "percentage": 0.6996
+      "percentage": 0.6915
     },
     {
       "year": 2023,
-      "percentage": 0.7625
+      "percentage": 0.7522
     },
     {
       "year": 2024,
-      "percentage": 0.8122
+      "percentage": 0.8044
     },
     {
       "year": 2025,
-      "percentage": 0.7485
+      "percentage": 0.7405
     }
   ],
   "miniSankey": {
@@ -69,7 +69,70 @@
             {
               "id": "agriculture-and-agri-food-2025-department-of-agriculture-and-agri-food-obj-10",
               "name": "Transfer payments",
-              "amount": 3.158421
+              "children": [
+                {
+                  "id": "agriculture-and-agri-food-2025-tp-0001",
+                  "name": "Contribution payments for the AgriInsurance program (Farm Income Protection Act)",
+                  "amount": 1.262172
+                },
+                {
+                  "id": "agriculture-and-agri-food-2025-tp-0003",
+                  "name": "Contribution payments for the AgriStability program (Farm Income Protection Act)",
+                  "amount": 0.322673
+                },
+                {
+                  "id": "agriculture-and-agri-food-2025-tp-0011",
+                  "name": "Contributions in support of Provincial/Territorial delivered cost-shared programs under the Sustainable Canadian Agricultural Partnership",
+                  "amount": 0.275254
+                },
+                {
+                  "id": "agriculture-and-agri-food-2025-tp-0032",
+                  "name": "Grant payments for the Dairy Direct Payment Program (Farm Income Protection Act)",
+                  "amount": 0.24462
+                },
+                {
+                  "id": "agriculture-and-agri-food-2025-tp-0029",
+                  "name": "Grant payments for the AgriInvest program (Farm Income Protection Act)",
+                  "amount": 0.164988
+                },
+                {
+                  "id": "agriculture-and-agri-food-2025-tp-0009",
+                  "name": "Contribution payments in support of the Poultry and Egg On-Farm Investment Program under Supply Management Initiatives",
+                  "amount": 0.12676
+                },
+                {
+                  "id": "agriculture-and-agri-food-2025-tp-0025",
+                  "name": "Payments in connection with the Agricultural Marketing Programs Act (S.C., 1997, c. C-34)",
+                  "amount": 0.121968
+                },
+                {
+                  "id": "agriculture-and-agri-food-2025-tp-0022",
+                  "name": "Contributions to support the On-Farm Climate Action Stream of the Agricultural Climate Solutions",
+                  "amount": 0.108379
+                },
+                {
+                  "id": "agriculture-and-agri-food-2025-tp-0018",
+                  "name": "Contributions in support of the Agricultural Clean Technology program",
+                  "amount": 0.103749
+                },
+                {
+                  "id": "agriculture-and-agri-food-2025-tp-0030",
+                  "name": "Grant payments for the AgriStability program (Farm Income Protection Act)",
+                  "amount": 0.097505
+                },
+                {
+                  "id": "agriculture-and-agri-food-2025-tp-0010",
+                  "name": "Contribution payments in support of the Supply Management Processing Investment Fund under Supply Management Initiatives",
+                  "amount": 0.087714
+                },
+                {
+                  "id": "agriculture-and-agri-food-2025-department-of-agriculture-and-agri-food-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.242639,
+                  "isAggregate": true,
+                  "count": 22
+                }
+              ]
             },
             {
               "id": "agriculture-and-agri-food-2025-department-of-agriculture-and-agri-food-obj-1",
@@ -209,7 +272,7 @@
     {
       "id": "agriculture-and-agri-food-2025-entity-department-of-agriculture-and-agri-food",
       "name": "Department of Agriculture and Agri-Food",
-      "value": 4.074377
+      "value": 4.030501
     },
     {
       "id": "agriculture-and-agri-food-2025-entity-canadian-grain-commission",
@@ -220,64 +283,6 @@
       "id": "agriculture-and-agri-food-2025-entity-canadian-dairy-commission",
       "name": "Canadian Dairy Commission",
       "value": 0.005149
-    }
-  ],
-  "votes": [
-    {
-      "id": "agriculture-and-agri-food-2025-canadian-dairy-commission-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 5148853,
-      "used": 5148853,
-      "lapsed": 0
-    },
-    {
-      "id": "agriculture-and-agri-food-2025-canadian-grain-commission-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 6301924,
-      "used": 6287650,
-      "lapsed": 14274
-    },
-    {
-      "id": "agriculture-and-agri-food-2025-canadian-grain-commission-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 112710633,
-      "used": 10597335,
-      "lapsed": 102113298
-    },
-    {
-      "id": "agriculture-and-agri-food-2025-department-of-agriculture-and-agri-food-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 784909152,
-      "used": 761690346,
-      "lapsed": 23218806
-    },
-    {
-      "id": "agriculture-and-agri-food-2025-department-of-agriculture-and-agri-food-vote10",
-      "vote": "Vote 10",
-      "description": "Grants and contributions",
-      "totalAvailable": 956612170,
-      "used": 890290778,
-      "lapsed": 66321392
-    },
-    {
-      "id": "agriculture-and-agri-food-2025-department-of-agriculture-and-agri-food-vote5",
-      "vote": "Vote 5",
-      "description": "Capital expenditures",
-      "totalAvailable": 73922867,
-      "used": 67788769,
-      "lapsed": 6134098
-    },
-    {
-      "id": "agriculture-and-agri-food-2025-department-of-agriculture-and-agri-food-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 2368754142,
-      "used": 2354607542,
-      "lapsed": 14146600
     }
   ],
   "transferPayments": [

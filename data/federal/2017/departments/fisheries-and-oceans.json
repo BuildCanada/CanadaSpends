@@ -2,10 +2,10 @@
   "name": "Fisheries, Oceans and the Canadian Coast Guard",
   "slug": "fisheries-and-oceans",
   "financialYearEnding": 2017,
-  "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 2.434022,
-  "percentageOfFederal": 0.7856,
+  "reportedAs": "Fisheries,Oceans and the Canadian Coast Guard",
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 2.352678,
+  "percentageOfFederal": 0.7594,
   "historicalShare": [
     {
       "year": 2014,
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 0.7856
+      "percentage": 0.7594
     },
     {
       "year": 2018,
-      "percentage": 0.8065
+      "percentage": 0.7937
     },
     {
       "year": 2019,
-      "percentage": 0.9602
+      "percentage": 0.9483
     },
     {
       "year": 2020,
-      "percentage": 0.8515
+      "percentage": 0.8396
     },
     {
       "year": 2021,
-      "percentage": 0.5259
+      "percentage": 0.5196
     },
     {
       "year": 2022,
-      "percentage": 0.7545
+      "percentage": 0.7464
     },
     {
       "year": 2023,
-      "percentage": 0.7915
+      "percentage": 0.7817
     },
     {
       "year": 2024,
-      "percentage": 0.8807
+      "percentage": 0.8719
     },
     {
       "year": 2025,
-      "percentage": 0.9614
+      "percentage": 0.9529
     }
   ],
   "miniSankey": {
@@ -99,7 +99,70 @@
             {
               "id": "fisheries-and-oceans-2017-department-of-fisheries-and-oceans-obj-10",
               "name": "Transfer payments",
-              "amount": 0.099552
+              "children": [
+                {
+                  "id": "fisheries-and-oceans-2017-tp-0004",
+                  "name": "Contributions to support increased Native participation in commercial fisheries, cooperative fisheries management arrangements and consultations respecting Aboriginal fisheries agreements",
+                  "amount": 0.045679
+                },
+                {
+                  "id": "fisheries-and-oceans-2017-tp-0009",
+                  "name": "Contributions under the Aboriginal Aquatic Resource and Oceans Management Program",
+                  "amount": 0.021611
+                },
+                {
+                  "id": "fisheries-and-oceans-2017-tp-0007",
+                  "name": "Contributions to support the Recreational Fisheries Conservation Partnerships Program",
+                  "amount": 0.00984
+                },
+                {
+                  "id": "fisheries-and-oceans-2017-tp-0000",
+                  "name": "Contribution agreements to permit the Canadian Coast Guard Auxiliary Associations to carry out authorized activities related to maritime Search and Rescue operations, Search and Rescue prevention and other safety related activities",
+                  "amount": 0.005521
+                },
+                {
+                  "id": "fisheries-and-oceans-2017-tp-0010",
+                  "name": "Ocean and Freshwater Science Contribution Program",
+                  "amount": 0.004273
+                },
+                {
+                  "id": "fisheries-and-oceans-2017-tp-0012",
+                  "name": "Grant Program for the disposal of small craft harbours",
+                  "amount": 0.0034
+                },
+                {
+                  "id": "fisheries-and-oceans-2017-tp-0006",
+                  "name": "Contributions to support the Academic Research Contribution Program for the support of academic research and development related to science priorities",
+                  "amount": 0.0023
+                },
+                {
+                  "id": "fisheries-and-oceans-2017-tp-0011",
+                  "name": "Participant Funding Program for Reviews Related to Fish, Fish Habitat and Navigation",
+                  "amount": 0.002059
+                },
+                {
+                  "id": "fisheries-and-oceans-2017-tp-0002",
+                  "name": "Contribution to the Pacific Salmon Foundation",
+                  "amount": 0.001586
+                },
+                {
+                  "id": "fisheries-and-oceans-2017-tp-0005",
+                  "name": "Contributions to support organizations associated with research, development, management, and promotion of fisheries and oceans-related issues",
+                  "amount": 0.00124
+                },
+                {
+                  "id": "fisheries-and-oceans-2017-tp-0008",
+                  "name": "Contributions to support the Small Craft Harbours Class Contribution Program",
+                  "amount": 0.001091
+                },
+                {
+                  "id": "fisheries-and-oceans-2017-department-of-fisheries-and-oceans-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.000952,
+                  "isAggregate": true,
+                  "count": 4
+                }
+              ]
             },
             {
               "id": "fisheries-and-oceans-2017-department-of-fisheries-and-oceans-obj-2",
@@ -135,19 +198,9 @@
   },
   "entities": [
     {
-      "id": "fisheries-and-oceans-2017-entity-fisheries-oceans-and-the-canadian-coast-guard",
-      "name": "Fisheries, Oceans and the Canadian Coast Guard",
-      "value": 2.434022
-    }
-  ],
-  "votes": [
-    {
-      "id": "fisheries-and-oceans-2017-fisheries-oceans-and-the-canadian-coast-guard-vote",
-      "vote": "All votes",
-      "description": "Total appropriations (vote-level detail not published for this edition)",
-      "totalAvailable": 2845980969,
-      "used": 2434022150,
-      "lapsed": 411958819
+      "id": "fisheries-and-oceans-2017-entity-department-of-fisheries-and-oceans",
+      "name": "Department of Fisheries and Oceans",
+      "value": 2.352678
     }
   ],
   "transferPayments": [

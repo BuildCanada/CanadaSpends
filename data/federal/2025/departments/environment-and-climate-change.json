@@ -3,9 +3,9 @@
   "slug": "environment-and-climate-change",
   "financialYearEnding": 2025,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 3.191911,
-  "percentageOfFederal": 0.5832,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 3.113775,
+  "percentageOfFederal": 0.5689,
   "historicalShare": [
     {
       "year": 2014,
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 0.7717
+      "percentage": 0.7218
     },
     {
       "year": 2018,
-      "percentage": 0.7879
+      "percentage": 0.7637
     },
     {
       "year": 2019,
-      "percentage": 0.8616
+      "percentage": 0.8381
     },
     {
       "year": 2020,
-      "percentage": 0.8486
+      "percentage": 0.8271
     },
     {
       "year": 2021,
-      "percentage": 0.4962
+      "percentage": 0.4858
     },
     {
       "year": 2022,
-      "percentage": 0.5987
+      "percentage": 0.5856
     },
     {
       "year": 2023,
-      "percentage": 0.6683
+      "percentage": 0.6538
     },
     {
       "year": 2024,
-      "percentage": 0.7649
+      "percentage": 0.7503
     },
     {
       "year": 2025,
-      "percentage": 0.5832
+      "percentage": 0.5689
     }
   ],
   "miniSankey": {
@@ -69,7 +69,70 @@
             {
               "id": "environment-and-climate-change-2025-department-of-the-environment-obj-10",
               "name": "Transfer payments",
-              "amount": 1.534722
+              "children": [
+                {
+                  "id": "environment-and-climate-change-2025-tp-0007",
+                  "name": "Contribution to the Federation of Canadian Municipalities for the Green Municipal Fund",
+                  "amount": 0.514712
+                },
+                {
+                  "id": "environment-and-climate-change-2025-tp-0016",
+                  "name": "Contributions in support of the Canada Nature Fund",
+                  "amount": 0.315271
+                },
+                {
+                  "id": "environment-and-climate-change-2025-tp-0018",
+                  "name": "Contributions in support of the Low Carbon Economy Fund",
+                  "amount": 0.186577
+                },
+                {
+                  "id": "environment-and-climate-change-2025-tp-0020",
+                  "name": "Contributions in support of the Output-Based Pricing System Proceeds Fund",
+                  "amount": 0.140499
+                },
+                {
+                  "id": "environment-and-climate-change-2025-tp-0010",
+                  "name": "Contributions in support of Conserving Nature",
+                  "amount": 0.107209
+                },
+                {
+                  "id": "environment-and-climate-change-2025-tp-0024",
+                  "name": "Grant Program to Return Fuel Charge Proceeds to Indigenous Governments",
+                  "amount": 0.085528
+                },
+                {
+                  "id": "environment-and-climate-change-2025-tp-0014",
+                  "name": "Contributions in support of Taking Action on Clean Growth and Climate Change",
+                  "amount": 0.033975
+                },
+                {
+                  "id": "environment-and-climate-change-2025-tp-0013",
+                  "name": "Contributions in support of Preventing and Managing Pollution",
+                  "amount": 0.025275
+                },
+                {
+                  "id": "environment-and-climate-change-2025-tp-0011",
+                  "name": "Contributions in support of Freshwater Stewardship",
+                  "amount": 0.023629
+                },
+                {
+                  "id": "environment-and-climate-change-2025-tp-0009",
+                  "name": "Contributions in support of Canada's International Climate Finance Program",
+                  "amount": 0.023296
+                },
+                {
+                  "id": "environment-and-climate-change-2025-tp-0030",
+                  "name": "Grants in support of Canada's International Climate Finance Program",
+                  "amount": 0.020853
+                },
+                {
+                  "id": "environment-and-climate-change-2025-department-of-the-environment-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.057898,
+                  "isAggregate": true,
+                  "count": 17
+                }
+              ]
             },
             {
               "id": "environment-and-climate-change-2025-department-of-the-environment-obj-1",
@@ -254,99 +317,17 @@
     {
       "id": "environment-and-climate-change-2025-entity-department-of-the-environment",
       "name": "Department of the Environment",
-      "value": 3.043816
+      "value": 2.965769
     },
     {
       "id": "environment-and-climate-change-2025-entity-impact-assessment-agency-of-canada",
       "name": "Impact Assessment Agency of Canada",
-      "value": 0.104876
+      "value": 0.104787
     },
     {
       "id": "environment-and-climate-change-2025-entity-canada-water-agency",
       "name": "Canada Water Agency",
       "value": 0.043219
-    }
-  ],
-  "votes": [
-    {
-      "id": "environment-and-climate-change-2025-canada-water-agency-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 28842609,
-      "used": 17183147,
-      "lapsed": 11659462
-    },
-    {
-      "id": "environment-and-climate-change-2025-canada-water-agency-vote5",
-      "vote": "Vote 5",
-      "description": "Grants and contributions",
-      "totalAvailable": 24841900,
-      "used": 24330459,
-      "lapsed": 511441
-    },
-    {
-      "id": "environment-and-climate-change-2025-canada-water-agency-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 1705167,
-      "used": 1705167,
-      "lapsed": 0
-    },
-    {
-      "id": "environment-and-climate-change-2025-department-of-the-environment-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 1309309392,
-      "used": 1268149028,
-      "lapsed": 41160364
-    },
-    {
-      "id": "environment-and-climate-change-2025-department-of-the-environment-vote10",
-      "vote": "Vote 10",
-      "description": "Grants and contributions",
-      "totalAvailable": 1386115035,
-      "used": 1301980939,
-      "lapsed": 84134096
-    },
-    {
-      "id": "environment-and-climate-change-2025-department-of-the-environment-vote5",
-      "vote": "Vote 5",
-      "description": "Capital expenditures",
-      "totalAvailable": 124439028,
-      "used": 103291576,
-      "lapsed": 21147452
-    },
-    {
-      "id": "environment-and-climate-change-2025-department-of-the-environment-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 372088885,
-      "used": 370394850,
-      "lapsed": 1694035
-    },
-    {
-      "id": "environment-and-climate-change-2025-impact-assessment-agency-of-canada-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 89277415,
-      "used": 75030222,
-      "lapsed": 14247193
-    },
-    {
-      "id": "environment-and-climate-change-2025-impact-assessment-agency-of-canada-vote5",
-      "vote": "Vote 5",
-      "description": "Grants and contributions",
-      "totalAvailable": 21253903,
-      "used": 21253902,
-      "lapsed": 1
-    },
-    {
-      "id": "environment-and-climate-change-2025-impact-assessment-agency-of-canada-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 8591635,
-      "used": 8591635,
-      "lapsed": 0
     }
   ],
   "transferPayments": [

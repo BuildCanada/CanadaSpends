@@ -11,7 +11,7 @@ ESDC spent {{totalSpending}} in fiscal year (FY) 2024, or {{percentageOfFederal}
 
 {{section:entities}}
 
-The bulk of ESDC's spending flows directly to individuals and provinces as statutory transfers rather than departmental operations. In FY 2024 the largest were Old Age Security ($57.4 billion) and the Guaranteed Income Supplement ($18.0 billion), followed by transfers to provinces and territories for early learning and child care ($6.2 billion) and Canada Student Grants ($2.7 billion). Employment Insurance and the Canada Pension Plan operate through separate accounts and fall outside the department's appropriations shown here.
+The bulk of ESDC's spending flows directly to individuals and provinces as statutory transfers rather than departmental operations. In FY 2024 the largest were Old Age Security ($57.4 billion) and the Guaranteed Income Supplement ($18.0 billion), followed by transfers to provinces and territories for early learning and child care ($6.2 billion) and Canada Student Grants ($2.7 billion). Employment Insurance and the Canada Pension Plan operate through separate accounts and fall outside the department's spending shown here.
 
 {{section:historicalShare}}
 
@@ -38,4 +38,5 @@ from JSON; share actually fell 21.4%→18.9% since 2014) and the pandemic totals
 Dropped generic direct/indirect boilerplate and the truncated entity list (top entities
 beyond the core department are sub-$25M and non-informative).
 Section tokens (spec Part A) added, EN/FR identical, reproducing the original production component order: stats, entities, historicalShare, miniSankey. Unreferenced sections auto-append in default order: lineItems.
+Drop-authorities edit (2026-07-08): reworded "outside the department's appropriations shown here" for the net standard-object presentation; no figures changed.
 -->

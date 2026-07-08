@@ -3,17 +3,17 @@
   "slug": "department-of-finance",
   "financialYearEnding": 2019,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 94.43131,
-  "percentageOfFederal": 27.2779,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 94.430931,
+  "percentageOfFederal": 27.2778,
   "historicalShare": [
     {
       "year": 2014,
-      "percentage": 30.9373
+      "percentage": 31.0335
     },
     {
       "year": 2015,
-      "percentage": 30.731
+      "percentage": 30.7352
     },
     {
       "year": 2016,
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 28.6373
+      "percentage": 28.6369
     },
     {
       "year": 2018,
-      "percentage": 27.4523
+      "percentage": 27.4522
     },
     {
       "year": 2019,
-      "percentage": 27.2779
+      "percentage": 27.2778
     },
     {
       "year": 2020,
-      "percentage": 26.5609
+      "percentage": 26.5605
     },
     {
       "year": 2021,
-      "percentage": 18.327
+      "percentage": 18.3268
     },
     {
       "year": 2022,
-      "percentage": 21.2123
+      "percentage": 21.2122
     },
     {
       "year": 2023,
-      "percentage": 24.3876
+      "percentage": 24.3874
     },
     {
       "year": 2024,
-      "percentage": 26.1038
+      "percentage": 26.1034
     },
     {
       "year": 2025,
-      "percentage": 26.2859
+      "percentage": 26.2858
     }
   ],
   "miniSankey": {
@@ -69,7 +69,68 @@
             {
               "id": "department-of-finance-2019-department-of-finance-obj-10",
               "name": "Transfer payments",
-              "amount": 71.065432
+              "children": [
+                {
+                  "id": "department-of-finance-2019-tp-0006",
+                  "name": "Canada Health Transfer (Part V.1—Federal-Provincial Fiscal Arrangements Act)",
+                  "amount": 36.009009
+                },
+                {
+                  "id": "department-of-finance-2019-tp-0012",
+                  "name": "Fiscal Equalization (Part I—Federal-Provincial Fiscal Arrangements Act)",
+                  "amount": 17.700594
+                },
+                {
+                  "id": "department-of-finance-2019-tp-0007",
+                  "name": "Canada Social Transfer (Part V.1—Federal-Provincial Fiscal Arrangements Act)",
+                  "amount": 13.221436
+                },
+                {
+                  "id": "department-of-finance-2019-tp-0016",
+                  "name": "Territorial Financing (Part I.1—Federal-Provincial Fiscal Arrangements Act)",
+                  "amount": 3.534208
+                },
+                {
+                  "id": "department-of-finance-2019-tp-0014",
+                  "name": "Payments to International Development Association",
+                  "amount": 0.412314
+                },
+                {
+                  "id": "department-of-finance-2019-tp-0010",
+                  "name": "Establishment of a Canadian Securities Regulation and Canadian Regulatory Authority",
+                  "amount": 0.071985
+                },
+                {
+                  "id": "department-of-finance-2019-tp-0009",
+                  "name": "Debt payments on behalf of poor countries to International Organizations pursuant to section 18(1) of the Economic Recovery Act",
+                  "amount": 0.047803
+                },
+                {
+                  "id": "department-of-finance-2019-tp-0015",
+                  "name": "Statutory Subsidies (Constitution Acts, 1867–1982, and Other Statutory Authorities)",
+                  "amount": 0.039665
+                },
+                {
+                  "id": "department-of-finance-2019-tp-0003",
+                  "name": "Additional Fiscal Equalization Offset Payment to Nova Scotia (Nova Scotia and Newfoundland and Labrador Additional Fiscal Equalization Offshore Payments Act)",
+                  "amount": 0.016892
+                },
+                {
+                  "id": "department-of-finance-2019-tp-0008",
+                  "name": "Canadian Securities Regulation Regime Transition Office",
+                  "amount": 0.010644
+                },
+                {
+                  "id": "department-of-finance-2019-tp-0000",
+                  "name": "Capacity Funding for Tsimshian First Nations",
+                  "amount": 0.00084
+                },
+                {
+                  "id": "department-of-finance-2019-tp-0002",
+                  "name": "Research and Policy Initiatives Assistance",
+                  "amount": 4.2e-5
+                }
+              ]
             },
             {
               "id": "department-of-finance-2019-department-of-finance-obj-11",
@@ -349,7 +410,7 @@
     {
       "id": "department-of-finance-2019-entity-office-of-the-auditor-general",
       "name": "Office of the Auditor General",
-      "value": 0.08838
+      "value": 0.088002
     },
     {
       "id": "department-of-finance-2019-entity-financial-transactions-and-reports-analysis-centre-of-canada",
@@ -360,96 +421,6 @@
       "id": "department-of-finance-2019-entity-financial-consumer-agency-of-canada",
       "name": "Financial Consumer Agency of Canada",
       "value": 0.025545
-    }
-  ],
-  "votes": [
-    {
-      "id": "department-of-finance-2019-department-of-finance-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 112112937,
-      "used": 108971553,
-      "lapsed": 3141384
-    },
-    {
-      "id": "department-of-finance-2019-department-of-finance-vote10",
-      "vote": "Vote 10",
-      "description": "Canadian Securities Regulation Regime Transition Office (Canadian Securities Regulation Regime Transition Office Act)",
-      "totalAvailable": 1,
-      "used": 0,
-      "lapsed": 1
-    },
-    {
-      "id": "department-of-finance-2019-department-of-finance-vote5",
-      "vote": "Vote 5",
-      "description": "Authority for amount by way of direct payments to the International Development Association pursuant to Bretton Woods and Related Agreements Act",
-      "totalAvailable": 1,
-      "used": 0,
-      "lapsed": 1
-    },
-    {
-      "id": "department-of-finance-2019-department-of-finance-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 94057311440,
-      "used": 93988738607,
-      "lapsed": 68572833
-    },
-    {
-      "id": "department-of-finance-2019-financial-consumer-agency-of-canada-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 25544529,
-      "used": 25544529,
-      "lapsed": 0
-    },
-    {
-      "id": "department-of-finance-2019-financial-transactions-and-reports-analysis-centre-of-canada-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 49663040,
-      "used": 46465334,
-      "lapsed": 3197706
-    },
-    {
-      "id": "department-of-finance-2019-financial-transactions-and-reports-analysis-centre-of-canada-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 4926322,
-      "used": 4925954,
-      "lapsed": 368
-    },
-    {
-      "id": "department-of-finance-2019-office-of-the-auditor-general-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 86110221,
-      "used": 79476676,
-      "lapsed": 6633545
-    },
-    {
-      "id": "department-of-finance-2019-office-of-the-auditor-general-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 8904419,
-      "used": 8903745,
-      "lapsed": 674
-    },
-    {
-      "id": "department-of-finance-2019-office-of-the-superintendent-of-financial-institutions-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 1310733,
-      "used": 1310733,
-      "lapsed": 0
-    },
-    {
-      "id": "department-of-finance-2019-office-of-the-superintendent-of-financial-institutions-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 234276186,
-      "used": 166972485,
-      "lapsed": 67303701
     }
   ],
   "transferPayments": [

@@ -3,7 +3,7 @@
   "slug": "indigenous-services-and-northern-affairs",
   "financialYearEnding": 2014,
   "reportedAs": "Indian Affairs and Northern Development",
-  "basis": "vol2_appropriations",
+  "basis": "vol2_standard_object_net",
   "totalSpending": 8.052465,
   "percentageOfFederal": 2.8959,
   "historicalShare": [
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 2.9542
+      "percentage": 2.9528
     },
     {
       "year": 2018,
-      "percentage": 3.7417
+      "percentage": 3.737
     },
     {
       "year": 2019,
-      "percentage": 4.6531
+      "percentage": 4.6344
     },
     {
       "year": 2020,
-      "percentage": 5.2414
+      "percentage": 5.2321
     },
     {
       "year": 2021,
-      "percentage": 3.3908
+      "percentage": 3.379
     },
     {
       "year": 2022,
-      "percentage": 4.6419
+      "percentage": 4.6269
     },
     {
       "year": 2023,
-      "percentage": 6.6104
+      "percentage": 6.5934
     },
     {
       "year": 2024,
-      "percentage": 12.0878
+      "percentage": 12.0702
     },
     {
       "year": 2025,
-      "percentage": 7.4599
+      "percentage": 7.4491
     }
   ],
   "miniSankey": {
@@ -69,7 +69,70 @@
             {
               "id": "indigenous-services-and-northern-affairs-2014-indian-affairs-and-northern-development-department-obj-10",
               "name": "Transfer payments",
-              "amount": 6.602425
+              "children": [
+                {
+                  "id": "indigenous-services-and-northern-affairs-2014-tp-0033",
+                  "name": "Payments to support Indians, Inuit and Innu for the purpose of supplying public services in education",
+                  "amount": 1.733287
+                },
+                {
+                  "id": "indigenous-services-and-northern-affairs-2014-tp-0034",
+                  "name": "Payments to support Indians, Inuit and Innu for the purpose of supplying public services in social development",
+                  "amount": 1.695533
+                },
+                {
+                  "id": "indigenous-services-and-northern-affairs-2014-tp-0031",
+                  "name": "Payments to support Indians, Inuit and Innu for the purpose of supplying public services in capital facilities and maintenance",
+                  "amount": 1.006491
+                },
+                {
+                  "id": "indigenous-services-and-northern-affairs-2014-tp-0047",
+                  "name": "Grants to First Nations to settle specific claims negotiated by Canada and/or awarded by the Specific Claims Tribunal",
+                  "amount": 0.369226
+                },
+                {
+                  "id": "indigenous-services-and-northern-affairs-2014-tp-0019",
+                  "name": "Contributions to beneficiaries and various implementing bodies for implementing comprehensive land claim agreements",
+                  "amount": 0.215631
+                },
+                {
+                  "id": "indigenous-services-and-northern-affairs-2014-tp-0030",
+                  "name": "Payments to support Indians, Inuit and Innu for the purpose of supplying public services in Indian government support",
+                  "amount": 0.198941
+                },
+                {
+                  "id": "indigenous-services-and-northern-affairs-2014-tp-0038",
+                  "name": "Grant for Band Support Funding",
+                  "amount": 0.15233
+                },
+                {
+                  "id": "indigenous-services-and-northern-affairs-2014-tp-0063",
+                  "name": "Payments to self‑governing Aboriginal organizations, pursuant to comprehensive land claims agreements, self‑government agreements or treaty legislation",
+                  "amount": 0.13281
+                },
+                {
+                  "id": "indigenous-services-and-northern-affairs-2014-tp-0055",
+                  "name": "Grants to support First Nations, Inuit, Tribal Councils, Organizations or other levels of government for the implementation activities as stipulated in the various agreements",
+                  "amount": 0.127911
+                },
+                {
+                  "id": "indigenous-services-and-northern-affairs-2014-tp-0032",
+                  "name": "Payments to support Indians, Inuit and Innu for the purpose of supplying public services in economic development",
+                  "amount": 0.092406
+                },
+                {
+                  "id": "indigenous-services-and-northern-affairs-2014-tp-0062",
+                  "name": "Payments to Yukon First Nations pursuant to individual self‑government agreements",
+                  "amount": 0.08145
+                },
+                {
+                  "id": "indigenous-services-and-northern-affairs-2014-indian-affairs-and-northern-development-department-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.796409,
+                  "isAggregate": true,
+                  "count": 50
+                }
+              ]
             },
             {
               "id": "indigenous-services-and-northern-affairs-2014-indian-affairs-and-northern-development-department-obj-12",
@@ -271,8 +334,8 @@
   },
   "entities": [
     {
-      "id": "indigenous-services-and-northern-affairs-2014-entity-indian-affairs-and-northern-development",
-      "name": "Indian Affairs and Northern Development",
+      "id": "indigenous-services-and-northern-affairs-2014-entity-indian-affairs-and-northern-development-department",
+      "name": "Indian Affairs and Northern Development Department",
       "value": 8.040872
     },
     {
@@ -288,89 +351,7 @@
     {
       "id": "indigenous-services-and-northern-affairs-2014-entity-registry-of-the-specific-claims-tribunal",
       "name": "Registry of the Specific Claims Tribunal",
-      "value": 0.002141
-    }
-  ],
-  "votes": [
-    {
-      "id": "indigenous-services-and-northern-affairs-2014-canadian-polar-commission-vote25",
-      "vote": "Vote 25",
-      "description": "Program expenditures",
-      "totalAvailable": 2449626,
-      "used": 2445699,
-      "lapsed": 3927
-    },
-    {
-      "id": "indigenous-services-and-northern-affairs-2014-canadian-polar-commission-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 144310,
-      "used": 144310,
-      "lapsed": 0
-    },
-    {
-      "id": "indigenous-services-and-northern-affairs-2014-indian-affairs-and-northern-development-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 1529074416,
-      "used": 1338241374,
-      "lapsed": 190833042
-    },
-    {
-      "id": "indigenous-services-and-northern-affairs-2014-indian-affairs-and-northern-development-vote10",
-      "vote": "Vote 10",
-      "description": "Grants and contributions",
-      "totalAvailable": 7011938885,
-      "used": 6509861747,
-      "lapsed": 502077138
-    },
-    {
-      "id": "indigenous-services-and-northern-affairs-2014-indian-affairs-and-northern-development-vote5",
-      "vote": "Vote 5",
-      "description": "Capital expenditures",
-      "totalAvailable": 19165727,
-      "used": 6632304,
-      "lapsed": 12533423
-    },
-    {
-      "id": "indigenous-services-and-northern-affairs-2014-indian-affairs-and-northern-development-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 219689294,
-      "used": 186136790,
-      "lapsed": 33552504
-    },
-    {
-      "id": "indigenous-services-and-northern-affairs-2014-indian-residential-schools-truth-and-reconciliation-commission-vote30",
-      "vote": "Vote 30",
-      "description": "Program expenditures",
-      "totalAvailable": 12972461,
-      "used": 6501067,
-      "lapsed": 6471394
-    },
-    {
-      "id": "indigenous-services-and-northern-affairs-2014-indian-residential-schools-truth-and-reconciliation-commission-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 360329,
-      "used": 360329,
-      "lapsed": 0
-    },
-    {
-      "id": "indigenous-services-and-northern-affairs-2014-registry-of-the-specific-claims-tribunal-vote35",
-      "vote": "Vote 35",
-      "description": "Program expenditures",
-      "totalAvailable": 2791903,
-      "used": 1981845,
-      "lapsed": 810058
-    },
-    {
-      "id": "indigenous-services-and-northern-affairs-2014-registry-of-the-specific-claims-tribunal-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 159746,
-      "used": 159591,
-      "lapsed": 155
+      "value": 0.002142
     }
   ],
   "transferPayments": [

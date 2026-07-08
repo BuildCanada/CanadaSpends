@@ -3,7 +3,7 @@
   "slug": "fisheries-and-oceans",
   "financialYearEnding": 2015,
   "reportedAs": "Fisheries and Oceans",
-  "basis": "vol2_appropriations",
+  "basis": "vol2_standard_object_net",
   "totalSpending": 1.820599,
   "percentageOfFederal": 0.6492,
   "historicalShare": [
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 0.7856
+      "percentage": 0.7594
     },
     {
       "year": 2018,
-      "percentage": 0.8065
+      "percentage": 0.7937
     },
     {
       "year": 2019,
-      "percentage": 0.9602
+      "percentage": 0.9483
     },
     {
       "year": 2020,
-      "percentage": 0.8515
+      "percentage": 0.8396
     },
     {
       "year": 2021,
-      "percentage": 0.5259
+      "percentage": 0.5196
     },
     {
       "year": 2022,
-      "percentage": 0.7545
+      "percentage": 0.7464
     },
     {
       "year": 2023,
-      "percentage": 0.7915
+      "percentage": 0.7817
     },
     {
       "year": 2024,
-      "percentage": 0.8807
+      "percentage": 0.8719
     },
     {
       "year": 2025,
-      "percentage": 0.9614
+      "percentage": 0.9529
     }
   ],
   "miniSankey": {
@@ -94,7 +94,68 @@
             {
               "id": "fisheries-and-oceans-2015-fisheries-and-oceans-obj-10",
               "name": "Transfer payments",
-              "amount": 0.08971
+              "children": [
+                {
+                  "id": "fisheries-and-oceans-2015-tp-0003",
+                  "name": "Contributions to support increased Native participation in commercial fisheries, cooperative fisheries management arrangements and consultations respecting Aboriginal fisheries agreements",
+                  "amount": 0.048249
+                },
+                {
+                  "id": "fisheries-and-oceans-2015-tp-0008",
+                  "name": "Contributions under the Aboriginal Aquatic Resource and Oceans Management Program",
+                  "amount": 0.019397
+                },
+                {
+                  "id": "fisheries-and-oceans-2015-tp-0006",
+                  "name": "Contributions to support the Recreational Fisheries Conversation Partnerships Program",
+                  "amount": 0.008615
+                },
+                {
+                  "id": "fisheries-and-oceans-2015-tp-0000",
+                  "name": "Contribution agreements to permit the Canadian Coast Guard Auxiliary (CCGA) Associations to carry out authorized activities related to maritime Search and Rescue (SAR) operations, SAR prevention and other safety related activities",
+                  "amount": 0.005021
+                },
+                {
+                  "id": "fisheries-and-oceans-2015-tp-0007",
+                  "name": "Contributions to support the Small craft harbours class contribution program",
+                  "amount": 0.002384
+                },
+                {
+                  "id": "fisheries-and-oceans-2015-tp-0005",
+                  "name": "Contributions to support the Academic research contribution program for the support of academic research and development related to science priorities",
+                  "amount": 0.001564
+                },
+                {
+                  "id": "fisheries-and-oceans-2015-tp-0001",
+                  "name": "Contribution to the Pacific Salmon Foundation",
+                  "amount": 0.001433
+                },
+                {
+                  "id": "fisheries-and-oceans-2015-tp-0011",
+                  "name": "Grants for the disposal of surplus lighthouses",
+                  "amount": 0.001005
+                },
+                {
+                  "id": "fisheries-and-oceans-2015-tp-0004",
+                  "name": "Contributions to support organizations associated with research, development, management, and promotion of fisheries and oceans‑related issues",
+                  "amount": 0.000866
+                },
+                {
+                  "id": "fisheries-and-oceans-2015-tp-0010",
+                  "name": "Grant program for the disposal of small craft harbours",
+                  "amount": 0.00084
+                },
+                {
+                  "id": "fisheries-and-oceans-2015-tp-0002",
+                  "name": "Contribution to the salmon sub‑committee of the Yukon Fish and Wildlife Management Board for implementing responsibilities pursuant to comprehensive land claim settlements",
+                  "amount": 0.000241
+                },
+                {
+                  "id": "fisheries-and-oceans-2015-tp-0012",
+                  "name": "Grants to support organizations associated with research, development, management, and promotion of fisheries and oceans‑related issues",
+                  "amount": 9.5e-5
+                }
+              ]
             },
             {
               "id": "fisheries-and-oceans-2015-fisheries-and-oceans-obj-2",
@@ -136,40 +197,6 @@
       "id": "fisheries-and-oceans-2015-entity-fisheries-and-oceans",
       "name": "Fisheries and Oceans",
       "value": 1.820599
-    }
-  ],
-  "votes": [
-    {
-      "id": "fisheries-and-oceans-2015-fisheries-and-oceans-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 1319973501,
-      "used": 1276163288,
-      "lapsed": 43810213
-    },
-    {
-      "id": "fisheries-and-oceans-2015-fisheries-and-oceans-vote10",
-      "vote": "Vote 10",
-      "description": "Grants and contributions",
-      "totalAvailable": 91509966,
-      "used": 89709841,
-      "lapsed": 1800125
-    },
-    {
-      "id": "fisheries-and-oceans-2015-fisheries-and-oceans-vote5",
-      "vote": "Vote 5",
-      "description": "Capital expenditures",
-      "totalAvailable": 486379801,
-      "used": 328877619,
-      "lapsed": 157502182
-    },
-    {
-      "id": "fisheries-and-oceans-2015-fisheries-and-oceans-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 127385227,
-      "used": 125848067,
-      "lapsed": 1537160
     }
   ],
   "transferPayments": [

@@ -74,11 +74,38 @@ export default async function FederalMethodologyPage(props: PageLangParam) {
               corporations. For recent years the overview ministry list and the
               thematic Sankey are also on this Volume I accrual basis (see the
               allocation note below), so they sum to the headline exactly.
-              Department pages remain on the Volume II appropriations
-              (expenditure) basis, ministry by ministry, because that is where
-              the line-level vote and transfer-payment detail exists — so a
-              department&rsquo;s own total differs from its accrual ministry row
-              on the overview. The reconciliation below bridges the two bases.
+              Department pages present net expenditures by standard object from
+              Volume II of the Public Accounts — the same figures the department
+              chart draws (personnel, professional and special services,
+              transfer payments, and so on, net of internal and external
+              revenues). The stat card, the entity list, and the chart on a
+              department page are therefore one consistent number. This net
+              figure differs from the Volume I consolidated headline, so a
+              department&rsquo;s own total will not match its accrual ministry
+              row on the overview. Parliamentary authorities (votes, allotments,
+              and lapsed amounts) are no longer shown on department pages. The
+              reconciliation below bridges the two bases.
+            </Trans>
+          </P>
+        </Section>
+
+        <Section>
+          <H2>
+            <Trans>Transfer-payment programs</Trans>
+          </H2>
+          <P>
+            <Trans>
+              The Transfer payments standard object on a department chart fans
+              out into its named grant and contribution programs from the Public
+              Accounts. Because the two sources are on slightly different
+              presentations, each program is scaled proportionally so the named
+              programs sum exactly to the chart&rsquo;s (net) transfer-payments
+              amount; the smaller programs beyond the top ones are grouped into
+              &ldquo;Other transfer programs&rdquo;. Program children are shown
+              for the organization that pays essentially all of a
+              portfolio&rsquo;s transfers; where transfers are split across
+              several organizations, the object is left unsplit. The full,
+              unscaled program list is in the line-item table below the chart.
             </Trans>
           </P>
         </Section>
@@ -108,15 +135,15 @@ export default async function FederalMethodologyPage(props: PageLangParam) {
               provision for valuation and other items — are shown as their own
               rows and leaves. Because sub-ministry Sankey leaves are allocated
               this way, they are proportional estimates, not literal Volume II
-              line amounts; the department page carries the exact appropriations
-              detail. For older years, each Table 3.6 edition carries the
-              figures as first published while the headline uses the restated
-              ten-year comparative statement, so the vintage segment figures are
-              scaled proportionally to tie to the restated statement totals
-              exactly (and for editions predating the separate net actuarial
-              losses line, that statement amount is carved out of the portfolios
-              the same way). Every year&rsquo;s ministry list and Sankey
-              therefore sum to the published headline.
+              line amounts; the department page carries the net standard-object
+              detail and its named transfer programs. For older years, each
+              Table 3.6 edition carries the figures as first published while the
+              headline uses the restated ten-year comparative statement, so the
+              vintage segment figures are scaled proportionally to tie to the
+              restated statement totals exactly (and for editions predating the
+              separate net actuarial losses line, that statement amount is
+              carved out of the portfolios the same way). Every year&rsquo;s
+              ministry list and Sankey therefore sum to the published headline.
             </Trans>
           </P>
         </Section>

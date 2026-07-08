@@ -3,8 +3,8 @@
   "slug": "treasury-board",
   "financialYearEnding": 2016,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 5.241566,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 5.241565,
   "percentageOfFederal": 1.774,
   "historicalShare": [
     {
@@ -13,7 +13,7 @@
     },
     {
       "year": 2015,
-      "percentage": 1.49
+      "percentage": 1.4901
     },
     {
       "year": 2016,
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 1.3908
+      "percentage": 1.0186
     },
     {
       "year": 2018,
-      "percentage": 1.3823
+      "percentage": 1.179
     },
     {
       "year": 2019,
-      "percentage": 1.9994
+      "percentage": 1.806
     },
     {
       "year": 2020,
-      "percentage": 1.0185
+      "percentage": 0.8208
     },
     {
       "year": 2021,
-      "percentage": 0.6324
+      "percentage": 0.5159
     },
     {
       "year": 2022,
-      "percentage": 2.3841
+      "percentage": 2.216
     },
     {
       "year": 2023,
-      "percentage": 1.0656
+      "percentage": 0.8822
     },
     {
       "year": 2024,
-      "percentage": 1.02
+      "percentage": 0.8357
     },
     {
       "year": 2025,
-      "percentage": 2.2149
+      "percentage": 2.0369
     }
   ],
   "miniSankey": {
@@ -119,7 +119,33 @@
             {
               "id": "treasury-board-2016-secretariat-obj-10",
               "name": "Transfer payments",
-              "amount": 0.000535
+              "children": [
+                {
+                  "id": "treasury-board-2016-tp-0004",
+                  "name": "Payments, in the nature of Workers' Compensation, in accordance with the Public Service Income Benefit Plan for survivors of employees slain on duty",
+                  "amount": 0.000314
+                },
+                {
+                  "id": "treasury-board-2016-tp-0000",
+                  "name": "International Public Sector Accounting Standards Board",
+                  "amount": 0.000192
+                },
+                {
+                  "id": "treasury-board-2016-tp-0002",
+                  "name": "Contributions for access to legal advice under the Public Servants Disclosure Protection Act",
+                  "amount": 2.1e-5
+                },
+                {
+                  "id": "treasury-board-2016-tp-0005",
+                  "name": "Special Indemnity Plan for Spouses of Canadian Forces Attachés",
+                  "amount": 5.0e-6
+                },
+                {
+                  "id": "treasury-board-2016-tp-0003",
+                  "name": "Payments under the Public Service Pension Adjustment Act",
+                  "amount": 3.0e-6
+                }
+              ]
             },
             {
               "id": "treasury-board-2016-secretariat-obj-3",
@@ -291,19 +317,24 @@
   },
   "entities": [
     {
-      "id": "treasury-board-2016-entity-treasury-board",
-      "name": "Treasury Board",
-      "value": 5.241566
-    }
-  ],
-  "votes": [
+      "id": "treasury-board-2016-entity-secretariat",
+      "name": "Secretariat",
+      "value": 5.140583
+    },
     {
-      "id": "treasury-board-2016-treasury-board-vote",
-      "vote": "All votes",
-      "description": "Total appropriations (vote-level detail not published for this edition)",
-      "totalAvailable": 7401134134,
-      "used": 5241566287,
-      "lapsed": 2159567847
+      "id": "treasury-board-2016-entity-canada-school-of-public-service",
+      "name": "Canada School of Public Service",
+      "value": 0.092152
+    },
+    {
+      "id": "treasury-board-2016-entity-office-of-the-public-sector-integrity-commissioner",
+      "name": "Office of the Public Sector Integrity Commissioner",
+      "value": 0.004453
+    },
+    {
+      "id": "treasury-board-2016-entity-office-of-the-commissioner-of-lobbying",
+      "name": "Office of the Commissioner of Lobbying",
+      "value": 0.004377
     }
   ],
   "transferPayments": [

@@ -3,17 +3,17 @@
   "slug": "department-of-finance",
   "financialYearEnding": 2021,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 118.057845,
-  "percentageOfFederal": 18.327,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 118.056731,
+  "percentageOfFederal": 18.3268,
   "historicalShare": [
     {
       "year": 2014,
-      "percentage": 30.9373
+      "percentage": 31.0335
     },
     {
       "year": 2015,
-      "percentage": 30.731
+      "percentage": 30.7352
     },
     {
       "year": 2016,
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 28.6373
+      "percentage": 28.6369
     },
     {
       "year": 2018,
-      "percentage": 27.4523
+      "percentage": 27.4522
     },
     {
       "year": 2019,
-      "percentage": 27.2779
+      "percentage": 27.2778
     },
     {
       "year": 2020,
-      "percentage": 26.5609
+      "percentage": 26.5605
     },
     {
       "year": 2021,
-      "percentage": 18.327
+      "percentage": 18.3268
     },
     {
       "year": 2022,
-      "percentage": 21.2123
+      "percentage": 21.2122
     },
     {
       "year": 2023,
-      "percentage": 24.3876
+      "percentage": 24.3874
     },
     {
       "year": 2024,
-      "percentage": 26.1038
+      "percentage": 26.1034
     },
     {
       "year": 2025,
-      "percentage": 26.2859
+      "percentage": 26.2858
     }
   ],
   "miniSankey": {
@@ -69,7 +69,70 @@
             {
               "id": "department-of-finance-2021-department-of-finance-obj-10",
               "name": "Transfer payments",
-              "amount": 96.43473
+              "children": [
+                {
+                  "id": "department-of-finance-2021-tp-0007",
+                  "name": "Canada Health Transfer (Part V.1—Federal-Provincial Fiscal Arrangements Act)",
+                  "amount": 39.588534
+                },
+                {
+                  "id": "department-of-finance-2021-tp-0013",
+                  "name": "Fiscal Equalization (Part I—Federal-Provincial Fiscal Arrangements Act)",
+                  "amount": 19.447119
+                },
+                {
+                  "id": "department-of-finance-2021-tp-0008",
+                  "name": "Canada Social Transfer (Part V.1—Federal-Provincial Fiscal Arrangements Act)",
+                  "amount": 14.201186
+                },
+                {
+                  "id": "department-of-finance-2021-tp-0019",
+                  "name": "Safe Restart Agreement",
+                  "amount": 11.604956
+                },
+                {
+                  "id": "department-of-finance-2021-tp-0024",
+                  "name": "Territorial Financing (Part I.1 - Federal-Provincial Fiscal Arrangements Act)",
+                  "amount": 3.951488
+                },
+                {
+                  "id": "department-of-finance-2021-tp-0010",
+                  "name": "Essential Workers Support Fund",
+                  "amount": 2.400069
+                },
+                {
+                  "id": "department-of-finance-2021-tp-0015",
+                  "name": "Payment to the Province of Alberta to clean up inactive oil and gas wells",
+                  "amount": 0.945281
+                },
+                {
+                  "id": "department-of-finance-2021-tp-0022",
+                  "name": "Safe Return to Class Fund",
+                  "amount": 0.945281
+                },
+                {
+                  "id": "department-of-finance-2021-tp-0021",
+                  "name": "Safe Return to Class Fund",
+                  "amount": 0.945281
+                },
+                {
+                  "id": "department-of-finance-2021-tp-0020",
+                  "name": "Safe Restart Agreement",
+                  "amount": 0.661697
+                },
+                {
+                  "id": "department-of-finance-2021-tp-0018",
+                  "name": "Payments to clean up orphan and inactive oil and gas wells",
+                  "amount": 0.491546
+                },
+                {
+                  "id": "department-of-finance-2021-department-of-finance-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 1.252292,
+                  "isAggregate": true,
+                  "count": 10
+                }
+              ]
             },
             {
               "id": "department-of-finance-2021-department-of-finance-obj-11",
@@ -354,7 +417,7 @@
     {
       "id": "department-of-finance-2021-entity-office-of-the-auditor-general",
       "name": "Office of the Auditor General",
-      "value": 0.101242
+      "value": 0.100129
     },
     {
       "id": "department-of-finance-2021-entity-financial-transactions-and-reports-analysis-centre-of-canada",
@@ -365,88 +428,6 @@
       "id": "department-of-finance-2021-entity-financial-consumer-agency-of-canada",
       "name": "Financial Consumer Agency of Canada",
       "value": 0.035036
-    }
-  ],
-  "votes": [
-    {
-      "id": "department-of-finance-2021-department-of-finance-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 3441748415,
-      "used": 3304039520,
-      "lapsed": 137708895
-    },
-    {
-      "id": "department-of-finance-2021-department-of-finance-vote5",
-      "vote": "Vote 5",
-      "description": "Authority for amount by way of direct payments to the International Development Association pursuant to Bretton Woods and Related Agreements Act",
-      "totalAvailable": 1,
-      "used": 0,
-      "lapsed": 1
-    },
-    {
-      "id": "department-of-finance-2021-department-of-finance-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 114424760302,
-      "used": 114356188355,
-      "lapsed": 68571947
-    },
-    {
-      "id": "department-of-finance-2021-financial-consumer-agency-of-canada-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 35035997,
-      "used": 35035997,
-      "lapsed": 0
-    },
-    {
-      "id": "department-of-finance-2021-financial-transactions-and-reports-analysis-centre-of-canada-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 74404303,
-      "used": 55832070,
-      "lapsed": 18572233
-    },
-    {
-      "id": "department-of-finance-2021-financial-transactions-and-reports-analysis-centre-of-canada-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 5878909,
-      "used": 5878884,
-      "lapsed": 25
-    },
-    {
-      "id": "department-of-finance-2021-office-of-the-auditor-general-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 98939347,
-      "used": 90732398,
-      "lapsed": 8206949
-    },
-    {
-      "id": "department-of-finance-2021-office-of-the-auditor-general-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 10510527,
-      "used": 10510082,
-      "lapsed": 445
-    },
-    {
-      "id": "department-of-finance-2021-office-of-the-superintendent-of-financial-institutions-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 1292051,
-      "used": 1226041,
-      "lapsed": 66010
-    },
-    {
-      "id": "department-of-finance-2021-office-of-the-superintendent-of-financial-institutions-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 257497789,
-      "used": 198401362,
-      "lapsed": 59096427
     }
   ],
   "transferPayments": [

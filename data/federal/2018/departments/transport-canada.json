@@ -3,9 +3,9 @@
   "slug": "transport-canada",
   "financialYearEnding": 2018,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 2.555665,
-  "percentageOfFederal": 0.774,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 2.482565,
+  "percentageOfFederal": 0.7519,
   "historicalShare": [
     {
       "year": 2014,
@@ -17,43 +17,43 @@
     },
     {
       "year": 2016,
-      "percentage": 1.5446
+      "percentage": 1.098
     },
     {
       "year": 2017,
-      "percentage": 0.8324
+      "percentage": 0.7851
     },
     {
       "year": 2018,
-      "percentage": 0.774
+      "percentage": 0.7519
     },
     {
       "year": 2019,
-      "percentage": 0.8036
+      "percentage": 0.7815
     },
     {
       "year": 2020,
-      "percentage": 0.8854
+      "percentage": 0.8636
     },
     {
       "year": 2021,
-      "percentage": 0.5428
+      "percentage": 0.5314
     },
     {
       "year": 2022,
-      "percentage": 0.7476
+      "percentage": 0.7309
     },
     {
       "year": 2023,
-      "percentage": 0.8491
+      "percentage": 0.8306
     },
     {
       "year": 2024,
-      "percentage": 0.9965
+      "percentage": 0.9777
     },
     {
       "year": 2025,
-      "percentage": 1.1005
+      "percentage": 1.0817
     }
   ],
   "miniSankey": {
@@ -74,7 +74,70 @@
             {
               "id": "transport-canada-2018-department-of-transport-obj-10",
               "name": "Transfer payments",
-              "amount": 0.276984
+              "children": [
+                {
+                  "id": "transport-canada-2018-tp-0015",
+                  "name": "Northumberland Strait Crossing Subsidy Payment under the Northumberland Strait Crossing Act (S.C., 1993, c. 43)",
+                  "amount": 0.064943
+                },
+                {
+                  "id": "transport-canada-2018-tp-0012",
+                  "name": "Gateways and Border Crossings Fund",
+                  "amount": 0.045819
+                },
+                {
+                  "id": "transport-canada-2018-tp-0011",
+                  "name": "Ferry Services Contribution Program",
+                  "amount": 0.038718
+                },
+                {
+                  "id": "transport-canada-2018-tp-0000",
+                  "name": "Airports Capital Assistance Program",
+                  "amount": 0.034929
+                },
+                {
+                  "id": "transport-canada-2018-tp-0029",
+                  "name": "Grant to the Province of British Columbia in respect of the provision of ferry and coastal freight and passenger services",
+                  "amount": 0.029782
+                },
+                {
+                  "id": "transport-canada-2018-tp-0021",
+                  "name": "Rail Safety Improvement Contribution Program",
+                  "amount": 0.016206
+                },
+                {
+                  "id": "transport-canada-2018-tp-0003",
+                  "name": "Asia-Pacific Gateway and Corridor Transportation Infrastructure Fund",
+                  "amount": 0.013171
+                },
+                {
+                  "id": "transport-canada-2018-tp-0022",
+                  "name": "Remote Passenger Rail Program",
+                  "amount": 0.01003
+                },
+                {
+                  "id": "transport-canada-2018-tp-0008",
+                  "name": "Contribution to Support Clean Transportation Initiatives",
+                  "amount": 0.0053
+                },
+                {
+                  "id": "transport-canada-2018-tp-0018",
+                  "name": "Payments to the Canadian National Railway Company in respect of the termination of the collection of tolls on the Victoria Bridge, Montreal and for rehabilitation work on roadway portion of the Bridge (Vote 107, Appropriation Act, No. 5, 1963, S.C., 1963, c. 42)",
+                  "amount": 0.0033
+                },
+                {
+                  "id": "transport-canada-2018-tp-0023",
+                  "name": "Road Safety Transfer Payment Program",
+                  "amount": 0.003268
+                },
+                {
+                  "id": "transport-canada-2018-department-of-transport-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.011518,
+                  "isAggregate": true,
+                  "count": 18
+                }
+              ]
             },
             {
               "id": "transport-canada-2018-department-of-transport-obj-4",
@@ -230,19 +293,34 @@
   },
   "entities": [
     {
-      "id": "transport-canada-2018-entity-transport",
-      "name": "Transport",
-      "value": 2.555665
-    }
-  ],
-  "votes": [
+      "id": "transport-canada-2018-entity-department-of-transport",
+      "name": "Department of Transport",
+      "value": 1.205721
+    },
     {
-      "id": "transport-canada-2018-transport-vote",
-      "vote": "All votes",
-      "description": "Total appropriations (vote-level detail not published for this edition)",
-      "totalAvailable": 3045914778,
-      "used": 2555664508,
-      "lapsed": 490250270
+      "id": "transport-canada-2018-entity-canadian-air-transport-security-authority",
+      "name": "Canadian Air Transport Security Authority",
+      "value": 0.723429
+    },
+    {
+      "id": "transport-canada-2018-entity-via-rail-canada-inc",
+      "name": "VIA Rail Canada Inc.",
+      "value": 0.357536
+    },
+    {
+      "id": "transport-canada-2018-entity-marine-atlantic-inc",
+      "name": "Marine Atlantic Inc.",
+      "value": 0.146683
+    },
+    {
+      "id": "transport-canada-2018-entity-canadian-transportation-agency",
+      "name": "Canadian Transportation Agency",
+      "value": 0.029148
+    },
+    {
+      "id": "transport-canada-2018-entity-the-federal-bridge-corporation-limited",
+      "name": "The Federal Bridge Corporation Limited",
+      "value": 0.020048
     }
   ],
   "transferPayments": [

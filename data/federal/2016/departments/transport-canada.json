@@ -3,9 +3,9 @@
   "slug": "transport-canada",
   "financialYearEnding": 2016,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 4.563952,
-  "percentageOfFederal": 1.5446,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 3.244229,
+  "percentageOfFederal": 1.098,
   "historicalShare": [
     {
       "year": 2014,
@@ -17,43 +17,43 @@
     },
     {
       "year": 2016,
-      "percentage": 1.5446
+      "percentage": 1.098
     },
     {
       "year": 2017,
-      "percentage": 0.8324
+      "percentage": 0.7851
     },
     {
       "year": 2018,
-      "percentage": 0.774
+      "percentage": 0.7519
     },
     {
       "year": 2019,
-      "percentage": 0.8036
+      "percentage": 0.7815
     },
     {
       "year": 2020,
-      "percentage": 0.8854
+      "percentage": 0.8636
     },
     {
       "year": 2021,
-      "percentage": 0.5428
+      "percentage": 0.5314
     },
     {
       "year": 2022,
-      "percentage": 0.7476
+      "percentage": 0.7309
     },
     {
       "year": 2023,
-      "percentage": 0.8491
+      "percentage": 0.8306
     },
     {
       "year": 2024,
-      "percentage": 0.9965
+      "percentage": 0.9777
     },
     {
       "year": 2025,
-      "percentage": 1.1005
+      "percentage": 1.0817
     }
   ],
   "miniSankey": {
@@ -69,7 +69,70 @@
             {
               "id": "transport-canada-2016-transport-obj-10",
               "name": "Transfer payments",
-              "amount": 0.59101
+              "children": [
+                {
+                  "id": "transport-canada-2016-tp-0013",
+                  "name": "Gateways and Border Crossings Fund",
+                  "amount": 0.330369
+                },
+                {
+                  "id": "transport-canada-2016-tp-0016",
+                  "name": "Northumberland strait crossing subsidy payment under the Northumberland Strait Crossing Act",
+                  "amount": 0.062335
+                },
+                {
+                  "id": "transport-canada-2016-tp-0000",
+                  "name": "Airports capital assistance program",
+                  "amount": 0.046935
+                },
+                {
+                  "id": "transport-canada-2016-tp-0003",
+                  "name": "Asia-Pacific Gateway and Corridor Transportation Infrastructure Fund",
+                  "amount": 0.043867
+                },
+                {
+                  "id": "transport-canada-2016-tp-0012",
+                  "name": "Ferry services contribution program",
+                  "amount": 0.031657
+                },
+                {
+                  "id": "transport-canada-2016-tp-0029",
+                  "name": "Grant to the Province of British Columbia in respect of the provision of ferry and coastal freight and passenger services",
+                  "amount": 0.02873
+                },
+                {
+                  "id": "transport-canada-2016-tp-0021",
+                  "name": "Regional and remote passenger rail service class contribution program",
+                  "amount": 0.011356
+                },
+                {
+                  "id": "transport-canada-2016-tp-0017",
+                  "name": "Payments in support of crossing improvements approved under the Railway Safety Act",
+                  "amount": 0.00893
+                },
+                {
+                  "id": "transport-canada-2016-tp-0023",
+                  "name": "Smart Oceans contribution program",
+                  "amount": 0.0074
+                },
+                {
+                  "id": "transport-canada-2016-tp-0019",
+                  "name": "Payments to the Canadian National Railway Company in respect of the termination of the collection of tolls on the Victoria Bridge, Montreal and for rehabilitation work on the roadway portion of the bridge",
+                  "amount": 0.0033
+                },
+                {
+                  "id": "transport-canada-2016-tp-0022",
+                  "name": "Road safety transfer payment program",
+                  "amount": 0.003048
+                },
+                {
+                  "id": "transport-canada-2016-transport-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.013083,
+                  "isAggregate": true,
+                  "count": 18
+                }
+              ]
             },
             {
               "id": "transport-canada-2016-transport-obj-1",
@@ -254,17 +317,42 @@
     {
       "id": "transport-canada-2016-entity-transport",
       "name": "Transport",
-      "value": 4.563952
-    }
-  ],
-  "votes": [
+      "value": 1.736294
+    },
     {
-      "id": "transport-canada-2016-transport-vote",
-      "vote": "All votes",
-      "description": "Total appropriations (vote-level detail not published for this edition)",
-      "totalAvailable": 5375316404,
-      "used": 4563951731,
-      "lapsed": 811364673
+      "id": "transport-canada-2016-entity-canadian-air-transport-security-authority",
+      "name": "Canadian Air Transport Security Authority",
+      "value": 0.656747
+    },
+    {
+      "id": "transport-canada-2016-entity-via-rail-canada-inc",
+      "name": "VIA Rail Canada Inc.",
+      "value": 0.3655
+    },
+    {
+      "id": "transport-canada-2016-entity-marine-atlantic-inc",
+      "name": "Marine Atlantic Inc.",
+      "value": 0.350859
+    },
+    {
+      "id": "transport-canada-2016-entity-windsor-detroit-bridge-authority",
+      "name": "Windsor-Detroit Bridge Authority",
+      "value": 0.0735
+    },
+    {
+      "id": "transport-canada-2016-entity-canadian-transportation-agency",
+      "name": "Canadian Transportation Agency",
+      "value": 0.028254
+    },
+    {
+      "id": "transport-canada-2016-entity-the-federal-bridge-corporation-limited",
+      "name": "The Federal Bridge Corporation Limited",
+      "value": 0.020119
+    },
+    {
+      "id": "transport-canada-2016-entity-canada-post-corporation",
+      "name": "Canada Post Corporation",
+      "value": 0.012956
     }
   ],
   "transferPayments": [

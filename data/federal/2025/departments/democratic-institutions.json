@@ -3,7 +3,7 @@
   "slug": "democratic-institutions",
   "financialYearEnding": 2025,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
+  "basis": "vol2_standard_object_net",
   "totalSpending": 0.317042,
   "percentageOfFederal": 0.0579,
   "historicalShare": [
@@ -59,7 +59,33 @@
             {
               "id": "democratic-institutions-2025-office-of-the-chief-electoral-officer-obj-10",
               "name": "Transfer payments",
-              "amount": 0.002064
+              "children": [
+                {
+                  "id": "democratic-institutions-2025-tp-0004",
+                  "name": "Subsidies to electoral district associations' auditors",
+                  "amount": 0.001218
+                },
+                {
+                  "id": "democratic-institutions-2025-tp-0001",
+                  "name": "Reimbursement of election expenses to candidates and payments of subsidies to candidates' auditors for the current year by-elections",
+                  "amount": 0.000626
+                },
+                {
+                  "id": "democratic-institutions-2025-tp-0002",
+                  "name": "Reimbursement of election expenses to candidates for the 44th general election, paid to assigned recipient",
+                  "amount": 0.000116
+                },
+                {
+                  "id": "democratic-institutions-2025-tp-0003",
+                  "name": "Reimbursement of election expenses to candidates, and payments of subsidies to candidates' auditors for other general elections and by-elections",
+                  "amount": 9.5e-5
+                },
+                {
+                  "id": "democratic-institutions-2025-tp-0000",
+                  "name": "Payment of subsidies to candidates' auditors for the 44th general election",
+                  "amount": 9.0e-6
+                }
+              ]
             },
             {
               "id": "democratic-institutions-2025-office-of-the-chief-electoral-officer-obj-7",
@@ -183,56 +209,6 @@
       "id": "democratic-institutions-2025-entity-leaders-debates-commission",
       "name": "Leaders' Debates Commission",
       "value": 0.000669
-    }
-  ],
-  "votes": [
-    {
-      "id": "democratic-institutions-2025-leaders-debates-commission-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 3453796,
-      "used": 616660,
-      "lapsed": 2837136
-    },
-    {
-      "id": "democratic-institutions-2025-leaders-debates-commission-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 52569,
-      "used": 52569,
-      "lapsed": 0
-    },
-    {
-      "id": "democratic-institutions-2025-office-of-the-chief-electoral-officer-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 64630225,
-      "used": 64033614,
-      "lapsed": 596611
-    },
-    {
-      "id": "democratic-institutions-2025-office-of-the-chief-electoral-officer-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 249246078,
-      "used": 249246078,
-      "lapsed": 0
-    },
-    {
-      "id": "democratic-institutions-2025-secretariat-of-the-national-security-and-intelligence-committee-of-parliamentarians-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 3660787,
-      "used": 2877425,
-      "lapsed": 783362
-    },
-    {
-      "id": "democratic-institutions-2025-secretariat-of-the-national-security-and-intelligence-committee-of-parliamentarians-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 215929,
-      "used": 215929,
-      "lapsed": 0
     }
   ],
   "transferPayments": [

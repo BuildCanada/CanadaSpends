@@ -3,7 +3,7 @@
   "slug": "veterans-affairs",
   "financialYearEnding": 2019,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
+  "basis": "vol2_standard_object_net",
   "totalSpending": 4.700369,
   "percentageOfFederal": 1.3578,
   "historicalShare": [
@@ -69,7 +69,70 @@
             {
               "id": "veterans-affairs-2019-department-of-veterans-affairs-obj-10",
               "name": "Transfer payments",
-              "amount": 3.655865
+              "children": [
+                {
+                  "id": "veterans-affairs-2019-tp-0013",
+                  "name": "Disability Awards and Allowances",
+                  "amount": 1.323654
+                },
+                {
+                  "id": "veterans-affairs-2019-tp-0023",
+                  "name": "Pensions for disability and death, including pensions granted under the authority of the Civilian Government Employees (War) Compensation Order, P.C. 45/8848 of November 22, 1944, which shall be subject to the Pension Act; for former prisoners of war under the Pension Act, and Newfoundland special awards",
+                  "amount": 1.215938
+                },
+                {
+                  "id": "veterans-affairs-2019-tp-0014",
+                  "name": "Earnings Loss and Supplementary Retirement Benefit",
+                  "amount": 0.717249
+                },
+                {
+                  "id": "veterans-affairs-2019-tp-0019",
+                  "name": "Housekeeping and Grounds Maintenance",
+                  "amount": 0.26689
+                },
+                {
+                  "id": "veterans-affairs-2019-tp-0002",
+                  "name": "Contributions to Veterans, under the Veterans Independence Program, to assist in defraying costs of extended health care not covered by provincial health programs",
+                  "amount": 0.075285
+                },
+                {
+                  "id": "veterans-affairs-2019-tp-0015",
+                  "name": "Education and Training Benefit",
+                  "amount": 0.012312
+                },
+                {
+                  "id": "veterans-affairs-2019-tp-0011",
+                  "name": "Commonwealth War Graves Commission",
+                  "amount": 0.011086
+                },
+                {
+                  "id": "veterans-affairs-2019-tp-0020",
+                  "name": "Last Post Fund",
+                  "amount": 0.008375
+                },
+                {
+                  "id": "veterans-affairs-2019-tp-0009",
+                  "name": "Caregiver Recognition Benefit",
+                  "amount": 0.006622
+                },
+                {
+                  "id": "veterans-affairs-2019-tp-0032",
+                  "name": "War Veterans Allowances and Civilian War Allowances",
+                  "amount": 0.005737
+                },
+                {
+                  "id": "veterans-affairs-2019-tp-0018",
+                  "name": "Grant for Veterans and Family Well-Being Fund",
+                  "amount": 0.001853
+                },
+                {
+                  "id": "veterans-affairs-2019-department-of-veterans-affairs-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.010864,
+                  "isAggregate": true,
+                  "count": 19
+                }
+              ]
             },
             {
               "id": "veterans-affairs-2019-department-of-veterans-affairs-obj-4",
@@ -187,48 +250,6 @@
       "id": "veterans-affairs-2019-entity-veterans-review-and-appeal-board",
       "name": "Veterans Review and Appeal Board",
       "value": 0.009906
-    }
-  ],
-  "votes": [
-    {
-      "id": "veterans-affairs-2019-department-of-veterans-affairs-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 1070668762,
-      "used": 1001640228,
-      "lapsed": 69028534
-    },
-    {
-      "id": "veterans-affairs-2019-department-of-veterans-affairs-vote5",
-      "vote": "Vote 5",
-      "description": "Grants and contributions",
-      "totalAvailable": 3692225001,
-      "used": 3655818666,
-      "lapsed": 36406335
-    },
-    {
-      "id": "veterans-affairs-2019-department-of-veterans-affairs-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 33004059,
-      "used": 33004059,
-      "lapsed": 0
-    },
-    {
-      "id": "veterans-affairs-2019-veterans-review-and-appeal-board-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 10170713,
-      "used": 8816668,
-      "lapsed": 1354045
-    },
-    {
-      "id": "veterans-affairs-2019-veterans-review-and-appeal-board-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 1089432,
-      "used": 1089432,
-      "lapsed": 0
     }
   ],
   "transferPayments": [

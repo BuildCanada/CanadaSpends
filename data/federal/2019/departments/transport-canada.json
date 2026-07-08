@@ -3,9 +3,9 @@
   "slug": "transport-canada",
   "financialYearEnding": 2019,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 2.78179,
-  "percentageOfFederal": 0.8036,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 2.705502,
+  "percentageOfFederal": 0.7815,
   "historicalShare": [
     {
       "year": 2014,
@@ -17,43 +17,43 @@
     },
     {
       "year": 2016,
-      "percentage": 1.5446
+      "percentage": 1.098
     },
     {
       "year": 2017,
-      "percentage": 0.8324
+      "percentage": 0.7851
     },
     {
       "year": 2018,
-      "percentage": 0.774
+      "percentage": 0.7519
     },
     {
       "year": 2019,
-      "percentage": 0.8036
+      "percentage": 0.7815
     },
     {
       "year": 2020,
-      "percentage": 0.8854
+      "percentage": 0.8636
     },
     {
       "year": 2021,
-      "percentage": 0.5428
+      "percentage": 0.5314
     },
     {
       "year": 2022,
-      "percentage": 0.7476
+      "percentage": 0.7309
     },
     {
       "year": 2023,
-      "percentage": 0.8491
+      "percentage": 0.8306
     },
     {
       "year": 2024,
-      "percentage": 0.9965
+      "percentage": 0.9777
     },
     {
       "year": 2025,
-      "percentage": 1.1005
+      "percentage": 1.0817
     }
   ],
   "miniSankey": {
@@ -74,7 +74,70 @@
             {
               "id": "transport-canada-2019-department-of-transport-obj-10",
               "name": "Transfer payments",
-              "amount": 0.276102
+              "children": [
+                {
+                  "id": "transport-canada-2019-tp-0019",
+                  "name": "Northumberland Strait Crossing Subsidy Payment under the Northumberland Strait Crossing Act",
+                  "amount": 0.066046
+                },
+                {
+                  "id": "transport-canada-2019-tp-0013",
+                  "name": "Ferry Services Contribution Program",
+                  "amount": 0.039649
+                },
+                {
+                  "id": "transport-canada-2019-tp-0000",
+                  "name": "Airports Capital Assistance Program",
+                  "amount": 0.038685
+                },
+                {
+                  "id": "transport-canada-2019-tp-0033",
+                  "name": "Grant to the Province of British Columbia in respect of the provision of ferry and coastal freight and passenger services",
+                  "amount": 0.030504
+                },
+                {
+                  "id": "transport-canada-2019-tp-0017",
+                  "name": "National Trade Corridors Fund",
+                  "amount": 0.024632
+                },
+                {
+                  "id": "transport-canada-2019-tp-0024",
+                  "name": "Rail Safety Improvement Contribution Program",
+                  "amount": 0.018321
+                },
+                {
+                  "id": "transport-canada-2019-tp-0014",
+                  "name": "Gateways and Border Crossings Fund",
+                  "amount": 0.018293
+                },
+                {
+                  "id": "transport-canada-2019-tp-0025",
+                  "name": "Remote Passenger Rail Program",
+                  "amount": 0.011694
+                },
+                {
+                  "id": "transport-canada-2019-tp-0003",
+                  "name": "Asia-Pacific Gateway and Corridor Transportation Infrastructure Fund",
+                  "amount": 0.005758
+                },
+                {
+                  "id": "transport-canada-2019-tp-0023",
+                  "name": "Program to Protect Canada's Coastlines and Waterways",
+                  "amount": 0.005064
+                },
+                {
+                  "id": "transport-canada-2019-tp-0021",
+                  "name": "Payments to the Canadian National Railway Company in respect of the termination of the collection of tolls on the Victoria Bridge, Montreal and for rehabilitation work on roadway portion of the Bridge (Vote 107, Appropriation Act, No. 5, 1963)",
+                  "amount": 0.0033
+                },
+                {
+                  "id": "transport-canada-2019-department-of-transport-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.014156,
+                  "isAggregate": true,
+                  "count": 23
+                }
+              ]
             },
             {
               "id": "transport-canada-2019-department-of-transport-obj-4",
@@ -232,7 +295,7 @@
     {
       "id": "transport-canada-2019-entity-department-of-transport",
       "name": "Department of Transport",
-      "value": 1.305219
+      "value": 1.228931
     },
     {
       "id": "transport-canada-2019-entity-canadian-air-transport-security-authority",
@@ -258,104 +321,6 @@
       "id": "transport-canada-2019-entity-the-federal-bridge-corporation-limited",
       "name": "The Federal Bridge Corporation Limited",
       "value": 0.003464
-    }
-  ],
-  "votes": [
-    {
-      "id": "transport-canada-2019-canadian-air-transport-security-authority-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the Canadian Air Transport Security Authority for operating and capital expenditures",
-      "totalAvailable": 862808268,
-      "used": 817770631,
-      "lapsed": 45037637
-    },
-    {
-      "id": "transport-canada-2019-canadian-transportation-agency-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 33908170,
-      "used": 29685207,
-      "lapsed": 4222963
-    },
-    {
-      "id": "transport-canada-2019-canadian-transportation-agency-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 3458983,
-      "used": 3458983,
-      "lapsed": 0
-    },
-    {
-      "id": "transport-canada-2019-department-of-transport-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 835735640,
-      "used": 788820563,
-      "lapsed": 46915077
-    },
-    {
-      "id": "transport-canada-2019-department-of-transport-vote10",
-      "vote": "Vote 10",
-      "description": "Grants and contributions—Efficient Transportation System",
-      "totalAvailable": 417523603,
-      "used": 173226303,
-      "lapsed": 244297300
-    },
-    {
-      "id": "transport-canada-2019-department-of-transport-vote15",
-      "vote": "Vote 15",
-      "description": "Grants and contributions—Green and Innovative Transportation System",
-      "totalAvailable": 45033446,
-      "used": 10796528,
-      "lapsed": 34236918
-    },
-    {
-      "id": "transport-canada-2019-department-of-transport-vote20",
-      "vote": "Vote 20",
-      "description": "Grants and contributions—Safe and Secure Transportation System",
-      "totalAvailable": 38322616,
-      "used": 22733857,
-      "lapsed": 15588759
-    },
-    {
-      "id": "transport-canada-2019-department-of-transport-vote5",
-      "vote": "Vote 5",
-      "description": "Capital expenditures",
-      "totalAvailable": 184365398,
-      "used": 105621443,
-      "lapsed": 78743955
-    },
-    {
-      "id": "transport-canada-2019-department-of-transport-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 204204522,
-      "used": 204020567,
-      "lapsed": 183955
-    },
-    {
-      "id": "transport-canada-2019-marine-atlantic-inc-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to Marine Atlantic Inc.",
-      "totalAvailable": 151104000,
-      "used": 125945000,
-      "lapsed": 25159000
-    },
-    {
-      "id": "transport-canada-2019-the-federal-bridge-corporation-limited-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to The Federal Bridge Corporation Limited",
-      "totalAvailable": 3472857,
-      "used": 3463982,
-      "lapsed": 8875
-    },
-    {
-      "id": "transport-canada-2019-via-rail-canada-inc-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to VIA Rail Canada Inc.",
-      "totalAvailable": 644870998,
-      "used": 496246801,
-      "lapsed": 148624197
     }
   ],
   "transferPayments": [

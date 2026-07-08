@@ -3,9 +3,9 @@
   "slug": "canadian-heritage",
   "financialYearEnding": 2022,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 4.542017,
-  "percentageOfFederal": 0.9019,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 4.467437,
+  "percentageOfFederal": 0.8871,
   "historicalShare": [
     {
       "year": 2014,
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 1.1987
+      "percentage": 1.1587
     },
     {
       "year": 2018,
-      "percentage": 1.2054
+      "percentage": 1.1838
     },
     {
       "year": 2019,
-      "percentage": 1.0587
+      "percentage": 1.0398
     },
     {
       "year": 2020,
-      "percentage": 1.0287
+      "percentage": 1.0116
     },
     {
       "year": 2021,
-      "percentage": 0.6979
+      "percentage": 0.6906
     },
     {
       "year": 2022,
-      "percentage": 0.9019
+      "percentage": 0.8871
     },
     {
       "year": 2023,
-      "percentage": 1.0092
+      "percentage": 0.9927
     },
     {
       "year": 2024,
-      "percentage": 0.9346
+      "percentage": 0.9173
     },
     {
       "year": 2025,
-      "percentage": 0.8854
+      "percentage": 0.8664
     }
   ],
   "miniSankey": {
@@ -69,7 +69,70 @@
             {
               "id": "canadian-heritage-2022-department-of-canadian-heritage-obj-10",
               "name": "Transfer payments",
-              "amount": 1.742352
+              "children": [
+                {
+                  "id": "canadian-heritage-2022-tp-0011",
+                  "name": "Contributions in support of the Development of Official-Language Communities Program",
+                  "amount": 0.315396
+                },
+                {
+                  "id": "canadian-heritage-2022-tp-0006",
+                  "name": "Contributions for the Sport Support Program",
+                  "amount": 0.212549
+                },
+                {
+                  "id": "canadian-heritage-2022-tp-0016",
+                  "name": "Contributions to support the Canada Media Fund",
+                  "amount": 0.196401
+                },
+                {
+                  "id": "canadian-heritage-2022-tp-0012",
+                  "name": "Contributions in support of the Enhancement of Official Languages Program",
+                  "amount": 0.135221
+                },
+                {
+                  "id": "canadian-heritage-2022-tp-0050",
+                  "name": "Grants to the Canada Periodical Fund",
+                  "amount": 0.103995
+                },
+                {
+                  "id": "canadian-heritage-2022-tp-0018",
+                  "name": "Contributions to support the Indigenous Languages and Cultures Program",
+                  "amount": 0.102907
+                },
+                {
+                  "id": "canadian-heritage-2022-tp-0026",
+                  "name": "Contributions to the Canada Music Fund",
+                  "amount": 0.10127
+                },
+                {
+                  "id": "canadian-heritage-2022-tp-0025",
+                  "name": "Contributions to the Canada Cultural Spaces Fund",
+                  "amount": 0.068134
+                },
+                {
+                  "id": "canadian-heritage-2022-tp-0046",
+                  "name": "Grants to the Canada Arts Presentation Fund",
+                  "amount": 0.058128
+                },
+                {
+                  "id": "canadian-heritage-2022-tp-0051",
+                  "name": "Grants under the Museums Assistance Program",
+                  "amount": 0.03829
+                },
+                {
+                  "id": "canadian-heritage-2022-tp-0047",
+                  "name": "Grants to the Canada Book Fund",
+                  "amount": 0.034167
+                },
+                {
+                  "id": "canadian-heritage-2022-department-of-canadian-heritage-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.375894,
+                  "isAggregate": true,
+                  "count": 48
+                }
+              ]
             },
             {
               "id": "canadian-heritage-2022-department-of-canadian-heritage-obj-1",
@@ -370,7 +433,7 @@
     {
       "id": "canadian-heritage-2022-entity-department-of-canadian-heritage",
       "name": "Department of Canadian Heritage",
-      "value": 2.013383
+      "value": 2.006534
     },
     {
       "id": "canadian-heritage-2022-entity-canadian-broadcasting-corporation",
@@ -390,7 +453,7 @@
     {
       "id": "canadian-heritage-2022-entity-library-and-archives-of-canada",
       "name": "Library and Archives of Canada",
-      "value": 0.134131
+      "value": 0.131803
     },
     {
       "id": "canadian-heritage-2022-entity-canadian-museum-of-history",
@@ -400,17 +463,12 @@
     {
       "id": "canadian-heritage-2022-entity-national-film-board",
       "name": "National Film Board",
-      "value": 0.075373
-    },
-    {
-      "id": "canadian-heritage-2022-entity-canadian-radio-television-and-telecommunications-commission",
-      "name": "Canadian Radio-television and Telecommunications Commission",
-      "value": 0.073347
+      "value": 0.069337
     },
     {
       "id": "canadian-heritage-2022-entity-national-arts-centre-corporation",
       "name": "National Arts Centre Corporation",
-      "value": 0.05992
+      "value": 0.059921
     },
     {
       "id": "canadian-heritage-2022-entity-national-gallery-of-canada",
@@ -433,6 +491,11 @@
       "value": 0.029337
     },
     {
+      "id": "canadian-heritage-2022-entity-canadian-radio-television-and-telecommunications-commission",
+      "name": "Canadian Radio-television and Telecommunications Commission",
+      "value": 0.013979
+    },
+    {
       "id": "canadian-heritage-2022-entity-the-national-battlefields-commission",
       "name": "The National Battlefields Commission",
       "value": 0.013202
@@ -446,216 +509,6 @@
       "id": "canadian-heritage-2022-entity-canadian-race-relations-foundation",
       "name": "Canadian Race Relations Foundation",
       "value": 0.00618
-    }
-  ],
-  "votes": [
-    {
-      "id": "canadian-heritage-2022-canada-council-for-the-arts-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the Council",
-      "totalAvailable": 510389080,
-      "used": 510389080,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2022-canadian-broadcasting-corporation-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the Corporation for operating expenditures",
-      "totalAvailable": 1139694241,
-      "used": 1139694241,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2022-canadian-broadcasting-corporation-vote10",
-      "vote": "Vote 10",
-      "description": "Payments to the Corporation for capital expenditures",
-      "totalAvailable": 106729000,
-      "used": 106729000,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2022-canadian-broadcasting-corporation-vote5",
-      "vote": "Vote 5",
-      "description": "Payments to the Corporation for working capital",
-      "totalAvailable": 4000000,
-      "used": 4000000,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2022-canadian-museum-for-human-rights-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the Museum for operating and capital expenditures",
-      "totalAvailable": 29336716,
-      "used": 29336716,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2022-canadian-museum-of-history-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the Museum for operating and capital expenditures",
-      "totalAvailable": 84700406,
-      "used": 84700406,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2022-canadian-museum-of-immigration-at-pier-21-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the Museum for operating and capital expenditures",
-      "totalAvailable": 9546694,
-      "used": 9546694,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2022-canadian-museum-of-nature-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the Museum for operating and capital expenditures",
-      "totalAvailable": 35786569,
-      "used": 35681183,
-      "lapsed": 105386
-    },
-    {
-      "id": "canadian-heritage-2022-canadian-race-relations-foundation-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the Foundation",
-      "totalAvailable": 6180001,
-      "used": 6180001,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2022-canadian-radio-television-and-telecommunications-commission-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 73364460,
-      "used": 65510839,
-      "lapsed": 7853621
-    },
-    {
-      "id": "canadian-heritage-2022-canadian-radio-television-and-telecommunications-commission-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 7836167,
-      "used": 7836167,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2022-department-of-canadian-heritage-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 262770156,
-      "used": 242739635,
-      "lapsed": 20030521
-    },
-    {
-      "id": "canadian-heritage-2022-department-of-canadian-heritage-vote5",
-      "vote": "Vote 5",
-      "description": "Grants and contributions",
-      "totalAvailable": 1955437690,
-      "used": 1741121909,
-      "lapsed": 214315781
-    },
-    {
-      "id": "canadian-heritage-2022-department-of-canadian-heritage-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 29540985,
-      "used": 29521002,
-      "lapsed": 19983
-    },
-    {
-      "id": "canadian-heritage-2022-library-and-archives-of-canada-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 115790794,
-      "used": 108633450,
-      "lapsed": 7157344
-    },
-    {
-      "id": "canadian-heritage-2022-library-and-archives-of-canada-vote5",
-      "vote": "Vote 5",
-      "description": "Capital expenditures",
-      "totalAvailable": 40841157,
-      "used": 14773239,
-      "lapsed": 26067918
-    },
-    {
-      "id": "canadian-heritage-2022-library-and-archives-of-canada-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 10740363,
-      "used": 10723849,
-      "lapsed": 16514
-    },
-    {
-      "id": "canadian-heritage-2022-national-arts-centre-corporation-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the Corporation for operating expenditures",
-      "totalAvailable": 59920409,
-      "used": 59920409,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2022-national-film-board-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 81302441,
-      "used": 75283723,
-      "lapsed": 6018718
-    },
-    {
-      "id": "canadian-heritage-2022-national-film-board-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 11503079,
-      "used": 89589,
-      "lapsed": 11413490
-    },
-    {
-      "id": "canadian-heritage-2022-national-gallery-of-canada-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the Gallery for operating and capital expenditures",
-      "totalAvailable": 44002341,
-      "used": 44002341,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2022-national-gallery-of-canada-vote5",
-      "vote": "Vote 5",
-      "description": "Payment to the Gallery for the acquisition of objects for the collection and related costs",
-      "totalAvailable": 8000000,
-      "used": 8000000,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2022-national-museum-of-science-and-technology-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the Museum for operating and capital expenditures",
-      "totalAvailable": 43173183,
-      "used": 43173183,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2022-telefilm-canada-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the corporation to be used for the purposes set out in the Telefilm Canada Act",
-      "totalAvailable": 295355701,
-      "used": 151228599,
-      "lapsed": 144127102
-    },
-    {
-      "id": "canadian-heritage-2022-the-national-battlefields-commission-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 12177974,
-      "used": 10852211,
-      "lapsed": 1325763
-    },
-    {
-      "id": "canadian-heritage-2022-the-national-battlefields-commission-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 2349320,
-      "used": 2349320,
-      "lapsed": 0
     }
   ],
   "transferPayments": [

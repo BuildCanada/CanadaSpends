@@ -3,7 +3,7 @@
   "slug": "veterans-affairs",
   "financialYearEnding": 2016,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
+  "basis": "vol2_standard_object_net",
   "totalSpending": 3.606037,
   "percentageOfFederal": 1.2204,
   "historicalShare": [
@@ -69,7 +69,70 @@
             {
               "id": "veterans-affairs-2016-veterans-affairs-obj-10",
               "name": "Transfer payments",
-              "amount": 2.694047
+              "children": [
+                {
+                  "id": "veterans-affairs-2016-tp-0019",
+                  "name": "Pensions for disability and death, including pensions granted under the authority of the Civilian Government Employees (War) Compensation Order, PC45/8848 of November 22, 1944, which shall be subject to the Pension Act; for compensation for former prisoners of war under the Pension Act, and Newfoundland special awards",
+                  "amount": 1.40433
+                },
+                {
+                  "id": "veterans-affairs-2016-tp-0011",
+                  "name": "Disability awards and allowances",
+                  "amount": 0.659961
+                },
+                {
+                  "id": "veterans-affairs-2016-tp-0015",
+                  "name": "Housekeeping and grounds maintenance",
+                  "amount": 0.271346
+                },
+                {
+                  "id": "veterans-affairs-2016-tp-0012",
+                  "name": "Earnings loss and supplementary retirement benefit",
+                  "amount": 0.231918
+                },
+                {
+                  "id": "veterans-affairs-2016-tp-0001",
+                  "name": "Contributions to Veterans, under the Veterans independence program, to assist in defraying costs of extended health care not covered by provincial health programs",
+                  "amount": 0.08127
+                },
+                {
+                  "id": "veterans-affairs-2016-tp-0009",
+                  "name": "Commonwealth War Graves Commission",
+                  "amount": 0.012041
+                },
+                {
+                  "id": "veterans-affairs-2016-tp-0016",
+                  "name": "Last Post Fund",
+                  "amount": 0.00905
+                },
+                {
+                  "id": "veterans-affairs-2016-tp-0010",
+                  "name": "Critical injury benefit",
+                  "amount": 0.007939
+                },
+                {
+                  "id": "veterans-affairs-2016-tp-0027",
+                  "name": "War Veterans Allowances and Civilian War Allowances",
+                  "amount": 0.007491
+                },
+                {
+                  "id": "veterans-affairs-2016-tp-0002",
+                  "name": "Contributions under the Commemorative partnerships program, to organizations, institutions and other levels of government, in support of projects related to the health and well-being of the veteran population, and commemoration activities and events",
+                  "amount": 0.003066
+                },
+                {
+                  "id": "veterans-affairs-2016-tp-0013",
+                  "name": "Family caregiver relief benefit",
+                  "amount": 0.00129
+                },
+                {
+                  "id": "veterans-affairs-2016-veterans-affairs-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.004345,
+                  "isAggregate": true,
+                  "count": 15
+                }
+              ]
             },
             {
               "id": "veterans-affairs-2016-veterans-affairs-obj-4",
@@ -176,17 +239,12 @@
     {
       "id": "veterans-affairs-2016-entity-veterans-affairs",
       "name": "Veterans Affairs",
-      "value": 3.606037
-    }
-  ],
-  "votes": [
+      "value": 3.595035
+    },
     {
-      "id": "veterans-affairs-2016-veterans-affairs-vote",
-      "vote": "All votes",
-      "description": "Total appropriations (vote-level detail not published for this edition)",
-      "totalAvailable": 3687223203,
-      "used": 3606036569,
-      "lapsed": 81186634
+      "id": "veterans-affairs-2016-entity-veterans-review-and-appeal-board",
+      "name": "Veterans Review and Appeal Board",
+      "value": 0.011002
     }
   ],
   "transferPayments": [

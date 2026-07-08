@@ -11,7 +11,7 @@ EDSC a dépensé {{totalSpending}} au cours de l'exercice 2024, soit {{percentag
 
 {{section:entities}}
 
-L'essentiel des dépenses d'EDSC est versé directement aux particuliers et aux provinces sous forme de transferts législatifs plutôt que d'activités ministérielles. Au cours de l'exercice 2024, les plus importants étaient la Sécurité de la vieillesse (57,4 milliards de dollars) et le Supplément de revenu garanti (18,0 milliards de dollars), suivis des transferts aux provinces et aux territoires pour l'apprentissage et la garde des jeunes enfants (6,2 milliards de dollars) et des Bourses d'études canadiennes (2,7 milliards de dollars). L'assurance-emploi et le Régime de pensions du Canada fonctionnent au moyen de comptes distincts et ne font pas partie des crédits ministériels présentés ici.
+L'essentiel des dépenses d'EDSC est versé directement aux particuliers et aux provinces sous forme de transferts législatifs plutôt que d'activités ministérielles. Au cours de l'exercice 2024, les plus importants étaient la Sécurité de la vieillesse (57,4 milliards de dollars) et le Supplément de revenu garanti (18,0 milliards de dollars), suivis des transferts aux provinces et aux territoires pour l'apprentissage et la garde des jeunes enfants (6,2 milliards de dollars) et des Bourses d'études canadiennes (2,7 milliards de dollars). L'assurance-emploi et le Régime de pensions du Canada fonctionnent au moyen de comptes distincts et ne font pas partie des dépenses ministérielles présentées ici.
 
 {{section:historicalShare}}
 
@@ -30,4 +30,5 @@ dans le JSON. Comparaisons « depuis 2005 / +62,9 % / +1 485 % / 16,51 points »
 de la pandémie supprimés (non vérifiables / antérieurs à 2014); la hausse liée à la pandémie
 est conservée de façon qualitative.
 Section tokens (spec Part A) added, EN/FR identical, reproducing the original production component order: stats, entities, historicalShare, miniSankey. Unreferenced sections auto-append in default order: lineItems.
+Modification « retrait des autorisations » (2026-07-08) : reformulation de « ne font pas partie des crédits ministériels présentés ici » pour la présentation nette par article courant; aucun chiffre modifié.
 -->

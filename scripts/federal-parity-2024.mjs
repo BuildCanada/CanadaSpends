@@ -407,7 +407,7 @@ function buildReport(baseline) {
   lines.push("## Department MiniSankey & entity breakdowns");
   lines.push("");
   lines.push(
-    "The hardcoded MiniSankey leaves were curated program-level groupings; the generated MiniSankey is a Vol II top-N vote/allotment truncation. Leaf sets differ **by construction** (reason `basis`), so only totals and structure are compared here.",
+    "The hardcoded MiniSankey leaves were curated program-level groupings; the generated MiniSankey is a department → organization → standard-object breakdown, net of internal and external revenues, with the Transfer payments object fanned into its named programs. The department stat card, entity list, and chart are all this one net figure (authorities/votes were dropped from department pages). Leaf sets differ **by construction** (reason `basis`), so only totals and structure are compared here.",
   );
   lines.push("");
   lines.push(
@@ -424,7 +424,7 @@ function buildReport(baseline) {
     const curEnt = b.entities ? b.entities.length : "—";
     const genEnt = gen?.entities?.length ?? "—";
     lines.push(
-      `| ${slug} | ${fmt(b.miniSankeyLeafSum ?? b.miniSankeySpending)} | ${gen ? fmt(gen.totalSpending) : "—"} | ${curLeaves} | ${genLeaves} | ${curEnt} | ${genEnt} | basis — Vol II votes/allotments vs curated program leaves |`,
+      `| ${slug} | ${fmt(b.miniSankeyLeafSum ?? b.miniSankeySpending)} | ${gen ? fmt(gen.totalSpending) : "—"} | ${curLeaves} | ${genLeaves} | ${curEnt} | ${genEnt} | basis — Vol II net standard-object breakdown vs curated program leaves |`,
     );
   }
   lines.push("");

@@ -3,9 +3,9 @@
   "slug": "canada-revenue-agency",
   "financialYearEnding": 2020,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 7.587705,
-  "percentageOfFederal": 2.0314,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 7.198211,
+  "percentageOfFederal": 1.9271,
   "historicalShare": [
     {
       "year": 2014,
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 1.6559
+      "percentage": 1.4169
     },
     {
       "year": 2018,
-      "percentage": 1.5334
+      "percentage": 1.4258
     },
     {
       "year": 2019,
-      "percentage": 1.5822
+      "percentage": 1.4793
     },
     {
       "year": 2020,
-      "percentage": 2.0314
+      "percentage": 1.9271
     },
     {
       "year": 2021,
-      "percentage": 1.6235
+      "percentage": 1.5499
     },
     {
       "year": 2022,
-      "percentage": 1.9724
+      "percentage": 1.8843
     },
     {
       "year": 2023,
-      "percentage": 2.805
+      "percentage": 2.7138
     },
     {
       "year": 2024,
-      "percentage": 3.3167
+      "percentage": 3.2223
     },
     {
       "year": 2025,
-      "percentage": 4.1413
+      "percentage": 4.0525
     }
   ],
   "miniSankey": {
@@ -74,7 +74,23 @@
             {
               "id": "canada-revenue-agency-2020-canada-revenue-agency-obj-10",
               "name": "Transfer payments",
-              "amount": 2.987167
+              "children": [
+                {
+                  "id": "canada-revenue-agency-2020-tp-0001",
+                  "name": "Climate action incentive payments",
+                  "amount": 2.629934
+                },
+                {
+                  "id": "canada-revenue-agency-2020-tp-0000",
+                  "name": "Children's Special Allowance payments",
+                  "amount": 0.351623
+                },
+                {
+                  "id": "canada-revenue-agency-2020-tp-0002",
+                  "name": "Distribution of Fuel and Excess Emission Charges",
+                  "amount": 0.00561
+                }
+              ]
             },
             {
               "id": "canada-revenue-agency-2020-canada-revenue-agency-obj-4",
@@ -130,89 +146,7 @@
     {
       "id": "canada-revenue-agency-2020-entity-canada-revenue-agency",
       "name": "Canada Revenue Agency",
-      "value": 7.587705
-    }
-  ],
-  "votes": [
-    {
-      "id": "canada-revenue-agency-2020-canada-revenue-agency-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures, contributions and recoverable expenditures in relation to the application of the Canada Pension Plan and the Employment Insurance Act",
-      "totalAvailable": 4175101806,
-      "used": 3893929997,
-      "lapsed": 281171809
-    },
-    {
-      "id": "canada-revenue-agency-2020-canada-revenue-agency-vote10",
-      "vote": "Vote 10",
-      "description": "Access to Charitable Tax Incentives for Not-for-Profit Journalism",
-      "totalAvailable": 196404,
-      "used": 0,
-      "lapsed": 196404
-    },
-    {
-      "id": "canada-revenue-agency-2020-canada-revenue-agency-vote15",
-      "vote": "Vote 15",
-      "description": "Ensuring Proper Payments for Public Servants",
-      "totalAvailable": 2856861,
-      "used": 0,
-      "lapsed": 2856861
-    },
-    {
-      "id": "canada-revenue-agency-2020-canada-revenue-agency-vote20",
-      "vote": "Vote 20",
-      "description": "Improving Access to the Canada Workers Benefit Throughout the Year",
-      "totalAvailable": 1996530,
-      "used": 0,
-      "lapsed": 1996530
-    },
-    {
-      "id": "canada-revenue-agency-2020-canada-revenue-agency-vote25",
-      "vote": "Vote 25",
-      "description": "Improving Client Services at the Canada Revenue Agency",
-      "totalAvailable": 2072225,
-      "used": 0,
-      "lapsed": 2072225
-    },
-    {
-      "id": "canada-revenue-agency-2020-canada-revenue-agency-vote30",
-      "vote": "Vote 30",
-      "description": "Improving Tax Compliance",
-      "totalAvailable": 6868488,
-      "used": 0,
-      "lapsed": 6868488
-    },
-    {
-      "id": "canada-revenue-agency-2020-canada-revenue-agency-vote35",
-      "vote": "Vote 35",
-      "description": "Taking Action to Enhance Tax Compliance in the Real Estate Sector",
-      "totalAvailable": 2301415,
-      "used": 0,
-      "lapsed": 2301415
-    },
-    {
-      "id": "canada-revenue-agency-2020-canada-revenue-agency-vote40",
-      "vote": "Vote 40",
-      "description": "Tax Credit for Digital News Subscriptions",
-      "totalAvailable": 17594,
-      "used": 0,
-      "lapsed": 17594
-    },
-    {
-      "id": "canada-revenue-agency-2020-canada-revenue-agency-vote5",
-      "vote": "Vote 5",
-      "description": "Capital expenditures and recoverable expenditures in relation to the application of the Canada Pension Plan and the Employment Insurance Act",
-      "totalAvailable": 62301781,
-      "used": 52522568,
-      "lapsed": 9779213
-    },
-    {
-      "id": "canada-revenue-agency-2020-canada-revenue-agency-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 3641252364,
-      "used": 3641252364,
-      "lapsed": 0
+      "value": 7.198211
     }
   ],
   "transferPayments": [

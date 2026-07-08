@@ -3,9 +3,9 @@
   "slug": "parliament",
   "financialYearEnding": 2023,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 0.861732,
-  "percentageOfFederal": 0.1784,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 0.829311,
+  "percentageOfFederal": 0.1717,
   "historicalShare": [
     {
       "year": 2014,
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 0.221
+      "percentage": 0.2066
     },
     {
       "year": 2018,
-      "percentage": 0.2309
+      "percentage": 0.2209
     },
     {
       "year": 2019,
-      "percentage": 0.2212
+      "percentage": 0.2113
     },
     {
       "year": 2020,
-      "percentage": 0.2108
+      "percentage": 0.203
     },
     {
       "year": 2021,
-      "percentage": 0.1384
+      "percentage": 0.1345
     },
     {
       "year": 2022,
-      "percentage": 0.1565
+      "percentage": 0.151
     },
     {
       "year": 2023,
-      "percentage": 0.1784
+      "percentage": 0.1717
     },
     {
       "year": 2024,
-      "percentage": 0.1849
+      "percentage": 0.1784
     },
     {
       "year": 2025,
-      "percentage": 0.1826
+      "percentage": 0.1754
     }
   ],
   "miniSankey": {
@@ -487,7 +487,7 @@
     {
       "id": "parliament-2023-entity-house-of-commons",
       "name": "House of Commons",
-      "value": 0.583254
+      "value": 0.552552
     },
     {
       "id": "parliament-2023-entity-senate",
@@ -497,17 +497,17 @@
     {
       "id": "parliament-2023-entity-parliamentary-protective-service",
       "name": "Parliamentary Protective Service",
-      "value": 0.10278
+      "value": 0.101612
     },
     {
       "id": "parliament-2023-entity-library-of-parliament",
       "name": "Library of Parliament",
-      "value": 0.052905
+      "value": 0.052354
     },
     {
       "id": "parliament-2023-entity-office-of-the-conflict-of-interest-and-ethics-commissioner",
       "name": "Office of the Conflict of Interest and Ethics Commissioner",
-      "value": 0.007581
+      "value": 0.00758
     },
     {
       "id": "parliament-2023-entity-office-of-the-parliamentary-budget-officer",
@@ -523,136 +523,6 @@
       "id": "parliament-2023-entity-office-of-the-senate-ethics-officer",
       "name": "Office of the Senate Ethics Officer",
       "value": 0.000966
-    }
-  ],
-  "votes": [
-    {
-      "id": "parliament-2023-house-of-commons-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 444364683,
-      "used": 423446077,
-      "lapsed": 20918606
-    },
-    {
-      "id": "parliament-2023-house-of-commons-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 159807887,
-      "used": 159807887,
-      "lapsed": 0
-    },
-    {
-      "id": "parliament-2023-library-of-parliament-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 50778944,
-      "used": 47363722,
-      "lapsed": 3415222
-    },
-    {
-      "id": "parliament-2023-library-of-parliament-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 5540946,
-      "used": 5540946,
-      "lapsed": 0
-    },
-    {
-      "id": "parliament-2023-office-of-the-conflict-of-interest-and-ethics-commissioner-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 7276995,
-      "used": 6768932,
-      "lapsed": 508063
-    },
-    {
-      "id": "parliament-2023-office-of-the-conflict-of-interest-and-ethics-commissioner-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 811598,
-      "used": 811598,
-      "lapsed": 0
-    },
-    {
-      "id": "parliament-2023-office-of-the-parliamentary-budget-officer-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 6650891,
-      "used": 5855876,
-      "lapsed": 795015
-    },
-    {
-      "id": "parliament-2023-office-of-the-parliamentary-budget-officer-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 640054,
-      "used": 640054,
-      "lapsed": 0
-    },
-    {
-      "id": "parliament-2023-office-of-the-senate-ethics-officer-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 1278498,
-      "used": 868183,
-      "lapsed": 410315
-    },
-    {
-      "id": "parliament-2023-office-of-the-senate-ethics-officer-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 97561,
-      "used": 97561,
-      "lapsed": 0
-    },
-    {
-      "id": "parliament-2023-parliamentary-protective-service-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 95915833,
-      "used": 92146231,
-      "lapsed": 3769602
-    },
-    {
-      "id": "parliament-2023-parliamentary-protective-service-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 10633773,
-      "used": 10633773,
-      "lapsed": 0
-    },
-    {
-      "id": "parliament-2023-secretariat-of-the-national-security-and-intelligence-committee-of-parliamentarians-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 3580491,
-      "used": 2650347,
-      "lapsed": 930144
-    },
-    {
-      "id": "parliament-2023-secretariat-of-the-national-security-and-intelligence-committee-of-parliamentarians-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 201031,
-      "used": 201031,
-      "lapsed": 0
-    },
-    {
-      "id": "parliament-2023-senate-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 84536860,
-      "used": 70871493,
-      "lapsed": 13665367
-    },
-    {
-      "id": "parliament-2023-senate-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 34028607,
-      "used": 34028607,
-      "lapsed": 0
     }
   ],
   "transferPayments": [

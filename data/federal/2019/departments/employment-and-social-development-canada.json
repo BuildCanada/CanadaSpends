@@ -3,57 +3,57 @@
   "slug": "employment-and-social-development-canada",
   "financialYearEnding": 2019,
   "reportedAs": "Families, Children and Social Development",
-  "basis": "vol2_appropriations",
-  "totalSpending": 65.202909,
-  "percentageOfFederal": 18.8349,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 63.299149,
+  "percentageOfFederal": 18.2849,
   "historicalShare": [
     {
       "year": 2014,
-      "percentage": 19.876
+      "percentage": 19.9646
     },
     {
       "year": 2015,
-      "percentage": 20.5922
+      "percentage": 20.6775
     },
     {
       "year": 2016,
-      "percentage": 22.021
+      "percentage": 22.1074
     },
     {
       "year": 2017,
-      "percentage": 20.3627
+      "percentage": 19.1973
     },
     {
       "year": 2018,
-      "percentage": 18.9651
+      "percentage": 18.3752
     },
     {
       "year": 2019,
-      "percentage": 18.8349
+      "percentage": 18.2849
     },
     {
       "year": 2020,
-      "percentage": 19.7914
+      "percentage": 19.2919
     },
     {
       "year": 2021,
-      "percentage": 26.4911
+      "percentage": 26.11
     },
     {
       "year": 2022,
-      "percentage": 19.5356
+      "percentage": 19.0262
     },
     {
       "year": 2023,
-      "percentage": 18.7945
+      "percentage": 18.2525
     },
     {
       "year": 2024,
-      "percentage": 18.6571
+      "percentage": 18.1196
     },
     {
       "year": 2025,
-      "percentage": 18.5881
+      "percentage": 18.0786
     }
   ],
   "miniSankey": {
@@ -69,7 +69,70 @@
             {
               "id": "employment-and-social-development-canada-2019-department-of-employment-and-social-development-obj-10",
               "name": "Transfer payments",
-              "amount": 59.87039
+              "children": [
+                {
+                  "id": "employment-and-social-development-canada-2019-tp-0034",
+                  "name": "Old Age Security Payments (R.S.C., 1985, c. O-9)",
+                  "amount": 40.422506
+                },
+                {
+                  "id": "employment-and-social-development-canada-2019-tp-0029",
+                  "name": "Guaranteed Income Supplement Payments (R.S.C., 1985, c. O-9)",
+                  "amount": 12.404203
+                },
+                {
+                  "id": "employment-and-social-development-canada-2019-tp-0021",
+                  "name": "Canada Student Grants to qualifying full and part-time students pursuant to the Canada Student Financial Assistance Act",
+                  "amount": 1.537769
+                },
+                {
+                  "id": "employment-and-social-development-canada-2019-tp-0019",
+                  "name": "Canada Education Savings grant payments to Registered Educations Savings Plan trustees on behalf of Registered Educations Savings Plan beneficiaries to encourage Canadians to save for post-secondary education for their children",
+                  "amount": 0.910633
+                },
+                {
+                  "id": "employment-and-social-development-canada-2019-tp-0009",
+                  "name": "Payments related to the direct financing arrangement under the Canada Student Financial Assistance Act",
+                  "amount": 0.844649
+                },
+                {
+                  "id": "employment-and-social-development-canada-2019-tp-0011",
+                  "name": "Payments to provinces, territories, municipalities, other public bodies, organizations, groups, communities, employers and individuals for the provision of training and/or work experience, the mobilization of community resources, and human resource planning and adjustment measures necessary for the efficient functioning of the Canadian labour market",
+                  "amount": 0.784004
+                },
+                {
+                  "id": "employment-and-social-development-canada-2019-tp-0042",
+                  "name": "Workforce Development Agreement",
+                  "amount": 0.734232
+                },
+                {
+                  "id": "employment-and-social-development-canada-2019-tp-0015",
+                  "name": "Allowance payments (R.S.C., 1985, c. O-9)",
+                  "amount": 0.562498
+                },
+                {
+                  "id": "employment-and-social-development-canada-2019-tp-0041",
+                  "name": "Payments to provinces and territories for the purpose of Early Learning and Child Care",
+                  "amount": 0.399332
+                },
+                {
+                  "id": "employment-and-social-development-canada-2019-tp-0018",
+                  "name": "Canada Disability Savings Grant payments to Registered Disability Savings Plan issuers on behalf of Registered Disability Savings Plan beneficiaries to encourage long-term financial security of eligible individuals with disabilities",
+                  "amount": 0.360483
+                },
+                {
+                  "id": "employment-and-social-development-canada-2019-tp-0001",
+                  "name": "Contributions to not-for-profit organizations, individuals, municipal governments, Band/tribal councils and other Aboriginal organizations, public health and educational institutions, Régies régionales, for-profit enterprises, research organizations and research institutes to support activities to help alleviate and prevent homelessness across Canada and to carry out research on homelessness to help communities better understand and more effectively address homelessness issues",
+                  "amount": 0.16666
+                },
+                {
+                  "id": "employment-and-social-development-canada-2019-department-of-employment-and-social-development-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.743421,
+                  "isAggregate": true,
+                  "count": 27
+                }
+              ]
             },
             {
               "id": "employment-and-social-development-canada-2019-department-of-employment-and-social-development-obj-1",
@@ -192,7 +255,7 @@
     {
       "id": "employment-and-social-development-canada-2019-entity-department-of-employment-and-social-development",
       "name": "Department of Employment and Social Development",
-      "value": 63.105912
+      "value": 61.202151
     },
     {
       "id": "employment-and-social-development-canada-2019-entity-canada-mortgage-and-housing-corporation",
@@ -203,64 +266,6 @@
       "id": "employment-and-social-development-canada-2019-entity-canadian-centre-for-occupational-health-and-safety",
       "name": "Canadian Centre for Occupational Health and Safety",
       "value": 0.01056
-    }
-  ],
-  "votes": [
-    {
-      "id": "employment-and-social-development-canada-2019-canada-mortgage-and-housing-corporation-vote1",
-      "vote": "Vote 1",
-      "description": "Reimbursement under the provisions of the National Housing Act and the Canada Mortgage and Housing Corporation Act",
-      "totalAvailable": 2465963057,
-      "used": 2086437654,
-      "lapsed": 379525403
-    },
-    {
-      "id": "employment-and-social-development-canada-2019-canadian-centre-for-occupational-health-and-safety-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 4341683,
-      "used": 4341683,
-      "lapsed": 0
-    },
-    {
-      "id": "employment-and-social-development-canada-2019-canadian-centre-for-occupational-health-and-safety-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 10940408,
-      "used": 6218365,
-      "lapsed": 4722043
-    },
-    {
-      "id": "employment-and-social-development-canada-2019-department-of-employment-and-social-development-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 2782029717,
-      "used": 2672101833,
-      "lapsed": 109927884
-    },
-    {
-      "id": "employment-and-social-development-canada-2019-department-of-employment-and-social-development-vote10",
-      "vote": "Vote 10",
-      "description": "Debt write-off—Canada Student Loans",
-      "totalAvailable": 163501480,
-      "used": 162154347,
-      "lapsed": 1347133
-    },
-    {
-      "id": "employment-and-social-development-canada-2019-department-of-employment-and-social-development-vote5",
-      "vote": "Vote 5",
-      "description": "Grants and contributions",
-      "totalAvailable": 2606473881,
-      "used": 2432185941,
-      "lapsed": 174287940
-    },
-    {
-      "id": "employment-and-social-development-canada-2019-department-of-employment-and-social-development-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 57840509751,
-      "used": 57839469633,
-      "lapsed": 1040118
     }
   ],
   "transferPayments": [

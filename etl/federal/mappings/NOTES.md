@@ -359,3 +359,80 @@ vol2_appropriations`), `historicalShare` (Vol II ÷ Vol I), and
   reconciliation.json (Vol II-vs-Vol I, keyed on `offset_node`). The site's
   Vol II ministry-list caption branch is retained in code but is dead for
   federal years (every year renders the accrual caption).
+  _(Superseded for department pages by the drop-authorities change below.)_
+
+## Drop authorities from department pages; transfer programs (2026-07-08)
+
+Spec `docs/specs/drop-authorities-transfer-programs.md`. Department pages no
+longer mix parliamentary authorities (gross of revenue) with the net
+standard-object chart. **Every user-facing department figure now comes from the
+standard-object (meso) dataset on the NET basis** (Σ objects − external −
+internal revenues), so the stat card, the entity list, and the miniSankey are
+one number.
+
+- **Department JSON.** `basis` is now `vol2_standard_object_net`. `totalSpending`
+  = Σ of the per-organization net values (== the entity-list sum, exactly);
+  `percentageOfFederal` = that ÷ the Vol I published total; `entities[]` = each
+  organization's net standard-object total; `historicalShare` = the net figure ÷
+  the Vol I total for every meso year (2014–2025). `reportedAs` now derives from
+  the meso portfolio label(s) the slug resolves from that year (portfolio-
+  resolved rows only, never an org-override reattribution). `votes[]` is REMOVED;
+  the vote-only `votes`/`split_vote` exporter code and the site's Votes &
+  allotments tab / `FederalVoteLine` type are deleted. `transferPayments[]` and
+  `historical_pre2013.json` merge behaviour are unchanged.
+  - The **card == chart == entities** identity holds for every dept-year
+    (bulk-verified: 306 dept-years, worst delta ~1e-14).
+- **Transfer-program fanout in the miniSankey.** The "Transfer payments"
+  standard-object leaf of the dominant organization fans out into named program
+  children from `transfer_payments`. The transfers dataset is ministry-keyed (no
+  organization column), so children attach to the organization holding the
+  LARGEST transfer object, and only when it holds **≥90%** of the portfolio's
+  transfer-object amount; otherwise the object stays unsplit and the skip is
+  logged in the export report. Program amounts are scaled pro-rata (scale-to-
+  line) so they sum EXACTLY to the object's net amount; zero rows dropped; the
+  tail rolls into **"Other transfer programs"** (`Autres programmes de
+transfert`). Program leaf ids REUSE the `transferPayments` ids so existing
+  French resolves. The fanout is attached AFTER truncation so the generic
+  top-N truncation never re-truncates the program children. FY2024 National
+  Defence: the ~$1.125B transfer object splits into its contribution programs
+  (Military Training & Cooperation, NATO Military Budget / Security Investment,
+  etc.) + Other, summing to 1.125459 exactly.
+  - **≥90% skips (unsplit, logged):** across 2014–2025 the recurring split
+    portfolios are `health-canada` (Dept/PHAC/CIHR/CFIA — top org ~73% in 2024),
+    `innovation-science-and-industry`, `parliament`, `public-safety-canada`,
+    `environment-and-climate-change`, `regional-economic-development`, and
+    `indigenous-services-and-northern-affairs` (2024). PSPC 2014 has a slightly
+    negative net transfer object and is skipped (no positive dominant org). See
+    the export report's "Transfer-program fanout skips" section for the
+    per-year list.
+
+### §3 — internal weights that still read the allotment dataset
+
+Nothing **user-facing** reads the allotment dataset after this change (department
+figures are meso; the overview is Vol I accrual). The allotment JSON remains in
+the repo and is still consumed **internally**, unchanged, for the OVERVIEW's
+accrual machinery only:
+
+1. **Theme-mix spread** (`@slug_node_vol2`, used by `rebase_nodes_to_accrual`):
+   each slug's accrual total is spread across its thematic-tree nodes in the
+   proportions of its Vol II lines. Node assignment (`Mapping#match_node`) is
+   inherently **line-level** (line > organization > ministry-name > ministry
+   precedence, with per-program regex line rules) — the meso dataset has no
+   line/program detail (only organization × standard object), so this genuinely
+   needs the allotment lines. Retained on allotments.
+2. **N:M portfolio → slug accrual split weights** (`compute_accrual_allocations`
+   denominator): when a host portfolio's 3.6 total is split across {host +
+   absorbed slug}, the split is proportional to the members' Vol II expenditure
+   shares. Retained on allotments so the **overview stays numerically unchanged**
+   (spec acceptance #3 / gate b: "overview unchanged, untouched"); switching this
+   weight to meso shares would shift the split-slug accrual totals on the
+   overview.
+3. **`reconciliation.json`** (`@slug_year_totals`, the Vol II ministry sum vs the
+   Vol I total) — overview reconciliation, unchanged.
+4. **`validate_meso_reconciliation`** — a non-user-facing QA cross-check of the
+   meso GROSS total against the allotment expenditure total (documented
+   systematic deltas, non-blocking).
+
+The "bonus real weights for 2016–2018" from meso org/portfolio shares was
+deferred to protect overview stability (items 1–2 above would move published
+overview figures).

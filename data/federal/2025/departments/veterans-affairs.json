@@ -3,7 +3,7 @@
   "slug": "veterans-affairs",
   "financialYearEnding": 2025,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
+  "basis": "vol2_standard_object_net",
   "totalSpending": 7.651304,
   "percentageOfFederal": 1.398,
   "historicalShare": [
@@ -69,7 +69,70 @@
             {
               "id": "veterans-affairs-2025-department-of-veterans-affairs-obj-10",
               "name": "Transfer payments",
-              "amount": 5.579881
+              "children": [
+                {
+                  "id": "veterans-affairs-2025-tp-0023",
+                  "name": "Pain and Suffering Compensation",
+                  "amount": 2.305747
+                },
+                {
+                  "id": "veterans-affairs-2025-tp-0020",
+                  "name": "Income Replacement Benefit",
+                  "amount": 1.433907
+                },
+                {
+                  "id": "veterans-affairs-2025-tp-0026",
+                  "name": "Pensions for disability and death, including pensions granted under the authority of the Civilian Government Employees (War) Compensation Order, P.C. 45/8848 of November 22, 1944, which shall be subject to the Pension Act; for former prisoners of war under the Pension Act, and Newfoundland special awards",
+                  "amount": 0.992937
+                },
+                {
+                  "id": "veterans-affairs-2025-tp-0005",
+                  "name": "Additional Pain and Suffering Compensation",
+                  "amount": 0.327196
+                },
+                {
+                  "id": "veterans-affairs-2025-tp-0019",
+                  "name": "Housekeeping and Grounds Maintenance",
+                  "amount": 0.318963
+                },
+                {
+                  "id": "veterans-affairs-2025-tp-0003",
+                  "name": "Contributions to Veterans, under the Veterans Independence Program, to assist in defraying costs of extended health care not covered by provincial health programs",
+                  "amount": 0.071708
+                },
+                {
+                  "id": "veterans-affairs-2025-tp-0015",
+                  "name": "Education and Training Benefit",
+                  "amount": 0.028941
+                },
+                {
+                  "id": "veterans-affairs-2025-tp-0009",
+                  "name": "Caregiver Recognition Benefit",
+                  "amount": 0.027767
+                },
+                {
+                  "id": "veterans-affairs-2025-tp-0011",
+                  "name": "Commonwealth War Graves Commission",
+                  "amount": 0.012859
+                },
+                {
+                  "id": "veterans-affairs-2025-tp-0004",
+                  "name": "Contributions under the Commemorative Partnerships Program, to organizations, institutions and other levels of government, in support of projects related to the health and well-being of the veteran population, and commemoration activities and events",
+                  "amount": 0.012214
+                },
+                {
+                  "id": "veterans-affairs-2025-tp-0000",
+                  "name": "Centre of Excellence on Post-Traumatic Stress Disorder and other related mental health conditions",
+                  "amount": 0.009135
+                },
+                {
+                  "id": "veterans-affairs-2025-department-of-veterans-affairs-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.038507,
+                  "isAggregate": true,
+                  "count": 20
+                }
+              ]
             },
             {
               "id": "veterans-affairs-2025-department-of-veterans-affairs-obj-4",
@@ -182,48 +245,6 @@
       "id": "veterans-affairs-2025-entity-veterans-review-and-appeal-board",
       "name": "Veterans Review and Appeal Board",
       "value": 0.021261
-    }
-  ],
-  "votes": [
-    {
-      "id": "veterans-affairs-2025-department-of-veterans-affairs-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 2024504325,
-      "used": 2001439955,
-      "lapsed": 23064370
-    },
-    {
-      "id": "veterans-affairs-2025-department-of-veterans-affairs-vote5",
-      "vote": "Vote 5",
-      "description": "Grants and contributions",
-      "totalAvailable": 5713874741,
-      "used": 5579881063,
-      "lapsed": 133993678
-    },
-    {
-      "id": "veterans-affairs-2025-department-of-veterans-affairs-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 48782741,
-      "used": 48722167,
-      "lapsed": 60574
-    },
-    {
-      "id": "veterans-affairs-2025-veterans-review-and-appeal-board-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 20364389,
-      "used": 19041506,
-      "lapsed": 1322883
-    },
-    {
-      "id": "veterans-affairs-2025-veterans-review-and-appeal-board-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 2219101,
-      "used": 2219101,
-      "lapsed": 0
     }
   ],
   "transferPayments": [

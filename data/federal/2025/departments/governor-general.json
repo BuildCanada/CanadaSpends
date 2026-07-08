@@ -3,7 +3,7 @@
   "slug": "governor-general",
   "financialYearEnding": 2025,
   "reportedAs": "Office of the Governor General's Secretary",
-  "basis": "vol2_appropriations",
+  "basis": "vol2_standard_object_net",
   "totalSpending": 0.029631,
   "percentageOfFederal": 0.0054,
   "historicalShare": [
@@ -89,7 +89,13 @@
             {
               "id": "governor-general-2025-office-of-the-governor-general-s-secretary-obj-10",
               "name": "Transfer payments",
-              "amount": 0.000968
+              "children": [
+                {
+                  "id": "governor-general-2025-tp-0000",
+                  "name": "Annuities payable under the Governor General's Act (R.S.C., 1985 c. G-9)",
+                  "amount": 0.000968
+                }
+              ]
             },
             {
               "id": "governor-general-2025-office-of-the-governor-general-s-secretary-obj-9",
@@ -126,24 +132,6 @@
       "id": "governor-general-2025-entity-office-of-the-governor-general-s-secretary",
       "name": "Office of the Governor General's Secretary",
       "value": 0.029631
-    }
-  ],
-  "votes": [
-    {
-      "id": "governor-general-2025-office-of-the-governor-general-s-secretary-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 26286590,
-      "used": 25817549,
-      "lapsed": 469041
-    },
-    {
-      "id": "governor-general-2025-office-of-the-governor-general-s-secretary-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 3813060,
-      "used": 3813060,
-      "lapsed": 0
     }
   ],
   "transferPayments": [

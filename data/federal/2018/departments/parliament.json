@@ -3,9 +3,9 @@
   "slug": "parliament",
   "financialYearEnding": 2018,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 0.762321,
-  "percentageOfFederal": 0.2309,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 0.729372,
+  "percentageOfFederal": 0.2209,
   "historicalShare": [
     {
       "year": 2014,
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 0.221
+      "percentage": 0.2066
     },
     {
       "year": 2018,
-      "percentage": 0.2309
+      "percentage": 0.2209
     },
     {
       "year": 2019,
-      "percentage": 0.2212
+      "percentage": 0.2113
     },
     {
       "year": 2020,
-      "percentage": 0.2108
+      "percentage": 0.203
     },
     {
       "year": 2021,
-      "percentage": 0.1384
+      "percentage": 0.1345
     },
     {
       "year": 2022,
-      "percentage": 0.1565
+      "percentage": 0.151
     },
     {
       "year": 2023,
-      "percentage": 0.1784
+      "percentage": 0.1717
     },
     {
       "year": 2024,
-      "percentage": 0.1849
+      "percentage": 0.1784
     },
     {
       "year": 2025,
-      "percentage": 0.1826
+      "percentage": 0.1754
     }
   ],
   "miniSankey": {
@@ -465,19 +465,44 @@
   },
   "entities": [
     {
-      "id": "parliament-2018-entity-parliament",
-      "name": "Parliament",
-      "value": 0.762321
-    }
-  ],
-  "votes": [
+      "id": "parliament-2018-entity-house-of-commons",
+      "name": "House of Commons",
+      "value": 0.490383
+    },
     {
-      "id": "parliament-2018-parliament-vote",
-      "vote": "All votes",
-      "description": "Total appropriations (vote-level detail not published for this edition)",
-      "totalAvailable": 809193989,
-      "used": 762320858,
-      "lapsed": 46873131
+      "id": "parliament-2018-entity-senate",
+      "name": "Senate",
+      "value": 0.105955
+    },
+    {
+      "id": "parliament-2018-entity-parliamentary-protective-service",
+      "name": "Parliamentary Protective Service",
+      "value": 0.077184
+    },
+    {
+      "id": "parliament-2018-entity-library-of-parliament",
+      "name": "Library of Parliament",
+      "value": 0.045632
+    },
+    {
+      "id": "parliament-2018-entity-office-of-the-conflict-of-interest-and-ethics-commissioner",
+      "name": "Office of the Conflict of Interest and Ethics Commissioner",
+      "value": 0.006639
+    },
+    {
+      "id": "parliament-2018-entity-office-of-the-parliamentary-budget-officer",
+      "name": "Office of the Parliamentary Budget Officer",
+      "value": 0.001985
+    },
+    {
+      "id": "parliament-2018-entity-office-of-the-senate-ethics-officer",
+      "name": "Office of the Senate Ethics Officer",
+      "value": 0.001015
+    },
+    {
+      "id": "parliament-2018-entity-secretariat-of-the-national-security-and-intelligence-committee-of-parliamentarians",
+      "name": "Secretariat of the National Security and Intelligence Committee of Parliamentarians",
+      "value": 0.000579
     }
   ],
   "transferPayments": [

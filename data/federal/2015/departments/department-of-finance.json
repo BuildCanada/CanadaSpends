@@ -3,17 +3,17 @@
   "slug": "department-of-finance",
   "financialYearEnding": 2015,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 86.186507,
-  "percentageOfFederal": 30.731,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 86.198306,
+  "percentageOfFederal": 30.7352,
   "historicalShare": [
     {
       "year": 2014,
-      "percentage": 30.9373
+      "percentage": 31.0335
     },
     {
       "year": 2015,
-      "percentage": 30.731
+      "percentage": 30.7352
     },
     {
       "year": 2016,
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 28.6373
+      "percentage": 28.6369
     },
     {
       "year": 2018,
-      "percentage": 27.4523
+      "percentage": 27.4522
     },
     {
       "year": 2019,
-      "percentage": 27.2779
+      "percentage": 27.2778
     },
     {
       "year": 2020,
-      "percentage": 26.5609
+      "percentage": 26.5605
     },
     {
       "year": 2021,
-      "percentage": 18.327
+      "percentage": 18.3268
     },
     {
       "year": 2022,
-      "percentage": 21.2123
+      "percentage": 21.2122
     },
     {
       "year": 2023,
-      "percentage": 24.3876
+      "percentage": 24.3874
     },
     {
       "year": 2024,
-      "percentage": 26.1038
+      "percentage": 26.1034
     },
     {
       "year": 2025,
-      "percentage": 26.2859
+      "percentage": 26.2858
     }
   ],
   "miniSankey": {
@@ -69,7 +69,70 @@
             {
               "id": "department-of-finance-2015-finance-department-obj-10",
               "name": "Transfer payments",
-              "amount": 61.955648
+              "children": [
+                {
+                  "id": "department-of-finance-2015-tp-0006",
+                  "name": "Canada health transfer",
+                  "amount": 29.915297
+                },
+                {
+                  "id": "department-of-finance-2015-tp-0012",
+                  "name": "Fiscal equalization",
+                  "amount": 15.528004
+                },
+                {
+                  "id": "department-of-finance-2015-tp-0007",
+                  "name": "Canada social transfer",
+                  "amount": 11.720312
+                },
+                {
+                  "id": "department-of-finance-2015-tp-0020",
+                  "name": "Territorial financing",
+                  "amount": 3.231693
+                },
+                {
+                  "id": "department-of-finance-2015-tp-0017",
+                  "name": "Payments to International Development Association",
+                  "amount": 0.82275
+                },
+                {
+                  "id": "department-of-finance-2015-tp-0010",
+                  "name": "Establishment of a Canadian Securities Regulation Regime and Canadian Regulatory Authority",
+                  "amount": 0.157429
+                },
+                {
+                  "id": "department-of-finance-2015-tp-0004",
+                  "name": "Additional fiscal equalization to Nova Scotia",
+                  "amount": 0.122202
+                },
+                {
+                  "id": "department-of-finance-2015-tp-0011",
+                  "name": "Fiscal Stabilization",
+                  "amount": 0.096321
+                },
+                {
+                  "id": "department-of-finance-2015-tp-0013",
+                  "name": "Incentive for provinces to eliminate taxes on capital",
+                  "amount": 0.088535
+                },
+                {
+                  "id": "department-of-finance-2015-tp-0015",
+                  "name": "Obligation to Ontario related to General Motors",
+                  "amount": 0.069897
+                },
+                {
+                  "id": "department-of-finance-2015-tp-0003",
+                  "name": "Additional fiscal equalization offset payment to Nova Scotia",
+                  "amount": 0.060066
+                },
+                {
+                  "id": "department-of-finance-2015-finance-department-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.143142,
+                  "isAggregate": true,
+                  "count": 5
+                }
+              ]
             },
             {
               "id": "department-of-finance-2015-finance-department-obj-11",
@@ -411,14 +474,14 @@
   },
   "entities": [
     {
-      "id": "department-of-finance-2015-entity-finance",
-      "name": "Finance",
-      "value": 85.683356
+      "id": "department-of-finance-2015-entity-finance-department",
+      "name": "Finance Department",
+      "value": 85.683357
     },
     {
       "id": "department-of-finance-2015-entity-ppp-canada-inc",
       "name": "PPP Canada Inc.",
-      "value": 0.1977
+      "value": 0.2095
     },
     {
       "id": "department-of-finance-2015-entity-office-of-the-superintendent-of-financial-institutions",
@@ -428,7 +491,7 @@
     {
       "id": "department-of-finance-2015-entity-office-of-the-auditor-general",
       "name": "Office of the Auditor General",
-      "value": 0.084122
+      "value": 0.084121
     },
     {
       "id": "department-of-finance-2015-entity-financial-transactions-and-reports-analysis-centre-of-canada",
@@ -443,129 +506,7 @@
     {
       "id": "department-of-finance-2015-entity-canadian-international-trade-tribunal",
       "name": "Canadian International Trade Tribunal",
-      "value": 0.005724
-    }
-  ],
-  "votes": [
-    {
-      "id": "department-of-finance-2015-canadian-international-trade-tribunal-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 5060900,
-      "used": 5041241,
-      "lapsed": 19659
-    },
-    {
-      "id": "department-of-finance-2015-canadian-international-trade-tribunal-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 683374,
-      "used": 683255,
-      "lapsed": 119
-    },
-    {
-      "id": "department-of-finance-2015-finance-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 128073512,
-      "used": 115142418,
-      "lapsed": 12931094
-    },
-    {
-      "id": "department-of-finance-2015-finance-vote5",
-      "vote": "Vote 5",
-      "description": "Grants and contributions",
-      "totalAvailable": 5035000,
-      "used": 5000000,
-      "lapsed": 35000
-    },
-    {
-      "id": "department-of-finance-2015-finance-vote6",
-      "vote": "Vote 6",
-      "description": "Authority for amount by way of direct payments to the International Development Association pursuant to Bretton Woods and Related Agreements Act",
-      "totalAvailable": 1,
-      "used": 0,
-      "lapsed": 1
-    },
-    {
-      "id": "department-of-finance-2015-finance-vote9",
-      "vote": "Vote 9",
-      "description": "To amend subsection 14(1) of the Canadian Securities Regulation Regime Transition Office Act",
-      "totalAvailable": 1,
-      "used": 0,
-      "lapsed": 1
-    },
-    {
-      "id": "department-of-finance-2015-finance-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 85631787018,
-      "used": 85563213780,
-      "lapsed": 68573238
-    },
-    {
-      "id": "department-of-finance-2015-financial-consumer-agency-of-canada-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 17890366,
-      "used": 17890366,
-      "lapsed": 0
-    },
-    {
-      "id": "department-of-finance-2015-financial-transactions-and-reports-analysis-centre-of-canada-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 48139864,
-      "used": 46417795,
-      "lapsed": 1722069
-    },
-    {
-      "id": "department-of-finance-2015-financial-transactions-and-reports-analysis-centre-of-canada-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 4986635,
-      "used": 4986635,
-      "lapsed": 0
-    },
-    {
-      "id": "department-of-finance-2015-office-of-the-auditor-general-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 81727390,
-      "used": 74998831,
-      "lapsed": 6728559
-    },
-    {
-      "id": "department-of-finance-2015-office-of-the-auditor-general-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 9126250,
-      "used": 9123553,
-      "lapsed": 2697
-    },
-    {
-      "id": "department-of-finance-2015-office-of-the-superintendent-of-financial-institutions-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 945058,
-      "used": 945058,
-      "lapsed": 0
-    },
-    {
-      "id": "department-of-finance-2015-office-of-the-superintendent-of-financial-institutions-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 217226070,
-      "used": 145363816,
-      "lapsed": 71862254
-    },
-    {
-      "id": "department-of-finance-2015-ppp-canada-inc-vote3",
-      "vote": "Vote 3",
-      "description": "Payments to PPP Canada Inc. for PPP Canada Fund investments",
-      "totalAvailable": 197700000,
-      "used": 197700000,
-      "lapsed": 0
+      "value": 0.005725
     }
   ],
   "transferPayments": [

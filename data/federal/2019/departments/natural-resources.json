@@ -3,57 +3,57 @@
   "slug": "natural-resources",
   "financialYearEnding": 2019,
   "reportedAs": "Natural Resources",
-  "basis": "vol2_appropriations",
-  "totalSpending": 2.507909,
-  "percentageOfFederal": 0.7244,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 2.48946,
+  "percentageOfFederal": 0.7191,
   "historicalShare": [
     {
       "year": 2014,
-      "percentage": 0.9919
+      "percentage": 0.9938
     },
     {
       "year": 2015,
-      "percentage": 0.9451
+      "percentage": 0.9463
     },
     {
       "year": 2016,
-      "percentage": 0.7115
+      "percentage": 0.7138
     },
     {
       "year": 2017,
-      "percentage": 0.7784
+      "percentage": 0.7631
     },
     {
       "year": 2018,
-      "percentage": 0.8064
+      "percentage": 0.8002
     },
     {
       "year": 2019,
-      "percentage": 0.7244
+      "percentage": 0.7191
     },
     {
       "year": 2020,
-      "percentage": 0.9611
+      "percentage": 0.9555
     },
     {
       "year": 2021,
-      "percentage": 0.4033
+      "percentage": 0.4008
     },
     {
       "year": 2022,
-      "percentage": 0.6752
+      "percentage": 0.6718
     },
     {
       "year": 2023,
-      "percentage": 0.8086
+      "percentage": 0.8049
     },
     {
       "year": 2024,
-      "percentage": 0.9804
+      "percentage": 0.9772
     },
     {
       "year": 2025,
-      "percentage": 1.1333
+      "percentage": 1.1305
     }
   ],
   "miniSankey": {
@@ -69,7 +69,70 @@
             {
               "id": "natural-resources-2019-department-of-natural-resources-obj-10",
               "name": "Transfer payments",
-              "amount": 0.739093
+              "children": [
+                {
+                  "id": "natural-resources-2019-tp-0031",
+                  "name": "Payments to the Newfoundland Offshore Petroleum Resource Revenue Fund",
+                  "amount": 0.32975
+                },
+                {
+                  "id": "natural-resources-2019-tp-0016",
+                  "name": "Contributions in support of ecoENERGY for Renewable Power",
+                  "amount": 0.09556
+                },
+                {
+                  "id": "natural-resources-2019-tp-0032",
+                  "name": "Payments to the Nova Scotia Offshore Revenue Account",
+                  "amount": 0.072977
+                },
+                {
+                  "id": "natural-resources-2019-tp-0022",
+                  "name": "Energy Innovation Program",
+                  "amount": 0.030413
+                },
+                {
+                  "id": "natural-resources-2019-tp-0001",
+                  "name": "Clean Growth in Natural Resource Sectors Innovation Program",
+                  "amount": 0.022406
+                },
+                {
+                  "id": "natural-resources-2019-tp-0017",
+                  "name": "Contributions in support of the Forest Innovation Program",
+                  "amount": 0.021463
+                },
+                {
+                  "id": "natural-resources-2019-tp-0034",
+                  "name": "Smart Grids Programs",
+                  "amount": 0.021033
+                },
+                {
+                  "id": "natural-resources-2019-tp-0020",
+                  "name": "Electric Vehicle and Alternative Fuel Infrastructure",
+                  "amount": 0.019054
+                },
+                {
+                  "id": "natural-resources-2019-tp-0004",
+                  "name": "Contribution in support of Investments in the Forest Industry Transformation Program",
+                  "amount": 0.018468
+                },
+                {
+                  "id": "natural-resources-2019-tp-0021",
+                  "name": "Emerging Renewable Power Program",
+                  "amount": 0.0161
+                },
+                {
+                  "id": "natural-resources-2019-tp-0002",
+                  "name": "Contribution Program for expanding market opportunities",
+                  "amount": 0.014422
+                },
+                {
+                  "id": "natural-resources-2019-department-of-natural-resources-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.077447,
+                  "isAggregate": true,
+                  "count": 24
+                }
+              ]
             },
             {
               "id": "natural-resources-2019-department-of-natural-resources-obj-1",
@@ -301,7 +364,7 @@
     {
       "id": "natural-resources-2019-entity-department-of-natural-resources",
       "name": "Department of Natural Resources",
-      "value": 1.421416
+      "value": 1.402967
     },
     {
       "id": "natural-resources-2019-entity-atomic-energy-of-canada-limited",
@@ -321,105 +384,7 @@
     {
       "id": "natural-resources-2019-entity-northern-pipeline-agency",
       "name": "Northern Pipeline Agency",
-      "value": 0.00023
-    }
-  ],
-  "votes": [
-    {
-      "id": "natural-resources-2019-atomic-energy-of-canada-limited-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to Atomic Energy of Canada Limited for operating and capital expenditures",
-      "totalAvailable": 1043582932,
-      "used": 826233292,
-      "lapsed": 217349640
-    },
-    {
-      "id": "natural-resources-2019-atomic-energy-of-canada-limited-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 3000000,
-      "used": 3000000,
-      "lapsed": 0
-    },
-    {
-      "id": "natural-resources-2019-canadian-nuclear-safety-commission-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 42006376,
-      "used": 41367246,
-      "lapsed": 639130
-    },
-    {
-      "id": "natural-resources-2019-canadian-nuclear-safety-commission-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 113099640,
-      "used": 107555860,
-      "lapsed": 5543780
-    },
-    {
-      "id": "natural-resources-2019-department-of-natural-resources-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 623726986,
-      "used": 601119899,
-      "lapsed": 22607087
-    },
-    {
-      "id": "natural-resources-2019-department-of-natural-resources-vote10",
-      "vote": "Vote 10",
-      "description": "Grants and contributions",
-      "totalAvailable": 437572999,
-      "used": 333045920,
-      "lapsed": 104527079
-    },
-    {
-      "id": "natural-resources-2019-department-of-natural-resources-vote5",
-      "vote": "Vote 5",
-      "description": "Capital expenditures",
-      "totalAvailable": 32071964,
-      "used": 25287927,
-      "lapsed": 6784037
-    },
-    {
-      "id": "natural-resources-2019-department-of-natural-resources-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 468229613,
-      "used": 461962421,
-      "lapsed": 6267192
-    },
-    {
-      "id": "natural-resources-2019-national-energy-board-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 91398657,
-      "used": 84475488,
-      "lapsed": 6923169
-    },
-    {
-      "id": "natural-resources-2019-national-energy-board-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 23641166,
-      "used": 23630479,
-      "lapsed": 10687
-    },
-    {
-      "id": "natural-resources-2019-northern-pipeline-agency-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 465000,
-      "used": 226882,
-      "lapsed": 238118
-    },
-    {
-      "id": "natural-resources-2019-northern-pipeline-agency-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 3599,
-      "used": 3599,
-      "lapsed": 0
+      "value": 0.000231
     }
   ],
   "transferPayments": [

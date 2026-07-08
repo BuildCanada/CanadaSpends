@@ -3,8 +3,8 @@
   "slug": "canadian-heritage",
   "financialYearEnding": 2015,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 3.45408,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 3.454081,
   "percentageOfFederal": 1.2316,
   "historicalShare": [
     {
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 1.1987
+      "percentage": 1.1587
     },
     {
       "year": 2018,
-      "percentage": 1.2054
+      "percentage": 1.1838
     },
     {
       "year": 2019,
-      "percentage": 1.0587
+      "percentage": 1.0398
     },
     {
       "year": 2020,
-      "percentage": 1.0287
+      "percentage": 1.0116
     },
     {
       "year": 2021,
-      "percentage": 0.6979
+      "percentage": 0.6906
     },
     {
       "year": 2022,
-      "percentage": 0.9019
+      "percentage": 0.8871
     },
     {
       "year": 2023,
-      "percentage": 1.0092
+      "percentage": 0.9927
     },
     {
       "year": 2024,
-      "percentage": 0.9346
+      "percentage": 0.9173
     },
     {
       "year": 2025,
-      "percentage": 0.8854
+      "percentage": 0.8664
     }
   ],
   "miniSankey": {
@@ -69,7 +69,70 @@
             {
               "id": "canadian-heritage-2015-canadian-heritage-department-obj-10",
               "name": "Transfer payments",
-              "amount": 1.268513
+              "children": [
+                {
+                  "id": "canadian-heritage-2015-tp-0001",
+                  "name": "Contributions for the Hosting program",
+                  "amount": 0.281913
+                },
+                {
+                  "id": "canadian-heritage-2015-tp-0008",
+                  "name": "Contributions in support of the Development of Official‑Language Communities Program",
+                  "amount": 0.217311
+                },
+                {
+                  "id": "canadian-heritage-2015-tp-0002",
+                  "name": "Contributions for the Sport Support Program",
+                  "amount": 0.147687
+                },
+                {
+                  "id": "canadian-heritage-2015-tp-0012",
+                  "name": "Contributions to support the Canada Media Fund",
+                  "amount": 0.134133
+                },
+                {
+                  "id": "canadian-heritage-2015-tp-0013",
+                  "name": "Contributions to support the Enhancement of Official‑Languages Program",
+                  "amount": 0.116342
+                },
+                {
+                  "id": "canadian-heritage-2015-tp-0041",
+                  "name": "Grants to the Canada Periodical Fund",
+                  "amount": 0.067332
+                },
+                {
+                  "id": "canadian-heritage-2015-tp-0017",
+                  "name": "Contributions to the Canada Book Fund",
+                  "amount": 0.034206
+                },
+                {
+                  "id": "canadian-heritage-2015-tp-0035",
+                  "name": "Grants to the Athlete assistance program",
+                  "amount": 0.027098
+                },
+                {
+                  "id": "canadian-heritage-2015-tp-0019",
+                  "name": "Contributions to the Canada Cultural Spaces Fund",
+                  "amount": 0.023865
+                },
+                {
+                  "id": "canadian-heritage-2015-tp-0020",
+                  "name": "Contributions to the Canada Music Fund",
+                  "amount": 0.023555
+                },
+                {
+                  "id": "canadian-heritage-2015-tp-0016",
+                  "name": "Contributions to the Canada Arts Training Fund",
+                  "amount": 0.022748
+                },
+                {
+                  "id": "canadian-heritage-2015-canadian-heritage-department-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.172323,
+                  "isAggregate": true,
+                  "count": 42
+                }
+              ]
             },
             {
               "id": "canadian-heritage-2015-canadian-heritage-department-obj-1",
@@ -468,9 +531,9 @@
   },
   "entities": [
     {
-      "id": "canadian-heritage-2015-entity-canadian-heritage",
-      "name": "Canadian Heritage",
-      "value": 1.499264
+      "id": "canadian-heritage-2015-entity-canadian-heritage-department",
+      "name": "Canadian Heritage Department",
+      "value": 1.499265
     },
     {
       "id": "canadian-heritage-2015-entity-canadian-broadcasting-corporation",
@@ -485,12 +548,12 @@
     {
       "id": "canadian-heritage-2015-entity-library-and-archives-of-canada",
       "name": "Library and Archives of Canada",
-      "value": 0.10642
+      "value": 0.106422
     },
     {
       "id": "canadian-heritage-2015-entity-canadian-radio-television-and-telecommunications-commission",
-      "name": "Canadian Radio‑television and Telecommunications Commission",
-      "value": 0.104091
+      "name": "Canadian Radio-television and Telecommunications Commission",
+      "value": 0.10409
     },
     {
       "id": "canadian-heritage-2015-entity-telefilm-canada",
@@ -500,12 +563,12 @@
     {
       "id": "canadian-heritage-2015-entity-public-service-commission",
       "name": "Public Service Commission",
-      "value": 0.094929
+      "value": 0.09493
     },
     {
       "id": "canadian-heritage-2015-entity-national-film-board",
       "name": "National Film Board",
-      "value": 0.069708
+      "value": 0.069707
     },
     {
       "id": "canadian-heritage-2015-entity-canadian-museum-of-history",
@@ -561,264 +624,6 @@
       "id": "canadian-heritage-2015-entity-registry-of-the-public-servants-disclosure-protection-tribunal",
       "name": "Registry of the Public Servants Disclosure Protection Tribunal",
       "value": 0.000965
-    }
-  ],
-  "votes": [
-    {
-      "id": "canadian-heritage-2015-canada-council-for-the-arts-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the Canada Council for the Arts",
-      "totalAvailable": 182224388,
-      "used": 182224388,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2015-canadian-broadcasting-corporation-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the Canadian Broadcasting Corporation for operating expenditures",
-      "totalAvailable": 929283798,
-      "used": 929283798,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2015-canadian-broadcasting-corporation-vote10",
-      "vote": "Vote 10",
-      "description": "Payments to the Canadian Broadcasting Corporation for capital expenditures",
-      "totalAvailable": 104740000,
-      "used": 104740000,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2015-canadian-broadcasting-corporation-vote5",
-      "vote": "Vote 5",
-      "description": "Payments to the Canadian Broadcasting Corporation for working capital",
-      "totalAvailable": 4000000,
-      "used": 4000000,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2015-canadian-heritage-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 209836115,
-      "used": 205782617,
-      "lapsed": 4053498
-    },
-    {
-      "id": "canadian-heritage-2015-canadian-heritage-vote5",
-      "vote": "Vote 5",
-      "description": "Grants and contributions",
-      "totalAvailable": 1273510754,
-      "used": 1267460219,
-      "lapsed": 6050535
-    },
-    {
-      "id": "canadian-heritage-2015-canadian-heritage-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 26042801,
-      "used": 26021539,
-      "lapsed": 21262
-    },
-    {
-      "id": "canadian-heritage-2015-canadian-museum-for-human-rights-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the Canadian Museum for Human Rights for operating and capital expenditures",
-      "totalAvailable": 21700000,
-      "used": 21700000,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2015-canadian-museum-of-history-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the Canadian Museum of History for operating and capital expenditures",
-      "totalAvailable": 68923716,
-      "used": 68923716,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2015-canadian-museum-of-immigration-at-pier-21-vote1",
-      "vote": "Vote 1",
-      "description": "Payment to the Canadian Museum of Immigration at Pier 21 for operating and capital expenditures",
-      "totalAvailable": 9900000,
-      "used": 9900000,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2015-canadian-museum-of-nature-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the Canadian Museum of Nature for operating and capital expenditures",
-      "totalAvailable": 26276818,
-      "used": 26276818,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2015-canadian-radio-television-and-telecommunications-commission-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 103230544,
-      "used": 97619832,
-      "lapsed": 5610712
-    },
-    {
-      "id": "canadian-heritage-2015-canadian-radio-television-and-telecommunications-commission-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 6470766,
-      "used": 6470766,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2015-library-and-archives-of-canada-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 98880601,
-      "used": 95300880,
-      "lapsed": 3579721
-    },
-    {
-      "id": "canadian-heritage-2015-library-and-archives-of-canada-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 11152344,
-      "used": 11119492,
-      "lapsed": 32852
-    },
-    {
-      "id": "canadian-heritage-2015-national-arts-centre-corporation-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the National Arts Centre Corporation for operating expenditures",
-      "totalAvailable": 35321395,
-      "used": 35321395,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2015-national-film-board-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 81323234,
-      "used": 68176752,
-      "lapsed": 13146482
-    },
-    {
-      "id": "canadian-heritage-2015-national-film-board-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 5487763,
-      "used": 1531134,
-      "lapsed": 3956629
-    },
-    {
-      "id": "canadian-heritage-2015-national-gallery-of-canada-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the National Gallery of Canada for operating and capital expenditures",
-      "totalAvailable": 36308269,
-      "used": 36308269,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2015-national-gallery-of-canada-vote5",
-      "vote": "Vote 5",
-      "description": "Payment to the National Gallery of Canada for the acquisition of objects for the collection and other costs attributable to this activity",
-      "totalAvailable": 8000000,
-      "used": 8000000,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2015-national-museum-of-science-and-technology-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the National Museum of Science and Technology for operating and capital expenditures",
-      "totalAvailable": 33370395,
-      "used": 33370395,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2015-public-service-commission-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 105409067,
-      "used": 84791267,
-      "lapsed": 20617800
-    },
-    {
-      "id": "canadian-heritage-2015-public-service-commission-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 10137486,
-      "used": 10137486,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2015-public-service-labour-relations-board-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 7413892,
-      "used": 7403892,
-      "lapsed": 10000
-    },
-    {
-      "id": "canadian-heritage-2015-public-service-labour-relations-board-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 725491,
-      "used": 725491,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2015-public-service-staffing-tribunal-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 2765794,
-      "used": 2629844,
-      "lapsed": 135950
-    },
-    {
-      "id": "canadian-heritage-2015-public-service-staffing-tribunal-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 343705,
-      "used": 343705,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2015-registry-of-the-public-servants-disclosure-protection-tribunal-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 878674,
-      "used": 868674,
-      "lapsed": 10000
-    },
-    {
-      "id": "canadian-heritage-2015-registry-of-the-public-servants-disclosure-protection-tribunal-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 96569,
-      "used": 96569,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2015-telefilm-canada-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to Telefilm Canada to be used for the purposes set out in the Telefilm Canada Act",
-      "totalAvailable": 95453551,
-      "used": 95453551,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2015-the-national-battlefields-commission-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 12262644,
-      "used": 9427867,
-      "lapsed": 2834777
-    },
-    {
-      "id": "canadian-heritage-2015-the-national-battlefields-commission-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 2669512,
-      "used": 2669511,
-      "lapsed": 1
     }
   ],
   "transferPayments": [

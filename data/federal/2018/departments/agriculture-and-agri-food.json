@@ -3,57 +3,57 @@
   "slug": "agriculture-and-agri-food",
   "financialYearEnding": 2018,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 2.041507,
-  "percentageOfFederal": 0.6183,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 1.985858,
+  "percentageOfFederal": 0.6015,
   "historicalShare": [
     {
       "year": 2014,
-      "percentage": 0.9064
+      "percentage": 0.9497
     },
     {
       "year": 2015,
-      "percentage": 0.7583
+      "percentage": 0.8114
     },
     {
       "year": 2016,
-      "percentage": 0.692
+      "percentage": 0.7419
     },
     {
       "year": 2017,
-      "percentage": 0.8794
+      "percentage": 0.8386
     },
     {
       "year": 2018,
-      "percentage": 0.6183
+      "percentage": 0.6015
     },
     {
       "year": 2019,
-      "percentage": 0.6385
+      "percentage": 0.6251
     },
     {
       "year": 2020,
-      "percentage": 0.7011
+      "percentage": 0.6893
     },
     {
       "year": 2021,
-      "percentage": 0.4797
+      "percentage": 0.4704
     },
     {
       "year": 2022,
-      "percentage": 0.6996
+      "percentage": 0.6915
     },
     {
       "year": 2023,
-      "percentage": 0.7625
+      "percentage": 0.7522
     },
     {
       "year": 2024,
-      "percentage": 0.8122
+      "percentage": 0.8044
     },
     {
       "year": 2025,
-      "percentage": 0.7485
+      "percentage": 0.7405
     }
   ],
   "miniSankey": {
@@ -69,7 +69,70 @@
             {
               "id": "agriculture-and-agri-food-2018-department-of-agriculture-and-agri-food-obj-10",
               "name": "Transfer payments",
-              "amount": 1.269798
+              "children": [
+                {
+                  "id": "agriculture-and-agri-food-2018-tp-0002",
+                  "name": "Contribution payments for the AgriInsurance program",
+                  "amount": 0.642522
+                },
+                {
+                  "id": "agriculture-and-agri-food-2018-tp-0022",
+                  "name": "Grant payments for the AgriInvest program",
+                  "amount": 0.145499
+                },
+                {
+                  "id": "agriculture-and-agri-food-2018-tp-0010",
+                  "name": "Contributions for Cost-Shared Strategic Initiatives programming in Innovation under Growing Forward 2",
+                  "amount": 0.086859
+                },
+                {
+                  "id": "agriculture-and-agri-food-2018-tp-0009",
+                  "name": "Contributions for Cost-Shared Strategic Initiatives programming in Competitiveness and Market Development under Growing Forward 2",
+                  "amount": 0.084391
+                },
+                {
+                  "id": "agriculture-and-agri-food-2018-tp-0001",
+                  "name": "Contribution payments for the AgriInnovation program under Growing Forward 2",
+                  "amount": 0.056684
+                },
+                {
+                  "id": "agriculture-and-agri-food-2018-tp-0004",
+                  "name": "Contribution payments for the AgriMarketing program under Growing Forward 2",
+                  "amount": 0.036017
+                },
+                {
+                  "id": "agriculture-and-agri-food-2018-tp-0005",
+                  "name": "Contribution payments for the AgriStability program",
+                  "amount": 0.034301
+                },
+                {
+                  "id": "agriculture-and-agri-food-2018-tp-0015",
+                  "name": "Contributions to support Investments in the Dairy Sector",
+                  "amount": 0.030384
+                },
+                {
+                  "id": "agriculture-and-agri-food-2018-tp-0020",
+                  "name": "Payments in connection with the Agricultural Marketing Programs Act",
+                  "amount": 0.028622
+                },
+                {
+                  "id": "agriculture-and-agri-food-2018-tp-0008",
+                  "name": "Contributions for Cost-Shared Strategic Initiatives programming in Adaptability and Industry Capacity under Growing Forward 2",
+                  "amount": 0.028299
+                },
+                {
+                  "id": "agriculture-and-agri-food-2018-tp-0024",
+                  "name": "Grant payments for the AgriStability program",
+                  "amount": 0.02645
+                },
+                {
+                  "id": "agriculture-and-agri-food-2018-department-of-agriculture-and-agri-food-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.06977,
+                  "isAggregate": true,
+                  "count": 12
+                }
+              ]
             },
             {
               "id": "agriculture-and-agri-food-2018-department-of-agriculture-and-agri-food-obj-1",
@@ -207,19 +270,19 @@
   },
   "entities": [
     {
-      "id": "agriculture-and-agri-food-2018-entity-agriculture-and-agri-food",
-      "name": "Agriculture and Agri-Food",
-      "value": 2.041507
-    }
-  ],
-  "votes": [
+      "id": "agriculture-and-agri-food-2018-entity-department-of-agriculture-and-agri-food",
+      "name": "Department of Agriculture and Agri-Food",
+      "value": 1.984898
+    },
     {
-      "id": "agriculture-and-agri-food-2018-agriculture-and-agri-food-vote",
-      "vote": "All votes",
-      "description": "Total appropriations (vote-level detail not published for this edition)",
-      "totalAvailable": 2262956355,
-      "used": 2041506867,
-      "lapsed": 221449488
+      "id": "agriculture-and-agri-food-2018-entity-canadian-dairy-commission",
+      "name": "Canadian Dairy Commission",
+      "value": 0.003924
+    },
+    {
+      "id": "agriculture-and-agri-food-2018-entity-canadian-grain-commission",
+      "name": "Canadian Grain Commission",
+      "value": -0.002964
     }
   ],
   "transferPayments": [

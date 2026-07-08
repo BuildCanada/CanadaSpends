@@ -1,21 +1,21 @@
 "use client";
 
 import { useInflation, useInflationScale } from "@/components/InflationContext";
-import type { FederalTransferPayment, FederalVoteLine } from "@/lib/federal";
+import type { FederalTransferPayment } from "@/lib/federal";
 import { cn } from "@/lib/utils";
 import { Trans, useLingui } from "@lingui/react/macro";
 import { useMemo, useState } from "react";
 
 // ---------------------------------------------------------------------------
-// LineItemTable — searchable, sortable, paginated table of appropriation
-// (vote/allotment) lines and transfer-payment lines. Figures are shown in
-// dollars (not billions). Includes a client-side CSV download. Backs the
-// top-N + "Other" truncation in the mini Sankey above it (spec §10).
+// LineItemTable — searchable, sortable, paginated table of transfer-payment
+// (grant/contribution) lines. Figures are shown in dollars (not billions).
+// Includes a client-side CSV download. Authorities (votes/allotments) were
+// dropped from department pages (drop-authorities spec §1), so this is now the
+// transfer-payments view only; it also names the programs behind the transfer
+// object in the mini Sankey above it.
 // ---------------------------------------------------------------------------
 
 const PAGE_SIZE = 15;
-
-type Tab = "votes" | "transfers";
 
 type Column = {
   key: string;
@@ -58,12 +58,10 @@ function downloadCsv(
 }
 
 export function LineItemTable({
-  votes,
   transferPayments,
   slug,
   year,
 }: {
-  votes: FederalVoteLine[];
   transferPayments: FederalTransferPayment[];
   slug: string;
   year: number;
@@ -71,7 +69,6 @@ export function LineItemTable({
   const { t, i18n } = useLingui();
   const { real, baseYear } = useInflation();
   const scale = useInflationScale();
-  const [tab, setTab] = useState<Tab>("votes");
   const [query, setQuery] = useState("");
   const [sortKey, setSortKey] = useState<string>("used");
   const [sortDir, setSortDir] = useState<"asc" | "desc">("desc");
@@ -82,56 +79,29 @@ export function LineItemTable({
   // column definitions) are scaled and labeled with the CPI base year.
   const realSuffix = real ? ` (${t`real`} ${baseYear} $)` : "";
 
-  const voteColumns: Column[] = [
-    { key: "vote", label: t`Vote`, get: (r) => (r.vote as string) ?? "" },
-    {
-      key: "description",
-      label: t`Description`,
-      get: (r) => (r.description as string) ?? "",
-    },
-    {
-      key: "totalAvailable",
-      label: t`Total available` + realSuffix,
-      numeric: true,
-      get: (r) => Math.round(((r.totalAvailable as number) ?? 0) * scale),
-    },
-    {
-      key: "used",
-      label: t`Used` + realSuffix,
-      numeric: true,
-      get: (r) => Math.round(((r.used as number) ?? 0) * scale),
-    },
-    {
-      key: "lapsed",
-      label: t`Lapsed` + realSuffix,
-      numeric: true,
-      get: (r) => Math.round(((r.lapsed as number) ?? 0) * scale),
-    },
-  ];
+  const columns: Column[] = useMemo(
+    () => [
+      {
+        key: "category",
+        label: t`Category`,
+        get: (r) => (r.category as string) ?? "",
+      },
+      {
+        key: "description",
+        label: t`Description`,
+        get: (r) => (r.description as string) ?? "",
+      },
+      {
+        key: "used",
+        label: t`Amount` + realSuffix,
+        numeric: true,
+        get: (r) => Math.round(((r.used as number) ?? 0) * scale),
+      },
+    ],
+    [t, realSuffix, scale],
+  );
 
-  const transferColumns: Column[] = [
-    {
-      key: "category",
-      label: t`Category`,
-      get: (r) => (r.category as string) ?? "",
-    },
-    {
-      key: "description",
-      label: t`Description`,
-      get: (r) => (r.description as string) ?? "",
-    },
-    {
-      key: "used",
-      label: t`Amount` + realSuffix,
-      numeric: true,
-      get: (r) => Math.round(((r.used as number) ?? 0) * scale),
-    },
-  ];
-
-  const columns = tab === "votes" ? voteColumns : transferColumns;
-  const rawRows = (tab === "votes"
-    ? votes
-    : transferPayments) as unknown as Record<string, unknown>[];
+  const rawRows = transferPayments as unknown as Record<string, unknown>[];
 
   const rows = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -173,42 +143,11 @@ export function LineItemTable({
     setPage(0);
   };
 
-  const switchTab = (next: Tab) => {
-    setTab(next);
-    setQuery("");
-    setPage(0);
-    setSortKey(next === "votes" ? "used" : "used");
-    setSortDir("desc");
-  };
-
   return (
     <div className="w-full">
       <div className="flex flex-wrap items-center justify-between gap-3 mb-3">
-        <div className="inline-flex rounded-lg border border-gray-200 bg-card p-1 text-sm">
-          <button
-            type="button"
-            onClick={() => switchTab("votes")}
-            className={cn(
-              "rounded-md px-3 py-1 font-medium transition-colors",
-              tab === "votes"
-                ? "bg-auburn-800 text-white"
-                : "text-foreground/60 hover:text-foreground",
-            )}
-          >
-            <Trans>Votes &amp; allotments</Trans>
-          </button>
-          <button
-            type="button"
-            onClick={() => switchTab("transfers")}
-            className={cn(
-              "rounded-md px-3 py-1 font-medium transition-colors",
-              tab === "transfers"
-                ? "bg-auburn-800 text-white"
-                : "text-foreground/60 hover:text-foreground",
-            )}
-          >
-            <Trans>Transfer payments</Trans>
-          </button>
+        <div className="inline-flex rounded-lg border border-gray-200 bg-card px-3 py-1 text-sm font-medium text-foreground/80">
+          <Trans>Transfer payments</Trans>
         </div>
         <div className="flex items-center gap-2">
           <input
@@ -224,7 +163,7 @@ export function LineItemTable({
           <button
             type="button"
             onClick={() =>
-              downloadCsv(`${slug}-${year}-${tab}.csv`, columns, rows)
+              downloadCsv(`${slug}-${year}-transfers.csv`, columns, rows)
             }
             className="rounded-md border border-gray-300 px-3 py-1.5 text-sm font-medium hover:bg-gray-100"
           >

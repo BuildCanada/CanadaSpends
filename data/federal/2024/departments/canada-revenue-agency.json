@@ -3,9 +3,9 @@
   "slug": "canada-revenue-agency",
   "financialYearEnding": 2024,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 17.293893,
-  "percentageOfFederal": 3.3167,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 16.80193,
+  "percentageOfFederal": 3.2223,
   "historicalShare": [
     {
       "year": 2014,
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 1.6559
+      "percentage": 1.4169
     },
     {
       "year": 2018,
-      "percentage": 1.5334
+      "percentage": 1.4258
     },
     {
       "year": 2019,
-      "percentage": 1.5822
+      "percentage": 1.4793
     },
     {
       "year": 2020,
-      "percentage": 2.0314
+      "percentage": 1.9271
     },
     {
       "year": 2021,
-      "percentage": 1.6235
+      "percentage": 1.5499
     },
     {
       "year": 2022,
-      "percentage": 1.9724
+      "percentage": 1.8843
     },
     {
       "year": 2023,
-      "percentage": 2.805
+      "percentage": 2.7138
     },
     {
       "year": 2024,
-      "percentage": 3.3167
+      "percentage": 3.2223
     },
     {
       "year": 2025,
-      "percentage": 4.1413
+      "percentage": 4.0525
     }
   ],
   "miniSankey": {
@@ -69,7 +69,33 @@
             {
               "id": "canada-revenue-agency-2024-canada-revenue-agency-obj-10",
               "name": "Transfer payments",
-              "amount": 10.177964
+              "children": [
+                {
+                  "id": "canada-revenue-agency-2024-tp-0002",
+                  "name": "Distribution of fuel charges (Canada Carbon Rebate) under section 165 of the Greenhouse Gas Pollution Pricing Act and section 122.8 of the Income Tax Act",
+                  "amount": 9.599734
+                },
+                {
+                  "id": "canada-revenue-agency-2024-tp-0000",
+                  "name": "Children's Special Allowance payments (Children's Special Allowance Act)",
+                  "amount": 0.39006
+                },
+                {
+                  "id": "canada-revenue-agency-2024-tp-0003",
+                  "name": "Distribution of fuel charges (to farming businesses) under section 165 of the Greenhouse Gas Pollution Pricing Act and section 127.42 of the Income Tax Act",
+                  "amount": 0.131523
+                },
+                {
+                  "id": "canada-revenue-agency-2024-tp-0004",
+                  "name": "Distribution of fuel charges (to provinces and territories) under section 165 of the Greenhouse Gas Pollution Pricing Act",
+                  "amount": 0.051362
+                },
+                {
+                  "id": "canada-revenue-agency-2024-tp-0001",
+                  "name": "Community Volunteer Income Tax Program Grant",
+                  "amount": 0.005285
+                }
+              ]
             },
             {
               "id": "canada-revenue-agency-2024-canada-revenue-agency-obj-1",
@@ -130,33 +156,7 @@
     {
       "id": "canada-revenue-agency-2024-entity-canada-revenue-agency",
       "name": "Canada Revenue Agency",
-      "value": 17.293893
-    }
-  ],
-  "votes": [
-    {
-      "id": "canada-revenue-agency-2024-canada-revenue-agency-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures, contributions and recoverable expenditures in relation to the application of the Canada Pension Plan and the Employment Insurance Act",
-      "totalAvailable": 6449748928,
-      "used": 5851459149,
-      "lapsed": 598289779
-    },
-    {
-      "id": "canada-revenue-agency-2024-canada-revenue-agency-vote5",
-      "vote": "Vote 5",
-      "description": "Capital expenditures and recoverable expenditures in relation to the application of the Canada Pension Plan and the Employment Insurance Act",
-      "totalAvailable": 157683155,
-      "used": 105076320,
-      "lapsed": 52606835
-    },
-    {
-      "id": "canada-revenue-agency-2024-canada-revenue-agency-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 11337357662,
-      "used": 11337357662,
-      "lapsed": 0
+      "value": 16.80193
     }
   ],
   "transferPayments": [

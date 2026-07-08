@@ -21,7 +21,42 @@ module PbCli
       # _eng/_fra data VALUE pair -- see PbCli::I18n::Glossary for how "Vote"
       # is expanded into "Vote N" -> "Crédit N" at lookup time.
       CURATED_TERMS = {
-        'Vote' => 'Crédit'
+        'Vote' => 'Crédit',
+        # Aggregate leaf for the transfer-program fanout (drop-authorities §2).
+        'Other transfer programs' => 'Autres programmes de transfert',
+        # PA-era "X Department" organization labels (and a few footnote-stripping
+        # spacing artifacts) surfaced as entity + miniSankey org names once
+        # department figures moved to the standard-object (meso) basis
+        # (drop-authorities §1). Official-register names.
+        'Agriculture and Agri-Food Department' => "Ministère de l'Agriculture et de l'Agroalimentaire",
+        'Atlantic Canada Opportunities Agency Department' => 'Agence de promotion économique du Canada atlantique',
+        'Atlantic Canada OpportunitiesAgency' => 'Agence de promotion économique du Canada atlantique',
+        'Canadian Heritage Department' => 'Ministère du Patrimoine canadien',
+        'Citizenship and Immigration Department' => "Ministère de la Citoyenneté et de l'Immigration",
+        'Department of Foreign Affairs,Trade and Development' => 'Ministère des Affaires étrangères, du Commerce et du Développement',
+        'Employment and Social Development Department' => "Ministère de l'Emploi et du Développement social",
+        'Environment Department' => "Ministère de l'Environnement",
+        'Finance Department' => 'Ministère des Finances',
+        'Foreign Affairs,Trade and Development Department' => 'Ministère des Affaires étrangères, du Commerce et du Développement',
+        'Health Department' => 'Ministère de la Santé',
+        'Indian Affairs and Northern Development Department' => 'Ministère des Affaires indiennes et du Nord canadien',
+        'Industry Department' => "Ministère de l'Industrie",
+        'Justice Department' => 'Ministère de la Justice',
+        'National Defence Department' => 'Ministère de la Défense nationale',
+        'National Research Council ofCanada' => 'Conseil national de recherches du Canada',
+        'National Security and Intelligence Review' => 'Examen de la sécurité nationale et du renseignement',
+        'Natural Resources Department' => 'Ministère des Ressources naturelles',
+        'Office of Infrastructure of Canada Department' => "Bureau de l'infrastructure du Canada",
+        'Office of the ChiefElectoral Officer' => 'Bureau du directeur général des élections',
+        'Office of the Director of PublicProsecutions' => 'Bureau du directeur des poursuites pénales',
+        'Offices of the Information and Privacy Commissioners ofCanada' => "Commissariats à l'information et à la protection de la vie privée du Canada",
+        'Privy Council Office Department' => 'Bureau du Conseil privé',
+        'Public Safety and Emergency Preparedness Department' => 'Ministère de la Sécurité publique et de la Protection civile',
+        'Public Works and Government Services Department' => 'Ministère des Travaux publics et des Services gouvernementaux',
+        'Registrar of the Supreme Courtof Canada' => 'Registraire de la Cour suprême du Canada',
+        'Transport Department' => 'Ministère des Transports',
+        'Veterans Affairs Department' => 'Ministère des Anciens Combattants',
+        'Veterans Review and AppealBoard' => 'Tribunal des anciens combattants (révision et appel)'
       }.freeze
 
       def initialize(paths = {})

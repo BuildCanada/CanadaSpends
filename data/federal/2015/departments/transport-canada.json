@@ -3,8 +3,8 @@
   "slug": "transport-canada",
   "financialYearEnding": 2015,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 3.009279,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 3.009278,
   "percentageOfFederal": 1.073,
   "historicalShare": [
     {
@@ -17,43 +17,43 @@
     },
     {
       "year": 2016,
-      "percentage": 1.5446
+      "percentage": 1.098
     },
     {
       "year": 2017,
-      "percentage": 0.8324
+      "percentage": 0.7851
     },
     {
       "year": 2018,
-      "percentage": 0.774
+      "percentage": 0.7519
     },
     {
       "year": 2019,
-      "percentage": 0.8036
+      "percentage": 0.7815
     },
     {
       "year": 2020,
-      "percentage": 0.8854
+      "percentage": 0.8636
     },
     {
       "year": 2021,
-      "percentage": 0.5428
+      "percentage": 0.5314
     },
     {
       "year": 2022,
-      "percentage": 0.7476
+      "percentage": 0.7309
     },
     {
       "year": 2023,
-      "percentage": 0.8491
+      "percentage": 0.8306
     },
     {
       "year": 2024,
-      "percentage": 0.9965
+      "percentage": 0.9777
     },
     {
       "year": 2025,
-      "percentage": 1.1005
+      "percentage": 1.0817
     }
   ],
   "miniSankey": {
@@ -69,7 +69,70 @@
             {
               "id": "transport-canada-2015-transport-department-obj-10",
               "name": "Transfer payments",
-              "amount": 0.646894
+              "children": [
+                {
+                  "id": "transport-canada-2015-tp-0014",
+                  "name": "Gateways and Border Crossings Fund",
+                  "amount": 0.336389
+                },
+                {
+                  "id": "transport-canada-2015-tp-0003",
+                  "name": "Asia‑Pacific Gateway and Corridor Transportation Infrastructure Fund",
+                  "amount": 0.095145
+                },
+                {
+                  "id": "transport-canada-2015-tp-0017",
+                  "name": "Northumberland strait crossing subsidy payment under the Northumberland Strait Crossing Act",
+                  "amount": 0.061733
+                },
+                {
+                  "id": "transport-canada-2015-tp-0013",
+                  "name": "Ferry Services Contribution Program",
+                  "amount": 0.032616
+                },
+                {
+                  "id": "transport-canada-2015-tp-0029",
+                  "name": "Grant to the Province of British Columbia in respect of the provision of ferry and coastal freight and passenger services",
+                  "amount": 0.028355
+                },
+                {
+                  "id": "transport-canada-2015-tp-0000",
+                  "name": "Airports Capital Assistance Program",
+                  "amount": 0.027326
+                },
+                {
+                  "id": "transport-canada-2015-tp-0023",
+                  "name": "Regional and Remote Passenger Rail Service Class Contribution Program",
+                  "amount": 0.01336
+                },
+                {
+                  "id": "transport-canada-2015-tp-0011",
+                  "name": "Contributions to provinces toward highway improvements to enhance overall efficiency and promote safety while encouraging industrial development and tourism from a regional economic perspective: Outaouais Road Development Agreement",
+                  "amount": 0.009367
+                },
+                {
+                  "id": "transport-canada-2015-tp-0019",
+                  "name": "Payments in support of crossing improvements approved under the Railway Safety Act",
+                  "amount": 0.008403
+                },
+                {
+                  "id": "transport-canada-2015-tp-0006",
+                  "name": "Contribution for the Oshawa Harbour Port Consolidation Project",
+                  "amount": 0.005899
+                },
+                {
+                  "id": "transport-canada-2015-tp-0009",
+                  "name": "Contribution to Support Clean Transportation Initiatives",
+                  "amount": 0.005891
+                },
+                {
+                  "id": "transport-canada-2015-transport-department-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.02241,
+                  "isAggregate": true,
+                  "count": 18
+                }
+              ]
             },
             {
               "id": "transport-canada-2015-transport-department-obj-1",
@@ -288,9 +351,9 @@
   },
   "entities": [
     {
-      "id": "transport-canada-2015-entity-transport",
-      "name": "Transport",
-      "value": 1.783618
+      "id": "transport-canada-2015-entity-transport-department",
+      "name": "Transport Department",
+      "value": 1.783617
     },
     {
       "id": "transport-canada-2015-entity-canadian-air-transport-security-authority",
@@ -324,127 +387,13 @@
     },
     {
       "id": "transport-canada-2015-entity-windsor-detroit-bridge-authority",
-      "name": "Windsor‑Detroit Bridge Authority",
+      "name": "Windsor-Detroit Bridge Authority",
       "value": 0.008059
     },
     {
       "id": "transport-canada-2015-entity-transportation-appeal-tribunal-of-canada",
       "name": "Transportation Appeal Tribunal of Canada",
-      "value": 0.000884
-    }
-  ],
-  "votes": [
-    {
-      "id": "transport-canada-2015-canada-post-corporation-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the Canada Post Corporation for special purposes",
-      "totalAvailable": 22210000,
-      "used": 22210000,
-      "lapsed": 0
-    },
-    {
-      "id": "transport-canada-2015-canadian-air-transport-security-authority-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the Canadian Air Transport Security Authority for operating and capital expenditures",
-      "totalAvailable": 676185743,
-      "used": 623896764,
-      "lapsed": 52288979
-    },
-    {
-      "id": "transport-canada-2015-canadian-transportation-agency-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 25898344,
-      "used": 25547821,
-      "lapsed": 350523
-    },
-    {
-      "id": "transport-canada-2015-canadian-transportation-agency-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 3230028,
-      "used": 3230028,
-      "lapsed": 0
-    },
-    {
-      "id": "transport-canada-2015-marine-atlantic-inc-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to Marine Atlantic Inc.",
-      "totalAvailable": 127484000,
-      "used": 127484000,
-      "lapsed": 0
-    },
-    {
-      "id": "transport-canada-2015-the-federal-bridge-corporation-limited-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to The Federal Bridge Corporation Limited",
-      "totalAvailable": 21040000,
-      "used": 8138200,
-      "lapsed": 12901800
-    },
-    {
-      "id": "transport-canada-2015-transport-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 823034976,
-      "used": 813816273,
-      "lapsed": 9218703
-    },
-    {
-      "id": "transport-canada-2015-transport-vote10",
-      "vote": "Vote 10",
-      "description": "Grants and contributions",
-      "totalAvailable": 778474908,
-      "used": 581861529,
-      "lapsed": 196613379
-    },
-    {
-      "id": "transport-canada-2015-transport-vote5",
-      "vote": "Vote 5",
-      "description": "Capital expenditures",
-      "totalAvailable": 229799910,
-      "used": 124091494,
-      "lapsed": 105708416
-    },
-    {
-      "id": "transport-canada-2015-transport-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 265151778,
-      "used": 263848933,
-      "lapsed": 1302845
-    },
-    {
-      "id": "transport-canada-2015-transportation-appeal-tribunal-of-canada-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 824018,
-      "used": 814018,
-      "lapsed": 10000
-    },
-    {
-      "id": "transport-canada-2015-transportation-appeal-tribunal-of-canada-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 70397,
-      "used": 70397,
-      "lapsed": 0
-    },
-    {
-      "id": "transport-canada-2015-via-rail-canada-inc-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to VIA Rail Canada Inc.",
-      "totalAvailable": 433261756,
-      "used": 406210121,
-      "lapsed": 27051635
-    },
-    {
-      "id": "transport-canada-2015-windsor-detroit-bridge-authority-vote3",
-      "vote": "Vote 3",
-      "description": "Payments to the Windsor‑Detroit Bridge Authority",
-      "totalAvailable": 8064384,
-      "used": 8059104,
-      "lapsed": 5280
+      "value": 0.000885
     }
   ],
   "transferPayments": [

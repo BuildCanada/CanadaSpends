@@ -3,7 +3,7 @@
   "slug": "veterans-affairs",
   "financialYearEnding": 2015,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
+  "basis": "vol2_standard_object_net",
   "totalSpending": 3.388303,
   "percentageOfFederal": 1.2081,
   "historicalShare": [
@@ -69,7 +69,70 @@
             {
               "id": "veterans-affairs-2015-veterans-affairs-department-obj-10",
               "name": "Transfer payments",
-              "amount": 2.534086
+              "children": [
+                {
+                  "id": "veterans-affairs-2015-tp-0017",
+                  "name": "Pensions for disability and death, including pensions granted under the authority of the Civilian Government Employees (War) Compensation Order, PC45/8848 of November 22, 1944, which shall be subject to the Pension Act; for compensation for former prisoners of war under the Pension Act, and Newfoundland special awards",
+                  "amount": 1.473365
+                },
+                {
+                  "id": "veterans-affairs-2015-tp-0010",
+                  "name": "Disability Awards and Allowances",
+                  "amount": 0.472571
+                },
+                {
+                  "id": "veterans-affairs-2015-tp-0013",
+                  "name": "Housekeeping and Grounds Maintenance",
+                  "amount": 0.280528
+                },
+                {
+                  "id": "veterans-affairs-2015-tp-0011",
+                  "name": "Earnings Loss and Supplementary Retirement Benefit",
+                  "amount": 0.190693
+                },
+                {
+                  "id": "veterans-affairs-2015-tp-0001",
+                  "name": "Contributions to Veterans, under the Veterans Independence Program, to assist in defraying costs of extended health care not covered by provincial health programs",
+                  "amount": 0.082553
+                },
+                {
+                  "id": "veterans-affairs-2015-tp-0009",
+                  "name": "Commonwealth War Graves Commission",
+                  "amount": 0.010913
+                },
+                {
+                  "id": "veterans-affairs-2015-tp-0014",
+                  "name": "Last Post Fund",
+                  "amount": 0.008547
+                },
+                {
+                  "id": "veterans-affairs-2015-tp-0024",
+                  "name": "War Veterans Allowances and Civilian War Allowances",
+                  "amount": 0.008543
+                },
+                {
+                  "id": "veterans-affairs-2015-tp-0002",
+                  "name": "Contributions under the Commemorative Partnerships Program, to organizations, institutions and other levels of government, in support of projects related to the health and well‑being of the veteran population, and commemoration activities and events",
+                  "amount": 0.001649
+                },
+                {
+                  "id": "veterans-affairs-2015-tp-0000",
+                  "name": "Contributions for the Community War Memorial Program to support the building of new, or major additions to existing cenotaphs and monuments",
+                  "amount": 0.000724
+                },
+                {
+                  "id": "veterans-affairs-2015-tp-0016",
+                  "name": "Payments under the Flying Accidents Compensation Regulations",
+                  "amount": 0.000684
+                },
+                {
+                  "id": "veterans-affairs-2015-veterans-affairs-department-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.003316,
+                  "isAggregate": true,
+                  "count": 12
+                }
+              ]
             },
             {
               "id": "veterans-affairs-2015-veterans-affairs-department-obj-4",
@@ -179,56 +242,14 @@
   },
   "entities": [
     {
-      "id": "veterans-affairs-2015-entity-veterans-affairs",
-      "name": "Veterans Affairs",
+      "id": "veterans-affairs-2015-entity-veterans-affairs-department",
+      "name": "Veterans Affairs Department",
       "value": 3.37688
     },
     {
       "id": "veterans-affairs-2015-entity-veterans-review-and-appeal-board",
       "name": "Veterans Review and Appeal Board",
       "value": 0.011423
-    }
-  ],
-  "votes": [
-    {
-      "id": "veterans-affairs-2015-veterans-affairs-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 880092932,
-      "used": 806206370,
-      "lapsed": 73886562
-    },
-    {
-      "id": "veterans-affairs-2015-veterans-affairs-vote5",
-      "vote": "Vote 5",
-      "description": "Grants and contributions",
-      "totalAvailable": 2688403902,
-      "used": 2533729901,
-      "lapsed": 154674001
-    },
-    {
-      "id": "veterans-affairs-2015-veterans-affairs-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 36943683,
-      "used": 36943683,
-      "lapsed": 0
-    },
-    {
-      "id": "veterans-affairs-2015-veterans-review-and-appeal-board-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 10129316,
-      "used": 10080688,
-      "lapsed": 48628
-    },
-    {
-      "id": "veterans-affairs-2015-veterans-review-and-appeal-board-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 1342611,
-      "used": 1342611,
-      "lapsed": 0
     }
   ],
   "transferPayments": [

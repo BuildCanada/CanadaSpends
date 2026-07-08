@@ -3,8 +3,8 @@
   "slug": "justice",
   "financialYearEnding": 2015,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 2.246712,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 2.24671,
   "percentageOfFederal": 0.8011,
   "historicalShare": [
     {
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 0.7516
+      "percentage": 0.5289
     },
     {
       "year": 2018,
-      "percentage": 0.6252
+      "percentage": 0.5164
     },
     {
       "year": 2019,
-      "percentage": 0.6386
+      "percentage": 0.5304
     },
     {
       "year": 2020,
-      "percentage": 0.6125
+      "percentage": 0.5086
     },
     {
       "year": 2021,
-      "percentage": 0.364
+      "percentage": 0.3017
     },
     {
       "year": 2022,
-      "percentage": 0.4988
+      "percentage": 0.4122
     },
     {
       "year": 2023,
-      "percentage": 0.5611
+      "percentage": 0.4606
     },
     {
       "year": 2024,
-      "percentage": 0.5695
+      "percentage": 0.4694
     },
     {
       "year": 2025,
-      "percentage": 0.6056
+      "percentage": 0.5085
     }
   ],
   "miniSankey": {
@@ -74,7 +74,70 @@
             {
               "id": "justice-2015-justice-department-obj-10",
               "name": "Transfer payments",
-              "amount": 0.348763
+              "children": [
+                {
+                  "id": "justice-2015-tp-0009",
+                  "name": "Contributions to the provinces and territories in support of the youth justice services",
+                  "amount": 0.141497
+                },
+                {
+                  "id": "justice-2015-tp-0011",
+                  "name": "Contributions to the provinces to assist in the operation of legal aid services and systems",
+                  "amount": 0.120161
+                },
+                {
+                  "id": "justice-2015-tp-0004",
+                  "name": "Contributions in support of the Supporting Families Fund",
+                  "amount": 0.015806
+                },
+                {
+                  "id": "justice-2015-tp-0013",
+                  "name": "Contributions under the Aboriginal Justice Strategy Fund",
+                  "amount": 0.012534
+                },
+                {
+                  "id": "justice-2015-tp-0010",
+                  "name": "Contributions to the provinces and territories in support of the youth justice services — Intensive Rehabilitative Custody and Supervision Program",
+                  "amount": 0.010831
+                },
+                {
+                  "id": "justice-2015-tp-0001",
+                  "name": "Contributions for the Victims of Crime Initiative",
+                  "amount": 0.009262
+                },
+                {
+                  "id": "justice-2015-tp-0014",
+                  "name": "Contributions under the Access to Justice in Both Official Languages Support Fund",
+                  "amount": 0.006217
+                },
+                {
+                  "id": "justice-2015-tp-0012",
+                  "name": "Contributions to the provinces under the Aboriginal Courtwork Program",
+                  "amount": 0.005561
+                },
+                {
+                  "id": "justice-2015-tp-0000",
+                  "name": "Contributions for Access to Justice Services to the Territories (being Legal Aid, Aboriginal Courtwork and Public Legal Education and Information Services)",
+                  "amount": 0.00485
+                },
+                {
+                  "id": "justice-2015-tp-0005",
+                  "name": "Contributions in support of the Youth Justice Fund",
+                  "amount": 0.00393
+                },
+                {
+                  "id": "justice-2015-tp-0006",
+                  "name": "Contributions to support the implementation of official languages requirements under the Contraventions Act",
+                  "amount": 0.003806
+                },
+                {
+                  "id": "justice-2015-justice-department-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.014308,
+                  "isAggregate": true,
+                  "count": 13
+                }
+              ]
             },
             {
               "id": "justice-2015-justice-department-internal-revenues",
@@ -586,9 +649,9 @@
   },
   "entities": [
     {
-      "id": "justice-2015-entity-justice",
-      "name": "Justice",
-      "value": 1.303213
+      "id": "justice-2015-entity-justice-department",
+      "name": "Justice Department",
+      "value": 1.303214
     },
     {
       "id": "justice-2015-entity-office-of-the-commissioner-for-federal-judicial-affairs",
@@ -598,7 +661,7 @@
     {
       "id": "justice-2015-entity-office-of-the-director-of-public-prosecutions",
       "name": "Office of the Director of Public Prosecutions",
-      "value": 0.213671
+      "value": 0.213669
     },
     {
       "id": "justice-2015-entity-courts-administration-service",
@@ -623,182 +686,12 @@
     {
       "id": "justice-2015-entity-canadian-human-rights-commission",
       "name": "Canadian Human Rights Commission",
-      "value": 0.025506
+      "value": 0.025505
     },
     {
       "id": "justice-2015-entity-canadian-human-rights-tribunal",
       "name": "Canadian Human Rights Tribunal",
       "value": 0.002469
-    }
-  ],
-  "votes": [
-    {
-      "id": "justice-2015-administrative-tribunals-support-service-of-canada-vote2",
-      "vote": "Vote 2",
-      "description": "Program expenditures",
-      "totalAvailable": 47562335,
-      "used": 41957719,
-      "lapsed": 5604616
-    },
-    {
-      "id": "justice-2015-administrative-tribunals-support-service-of-canada-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 3735378,
-      "used": 3735378,
-      "lapsed": 0
-    },
-    {
-      "id": "justice-2015-canadian-human-rights-commission-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 23411219,
-      "used": 22827590,
-      "lapsed": 583629
-    },
-    {
-      "id": "justice-2015-canadian-human-rights-commission-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 2678046,
-      "used": 2678046,
-      "lapsed": 0
-    },
-    {
-      "id": "justice-2015-canadian-human-rights-tribunal-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 2252752,
-      "used": 2242752,
-      "lapsed": 10000
-    },
-    {
-      "id": "justice-2015-canadian-human-rights-tribunal-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 225921,
-      "used": 225921,
-      "lapsed": 0
-    },
-    {
-      "id": "justice-2015-courts-administration-service-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 65557131,
-      "used": 62132593,
-      "lapsed": 3424538
-    },
-    {
-      "id": "justice-2015-courts-administration-service-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 7017813,
-      "used": 7017813,
-      "lapsed": 0
-    },
-    {
-      "id": "justice-2015-justice-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 890824637,
-      "used": 876796191,
-      "lapsed": 14028446
-    },
-    {
-      "id": "justice-2015-justice-vote5",
-      "vote": "Vote 5",
-      "description": "Grants and contributions",
-      "totalAvailable": 356435223,
-      "used": 348763264,
-      "lapsed": 7671959
-    },
-    {
-      "id": "justice-2015-justice-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 77656239,
-      "used": 77653953,
-      "lapsed": 2286
-    },
-    {
-      "id": "justice-2015-office-of-the-commissioner-for-federal-judicial-affairs-vote1",
-      "vote": "Vote 1",
-      "description": "Commissioner for Federal Judicial Affairs — Operating expenditures",
-      "totalAvailable": 9717040,
-      "used": 8216332,
-      "lapsed": 1500708
-    },
-    {
-      "id": "justice-2015-office-of-the-commissioner-for-federal-judicial-affairs-vote5",
-      "vote": "Vote 5",
-      "description": "Canadian Judicial Council — Operating expenditures",
-      "totalAvailable": 3212464,
-      "used": 2944764,
-      "lapsed": 267700
-    },
-    {
-      "id": "justice-2015-office-of-the-commissioner-for-federal-judicial-affairs-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 506515599,
-      "used": 506515330,
-      "lapsed": 269
-    },
-    {
-      "id": "justice-2015-office-of-the-director-of-public-prosecutions-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 202902582,
-      "used": 194411243,
-      "lapsed": 8491339
-    },
-    {
-      "id": "justice-2015-office-of-the-director-of-public-prosecutions-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 19259475,
-      "used": 19259475,
-      "lapsed": 0
-    },
-    {
-      "id": "justice-2015-offices-of-the-information-and-privacy-commissioners-of-canada-vote1",
-      "vote": "Vote 1",
-      "description": "Office of the Information Commissioner of Canada — Program expenditures",
-      "totalAvailable": 10626443,
-      "used": 10487222,
-      "lapsed": 139221
-    },
-    {
-      "id": "justice-2015-offices-of-the-information-and-privacy-commissioners-of-canada-vote5",
-      "vote": "Vote 5",
-      "description": "Office of the Privacy Commissioner of Canada — Program expenditures",
-      "totalAvailable": 23728093,
-      "used": 23065873,
-      "lapsed": 662220
-    },
-    {
-      "id": "justice-2015-offices-of-the-information-and-privacy-commissioners-of-canada-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 3790612,
-      "used": 3787549,
-      "lapsed": 3063
-    },
-    {
-      "id": "justice-2015-registrar-of-the-supreme-court-of-canada-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 23585872,
-      "used": 22699824,
-      "lapsed": 886048
-    },
-    {
-      "id": "justice-2015-registrar-of-the-supreme-court-of-canada-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 9292963,
-      "used": 9292963,
-      "lapsed": 0
     }
   ],
   "transferPayments": [

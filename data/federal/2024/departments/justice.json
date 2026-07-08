@@ -3,9 +3,9 @@
   "slug": "justice",
   "financialYearEnding": 2024,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 2.969698,
-  "percentageOfFederal": 0.5695,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 2.447442,
+  "percentageOfFederal": 0.4694,
   "historicalShare": [
     {
       "year": 2014,
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 0.7516
+      "percentage": 0.5289
     },
     {
       "year": 2018,
-      "percentage": 0.6252
+      "percentage": 0.5164
     },
     {
       "year": 2019,
-      "percentage": 0.6386
+      "percentage": 0.5304
     },
     {
       "year": 2020,
-      "percentage": 0.6125
+      "percentage": 0.5086
     },
     {
       "year": 2021,
-      "percentage": 0.364
+      "percentage": 0.3017
     },
     {
       "year": 2022,
-      "percentage": 0.4988
+      "percentage": 0.4122
     },
     {
       "year": 2023,
-      "percentage": 0.5611
+      "percentage": 0.4606
     },
     {
       "year": 2024,
-      "percentage": 0.5695
+      "percentage": 0.4694
     },
     {
       "year": 2025,
-      "percentage": 0.6056
+      "percentage": 0.5085
     }
   ],
   "miniSankey": {
@@ -74,7 +74,70 @@
             {
               "id": "justice-2024-department-of-justice-obj-10",
               "name": "Transfer payments",
-              "amount": 0.681511
+              "children": [
+                {
+                  "id": "justice-2024-tp-0004",
+                  "name": "Contributions for Criminal Legal Aid",
+                  "amount": 0.193686
+                },
+                {
+                  "id": "justice-2024-tp-0022",
+                  "name": "Contributions under the Youth Justice Services Funding Program",
+                  "amount": 0.184838
+                },
+                {
+                  "id": "justice-2024-tp-0005",
+                  "name": "Contributions for Immigration and Refugee Legal Aid",
+                  "amount": 0.08671
+                },
+                {
+                  "id": "justice-2024-tp-0018",
+                  "name": "Contributions under the Justice Partnership and Innovation Program",
+                  "amount": 0.034262
+                },
+                {
+                  "id": "justice-2024-tp-0021",
+                  "name": "Contributions under the Victims Fund",
+                  "amount": 0.032369
+                },
+                {
+                  "id": "justice-2024-tp-0014",
+                  "name": "Contributions under the Indigenous Justice Program",
+                  "amount": 0.029331
+                },
+                {
+                  "id": "justice-2024-tp-0008",
+                  "name": "Contributions in support of the Canadian Family Justice Fund",
+                  "amount": 0.022072
+                },
+                {
+                  "id": "justice-2024-tp-0011",
+                  "name": "Contributions under the Access to Justice in Both Official Languages Support Fund",
+                  "amount": 0.012969
+                },
+                {
+                  "id": "justice-2024-tp-0013",
+                  "name": "Contributions under the Indigenous Courtwork Program",
+                  "amount": 0.01248
+                },
+                {
+                  "id": "justice-2024-tp-0017",
+                  "name": "Contributions under the Intensive Rehabilitative Custody and Supervision Program",
+                  "amount": 0.012139
+                },
+                {
+                  "id": "justice-2024-tp-0003",
+                  "name": "Contributions for Access to Justice Services in the Territories (being Legal Aid, Indigenous Courtwork and Public Legal Education and Information Services)",
+                  "amount": 0.011188
+                },
+                {
+                  "id": "justice-2024-department-of-justice-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.049467,
+                  "isAggregate": true,
+                  "count": 17
+                }
+              ]
             },
             {
               "id": "justice-2024-department-of-justice-internal-revenues",
@@ -588,7 +651,7 @@
     {
       "id": "justice-2024-entity-department-of-justice",
       "name": "Department of Justice",
-      "value": 1.581089
+      "value": 1.109986
     },
     {
       "id": "justice-2024-entity-office-of-the-commissioner-for-federal-judicial-affairs",
@@ -598,7 +661,7 @@
     {
       "id": "justice-2024-entity-office-of-the-director-of-public-prosecutions",
       "name": "Office of the Director of Public Prosecutions",
-      "value": 0.238423
+      "value": 0.223128
     },
     {
       "id": "justice-2024-entity-courts-administration-service",
@@ -608,12 +671,12 @@
     {
       "id": "justice-2024-entity-administrative-tribunals-support-service-of-canada",
       "name": "Administrative Tribunals Support Service of Canada",
-      "value": 0.122209
+      "value": 0.088693
     },
     {
       "id": "justice-2024-entity-offices-of-the-information-and-privacy-commissioners-of-canada",
       "name": "Offices of the Information and Privacy Commissioners of Canada",
-      "value": 0.052999
+      "value": 0.052761
     },
     {
       "id": "justice-2024-entity-registrar-of-the-supreme-court-of-canada",
@@ -623,182 +686,12 @@
     {
       "id": "justice-2024-entity-canadian-human-rights-commission",
       "name": "Canadian Human Rights Commission",
-      "value": 0.046983
+      "value": 0.044878
     },
     {
       "id": "justice-2024-entity-law-commission-of-canada",
       "name": "Law Commission of Canada",
       "value": 0.001786
-    }
-  ],
-  "votes": [
-    {
-      "id": "justice-2024-administrative-tribunals-support-service-of-canada-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 117518500,
-      "used": 109073907,
-      "lapsed": 8444593
-    },
-    {
-      "id": "justice-2024-administrative-tribunals-support-service-of-canada-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 13135577,
-      "used": 13135087,
-      "lapsed": 490
-    },
-    {
-      "id": "justice-2024-canadian-human-rights-commission-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 43374448,
-      "used": 42001619,
-      "lapsed": 1372829
-    },
-    {
-      "id": "justice-2024-canadian-human-rights-commission-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 4982108,
-      "used": 4981302,
-      "lapsed": 806
-    },
-    {
-      "id": "justice-2024-courts-administration-service-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 128454422,
-      "used": 113382349,
-      "lapsed": 15072073
-    },
-    {
-      "id": "justice-2024-courts-administration-service-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 11759932,
-      "used": 11745320,
-      "lapsed": 14612
-    },
-    {
-      "id": "justice-2024-department-of-justice-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 817331682,
-      "used": 796533215,
-      "lapsed": 20798467
-    },
-    {
-      "id": "justice-2024-department-of-justice-vote5",
-      "vote": "Vote 5",
-      "description": "Grants and contributions",
-      "totalAvailable": 691665391,
-      "used": 681510956,
-      "lapsed": 10154435
-    },
-    {
-      "id": "justice-2024-department-of-justice-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 103046335,
-      "used": 103044788,
-      "lapsed": 1547
-    },
-    {
-      "id": "justice-2024-law-commission-of-canada-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 4325486,
-      "used": 1641467,
-      "lapsed": 2684019
-    },
-    {
-      "id": "justice-2024-law-commission-of-canada-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 144680,
-      "used": 144680,
-      "lapsed": 0
-    },
-    {
-      "id": "justice-2024-office-of-the-commissioner-for-federal-judicial-affairs-vote1",
-      "vote": "Vote 1",
-      "description": "Office of the Commissioner for Federal Judicial Affairs—Operating expenditures",
-      "totalAvailable": 11776478,
-      "used": 11243554,
-      "lapsed": 532924
-    },
-    {
-      "id": "justice-2024-office-of-the-commissioner-for-federal-judicial-affairs-vote5",
-      "vote": "Vote 5",
-      "description": "Canadian Judicial Council—Operating expenditures",
-      "totalAvailable": 3004959,
-      "used": 2015126,
-      "lapsed": 989833
-    },
-    {
-      "id": "justice-2024-office-of-the-commissioner-for-federal-judicial-affairs-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 739461284,
-      "used": 739461284,
-      "lapsed": 0
-    },
-    {
-      "id": "justice-2024-office-of-the-director-of-public-prosecutions-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 236451696,
-      "used": 216583244,
-      "lapsed": 19868452
-    },
-    {
-      "id": "justice-2024-office-of-the-director-of-public-prosecutions-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 21841133,
-      "used": 21839270,
-      "lapsed": 1863
-    },
-    {
-      "id": "justice-2024-offices-of-the-information-and-privacy-commissioners-of-canada-vote1",
-      "vote": "Vote 1",
-      "description": "Office of the Information Commissioner of Canada—Program expenditures",
-      "totalAvailable": 16666404,
-      "used": 16126325,
-      "lapsed": 540079
-    },
-    {
-      "id": "justice-2024-offices-of-the-information-and-privacy-commissioners-of-canada-vote5",
-      "vote": "Vote 5",
-      "description": "Office of the Privacy Commissioner of Canada—Program expenditures",
-      "totalAvailable": 32774656,
-      "used": 31271369,
-      "lapsed": 1503287
-    },
-    {
-      "id": "justice-2024-offices-of-the-information-and-privacy-commissioners-of-canada-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 5601698,
-      "used": 5601408,
-      "lapsed": 290
-    },
-    {
-      "id": "justice-2024-registrar-of-the-supreme-court-of-canada-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 36076865,
-      "used": 34782562,
-      "lapsed": 1294303
-    },
-    {
-      "id": "justice-2024-registrar-of-the-supreme-court-of-canada-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 13579268,
-      "used": 13579263,
-      "lapsed": 5
     }
   ],
   "transferPayments": [

@@ -2,38 +2,38 @@
   "name": "Immigration, Refugees and Citizenship",
   "slug": "immigration-refugees-and-citizenship",
   "financialYearEnding": 2017,
-  "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 1.96836,
-  "percentageOfFederal": 0.6353,
+  "reportedAs": "Immigration,Refugees and Citizenship",
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 1.71555,
+  "percentageOfFederal": 0.5537,
   "historicalShare": [
     {
       "year": 2014,
-      "percentage": 0.58
+      "percentage": 0.8769
     },
     {
       "year": 2015,
-      "percentage": 0.5996
+      "percentage": 0.9916
     },
     {
       "year": 2016,
-      "percentage": 0.6233
+      "percentage": 0.9778
     },
     {
       "year": 2017,
-      "percentage": 0.6353
+      "percentage": 0.5537
     },
     {
       "year": 2018,
-      "percentage": 0.6722
+      "percentage": 0.6206
     },
     {
       "year": 2019,
-      "percentage": 0.7428
+      "percentage": 0.7401
     },
     {
       "year": 2020,
-      "percentage": 0.8754
+      "percentage": 0.873
     },
     {
       "year": 2021,
@@ -41,19 +41,19 @@
     },
     {
       "year": 2022,
-      "percentage": 0.7394
+      "percentage": 0.7378
     },
     {
       "year": 2023,
-      "percentage": 1.1391
+      "percentage": 1.1373
     },
     {
       "year": 2024,
-      "percentage": 1.2174
+      "percentage": 1.215
     },
     {
       "year": 2025,
-      "percentage": 1.256
+      "percentage": 1.2537
     }
   ],
   "miniSankey": {
@@ -69,7 +69,38 @@
             {
               "id": "immigration-refugees-and-citizenship-2017-department-of-citizenship-and-immigration-obj-10",
               "name": "Transfer payments",
-              "amount": 1.187265
+              "children": [
+                {
+                  "id": "immigration-refugees-and-citizenship-2017-tp-0004",
+                  "name": "Settlement Program",
+                  "amount": 0.649219
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-2017-tp-0007",
+                  "name": "Grant for the Canada-Quebec Accord on Immigration",
+                  "amount": 0.378213
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-2017-tp-0003",
+                  "name": "Resettlement Assistance",
+                  "amount": 0.156173
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-2017-tp-0002",
+                  "name": "International Organization for Migration",
+                  "amount": 0.00214
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-2017-tp-0001",
+                  "name": "Global Assistance to Irregular Migrants",
+                  "amount": 0.001171
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-2017-tp-0006",
+                  "name": "Grant for Migration policy development",
+                  "amount": 0.000349
+                }
+              ]
             },
             {
               "id": "immigration-refugees-and-citizenship-2017-department-of-citizenship-and-immigration-external-revenues",
@@ -184,19 +215,14 @@
   },
   "entities": [
     {
-      "id": "immigration-refugees-and-citizenship-2017-entity-immigration-refugees-and-citizenship",
-      "name": "Immigration, Refugees and Citizenship",
-      "value": 1.96836
-    }
-  ],
-  "votes": [
+      "id": "immigration-refugees-and-citizenship-2017-entity-department-of-citizenship-and-immigration",
+      "name": "Department of Citizenship and Immigration",
+      "value": 1.60005
+    },
     {
-      "id": "immigration-refugees-and-citizenship-2017-immigration-refugees-and-citizenship-vote",
-      "vote": "All votes",
-      "description": "Total appropriations (vote-level detail not published for this edition)",
-      "totalAvailable": 2965050980,
-      "used": 1968360318,
-      "lapsed": 996690662
+      "id": "immigration-refugees-and-citizenship-2017-entity-immigration-and-refugee-board",
+      "name": "Immigration and Refugee Board",
+      "value": 0.1155
     }
   ],
   "transferPayments": [

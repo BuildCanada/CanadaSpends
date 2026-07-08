@@ -3,7 +3,7 @@
   "slug": "housing-infrastructure-communities",
   "financialYearEnding": 2021,
   "reportedAs": "Infrastructure and Communities",
-  "basis": "vol2_appropriations",
+  "basis": "vol2_standard_object_net",
   "totalSpending": 6.165135,
   "percentageOfFederal": 0.9571,
   "historicalShare": [
@@ -45,11 +45,11 @@
     },
     {
       "year": 2024,
-      "percentage": 2.7917
+      "percentage": 2.78
     },
     {
       "year": 2025,
-      "percentage": 2.6621
+      "percentage": 2.6578
     }
   ],
   "miniSankey": {
@@ -65,7 +65,70 @@
             {
               "id": "housing-infrastructure-communities-2021-office-of-infrastructure-of-canada-obj-10",
               "name": "Transfer payments",
-              "amount": 5.300448
+              "children": [
+                {
+                  "id": "housing-infrastructure-communities-2021-tp-0021",
+                  "name": "Gas Tax Fund (Keeping Canada's Economy and Jobs Growing Act)",
+                  "amount": 2.170316
+                },
+                {
+                  "id": "housing-infrastructure-communities-2021-tp-0014",
+                  "name": "New Building Canada Fund—Provincial-Territorial Infrastructure Component—National and Regional Projects",
+                  "amount": 0.954156
+                },
+                {
+                  "id": "housing-infrastructure-communities-2021-tp-0012",
+                  "name": "Investing in Canada Infrastructure Program",
+                  "amount": 0.65083
+                },
+                {
+                  "id": "housing-infrastructure-communities-2021-tp-0017",
+                  "name": "Public Transit Infrastructure Fund",
+                  "amount": 0.400772
+                },
+                {
+                  "id": "housing-infrastructure-communities-2021-tp-0003",
+                  "name": "Clean Water and Wastewater Fund",
+                  "amount": 0.242863
+                },
+                {
+                  "id": "housing-infrastructure-communities-2021-tp-0013",
+                  "name": "New Building Canada Fund—National Infrastructure Component",
+                  "amount": 0.217995
+                },
+                {
+                  "id": "housing-infrastructure-communities-2021-tp-0006",
+                  "name": "Contributions under the Building Canada Fund Major Infrastructure Component",
+                  "amount": 0.205715
+                },
+                {
+                  "id": "housing-infrastructure-communities-2021-tp-0015",
+                  "name": "New Building Canada Fund—Provincial-Territorial Infrastructure Component—Small Communities Fund",
+                  "amount": 0.173865
+                },
+                {
+                  "id": "housing-infrastructure-communities-2021-tp-0019",
+                  "name": "Toronto Waterfront Revitalization Initiative",
+                  "amount": 0.06
+                },
+                {
+                  "id": "housing-infrastructure-communities-2021-tp-0016",
+                  "name": "Payments for commitments of P3 Canada Fund of PPP Canada",
+                  "amount": 0.056757
+                },
+                {
+                  "id": "housing-infrastructure-communities-2021-tp-0010",
+                  "name": "Disaster Mitigation and Adaptation Fund",
+                  "amount": 0.052373
+                },
+                {
+                  "id": "housing-infrastructure-communities-2021-office-of-infrastructure-of-canada-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.114806,
+                  "isAggregate": true,
+                  "count": 9
+                }
+              ]
             },
             {
               "id": "housing-infrastructure-communities-2021-office-of-infrastructure-of-canada-obj-1",
@@ -164,56 +227,6 @@
       "id": "housing-infrastructure-communities-2021-entity-the-jacques-cartier-and-champlain-bridges-inc",
       "name": "The Jacques-Cartier and Champlain Bridges Inc.",
       "value": 0.232073
-    }
-  ],
-  "votes": [
-    {
-      "id": "housing-infrastructure-communities-2021-office-of-infrastructure-of-canada-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 197393340,
-      "used": 158734609,
-      "lapsed": 38658731
-    },
-    {
-      "id": "housing-infrastructure-communities-2021-office-of-infrastructure-of-canada-vote10",
-      "vote": "Vote 10",
-      "description": "Grants and Contributions",
-      "totalAvailable": 5514189924,
-      "used": 3130132366,
-      "lapsed": 2384057558
-    },
-    {
-      "id": "housing-infrastructure-communities-2021-office-of-infrastructure-of-canada-vote5",
-      "vote": "Vote 5",
-      "description": "Capital expenditures",
-      "totalAvailable": 148375795,
-      "used": 22813640,
-      "lapsed": 125562155
-    },
-    {
-      "id": "housing-infrastructure-communities-2021-office-of-infrastructure-of-canada-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 2180719437,
-      "used": 2180707277,
-      "lapsed": 12160
-    },
-    {
-      "id": "housing-infrastructure-communities-2021-the-jacques-cartier-and-champlain-bridges-inc-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the corporation",
-      "totalAvailable": 327620136,
-      "used": 232073141,
-      "lapsed": 95546995
-    },
-    {
-      "id": "housing-infrastructure-communities-2021-windsor-detroit-bridge-authority-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the Authority",
-      "totalAvailable": 778634323,
-      "used": 440674062,
-      "lapsed": 337960261
     }
   ],
   "transferPayments": [

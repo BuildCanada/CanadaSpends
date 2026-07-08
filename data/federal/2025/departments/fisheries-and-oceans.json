@@ -3,9 +3,9 @@
   "slug": "fisheries-and-oceans",
   "financialYearEnding": 2025,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 5.261641,
-  "percentageOfFederal": 0.9614,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 5.215031,
+  "percentageOfFederal": 0.9529,
   "historicalShare": [
     {
       "year": 2014,
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 0.7856
+      "percentage": 0.7594
     },
     {
       "year": 2018,
-      "percentage": 0.8065
+      "percentage": 0.7937
     },
     {
       "year": 2019,
-      "percentage": 0.9602
+      "percentage": 0.9483
     },
     {
       "year": 2020,
-      "percentage": 0.8515
+      "percentage": 0.8396
     },
     {
       "year": 2021,
-      "percentage": 0.5259
+      "percentage": 0.5196
     },
     {
       "year": 2022,
-      "percentage": 0.7545
+      "percentage": 0.7464
     },
     {
       "year": 2023,
-      "percentage": 0.7915
+      "percentage": 0.7817
     },
     {
       "year": 2024,
-      "percentage": 0.8807
+      "percentage": 0.8719
     },
     {
       "year": 2025,
-      "percentage": 0.9614
+      "percentage": 0.9529
     }
   ],
   "miniSankey": {
@@ -79,7 +79,70 @@
             {
               "id": "fisheries-and-oceans-2025-department-of-fisheries-and-oceans-obj-10",
               "name": "Transfer payments",
-              "amount": 0.761067
+              "children": [
+                {
+                  "id": "fisheries-and-oceans-2025-tp-0009",
+                  "name": "Contributions in Support of the Integrated Aboriginal Programs Management Framework",
+                  "amount": 0.196933
+                },
+                {
+                  "id": "fisheries-and-oceans-2025-tp-0003",
+                  "name": "Contributions in Support of Aquatic Species and Aquatic Habitat",
+                  "amount": 0.12503
+                },
+                {
+                  "id": "fisheries-and-oceans-2025-tp-0014",
+                  "name": "Grant to the Coastal Indigenous Prosperity Society for the Great Bear Sea Project Finance for Permanence Community Prosperity Fund",
+                  "amount": 0.12
+                },
+                {
+                  "id": "fisheries-and-oceans-2025-tp-0013",
+                  "name": "Grant to the Coast Conservation Endowment Fund Foundation for the Great Bear Sea Project Finance for Permanence Marine Stewardship Fund",
+                  "amount": 0.08
+                },
+                {
+                  "id": "fisheries-and-oceans-2025-tp-0010",
+                  "name": "Contributions in Support of the Integrated Fish and Seafood Sector Management Framework",
+                  "amount": 0.079847
+                },
+                {
+                  "id": "fisheries-and-oceans-2025-tp-0005",
+                  "name": "Contributions in Support of Indigenous Reconciliation Priorities",
+                  "amount": 0.060912
+                },
+                {
+                  "id": "fisheries-and-oceans-2025-tp-0008",
+                  "name": "Contributions in Support of the Canadian Coast Guard Integrated Program",
+                  "amount": 0.036529
+                },
+                {
+                  "id": "fisheries-and-oceans-2025-tp-0004",
+                  "name": "Contributions in Support of Ecosystems and Oceans Science",
+                  "amount": 0.028271
+                },
+                {
+                  "id": "fisheries-and-oceans-2025-tp-0012",
+                  "name": "Contributions in Support of the Sustainable Management of Canada's Fisheries",
+                  "amount": 0.016545
+                },
+                {
+                  "id": "fisheries-and-oceans-2025-tp-0007",
+                  "name": "Contributions in Support of Salmon Enhancement Programming",
+                  "amount": 0.007523
+                },
+                {
+                  "id": "fisheries-and-oceans-2025-tp-0015",
+                  "name": "Grants in Support of Aquatic Species and Aquatic Habitat",
+                  "amount": 0.003091
+                },
+                {
+                  "id": "fisheries-and-oceans-2025-department-of-fisheries-and-oceans-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.006386,
+                  "isAggregate": true,
+                  "count": 8
+                }
+              ]
             },
             {
               "id": "fisheries-and-oceans-2025-department-of-fisheries-and-oceans-obj-9",
@@ -137,41 +200,7 @@
     {
       "id": "fisheries-and-oceans-2025-entity-department-of-fisheries-and-oceans",
       "name": "Department of Fisheries and Oceans",
-      "value": 5.261641
-    }
-  ],
-  "votes": [
-    {
-      "id": "fisheries-and-oceans-2025-department-of-fisheries-and-oceans-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 2422188502,
-      "used": 2352479069,
-      "lapsed": 69709433
-    },
-    {
-      "id": "fisheries-and-oceans-2025-department-of-fisheries-and-oceans-vote10",
-      "vote": "Vote 10",
-      "description": "Grants and contributions",
-      "totalAvailable": 820617118,
-      "used": 761067319,
-      "lapsed": 59549799
-    },
-    {
-      "id": "fisheries-and-oceans-2025-department-of-fisheries-and-oceans-vote5",
-      "vote": "Vote 5",
-      "description": "Capital expenditures",
-      "totalAvailable": 2099011915,
-      "used": 1923148301,
-      "lapsed": 175863614
-    },
-    {
-      "id": "fisheries-and-oceans-2025-department-of-fisheries-and-oceans-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 227078444,
-      "used": 224946353,
-      "lapsed": 2132091
+      "value": 5.215031
     }
   ],
   "transferPayments": [

@@ -3,7 +3,7 @@
   "slug": "women-and-gender-equality",
   "financialYearEnding": 2024,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
+  "basis": "vol2_standard_object_net",
   "totalSpending": 0.320899,
   "percentageOfFederal": 0.0615,
   "historicalShare": [
@@ -49,7 +49,38 @@
             {
               "id": "women-and-gender-equality-2024-department-for-women-and-gender-equality-obj-10",
               "name": "Transfer payments",
-              "amount": 0.249298
+              "children": [
+                {
+                  "id": "women-and-gender-equality-2024-tp-0000",
+                  "name": "Equality for Sex, Sexual Orientation, Gender Identity and Expression Program–Contributions to support capacity building and community-level work of Canadian Two-Spirit, lesbian, gay, bisexual, transgender, queer, intersex+ organizations",
+                  "amount": 0.123949
+                },
+                {
+                  "id": "women-and-gender-equality-2024-tp-0002",
+                  "name": "Women's Program—Contributions to women's and other voluntary organizations for the purpose of furthering women's participation in Canadian society",
+                  "amount": 0.079326
+                },
+                {
+                  "id": "women-and-gender-equality-2024-tp-0001",
+                  "name": "Gender-based Violence Funding Program—Contributions to Canadian organizations, institutions and other levels of government to improve supports and help create long-term, comprehensive solutions for survivors at the national, regional and local levels",
+                  "amount": 0.033442
+                },
+                {
+                  "id": "women-and-gender-equality-2024-tp-0005",
+                  "name": "Women's Program—Grants to women's and other voluntary organizations for the purpose of furthering women's participation in Canadian society",
+                  "amount": 0.00516
+                },
+                {
+                  "id": "women-and-gender-equality-2024-tp-0004",
+                  "name": "Gender-based Violence Funding Program—Grants to Canadian organizations, institutions and other levels of government to improve supports and help create long-term, comprehensive solutions for survivors at the national, regional and local levels",
+                  "amount": 0.00412
+                },
+                {
+                  "id": "women-and-gender-equality-2024-tp-0003",
+                  "name": "Equality for Sex, Sexual Orientation, Gender Identity and Expression Program–Grants to support capacity building and community-level work of Canadian Two-Spirit, lesbian, gay, bisexual, transgender, queer, intersex+ organizations",
+                  "amount": 0.003301
+                }
+              ]
             },
             {
               "id": "women-and-gender-equality-2024-department-for-women-and-gender-equality-obj-1",
@@ -111,32 +142,6 @@
       "id": "women-and-gender-equality-2024-entity-department-for-women-and-gender-equality",
       "name": "Department for Women and Gender Equality",
       "value": 0.320899
-    }
-  ],
-  "votes": [
-    {
-      "id": "women-and-gender-equality-2024-department-for-women-and-gender-equality-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 67642056,
-      "used": 63732927,
-      "lapsed": 3909129
-    },
-    {
-      "id": "women-and-gender-equality-2024-department-for-women-and-gender-equality-vote5",
-      "vote": "Vote 5",
-      "description": "Grants and contributions",
-      "totalAvailable": 249607617,
-      "used": 249298340,
-      "lapsed": 309277
-    },
-    {
-      "id": "women-and-gender-equality-2024-department-for-women-and-gender-equality-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 7867614,
-      "used": 7867614,
-      "lapsed": 0
     }
   ],
   "transferPayments": [

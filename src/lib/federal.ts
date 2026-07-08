@@ -90,15 +90,6 @@ export type FederalEntity = {
   value: number;
 };
 
-export type FederalVoteLine = {
-  id?: string;
-  vote: string;
-  description: string;
-  totalAvailable: number;
-  used: number;
-  lapsed: number;
-};
-
 export type FederalTransferPayment = {
   id?: string;
   category: string;
@@ -121,7 +112,6 @@ export type FederalDepartment = {
   historicalShare: FederalHistoricalPoint[];
   miniSankey: { spending_data: FederalSankeyNode };
   entities: FederalEntity[];
-  votes: FederalVoteLine[];
   transferPayments: FederalTransferPayment[];
   lineItemsUnits: string;
   // Optional machinery-of-government note (spec §4.3).
@@ -375,10 +365,6 @@ export function getFederalDepartment(
     entities: dept.entities.map((e) => ({
       ...e,
       name: tr(fr, e.id, e.name),
-    })),
-    votes: dept.votes.map((v) => ({
-      ...v,
-      description: tr(fr, v.id, v.description),
     })),
     transferPayments: dept.transferPayments.map((tp) => ({
       ...tp,

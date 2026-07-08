@@ -3,7 +3,7 @@
   "slug": "housing-infrastructure-communities",
   "financialYearEnding": 2020,
   "reportedAs": "Infrastructure and Communities",
-  "basis": "vol2_appropriations",
+  "basis": "vol2_standard_object_net",
   "totalSpending": 9.675064,
   "percentageOfFederal": 2.5902,
   "historicalShare": [
@@ -45,11 +45,11 @@
     },
     {
       "year": 2024,
-      "percentage": 2.7917
+      "percentage": 2.78
     },
     {
       "year": 2025,
-      "percentage": 2.6621
+      "percentage": 2.6578
     }
   ],
   "miniSankey": {
@@ -65,7 +65,70 @@
             {
               "id": "housing-infrastructure-communities-2020-office-of-infrastructure-of-canada-obj-10",
               "name": "Transfer payments",
-              "amount": 7.616738
+              "children": [
+                {
+                  "id": "housing-infrastructure-communities-2020-tp-0019",
+                  "name": "Gas Tax Fund (Keeping Canada's Economy and Jobs Growing Act)",
+                  "amount": 4.340912
+                },
+                {
+                  "id": "housing-infrastructure-communities-2020-tp-0012",
+                  "name": "New Building Canada Fund—Provincial-Territorial Infrastructure Component—National and Regional Projects",
+                  "amount": 0.870134
+                },
+                {
+                  "id": "housing-infrastructure-communities-2020-tp-0015",
+                  "name": "Public Transit Infrastructure Fund",
+                  "amount": 0.729201
+                },
+                {
+                  "id": "housing-infrastructure-communities-2020-tp-0002",
+                  "name": "Clean Water and Wastewater Fund",
+                  "amount": 0.382996
+                },
+                {
+                  "id": "housing-infrastructure-communities-2020-tp-0014",
+                  "name": "Payments for commitments of P3 Canada Fund of PPP Canada",
+                  "amount": 0.295147
+                },
+                {
+                  "id": "housing-infrastructure-communities-2020-tp-0005",
+                  "name": "Contributions under the Building Canada Fund Major Infrastructure Component",
+                  "amount": 0.259882
+                },
+                {
+                  "id": "housing-infrastructure-communities-2020-tp-0013",
+                  "name": "New Building Canada Fund—Provincial-Territorial Infrastructure Component—Small Communities Fund",
+                  "amount": 0.205857
+                },
+                {
+                  "id": "housing-infrastructure-communities-2020-tp-0010",
+                  "name": "Investing in Canada Infrastructure Program",
+                  "amount": 0.146494
+                },
+                {
+                  "id": "housing-infrastructure-communities-2020-tp-0011",
+                  "name": "New Building Canada Fund—National Infrastructure Component",
+                  "amount": 0.127885
+                },
+                {
+                  "id": "housing-infrastructure-communities-2020-tp-0021",
+                  "name": "Transfer payments in connection with the Budget Implementation Act",
+                  "amount": 0.06
+                },
+                {
+                  "id": "housing-infrastructure-communities-2020-tp-0007",
+                  "name": "Contributions under the Green Infrastructure Fund",
+                  "amount": 0.056288
+                },
+                {
+                  "id": "housing-infrastructure-communities-2020-office-of-infrastructure-of-canada-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.141942,
+                  "isAggregate": true,
+                  "count": 8
+                }
+              ]
             },
             {
               "id": "housing-infrastructure-communities-2020-office-of-infrastructure-of-canada-obj-8",
@@ -148,7 +211,7 @@
     {
       "id": "housing-infrastructure-communities-2020-entity-office-of-infrastructure-of-canada",
       "name": "Office of Infrastructure of Canada",
-      "value": 8.948868
+      "value": 8.948867
     },
     {
       "id": "housing-infrastructure-communities-2020-entity-windsor-detroit-bridge-authority",
@@ -159,56 +222,6 @@
       "id": "housing-infrastructure-communities-2020-entity-the-jacques-cartier-and-champlain-bridges-inc",
       "name": "The Jacques-Cartier and Champlain Bridges Inc.",
       "value": 0.155647
-    }
-  ],
-  "votes": [
-    {
-      "id": "housing-infrastructure-communities-2020-office-of-infrastructure-of-canada-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 186770382,
-      "used": 114541200,
-      "lapsed": 72229182
-    },
-    {
-      "id": "housing-infrastructure-communities-2020-office-of-infrastructure-of-canada-vote10",
-      "vote": "Vote 10",
-      "description": "Grants and Contributions",
-      "totalAvailable": 5226079579,
-      "used": 3215825356,
-      "lapsed": 2010254223
-    },
-    {
-      "id": "housing-infrastructure-communities-2020-office-of-infrastructure-of-canada-vote5",
-      "vote": "Vote 5",
-      "description": "Capital expenditures",
-      "totalAvailable": 1324769226,
-      "used": 1208973851,
-      "lapsed": 115795375
-    },
-    {
-      "id": "housing-infrastructure-communities-2020-office-of-infrastructure-of-canada-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 4409527146,
-      "used": 4409527146,
-      "lapsed": 0
-    },
-    {
-      "id": "housing-infrastructure-communities-2020-the-jacques-cartier-and-champlain-bridges-inc-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the corporation",
-      "totalAvailable": 322063784,
-      "used": 155646771,
-      "lapsed": 166417013
-    },
-    {
-      "id": "housing-infrastructure-communities-2020-windsor-detroit-bridge-authority-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the Authority",
-      "totalAvailable": 831733625,
-      "used": 570550000,
-      "lapsed": 261183625
     }
   ],
   "transferPayments": [

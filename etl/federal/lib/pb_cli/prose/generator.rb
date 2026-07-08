@@ -44,9 +44,6 @@ module PbCli
           percentageOfFederal: department['percentageOfFederal'],
           reportedAs: department['reportedAs'],
           entities: top(department['entities'], 'value').map { |e| { name: e['name'], value: e['value'] } },
-          topVotes: top(department['votes'], 'used').map do |v|
-            { vote: v['vote'], description: v['description'], used: v['used'] }
-          end,
           topTransferPayments: top(department['transferPayments'], 'used').map do |t|
             { category: t['category'], description: t['description'], used: t['used'] }
           end,

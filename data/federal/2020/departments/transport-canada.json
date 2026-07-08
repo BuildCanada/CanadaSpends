@@ -3,9 +3,9 @@
   "slug": "transport-canada",
   "financialYearEnding": 2020,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 3.307232,
-  "percentageOfFederal": 0.8854,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 3.225612,
+  "percentageOfFederal": 0.8636,
   "historicalShare": [
     {
       "year": 2014,
@@ -17,43 +17,43 @@
     },
     {
       "year": 2016,
-      "percentage": 1.5446
+      "percentage": 1.098
     },
     {
       "year": 2017,
-      "percentage": 0.8324
+      "percentage": 0.7851
     },
     {
       "year": 2018,
-      "percentage": 0.774
+      "percentage": 0.7519
     },
     {
       "year": 2019,
-      "percentage": 0.8036
+      "percentage": 0.7815
     },
     {
       "year": 2020,
-      "percentage": 0.8854
+      "percentage": 0.8636
     },
     {
       "year": 2021,
-      "percentage": 0.5428
+      "percentage": 0.5314
     },
     {
       "year": 2022,
-      "percentage": 0.7476
+      "percentage": 0.7309
     },
     {
       "year": 2023,
-      "percentage": 0.8491
+      "percentage": 0.8306
     },
     {
       "year": 2024,
-      "percentage": 0.9965
+      "percentage": 0.9777
     },
     {
       "year": 2025,
-      "percentage": 1.1005
+      "percentage": 1.0817
     }
   ],
   "miniSankey": {
@@ -69,7 +69,70 @@
             {
               "id": "transport-canada-2020-department-of-transport-obj-10",
               "name": "Transfer payments",
-              "amount": 0.680094
+              "children": [
+                {
+                  "id": "transport-canada-2020-tp-0036",
+                  "name": "Incentives for Zero-Emission Vehicles Program",
+                  "amount": 0.185375
+                },
+                {
+                  "id": "transport-canada-2020-tp-0038",
+                  "name": "Port Asset Transfer Program",
+                  "amount": 0.149798
+                },
+                {
+                  "id": "transport-canada-2020-tp-0017",
+                  "name": "National Trade Corridors Fund",
+                  "amount": 0.084134
+                },
+                {
+                  "id": "transport-canada-2020-tp-0018",
+                  "name": "Northumberland Strait Crossing Subsidy Payment under the Northumberland Strait Crossing Act",
+                  "amount": 0.066999
+                },
+                {
+                  "id": "transport-canada-2020-tp-0013",
+                  "name": "Ferry Services Contribution Program",
+                  "amount": 0.044697
+                },
+                {
+                  "id": "transport-canada-2020-tp-0000",
+                  "name": "Airports Capital Assistance Program",
+                  "amount": 0.035453
+                },
+                {
+                  "id": "transport-canada-2020-tp-0034",
+                  "name": "Grant to the Province of British Columbia in respect of the provision of ferry and coastal freight and passenger services",
+                  "amount": 0.03134
+                },
+                {
+                  "id": "transport-canada-2020-tp-0024",
+                  "name": "Program to Protect Canada's Coastlines and Waterways",
+                  "amount": 0.019394
+                },
+                {
+                  "id": "transport-canada-2020-tp-0025",
+                  "name": "Rail Safety Improvement Contribution Program",
+                  "amount": 0.017887
+                },
+                {
+                  "id": "transport-canada-2020-tp-0026",
+                  "name": "Remote Passenger Rail Program",
+                  "amount": 0.0112
+                },
+                {
+                  "id": "transport-canada-2020-tp-0003",
+                  "name": "Asia-Pacific Gateway and Corridor Transportation Infrastructure Fund",
+                  "amount": 0.005944
+                },
+                {
+                  "id": "transport-canada-2020-department-of-transport-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.027873,
+                  "isAggregate": true,
+                  "count": 29
+                }
+              ]
             },
             {
               "id": "transport-canada-2020-department-of-transport-obj-1",
@@ -221,7 +284,7 @@
     {
       "id": "transport-canada-2020-entity-department-of-transport",
       "name": "Department of Transport",
-      "value": 1.78684
+      "value": 1.705221
     },
     {
       "id": "transport-canada-2020-entity-canadian-air-transport-security-authority",
@@ -231,7 +294,7 @@
     {
       "id": "transport-canada-2020-entity-via-rail-canada-inc",
       "name": "VIA Rail Canada Inc.",
-      "value": 0.506348
+      "value": 0.506347
     },
     {
       "id": "transport-canada-2020-entity-marine-atlantic-inc",
@@ -242,144 +305,6 @@
       "id": "transport-canada-2020-entity-canadian-transportation-agency",
       "name": "Canadian Transportation Agency",
       "value": 0.035278
-    }
-  ],
-  "votes": [
-    {
-      "id": "transport-canada-2020-canadian-air-transport-security-authority-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the Canadian Air Transport Security Authority for operating and capital expenditures",
-      "totalAvailable": 898271254,
-      "used": 847862166,
-      "lapsed": 50409088
-    },
-    {
-      "id": "transport-canada-2020-canadian-transportation-agency-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 36433079,
-      "used": 31492646,
-      "lapsed": 4940433
-    },
-    {
-      "id": "transport-canada-2020-canadian-transportation-agency-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 3785140,
-      "used": 3785140,
-      "lapsed": 0
-    },
-    {
-      "id": "transport-canada-2020-department-of-transport-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 863210363,
-      "used": 835419073,
-      "lapsed": 27791290
-    },
-    {
-      "id": "transport-canada-2020-department-of-transport-vote10",
-      "vote": "Vote 10",
-      "description": "Grants and contributions—Efficient Transportation System",
-      "totalAvailable": 614974527,
-      "used": 371541785,
-      "lapsed": 243432742
-    },
-    {
-      "id": "transport-canada-2020-department-of-transport-vote15",
-      "vote": "Vote 15",
-      "description": "Grants and contributions—Green and Innovative Transportation System",
-      "totalAvailable": 332947502,
-      "used": 213982219,
-      "lapsed": 118965283
-    },
-    {
-      "id": "transport-canada-2020-department-of-transport-vote20",
-      "vote": "Vote 20",
-      "description": "Grants and contributions—Safe and Secure Transportation System",
-      "totalAvailable": 48989725,
-      "used": 24271425,
-      "lapsed": 24718300
-    },
-    {
-      "id": "transport-canada-2020-department-of-transport-vote25",
-      "vote": "Vote 25",
-      "description": "Bringing Innovation to Regulations",
-      "totalAvailable": 767403,
-      "used": 0,
-      "lapsed": 767403
-    },
-    {
-      "id": "transport-canada-2020-department-of-transport-vote30",
-      "vote": "Vote 30",
-      "description": "Canada's Marine Safety Response",
-      "totalAvailable": 300608,
-      "used": 0,
-      "lapsed": 300608
-    },
-    {
-      "id": "transport-canada-2020-department-of-transport-vote35",
-      "vote": "Vote 35",
-      "description": "Delivering Better Service for Air Travellers",
-      "totalAvailable": 1035350,
-      "used": 0,
-      "lapsed": 1035350
-    },
-    {
-      "id": "transport-canada-2020-department-of-transport-vote40",
-      "vote": "Vote 40",
-      "description": "Encouraging Canadians to Use Zero Emission Vehicles",
-      "totalAvailable": 275000,
-      "used": 0,
-      "lapsed": 275000
-    },
-    {
-      "id": "transport-canada-2020-department-of-transport-vote45",
-      "vote": "Vote 45",
-      "description": "Protecting Canada's Critical Infrastructure from Cyber Threats",
-      "totalAvailable": 2147890,
-      "used": 0,
-      "lapsed": 2147890
-    },
-    {
-      "id": "transport-canada-2020-department-of-transport-vote5",
-      "vote": "Vote 5",
-      "description": "Capital expenditures",
-      "totalAvailable": 171192945,
-      "used": 132601685,
-      "lapsed": 38591260
-    },
-    {
-      "id": "transport-canada-2020-department-of-transport-vote50",
-      "vote": "Vote 50",
-      "description": "Safe and Secure Road and Rail Transportation",
-      "totalAvailable": 11081897,
-      "used": 0,
-      "lapsed": 11081897
-    },
-    {
-      "id": "transport-canada-2020-department-of-transport-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 210375040,
-      "used": 209024032,
-      "lapsed": 1351008
-    },
-    {
-      "id": "transport-canada-2020-marine-atlantic-inc-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to Marine Atlantic Inc.",
-      "totalAvailable": 155904000,
-      "used": 130903730,
-      "lapsed": 25000270
-    },
-    {
-      "id": "transport-canada-2020-via-rail-canada-inc-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to VIA Rail Canada Inc.",
-      "totalAvailable": 732794011,
-      "used": 506347644,
-      "lapsed": 226446367
     }
   ],
   "transferPayments": [

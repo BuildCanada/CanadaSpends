@@ -3,7 +3,7 @@
   "slug": "housing-infrastructure-communities",
   "financialYearEnding": 2018,
   "reportedAs": "Infrastructure and Communities",
-  "basis": "vol2_appropriations",
+  "basis": "vol2_standard_object_net",
   "totalSpending": 4.695427,
   "percentageOfFederal": 1.4221,
   "historicalShare": [
@@ -45,11 +45,11 @@
     },
     {
       "year": 2024,
-      "percentage": 2.7917
+      "percentage": 2.78
     },
     {
       "year": 2025,
-      "percentage": 2.6621
+      "percentage": 2.6578
     }
   ],
   "miniSankey": {
@@ -65,7 +65,70 @@
             {
               "id": "housing-infrastructure-communities-2018-office-of-infrastructure-of-canada-obj-10",
               "name": "Transfer payments",
-              "amount": 3.608706
+              "children": [
+                {
+                  "id": "housing-infrastructure-communities-2018-tp-0015",
+                  "name": "Gas Tax Fund",
+                  "amount": 2.071933
+                },
+                {
+                  "id": "housing-infrastructure-communities-2018-tp-0002",
+                  "name": "Clean Water and Wastewater Fund",
+                  "amount": 0.420794
+                },
+                {
+                  "id": "housing-infrastructure-communities-2018-tp-0012",
+                  "name": "New Building Canada Fund—Provincial-Territorial Infrastructure Component—National and Regional Projects",
+                  "amount": 0.322425
+                },
+                {
+                  "id": "housing-infrastructure-communities-2018-tp-0005",
+                  "name": "Contributions under the Building Canada Fund Major Infrastructure Component",
+                  "amount": 0.2497
+                },
+                {
+                  "id": "housing-infrastructure-communities-2018-tp-0014",
+                  "name": "Public Transit Infrastructure Fund",
+                  "amount": 0.244295
+                },
+                {
+                  "id": "housing-infrastructure-communities-2018-tp-0013",
+                  "name": "New Building Canada Fund—Provincial-Territorial Infrastructure Component—Small Communities Fund",
+                  "amount": 0.148368
+                },
+                {
+                  "id": "housing-infrastructure-communities-2018-tp-0007",
+                  "name": "Contributions under the Canada Strategic Infrastructure Fund",
+                  "amount": 0.047673
+                },
+                {
+                  "id": "housing-infrastructure-communities-2018-tp-0008",
+                  "name": "Contributions under the Green Infrastructure Fund",
+                  "amount": 0.028542
+                },
+                {
+                  "id": "housing-infrastructure-communities-2018-tp-0004",
+                  "name": "Contributions under the Building Canada Fund Communities Component",
+                  "amount": 0.027008
+                },
+                {
+                  "id": "housing-infrastructure-communities-2018-tp-0016",
+                  "name": "Provincial-Territorial Infrastructure Base Funding Program",
+                  "amount": 0.0225
+                },
+                {
+                  "id": "housing-infrastructure-communities-2018-tp-0001",
+                  "name": "Capacity Building for Climate Change Challenges Fund",
+                  "amount": 0.009326
+                },
+                {
+                  "id": "housing-infrastructure-communities-2018-office-of-infrastructure-of-canada-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.016142,
+                  "isAggregate": true,
+                  "count": 5
+                }
+              ]
             },
             {
               "id": "housing-infrastructure-communities-2018-office-of-infrastructure-of-canada-obj-8",
@@ -157,19 +220,24 @@
   },
   "entities": [
     {
-      "id": "housing-infrastructure-communities-2018-entity-infrastructure-and-communities",
-      "name": "Infrastructure and Communities",
-      "value": 4.695427
-    }
-  ],
-  "votes": [
+      "id": "housing-infrastructure-communities-2018-entity-office-of-infrastructure-of-canada",
+      "name": "Office of Infrastructure of Canada",
+      "value": 4.326297
+    },
     {
-      "id": "housing-infrastructure-communities-2018-infrastructure-and-communities-vote",
-      "vote": "All votes",
-      "description": "Total appropriations (vote-level detail not published for this edition)",
-      "totalAvailable": 8083696102,
-      "used": 4695426651,
-      "lapsed": 3388269451
+      "id": "housing-infrastructure-communities-2018-entity-windsor-detroit-bridge-authority",
+      "name": "Windsor-Detroit Bridge Authority",
+      "value": 0.184
+    },
+    {
+      "id": "housing-infrastructure-communities-2018-entity-the-jacques-cartier-and-champlain-bridges-inc",
+      "name": "The Jacques-Cartier and Champlain Bridges Inc.",
+      "value": 0.17923
+    },
+    {
+      "id": "housing-infrastructure-communities-2018-entity-ppp-canada-inc",
+      "name": "PPP Canada Inc.",
+      "value": 0.0059
     }
   ],
   "transferPayments": [

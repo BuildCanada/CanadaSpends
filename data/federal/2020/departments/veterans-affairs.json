@@ -3,7 +3,7 @@
   "slug": "veterans-affairs",
   "financialYearEnding": 2020,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
+  "basis": "vol2_standard_object_net",
   "totalSpending": 4.843071,
   "percentageOfFederal": 1.2966,
   "historicalShare": [
@@ -69,7 +69,70 @@
             {
               "id": "veterans-affairs-2020-department-of-veterans-affairs-obj-10",
               "name": "Transfer payments",
-              "amount": 3.64878
+              "children": [
+                {
+                  "id": "veterans-affairs-2020-tp-0027",
+                  "name": "Pensions for disability and death, including pensions granted under the authority of the Civilian Government Employees (War) Compensation Order, P.C. 45/8848 of November 22, 1944, which shall be subject to the Pension Act; for former prisoners of war under the Pension Act, and Newfoundland special awards",
+                  "amount": 1.227046
+                },
+                {
+                  "id": "veterans-affairs-2020-tp-0024",
+                  "name": "Pain and Suffering Compensation",
+                  "amount": 0.91695
+                },
+                {
+                  "id": "veterans-affairs-2020-tp-0021",
+                  "name": "Income Replacement Benefit",
+                  "amount": 0.77749
+                },
+                {
+                  "id": "veterans-affairs-2020-tp-0020",
+                  "name": "Housekeeping and Grounds Maintenance",
+                  "amount": 0.267643
+                },
+                {
+                  "id": "veterans-affairs-2020-tp-0004",
+                  "name": "Additional Pain and Suffering Compensation",
+                  "amount": 0.119055
+                },
+                {
+                  "id": "veterans-affairs-2020-tp-0014",
+                  "name": "Disability Awards and Allowances",
+                  "amount": 0.115615
+                },
+                {
+                  "id": "veterans-affairs-2020-tp-0002",
+                  "name": "Contributions to Veterans, under the Veterans Independence Program, to assist in defraying costs of extended health care not covered by provincial health programs",
+                  "amount": 0.071522
+                },
+                {
+                  "id": "veterans-affairs-2020-tp-0033",
+                  "name": "Supplementary Retirement Benefit Payout",
+                  "amount": 0.040497
+                },
+                {
+                  "id": "veterans-affairs-2020-tp-0029",
+                  "name": "Recognizing Métis Veterans",
+                  "amount": 0.03
+                },
+                {
+                  "id": "veterans-affairs-2020-tp-0016",
+                  "name": "Education and Training Benefit",
+                  "amount": 0.020588
+                },
+                {
+                  "id": "veterans-affairs-2020-tp-0015",
+                  "name": "Earnings Loss and Supplementary Retirement Benefit",
+                  "amount": 0.013998
+                },
+                {
+                  "id": "veterans-affairs-2020-department-of-veterans-affairs-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.048376,
+                  "isAggregate": true,
+                  "count": 23
+                }
+              ]
             },
             {
               "id": "veterans-affairs-2020-department-of-veterans-affairs-obj-4",
@@ -186,81 +249,7 @@
     {
       "id": "veterans-affairs-2020-entity-veterans-review-and-appeal-board",
       "name": "Veterans Review and Appeal Board",
-      "value": 0.010696
-    }
-  ],
-  "votes": [
-    {
-      "id": "veterans-affairs-2020-department-of-veterans-affairs-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 1263033033,
-      "used": 1146915325,
-      "lapsed": 116117708
-    },
-    {
-      "id": "veterans-affairs-2020-department-of-veterans-affairs-vote10",
-      "vote": "Vote 10",
-      "description": "Supporting Veterans' Families",
-      "totalAvailable": 30000000,
-      "used": 0,
-      "lapsed": 30000000
-    },
-    {
-      "id": "veterans-affairs-2020-department-of-veterans-affairs-vote15",
-      "vote": "Vote 15",
-      "description": "Commemorating Canada's Veterans",
-      "totalAvailable": 30000,
-      "used": 0,
-      "lapsed": 30000
-    },
-    {
-      "id": "veterans-affairs-2020-department-of-veterans-affairs-vote30",
-      "vote": "Vote 30",
-      "description": "Supporting Research on Military and Veteran Health",
-      "totalAvailable": 141143,
-      "used": 0,
-      "lapsed": 141143
-    },
-    {
-      "id": "veterans-affairs-2020-department-of-veterans-affairs-vote35",
-      "vote": "Vote 35",
-      "description": "Supporting Veterans as They Transition to Post-Service Life",
-      "totalAvailable": 1664894,
-      "used": 0,
-      "lapsed": 1664894
-    },
-    {
-      "id": "veterans-affairs-2020-department-of-veterans-affairs-vote5",
-      "vote": "Vote 5",
-      "description": "Grants and contributions",
-      "totalAvailable": 3957213575,
-      "used": 3648775941,
-      "lapsed": 308437634
-    },
-    {
-      "id": "veterans-affairs-2020-department-of-veterans-affairs-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 36683090,
-      "used": 36683090,
-      "lapsed": 0
-    },
-    {
-      "id": "veterans-affairs-2020-veterans-review-and-appeal-board-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 10068877,
-      "used": 9531712,
-      "lapsed": 537165
-    },
-    {
-      "id": "veterans-affairs-2020-veterans-review-and-appeal-board-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 1164706,
-      "used": 1164706,
-      "lapsed": 0
+      "value": 0.010697
     }
   ],
   "transferPayments": [

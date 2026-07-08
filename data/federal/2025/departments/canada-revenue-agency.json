@@ -3,9 +3,9 @@
   "slug": "canada-revenue-agency",
   "financialYearEnding": 2025,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 22.665023,
-  "percentageOfFederal": 4.1413,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 22.179323,
+  "percentageOfFederal": 4.0525,
   "historicalShare": [
     {
       "year": 2014,
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 1.6559
+      "percentage": 1.4169
     },
     {
       "year": 2018,
-      "percentage": 1.5334
+      "percentage": 1.4258
     },
     {
       "year": 2019,
-      "percentage": 1.5822
+      "percentage": 1.4793
     },
     {
       "year": 2020,
-      "percentage": 2.0314
+      "percentage": 1.9271
     },
     {
       "year": 2021,
-      "percentage": 1.6235
+      "percentage": 1.5499
     },
     {
       "year": 2022,
-      "percentage": 1.9724
+      "percentage": 1.8843
     },
     {
       "year": 2023,
-      "percentage": 2.805
+      "percentage": 2.7138
     },
     {
       "year": 2024,
-      "percentage": 3.3167
+      "percentage": 3.2223
     },
     {
       "year": 2025,
-      "percentage": 4.1413
+      "percentage": 4.0525
     }
   ],
   "miniSankey": {
@@ -69,7 +69,38 @@
             {
               "id": "canada-revenue-agency-2025-canada-revenue-agency-obj-10",
               "name": "Transfer payments",
-              "amount": 15.88621
+              "children": [
+                {
+                  "id": "canada-revenue-agency-2025-tp-0002",
+                  "name": "Distribution of fuel charges (Canada Carbon Rebate for individuals) under section 165 of the Greenhouse Gas Pollution Pricing Act and section 122.8 of the Income Tax Act",
+                  "amount": 12.664116
+                },
+                {
+                  "id": "canada-revenue-agency-2025-tp-0003",
+                  "name": "Distribution of fuel charges (Canada Carbon Rebate for small businesses) under section 165 of the Greenhouse Gas Pollution Pricing Act and section 127.421 of the Income Tax Act",
+                  "amount": 2.568879
+                },
+                {
+                  "id": "canada-revenue-agency-2025-tp-0000",
+                  "name": "Children's Special Allowance payments (Children's Special Allowance Act)",
+                  "amount": 0.429947
+                },
+                {
+                  "id": "canada-revenue-agency-2025-tp-0004",
+                  "name": "Distribution of fuel charges (to farming businesses) under section 165 of the Greenhouse Gas Pollution Pricing Act and section 127.42 of the Income Tax Act",
+                  "amount": 0.167367
+                },
+                {
+                  "id": "canada-revenue-agency-2025-tp-0005",
+                  "name": "Distribution of fuel charges (to provinces and territories) under section 165 of the Greenhouse Gas Pollution Pricing Act",
+                  "amount": 0.049891
+                },
+                {
+                  "id": "canada-revenue-agency-2025-tp-0001",
+                  "name": "Community Volunteer Income Tax Program Grant",
+                  "amount": 0.00601
+                }
+              ]
             },
             {
               "id": "canada-revenue-agency-2025-canada-revenue-agency-obj-1",
@@ -130,33 +161,7 @@
     {
       "id": "canada-revenue-agency-2025-entity-canada-revenue-agency",
       "name": "Canada Revenue Agency",
-      "value": 22.665023
-    }
-  ],
-  "votes": [
-    {
-      "id": "canada-revenue-agency-2025-canada-revenue-agency-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures, contributions and recoverable expenditures in relation to the application of the Canada Pension Plan and the Employment Insurance Act",
-      "totalAvailable": 5895307845,
-      "used": 5618395319,
-      "lapsed": 276912526
-    },
-    {
-      "id": "canada-revenue-agency-2025-canada-revenue-agency-vote5",
-      "vote": "Vote 5",
-      "description": "Capital expenditures and recoverable expenditures in relation to the application of the Canada Pension Plan and the Employment Insurance Act",
-      "totalAvailable": 143422994,
-      "used": 76030232,
-      "lapsed": 67392762
-    },
-    {
-      "id": "canada-revenue-agency-2025-canada-revenue-agency-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 16970597604,
-      "used": 16970597604,
-      "lapsed": 0
+      "value": 22.179323
     }
   ],
   "transferPayments": [

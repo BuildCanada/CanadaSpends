@@ -3,9 +3,9 @@
   "slug": "indigenous-services-and-northern-affairs",
   "financialYearEnding": 2017,
   "reportedAs": "Indigenous and Northern Affairs",
-  "basis": "vol2_appropriations",
-  "totalSpending": 9.1529,
-  "percentageOfFederal": 2.9542,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 9.148371,
+  "percentageOfFederal": 2.9528,
   "historicalShare": [
     {
       "year": 2014,
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 2.9542
+      "percentage": 2.9528
     },
     {
       "year": 2018,
-      "percentage": 3.7417
+      "percentage": 3.737
     },
     {
       "year": 2019,
-      "percentage": 4.6531
+      "percentage": 4.6344
     },
     {
       "year": 2020,
-      "percentage": 5.2414
+      "percentage": 5.2321
     },
     {
       "year": 2021,
-      "percentage": 3.3908
+      "percentage": 3.379
     },
     {
       "year": 2022,
-      "percentage": 4.6419
+      "percentage": 4.6269
     },
     {
       "year": 2023,
-      "percentage": 6.6104
+      "percentage": 6.5934
     },
     {
       "year": 2024,
-      "percentage": 12.0878
+      "percentage": 12.0702
     },
     {
       "year": 2025,
-      "percentage": 7.4599
+      "percentage": 7.4491
     }
   ],
   "miniSankey": {
@@ -69,7 +69,70 @@
             {
               "id": "indigenous-services-and-northern-affairs-2017-department-of-indian-affairs-and-northern-development-obj-10",
               "name": "Transfer payments",
-              "amount": 8.144985
+              "children": [
+                {
+                  "id": "indigenous-services-and-northern-affairs-2017-tp-0021",
+                  "name": "Contributions to support the construction and maintenance of community infrastructure",
+                  "amount": 1.700939
+                },
+                {
+                  "id": "indigenous-services-and-northern-affairs-2017-tp-0014",
+                  "name": "Contributions to support First Nations Elementary and Secondary Educational Advancement",
+                  "amount": 1.678861
+                },
+                {
+                  "id": "indigenous-services-and-northern-affairs-2017-tp-0012",
+                  "name": "Contributions to provide income support to on-reserve residents",
+                  "amount": 1.054985
+                },
+                {
+                  "id": "indigenous-services-and-northern-affairs-2017-tp-0013",
+                  "name": "Contributions to provide women, children and families with Protection and Prevention Services",
+                  "amount": 0.798793
+                },
+                {
+                  "id": "indigenous-services-and-northern-affairs-2017-tp-0034",
+                  "name": "Grants to implement comprehensive land claims and self-government agreements",
+                  "amount": 0.476999
+                },
+                {
+                  "id": "indigenous-services-and-northern-affairs-2017-tp-0033",
+                  "name": "Grants to First Nations to settle specific and special claims negotiated by Canada and/or awarded by the Specific Claims Tribunal",
+                  "amount": 0.393352
+                },
+                {
+                  "id": "indigenous-services-and-northern-affairs-2017-tp-0015",
+                  "name": "Contributions to support First Nations and Inuit Post-Secondary Educational Advancement",
+                  "amount": 0.349913
+                },
+                {
+                  "id": "indigenous-services-and-northern-affairs-2017-tp-0022",
+                  "name": "Contributions to support the negotiation and implementation of Treaties, Claims and self-government agreements or initiatives",
+                  "amount": 0.336841
+                },
+                {
+                  "id": "indigenous-services-and-northern-affairs-2017-tp-0003",
+                  "name": "Contribution to supply public services in Indian Government Support and to build strong governance, administrative and accountability systems",
+                  "amount": 0.247196
+                },
+                {
+                  "id": "indigenous-services-and-northern-affairs-2017-tp-0016",
+                  "name": "Contributions to support Land Management and Economic Development",
+                  "amount": 0.219524
+                },
+                {
+                  "id": "indigenous-services-and-northern-affairs-2017-tp-0027",
+                  "name": "Grant for Band Support Funding",
+                  "amount": 0.160789
+                },
+                {
+                  "id": "indigenous-services-and-northern-affairs-2017-department-of-indian-affairs-and-northern-development-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.726793,
+                  "isAggregate": true,
+                  "count": 30
+                }
+              ]
             },
             {
               "id": "indigenous-services-and-northern-affairs-2017-department-of-indian-affairs-and-northern-development-obj-1",
@@ -194,19 +257,14 @@
   },
   "entities": [
     {
-      "id": "indigenous-services-and-northern-affairs-2017-entity-indigenous-and-northern-affairs",
-      "name": "Indigenous and Northern Affairs",
-      "value": 9.1529
-    }
-  ],
-  "votes": [
+      "id": "indigenous-services-and-northern-affairs-2017-entity-department-of-indian-affairs-and-northern-development",
+      "name": "Department of Indian Affairs and Northern Development",
+      "value": 9.132505
+    },
     {
-      "id": "indigenous-services-and-northern-affairs-2017-indigenous-and-northern-affairs-vote",
-      "vote": "All votes",
-      "description": "Total appropriations (vote-level detail not published for this edition)",
-      "totalAvailable": 9538993864,
-      "used": 9152900317,
-      "lapsed": 386093547
+      "id": "indigenous-services-and-northern-affairs-2017-entity-canadian-high-arctic-research-station",
+      "name": "Canadian High Arctic Research Station",
+      "value": 0.015866
     }
   ],
   "transferPayments": [

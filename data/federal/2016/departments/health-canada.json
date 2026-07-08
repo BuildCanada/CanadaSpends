@@ -3,7 +3,7 @@
   "slug": "health-canada",
   "financialYearEnding": 2016,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
+  "basis": "vol2_standard_object_net",
   "totalSpending": 6.719035,
   "percentageOfFederal": 2.274,
   "historicalShare": [
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 2.2847
+      "percentage": 2.1269
     },
     {
       "year": 2018,
-      "percentage": 1.8628
+      "percentage": 1.8003
     },
     {
       "year": 2019,
-      "percentage": 1.4842
+      "percentage": 1.4439
     },
     {
       "year": 2020,
-      "percentage": 1.521
+      "percentage": 1.482
     },
     {
       "year": 2021,
-      "percentage": 2.2328
+      "percentage": 2.2048
     },
     {
       "year": 2022,
-      "percentage": 3.412
+      "percentage": 3.3701
     },
     {
       "year": 2023,
-      "percentage": 2.6244
+      "percentage": 2.5801
     },
     {
       "year": 2024,
-      "percentage": 2.6767
+      "percentage": 2.6298
     },
     {
       "year": 2025,
-      "percentage": 2.378
+      "percentage": 2.3318
     }
   ],
   "miniSankey": {
@@ -373,17 +373,27 @@
     {
       "id": "health-canada-2016-entity-health",
       "name": "Health",
-      "value": 6.719035
-    }
-  ],
-  "votes": [
+      "value": 4.359488
+    },
     {
-      "id": "health-canada-2016-health-vote",
-      "vote": "All votes",
-      "description": "Total appropriations (vote-level detail not published for this edition)",
-      "totalAvailable": 6916209131,
-      "used": 6719034904,
-      "lapsed": 197174227
+      "id": "health-canada-2016-entity-canadian-institutes-of-health-research",
+      "name": "Canadian Institutes of Health Research",
+      "value": 1.026378
+    },
+    {
+      "id": "health-canada-2016-entity-canadian-food-inspection-agency",
+      "name": "Canadian Food Inspection Agency",
+      "value": 0.749363
+    },
+    {
+      "id": "health-canada-2016-entity-public-health-agency-of-canada",
+      "name": "Public Health Agency of Canada",
+      "value": 0.574308
+    },
+    {
+      "id": "health-canada-2016-entity-patented-medicine-prices-review-board",
+      "name": "Patented Medicine Prices Review Board",
+      "value": 0.009498
     }
   ],
   "transferPayments": [

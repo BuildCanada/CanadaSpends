@@ -3,9 +3,9 @@
   "slug": "canadian-heritage",
   "financialYearEnding": 2017,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 3.713838,
-  "percentageOfFederal": 1.1987,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 3.589904,
+  "percentageOfFederal": 1.1587,
   "historicalShare": [
     {
       "year": 2014,
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 1.1987
+      "percentage": 1.1587
     },
     {
       "year": 2018,
-      "percentage": 1.2054
+      "percentage": 1.1838
     },
     {
       "year": 2019,
-      "percentage": 1.0587
+      "percentage": 1.0398
     },
     {
       "year": 2020,
-      "percentage": 1.0287
+      "percentage": 1.0116
     },
     {
       "year": 2021,
-      "percentage": 0.6979
+      "percentage": 0.6906
     },
     {
       "year": 2022,
-      "percentage": 0.9019
+      "percentage": 0.8871
     },
     {
       "year": 2023,
-      "percentage": 1.0092
+      "percentage": 0.9927
     },
     {
       "year": 2024,
-      "percentage": 0.9346
+      "percentage": 0.9173
     },
     {
       "year": 2025,
-      "percentage": 0.8854
+      "percentage": 0.8664
     }
   ],
   "miniSankey": {
@@ -69,7 +69,70 @@
             {
               "id": "canadian-heritage-2017-department-of-canadian-heritage-obj-10",
               "name": "Transfer payments",
-              "amount": 1.183587
+              "children": [
+                {
+                  "id": "canadian-heritage-2017-tp-0007",
+                  "name": "Contributions in support of the Development of Official-Language Communities Program",
+                  "amount": 0.217668
+                },
+                {
+                  "id": "canadian-heritage-2017-tp-0002",
+                  "name": "Contributions for the Sport Support Program",
+                  "amount": 0.144174
+                },
+                {
+                  "id": "canadian-heritage-2017-tp-0012",
+                  "name": "Contributions to support the Canada Media Fund",
+                  "amount": 0.131696
+                },
+                {
+                  "id": "canadian-heritage-2017-tp-0013",
+                  "name": "Contributions to support the Enhancement of Official Languages Program",
+                  "amount": 0.11518
+                },
+                {
+                  "id": "canadian-heritage-2017-tp-0019",
+                  "name": "Contributions to the Canada Cultural Spaces Fund",
+                  "amount": 0.098237
+                },
+                {
+                  "id": "canadian-heritage-2017-tp-0005",
+                  "name": "Contributions in support of the Celebration and Commemoration Program",
+                  "amount": 0.081424
+                },
+                {
+                  "id": "canadian-heritage-2017-tp-0044",
+                  "name": "Grants to the Canada Periodical Fund",
+                  "amount": 0.068814
+                },
+                {
+                  "id": "canadian-heritage-2017-tp-0017",
+                  "name": "Contributions to the Canada Book Fund",
+                  "amount": 0.034683
+                },
+                {
+                  "id": "canadian-heritage-2017-tp-0038",
+                  "name": "Grants to the Athlete Assistance Program",
+                  "amount": 0.027488
+                },
+                {
+                  "id": "canadian-heritage-2017-tp-0020",
+                  "name": "Contributions to the Canada Music Fund",
+                  "amount": 0.025761
+                },
+                {
+                  "id": "canadian-heritage-2017-tp-0001",
+                  "name": "Contributions for the Hosting program",
+                  "amount": 0.022795
+                },
+                {
+                  "id": "canadian-heritage-2017-department-of-canadian-heritage-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.215667,
+                  "isAggregate": true,
+                  "count": 45
+                }
+              ]
             },
             {
               "id": "canadian-heritage-2017-department-of-canadian-heritage-obj-1",
@@ -413,19 +476,89 @@
   },
   "entities": [
     {
-      "id": "canadian-heritage-2017-entity-canadian-heritage",
-      "name": "Canadian Heritage",
-      "value": 3.713838
-    }
-  ],
-  "votes": [
+      "id": "canadian-heritage-2017-entity-department-of-canadian-heritage",
+      "name": "Department of Canadian Heritage",
+      "value": 1.393268
+    },
     {
-      "id": "canadian-heritage-2017-canadian-heritage-vote",
-      "vote": "All votes",
-      "description": "Total appropriations (vote-level detail not published for this edition)",
-      "totalAvailable": 3793818333,
-      "used": 3713838122,
-      "lapsed": 79980211
+      "id": "canadian-heritage-2017-entity-canadian-broadcasting-corporation",
+      "name": "Canadian Broadcasting Corporation",
+      "value": 1.113024
+    },
+    {
+      "id": "canadian-heritage-2017-entity-canada-council-for-the-arts",
+      "name": "Canada Council for the Arts",
+      "value": 0.222574
+    },
+    {
+      "id": "canadian-heritage-2017-entity-national-arts-centre-corporation",
+      "name": "National Arts Centre Corporation",
+      "value": 0.135309
+    },
+    {
+      "id": "canadian-heritage-2017-entity-library-and-archives-of-canada",
+      "name": "Library and Archives of Canada",
+      "value": 0.114501
+    },
+    {
+      "id": "canadian-heritage-2017-entity-national-museum-of-science-and-technology",
+      "name": "National Museum of Science and Technology",
+      "value": 0.108103
+    },
+    {
+      "id": "canadian-heritage-2017-entity-telefilm-canada",
+      "name": "Telefilm Canada",
+      "value": 0.097454
+    },
+    {
+      "id": "canadian-heritage-2017-entity-national-capital-commission",
+      "name": "National Capital Commission",
+      "value": 0.090623
+    },
+    {
+      "id": "canadian-heritage-2017-entity-canadian-museum-of-history",
+      "name": "Canadian Museum of History",
+      "value": 0.077747
+    },
+    {
+      "id": "canadian-heritage-2017-entity-national-film-board",
+      "name": "National Film Board",
+      "value": 0.063914
+    },
+    {
+      "id": "canadian-heritage-2017-entity-national-gallery-of-canada",
+      "name": "National Gallery of Canada",
+      "value": 0.046127
+    },
+    {
+      "id": "canadian-heritage-2017-entity-office-of-the-co-ordinator-status-of-women",
+      "name": "Office of the Co-ordinator,Status of Women",
+      "value": 0.03527
+    },
+    {
+      "id": "canadian-heritage-2017-entity-canadian-museum-for-human-rights",
+      "name": "Canadian Museum for Human Rights",
+      "value": 0.033604
+    },
+    {
+      "id": "canadian-heritage-2017-entity-canadian-museum-of-nature",
+      "name": "Canadian Museum of Nature",
+      "value": 0.02977
+    },
+    {
+      "id": "canadian-heritage-2017-entity-canadian-radio-television-and-telecommunications-commission",
+      "name": "Canadian Radio-television and Telecommunications Commission",
+      "value": 0.011392
+    },
+    {
+      "id": "canadian-heritage-2017-entity-the-national-battlefields-commission",
+      "name": "The National Battlefields Commission",
+      "value": 0.009324
+    },
+    {
+      "id": "canadian-heritage-2017-entity-canadian-museum-of-immigration-at-pier-21",
+      "name": "Canadian Museum of Immigration at Pier 21",
+      "value": 0.0079
     }
   ],
   "transferPayments": [

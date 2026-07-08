@@ -3,7 +3,7 @@
   "slug": "women-and-gender-equality",
   "financialYearEnding": 2021,
   "reportedAs": "Women and Gender Equality",
-  "basis": "vol2_appropriations",
+  "basis": "vol2_standard_object_net",
   "totalSpending": 0.219463,
   "percentageOfFederal": 0.0341,
   "historicalShare": [
@@ -49,7 +49,48 @@
             {
               "id": "women-and-gender-equality-2021-department-for-women-and-gender-equality-obj-10",
               "name": "Transfer payments",
-              "amount": 0.168305
+              "children": [
+                {
+                  "id": "women-and-gender-equality-2021-tp-0004",
+                  "name": "Women's Program—Contributions to women's and other voluntary organizations for the purpose of furthering women's participation in Canadian society",
+                  "amount": 0.052242
+                },
+                {
+                  "id": "women-and-gender-equality-2021-tp-0002",
+                  "name": "Payments to address gender-based violence pursuant to the Public Health Events of National Concern Payments Act",
+                  "amount": 0.040161
+                },
+                {
+                  "id": "women-and-gender-equality-2021-tp-0003",
+                  "name": "Payments to support women's shelters and sexual assault centres pursuant to the Public Health Events of National Concern Payments Act",
+                  "amount": 0.03
+                },
+                {
+                  "id": "women-and-gender-equality-2021-tp-0007",
+                  "name": "Women's Program—Grants to women's and other voluntary organizations for the purpose of furthering women's participation in Canadian society",
+                  "amount": 0.027662
+                },
+                {
+                  "id": "women-and-gender-equality-2021-tp-0001",
+                  "name": "Gender-based Violence Funding Program—Contributions to Canadian organizations, institutions and other levels of government to improve supports and help create long-term, comprehensive solutions for survivors at the national, regional and local levels",
+                  "amount": 0.006603
+                },
+                {
+                  "id": "women-and-gender-equality-2021-tp-0006",
+                  "name": "Gender-based Violence Funding Program—Grants to Canadian organizations, institutions and other levels of government to improve supports and help create long-term, comprehensive solutions for survivors at the national, regional and local levels",
+                  "amount": 0.006011
+                },
+                {
+                  "id": "women-and-gender-equality-2021-tp-0000",
+                  "name": "Equality for Sex, Sexual Orientation, Gender Identity and Expression",
+                  "amount": 0.003698
+                },
+                {
+                  "id": "women-and-gender-equality-2021-tp-0005",
+                  "name": "Equality for Sex, Sexual Orientation, Gender Identity and Expression",
+                  "amount": 0.001928
+                }
+              ]
             },
             {
               "id": "women-and-gender-equality-2021-department-for-women-and-gender-equality-obj-1",
@@ -111,32 +152,6 @@
       "id": "women-and-gender-equality-2021-entity-department-for-women-and-gender-equality",
       "name": "Department for Women and Gender Equality",
       "value": 0.219463
-    }
-  ],
-  "votes": [
-    {
-      "id": "women-and-gender-equality-2021-department-for-women-and-gender-equality-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 48970668,
-      "used": 46322399,
-      "lapsed": 2648269
-    },
-    {
-      "id": "women-and-gender-equality-2021-department-for-women-and-gender-equality-vote5",
-      "vote": "Vote 5",
-      "description": "Grants and contributions",
-      "totalAvailable": 98143977,
-      "used": 98143977,
-      "lapsed": 0
-    },
-    {
-      "id": "women-and-gender-equality-2021-department-for-women-and-gender-equality-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 74997010,
-      "used": 74997010,
-      "lapsed": 0
     }
   ],
   "transferPayments": [

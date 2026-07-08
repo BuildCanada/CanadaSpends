@@ -3,9 +3,9 @@
   "slug": "canada-revenue-agency",
   "financialYearEnding": 2018,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 5.06278,
-  "percentageOfFederal": 1.5334,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 4.707767,
+  "percentageOfFederal": 1.4258,
   "historicalShare": [
     {
       "year": 2014,
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 1.6559
+      "percentage": 1.4169
     },
     {
       "year": 2018,
-      "percentage": 1.5334
+      "percentage": 1.4258
     },
     {
       "year": 2019,
-      "percentage": 1.5822
+      "percentage": 1.4793
     },
     {
       "year": 2020,
-      "percentage": 2.0314
+      "percentage": 1.9271
     },
     {
       "year": 2021,
-      "percentage": 1.6235
+      "percentage": 1.5499
     },
     {
       "year": 2022,
-      "percentage": 1.9724
+      "percentage": 1.8843
     },
     {
       "year": 2023,
-      "percentage": 2.805
+      "percentage": 2.7138
     },
     {
       "year": 2024,
-      "percentage": 3.3167
+      "percentage": 3.2223
     },
     {
       "year": 2025,
-      "percentage": 4.1413
+      "percentage": 4.0525
     }
   ],
   "miniSankey": {
@@ -79,7 +79,13 @@
             {
               "id": "canada-revenue-agency-2018-canada-revenue-agency-obj-10",
               "name": "Transfer payments",
-              "amount": 0.333553
+              "children": [
+                {
+                  "id": "canada-revenue-agency-2018-tp-0000",
+                  "name": "Children's Special Allowance payments",
+                  "amount": 0.333553
+                }
+              ]
             },
             {
               "id": "canada-revenue-agency-2018-canada-revenue-agency-obj-5",
@@ -133,19 +139,9 @@
   },
   "entities": [
     {
-      "id": "canada-revenue-agency-2018-entity-national-revenue",
-      "name": "National Revenue",
-      "value": 5.06278
-    }
-  ],
-  "votes": [
-    {
-      "id": "canada-revenue-agency-2018-national-revenue-vote",
-      "vote": "All votes",
-      "description": "Total appropriations (vote-level detail not published for this edition)",
-      "totalAvailable": 5200824639,
-      "used": 5062779564,
-      "lapsed": 138045075
+      "id": "canada-revenue-agency-2018-entity-canada-revenue-agency",
+      "name": "Canada Revenue Agency",
+      "value": 4.707767
     }
   ],
   "transferPayments": [

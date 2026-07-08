@@ -3,7 +3,7 @@
   "slug": "governor-general",
   "financialYearEnding": 2018,
   "reportedAs": "Office of the Governor General's Secretary",
-  "basis": "vol2_appropriations",
+  "basis": "vol2_standard_object_net",
   "totalSpending": 0.023457,
   "percentageOfFederal": 0.0071,
   "historicalShare": [
@@ -89,7 +89,13 @@
             {
               "id": "governor-general-2018-office-of-the-governor-general-s-secretary-obj-10",
               "name": "Transfer payments",
-              "amount": 0.000647
+              "children": [
+                {
+                  "id": "governor-general-2018-tp-0000",
+                  "name": " Annuities payable under the Governor General's Act (R.S.C., 1985 c. G-9)",
+                  "amount": 0.000647
+                }
+              ]
             },
             {
               "id": "governor-general-2018-office-of-the-governor-general-s-secretary-obj-9",
@@ -126,16 +132,6 @@
       "id": "governor-general-2018-entity-office-of-the-governor-general-s-secretary",
       "name": "Office of the Governor General's Secretary",
       "value": 0.023457
-    }
-  ],
-  "votes": [
-    {
-      "id": "governor-general-2018-office-of-the-governor-general-s-secretary-vote",
-      "vote": "All votes",
-      "description": "Total appropriations (vote-level detail not published for this edition)",
-      "totalAvailable": 23862510,
-      "used": 23456562,
-      "lapsed": 405948
     }
   ],
   "transferPayments": [

@@ -3,9 +3,9 @@
   "slug": "justice",
   "financialYearEnding": 2017,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 2.328713,
-  "percentageOfFederal": 0.7516,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 1.638684,
+  "percentageOfFederal": 0.5289,
   "historicalShare": [
     {
       "year": 2014,
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 0.7516
+      "percentage": 0.5289
     },
     {
       "year": 2018,
-      "percentage": 0.6252
+      "percentage": 0.5164
     },
     {
       "year": 2019,
-      "percentage": 0.6386
+      "percentage": 0.5304
     },
     {
       "year": 2020,
-      "percentage": 0.6125
+      "percentage": 0.5086
     },
     {
       "year": 2021,
-      "percentage": 0.364
+      "percentage": 0.3017
     },
     {
       "year": 2022,
-      "percentage": 0.4988
+      "percentage": 0.4122
     },
     {
       "year": 2023,
-      "percentage": 0.5611
+      "percentage": 0.4606
     },
     {
       "year": 2024,
-      "percentage": 0.5695
+      "percentage": 0.4694
     },
     {
       "year": 2025,
-      "percentage": 0.6056
+      "percentage": 0.5085
     }
   ],
   "miniSankey": {
@@ -74,7 +74,70 @@
             {
               "id": "justice-2017-department-of-justice-obj-10",
               "name": "Transfer payments",
-              "amount": 0.374463
+              "children": [
+                {
+                  "id": "justice-2017-tp-0009",
+                  "name": "Contributions to the provinces and territories in support of the youth justice services",
+                  "amount": 0.141508
+                },
+                {
+                  "id": "justice-2017-tp-0011",
+                  "name": "Contributions to the provinces to assist in the operation of legal aid systems",
+                  "amount": 0.135451
+                },
+                {
+                  "id": "justice-2017-tp-0001",
+                  "name": "Contributions from the Victims Fund",
+                  "amount": 0.016442
+                },
+                {
+                  "id": "justice-2017-tp-0004",
+                  "name": "Contributions in support of the Supporting Families Fund",
+                  "amount": 0.015977
+                },
+                {
+                  "id": "justice-2017-tp-0013",
+                  "name": "Contributions under the Aboriginal Justice Strategy Fund",
+                  "amount": 0.013513
+                },
+                {
+                  "id": "justice-2017-tp-0010",
+                  "name": "Contributions to the provinces and territories in support of the youth justice services—Intensive Rehabilitative Custody and Supervision Program",
+                  "amount": 0.011034
+                },
+                {
+                  "id": "justice-2017-tp-0012",
+                  "name": "Contributions to the provinces under the Indigenous Courtwork Program",
+                  "amount": 0.007908
+                },
+                {
+                  "id": "justice-2017-tp-0000",
+                  "name": "Contributions for Access to Justice Services to the Territories (being Legal Aid, Aboriginal Courtwork and Public Legal Education and Information Services)",
+                  "amount": 0.006248
+                },
+                {
+                  "id": "justice-2017-tp-0014",
+                  "name": "Contributions under the Access to Justice in Both Official Languages Support Fund",
+                  "amount": 0.006239
+                },
+                {
+                  "id": "justice-2017-tp-0005",
+                  "name": "Contributions in support of the Youth Justice Fund",
+                  "amount": 0.004221
+                },
+                {
+                  "id": "justice-2017-tp-0006",
+                  "name": "Contributions to support the implementation of official languages requirements under the Contraventions Act",
+                  "amount": 0.003878
+                },
+                {
+                  "id": "justice-2017-department-of-justice-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.012044,
+                  "isAggregate": true,
+                  "count": 13
+                }
+              ]
             },
             {
               "id": "justice-2017-department-of-justice-internal-revenues",
@@ -550,19 +613,44 @@
   },
   "entities": [
     {
-      "id": "justice-2017-entity-justice",
-      "name": "Justice",
-      "value": 2.328713
-    }
-  ],
-  "votes": [
+      "id": "justice-2017-entity-department-of-justice",
+      "name": "Department of Justice",
+      "value": 0.689819
+    },
     {
-      "id": "justice-2017-justice-vote",
-      "vote": "All votes",
-      "description": "Total appropriations (vote-level detail not published for this edition)",
-      "totalAvailable": 2402924516,
-      "used": 2328713033,
-      "lapsed": 74211483
+      "id": "justice-2017-entity-office-of-the-commissioner-for-federal-judicial-affairs",
+      "name": "Office of the Commissioner for Federal Judicial Affairs",
+      "value": 0.546797
+    },
+    {
+      "id": "justice-2017-entity-office-of-the-director-of-public-prosecutions",
+      "name": "Office of the Director of Public Prosecutions",
+      "value": 0.177585
+    },
+    {
+      "id": "justice-2017-entity-courts-administration-service",
+      "name": "Courts Administration Service",
+      "value": 0.072277
+    },
+    {
+      "id": "justice-2017-entity-administrative-tribunals-support-service-of-canada",
+      "name": "Administrative Tribunals Support Service of Canada",
+      "value": 0.060162
+    },
+    {
+      "id": "justice-2017-entity-offices-of-the-information-and-privacy-commissioners-of-canada",
+      "name": "Offices of the Information and Privacy Commissioners of Canada",
+      "value": 0.036684
+    },
+    {
+      "id": "justice-2017-entity-registrar-of-the-supreme-court-of-canada",
+      "name": "Registrar of the Supreme Court of Canada",
+      "value": 0.033679
+    },
+    {
+      "id": "justice-2017-entity-canadian-human-rights-commission",
+      "name": "Canadian Human Rights Commission",
+      "value": 0.021681
     }
   ],
   "transferPayments": [

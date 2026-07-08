@@ -7,9 +7,10 @@ module PbCli
     # pair -- spec §8: "Export emits every EN label with its stable id."
     #
     # Ids are collected exactly as the site loader (src/lib/federal.ts) keys
-    # its French lookups: sankey (and mini-sankey) node names by node `id`;
-    # department display names by the department `slug`; entity names, vote
-    # descriptions, and transfer-payment descriptions by their own ids;
+    # its French lookups: sankey (and mini-sankey) node names by node `id`
+    # (including the transfer-program leaves, whose ids reuse the
+    # transfer-payment ids); department display names by the department `slug`;
+    # entity names and transfer-payment descriptions by their own ids;
     # reconciliation item names by their ids.
     class Collector
       def initialize(year_dir)
@@ -66,7 +67,6 @@ module PbCli
           add_item(items, dept['slug'], dept['name'])
           walk_sankey_node(items, dept.dig('miniSankey', 'spending_data'))
           (dept['entities'] || []).each { |e| add_item(items, e['id'], e['name']) }
-          (dept['votes'] || []).each { |v| add_item(items, v['id'], v['description']) }
           (dept['transferPayments'] || []).each { |t| add_item(items, t['id'], t['description']) }
         end
       end

@@ -3,17 +3,17 @@
   "slug": "global-affairs-canada",
   "financialYearEnding": 2016,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 6.268123,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 6.268124,
   "percentageOfFederal": 2.1214,
   "historicalShare": [
     {
       "year": 2014,
-      "percentage": 2.2651
+      "percentage": 2.3161
     },
     {
       "year": 2015,
-      "percentage": 2.2251
+      "percentage": 2.2474
     },
     {
       "year": 2016,
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 2.0955
+      "percentage": 2.074
     },
     {
       "year": 2018,
-      "percentage": 2.0629
+      "percentage": 2.0519
     },
     {
       "year": 2019,
-      "percentage": 2.0981
+      "percentage": 2.0872
     },
     {
       "year": 2020,
-      "percentage": 1.9817
+      "percentage": 1.9713
     },
     {
       "year": 2021,
-      "percentage": 1.5249
+      "percentage": 1.5181
     },
     {
       "year": 2022,
-      "percentage": 1.9011
+      "percentage": 1.892
     },
     {
       "year": 2023,
-      "percentage": 2.3027
+      "percentage": 2.2922
     },
     {
       "year": 2024,
-      "percentage": 3.6934
+      "percentage": 3.6828
     },
     {
       "year": 2025,
-      "percentage": 1.8109
+      "percentage": 1.7999
     }
   ],
   "miniSankey": {
@@ -69,7 +69,70 @@
             {
               "id": "global-affairs-canada-2016-foreign-affairs-trade-and-development-obj-10",
               "name": "Transfer payments",
-              "amount": 4.122657
+              "children": [
+                {
+                  "id": "global-affairs-canada-2016-tp-0065",
+                  "name": "Grants for Multilateral Programming: Grants in support of development assistance, humanitarian assistance or disaster preparedness, for global operations, programs, projects, activities and appeals for the benefit of developing countries or territories or countries in transition",
+                  "amount": 1.940968
+                },
+                {
+                  "id": "global-affairs-canada-2016-tp-0010",
+                  "name": "Contributions for Bilateral Programming: Contributions in support of development assistance, contributions for cooperation with countries in transition and contributions in support of regional or country specific development assistance programs, projects and activities for the benefit of developing countries or territories or countries in transition",
+                  "amount": 0.704537
+                },
+                {
+                  "id": "global-affairs-canada-2016-tp-0043",
+                  "name": "Payments of assessed contributions to International Organizations: United Nations peacekeeping operations (US$244,482,704)",
+                  "amount": 0.323932
+                },
+                {
+                  "id": "global-affairs-canada-2016-tp-0076",
+                  "name": "Payments to International Financial Institutions—Direct payments",
+                  "amount": 0.28754
+                },
+                {
+                  "id": "global-affairs-canada-2016-tp-0012",
+                  "name": "Contributions for Partnership with Canadians Programming: Contributions for development assistance programs, projects and activities intended to support development for the benefit of developing countries or territories or countries in transition or to enhance the awareness, understanding, and engagement of Canadians with respect to development",
+                  "amount": 0.238795
+                },
+                {
+                  "id": "global-affairs-canada-2016-tp-0054",
+                  "name": "United Nations Organization (US$96,006,434)",
+                  "amount": 0.107816
+                },
+                {
+                  "id": "global-affairs-canada-2016-tp-0019",
+                  "name": "Global Peace and Security Fund",
+                  "amount": 0.058162
+                },
+                {
+                  "id": "global-affairs-canada-2016-tp-0070",
+                  "name": "Grants in support of the Global Peace and Security Fund and its sub-programs",
+                  "amount": 0.044582
+                },
+                {
+                  "id": "global-affairs-canada-2016-tp-0035",
+                  "name": "North Atlantic Treaty Organization (NATO)—Civil administration (27,766,230 Euro)",
+                  "amount": 0.036637
+                },
+                {
+                  "id": "global-affairs-canada-2016-tp-0015",
+                  "name": "Contributions under the Global Partnership Program for the destruction, disposal and securing of weapons and materials of mass destruction and related expertise",
+                  "amount": 0.029969
+                },
+                {
+                  "id": "global-affairs-canada-2016-tp-0066",
+                  "name": "Grants for Partnerships with Canadians Programming: Grants for development assistance programs, projects and activities intended to support development for the benefit of developing countries or territories or countries in transition or to enhance the awareness, understanding, and engagement of Canadians with respect to development",
+                  "amount": 0.022398
+                },
+                {
+                  "id": "global-affairs-canada-2016-foreign-affairs-trade-and-development-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.327321,
+                  "isAggregate": true,
+                  "count": 62
+                }
+              ]
             },
             {
               "id": "global-affairs-canada-2016-foreign-affairs-trade-and-development-obj-1",
@@ -219,19 +282,29 @@
   },
   "entities": [
     {
-      "id": "global-affairs-canada-2016-entity-global-affairs",
-      "name": "Global Affairs",
-      "value": 6.268123
-    }
-  ],
-  "votes": [
+      "id": "global-affairs-canada-2016-entity-foreign-affairs-trade-and-development",
+      "name": "Foreign Affairs,Trade and Development",
+      "value": 6.065447
+    },
     {
-      "id": "global-affairs-canada-2016-global-affairs-vote",
-      "vote": "All votes",
-      "description": "Total appropriations (vote-level detail not published for this edition)",
-      "totalAvailable": 6642006764,
-      "used": 6268122951,
-      "lapsed": 373883813
+      "id": "global-affairs-canada-2016-entity-international-development-research-centre",
+      "name": "International Development Research Centre",
+      "value": 0.183478
+    },
+    {
+      "id": "global-affairs-canada-2016-entity-canadian-commercial-corporation",
+      "name": "Canadian Commercial Corporation",
+      "value": 0.00888
+    },
+    {
+      "id": "global-affairs-canada-2016-entity-international-joint-commission-canadian-section",
+      "name": "International Joint Commission (Canadian Section)",
+      "value": 0.006619
+    },
+    {
+      "id": "global-affairs-canada-2016-entity-export-development-canada-canada-account",
+      "name": "Export Development Canada (Canada Account)",
+      "value": 0.0037
     }
   ],
   "transferPayments": [

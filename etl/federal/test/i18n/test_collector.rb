@@ -49,20 +49,39 @@ class TestI18nCollector < Minitest::Test
     assert_equal 'Transport', items['transport-canada']
   end
 
-  def test_collects_entity_vote_and_transfer_payment_text_by_their_own_ids
+  def test_collects_entity_and_transfer_payment_text_by_their_own_ids
     write_json('departments/transport-canada.json', {
       slug: 'transport-canada', name: 'Transport',
       miniSankey: { spending_data: { id: 'transport-canada', name: 'Transport' } },
       entities: [{ id: 'ent-1', name: 'Department of Transport', value: 1.0 }],
-      votes: [{ id: 'vote-1', vote: 'Vote 1', description: 'Operating expenditures' }],
       transferPayments: [{ id: 'tp-1', category: 'Grant', description: 'Airport program', used: 1 }]
     })
 
     items = PbCli::I18n::Collector.new(@dir).collect
 
     assert_equal 'Department of Transport', items['ent-1']
-    assert_equal 'Operating expenditures', items['vote-1']
     assert_equal 'Airport program', items['tp-1']
+  end
+
+  # Transfer-program leaves in the miniSankey reuse the transferPayments ids, so
+  # the collector resolves them through the same sankey-node walk (spec §2).
+  def test_collects_transfer_program_leaves_from_the_mini_sankey
+    write_json('departments/national-defence.json', {
+      slug: 'national-defence', name: 'National Defence',
+      miniSankey: { spending_data: { id: 'national-defence', name: 'National Defence',
+                                     children: [{ id: 'org', name: 'DND', children: [
+                                       { id: 'org-obj-10', name: 'Transfer payments', children: [
+                                         { id: 'national-defence-2024-tp-0009', name: 'NATO Military Budget' },
+                                         { id: 'org-tp-other', name: 'Other transfer programs' }
+                                       ] }
+                                     ] }] } },
+      entities: [], transferPayments: []
+    })
+
+    items = PbCli::I18n::Collector.new(@dir).collect
+
+    assert_equal 'NATO Military Budget', items['national-defence-2024-tp-0009']
+    assert_equal 'Other transfer programs', items['org-tp-other']
   end
 
   def test_skips_entries_with_no_id_or_blank_text

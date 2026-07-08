@@ -3,9 +3,9 @@
   "slug": "privy-council",
   "financialYearEnding": 2025,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 0.43249,
-  "percentageOfFederal": 0.079,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 0.415746,
+  "percentageOfFederal": 0.076,
   "historicalShare": [
     {
       "year": 2014,
@@ -29,31 +29,31 @@
     },
     {
       "year": 2019,
-      "percentage": 0.1085
+      "percentage": 0.1055
     },
     {
       "year": 2020,
-      "percentage": 0.2507
+      "percentage": 0.2476
     },
     {
       "year": 2021,
-      "percentage": 0.0916
+      "percentage": 0.0905
     },
     {
       "year": 2022,
-      "percentage": 0.0716
+      "percentage": 0.0685
     },
     {
       "year": 2023,
-      "percentage": 0.0862
+      "percentage": 0.0827
     },
     {
       "year": 2024,
-      "percentage": 0.0828
+      "percentage": 0.0798
     },
     {
       "year": 2025,
-      "percentage": 0.079
+      "percentage": 0.076
     }
   ],
   "miniSankey": {
@@ -109,7 +109,13 @@
             {
               "id": "privy-council-2025-privy-council-office-obj-10",
               "name": "Transfer payments",
-              "amount": 0.001229
+              "children": [
+                {
+                  "id": "privy-council-2025-tp-0000",
+                  "name": "Contribution Program for Commissions of Inquiry",
+                  "amount": 0.001229
+                }
+              ]
             },
             {
               "id": "privy-council-2025-privy-council-office-obj-7",
@@ -344,12 +350,12 @@
     {
       "id": "privy-council-2025-entity-privy-council-office",
       "name": "Privy Council Office",
-      "value": 0.260053
+      "value": 0.251744
     },
     {
       "id": "privy-council-2025-entity-public-service-commission",
       "name": "Public Service Commission",
-      "value": 0.108561
+      "value": 0.100126
     },
     {
       "id": "privy-council-2025-entity-canadian-transportation-accident-investigation-and-safety-board",
@@ -359,94 +365,12 @@
     {
       "id": "privy-council-2025-entity-national-security-and-intelligence-review-agency-secretariat",
       "name": "National Security and Intelligence Review Agency Secretariat",
-      "value": 0.018839
+      "value": 0.01884
     },
     {
       "id": "privy-council-2025-entity-office-of-the-intelligence-commissioner",
       "name": "Office of the Intelligence Commissioner",
       "value": 0.002059
-    }
-  ],
-  "votes": [
-    {
-      "id": "privy-council-2025-canadian-transportation-accident-investigation-and-safety-board-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 39434761,
-      "used": 38661532,
-      "lapsed": 773229
-    },
-    {
-      "id": "privy-council-2025-canadian-transportation-accident-investigation-and-safety-board-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 4323123,
-      "used": 4315553,
-      "lapsed": 7570
-    },
-    {
-      "id": "privy-council-2025-national-security-and-intelligence-review-agency-secretariat-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 18863422,
-      "used": 17008811,
-      "lapsed": 1854611
-    },
-    {
-      "id": "privy-council-2025-national-security-and-intelligence-review-agency-secretariat-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 1830688,
-      "used": 1830688,
-      "lapsed": 0
-    },
-    {
-      "id": "privy-council-2025-office-of-the-intelligence-commissioner-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 2604731,
-      "used": 1926739,
-      "lapsed": 677992
-    },
-    {
-      "id": "privy-council-2025-office-of-the-intelligence-commissioner-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 132671,
-      "used": 132671,
-      "lapsed": 0
-    },
-    {
-      "id": "privy-council-2025-privy-council-office-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 247063390,
-      "used": 235550836,
-      "lapsed": 11512554
-    },
-    {
-      "id": "privy-council-2025-privy-council-office-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 24514376,
-      "used": 24501784,
-      "lapsed": 12592
-    },
-    {
-      "id": "privy-council-2025-public-service-commission-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 107097629,
-      "used": 96500083,
-      "lapsed": 10597546
-    },
-    {
-      "id": "privy-council-2025-public-service-commission-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 12061214,
-      "used": 12061214,
-      "lapsed": 0
     }
   ],
   "transferPayments": [

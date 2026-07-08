@@ -3,9 +3,9 @@
   "slug": "fisheries-and-oceans",
   "financialYearEnding": 2021,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 3.387874,
-  "percentageOfFederal": 0.5259,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 3.346987,
+  "percentageOfFederal": 0.5196,
   "historicalShare": [
     {
       "year": 2014,
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 0.7856
+      "percentage": 0.7594
     },
     {
       "year": 2018,
-      "percentage": 0.8065
+      "percentage": 0.7937
     },
     {
       "year": 2019,
-      "percentage": 0.9602
+      "percentage": 0.9483
     },
     {
       "year": 2020,
-      "percentage": 0.8515
+      "percentage": 0.8396
     },
     {
       "year": 2021,
-      "percentage": 0.5259
+      "percentage": 0.5196
     },
     {
       "year": 2022,
-      "percentage": 0.7545
+      "percentage": 0.7464
     },
     {
       "year": 2023,
-      "percentage": 0.7915
+      "percentage": 0.7817
     },
     {
       "year": 2024,
-      "percentage": 0.8807
+      "percentage": 0.8719
     },
     {
       "year": 2025,
-      "percentage": 0.9614
+      "percentage": 0.9529
     }
   ],
   "miniSankey": {
@@ -79,7 +79,70 @@
             {
               "id": "fisheries-and-oceans-2021-department-of-fisheries-and-oceans-obj-10",
               "name": "Transfer payments",
-              "amount": 0.421263
+              "children": [
+                {
+                  "id": "fisheries-and-oceans-2021-tp-0027",
+                  "name": "Grant Program to support self-employed fish harvesters in Canada affected by COVID-19",
+                  "amount": 0.130363
+                },
+                {
+                  "id": "fisheries-and-oceans-2021-tp-0012",
+                  "name": "Contributions to support increased Aboriginal participation in commercial fisheries, cooperative fisheries management arrangements and consultations respecting Aboriginal fisheries agreements",
+                  "amount": 0.077454
+                },
+                {
+                  "id": "fisheries-and-oceans-2021-tp-0002",
+                  "name": "Contribution Program to support Atlantic Canada's fish and seafood sector",
+                  "amount": 0.040971
+                },
+                {
+                  "id": "fisheries-and-oceans-2021-tp-0022",
+                  "name": "Ocean and Freshwater Science Contribution Program",
+                  "amount": 0.027864
+                },
+                {
+                  "id": "fisheries-and-oceans-2021-tp-0019",
+                  "name": "Contributions under the Aboriginal Aquatic Resource and Oceans Management Program",
+                  "amount": 0.027486
+                },
+                {
+                  "id": "fisheries-and-oceans-2021-tp-0000",
+                  "name": "Coastal Restoration Fund",
+                  "amount": 0.022364
+                },
+                {
+                  "id": "fisheries-and-oceans-2021-tp-0001",
+                  "name": "Contribution Program to Support the Nature Legacy for Canada through the Canada Nature Fund for Aquatic Species and Aquatic Habitat",
+                  "amount": 0.017979
+                },
+                {
+                  "id": "fisheries-and-oceans-2021-tp-0010",
+                  "name": "Contributions for Indigenous Participation in the Management of Fish and Fish Habitat",
+                  "amount": 0.015539
+                },
+                {
+                  "id": "fisheries-and-oceans-2021-tp-0005",
+                  "name": "Contribution program to support British Columbia Salmon Restoration and Innovation Fund",
+                  "amount": 0.012556
+                },
+                {
+                  "id": "fisheries-and-oceans-2021-tp-0011",
+                  "name": "Contributions to support Aboriginal Reconciliation Agreements",
+                  "amount": 0.00777
+                },
+                {
+                  "id": "fisheries-and-oceans-2021-tp-0004",
+                  "name": "Contribution agreements to permit the Canadian Coast Guard Auxiliary Associations to carry out authorized activities related to maritime Search and Rescue operations, Search and Rescue prevention and other safety related activities",
+                  "amount": 0.007039
+                },
+                {
+                  "id": "fisheries-and-oceans-2021-department-of-fisheries-and-oceans-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.033878,
+                  "isAggregate": true,
+                  "count": 17
+                }
+              ]
             },
             {
               "id": "fisheries-and-oceans-2021-department-of-fisheries-and-oceans-obj-9",
@@ -137,49 +200,7 @@
     {
       "id": "fisheries-and-oceans-2021-entity-department-of-fisheries-and-oceans",
       "name": "Department of Fisheries and Oceans",
-      "value": 3.387874
-    }
-  ],
-  "votes": [
-    {
-      "id": "fisheries-and-oceans-2021-department-of-fisheries-and-oceans-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 2055422356,
-      "used": 2001884322,
-      "lapsed": 53538034
-    },
-    {
-      "id": "fisheries-and-oceans-2021-department-of-fisheries-and-oceans-vote10",
-      "vote": "Vote 10",
-      "description": "Grants and contributions",
-      "totalAvailable": 1004791184,
-      "used": 291858397,
-      "lapsed": 712932787
-    },
-    {
-      "id": "fisheries-and-oceans-2021-department-of-fisheries-and-oceans-vote15",
-      "vote": "Vote 15",
-      "description": "Debt Write-off",
-      "totalAvailable": 3027875,
-      "used": 3027874,
-      "lapsed": 1
-    },
-    {
-      "id": "fisheries-and-oceans-2021-department-of-fisheries-and-oceans-vote5",
-      "vote": "Vote 5",
-      "description": "Capital expenditures",
-      "totalAvailable": 1129771196,
-      "used": 773359286,
-      "lapsed": 356411910
-    },
-    {
-      "id": "fisheries-and-oceans-2021-department-of-fisheries-and-oceans-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 318949532,
-      "used": 317744184,
-      "lapsed": 1205348
+      "value": 3.346987
     }
   ],
   "transferPayments": [

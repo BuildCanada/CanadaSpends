@@ -3,7 +3,7 @@
   "slug": "veterans-affairs",
   "financialYearEnding": 2018,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
+  "basis": "vol2_standard_object_net",
   "totalSpending": 4.784743,
   "percentageOfFederal": 1.4491,
   "historicalShare": [
@@ -69,7 +69,70 @@
             {
               "id": "veterans-affairs-2018-department-of-veterans-affairs-obj-10",
               "name": "Transfer payments",
-              "amount": 3.81467
+              "children": [
+                {
+                  "id": "veterans-affairs-2018-tp-0010",
+                  "name": "Disability Awards and Allowances",
+                  "amount": 1.621406
+                },
+                {
+                  "id": "veterans-affairs-2018-tp-0018",
+                  "name": "Pensions for disability and death, including pensions granted under the authority of the Civilian Government Employees (War) Compensation Order, P.C. 45/8848 of November 22, 1944, which shall be subject to the Pension Act; for former prisoners of war under the Pension Act, and Newfoundland special awards",
+                  "amount": 1.261223
+                },
+                {
+                  "id": "veterans-affairs-2018-tp-0011",
+                  "name": "Earnings Loss and Supplementary Retirement Benefit",
+                  "amount": 0.54352
+                },
+                {
+                  "id": "veterans-affairs-2018-tp-0014",
+                  "name": "Housekeeping and Grounds Maintenance",
+                  "amount": 0.26545
+                },
+                {
+                  "id": "veterans-affairs-2018-tp-0000",
+                  "name": "Contributions to Veterans, under the Veterans Independence Program, to assist in defraying costs of extended health care not covered by provincial health programs",
+                  "amount": 0.079153
+                },
+                {
+                  "id": "veterans-affairs-2018-tp-0008",
+                  "name": "Commonwealth War Graves Commission",
+                  "amount": 0.010697
+                },
+                {
+                  "id": "veterans-affairs-2018-tp-0001",
+                  "name": "Contributions under the Commemorative Partnerships Program, to organizations, institutions and other levels of government, in support of projects related to the health and well-being of the veteran population, and commemoration activities and events",
+                  "amount": 0.009281
+                },
+                {
+                  "id": "veterans-affairs-2018-tp-0015",
+                  "name": "Last Post Fund",
+                  "amount": 0.00912
+                },
+                {
+                  "id": "veterans-affairs-2018-tp-0022",
+                  "name": "War Veterans Allowances and Civilian War Allowances",
+                  "amount": 0.006101
+                },
+                {
+                  "id": "veterans-affairs-2018-tp-0012",
+                  "name": "Family Caregiver Relief Benefit",
+                  "amount": 0.002822
+                },
+                {
+                  "id": "veterans-affairs-2018-tp-0004",
+                  "name": "Canadian Forces Income Support Allowance",
+                  "amount": 0.001457
+                },
+                {
+                  "id": "veterans-affairs-2018-department-of-veterans-affairs-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.00444,
+                  "isAggregate": true,
+                  "count": 13
+                }
+              ]
             },
             {
               "id": "veterans-affairs-2018-department-of-veterans-affairs-obj-4",
@@ -174,19 +237,14 @@
   },
   "entities": [
     {
-      "id": "veterans-affairs-2018-entity-veterans-affairs",
-      "name": "Veterans Affairs",
-      "value": 4.784743
-    }
-  ],
-  "votes": [
+      "id": "veterans-affairs-2018-entity-department-of-veterans-affairs",
+      "name": "Department of Veterans Affairs",
+      "value": 4.773891
+    },
     {
-      "id": "veterans-affairs-2018-veterans-affairs-vote",
-      "vote": "All votes",
-      "description": "Total appropriations (vote-level detail not published for this edition)",
-      "totalAvailable": 4933757492,
-      "used": 4784743449,
-      "lapsed": 149014043
+      "id": "veterans-affairs-2018-entity-veterans-review-and-appeal-board",
+      "name": "Veterans Review and Appeal Board",
+      "value": 0.010852
     }
   ],
   "transferPayments": [

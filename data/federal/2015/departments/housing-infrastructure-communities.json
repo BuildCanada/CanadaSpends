@@ -3,7 +3,7 @@
   "slug": "housing-infrastructure-communities",
   "financialYearEnding": 2015,
   "reportedAs": "Office of Infrastructure of Canada",
-  "basis": "vol2_appropriations",
+  "basis": "vol2_standard_object_net",
   "totalSpending": 3.34084,
   "percentageOfFederal": 1.1912,
   "historicalShare": [
@@ -45,11 +45,11 @@
     },
     {
       "year": 2024,
-      "percentage": 2.7917
+      "percentage": 2.78
     },
     {
       "year": 2025,
-      "percentage": 2.6621
+      "percentage": 2.6578
     }
   ],
   "miniSankey": {
@@ -65,7 +65,68 @@
             {
               "id": "housing-infrastructure-communities-2015-office-of-infrastructure-of-canada-department-obj-10",
               "name": "Transfer payments",
-              "amount": 3.008522
+              "children": [
+                {
+                  "id": "housing-infrastructure-communities-2015-tp-0012",
+                  "name": "Gas Tax Fund",
+                  "amount": 1.973269
+                },
+                {
+                  "id": "housing-infrastructure-communities-2015-tp-0002",
+                  "name": "Contributions under the Building Canada Fund Major Infrastructure Component",
+                  "amount": 0.538025
+                },
+                {
+                  "id": "housing-infrastructure-communities-2015-tp-0004",
+                  "name": "Contributions under the Canada Strategic Infrastructure Fund",
+                  "amount": 0.233373
+                },
+                {
+                  "id": "housing-infrastructure-communities-2015-tp-0007",
+                  "name": "Inuvik to Tuktoyaktuk Highway Program",
+                  "amount": 0.079275
+                },
+                {
+                  "id": "housing-infrastructure-communities-2015-tp-0001",
+                  "name": "Contributions under the Building Canada Fund Communities Component",
+                  "amount": 0.076339
+                },
+                {
+                  "id": "housing-infrastructure-communities-2015-tp-0005",
+                  "name": "Contributions under the Green Infrastructure Fund",
+                  "amount": 0.036862
+                },
+                {
+                  "id": "housing-infrastructure-communities-2015-tp-0013",
+                  "name": "Provincial‑territorial Infrastructure Base Funding Program",
+                  "amount": 0.025
+                },
+                {
+                  "id": "housing-infrastructure-communities-2015-tp-0000",
+                  "name": "Contributions under the Border Infrastructure Fund",
+                  "amount": 0.020863
+                },
+                {
+                  "id": "housing-infrastructure-communities-2015-tp-0010",
+                  "name": "New Building Canada Fund ‑ Provincial‑Territorial Infrastructure Component ‑ National and Regional Projects",
+                  "amount": 0.011067
+                },
+                {
+                  "id": "housing-infrastructure-communities-2015-tp-0006",
+                  "name": "Contributions under the Municipal Rural Infrastructure Fund",
+                  "amount": 0.009411
+                },
+                {
+                  "id": "housing-infrastructure-communities-2015-tp-0008",
+                  "name": "National Recreational Trails program",
+                  "amount": 0.005
+                },
+                {
+                  "id": "housing-infrastructure-communities-2015-tp-0003",
+                  "name": "Contributions under the Building Canada Fund — Strategic Research and Partnership",
+                  "amount": 3.8e-5
+                }
+              ]
             },
             {
               "id": "housing-infrastructure-communities-2015-office-of-infrastructure-of-canada-department-obj-1",
@@ -135,48 +196,14 @@
   },
   "entities": [
     {
-      "id": "housing-infrastructure-communities-2015-entity-office-of-infrastructure-of-canada",
-      "name": "Office of Infrastructure of Canada",
+      "id": "housing-infrastructure-communities-2015-entity-office-of-infrastructure-of-canada-department",
+      "name": "Office of Infrastructure of Canada Department",
       "value": 3.095882
     },
     {
       "id": "housing-infrastructure-communities-2015-entity-the-jacques-cartier-and-champlain-bridges-inc",
-      "name": "The Jacques‑Cartier and Champlain Bridges Inc.",
+      "name": "The Jacques-Cartier and Champlain Bridges Inc.",
       "value": 0.244958
-    }
-  ],
-  "votes": [
-    {
-      "id": "housing-infrastructure-communities-2015-office-of-infrastructure-of-canada-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 75080093,
-      "used": 66586698,
-      "lapsed": 8493395
-    },
-    {
-      "id": "housing-infrastructure-communities-2015-office-of-infrastructure-of-canada-vote3",
-      "vote": "Vote 3",
-      "description": "Capital expenditures",
-      "totalAvailable": 94036524,
-      "used": 15647305,
-      "lapsed": 78389219
-    },
-    {
-      "id": "housing-infrastructure-communities-2015-office-of-infrastructure-of-canada-vote5",
-      "vote": "Vote 5",
-      "description": "Contributions",
-      "totalAvailable": 3544498038,
-      "used": 3013648110,
-      "lapsed": 530849928
-    },
-    {
-      "id": "housing-infrastructure-communities-2015-the-jacques-cartier-and-champlain-bridges-inc-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to The Jacques‑Cartier and Champlain Bridges Inc.",
-      "totalAvailable": 432832159,
-      "used": 244957619,
-      "lapsed": 187874540
     }
   ],
   "transferPayments": [

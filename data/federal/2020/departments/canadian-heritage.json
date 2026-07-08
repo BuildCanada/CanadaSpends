@@ -3,9 +3,9 @@
   "slug": "canadian-heritage",
   "financialYearEnding": 2020,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 3.84249,
-  "percentageOfFederal": 1.0287,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 3.778648,
+  "percentageOfFederal": 1.0116,
   "historicalShare": [
     {
       "year": 2014,
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 1.1987
+      "percentage": 1.1587
     },
     {
       "year": 2018,
-      "percentage": 1.2054
+      "percentage": 1.1838
     },
     {
       "year": 2019,
-      "percentage": 1.0587
+      "percentage": 1.0398
     },
     {
       "year": 2020,
-      "percentage": 1.0287
+      "percentage": 1.0116
     },
     {
       "year": 2021,
-      "percentage": 0.6979
+      "percentage": 0.6906
     },
     {
       "year": 2022,
-      "percentage": 0.9019
+      "percentage": 0.8871
     },
     {
       "year": 2023,
-      "percentage": 1.0092
+      "percentage": 0.9927
     },
     {
       "year": 2024,
-      "percentage": 0.9346
+      "percentage": 0.9173
     },
     {
       "year": 2025,
-      "percentage": 0.8854
+      "percentage": 0.8664
     }
   ],
   "miniSankey": {
@@ -69,7 +69,70 @@
             {
               "id": "canadian-heritage-2020-department-of-canadian-heritage-obj-10",
               "name": "Transfer payments",
-              "amount": 1.321511
+              "children": [
+                {
+                  "id": "canadian-heritage-2020-tp-0009",
+                  "name": "Contributions in support of the Development of Official-Language Communities Program",
+                  "amount": 0.251689
+                },
+                {
+                  "id": "canadian-heritage-2020-tp-0004",
+                  "name": "Contributions for the Sport Support Program",
+                  "amount": 0.179607
+                },
+                {
+                  "id": "canadian-heritage-2020-tp-0014",
+                  "name": "Contributions to support the Canada Media Fund",
+                  "amount": 0.15747
+                },
+                {
+                  "id": "canadian-heritage-2020-tp-0011",
+                  "name": "Contributions in support the Enhancement of Official Languages Program",
+                  "amount": 0.129432
+                },
+                {
+                  "id": "canadian-heritage-2020-tp-0049",
+                  "name": "Grants to the Canada Periodical Fund",
+                  "amount": 0.071137
+                },
+                {
+                  "id": "canadian-heritage-2020-tp-0013",
+                  "name": "Contributions to support the Aboriginal Peoples' Program",
+                  "amount": 0.051972
+                },
+                {
+                  "id": "canadian-heritage-2020-tp-0022",
+                  "name": "Contributions to the Canada Cultural Spaces Fund",
+                  "amount": 0.050359
+                },
+                {
+                  "id": "canadian-heritage-2020-tp-0020",
+                  "name": "Contributions to the Canada Book Fund",
+                  "amount": 0.03854
+                },
+                {
+                  "id": "canadian-heritage-2020-tp-0023",
+                  "name": "Contributions to the Canada Music Fund",
+                  "amount": 0.036315
+                },
+                {
+                  "id": "canadian-heritage-2020-tp-0043",
+                  "name": "Grants to the Athlete Assistance Program",
+                  "amount": 0.031361
+                },
+                {
+                  "id": "canadian-heritage-2020-tp-0019",
+                  "name": "Contributions to the Canada Arts Training Fund",
+                  "amount": 0.02274
+                },
+                {
+                  "id": "canadian-heritage-2020-department-of-canadian-heritage-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.300889,
+                  "isAggregate": true,
+                  "count": 47
+                }
+              ]
             },
             {
               "id": "canadian-heritage-2020-department-of-canadian-heritage-obj-1",
@@ -365,7 +428,7 @@
     {
       "id": "canadian-heritage-2020-entity-department-of-canadian-heritage",
       "name": "Department of Canadian Heritage",
-      "value": 1.559582
+      "value": 1.550575
     },
     {
       "id": "canadian-heritage-2020-entity-canadian-broadcasting-corporation",
@@ -380,7 +443,7 @@
     {
       "id": "canadian-heritage-2020-entity-library-and-archives-of-canada",
       "name": "Library and Archives of Canada",
-      "value": 0.134871
+      "value": 0.134354
     },
     {
       "id": "canadian-heritage-2020-entity-telefilm-canada",
@@ -395,7 +458,7 @@
     {
       "id": "canadian-heritage-2020-entity-national-film-board",
       "name": "National Film Board",
-      "value": 0.08074
+      "value": 0.07591
     },
     {
       "id": "canadian-heritage-2020-entity-canadian-museum-of-history",
@@ -403,14 +466,9 @@
       "value": 0.075729
     },
     {
-      "id": "canadian-heritage-2020-entity-canadian-radio-television-and-telecommunications-commission",
-      "name": "Canadian Radio-television and Telecommunications Commission",
-      "value": 0.069549
-    },
-    {
       "id": "canadian-heritage-2020-entity-national-gallery-of-canada",
       "name": "National Gallery of Canada",
-      "value": 0.039171
+      "value": 0.047171
     },
     {
       "id": "canadian-heritage-2020-entity-national-arts-centre-corporation",
@@ -433,280 +491,19 @@
       "value": 0.026955
     },
     {
+      "id": "canadian-heritage-2020-entity-canadian-radio-television-and-telecommunications-commission",
+      "name": "Canadian Radio-television and Telecommunications Commission",
+      "value": 0.01206
+    },
+    {
       "id": "canadian-heritage-2020-entity-the-national-battlefields-commission",
       "name": "The National Battlefields Commission",
-      "value": 0.010378
+      "value": 0.010379
     },
     {
       "id": "canadian-heritage-2020-entity-canadian-museum-of-immigration-at-pier-21",
       "name": "Canadian Museum of Immigration at Pier 21",
       "value": 0.007905
-    }
-  ],
-  "votes": [
-    {
-      "id": "canadian-heritage-2020-canada-council-for-the-arts-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the Council",
-      "totalAvailable": 327771295,
-      "used": 327771295,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2020-canadian-broadcasting-corporation-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the Corporation for operating expenditures",
-      "totalAvailable": 1098113846,
-      "used": 1098113846,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2020-canadian-broadcasting-corporation-vote10",
-      "vote": "Vote 10",
-      "description": "Payments to the Corporation for capital expenditures",
-      "totalAvailable": 108684000,
-      "used": 108684000,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2020-canadian-broadcasting-corporation-vote5",
-      "vote": "Vote 5",
-      "description": "Payments to the Corporation for working capital",
-      "totalAvailable": 4000000,
-      "used": 4000000,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2020-canadian-museum-for-human-rights-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the Museum for operating and capital expenditures",
-      "totalAvailable": 26954953,
-      "used": 26954953,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2020-canadian-museum-of-history-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the Museum for operating and capital expenditures",
-      "totalAvailable": 75728888,
-      "used": 75728888,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2020-canadian-museum-of-immigration-at-pier-21-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the Museum for operating and capital expenditures",
-      "totalAvailable": 7905183,
-      "used": 7905183,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2020-canadian-museum-of-nature-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the Museum for operating and capital expenditures",
-      "totalAvailable": 29196950,
-      "used": 29196950,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2020-canadian-radio-television-and-telecommunications-commission-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 70563809,
-      "used": 62246188,
-      "lapsed": 8317621
-    },
-    {
-      "id": "canadian-heritage-2020-canadian-radio-television-and-telecommunications-commission-vote5",
-      "vote": "Vote 5",
-      "description": "Protecting Canada's Critical Infrastructure from Cyber Threats",
-      "totalAvailable": 2545092,
-      "used": 0,
-      "lapsed": 2545092
-    },
-    {
-      "id": "canadian-heritage-2020-canadian-radio-television-and-telecommunications-commission-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 7306443,
-      "used": 7302933,
-      "lapsed": 3510
-    },
-    {
-      "id": "canadian-heritage-2020-department-of-canadian-heritage-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 225433216,
-      "used": 213721581,
-      "lapsed": 11711635
-    },
-    {
-      "id": "canadian-heritage-2020-department-of-canadian-heritage-vote15",
-      "vote": "Vote 15",
-      "description": "Expanding Support for Artists and Cultural Events",
-      "totalAvailable": 67305,
-      "used": 0,
-      "lapsed": 67305
-    },
-    {
-      "id": "canadian-heritage-2020-department-of-canadian-heritage-vote20",
-      "vote": "Vote 20",
-      "description": "Inclusion of Canadians with Visual Impairments and Other Print Disabilities",
-      "totalAvailable": 93368,
-      "used": 0,
-      "lapsed": 93368
-    },
-    {
-      "id": "canadian-heritage-2020-department-of-canadian-heritage-vote25",
-      "vote": "Vote 25",
-      "description": "Introducing a New Anti-Racism Strategy",
-      "totalAvailable": 261313,
-      "used": 0,
-      "lapsed": 261313
-    },
-    {
-      "id": "canadian-heritage-2020-department-of-canadian-heritage-vote30",
-      "vote": "Vote 30",
-      "description": "National Day for Truth and Reconciliation",
-      "totalAvailable": 35735,
-      "used": 0,
-      "lapsed": 35735
-    },
-    {
-      "id": "canadian-heritage-2020-department-of-canadian-heritage-vote35",
-      "vote": "Vote 35",
-      "description": "Protecting Democracy",
-      "totalAvailable": 279489,
-      "used": 0,
-      "lapsed": 279489
-    },
-    {
-      "id": "canadian-heritage-2020-department-of-canadian-heritage-vote40",
-      "vote": "Vote 40",
-      "description": "Preserving, Promoting and Revitalizing Indigenous Languages",
-      "totalAvailable": 106004,
-      "used": 0,
-      "lapsed": 106004
-    },
-    {
-      "id": "canadian-heritage-2020-department-of-canadian-heritage-vote5",
-      "vote": "Vote 5",
-      "description": "Grants and contributions",
-      "totalAvailable": 1358410415,
-      "used": 1320217181,
-      "lapsed": 38193234
-    },
-    {
-      "id": "canadian-heritage-2020-department-of-canadian-heritage-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 25649206,
-      "used": 25643406,
-      "lapsed": 5800
-    },
-    {
-      "id": "canadian-heritage-2020-library-and-archives-of-canada-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 117414806,
-      "used": 113033268,
-      "lapsed": 4381538
-    },
-    {
-      "id": "canadian-heritage-2020-library-and-archives-of-canada-vote5",
-      "vote": "Vote 5",
-      "description": "Capital expenditures",
-      "totalAvailable": 44767511,
-      "used": 9943623,
-      "lapsed": 34823888
-    },
-    {
-      "id": "canadian-heritage-2020-library-and-archives-of-canada-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 11897265,
-      "used": 11894413,
-      "lapsed": 2852
-    },
-    {
-      "id": "canadian-heritage-2020-national-arts-centre-corporation-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the Corporation for operating expenditures",
-      "totalAvailable": 35270142,
-      "used": 35270142,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2020-national-capital-commission-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the Commission for operating expenditures",
-      "totalAvailable": 49408188,
-      "used": 49408188,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2020-national-capital-commission-vote5",
-      "vote": "Vote 5",
-      "description": "Payments to the Commission for capital expenditures",
-      "totalAvailable": 44849853,
-      "used": 44849853,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2020-national-film-board-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 82774699,
-      "used": 76300256,
-      "lapsed": 6474443
-    },
-    {
-      "id": "canadian-heritage-2020-national-film-board-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 14547713,
-      "used": 4439258,
-      "lapsed": 10108455
-    },
-    {
-      "id": "canadian-heritage-2020-national-gallery-of-canada-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the Gallery for operating and capital expenditures",
-      "totalAvailable": 39170830,
-      "used": 39170830,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2020-national-museum-of-science-and-technology-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the Museum for operating and capital expenditures",
-      "totalAvailable": 30936832,
-      "used": 30936832,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2020-telefilm-canada-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the corporation to be used for the purposes set out in the Telefilm Canada Act",
-      "totalAvailable": 109378949,
-      "used": 109378949,
-      "lapsed": 0
-    },
-    {
-      "id": "canadian-heritage-2020-the-national-battlefields-commission-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 7304514,
-      "used": 7229661,
-      "lapsed": 74853
-    },
-    {
-      "id": "canadian-heritage-2020-the-national-battlefields-commission-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 3148690,
-      "used": 3148690,
-      "lapsed": 0
     }
   ],
   "transferPayments": [

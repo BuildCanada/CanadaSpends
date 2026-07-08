@@ -3,9 +3,9 @@
   "slug": "environment-and-climate-change",
   "financialYearEnding": 2019,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 2.982704,
-  "percentageOfFederal": 0.8616,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 2.901243,
+  "percentageOfFederal": 0.8381,
   "historicalShare": [
     {
       "year": 2014,
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 0.7717
+      "percentage": 0.7218
     },
     {
       "year": 2018,
-      "percentage": 0.7879
+      "percentage": 0.7637
     },
     {
       "year": 2019,
-      "percentage": 0.8616
+      "percentage": 0.8381
     },
     {
       "year": 2020,
-      "percentage": 0.8486
+      "percentage": 0.8271
     },
     {
       "year": 2021,
-      "percentage": 0.4962
+      "percentage": 0.4858
     },
     {
       "year": 2022,
-      "percentage": 0.5987
+      "percentage": 0.5856
     },
     {
       "year": 2023,
-      "percentage": 0.6683
+      "percentage": 0.6538
     },
     {
       "year": 2024,
-      "percentage": 0.7649
+      "percentage": 0.7503
     },
     {
       "year": 2025,
-      "percentage": 0.5832
+      "percentage": 0.5689
     }
   ],
   "miniSankey": {
@@ -140,7 +140,70 @@
             {
               "id": "environment-and-climate-change-2019-department-of-the-environment-obj-10",
               "name": "Transfer payments",
-              "amount": 0.402863
+              "children": [
+                {
+                  "id": "environment-and-climate-change-2019-tp-0022",
+                  "name": "Contributions in support of the Low Carbon Economy Fund",
+                  "amount": 0.21754
+                },
+                {
+                  "id": "environment-and-climate-change-2019-tp-0020",
+                  "name": "Contributions in support of the Canada Nature Fund",
+                  "amount": 0.024036
+                },
+                {
+                  "id": "environment-and-climate-change-2019-tp-0029",
+                  "name": "Grant in support of The Natural Areas Conservation Program",
+                  "amount": 0.021029
+                },
+                {
+                  "id": "environment-and-climate-change-2019-tp-0010",
+                  "name": "Contributions in support of Conserving Nature",
+                  "amount": 0.01721
+                },
+                {
+                  "id": "environment-and-climate-change-2019-tp-0008",
+                  "name": "Contributions in support of Biodiversity—Wildlife and Habitat",
+                  "amount": 0.016046
+                },
+                {
+                  "id": "environment-and-climate-change-2019-tp-0016",
+                  "name": "Contributions in support of Taking Action on Clean Growth and Climate Change",
+                  "amount": 0.014341
+                },
+                {
+                  "id": "environment-and-climate-change-2019-tp-0023",
+                  "name": "Contributions in support of the Science Horizons Youth Internship program under the Career Focus stream under the federal Youth Employment Strategy",
+                  "amount": 0.013199
+                },
+                {
+                  "id": "environment-and-climate-change-2019-tp-0009",
+                  "name": "Contributions in support of Climate Change and Clean Air",
+                  "amount": 0.012416
+                },
+                {
+                  "id": "environment-and-climate-change-2019-tp-0019",
+                  "name": "Contributions in support of activities or projects related to national parks, national marine conservation areas, national historic sites and historic canals",
+                  "amount": 0.012252
+                },
+                {
+                  "id": "environment-and-climate-change-2019-tp-0013",
+                  "name": "Contributions in support of Preventing and Managing Pollution",
+                  "amount": 0.011178
+                },
+                {
+                  "id": "environment-and-climate-change-2019-tp-0028",
+                  "name": "Support to the Great Trail",
+                  "amount": 0.00701
+                },
+                {
+                  "id": "environment-and-climate-change-2019-department-of-the-environment-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.036606,
+                  "isAggregate": true,
+                  "count": 24
+                }
+              ]
             },
             {
               "id": "environment-and-climate-change-2019-department-of-the-environment-obj-4",
@@ -262,93 +325,19 @@
   },
   "entities": [
     {
-      "id": "environment-and-climate-change-2019-entity-department-of-the-environment",
-      "name": "Department of the Environment",
-      "value": 1.473356
-    },
-    {
       "id": "environment-and-climate-change-2019-entity-parks-canada-agency",
       "name": "Parks Canada Agency",
       "value": 1.460324
     },
     {
+      "id": "environment-and-climate-change-2019-entity-department-of-the-environment",
+      "name": "Department of the Environment",
+      "value": 1.393355
+    },
+    {
       "id": "environment-and-climate-change-2019-entity-canadian-environmental-assessment-agency",
       "name": "Canadian Environmental Assessment Agency",
-      "value": 0.049024
-    }
-  ],
-  "votes": [
-    {
-      "id": "environment-and-climate-change-2019-canadian-environmental-assessment-agency-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 58598197,
-      "used": 45510376,
-      "lapsed": 13087821
-    },
-    {
-      "id": "environment-and-climate-change-2019-canadian-environmental-assessment-agency-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 3513244,
-      "used": 3513244,
-      "lapsed": 0
-    },
-    {
-      "id": "environment-and-climate-change-2019-department-of-the-environment-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 921239117,
-      "used": 899040696,
-      "lapsed": 22198421
-    },
-    {
-      "id": "environment-and-climate-change-2019-department-of-the-environment-vote10",
-      "vote": "Vote 10",
-      "description": "Grants and contributions",
-      "totalAvailable": 640599746,
-      "used": 402863651,
-      "lapsed": 237736095
-    },
-    {
-      "id": "environment-and-climate-change-2019-department-of-the-environment-vote5",
-      "vote": "Vote 5",
-      "description": "Capital expenditures",
-      "totalAvailable": 92041019,
-      "used": 81320972,
-      "lapsed": 10720047
-    },
-    {
-      "id": "environment-and-climate-change-2019-department-of-the-environment-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 90900096,
-      "used": 90130600,
-      "lapsed": 769496
-    },
-    {
-      "id": "environment-and-climate-change-2019-parks-canada-agency-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 1678279963,
-      "used": 1182151723,
-      "lapsed": 496128240
-    },
-    {
-      "id": "environment-and-climate-change-2019-parks-canada-agency-vote5",
-      "vote": "Vote 5",
-      "description": "Payments to the New Parks and Historic Sites account",
-      "totalAvailable": 44007000,
-      "used": 44007000,
-      "lapsed": 0
-    },
-    {
-      "id": "environment-and-climate-change-2019-parks-canada-agency-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 259375873,
-      "used": 234165441,
-      "lapsed": 25210432
+      "value": 0.047564
     }
   ],
   "transferPayments": [

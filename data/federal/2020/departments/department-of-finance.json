@@ -3,17 +3,17 @@
   "slug": "department-of-finance",
   "financialYearEnding": 2020,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 99.210959,
-  "percentageOfFederal": 26.5609,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 99.209583,
+  "percentageOfFederal": 26.5605,
   "historicalShare": [
     {
       "year": 2014,
-      "percentage": 30.9373
+      "percentage": 31.0335
     },
     {
       "year": 2015,
-      "percentage": 30.731
+      "percentage": 30.7352
     },
     {
       "year": 2016,
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 28.6373
+      "percentage": 28.6369
     },
     {
       "year": 2018,
-      "percentage": 27.4523
+      "percentage": 27.4522
     },
     {
       "year": 2019,
-      "percentage": 27.2779
+      "percentage": 27.2778
     },
     {
       "year": 2020,
-      "percentage": 26.5609
+      "percentage": 26.5605
     },
     {
       "year": 2021,
-      "percentage": 18.327
+      "percentage": 18.3268
     },
     {
       "year": 2022,
-      "percentage": 21.2123
+      "percentage": 21.2122
     },
     {
       "year": 2023,
-      "percentage": 24.3876
+      "percentage": 24.3874
     },
     {
       "year": 2024,
-      "percentage": 26.1038
+      "percentage": 26.1034
     },
     {
       "year": 2025,
-      "percentage": 26.2859
+      "percentage": 26.2858
     }
   ],
   "miniSankey": {
@@ -69,7 +69,68 @@
             {
               "id": "department-of-finance-2020-department-of-finance-obj-10",
               "name": "Transfer payments",
-              "amount": 74.049499
+              "children": [
+                {
+                  "id": "department-of-finance-2020-tp-0005",
+                  "name": "Canada Health Transfer (Part V.1—Federal-Provincial Fiscal Arrangements Act)",
+                  "amount": 37.341057
+                },
+                {
+                  "id": "department-of-finance-2020-tp-0008",
+                  "name": "Fiscal Equalization (Part I—Federal-Provincial Fiscal Arrangements Act)",
+                  "amount": 18.348077
+                },
+                {
+                  "id": "department-of-finance-2020-tp-0006",
+                  "name": "Canada Social Transfer (Part V.1—Federal-Provincial Fiscal Arrangements Act)",
+                  "amount": 13.490726
+                },
+                {
+                  "id": "department-of-finance-2020-tp-0016",
+                  "name": "Territorial Financing (Part I.1—Federal-Provincial Fiscal Arrangements Act)",
+                  "amount": 3.651996
+                },
+                {
+                  "id": "department-of-finance-2020-tp-0011",
+                  "name": "Payments related to Canada Health Transfer",
+                  "amount": 0.462465
+                },
+                {
+                  "id": "department-of-finance-2020-tp-0012",
+                  "name": "Payments to International Development Association (Bretton Woods and Related Agreements Act)",
+                  "amount": 0.408468
+                },
+                {
+                  "id": "department-of-finance-2020-tp-0009",
+                  "name": "Fiscal Stabilization",
+                  "amount": 0.251334
+                },
+                {
+                  "id": "department-of-finance-2020-tp-0007",
+                  "name": "Debt payments on behalf of poor countries to International Organizations pursuant to section 18(1) of the Economic Recovery Act",
+                  "amount": 0.044471
+                },
+                {
+                  "id": "department-of-finance-2020-tp-0015",
+                  "name": "Statutory Subsidies (Constitution Acts, 1867–1982, and Other Statutory Authorities)",
+                  "amount": 0.039442
+                },
+                {
+                  "id": "department-of-finance-2020-tp-0002",
+                  "name": "Additional Fiscal Equalization Offset Payment to Nova Scotia (Nova Scotia and Newfoundland and Labrador Additional Fiscal Equalization Offshore Payments Act)",
+                  "amount": 0.007609
+                },
+                {
+                  "id": "department-of-finance-2020-tp-0014",
+                  "name": "Remission granted under the Financial Administration Act 24(1)",
+                  "amount": 0.002837
+                },
+                {
+                  "id": "department-of-finance-2020-tp-0000",
+                  "name": "Capacity Funding for Tsimshian First Nations",
+                  "amount": 0.001017
+                }
+              ]
             },
             {
               "id": "department-of-finance-2020-department-of-finance-obj-11",
@@ -359,7 +420,7 @@
     {
       "id": "department-of-finance-2020-entity-office-of-the-auditor-general",
       "name": "Office of the Auditor General",
-      "value": 0.089031
+      "value": 0.087654
     },
     {
       "id": "department-of-finance-2020-entity-financial-transactions-and-reports-analysis-centre-of-canada",
@@ -370,120 +431,6 @@
       "id": "department-of-finance-2020-entity-financial-consumer-agency-of-canada",
       "name": "Financial Consumer Agency of Canada",
       "value": 0.030331
-    }
-  ],
-  "votes": [
-    {
-      "id": "department-of-finance-2020-department-of-finance-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 109727155,
-      "used": 107152924,
-      "lapsed": 2574231
-    },
-    {
-      "id": "department-of-finance-2020-department-of-finance-vote10",
-      "vote": "Vote 10",
-      "description": "Introducing a Financial Consumer Agency of Canada Governance Council",
-      "totalAvailable": 444400,
-      "used": 0,
-      "lapsed": 444400
-    },
-    {
-      "id": "department-of-finance-2020-department-of-finance-vote15",
-      "vote": "Vote 15",
-      "description": "Protecting Canadians' Pensions",
-      "totalAvailable": 150000,
-      "used": 0,
-      "lapsed": 150000
-    },
-    {
-      "id": "department-of-finance-2020-department-of-finance-vote20",
-      "vote": "Vote 20",
-      "description": "Strengthening Canada's Anti-Money Laundering and Anti-Terrorist Financing Regime",
-      "totalAvailable": 164730,
-      "used": 0,
-      "lapsed": 164730
-    },
-    {
-      "id": "department-of-finance-2020-department-of-finance-vote5",
-      "vote": "Vote 5",
-      "description": "Authority for amount by way of direct payments to the International Development Association pursuant to Bretton Woods and Related Agreements Act",
-      "totalAvailable": 1,
-      "used": 0,
-      "lapsed": 1
-    },
-    {
-      "id": "department-of-finance-2020-department-of-finance-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 98804100265,
-      "used": 98735527761,
-      "lapsed": 68572504
-    },
-    {
-      "id": "department-of-finance-2020-financial-consumer-agency-of-canada-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 30331191,
-      "used": 30331191,
-      "lapsed": 0
-    },
-    {
-      "id": "department-of-finance-2020-financial-transactions-and-reports-analysis-centre-of-canada-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 54916462,
-      "used": 50468277,
-      "lapsed": 4448185
-    },
-    {
-      "id": "department-of-finance-2020-financial-transactions-and-reports-analysis-centre-of-canada-vote5",
-      "vote": "Vote 5",
-      "description": "Strengthening Canada's Anti-Money Laundering and Anti-Terrorist Financing Regime",
-      "totalAvailable": 465320,
-      "used": 0,
-      "lapsed": 465320
-    },
-    {
-      "id": "department-of-finance-2020-financial-transactions-and-reports-analysis-centre-of-canada-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 4814731,
-      "used": 4814489,
-      "lapsed": 242
-    },
-    {
-      "id": "department-of-finance-2020-office-of-the-auditor-general-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 83733589,
-      "used": 79695883,
-      "lapsed": 4037706
-    },
-    {
-      "id": "department-of-finance-2020-office-of-the-auditor-general-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 9335845,
-      "used": 9334804,
-      "lapsed": 1041
-    },
-    {
-      "id": "department-of-finance-2020-office-of-the-superintendent-of-financial-institutions-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 1501204,
-      "used": 1501204,
-      "lapsed": 0
-    },
-    {
-      "id": "department-of-finance-2020-office-of-the-superintendent-of-financial-institutions-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 258661726,
-      "used": 192132930,
-      "lapsed": 66528796
     }
   ],
   "transferPayments": [

@@ -3,7 +3,7 @@
   "slug": "national-defence",
   "financialYearEnding": 2015,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
+  "basis": "vol2_standard_object_net",
   "totalSpending": 20.218874,
   "percentageOfFederal": 7.2093,
   "historicalShare": [
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 6.4885
+      "percentage": 6.2
     },
     {
       "year": 2018,
-      "percentage": 7.2407
+      "percentage": 7.1213
     },
     {
       "year": 2019,
-      "percentage": 6.5581
+      "percentage": 6.4448
     },
     {
       "year": 2020,
-      "percentage": 6.421
+      "percentage": 6.3215
     },
     {
       "year": 2021,
-      "percentage": 4.3466
+      "percentage": 4.2875
     },
     {
       "year": 2022,
-      "percentage": 5.0214
+      "percentage": 4.9522
     },
     {
       "year": 2023,
-      "percentage": 5.8453
+      "percentage": 5.7692
     },
     {
       "year": 2024,
-      "percentage": 6.6833
+      "percentage": 6.6153
     },
     {
       "year": 2025,
-      "percentage": 6.4631
+      "percentage": 6.4001
     }
   ],
   "miniSankey": {
@@ -319,14 +319,14 @@
   },
   "entities": [
     {
-      "id": "national-defence-2015-entity-national-defence",
-      "name": "National Defence",
-      "value": 19.348087
+      "id": "national-defence-2015-entity-national-defence-department",
+      "name": "National Defence Department",
+      "value": 19.348086
     },
     {
       "id": "national-defence-2015-entity-communications-security-establishment",
       "name": "Communications Security Establishment",
-      "value": 0.857528
+      "value": 0.857529
     },
     {
       "id": "national-defence-2015-entity-military-grievances-external-review-committee",
@@ -342,104 +342,6 @@
       "id": "national-defence-2015-entity-office-of-the-communications-security-establishment-commissioner",
       "name": "Office of the Communications Security Establishment Commissioner",
       "value": 0.002044
-    }
-  ],
-  "votes": [
-    {
-      "id": "national-defence-2015-communications-security-establishment-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 831160824,
-      "used": 819762016,
-      "lapsed": 11398808
-    },
-    {
-      "id": "national-defence-2015-communications-security-establishment-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 37771414,
-      "used": 37766390,
-      "lapsed": 5024
-    },
-    {
-      "id": "national-defence-2015-military-grievances-external-review-committee-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 6482571,
-      "used": 5621968,
-      "lapsed": 860603
-    },
-    {
-      "id": "national-defence-2015-military-grievances-external-review-committee-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 627937,
-      "used": 627937,
-      "lapsed": 0
-    },
-    {
-      "id": "national-defence-2015-military-police-complaints-commission-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 7740533,
-      "used": 4619001,
-      "lapsed": 3121532
-    },
-    {
-      "id": "national-defence-2015-military-police-complaints-commission-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 346272,
-      "used": 346272,
-      "lapsed": 0
-    },
-    {
-      "id": "national-defence-2015-national-defence-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 14716942161,
-      "used": 14290584364,
-      "lapsed": 426357797
-    },
-    {
-      "id": "national-defence-2015-national-defence-vote10",
-      "vote": "Vote 10",
-      "description": "Grants and contributions",
-      "totalAvailable": 178764886,
-      "used": 134877030,
-      "lapsed": 43887856
-    },
-    {
-      "id": "national-defence-2015-national-defence-vote5",
-      "vote": "Vote 5",
-      "description": "Capital expenditures",
-      "totalAvailable": 4835557782,
-      "used": 3316468475,
-      "lapsed": 1519089307
-    },
-    {
-      "id": "national-defence-2015-national-defence-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 1621453538,
-      "used": 1606156838,
-      "lapsed": 15296700
-    },
-    {
-      "id": "national-defence-2015-office-of-the-communications-security-establishment-commissioner-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 1949021,
-      "used": 1868188,
-      "lapsed": 80833
-    },
-    {
-      "id": "national-defence-2015-office-of-the-communications-security-establishment-commissioner-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 175372,
-      "used": 175372,
-      "lapsed": 0
     }
   ],
   "transferPayments": [

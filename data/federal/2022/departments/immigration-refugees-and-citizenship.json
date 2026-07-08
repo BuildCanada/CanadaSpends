@@ -3,37 +3,37 @@
   "slug": "immigration-refugees-and-citizenship",
   "financialYearEnding": 2022,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 3.72363,
-  "percentageOfFederal": 0.7394,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 3.715525,
+  "percentageOfFederal": 0.7378,
   "historicalShare": [
     {
       "year": 2014,
-      "percentage": 0.58
+      "percentage": 0.8769
     },
     {
       "year": 2015,
-      "percentage": 0.5996
+      "percentage": 0.9916
     },
     {
       "year": 2016,
-      "percentage": 0.6233
+      "percentage": 0.9778
     },
     {
       "year": 2017,
-      "percentage": 0.6353
+      "percentage": 0.5537
     },
     {
       "year": 2018,
-      "percentage": 0.6722
+      "percentage": 0.6206
     },
     {
       "year": 2019,
-      "percentage": 0.7428
+      "percentage": 0.7401
     },
     {
       "year": 2020,
-      "percentage": 0.8754
+      "percentage": 0.873
     },
     {
       "year": 2021,
@@ -41,19 +41,19 @@
     },
     {
       "year": 2022,
-      "percentage": 0.7394
+      "percentage": 0.7378
     },
     {
       "year": 2023,
-      "percentage": 1.1391
+      "percentage": 1.1373
     },
     {
       "year": 2024,
-      "percentage": 1.2174
+      "percentage": 1.215
     },
     {
       "year": 2025,
-      "percentage": 1.256
+      "percentage": 1.2537
     }
   ],
   "miniSankey": {
@@ -69,7 +69,48 @@
             {
               "id": "immigration-refugees-and-citizenship-2022-department-of-citizenship-and-immigration-obj-10",
               "name": "Transfer payments",
-              "amount": 1.771143
+              "children": [
+                {
+                  "id": "immigration-refugees-and-citizenship-2022-tp-0003",
+                  "name": "Settlement Program",
+                  "amount": 0.832414
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-2022-tp-0006",
+                  "name": "Grant for the Canada-Quebec Accord on Immigration",
+                  "amount": 0.69703
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-2022-tp-0002",
+                  "name": "Resettlement Assistance",
+                  "amount": 0.185498
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-2022-tp-0007",
+                  "name": "Grant for the Resettlement Assistance Program",
+                  "amount": 0.029
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-2022-tp-0005",
+                  "name": "Grant for Settlement Program",
+                  "amount": 0.015817
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-2022-tp-0004",
+                  "name": "Grant for International Migration Capacity Building Program",
+                  "amount": 0.008
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-2022-tp-0001",
+                  "name": "International Organization for Migration",
+                  "amount": 0.00211
+                },
+                {
+                  "id": "immigration-refugees-and-citizenship-2022-tp-0000",
+                  "name": "Global Assistance to Irregular Migrants",
+                  "amount": 0.001274
+                }
+              ]
             },
             {
               "id": "immigration-refugees-and-citizenship-2022-department-of-citizenship-and-immigration-obj-1",
@@ -186,78 +227,12 @@
     {
       "id": "immigration-refugees-and-citizenship-2022-entity-department-of-citizenship-and-immigration",
       "name": "Department of Citizenship and Immigration",
-      "value": 3.459378
+      "value": 3.451273
     },
     {
       "id": "immigration-refugees-and-citizenship-2022-entity-immigration-and-refugee-board",
       "name": "Immigration and Refugee Board",
       "value": 0.264252
-    }
-  ],
-  "votes": [
-    {
-      "id": "immigration-refugees-and-citizenship-2022-department-of-citizenship-and-immigration-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 1641135703,
-      "used": 1297234989,
-      "lapsed": 343900714
-    },
-    {
-      "id": "immigration-refugees-and-citizenship-2022-department-of-citizenship-and-immigration-vote10",
-      "vote": "Vote 10",
-      "description": "Grants and contributions",
-      "totalAvailable": 1913205266,
-      "used": 1771143168,
-      "lapsed": 142062098
-    },
-    {
-      "id": "immigration-refugees-and-citizenship-2022-department-of-citizenship-and-immigration-vote15",
-      "vote": "Vote 15",
-      "description": "Debt forgiveness",
-      "totalAvailable": 2766,
-      "used": 2765,
-      "lapsed": 1
-    },
-    {
-      "id": "immigration-refugees-and-citizenship-2022-department-of-citizenship-and-immigration-vote20",
-      "vote": "Vote 20",
-      "description": "Debt write-off",
-      "totalAvailable": 172941,
-      "used": 171538,
-      "lapsed": 1403
-    },
-    {
-      "id": "immigration-refugees-and-citizenship-2022-department-of-citizenship-and-immigration-vote5",
-      "vote": "Vote 5",
-      "description": "Capital expenditures",
-      "totalAvailable": 42474703,
-      "used": 22662237,
-      "lapsed": 19812466
-    },
-    {
-      "id": "immigration-refugees-and-citizenship-2022-department-of-citizenship-and-immigration-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 981383668,
-      "used": 368163689,
-      "lapsed": 613219979
-    },
-    {
-      "id": "immigration-refugees-and-citizenship-2022-immigration-and-refugee-board-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 270047359,
-      "used": 238296893,
-      "lapsed": 31750466
-    },
-    {
-      "id": "immigration-refugees-and-citizenship-2022-immigration-and-refugee-board-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 25955166,
-      "used": 25955166,
-      "lapsed": 0
     }
   ],
   "transferPayments": [

@@ -3,7 +3,7 @@
   "slug": "national-defence",
   "financialYearEnding": 2016,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
+  "basis": "vol2_standard_object_net",
   "totalSpending": 20.132623,
   "percentageOfFederal": 6.8138,
   "historicalShare": [
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 6.4885
+      "percentage": 6.2
     },
     {
       "year": 2018,
-      "percentage": 7.2407
+      "percentage": 7.1213
     },
     {
       "year": 2019,
-      "percentage": 6.5581
+      "percentage": 6.4448
     },
     {
       "year": 2020,
-      "percentage": 6.421
+      "percentage": 6.3215
     },
     {
       "year": 2021,
-      "percentage": 4.3466
+      "percentage": 4.2875
     },
     {
       "year": 2022,
-      "percentage": 5.0214
+      "percentage": 4.9522
     },
     {
       "year": 2023,
-      "percentage": 5.8453
+      "percentage": 5.7692
     },
     {
       "year": 2024,
-      "percentage": 6.6833
+      "percentage": 6.6153
     },
     {
       "year": 2025,
-      "percentage": 6.4631
+      "percentage": 6.4001
     }
   ],
   "miniSankey": {
@@ -311,17 +311,27 @@
     {
       "id": "national-defence-2016-entity-national-defence",
       "name": "National Defence",
-      "value": 20.132623
-    }
-  ],
-  "votes": [
+      "value": 19.498547
+    },
     {
-      "id": "national-defence-2016-national-defence-vote",
-      "vote": "All votes",
-      "description": "Total appropriations (vote-level detail not published for this edition)",
-      "totalAvailable": 21540423929,
-      "used": 20132622809,
-      "lapsed": 1407801120
+      "id": "national-defence-2016-entity-communications-security-establishment",
+      "name": "Communications Security Establishment",
+      "value": 0.620382
+    },
+    {
+      "id": "national-defence-2016-entity-military-grievances-external-review-committee",
+      "name": "Military Grievances External Review Committee",
+      "value": 0.006252
+    },
+    {
+      "id": "national-defence-2016-entity-military-police-complaints-commission",
+      "name": "Military Police Complaints Commission",
+      "value": 0.005407
+    },
+    {
+      "id": "national-defence-2016-entity-office-of-the-communications-security-establishment-commissioner",
+      "name": "Office of the Communications Security Establishment Commissioner",
+      "value": 0.002035
     }
   ],
   "transferPayments": [

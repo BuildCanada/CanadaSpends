@@ -3,17 +3,17 @@
   "slug": "department-of-finance",
   "financialYearEnding": 2022,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 106.823685,
-  "percentageOfFederal": 21.2123,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 106.822738,
+  "percentageOfFederal": 21.2122,
   "historicalShare": [
     {
       "year": 2014,
-      "percentage": 30.9373
+      "percentage": 31.0335
     },
     {
       "year": 2015,
-      "percentage": 30.731
+      "percentage": 30.7352
     },
     {
       "year": 2016,
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 28.6373
+      "percentage": 28.6369
     },
     {
       "year": 2018,
-      "percentage": 27.4523
+      "percentage": 27.4522
     },
     {
       "year": 2019,
-      "percentage": 27.2779
+      "percentage": 27.2778
     },
     {
       "year": 2020,
-      "percentage": 26.5609
+      "percentage": 26.5605
     },
     {
       "year": 2021,
-      "percentage": 18.327
+      "percentage": 18.3268
     },
     {
       "year": 2022,
-      "percentage": 21.2123
+      "percentage": 21.2122
     },
     {
       "year": 2023,
-      "percentage": 24.3876
+      "percentage": 24.3874
     },
     {
       "year": 2024,
-      "percentage": 26.1038
+      "percentage": 26.1034
     },
     {
       "year": 2025,
-      "percentage": 26.2859
+      "percentage": 26.2858
     }
   ],
   "miniSankey": {
@@ -69,7 +69,70 @@
             {
               "id": "department-of-finance-2022-department-of-finance-obj-10",
               "name": "Transfer payments",
-              "amount": 82.869367
+              "children": [
+                {
+                  "id": "department-of-finance-2022-tp-0005",
+                  "name": "Canada Health Transfer (Part V.1—Federal-Provincial Fiscal Arrangements Act)",
+                  "amount": 39.84775
+                },
+                {
+                  "id": "department-of-finance-2022-tp-0008",
+                  "name": "Fiscal Equalization (Part I—Federal-Provincial Fiscal Arrangements Act)",
+                  "amount": 19.318127
+                },
+                {
+                  "id": "department-of-finance-2022-tp-0006",
+                  "name": "Canada Social Transfer (Part V.1—Federal-Provincial Fiscal Arrangements Act)",
+                  "amount": 14.295372
+                },
+                {
+                  "id": "department-of-finance-2022-tp-0017",
+                  "name": "Territorial Financing (Part I.1 - Federal-Provincial Fiscal Arrangements Act)",
+                  "amount": 4.046287
+                },
+                {
+                  "id": "department-of-finance-2022-tp-0013",
+                  "name": "Payments related to Canada health transfer (Section 24.72 - Federal-Provincial Fiscal Arrangements Act)",
+                  "amount": 3.695342
+                },
+                {
+                  "id": "department-of-finance-2022-tp-0015",
+                  "name": "Payments to the provinces and territories in respect of Canada's COVID-19 immunization plan (Subsection 197(2) - Budget Implementation Act, 2021, No. 1)",
+                  "amount": 0.923835
+                },
+                {
+                  "id": "department-of-finance-2022-tp-0014",
+                  "name": "Payments to International Development Association (Bretton Woods and Related Agreements Act)",
+                  "amount": 0.391004
+                },
+                {
+                  "id": "department-of-finance-2022-tp-0003",
+                  "name": "Additional Fiscal Equalization Offset Payment to Nova Scotia (Nova Scotia and Newfoundland and Labrador Additional Fiscal Equalization Offshore Payments Act)",
+                  "amount": 0.120157
+                },
+                {
+                  "id": "department-of-finance-2022-tp-0009",
+                  "name": "Hibernia Dividend Backed Annuity Agreement Payment",
+                  "amount": 0.092897
+                },
+                {
+                  "id": "department-of-finance-2022-tp-0007",
+                  "name": "Debt payments on behalf of poor countries to International Organizations pursuant to subsection 18(1) of the Economic Recovery Act",
+                  "amount": 0.049086
+                },
+                {
+                  "id": "department-of-finance-2022-tp-0011",
+                  "name": "Payment to the International Monetary Fund for the Poverty Reduction and Growth Trust (Bretton Woods and Related Agreements Act)",
+                  "amount": 0.046192
+                },
+                {
+                  "id": "department-of-finance-2022-department-of-finance-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.043318,
+                  "isAggregate": true,
+                  "count": 2
+                }
+              ]
             },
             {
               "id": "department-of-finance-2022-department-of-finance-obj-11",
@@ -354,12 +417,12 @@
     {
       "id": "department-of-finance-2022-entity-office-of-the-superintendent-of-financial-institutions",
       "name": "Office of the Superintendent of Financial Institutions",
-      "value": 0.207628
+      "value": 0.207629
     },
     {
       "id": "department-of-finance-2022-entity-office-of-the-auditor-general",
       "name": "Office of the Auditor General",
-      "value": 0.112318
+      "value": 0.111371
     },
     {
       "id": "department-of-finance-2022-entity-financial-transactions-and-reports-analysis-centre-of-canada",
@@ -370,88 +433,6 @@
       "id": "department-of-finance-2022-entity-financial-consumer-agency-of-canada",
       "name": "Financial Consumer Agency of Canada",
       "value": 0.038658
-    }
-  ],
-  "votes": [
-    {
-      "id": "department-of-finance-2022-department-of-finance-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 144980596,
-      "used": 128778407,
-      "lapsed": 16202189
-    },
-    {
-      "id": "department-of-finance-2022-department-of-finance-vote5",
-      "vote": "Vote 5",
-      "description": "Authority for amount by way of direct payments to the International Development Association pursuant to Bretton Woods and Related Agreements Act",
-      "totalAvailable": 1,
-      "used": 0,
-      "lapsed": 1
-    },
-    {
-      "id": "department-of-finance-2022-department-of-finance-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 106327864623,
-      "used": 106259273962,
-      "lapsed": 68590661
-    },
-    {
-      "id": "department-of-finance-2022-financial-consumer-agency-of-canada-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 38658337,
-      "used": 38658337,
-      "lapsed": 0
-    },
-    {
-      "id": "department-of-finance-2022-financial-transactions-and-reports-analysis-centre-of-canada-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 83548128,
-      "used": 70289694,
-      "lapsed": 13258434
-    },
-    {
-      "id": "department-of-finance-2022-financial-transactions-and-reports-analysis-centre-of-canada-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 6738581,
-      "used": 6738581,
-      "lapsed": 0
-    },
-    {
-      "id": "department-of-finance-2022-office-of-the-auditor-general-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 112260048,
-      "used": 100706537,
-      "lapsed": 11553511
-    },
-    {
-      "id": "department-of-finance-2022-office-of-the-auditor-general-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 11611991,
-      "used": 11611378,
-      "lapsed": 613
-    },
-    {
-      "id": "department-of-finance-2022-office-of-the-superintendent-of-financial-institutions-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 1244352,
-      "used": 1244352,
-      "lapsed": 0
-    },
-    {
-      "id": "department-of-finance-2022-office-of-the-superintendent-of-financial-institutions-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 276141578,
-      "used": 206384064,
-      "lapsed": 69757514
     }
   ],
   "transferPayments": [

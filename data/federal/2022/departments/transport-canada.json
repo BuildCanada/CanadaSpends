@@ -3,9 +3,9 @@
   "slug": "transport-canada",
   "financialYearEnding": 2022,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 3.764906,
-  "percentageOfFederal": 0.7476,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 3.680999,
+  "percentageOfFederal": 0.7309,
   "historicalShare": [
     {
       "year": 2014,
@@ -17,43 +17,43 @@
     },
     {
       "year": 2016,
-      "percentage": 1.5446
+      "percentage": 1.098
     },
     {
       "year": 2017,
-      "percentage": 0.8324
+      "percentage": 0.7851
     },
     {
       "year": 2018,
-      "percentage": 0.774
+      "percentage": 0.7519
     },
     {
       "year": 2019,
-      "percentage": 0.8036
+      "percentage": 0.7815
     },
     {
       "year": 2020,
-      "percentage": 0.8854
+      "percentage": 0.8636
     },
     {
       "year": 2021,
-      "percentage": 0.5428
+      "percentage": 0.5314
     },
     {
       "year": 2022,
-      "percentage": 0.7476
+      "percentage": 0.7309
     },
     {
       "year": 2023,
-      "percentage": 0.8491
+      "percentage": 0.8306
     },
     {
       "year": 2024,
-      "percentage": 0.9965
+      "percentage": 0.9777
     },
     {
       "year": 2025,
-      "percentage": 1.1005
+      "percentage": 1.0817
     }
   ],
   "miniSankey": {
@@ -69,7 +69,70 @@
             {
               "id": "transport-canada-2022-department-of-transport-obj-10",
               "name": "Transfer payments",
-              "amount": 1.081965
+              "children": [
+                {
+                  "id": "transport-canada-2022-tp-0038",
+                  "name": "Incentives for Zero-Emission Vehicles Program",
+                  "amount": 0.264723
+                },
+                {
+                  "id": "transport-canada-2022-tp-0019",
+                  "name": "National Trade Corridors Fund",
+                  "amount": 0.232956
+                },
+                {
+                  "id": "transport-canada-2022-tp-0002",
+                  "name": "Airports Capital Assistance Program",
+                  "amount": 0.107244
+                },
+                {
+                  "id": "transport-canada-2022-tp-0030",
+                  "name": "Support for Remote Communities",
+                  "amount": 0.078534
+                },
+                {
+                  "id": "transport-canada-2022-tp-0020",
+                  "name": "Northumberland Strait Crossing Subsidy Payment under the Northumberland Strait Crossing Act",
+                  "amount": 0.069306
+                },
+                {
+                  "id": "transport-canada-2022-tp-0001",
+                  "name": "Airport Relief Fund",
+                  "amount": 0.064802
+                },
+                {
+                  "id": "transport-canada-2022-tp-0014",
+                  "name": "Ferry Services Contribution Program",
+                  "amount": 0.04594
+                },
+                {
+                  "id": "transport-canada-2022-tp-0023",
+                  "name": "Port Asset Transfer Program",
+                  "amount": 0.044817
+                },
+                {
+                  "id": "transport-canada-2022-tp-0036",
+                  "name": "Grant to the Province of British Columbia in respect of the provision of ferry and coastal freight and passenger services",
+                  "amount": 0.032183
+                },
+                {
+                  "id": "transport-canada-2022-tp-0000",
+                  "name": "Airport Critical Infrastructure Program",
+                  "amount": 0.026261
+                },
+                {
+                  "id": "transport-canada-2022-tp-0028",
+                  "name": "Remote Passenger Rail Program",
+                  "amount": 0.023469
+                },
+                {
+                  "id": "transport-canada-2022-department-of-transport-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.09173,
+                  "isAggregate": true,
+                  "count": 32
+                }
+              ]
             },
             {
               "id": "transport-canada-2022-department-of-transport-obj-1",
@@ -232,7 +295,7 @@
     {
       "id": "transport-canada-2022-entity-department-of-transport",
       "name": "Department of Transport",
-      "value": 2.267114
+      "value": 2.183206
     },
     {
       "id": "transport-canada-2022-entity-canadian-air-transport-security-authority",
@@ -258,88 +321,6 @@
       "id": "transport-canada-2022-entity-the-federal-bridge-corporation-limited",
       "name": "The Federal Bridge Corporation Limited",
       "value": 0.009124
-    }
-  ],
-  "votes": [
-    {
-      "id": "transport-canada-2022-canadian-air-transport-security-authority-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the authority for operating and capital expenditures",
-      "totalAvailable": 859539905,
-      "used": 686115078,
-      "lapsed": 173424827
-    },
-    {
-      "id": "transport-canada-2022-canadian-transportation-agency-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 41320362,
-      "used": 38453775,
-      "lapsed": 2866587
-    },
-    {
-      "id": "transport-canada-2022-canadian-transportation-agency-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 4434112,
-      "used": 4434112,
-      "lapsed": 0
-    },
-    {
-      "id": "transport-canada-2022-department-of-transport-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 916052230,
-      "used": 870898211,
-      "lapsed": 45154019
-    },
-    {
-      "id": "transport-canada-2022-department-of-transport-vote10",
-      "vote": "Vote 10",
-      "description": "Grants and contributions—Efficient Transportation System",
-      "totalAvailable": 1477256876,
-      "used": 1009359062,
-      "lapsed": 467897814
-    },
-    {
-      "id": "transport-canada-2022-department-of-transport-vote5",
-      "vote": "Vote 5",
-      "description": "Capital expenditures",
-      "totalAvailable": 204388703,
-      "used": 104942113,
-      "lapsed": 99446590
-    },
-    {
-      "id": "transport-canada-2022-department-of-transport-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 297716643,
-      "used": 281914375,
-      "lapsed": 15802268
-    },
-    {
-      "id": "transport-canada-2022-marine-atlantic-inc-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the Corporation",
-      "totalAvailable": 149875667,
-      "used": 130809588,
-      "lapsed": 19066079
-    },
-    {
-      "id": "transport-canada-2022-the-federal-bridge-corporation-limited-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the Corporation",
-      "totalAvailable": 18497000,
-      "used": 9123879,
-      "lapsed": 9373121
-    },
-    {
-      "id": "transport-canada-2022-via-rail-canada-inc-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the Corporation",
-      "totalAvailable": 900018544,
-      "used": 628856038,
-      "lapsed": 271162506
     }
   ],
   "transferPayments": [

@@ -3,9 +3,9 @@
   "slug": "parliament",
   "financialYearEnding": 2017,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 0.684789,
-  "percentageOfFederal": 0.221,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 0.639951,
+  "percentageOfFederal": 0.2066,
   "historicalShare": [
     {
       "year": 2014,
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 0.221
+      "percentage": 0.2066
     },
     {
       "year": 2018,
-      "percentage": 0.2309
+      "percentage": 0.2209
     },
     {
       "year": 2019,
-      "percentage": 0.2212
+      "percentage": 0.2113
     },
     {
       "year": 2020,
-      "percentage": 0.2108
+      "percentage": 0.203
     },
     {
       "year": 2021,
-      "percentage": 0.1384
+      "percentage": 0.1345
     },
     {
       "year": 2022,
-      "percentage": 0.1565
+      "percentage": 0.151
     },
     {
       "year": 2023,
-      "percentage": 0.1784
+      "percentage": 0.1717
     },
     {
       "year": 2024,
-      "percentage": 0.1849
+      "percentage": 0.1784
     },
     {
       "year": 2025,
-      "percentage": 0.1826
+      "percentage": 0.1754
     }
   ],
   "miniSankey": {
@@ -383,19 +383,34 @@
   },
   "entities": [
     {
-      "id": "parliament-2017-entity-parliament",
-      "name": "Parliament",
-      "value": 0.684789
-    }
-  ],
-  "votes": [
+      "id": "parliament-2017-entity-house-of-commons",
+      "name": "House of Commons",
+      "value": 0.444894
+    },
     {
-      "id": "parliament-2017-parliament-vote",
-      "vote": "All votes",
-      "description": "Total appropriations (vote-level detail not published for this edition)",
-      "totalAvailable": 721377203,
-      "used": 684788662,
-      "lapsed": 36588541
+      "id": "parliament-2017-entity-senate",
+      "name": "Senate",
+      "value": 0.080679
+    },
+    {
+      "id": "parliament-2017-entity-parliamentary-protective-service",
+      "name": "Parliamentary Protective Service",
+      "value": 0.06478
+    },
+    {
+      "id": "parliament-2017-entity-library-of-parliament",
+      "name": "Library of Parliament",
+      "value": 0.042442
+    },
+    {
+      "id": "parliament-2017-entity-office-of-the-conflict-of-interest-and-ethics-commissioner",
+      "name": "Office of the Conflict of Interest and Ethics Commissioner",
+      "value": 0.006233
+    },
+    {
+      "id": "parliament-2017-entity-office-of-the-senate-ethics-officer",
+      "name": "Office of the Senate Ethics Officer",
+      "value": 0.000923
     }
   ],
   "transferPayments": [

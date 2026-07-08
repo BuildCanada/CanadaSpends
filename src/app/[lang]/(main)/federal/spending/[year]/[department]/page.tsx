@@ -259,12 +259,12 @@ export default async function FederalDepartmentPage({
         </H2>
         <P>
           <Trans>
-            Complete appropriation (vote/allotment) and transfer-payment lines,
-            in dollars. Search, sort, and download the full table.
+            Every transfer-payment (grant and contribution) program, in dollars.
+            These are the named programs behind the transfer-payments object in
+            the chart above. Search, sort, and download the full table.
           </Trans>
         </P>
         <LineItemTable
-          votes={department.votes}
           transferPayments={department.transferPayments}
           slug={department.slug}
           year={yearNum}
@@ -332,7 +332,8 @@ export default async function FederalDepartmentPage({
             <Intro>
               <Trans>
                 How {department.name} spent its budget in fiscal year{" "}
-                {summary.financialYear}, on a Volume II appropriations basis.
+                {summary.financialYear}, shown as net expenditures by standard
+                object from Public Accounts Volume II.
               </Trans>
             </Intro>
           </Section>
@@ -380,9 +381,9 @@ export default async function FederalDepartmentPage({
           <Section>
             <P className="text-sm text-foreground/60">
               <Trans>
-                {department.name} figures are on a Volume II appropriations
-                basis and will not match the Volume I consolidated headline
-                totals. See the{" "}
+                {department.name} figures are net expenditures by standard
+                object from Public Accounts Volume II, and will not match the
+                Volume I consolidated headline totals. See the{" "}
                 <InternalLink href={methodologyPath}>methodology</InternalLink>{" "}
                 for details.
               </Trans>

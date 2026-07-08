@@ -3,57 +3,57 @@
   "slug": "natural-resources",
   "financialYearEnding": 2015,
   "reportedAs": "Natural Resources",
-  "basis": "vol2_appropriations",
-  "totalSpending": 2.65055,
-  "percentageOfFederal": 0.9451,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 2.653931,
+  "percentageOfFederal": 0.9463,
   "historicalShare": [
     {
       "year": 2014,
-      "percentage": 0.9919
+      "percentage": 0.9938
     },
     {
       "year": 2015,
-      "percentage": 0.9451
+      "percentage": 0.9463
     },
     {
       "year": 2016,
-      "percentage": 0.7115
+      "percentage": 0.7138
     },
     {
       "year": 2017,
-      "percentage": 0.7784
+      "percentage": 0.7631
     },
     {
       "year": 2018,
-      "percentage": 0.8064
+      "percentage": 0.8002
     },
     {
       "year": 2019,
-      "percentage": 0.7244
+      "percentage": 0.7191
     },
     {
       "year": 2020,
-      "percentage": 0.9611
+      "percentage": 0.9555
     },
     {
       "year": 2021,
-      "percentage": 0.4033
+      "percentage": 0.4008
     },
     {
       "year": 2022,
-      "percentage": 0.6752
+      "percentage": 0.6718
     },
     {
       "year": 2023,
-      "percentage": 0.8086
+      "percentage": 0.8049
     },
     {
       "year": 2024,
-      "percentage": 0.9804
+      "percentage": 0.9772
     },
     {
       "year": 2025,
-      "percentage": 1.1333
+      "percentage": 1.1305
     }
   ],
   "miniSankey": {
@@ -69,7 +69,70 @@
             {
               "id": "natural-resources-2015-natural-resources-department-obj-10",
               "name": "Transfer payments",
-              "amount": 1.190387
+              "children": [
+                {
+                  "id": "natural-resources-2015-tp-0027",
+                  "name": "Payments to the Newfoundland Offshore Petroleum Resource Revenue Fund",
+                  "amount": 0.750226
+                },
+                {
+                  "id": "natural-resources-2015-tp-0014",
+                  "name": "Contributions in support of ecoENERGY for Renewable Power",
+                  "amount": 0.127775
+                },
+                {
+                  "id": "natural-resources-2015-tp-0013",
+                  "name": "Contributions in support of ecoENERGY for Biofuels",
+                  "amount": 0.093729
+                },
+                {
+                  "id": "natural-resources-2015-tp-0028",
+                  "name": "Payments to the Nova Scotia Offshore Revenue Account",
+                  "amount": 0.071995
+                },
+                {
+                  "id": "natural-resources-2015-tp-0012",
+                  "name": "Contributions in support of ecoENERGY Innovation Initiative",
+                  "amount": 0.03976
+                },
+                {
+                  "id": "natural-resources-2015-tp-0016",
+                  "name": "Contributions in support of the Forest Innovation Program",
+                  "amount": 0.02283
+                },
+                {
+                  "id": "natural-resources-2015-tp-0030",
+                  "name": "Wind Power Production Incentive Contribution Program",
+                  "amount": 0.022063
+                },
+                {
+                  "id": "natural-resources-2015-tp-0003",
+                  "name": "Contribution Program for expanding market opportunities",
+                  "amount": 0.011688
+                },
+                {
+                  "id": "natural-resources-2015-tp-0001",
+                  "name": "Clean Energy Fund Program",
+                  "amount": 0.006578
+                },
+                {
+                  "id": "natural-resources-2015-tp-0004",
+                  "name": "Contribution in support of the Investments in forest industry transformation program",
+                  "amount": 0.005986
+                },
+                {
+                  "id": "natural-resources-2015-tp-0007",
+                  "name": "Contribution to the Canada/Newfoundland Offshore Petroleum Board",
+                  "amount": 0.005373
+                },
+                {
+                  "id": "natural-resources-2015-natural-resources-department-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.032384,
+                  "isAggregate": true,
+                  "count": 20
+                }
+              ]
             },
             {
               "id": "natural-resources-2015-natural-resources-department-obj-1",
@@ -294,9 +357,9 @@
   },
   "entities": [
     {
-      "id": "natural-resources-2015-entity-natural-resources",
-      "name": "Natural Resources",
-      "value": 2.09783
+      "id": "natural-resources-2015-entity-natural-resources-department",
+      "name": "Natural Resources Department",
+      "value": 2.101211
     },
     {
       "id": "natural-resources-2015-entity-atomic-energy-of-canada-limited",
@@ -317,104 +380,6 @@
       "id": "natural-resources-2015-entity-northern-pipeline-agency",
       "name": "Northern Pipeline Agency",
       "value": 0.000516
-    }
-  ],
-  "votes": [
-    {
-      "id": "natural-resources-2015-atomic-energy-of-canada-limited-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to Atomic Energy of Canada Limited for operating and capital expenditures",
-      "totalAvailable": 332428000,
-      "used": 325643000,
-      "lapsed": 6785000
-    },
-    {
-      "id": "natural-resources-2015-atomic-energy-of-canada-limited-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 1100000,
-      "used": 1100000,
-      "lapsed": 0
-    },
-    {
-      "id": "natural-resources-2015-canadian-nuclear-safety-commission-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 42749352,
-      "used": 40051490,
-      "lapsed": 2697862
-    },
-    {
-      "id": "natural-resources-2015-canadian-nuclear-safety-commission-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 100643773,
-      "used": 98088079,
-      "lapsed": 2555694
-    },
-    {
-      "id": "natural-resources-2015-national-energy-board-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 83789029,
-      "used": 78629189,
-      "lapsed": 5159840
-    },
-    {
-      "id": "natural-resources-2015-national-energy-board-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 8693819,
-      "used": 8691894,
-      "lapsed": 1925
-    },
-    {
-      "id": "natural-resources-2015-natural-resources-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 979421137,
-      "used": 833154173,
-      "lapsed": 146266964
-    },
-    {
-      "id": "natural-resources-2015-natural-resources-vote10",
-      "vote": "Vote 10",
-      "description": "Grants and contributions",
-      "totalAvailable": 450039000,
-      "used": 352641128,
-      "lapsed": 97397872
-    },
-    {
-      "id": "natural-resources-2015-natural-resources-vote5",
-      "vote": "Vote 5",
-      "description": "Capital expenditures",
-      "totalAvailable": 18280075,
-      "used": 18127756,
-      "lapsed": 152319
-    },
-    {
-      "id": "natural-resources-2015-natural-resources-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 900816419,
-      "used": 893906482,
-      "lapsed": 6909937
-    },
-    {
-      "id": "natural-resources-2015-northern-pipeline-agency-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 701325,
-      "used": 478845,
-      "lapsed": 222480
-    },
-    {
-      "id": "natural-resources-2015-northern-pipeline-agency-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 37465,
-      "used": 37465,
-      "lapsed": 0
     }
   ],
   "transferPayments": [

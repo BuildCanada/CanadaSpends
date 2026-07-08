@@ -3,17 +3,17 @@
   "slug": "global-affairs-canada",
   "financialYearEnding": 2022,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 9.573891,
-  "percentageOfFederal": 1.9011,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 9.52791,
+  "percentageOfFederal": 1.892,
   "historicalShare": [
     {
       "year": 2014,
-      "percentage": 2.2651
+      "percentage": 2.3161
     },
     {
       "year": 2015,
-      "percentage": 2.2251
+      "percentage": 2.2474
     },
     {
       "year": 2016,
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 2.0955
+      "percentage": 2.074
     },
     {
       "year": 2018,
-      "percentage": 2.0629
+      "percentage": 2.0519
     },
     {
       "year": 2019,
-      "percentage": 2.0981
+      "percentage": 2.0872
     },
     {
       "year": 2020,
-      "percentage": 1.9817
+      "percentage": 1.9713
     },
     {
       "year": 2021,
-      "percentage": 1.5249
+      "percentage": 1.5181
     },
     {
       "year": 2022,
-      "percentage": 1.9011
+      "percentage": 1.892
     },
     {
       "year": 2023,
-      "percentage": 2.3027
+      "percentage": 2.2922
     },
     {
       "year": 2024,
-      "percentage": 3.6934
+      "percentage": 3.6828
     },
     {
       "year": 2025,
-      "percentage": 1.8109
+      "percentage": 1.7999
     }
   ],
   "miniSankey": {
@@ -69,7 +69,70 @@
             {
               "id": "global-affairs-canada-2022-department-of-foreign-affairs-trade-and-development-obj-10",
               "name": "Transfer payments",
-              "amount": 5.848864
+              "children": [
+                {
+                  "id": "global-affairs-canada-2022-tp-0068",
+                  "name": "Grants from the International Development Assistance for Multilateral Programming",
+                  "amount": 3.069395
+                },
+                {
+                  "id": "global-affairs-canada-2022-tp-0013",
+                  "name": "Contributions from the International Development Assistance for Multilateral Programming",
+                  "amount": 0.675883
+                },
+                {
+                  "id": "global-affairs-canada-2022-tp-0012",
+                  "name": "Contributions from the International Development Assistance for Bilateral Programming to support regional or country specific",
+                  "amount": 0.649134
+                },
+                {
+                  "id": "global-affairs-canada-2022-tp-0078",
+                  "name": "Payments to International Financial Institutions—Direct payments (International Development (Financial Institutions) Assistance Act)",
+                  "amount": 0.257018
+                },
+                {
+                  "id": "global-affairs-canada-2022-tp-0014",
+                  "name": "Contributions from the International Development Assistance for Partnerships with Canadians Programming",
+                  "amount": 0.215454
+                },
+                {
+                  "id": "global-affairs-canada-2022-tp-0057",
+                  "name": "United Nations peacekeeping operations (US$186,591,513)",
+                  "amount": 0.204038
+                },
+                {
+                  "id": "global-affairs-canada-2022-tp-0055",
+                  "name": "United Nations Organization (US$84,754,000)",
+                  "amount": 0.096505
+                },
+                {
+                  "id": "global-affairs-canada-2022-tp-0073",
+                  "name": "Grants in support of the Peace and Stabilization Operations Program",
+                  "amount": 0.082336
+                },
+                {
+                  "id": "global-affairs-canada-2022-tp-0017",
+                  "name": "Contributions in support of the Peace and Stabilization Operations Program",
+                  "amount": 0.065307
+                },
+                {
+                  "id": "global-affairs-canada-2022-tp-0069",
+                  "name": "Grants from the International Development Assistance for Partnerships with Canadians Programming",
+                  "amount": 0.063153
+                },
+                {
+                  "id": "global-affairs-canada-2022-tp-0018",
+                  "name": "Contributions under the Weapons Threat Reduction Program",
+                  "amount": 0.060272
+                },
+                {
+                  "id": "global-affairs-canada-2022-department-of-foreign-affairs-trade-and-development-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.410369,
+                  "isAggregate": true,
+                  "count": 67
+                }
+              ]
             },
             {
               "id": "global-affairs-canada-2022-department-of-foreign-affairs-trade-and-development-obj-1",
@@ -266,11 +329,11 @@
     {
       "id": "global-affairs-canada-2022-entity-department-of-foreign-affairs-trade-and-development",
       "name": "Department of Foreign Affairs, Trade and Development",
-      "value": 8.120191
+      "value": 8.074211
     },
     {
       "id": "global-affairs-canada-2022-entity-export-development-canada-canada-account",
-      "name": "Export Development Canada (Canada Account)",
+      "name": "Export Development Canada (Canada account)",
       "value": 1.255643
     },
     {
@@ -286,97 +349,7 @@
     {
       "id": "global-affairs-canada-2022-entity-international-joint-commission-canadian-section",
       "name": "International Joint Commission (Canadian Section)",
-      "value": 0.008319
-    }
-  ],
-  "votes": [
-    {
-      "id": "global-affairs-canada-2022-department-of-foreign-affairs-trade-and-development-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 2105639288,
-      "used": 1913836760,
-      "lapsed": 191802528
-    },
-    {
-      "id": "global-affairs-canada-2022-department-of-foreign-affairs-trade-and-development-vote10",
-      "vote": "Vote 10",
-      "description": "Grants and contributions",
-      "totalAvailable": 5796044808,
-      "used": 5590387304,
-      "lapsed": 205657504
-    },
-    {
-      "id": "global-affairs-canada-2022-department-of-foreign-affairs-trade-and-development-vote15",
-      "vote": "Vote 15",
-      "description": "Payments, in respect of pension, insurance and social security programs or other arrangements for employees locally engaged outside of Canada, or in respect of the administration of such programs or arrangements",
-      "totalAvailable": 85473000,
-      "used": 80197216,
-      "lapsed": 5275784
-    },
-    {
-      "id": "global-affairs-canada-2022-department-of-foreign-affairs-trade-and-development-vote20",
-      "vote": "Vote 20",
-      "description": "Pursuant to subsection 12(2) of the International Development (Financial Institutions) Assistance Act, payments to international financial institutions—Direct payments",
-      "totalAvailable": 1,
-      "used": 0,
-      "lapsed": 1
-    },
-    {
-      "id": "global-affairs-canada-2022-department-of-foreign-affairs-trade-and-development-vote5",
-      "vote": "Vote 5",
-      "description": "Capital expenditures",
-      "totalAvailable": 149848593,
-      "used": 113303487,
-      "lapsed": 36545106
-    },
-    {
-      "id": "global-affairs-canada-2022-department-of-foreign-affairs-trade-and-development-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 446361612,
-      "used": 422466344,
-      "lapsed": 23895268
-    },
-    {
-      "id": "global-affairs-canada-2022-export-development-canada-canada-account-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 1255643281,
-      "used": 1255643281,
-      "lapsed": 0
-    },
-    {
-      "id": "global-affairs-canada-2022-international-development-research-centre-vote1",
-      "vote": "Vote 1",
-      "description": "Payments to the Centre",
-      "totalAvailable": 155251325,
-      "used": 155251325,
-      "lapsed": 0
-    },
-    {
-      "id": "global-affairs-canada-2022-international-joint-commission-canadian-section-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 12188333,
-      "used": 7723488,
-      "lapsed": 4464845
-    },
-    {
-      "id": "global-affairs-canada-2022-international-joint-commission-canadian-section-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 595110,
-      "used": 595110,
-      "lapsed": 0
-    },
-    {
-      "id": "global-affairs-canada-2022-invest-in-canada-hub-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 35986134,
-      "used": 34487041,
-      "lapsed": 1499093
+      "value": 0.008318
     }
   ],
   "transferPayments": [

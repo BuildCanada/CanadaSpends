@@ -3,57 +3,57 @@
   "slug": "natural-resources",
   "financialYearEnding": 2016,
   "reportedAs": "Natural Resources",
-  "basis": "vol2_appropriations",
-  "totalSpending": 2.102173,
-  "percentageOfFederal": 0.7115,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 2.108949,
+  "percentageOfFederal": 0.7138,
   "historicalShare": [
     {
       "year": 2014,
-      "percentage": 0.9919
+      "percentage": 0.9938
     },
     {
       "year": 2015,
-      "percentage": 0.9451
+      "percentage": 0.9463
     },
     {
       "year": 2016,
-      "percentage": 0.7115
+      "percentage": 0.7138
     },
     {
       "year": 2017,
-      "percentage": 0.7784
+      "percentage": 0.7631
     },
     {
       "year": 2018,
-      "percentage": 0.8064
+      "percentage": 0.8002
     },
     {
       "year": 2019,
-      "percentage": 0.7244
+      "percentage": 0.7191
     },
     {
       "year": 2020,
-      "percentage": 0.9611
+      "percentage": 0.9555
     },
     {
       "year": 2021,
-      "percentage": 0.4033
+      "percentage": 0.4008
     },
     {
       "year": 2022,
-      "percentage": 0.6752
+      "percentage": 0.6718
     },
     {
       "year": 2023,
-      "percentage": 0.8086
+      "percentage": 0.8049
     },
     {
       "year": 2024,
-      "percentage": 0.9804
+      "percentage": 0.9772
     },
     {
       "year": 2025,
-      "percentage": 1.1333
+      "percentage": 1.1305
     }
   ],
   "miniSankey": {
@@ -69,7 +69,70 @@
             {
               "id": "natural-resources-2016-natural-resources-obj-10",
               "name": "Transfer payments",
-              "amount": 0.601654
+              "children": [
+                {
+                  "id": "natural-resources-2016-tp-0025",
+                  "name": "Payments to the Newfoundland Offshore Petroleum Resource Revenue Fund",
+                  "amount": 0.298915
+                },
+                {
+                  "id": "natural-resources-2016-tp-0011",
+                  "name": "Contributions in support of ecoENERGY for Renewable Power",
+                  "amount": 0.124469
+                },
+                {
+                  "id": "natural-resources-2016-tp-0026",
+                  "name": "Payments to the Nova Scotia Offshore Revenue Account",
+                  "amount": 0.027899
+                },
+                {
+                  "id": "natural-resources-2016-tp-0013",
+                  "name": "Contributions in support of the Forest innovation program",
+                  "amount": 0.021428
+                },
+                {
+                  "id": "natural-resources-2016-tp-0002",
+                  "name": "Contribution in support of Investments in the forest industry transformation program",
+                  "amount": 0.02079
+                },
+                {
+                  "id": "natural-resources-2016-tp-0009",
+                  "name": "Contributions in support of ecoENERGY Innovation Initiative",
+                  "amount": 0.02059
+                },
+                {
+                  "id": "natural-resources-2016-tp-0028",
+                  "name": "Wind power production incentive contribution program",
+                  "amount": 0.016105
+                },
+                {
+                  "id": "natural-resources-2016-tp-0010",
+                  "name": "Contributions in support of ecoENERGY for Biofuels",
+                  "amount": 0.01479
+                },
+                {
+                  "id": "natural-resources-2016-tp-0024",
+                  "name": "Payments of the Crown Share Adjustment for Nova Scotia Offshore Petroleum Resources",
+                  "amount": 0.012228
+                },
+                {
+                  "id": "natural-resources-2016-tp-0001",
+                  "name": "Contribution Program for expanding market opportunities",
+                  "amount": 0.011421
+                },
+                {
+                  "id": "natural-resources-2016-tp-0005",
+                  "name": "Contribution to the Canada Foundation for Sustainable Development Technology for the Sustainable Development Technology Fund",
+                  "amount": 0.005954
+                },
+                {
+                  "id": "natural-resources-2016-natural-resources-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.027065,
+                  "isAggregate": true,
+                  "count": 20
+                }
+              ]
             },
             {
               "id": "natural-resources-2016-natural-resources-obj-1",
@@ -296,17 +359,27 @@
     {
       "id": "natural-resources-2016-entity-natural-resources",
       "name": "Natural Resources",
-      "value": 2.102173
-    }
-  ],
-  "votes": [
+      "value": 1.396853
+    },
     {
-      "id": "natural-resources-2016-natural-resources-vote",
-      "vote": "All votes",
-      "description": "Total appropriations (vote-level detail not published for this edition)",
-      "totalAvailable": 2577247918,
-      "used": 2102172502,
-      "lapsed": 475075416
+      "id": "natural-resources-2016-entity-atomic-energy-of-canada-limited",
+      "name": "Atomic Energy of Canada Limited",
+      "value": 0.491064
+    },
+    {
+      "id": "natural-resources-2016-entity-canadian-nuclear-safety-commission",
+      "name": "Canadian Nuclear Safety Commission",
+      "value": 0.137969
+    },
+    {
+      "id": "natural-resources-2016-entity-national-energy-board",
+      "name": "National Energy Board",
+      "value": 0.082607
+    },
+    {
+      "id": "natural-resources-2016-entity-northern-pipeline-agency",
+      "name": "Northern Pipeline Agency",
+      "value": 0.000456
     }
   ],
   "transferPayments": [

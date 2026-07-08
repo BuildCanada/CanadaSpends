@@ -3,57 +3,57 @@
   "slug": "public-safety-canada",
   "financialYearEnding": 2025,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 17.013534,
-  "percentageOfFederal": 3.1086,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 14.640549,
+  "percentageOfFederal": 2.6751,
   "historicalShare": [
     {
       "year": 2014,
-      "percentage": 4.6829
+      "percentage": 4.7449
     },
     {
       "year": 2015,
-      "percentage": 4.394
+      "percentage": 4.5091
     },
     {
       "year": 2016,
-      "percentage": 4.0146
+      "percentage": 4.0783
     },
     {
       "year": 2017,
-      "percentage": 4.187
+      "percentage": 2.8818
     },
     {
       "year": 2018,
-      "percentage": 3.4485
+      "percentage": 2.7915
     },
     {
       "year": 2019,
-      "percentage": 3.3538
+      "percentage": 2.8641
     },
     {
       "year": 2020,
-      "percentage": 3.4247
+      "percentage": 2.9586
     },
     {
       "year": 2021,
-      "percentage": 1.8967
+      "percentage": 1.6235
     },
     {
       "year": 2022,
-      "percentage": 2.8473
+      "percentage": 2.4828
     },
     {
       "year": 2023,
-      "percentage": 3.6319
+      "percentage": 3.2068
     },
     {
       "year": 2024,
-      "percentage": 3.0852
+      "percentage": 2.668
     },
     {
       "year": 2025,
-      "percentage": 3.1086
+      "percentage": 2.6751
     }
   ],
   "miniSankey": {
@@ -266,7 +266,70 @@
             {
               "id": "public-safety-canada-2025-department-of-public-safety-and-emergency-preparedness-obj-10",
               "name": "Transfer payments",
-              "amount": 1.046878
+              "children": [
+                {
+                  "id": "public-safety-canada-2025-tp-0014",
+                  "name": "Contributions to the provinces for assistance related to natural disasters",
+                  "amount": 0.33393
+                },
+                {
+                  "id": "public-safety-canada-2025-tp-0024",
+                  "name": "Payments to the provinces, territories, municipalities, Indian band councils and recognized authorities representing Indians on reserve, Indian communities on Crown land and Inuit communities, for the First Nations and Inuit Policing Program",
+                  "amount": 0.25344
+                },
+                {
+                  "id": "public-safety-canada-2025-tp-0003",
+                  "name": "Building Safer Communities Fund",
+                  "amount": 0.076093
+                },
+                {
+                  "id": "public-safety-canada-2025-tp-0017",
+                  "name": "Gun and Gang Violence Action Fund",
+                  "amount": 0.076026
+                },
+                {
+                  "id": "public-safety-canada-2025-tp-0011",
+                  "name": "Contributions in support of the Safer Communities Initiative",
+                  "amount": 0.046407
+                },
+                {
+                  "id": "public-safety-canada-2025-tp-0038",
+                  "name": "Memorial Grant Program for First Responders",
+                  "amount": 0.039559
+                },
+                {
+                  "id": "public-safety-canada-2025-tp-0026",
+                  "name": "Supporting a humanitarian workforce to respond to COVID-19 and other large-scale emergencies",
+                  "amount": 0.030816
+                },
+                {
+                  "id": "public-safety-canada-2025-tp-0008",
+                  "name": "Contribution Program to Combat Serious and Organized Crime",
+                  "amount": 0.028651
+                },
+                {
+                  "id": "public-safety-canada-2025-tp-0010",
+                  "name": "Contributions for supporting the Canadian Red Cross's urgent relief efforts related to COVID-19, floods and wildfires",
+                  "amount": 0.025903
+                },
+                {
+                  "id": "public-safety-canada-2025-tp-0005",
+                  "name": "Community Resilience Fund",
+                  "amount": 0.017114
+                },
+                {
+                  "id": "public-safety-canada-2025-tp-0013",
+                  "name": "Contributions to the provinces and territories and to aboriginal and/or other communities and organizations (not for profit)",
+                  "amount": 0.016423
+                },
+                {
+                  "id": "public-safety-canada-2025-department-of-public-safety-and-emergency-preparedness-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.102516,
+                  "isAggregate": true,
+                  "count": 27
+                }
+              ]
             },
             {
               "id": "public-safety-canada-2025-department-of-public-safety-and-emergency-preparedness-obj-1",
@@ -603,22 +666,22 @@
     {
       "id": "public-safety-canada-2025-entity-royal-canadian-mounted-police",
       "name": "Royal Canadian Mounted Police",
-      "value": 8.071356
+      "value": 5.744372
     },
     {
       "id": "public-safety-canada-2025-entity-correctional-service-of-canada",
       "name": "Correctional Service of Canada",
-      "value": 3.605948
+      "value": 3.600517
     },
     {
       "id": "public-safety-canada-2025-entity-canada-border-services-agency",
       "name": "Canada Border Services Agency",
-      "value": 3.046633
+      "value": 3.008933
     },
     {
       "id": "public-safety-canada-2025-entity-department-of-public-safety-and-emergency-preparedness",
       "name": "Department of Public Safety and Emergency Preparedness",
-      "value": 1.343571
+      "value": 1.340818
     },
     {
       "id": "public-safety-canada-2025-entity-canadian-security-intelligence-service",
@@ -628,7 +691,7 @@
     {
       "id": "public-safety-canada-2025-entity-parole-board-of-canada",
       "name": "Parole Board of Canada",
-      "value": 0.077048
+      "value": 0.07693
     },
     {
       "id": "public-safety-canada-2025-entity-office-of-the-commissioner-of-official-languages",
@@ -648,225 +711,7 @@
     {
       "id": "public-safety-canada-2025-entity-royal-canadian-mounted-police-external-review-committee",
       "name": "Royal Canadian Mounted Police External Review Committee",
-      "value": 0.006688
-    }
-  ],
-  "votes": [
-    {
-      "id": "public-safety-canada-2025-canada-border-services-agency-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 2715141869,
-      "used": 2604014251,
-      "lapsed": 111127618
-    },
-    {
-      "id": "public-safety-canada-2025-canada-border-services-agency-vote5",
-      "vote": "Vote 5",
-      "description": "Capital expenditures",
-      "totalAvailable": 267592360,
-      "used": 133280831,
-      "lapsed": 134311529
-    },
-    {
-      "id": "public-safety-canada-2025-canada-border-services-agency-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 309646752,
-      "used": 309338076,
-      "lapsed": 308676
-    },
-    {
-      "id": "public-safety-canada-2025-canadian-security-intelligence-service-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 765167746,
-      "used": 748322493,
-      "lapsed": 16845253
-    },
-    {
-      "id": "public-safety-canada-2025-canadian-security-intelligence-service-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 66154762,
-      "used": 64694921,
-      "lapsed": 1459841
-    },
-    {
-      "id": "public-safety-canada-2025-civilian-review-and-complaints-commission-for-the-royal-canadian-mounted-police-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 16108635,
-      "used": 14481036,
-      "lapsed": 1627599
-    },
-    {
-      "id": "public-safety-canada-2025-civilian-review-and-complaints-commission-for-the-royal-canadian-mounted-police-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 1725014,
-      "used": 1725014,
-      "lapsed": 0
-    },
-    {
-      "id": "public-safety-canada-2025-correctional-service-of-canada-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures, grants and contributions",
-      "totalAvailable": 3318900588,
-      "used": 3089977439,
-      "lapsed": 228923149
-    },
-    {
-      "id": "public-safety-canada-2025-correctional-service-of-canada-vote10",
-      "vote": "Vote 10",
-      "description": "CORCAN Revolving Fund",
-      "totalAvailable": 1,
-      "used": 0,
-      "lapsed": 1
-    },
-    {
-      "id": "public-safety-canada-2025-correctional-service-of-canada-vote5",
-      "vote": "Vote 5",
-      "description": "Capital expenditures",
-      "totalAvailable": 289463629,
-      "used": 246251581,
-      "lapsed": 43212048
-    },
-    {
-      "id": "public-safety-canada-2025-correctional-service-of-canada-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 293202602,
-      "used": 269718706,
-      "lapsed": 23483896
-    },
-    {
-      "id": "public-safety-canada-2025-department-of-public-safety-and-emergency-preparedness-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 306390599,
-      "used": 269006198,
-      "lapsed": 37384401
-    },
-    {
-      "id": "public-safety-canada-2025-department-of-public-safety-and-emergency-preparedness-vote5",
-      "vote": "Vote 5",
-      "description": "Grants and contributions",
-      "totalAvailable": 2123386653,
-      "used": 1046877971,
-      "lapsed": 1076508682
-    },
-    {
-      "id": "public-safety-canada-2025-department-of-public-safety-and-emergency-preparedness-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 27716068,
-      "used": 27686447,
-      "lapsed": 29621
-    },
-    {
-      "id": "public-safety-canada-2025-office-of-the-commissioner-of-official-languages-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 25845565,
-      "used": 23261603,
-      "lapsed": 2583962
-    },
-    {
-      "id": "public-safety-canada-2025-office-of-the-commissioner-of-official-languages-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 2886492,
-      "used": 2886492,
-      "lapsed": 0
-    },
-    {
-      "id": "public-safety-canada-2025-office-of-the-correctional-investigator-of-canada-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 6982085,
-      "used": 6198360,
-      "lapsed": 783725
-    },
-    {
-      "id": "public-safety-canada-2025-office-of-the-correctional-investigator-of-canada-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 721129,
-      "used": 721129,
-      "lapsed": 0
-    },
-    {
-      "id": "public-safety-canada-2025-parole-board-of-canada-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 71169066,
-      "used": 68615384,
-      "lapsed": 2553682
-    },
-    {
-      "id": "public-safety-canada-2025-parole-board-of-canada-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 8465383,
-      "used": 8432461,
-      "lapsed": 32922
-    },
-    {
-      "id": "public-safety-canada-2025-royal-canadian-mounted-police-external-review-committee-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 6577507,
-      "used": 6008592,
-      "lapsed": 568915
-    },
-    {
-      "id": "public-safety-canada-2025-royal-canadian-mounted-police-external-review-committee-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 679907,
-      "used": 679907,
-      "lapsed": 0
-    },
-    {
-      "id": "public-safety-canada-2025-royal-canadian-mounted-police-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 6153276539,
-      "used": 6096170826,
-      "lapsed": 57105713
-    },
-    {
-      "id": "public-safety-canada-2025-royal-canadian-mounted-police-vote10",
-      "vote": "Vote 10",
-      "description": "Grants and contributions",
-      "totalAvailable": 62279149,
-      "used": 20622124,
-      "lapsed": 41657025
-    },
-    {
-      "id": "public-safety-canada-2025-royal-canadian-mounted-police-vote15",
-      "vote": "Vote 15",
-      "description": "Payments in respect of disability and health benefits for members of the Royal Canadian Mounted Police",
-      "totalAvailable": 959292565,
-      "used": 947245331,
-      "lapsed": 12047234
-    },
-    {
-      "id": "public-safety-canada-2025-royal-canadian-mounted-police-vote5",
-      "vote": "Vote 5",
-      "description": "Capital expenditures",
-      "totalAvailable": 484667560,
-      "used": 358463364,
-      "lapsed": 126204196
-    },
-    {
-      "id": "public-safety-canada-2025-royal-canadian-mounted-police-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 650266160,
-      "used": 648853855,
-      "lapsed": 1412305
+      "value": 0.006689
     }
   ],
   "transferPayments": [

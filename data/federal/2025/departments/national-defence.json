@@ -3,9 +3,9 @@
   "slug": "national-defence",
   "financialYearEnding": 2025,
   "reportedAs": null,
-  "basis": "vol2_appropriations",
-  "totalSpending": 35.37224,
-  "percentageOfFederal": 6.4631,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 35.027507,
+  "percentageOfFederal": 6.4001,
   "historicalShare": [
     {
       "year": 2014,
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 6.4885
+      "percentage": 6.2
     },
     {
       "year": 2018,
-      "percentage": 7.2407
+      "percentage": 7.1213
     },
     {
       "year": 2019,
-      "percentage": 6.5581
+      "percentage": 6.4448
     },
     {
       "year": 2020,
-      "percentage": 6.421
+      "percentage": 6.3215
     },
     {
       "year": 2021,
-      "percentage": 4.3466
+      "percentage": 4.2875
     },
     {
       "year": 2022,
-      "percentage": 5.0214
+      "percentage": 4.9522
     },
     {
       "year": 2023,
-      "percentage": 5.8453
+      "percentage": 5.7692
     },
     {
       "year": 2024,
-      "percentage": 6.6833
+      "percentage": 6.6153
     },
     {
       "year": 2025,
-      "percentage": 6.4631
+      "percentage": 6.4001
     }
   ],
   "miniSankey": {
@@ -89,7 +89,70 @@
             {
               "id": "national-defence-2025-department-of-national-defence-obj-10",
               "name": "Transfer payments",
-              "amount": 1.592695
+              "children": [
+                {
+                  "id": "national-defence-2025-tp-0004",
+                  "name": "Contributions in Support of the Military Training and Cooperation Program",
+                  "amount": 1.160532
+                },
+                {
+                  "id": "national-defence-2025-tp-0011",
+                  "name": "North Atlantic Treaty Organization Contribution Program: NATO Military Budget (NATO Programs)",
+                  "amount": 0.232264
+                },
+                {
+                  "id": "national-defence-2025-tp-0013",
+                  "name": "North Atlantic Treaty Organization Contribution Program: NATO Security Investment Program (NATO Programs)",
+                  "amount": 0.092949
+                },
+                {
+                  "id": "national-defence-2025-tp-0005",
+                  "name": "Contributions in support of the Capital Assistance Program",
+                  "amount": 0.041914
+                },
+                {
+                  "id": "national-defence-2025-tp-0007",
+                  "name": "Contributions in support of the Innovation for Defence Excellence and Security Program",
+                  "amount": 0.031378
+                },
+                {
+                  "id": "national-defence-2025-tp-0008",
+                  "name": "Contributions in support of the Remediation of the North Bay Jack Garland Airport Site",
+                  "amount": 0.006659
+                },
+                {
+                  "id": "national-defence-2025-tp-0002",
+                  "name": "Contributions for Funding of Temporary Water Treatment Units for the City of Saguenay Program",
+                  "amount": 0.00496
+                },
+                {
+                  "id": "national-defence-2025-tp-0012",
+                  "name": "North Atlantic Treaty Organization Contribution Program: NATO Other Activities",
+                  "amount": 0.004804
+                },
+                {
+                  "id": "national-defence-2025-tp-0001",
+                  "name": "Contribution to the Civil Air Search and Rescue Association",
+                  "amount": 0.004
+                },
+                {
+                  "id": "national-defence-2025-tp-0022",
+                  "name": "Mobilizing Insights in Defence and Security Grant program",
+                  "amount": 0.002891
+                },
+                {
+                  "id": "national-defence-2025-tp-0010",
+                  "name": "Mobilizing Insights in Defence and Security Contribution Program",
+                  "amount": 0.00225
+                },
+                {
+                  "id": "national-defence-2025-department-of-national-defence-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.008094,
+                  "isAggregate": true,
+                  "count": 12
+                }
+              ]
             },
             {
               "id": "national-defence-2025-department-of-national-defence-obj-7",
@@ -265,12 +328,12 @@
     {
       "id": "national-defence-2025-entity-department-of-national-defence",
       "name": "Department of National Defence",
-      "value": 34.249255
+      "value": 33.924795
     },
     {
       "id": "national-defence-2025-entity-communications-security-establishment",
       "name": "Communications Security Establishment",
-      "value": 1.108806
+      "value": 1.088532
     },
     {
       "id": "national-defence-2025-entity-military-grievances-external-review-committee",
@@ -281,96 +344,6 @@
       "id": "national-defence-2025-entity-military-police-complaints-commission",
       "name": "Military Police Complaints Commission",
       "value": 0.005777
-    }
-  ],
-  "votes": [
-    {
-      "id": "national-defence-2025-communications-security-establishment-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 1084185514,
-      "used": 1040968957,
-      "lapsed": 43216557
-    },
-    {
-      "id": "national-defence-2025-communications-security-establishment-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 67846271,
-      "used": 67836552,
-      "lapsed": 9719
-    },
-    {
-      "id": "national-defence-2025-department-of-national-defence-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 22116109131,
-      "used": 21592211795,
-      "lapsed": 523897336
-    },
-    {
-      "id": "national-defence-2025-department-of-national-defence-vote10",
-      "vote": "Vote 10",
-      "description": "Grants and contributions",
-      "totalAvailable": 1654233092,
-      "used": 1592299391,
-      "lapsed": 61933701
-    },
-    {
-      "id": "national-defence-2025-department-of-national-defence-vote15",
-      "vote": "Vote 15",
-      "description": "Payments in respect of the long-term disability and life insurance plan for members of the Canadian Forces",
-      "totalAvailable": 446727532,
-      "used": 446727531,
-      "lapsed": 1
-    },
-    {
-      "id": "national-defence-2025-department-of-national-defence-vote5",
-      "vote": "Vote 5",
-      "description": "Capital expenditures",
-      "totalAvailable": 8962488084,
-      "used": 8761988873,
-      "lapsed": 200499211
-    },
-    {
-      "id": "national-defence-2025-department-of-national-defence-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 1870597742,
-      "used": 1856027442,
-      "lapsed": 14570300
-    },
-    {
-      "id": "national-defence-2025-military-grievances-external-review-committee-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 8220517,
-      "used": 7464848,
-      "lapsed": 755669
-    },
-    {
-      "id": "national-defence-2025-military-grievances-external-review-committee-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 938345,
-      "used": 938345,
-      "lapsed": 0
-    },
-    {
-      "id": "national-defence-2025-military-police-complaints-commission-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 5575857,
-      "used": 5184069,
-      "lapsed": 391788
-    },
-    {
-      "id": "national-defence-2025-military-police-complaints-commission-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 592599,
-      "used": 592599,
-      "lapsed": 0
     }
   ],
   "transferPayments": [

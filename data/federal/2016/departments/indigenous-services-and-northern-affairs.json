@@ -3,8 +3,8 @@
   "slug": "indigenous-services-and-northern-affairs",
   "financialYearEnding": 2016,
   "reportedAs": "Indigenous and Northern Affairs",
-  "basis": "vol2_appropriations",
-  "totalSpending": 7.975748,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 7.975747,
   "percentageOfFederal": 2.6994,
   "historicalShare": [
     {
@@ -21,39 +21,39 @@
     },
     {
       "year": 2017,
-      "percentage": 2.9542
+      "percentage": 2.9528
     },
     {
       "year": 2018,
-      "percentage": 3.7417
+      "percentage": 3.737
     },
     {
       "year": 2019,
-      "percentage": 4.6531
+      "percentage": 4.6344
     },
     {
       "year": 2020,
-      "percentage": 5.2414
+      "percentage": 5.2321
     },
     {
       "year": 2021,
-      "percentage": 3.3908
+      "percentage": 3.379
     },
     {
       "year": 2022,
-      "percentage": 4.6419
+      "percentage": 4.6269
     },
     {
       "year": 2023,
-      "percentage": 6.6104
+      "percentage": 6.5934
     },
     {
       "year": 2024,
-      "percentage": 12.0878
+      "percentage": 12.0702
     },
     {
       "year": 2025,
-      "percentage": 7.4599
+      "percentage": 7.4491
     }
   ],
   "miniSankey": {
@@ -69,7 +69,70 @@
             {
               "id": "indigenous-services-and-northern-affairs-2016-indian-affairs-and-northern-development-obj-10",
               "name": "Transfer payments",
-              "amount": 6.572293
+              "children": [
+                {
+                  "id": "indigenous-services-and-northern-affairs-2016-tp-0016",
+                  "name": "Contributions to support First Nations Elementary and Secondary Educational Advancement",
+                  "amount": 1.399216
+                },
+                {
+                  "id": "indigenous-services-and-northern-affairs-2016-tp-0024",
+                  "name": "Contributions to support the construction and maintenance of community infrastructure",
+                  "amount": 1.12403
+                },
+                {
+                  "id": "indigenous-services-and-northern-affairs-2016-tp-0013",
+                  "name": "Contributions to provide income support to on-reserve residents",
+                  "amount": 1.032061
+                },
+                {
+                  "id": "indigenous-services-and-northern-affairs-2016-tp-0015",
+                  "name": "Contributions to provide women, children and families ordinarily resident on-reserve with Protection and Prevention Services",
+                  "amount": 0.708487
+                },
+                {
+                  "id": "indigenous-services-and-northern-affairs-2016-tp-0037",
+                  "name": "Grants to implement comprehensive land claims and self-government agreements",
+                  "amount": 0.436354
+                },
+                {
+                  "id": "indigenous-services-and-northern-affairs-2016-tp-0025",
+                  "name": "Contributions to support the negotiation and implementation of Treaties, Claims and self-government agreements or initiatives",
+                  "amount": 0.338582
+                },
+                {
+                  "id": "indigenous-services-and-northern-affairs-2016-tp-0017",
+                  "name": "Contributions to support First Nations and Inuit Post-Secondary Educational Advancement",
+                  "amount": 0.334958
+                },
+                {
+                  "id": "indigenous-services-and-northern-affairs-2016-tp-0003",
+                  "name": "Contribution to supply public services in Indian Government Support and to build strong governance, administrative and accountability systems",
+                  "amount": 0.222831
+                },
+                {
+                  "id": "indigenous-services-and-northern-affairs-2016-tp-0018",
+                  "name": "Contributions to support Land Management and Economic Development",
+                  "amount": 0.180858
+                },
+                {
+                  "id": "indigenous-services-and-northern-affairs-2016-tp-0029",
+                  "name": "Grant for Band Support Funding",
+                  "amount": 0.157682
+                },
+                {
+                  "id": "indigenous-services-and-northern-affairs-2016-tp-0006",
+                  "name": "Contributions for emergency management assistance for activities on reserves",
+                  "amount": 0.111934
+                },
+                {
+                  "id": "indigenous-services-and-northern-affairs-2016-indian-affairs-and-northern-development-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.5253,
+                  "isAggregate": true,
+                  "count": 33
+                }
+              ]
             },
             {
               "id": "indigenous-services-and-northern-affairs-2016-indian-affairs-and-northern-development-obj-12",
@@ -281,19 +344,24 @@
   },
   "entities": [
     {
-      "id": "indigenous-services-and-northern-affairs-2016-entity-indigenous-and-northern-affairs",
-      "name": "Indigenous and Northern Affairs",
-      "value": 7.975748
-    }
-  ],
-  "votes": [
+      "id": "indigenous-services-and-northern-affairs-2016-entity-indian-affairs-and-northern-development",
+      "name": "Indian Affairs and Northern Development",
+      "value": 7.96019
+    },
     {
-      "id": "indigenous-services-and-northern-affairs-2016-indigenous-and-northern-affairs-vote",
-      "vote": "All votes",
-      "description": "Total appropriations (vote-level detail not published for this edition)",
-      "totalAvailable": 8913466777,
-      "used": 7975747957,
-      "lapsed": 937718820
+      "id": "indigenous-services-and-northern-affairs-2016-entity-canadian-high-arctic-research-station",
+      "name": "Canadian High Arctic Research Station",
+      "value": 0.008287
+    },
+    {
+      "id": "indigenous-services-and-northern-affairs-2016-entity-indian-residential-schools-truth-and-reconciliation-commission",
+      "name": "Indian Residential Schools Truth and Reconciliation Commission",
+      "value": 0.005982
+    },
+    {
+      "id": "indigenous-services-and-northern-affairs-2016-entity-canadian-polar-commission",
+      "name": "Canadian Polar Commission",
+      "value": 0.001288
     }
   ],
   "transferPayments": [

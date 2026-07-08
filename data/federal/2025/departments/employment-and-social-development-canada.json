@@ -3,57 +3,57 @@
   "slug": "employment-and-social-development-canada",
   "financialYearEnding": 2025,
   "reportedAs": "Employment and Workforce Development",
-  "basis": "vol2_appropriations",
-  "totalSpending": 101.732572,
-  "percentageOfFederal": 18.5881,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 98.943878,
+  "percentageOfFederal": 18.0786,
   "historicalShare": [
     {
       "year": 2014,
-      "percentage": 19.876
+      "percentage": 19.9646
     },
     {
       "year": 2015,
-      "percentage": 20.5922
+      "percentage": 20.6775
     },
     {
       "year": 2016,
-      "percentage": 22.021
+      "percentage": 22.1074
     },
     {
       "year": 2017,
-      "percentage": 20.3627
+      "percentage": 19.1973
     },
     {
       "year": 2018,
-      "percentage": 18.9651
+      "percentage": 18.3752
     },
     {
       "year": 2019,
-      "percentage": 18.8349
+      "percentage": 18.2849
     },
     {
       "year": 2020,
-      "percentage": 19.7914
+      "percentage": 19.2919
     },
     {
       "year": 2021,
-      "percentage": 26.4911
+      "percentage": 26.11
     },
     {
       "year": 2022,
-      "percentage": 19.5356
+      "percentage": 19.0262
     },
     {
       "year": 2023,
-      "percentage": 18.7945
+      "percentage": 18.2525
     },
     {
       "year": 2024,
-      "percentage": 18.6571
+      "percentage": 18.1196
     },
     {
       "year": 2025,
-      "percentage": 18.5881
+      "percentage": 18.0786
     }
   ],
   "miniSankey": {
@@ -69,7 +69,70 @@
             {
               "id": "employment-and-social-development-canada-2025-department-of-employment-and-social-development-obj-10",
               "name": "Transfer payments",
-              "amount": 96.228763
+              "children": [
+                {
+                  "id": "employment-and-social-development-canada-2025-tp-0042",
+                  "name": "Old Age Security Payments (R.S.C., 1985, c. O-9)",
+                  "amount": 60.494096
+                },
+                {
+                  "id": "employment-and-social-development-canada-2025-tp-0039",
+                  "name": "Guaranteed Income Supplement Payments (R.S.C., 1985, c. O-9)",
+                  "amount": 18.86236
+                },
+                {
+                  "id": "employment-and-social-development-canada-2025-tp-0058",
+                  "name": "Payments to provinces and territories for the purpose of Early Learning and Child Care",
+                  "amount": 7.189748
+                },
+                {
+                  "id": "employment-and-social-development-canada-2025-tp-0032",
+                  "name": "Canada Student Grants to qualifying full and part-time students pursuant to the Canada Student Financial Assistance Act",
+                  "amount": 2.577492
+                },
+                {
+                  "id": "employment-and-social-development-canada-2025-tp-0028",
+                  "name": "Canada Education Savings grant payments to Registered Educations Savings Plan trustees on behalf of Registered Educations Savings Plan beneficiaries to encourage Canadians to save for post-secondary education for their children (Canada Education Savings Act)",
+                  "amount": 1.195787
+                },
+                {
+                  "id": "employment-and-social-development-canada-2025-tp-0012",
+                  "name": "Payments related to the direct financing arrangement under the Canada Student Financial Assistance Act",
+                  "amount": 1.174605
+                },
+                {
+                  "id": "employment-and-social-development-canada-2025-tp-0014",
+                  "name": "Payments to provinces, territories, municipalities, other public bodies, organizations, groups, communities, employers and individuals for the provision of training and/or work experience, the mobilization of community resources, and human resource planning and adjustment measures necessary for the efficient functioning of the Canadian labour market",
+                  "amount": 0.905535
+                },
+                {
+                  "id": "employment-and-social-development-canada-2025-tp-0060",
+                  "name": "Workforce Development Agreement",
+                  "amount": 0.720898
+                },
+                {
+                  "id": "employment-and-social-development-canada-2025-tp-0027",
+                  "name": "Canada Disability Savings Grant payments to Registered Disability Savings Plan issuers on behalf of Registered Disability Savings Plan beneficiaries to encourage long-term financial security of eligible individuals with disabilities (Canada Disability Savings Act)",
+                  "amount": 0.644615
+                },
+                {
+                  "id": "employment-and-social-development-canada-2025-tp-0024",
+                  "name": "Allowance payments (R.S.C., 1985, c. O-9)",
+                  "amount": 0.63028
+                },
+                {
+                  "id": "employment-and-social-development-canada-2025-tp-0006",
+                  "name": "Contributions to provincial/territorial governments, band councils, tribal councils, Indigenous Skills and Employment Training Program agreement holders, municipal governments, not-for-profit organizations, professional associations, business and private sector organizations, consortia, industry groups, unions, regulatory bodies, ad-hoc associations, public health institutions, school boards, universities, colleges, CEGEPs, sector councils, and cross-sectoral councils to support enhanced productivity and competitiveness of Canadian workplaces by supporting investment in and recognition and utilizations of skills",
+                  "amount": 0.403825
+                },
+                {
+                  "id": "employment-and-social-development-canada-2025-department-of-employment-and-social-development-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 1.429522,
+                  "isAggregate": true,
+                  "count": 35
+                }
+              ]
             },
             {
               "id": "employment-and-social-development-canada-2025-department-of-employment-and-social-development-obj-1",
@@ -242,7 +305,7 @@
     {
       "id": "employment-and-social-development-canada-2025-entity-department-of-employment-and-social-development",
       "name": "Department of Employment and Social Development",
-      "value": 101.696314
+      "value": 98.90762
     },
     {
       "id": "employment-and-social-development-canada-2025-entity-canadian-accessibility-standards-development-organization",
@@ -253,72 +316,6 @@
       "id": "employment-and-social-development-canada-2025-entity-canadian-centre-for-occupational-health-and-safety",
       "name": "Canadian Centre for Occupational Health and Safety",
       "value": 0.014879
-    }
-  ],
-  "votes": [
-    {
-      "id": "employment-and-social-development-canada-2025-canadian-accessibility-standards-development-organization-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 12559288,
-      "used": 11908606,
-      "lapsed": 650682
-    },
-    {
-      "id": "employment-and-social-development-canada-2025-canadian-accessibility-standards-development-organization-vote5",
-      "vote": "Vote 5",
-      "description": "Grants and contributions",
-      "totalAvailable": 8500000,
-      "used": 8498511,
-      "lapsed": 1489
-    },
-    {
-      "id": "employment-and-social-development-canada-2025-canadian-accessibility-standards-development-organization-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 971978,
-      "used": 971978,
-      "lapsed": 0
-    },
-    {
-      "id": "employment-and-social-development-canada-2025-canadian-centre-for-occupational-health-and-safety-vote1",
-      "vote": "Vote 1",
-      "description": "Program expenditures",
-      "totalAvailable": 6775930,
-      "used": 6078790,
-      "lapsed": 697140
-    },
-    {
-      "id": "employment-and-social-development-canada-2025-canadian-centre-for-occupational-health-and-safety-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 17864978,
-      "used": 8800382,
-      "lapsed": 9064596
-    },
-    {
-      "id": "employment-and-social-development-canada-2025-department-of-employment-and-social-development-vote1",
-      "vote": "Vote 1",
-      "description": "Operating expenditures",
-      "totalAvailable": 4646025855,
-      "used": 4244430899,
-      "lapsed": 401594956
-    },
-    {
-      "id": "employment-and-social-development-canada-2025-department-of-employment-and-social-development-vote5",
-      "vote": "Vote 5",
-      "description": "Grants and contributions",
-      "totalAvailable": 10240793908,
-      "used": 10117400843,
-      "lapsed": 123393065
-    },
-    {
-      "id": "employment-and-social-development-canada-2025-department-of-employment-and-social-development-voteStatutory",
-      "vote": "Statutory amounts",
-      "description": "Statutory amounts",
-      "totalAvailable": 87335796198,
-      "used": 87334481785,
-      "lapsed": 1314413
     }
   ],
   "transferPayments": [

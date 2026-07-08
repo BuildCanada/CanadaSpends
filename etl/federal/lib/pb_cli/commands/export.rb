@@ -83,6 +83,7 @@ module PbCli
         @errors = []
         @excluded = {}
         @recon_warnings = []
+        @transfer_split_skips = []
         precompute_year_totals(candidate_years)
         precompute_meso(candidate_years)
 
@@ -343,13 +344,21 @@ module PbCli
       end
 
       # Standard-object (dmac-meso) rows, resolved to portfolio slugs and
-      # aggregated per (year, slug, organization). Feeds the department
-      # miniSankey and the per-department reconciliation. Runs after
-      # precompute_year_totals so the RDA org-override guard can consult which
-      # slugs actually have allotment data in a given year.
+      # aggregated per (year, slug, organization). This is now the SOLE source
+      # of every user-facing department figure (drop-authorities spec §1):
+      # totalSpending / entities / historicalShare / percentageOfFederal are
+      # the net (Σ objects − external − internal revenues) figures aggregated
+      # here, matching the miniSankey exactly. Runs after precompute_year_totals
+      # so the RDA org-override guard can consult which slugs actually have
+      # allotment data in a given year.
       def precompute_meso(years)
         @meso_by_slug = Hash.new { |h, k| h[k] = {} }
         @meso_gross = Hash.new { |h, k| h[k] = Hash.new(0.0) }
+        @meso_net = Hash.new { |h, k| h[k] = Hash.new(0.0) }
+        # Raw Public Accounts portfolio label(s) a slug resolved from that year,
+        # for `reportedAs` (only from portfolio-resolved rows, never from an
+        # organization-override reattribution whose label belongs to the host).
+        @meso_portfolios = Hash.new { |h, k| h[k] = Hash.new { |i, j| i[j] = [] } }
         @meso_orphans = Hash.new(0.0)
 
         years.each do |year|
@@ -357,7 +366,9 @@ module PbCli
 
           valid = @slug_year_totals.keys.select { |s| @slug_year_totals[s].key?(year) }.to_set
           @standard_objects.rows(year).each do |row|
-            slug = meso_slug(row, valid)
+            override = @mapping.organization_override_slug(row.organization)
+            via_override = override && valid.include?(override)
+            slug = via_override ? override : @mapping.meso_portfolio_slug(row.portfolio)
             if slug.nil? || !valid.include?(slug)
               @meso_orphans[year] += row.gross
               next
@@ -368,19 +379,10 @@ module PbCli
             org[:external] += row.external
             org[:internal] += row.internal
             @meso_gross[year][slug] += row.gross
+            @meso_net[year][slug] += row.net
+            @meso_portfolios[year][slug] << row.portfolio unless via_override
           end
         end
-      end
-
-      # Portfolio slug for a meso row. Organization overrides (the RDA merge)
-      # win, but only when the target slug has allotment data that year — in
-      # 2016–2018 RDAs have no separate page, so those rows fall back to the
-      # host portfolio, exactly as the allotment side keeps them (NOTES.md).
-      def meso_slug(row, valid_slugs)
-        override = @mapping.organization_override_slug(row.organization)
-        return override if override && valid_slugs.include?(override)
-
-        @mapping.meso_portfolio_slug(row.portfolio)
       end
 
       # Hard export validation (consolidated-statement-alignment spec): for every
@@ -811,17 +813,16 @@ module PbCli
       # --- department pages ------------------------------------------------
 
       def department_payload(year, slug)
-        rows = allotments_for(year).reject { |r| r['is_total_or_subtotal'] }
-                                   .select { |r| @mapping.resolve_slug(r) == slug }
-        total = @slug_year_totals[slug][year]
+        entities = entities(slug, year)
+        total = PbCli::Export::Units.round_billions(entities.sum { |e| e['value'] })
         vol1_total = @vol1.total_spending(year)
 
         {
           'name' => portfolio_name(slug),
           'slug' => slug,
           'financialYearEnding' => year,
-          'reportedAs' => reported_as(slug, rows),
-          'basis' => 'vol2_appropriations',
+          'reportedAs' => reported_as(slug, year),
+          'basis' => 'vol2_standard_object_net',
           'totalSpending' => total,
           'percentageOfFederal' => pct(total, vol1_total),
           'historicalShare' => historical_share(slug),
@@ -829,84 +830,57 @@ module PbCli
             'breakdown' => 'standard_object',
             'spending_data' => strip_parent_amounts(mini_sankey(year, slug))
           },
-          'entities' => entities(slug, year, rows),
-          'votes' => votes(slug, year, rows),
+          'entities' => entities,
           'transferPayments' => transfer_payments(slug, year),
           'lineItemsUnits' => 'dollars_cad'
         }
       end
 
-      # Grouping/display label for a row's organization. Years without an
-      # organization breakdown (blank) or with the generic "Department"
-      # placeholder fall back to the raw ministry name, so rows from different
-      # ministries merged into one portfolio never collapse into a single
-      # blank entity.
-      def org_label(row)
-        org = row['organization'].to_s.strip
-        return row['ministry_name'].to_s if org.empty? || org == 'Department'
-
-        org
-      end
-
-      # Historical ministry name(s) as printed in that year's Public Accounts,
-      # when they differ from the portfolio's current display name (spec §4.3).
-      # Aggregate portfolios (synthetic groupings) have no single historical
-      # name; their prose names the constituent agencies instead.
-      def reported_as(slug, rows)
+      # Public Accounts portfolio label(s) the slug is reported under that year,
+      # when they differ from the portfolio's current display name — now sourced
+      # from the standard-object (meso) portfolio labels (spec §1) rather than
+      # the retired allotment ministry names. Aggregate portfolios (synthetic
+      # groupings) have no single reported name; their prose names the
+      # constituent agencies instead.
+      def reported_as(slug, year)
         return nil if @mapping.portfolio(slug)&.dig('aggregate')
 
         display = portfolio_name(slug)
-        raw = rows.map { |r| r['ministry_name'].to_s.strip }.reject(&:empty?).uniq.sort
+        raw = (@meso_portfolios[year][slug] || []).map(&:strip).reject(&:empty?).uniq.sort
         return nil if raw.empty? || raw == [display]
 
         raw.join('; ')
       end
 
+      # Share of the Vol I published federal total, per year, from the same
+      # net standard-object basis as totalSpending (spec §1) — computed across
+      # every meso year exported in this run.
       def historical_share(slug)
-        @slug_year_totals[slug].keys.sort.filter_map do |year|
+        @meso_net.keys.sort.filter_map do |year|
+          next unless @meso_net[year].key?(slug)
+
           total = @vol1_spending[year]
           next if total.nil? || total.zero?
 
-          { 'year' => year, 'percentage' => pct(@slug_year_totals[slug][year], total) }
+          share = PbCli::Export::Units.dollars_to_billions(@meso_net[year][slug])
+          { 'year' => year, 'percentage' => pct(share, total) }
         end
       end
 
-      def entities(slug, year, rows)
-        by_org = Hash.new(0.0)
-        rows.each { |r| by_org[org_label(r)] += r['expenditures'].to_f }
-        by_org.map do |org, dollars|
+      # Spending by entity = each organization's NET standard-object total
+      # (Σ objects − external − internal revenues), the same figure the
+      # miniSankey draws, so the stat card, chart, and entity list are one
+      # number (spec §1).
+      def entities(slug, year)
+        (@meso_by_slug[year][slug] || {}).map do |org_name, agg|
+          net = agg[:objects].values.sum - agg[:external] - agg[:internal]
           {
-            'id' => "#{slug}-#{year}-entity-#{slugify(org)}",
-            'name' => org,
-            'value' => PbCli::Export::Units.dollars_to_billions(dollars)
+            'id' => "#{slug}-#{year}-entity-#{slugify(org_name)}",
+            'name' => org_name,
+            'value' => PbCli::Export::Units.dollars_to_billions(net)
           }
-        end.sort_by { |e| [-e['value'], e['name']] }
-      end
-
-      def votes(slug, year, rows)
-        grouped = Hash.new { |h, k| h[k] = { available: 0.0, used: 0.0, org: nil, vote: nil, num: nil } }
-        rows.each do |r|
-          key = [org_label(r), r['vote_number'], r['vote'].to_s]
-          g = grouped[key]
-          g[:org] = org_label(r)
-          g[:vote] = r['vote'].to_s
-          g[:num] = r['vote_number']
-          g[:available] += r['allotments'].to_f
-          g[:used] += r['expenditures'].to_f
-        end
-        grouped.map do |key, g|
-          available = PbCli::Export::Units.round_dollars(g[:available])
-          used = PbCli::Export::Units.round_dollars(g[:used])
-          label, desc = split_vote(g[:vote])
-          {
-            'id' => "#{slug}-#{year}-#{slugify(g[:org])}-vote#{g[:num]}",
-            'vote' => label,
-            'description' => desc,
-            'totalAvailable' => available,
-            'used' => used,
-            'lapsed' => available - used
-          }
-        end.sort_by { |v| [v['id']] }
+        end.reject { |e| e['value'].zero? }
+          .sort_by { |e| [-e['value'], e['name']] }
       end
 
       # Effective portfolio for a transfer row: description-based reattribution
@@ -944,8 +918,11 @@ module PbCli
       # independent of label translation. Truncation + leaf-only amounts
       # (strip_parent_amounts) apply as for every other Sankey.
       def mini_sankey(year, slug)
+        orgs = @meso_by_slug[year][slug] || {}
+        attach_org = transfer_attach_org(year, slug, orgs)
+
         root = { 'id' => slug, 'name' => portfolio_name(slug), 'children' => [] }
-        (@meso_by_slug[year][slug] || {}).each do |org_name, agg|
+        orgs.each do |org_name, agg|
           org_id = "#{slug}-#{year}-#{slugify(org_name)}"
           leaves = org_leaves(org_id, agg)
           next if leaves.empty?
@@ -955,7 +932,55 @@ module PbCli
         # Org children of the root are truncated to top-N (departments can hold
         # 20+ agencies); each org already holds ≤ top-N leaves so this recursion
         # is a no-op at the leaf level.
-        PbCli::Export::Truncation.truncate(assign_parent_amounts_ref(root), top_n: MINI_SANKEY_TOP_N)
+        truncated = PbCli::Export::Truncation.truncate(assign_parent_amounts_ref(root), top_n: MINI_SANKEY_TOP_N)
+        # Fan the surviving Transfer payments leaf out into named programs AFTER
+        # truncation, so the generic Truncation never re-truncates the program
+        # children (spec §2). Attaches to the dominant transfer organization.
+        attach_transfer_programs(truncated, slug, year, attach_org) if attach_org
+        truncated
+      end
+
+      # Replaces the attach organization's surviving "Transfer payments" object
+      # leaf with its named-program children (spec §2). No-op when that org or
+      # its transfer leaf was rolled into an aggregate by truncation.
+      def attach_transfer_programs(tree, slug, year, attach_org)
+        org_id = "#{slug}-#{year}-#{slugify(attach_org)}"
+        org = tree['children'].find { |o| o['id'] == org_id }
+        return unless org
+
+        leaf = (org['children'] || []).find { |l| l['name'] == 'Transfer payments' }
+        return unless leaf
+
+        children = transfer_program_children(org_id, leaf['amount'], transfer_program_rows(slug, year))
+        leaf['children'] = children if children
+      end
+
+      # The organization whose "Transfer payments" object leaf fans out into
+      # named programs (drop-authorities spec §2). The transfers dataset is
+      # ministry-keyed (no organization column), so program children attach to
+      # the organization holding the LARGEST transfer-payments object, and only
+      # when it holds ≥90% of the portfolio's total transfer-object amount (the
+      # department org pays the transfers). Otherwise the object leaves stay
+      # unsplit and the skip is logged. Returns the org name, or nil.
+      def transfer_attach_org(year, slug, orgs)
+        amounts = orgs.transform_values { |agg| agg[:objects]['Transfer payments'].to_f }
+        total = amounts.values.sum
+        return nil if PbCli::Export::Units.round_dollars(total).zero?
+
+        org, amt = amounts.max_by { |_, v| v }
+        share = amt / total
+        return org if amt.positive? && share >= 0.90
+
+        @transfer_split_skips << { year: year, slug: slug, share: (share * 100).round(1) }
+        nil
+      end
+
+      # Transfer-payment program rows for the fanout, reusing the department
+      # page's transferPayments ids/labels so existing French resolves.
+      def transfer_program_rows(slug, year)
+        transfer_payments(slug, year).map do |t|
+          { id: t['id'], name: t['description'], dollars: t['used'].to_f }
+        end
       end
 
       # An organization's leaves: standard-object leaves truncated to fit within
@@ -985,6 +1010,53 @@ module PbCli
             'amount' => PbCli::Export::Units.dollars_to_billions(dollars)
           }
         end
+      end
+
+      # Named transfer-program children of the Transfer payments object leaf,
+      # scaled pro-rata (scale-to-line) so they sum EXACTLY to the object's net
+      # amount (billions). Zero rows are dropped; the top programs survive and
+      # the rest roll into "Other transfer programs" so the child count stays
+      # within top-N. Returns nil when no positive program remains.
+      def transfer_program_children(org_id, object_billions, programs)
+        positive = programs.select { |p| p[:dollars].positive? }
+        raw_sum = positive.sum { |p| p[:dollars] }
+        return nil if positive.empty? || raw_sum <= 0
+
+        factor = object_billions * PbCli::Export::Units::BILLION / raw_sum
+        leaves = positive.map do |p|
+          { 'id' => p[:id], 'name' => p[:name],
+            'amount' => PbCli::Export::Units.dollars_to_billions(p[:dollars] * factor) }
+        end.reject { |l| l['amount'].zero? }
+        return nil if leaves.empty?
+
+        leaves = leaves.sort_by { |l| [-l['amount'], l['name'].to_s] }
+        leaves = collapse_transfer_tail(org_id, leaves) if leaves.size > MINI_SANKEY_TOP_N
+        enforce_exact_transfer_sum(leaves, object_billions)
+        leaves
+      end
+
+      # Rolls the tail beyond top-N-1 into a single "Other transfer programs"
+      # aggregate so the fanout holds ≤ top-N children.
+      def collapse_transfer_tail(org_id, leaves)
+        kept = leaves.first(MINI_SANKEY_TOP_N - 1)
+        rest = leaves.drop(MINI_SANKEY_TOP_N - 1)
+        kept + [{
+          'id' => "#{org_id}-tp-other",
+          'name' => 'Other transfer programs',
+          'amount' => PbCli::Export::Units.round_billions(rest.sum { |l| l['amount'] }),
+          'isAggregate' => true,
+          'count' => rest.size
+        }]
+      end
+
+      # Absorbs the pro-rata rounding residual into the aggregate (or, absent
+      # one, the largest leaf) so Σ children == the object's net amount exactly.
+      def enforce_exact_transfer_sum(leaves, object_billions)
+        diff = PbCli::Export::Units.round_billions(object_billions - leaves.sum { |l| l['amount'] })
+        return if diff.zero?
+
+        target = leaves.find { |l| l['isAggregate'] } || leaves.first
+        target['amount'] = PbCli::Export::Units.round_billions(target['amount'] + diff)
       end
 
       # External/internal revenues as NEGATIVE leaves (net presentation).
@@ -1064,7 +1136,7 @@ module PbCli
 
       def report_empty?
         @errors.empty? && @excluded.empty? && @recon_warnings.empty? &&
-          (@segment_scales || {}).empty?
+          (@transfer_split_skips || []).empty? && (@segment_scales || {}).empty?
       end
 
       def write_errors_report(exported)
@@ -1079,6 +1151,7 @@ module PbCli
           lines << ''
         end
         append_scale_section(lines, exported)
+        append_transfer_skip_section(lines) unless @transfer_split_skips.empty?
         append_recon_section(lines) unless @recon_warnings.empty?
         unless @errors.empty?
           lines << '## Validation errors' << ''
@@ -1168,25 +1241,30 @@ module PbCli
         "#{year - 1}-#{year.to_s[-2, 2]}"
       end
 
-      def split_vote(vote)
-        # Source strings separate the vote number from its description with a
-        # non-breaking space (U+00A0) + em/en dash, e.g. "Vote 1 —Operating
-        # expenditures". Normalize NBSP so \s matches, then split on the dash.
-        cleaned = vote.to_s.gsub(/\u00A0/, ' ').strip.gsub(/[—–-]+\s*\z/, '').strip
-        m = cleaned.match(/\A(Vote\s+\d+[a-z]?)\s*[—–-]\s*(.*)\z/)
-        return [m[1].strip, m[2].strip] if m
-        # Statutory rows carry a bare "Statutory amounts" label (also used as
-        # the miniSankey leaf name — keep it verbatim); older editions
-        # (2016-2018) publish no vote text at all. Always fill the description
-        # column so line-item tables never show blank rows.
-        return [cleaned, cleaned] if cleaned.match?(/statutory/i)
-        return ['All votes', 'Total appropriations (vote-level detail not published for this edition)'] if cleaned.empty?
-
-        ['', cleaned]
-      end
 
       def slugify(str)
         str.to_s.downcase.gsub(/[^a-z0-9]+/, '-').gsub(/\A-|-\z/, '')
+      end
+
+      # --- transfer-fanout reporting ---------------------------------------
+
+      # Portfolios/years where the transfer object stays unsplit because no
+      # single organization holds ≥90% of the portfolio's transfer-object
+      # amount (drop-authorities spec §2). Non-blocking, documented.
+      def append_transfer_skip_section(lines)
+        lines << '## Transfer-program fanout skips (non-blocking)' << ''
+        lines << 'Transfer objects left unsplit because no organization holds ≥90% of the ' \
+                 "portfolio's transfer-payments object that year (program children can only " \
+                 'attach to a single dominant organization — the transfers dataset is ' \
+                 'ministry-keyed).'
+        lines << ''
+        @transfer_split_skips.group_by { |s| s[:year] }.sort.each do |year, skips|
+          lines << "### #{year} (#{skips.size})" << ''
+          skips.sort_by { |s| s[:slug] }.each do |s|
+            lines << format('- **%s**: largest organization holds %.1f%% of the transfer object (<90%%)', s[:slug], s[:share])
+          end
+          lines << ''
+        end
       end
 
       def write_json(path, data)
