@@ -147,6 +147,16 @@ export type FederalWorkforceDepartment = {
   resolved: boolean;
 };
 
+// One demographics band (age band / tenure type / salary range) from the TBS
+// population series. Labels are raw source data in both official languages;
+// `key` is a stable, language-independent id.
+export type FederalWorkforceBand = {
+  key: string;
+  label_en: string;
+  label_fr: string;
+  count: number;
+};
+
 export type FederalWorkforce = {
   financialYearEnding: number;
   headcount: number;
@@ -157,6 +167,13 @@ export type FederalWorkforce = {
   averagePersonnelCost: number;
   source: string;
   source_url: string;
+  // Demographics dimensions; each present only for years TBS publishes it.
+  // Age and tenure sum exactly to headcount (published Unknown residual
+  // included); the salary series covers the smaller employment-equity
+  // population.
+  ageBands?: FederalWorkforceBand[];
+  tenure?: FederalWorkforceBand[];
+  salaryBands?: FederalWorkforceBand[];
   headcountByDepartment?: FederalWorkforceDepartment[];
 };
 

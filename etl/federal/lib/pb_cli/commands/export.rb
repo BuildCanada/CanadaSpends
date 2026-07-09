@@ -485,17 +485,45 @@ module PbCli
         end
 
         personnel = personnel_dollars(year)
-        write_json(File.join(dir, 'workforce.json'), {
+        payload = {
           'financialYearEnding' => year,
           'headcount' => headcount,
           'headcountAsOf' => @workforce.entry(year)['headcountAsOf'],
           'personnelSpending' => PbCli::Export::Units.dollars_to_billions(personnel),
           'averagePersonnelCost' => (personnel / headcount).round,
           'source' => @workforce.entry(year)['source'] || @workforce.source,
-          'source_url' => @workforce.entry(year)['source_url'],
-          'headcountByDepartment' => headcount_by_department(year)
-        })
+          'source_url' => @workforce.entry(year)['source_url']
+        }
+        append_workforce_dimensions(payload, year, headcount)
+        payload['headcountByDepartment'] = headcount_by_department(year)
+        write_json(File.join(dir, 'workforce.json'), payload)
         @workforce_exported << year
+      end
+
+      # TBS demographics dimensions (age bands / tenure / salary bands), passed
+      # through verbatim from the reference when present for the year, with a
+      # Σ(counts)-vs-headcount check (1% tolerance). Age/tenure carry the
+      # published Unknown residual and sum exactly; the salary series covers the
+      # employment-equity population (a subset of the federal public service),
+      # so its ~25–30% shortfall is an expected, REPORTED scope difference —
+      # the dimension still ships (the site captions it accordingly).
+      def append_workforce_dimensions(payload, year, headcount)
+        entry = @workforce.entry(year)
+        { 'ageBands' => 'age bands', 'tenure' => 'tenure',
+          'salaryBands' => 'salary bands' }.each do |key, label|
+          bands = entry[key]
+          next unless bands && !bands.empty?
+
+          payload[key] = bands
+          sum = bands.sum { |b| b['count'] }
+          deviation = (sum - headcount).abs / headcount.to_f
+          next if deviation <= 0.01
+
+          (@workforce_sum_notes ||= []) << {
+            year: year, dimension: label, sum: sum, headcount: headcount,
+            pct: ((sum - headcount) * 100.0 / headcount).round(1)
+          }
+        end
       end
 
       # Government-wide Personnel standard object (dollars) = Σ over every meso
@@ -1214,6 +1242,11 @@ module PbCli
         (@workforce_gaps || []).each do |gap|
           puts ::CLI::UI.fmt("{{x}} #{gap[:year]}: workforce.json omitted — #{gap[:reason]}")
         end
+        unless (@workforce_sum_notes || []).empty?
+          puts ::CLI::UI.fmt("{{i}} #{@workforce_sum_notes.size} workforce dimension sum note(s) " \
+                             '(salary series covers the employment-equity population). ' \
+                             "See #{@errors_path}")
+        end
         unless @recon_warnings.empty?
           puts ::CLI::UI.fmt("{{i}} #{@recon_warnings.size} miniSankey reconciliation note(s) (non-blocking). See #{@errors_path}")
         end
@@ -1229,7 +1262,8 @@ module PbCli
 
       def report_empty?
         @errors.empty? && @excluded.empty? && @recon_warnings.empty? &&
-          (@transfer_split_skips || []).empty? && (@segment_scales || {}).empty?
+          (@transfer_split_skips || []).empty? && (@segment_scales || {}).empty? &&
+          (@workforce_sum_notes || []).empty?
       end
 
       def write_errors_report(exported)
@@ -1246,6 +1280,7 @@ module PbCli
         append_scale_section(lines, exported)
         append_transfer_skip_section(lines) unless @transfer_split_skips.empty?
         append_recon_section(lines) unless @recon_warnings.empty?
+        append_workforce_sum_section(lines) unless (@workforce_sum_notes || []).empty?
         unless @errors.empty?
           lines << '## Validation errors' << ''
           @errors.group_by { |e| e[:year] }.sort.each do |year, errs|
@@ -1358,6 +1393,24 @@ module PbCli
           end
           lines << ''
         end
+      end
+
+      # Workforce dimension Σ(counts)-vs-headcount notes (informational). The
+      # only expected entries are the salary bands: TBS publishes that series
+      # for the employment-equity population, a subset of the full federal
+      # public service, so its sum runs ~25–30% below the headcount by scope.
+      def append_workforce_sum_section(lines)
+        lines << '## Workforce dimension sums (informational)' << ''
+        lines << 'Dimensions whose band counts sum >1% away from the year\'s headcount. ' \
+                 'The salary series covers the employment-equity population (a subset of ' \
+                 'the federal public service), so its shortfall is a scope difference, ' \
+                 'not an extraction error.'
+        lines << ''
+        @workforce_sum_notes.sort_by { |n| [n[:year], n[:dimension]] }.each do |n|
+          lines << format('- **%d %s**: Σ %d vs headcount %d (%+.1f%%)',
+                          n[:year], n[:dimension], n[:sum], n[:headcount], n[:pct])
+        end
+        lines << ''
       end
 
       def write_json(path, data)

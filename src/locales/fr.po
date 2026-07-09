@@ -17,10 +17,6 @@ msgstr ""
 msgid "— Canada Spends Team"
 msgstr "— L'équipe de Canada Spends"
 
-#: src/components/SalaryDistributionChart.tsx:139
-msgid "(inflation-adjusted to 2025 dollars)"
-msgstr "(ajusté pour l'inflation en dollars de 2025)"
-
 #. placeholder {0}: department.agenciesHeading
 #. placeholder {0}: department.leadershipHeading
 #. placeholder {0}: department.name
@@ -141,10 +137,6 @@ msgstr "© 2025 Canada Spends. Tous droits réservés. Un projet de <0>Build Can
 msgid "100,000"
 msgstr "100 000"
 
-#: src/components/FederalWorkforce.tsx:141
-msgid "80% of employees are in permanent roles"
-msgstr "80 % des employés occupent des postes permanents"
-
 #: src/components/MainLayout/_components/DesktopNav.tsx:279
 #: src/components/MainLayout/_components/MobileMenu.tsx:188
 msgid "About"
@@ -176,15 +168,11 @@ msgstr "Comptes créditeurs, dette à long terme et autres obligations envers de
 msgid "Accumulated Surplus"
 msgstr "Excédent accumulé"
 
-#: src/components/SalaryDistributionChart.tsx:126
-msgid "Adjust for inflation (2025 dollars)"
-msgstr "Ajuster pour l'inflation (dollars de 2025)"
-
 #: src/components/Sankey/BudgetSankey.tsx:626
 msgid "Adjust sliders to see how department spending reductions affect the overall Fall 2025 Budget. The Minister of Finance has asked departments to reduce spending by 7.5% in 2026-27, 10% in 2027-28, and 15% in 2028-29."
 msgstr "Ajustez les curseurs pour voir comment les réductions des dépenses ministérielles affectent le budget global de l'automne 2025. Le ministre des Finances a demandé aux ministères de réduire les dépenses de 7,5 % en 2026-27, de 10 % en 2027-28 et de 15 % en 2028-29."
 
-#: src/components/FederalWorkforce.tsx:152
+#: src/components/FederalWorkforceStrip.tsx:109
 msgid "Age"
 msgstr "Âge"
 
@@ -265,10 +253,6 @@ msgstr "Paiements d'intérêts annuels sur la dette en cours. Cela représente l
 msgid "Annual municipal spending per {0} resident"
 msgstr "Dépenses municipales annuelles par résident de {0}"
 
-#: src/components/FederalWorkforce.tsx:132
-msgid "Annual payroll"
-msgstr "Masse salariale annuelle"
-
 #: src/app/[lang]/(main)/search/[database]/[id]/page.tsx:94
 msgid "Application ID"
 msgstr "ID de la demande"
@@ -311,11 +295,7 @@ msgstr "À la fin de l'exercice financier {fiscalYear}"
 msgid "Assets, liabilities, and net financial position as of the end of fiscal year {fiscalYear}."
 msgstr "Actifs, passifs et situation financière nette à la fin de l'exercice financier {fiscalYear}."
 
-#: src/components/FederalWorkforce.tsx:125
-msgid "Average annual compensation"
-msgstr "Rémunération annuelle moyenne"
-
-#: src/components/FederalWorkforceStrip.tsx:73
+#: src/components/FederalWorkforceStrip.tsx:92
 msgid "Average personnel cost"
 msgstr "Coût moyen en personnel"
 
@@ -487,10 +467,6 @@ msgstr "Comparez votre fardeau fiscal total dans toutes les provinces et territo
 msgid "Compensation"
 msgstr "Rémunération"
 
-#: src/components/FederalWorkforce.tsx:123
-msgid "Compensation per Employee"
-msgstr "Rémunération par employé"
-
 #: src/app/[lang]/(main)/search/[database]/[id]/page.tsx:81
 #: src/app/[lang]/(main)/search/[database]/[id]/page.tsx:128
 #: src/app/[lang]/(main)/search/[database]/[id]/page.tsx:174
@@ -506,11 +482,11 @@ msgstr "Connectez-vous depuis un réseau public comme un café ou une bibliothè
 msgid "Connect with us"
 msgstr "Connectez-vous avec nous"
 
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:167
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:164
 msgid "consolidated federal revenue (Vol I)"
 msgstr "revenus fédéraux consolidés (vol. I)"
 
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:160
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:157
 msgid "consolidated federal spending (Vol I)"
 msgstr "dépenses fédérales consolidées (vol. I)"
 
@@ -561,7 +537,7 @@ msgid "Data is derived from the Public Accounts of Canada under the Open Governm
 msgstr "Les données proviennent des Comptes publics du Canada, sous la Licence du gouvernement ouvert – Canada."
 
 #. placeholder {0}: new Date(index.updatedAt).toLocaleDateString( lang === "fr" ? "fr-CA" : "en-CA", { year: "numeric", month: "long", day: "numeric" }, )
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:129
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:126
 msgid "Data updated {0}"
 msgstr "Données mises à jour le {0}"
 
@@ -571,7 +547,7 @@ msgid "Deficit"
 msgstr "Déficit"
 
 #. placeholder {0}: summary.financialYear
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:177
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:174
 msgid "Deficit in FY {0}"
 msgstr "Déficit de l’exercice {0}"
 
@@ -589,10 +565,6 @@ msgstr "Dépenses du ministère"
 #: src/components/Sankey/BudgetSankey.tsx:622
 msgid "Department Spending Reductions"
 msgstr "Réductions des dépenses ministérielles"
-
-#: src/components/FederalWorkforce.tsx:177
-msgid "Departments + Agencies"
-msgstr "Ministères + Organismes"
 
 #: src/components/LineItemTable.tsx:91
 msgid "Description"
@@ -638,7 +610,25 @@ msgstr "Taux d'imposition effectif"
 msgid "Email us at <0>hi@buildcanada.com</0> or connect with us on X <1>@canada_spends</1> and we'll get back to you as soon as we can."
 msgstr "Envoyez-nous un courriel à <0>hi@buildcanada.com</0> ou connectez-vous avec nous sur X <1>@canada_spends</1> et nous vous répondrons dès que possible."
 
-#: src/components/FederalWorkforceStrip.tsx:61
+#: src/components/FederalWorkforceStrip.tsx:117
+#: src/components/FederalWorkforceStrip.tsx:134
+#: src/components/FederalWorkforceStrip.tsx:155
+msgid "Employees"
+msgstr "Employés"
+
+#: src/components/FederalWorkforceStrip.tsx:112
+msgid "Employees by age band (as of March 31)"
+msgstr "Employés par catégorie d’âge (au 31 mars)"
+
+#: src/components/FederalWorkforceStrip.tsx:146
+msgid "Employees by salary range (as of March 31). This series covers the employment-equity population, a subset of the federal public service."
+msgstr "Employés par échelle salariale (au 31 mars). Cette série couvre la population visée par l’équité en matière d’emploi, un sous-ensemble de la fonction publique fédérale."
+
+#: src/components/FederalWorkforceStrip.tsx:129
+msgid "Employees by type of tenure (as of March 31)"
+msgstr "Employés par durée d’emploi (au 31 mars)"
+
+#: src/components/FederalWorkforceStrip.tsx:80
 msgid "Employees in FY {financialYear}"
 msgstr "Effectif de l’exercice {financialYear}"
 
@@ -729,10 +719,6 @@ msgstr "Dépenses"
 msgid "Explore Canada's federal budget with interactive visualizations and detailed analysis of government revenue and expenditures."
 msgstr "Explorez le budget fédéral du Canada avec des visualisations interactives et une analyse détaillée des revenus et dépenses gouvernementales."
 
-#: src/components/FederalWorkforce.tsx:197
-msgid "Explore federal employee salary distribution by year and demographic group"
-msgstr "Explorez la répartition des salaires des employés fédéraux par année et groupe démographique"
-
 #: src/components/HeroButtons.tsx:37
 msgid "Explore Federal Spending"
 msgstr "Explorer les dépenses fédérales"
@@ -801,7 +787,7 @@ msgstr "Budget fédéral 2025 | Canada Spends"
 msgid "Federal Fall 2025 Government Budget"
 msgstr "Budget gouvernemental fédéral de l'automne 2025"
 
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:111
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:108
 msgid "Federal Government Spending"
 msgstr "Dépenses du gouvernement fédéral"
 
@@ -809,15 +795,11 @@ msgstr "Dépenses du gouvernement fédéral"
 msgid "Federal Government Spending | Canada Spends"
 msgstr "Dépenses du gouvernement fédéral | Canada Spends"
 
-#: src/components/FederalWorkforce.tsx:179
-msgid "Federal organizations"
-msgstr "Organisations fédérales"
-
-#: src/components/FederalWorkforceStrip.tsx:64
+#: src/components/FederalWorkforceStrip.tsx:83
 msgid "federal public service headcount (as of March 31)"
 msgstr "effectif de la fonction publique fédérale (au 31 mars)"
 
-#: src/components/FederalWorkforceStrip.tsx:52
+#: src/components/FederalWorkforceStrip.tsx:71
 msgid "Federal public service headcount (as of March 31) and personnel spending — salaries and benefits — for the selected fiscal year. Headcount is from Treasury Board; personnel spending is from the Public Accounts standard objects."
 msgstr "Effectif de la fonction publique fédérale (au 31 mars) et dépenses en personnel — traitements et avantages sociaux — pour l’exercice sélectionné. L’effectif provient du Conseil du Trésor; les dépenses en personnel proviennent des articles courants des Comptes publics."
 
@@ -842,7 +824,7 @@ msgstr "Impôts fédéraux"
 msgid "Federal Total"
 msgstr "Total fédéral"
 
-#: src/components/FederalWorkforceStrip.tsx:49
+#: src/components/FederalWorkforceStrip.tsx:68
 msgid "Federal workforce"
 msgstr "Effectif de la fonction publique fédérale"
 
@@ -921,7 +903,7 @@ msgid "First Nations Remuneration Overview | Canada Spends"
 msgstr "Aperçu de la rémunération des Premières Nations | Canada Spends"
 
 #: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:344
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:124
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:121
 msgid "Fiscal year"
 msgstr "Exercice"
 
@@ -956,7 +938,7 @@ msgid "FY"
 msgstr "EF"
 
 #. placeholder {0}: summary.financialYear
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:144
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:141
 msgid "FY {0} Revenue and Spending"
 msgstr "Revenus et dépenses de l’exercice {0}"
 
@@ -966,7 +948,7 @@ msgstr "Revenus et dépenses de l’exercice {0}"
 msgid "Get data-driven insights into how the {0} government’s revenue and spending affect {1} residents and programs."
 msgstr "Obtenez des analyses basées sur les données sur la façon dont les revenus et les dépenses du gouvernement de {0} affectent les résidents et les programmes de {1}."
 
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:114
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:111
 msgid "Get data-driven insights into how the federal government’s revenue and spending affect Canadian lives and programs."
 msgstr "Découvrez, données à l’appui, comment les revenus et les dépenses du gouvernement fédéral influent sur la vie des Canadiens et sur les programmes."
 
@@ -1018,35 +1000,23 @@ msgstr "Les dépenses gouvernementales ne devraient pas être une boîte noire. 
 msgid "Government spending shouldn't be a black box. We turn complex data into clear, non-partisan insights so every Canadian knows where their money goes."
 msgstr "Les dépenses gouvernementales ne devraient pas être une boîte noire. Nous transformons des données complexes en analyses claires et non partisanes pour que chaque Canadien sache où va son argent."
 
-#: src/components/FederalWorkforce.tsx:105
-msgid "Government Workforce"
-msgstr "Effectif gouvernemental"
-
 #: src/components/first-nations/RemunerationTable.tsx:285
 msgid "Grand Total"
 msgstr "Total général"
-
-#: src/components/SalaryDistributionChart.tsx:101
-msgid "Group"
-msgstr "Groupe"
 
 #: src/app/[lang]/(main)/contact/page.tsx:24
 msgid "Have questions or feedback? Email us at hi@canadaspends.com or connect with us on X @canada_spends - we'd love to hear from you!"
 msgstr "Vous avez des questions ou des commentaires? Envoyez-nous un courriel à hi@canadaspends.com ou connectez-vous avec nous sur X @canada_spends - nous aimerions avoir de vos nouvelles!"
 
-#: src/components/FederalWorkforce.tsx:116
-msgid "Headcount"
-msgstr "Effectif"
-
-#: src/components/FederalWorkforceStrip.tsx:81
+#: src/components/FederalWorkforceStrip.tsx:100
 msgid "Headcount over time"
 msgstr "Évolution de l’effectif"
 
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:251
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:246
 msgid "Headline and ministry totals use the Volume I consolidated (accrual) basis; department pages use the Volume II appropriations basis (where the line-level detail lives), so a department’s own total differs from its ministry row here. See the <0>methodology</0> for the allocation method and known differences."
 msgstr "Les totaux principaux et ministériels sont présentés selon la méthode de comptabilité d'exercice consolidée du Volume I; les pages ministérielles utilisent la méthode des crédits du Volume II (où résident les détails par poste), de sorte que le total propre d'un ministère diffère de sa ligne ministérielle présentée ici. Consultez la <0>méthodologie</0> pour la méthode de répartition et les différences connues."
 
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:149
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:146
 msgid "Headline totals are on a Volume I consolidated (accrual) basis. Explore revenue and spending categories below."
 msgstr "Les totaux principaux sont établis selon la comptabilité d’exercice consolidée du volume I. Explorez les catégories de revenus et de dépenses ci-dessous."
 
@@ -1054,7 +1024,7 @@ msgstr "Les totaux principaux sont établis selon la comptabilité d’exercice 
 msgid "Headline totals on the overview page (total spending, revenue, and deficit) use the Volume I consolidated financial statements, which are prepared on an accrual basis and include consolidated Crown corporations. For recent years the overview ministry list and the thematic Sankey are also on this Volume I accrual basis (see the allocation note below), so they sum to the headline exactly. Department pages present net expenditures by standard object from Volume II of the Public Accounts — the same figures the department chart draws (personnel, professional and special services, transfer payments, and so on, net of internal and external revenues). The stat card, the entity list, and the chart on a department page are therefore one consistent number. This net figure differs from the Volume I consolidated headline, so a department’s own total will not match its accrual ministry row on the overview. Parliamentary authorities (votes, allotments, and lapsed amounts) are no longer shown on department pages. The reconciliation below bridges the two bases."
 msgstr "Les totaux principaux de la page de synthèse (total des dépenses, des revenus et du déficit) sont fondés sur les états financiers consolidés du Volume I, préparés selon la méthode de comptabilité d'exercice et comprenant les sociétés d'État consolidées. Pour les exercices récents, la liste ministérielle et le diagramme de Sankey thématique de la page de synthèse sont eux aussi présentés selon cette méthode de comptabilité d'exercice du Volume I (voir la note sur la répartition ci-dessous); ils totalisent donc exactement le total principal. Les pages ministérielles présentent les dépenses nettes par article courant tirées du Volume II des Comptes publics — les mêmes chiffres que trace le graphique ministériel (personnel, services professionnels et spéciaux, paiements de transfert, etc., nets des revenus internes et externes). La fiche sommaire, la liste des entités et le graphique d'une page ministérielle constituent donc un seul chiffre cohérent. Ce chiffre net diffère du total consolidé du Volume I; le total propre d'un ministère ne correspondra donc pas à sa ligne ministérielle en comptabilité d'exercice de la page de synthèse. Les autorisations parlementaires (crédits, affectations et montants périmés) ne sont plus présentées sur les pages ministérielles. Le rapprochement ci-dessous fait le pont entre les deux méthodes."
 
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:263
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:258
 msgid "Headline totals use the Volume I consolidated basis; ministry and department figures use the Volume II appropriations basis. These bases differ; see the <0>methodology</0> for the reconciliation and known differences."
 msgstr "Les totaux principaux utilisent la base consolidée du volume I; les chiffres des ministères utilisent la base des autorisations du volume II. Ces bases diffèrent; consultez la <0>méthodologie</0> pour le rapprochement et les écarts connus."
 
@@ -1157,10 +1127,6 @@ msgstr "Analyse approfondie et perspectives sur les dépenses gouvernementales c
 #: src/components/Sankey/BudgetSankey.tsx:479
 msgid "Income Tax Revenues"
 msgstr "Revenus de l'impôt sur le revenu"
-
-#: src/components/TenureChart.tsx:8
-msgid "Indeterminate"
-msgstr "Indéterminé"
 
 #: src/components/DepartmentList.tsx:21
 msgid "Indigenous Services Canada + Crown-Indigenous Relations and Northern Affairs Canada"
@@ -1284,11 +1250,11 @@ msgstr "Des ministères ont été renommés et fusionnés entre 2013 et 2025 (pa
 msgid "Ministry"
 msgstr "Ministère"
 
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:228
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:225
 msgid "Ministry totals are on a Volume II appropriations basis. Select a ministry for its programs, entities, and line items."
 msgstr "Les totaux ministériels sont établis selon les autorisations du volume II. Sélectionnez un ministère pour voir ses programmes, ses entités et ses postes détaillés."
 
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:220
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:217
 msgid "Ministry totals are on the Volume I consolidated (accrual) basis, allocated to portfolios by segment, and sum to the headline total (including the two non-departmental statement lines below). Select a ministry to see its Volume II appropriations detail."
 msgstr "Les totaux ministériels sont présentés selon la méthode de comptabilité d'exercice consolidée du Volume I, répartis par portefeuille selon le secteur, et totalisent le total principal (y compris les deux lignes d'état non ministérielles ci-dessous). Sélectionnez un ministère pour consulter le détail de ses crédits du Volume II."
 
@@ -1425,17 +1391,9 @@ msgstr "Impôt sur le revenu des non-résidents"
 msgid "Note"
 msgstr "Note"
 
-#: src/components/SalaryDistributionChart.tsx:159
-msgid "Note the different salary ranges prior to 2023. Information for small numbers has been suppressed (values of 0 are actually counts of 1 to 5)."
-msgstr "Notez les différentes fourchettes salariales avant 2023. Les informations pour les petits nombres ont été supprimées (les valeurs de 0 représentent en fait des comptes de 1 à 5)."
-
 #: src/components/first-nations/FirstNationsPageContent.tsx:454
 msgid "Notes to Financial Statements"
 msgstr "Notes aux états financiers"
-
-#: src/components/SalaryDistributionChart.tsx:153
-msgid "Number of Employees"
-msgstr "Nombre d'employés"
 
 #: src/components/JurisdictionPageContent.tsx:366
 msgid "Numbers are reported on an accrual basis."
@@ -1551,15 +1509,11 @@ msgstr "Montant du paiement"
 msgid "Payroll Contributions"
 msgstr "Cotisations salariales"
 
-#: src/components/FederalWorkforce.tsx:184
-msgid "PBO"
-msgstr "DPB"
-
 #: src/components/JurisdictionPageContent.tsx:283
 msgid "Per Capita Spending"
 msgstr "Dépenses par habitant"
 
-#: src/components/FederalWorkforceStrip.tsx:75
+#: src/components/FederalWorkforceStrip.tsx:94
 msgid "per employee (salaries and benefits)"
 msgstr "par employé (traitements et avantages sociaux)"
 
@@ -1574,7 +1528,7 @@ msgstr "par résident"
 msgid "Percentage of federal spending, {0}–{1}"
 msgstr "Pourcentage des dépenses fédérales, {0}–{1}"
 
-#: src/components/FederalWorkforceStrip.tsx:68
+#: src/components/FederalWorkforceStrip.tsx:87
 msgid "Personnel spending in FY {financialYear}"
 msgstr "Dépenses en personnel de l’exercice {financialYear}"
 
@@ -1767,11 +1721,11 @@ msgstr "Revenus"
 msgid "Revenue and Expenses FY {fiscalYear}"
 msgstr "Revenus et dépenses EF {fiscalYear}"
 
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:173
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:170
 msgid "revenue minus spending (Vol I)"
 msgstr "revenus moins dépenses (vol. I)"
 
-#: src/components/FederalWorkforceStrip.tsx:70
+#: src/components/FederalWorkforceStrip.tsx:89
 msgid "salaries and benefits (standard object)"
 msgstr "traitements et avantages sociaux (article courant)"
 
@@ -1779,17 +1733,9 @@ msgstr "traitements et avantages sociaux (article courant)"
 msgid "Salaries, honoraria, travel, and other expenses paid to elected officials and senior employees during fiscal year {fiscalYear}."
 msgstr "Salaires, honoraires, déplacements et autres dépenses versés aux élus et aux cadres supérieurs au cours de l'exercice financier {fiscalYear}."
 
-#: src/components/FederalWorkforce.tsx:194
+#: src/components/FederalWorkforceStrip.tsx:143
 msgid "Salary Distribution"
 msgstr "Répartition des salaires"
-
-#: src/components/SalaryDistributionChart.tsx:134
-msgid "Salary Distribution - {selectedYear} ({selectedGroup})"
-msgstr "Répartition des salaires - {selectedYear} ({selectedGroup})"
-
-#: src/components/SalaryDistributionChart.tsx:152
-msgid "Salary Range"
-msgstr "Échelle des salaires"
 
 #: src/app/[lang]/(main)/whistleblowers/page.tsx:175
 msgid "Save your receipt code securely—you will need it to check for responses and communicate with our team."
@@ -1848,7 +1794,7 @@ msgstr "Sécurité sociale"
 msgid "Social Transfer to Provinces"
 msgstr "Transfert social aux provinces"
 
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:198
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:195
 #: src/components/first-nations/RemunerationOverview.tsx:460
 #: src/components/JurisdictionPageContent.tsx:385
 msgid "Source"
@@ -1866,8 +1812,7 @@ msgstr "PDF source"
 msgid "Source tables arrive in mixed units (Volume I in millions, Volume II in dollars, open data CSVs in thousands). All chart data is normalized to billions of dollars; line-item tables are shown in dollars. Each JSON file records its units explicitly."
 msgstr "Les tableaux sources utilisent des unités mixtes (volume I en millions, volume II en dollars, fichiers CSV de données ouvertes en milliers). Toutes les données des graphiques sont normalisées en milliards de dollars; les tableaux de postes détaillés sont présentés en dollars. Chaque fichier JSON indique explicitement ses unités."
 
-#: src/components/FederalWorkforce.tsx:207
-#: src/components/FederalWorkforceStrip.tsx:87
+#: src/components/FederalWorkforceStrip.tsx:163
 msgid "Source:"
 msgstr "Source :"
 
@@ -1878,7 +1823,6 @@ msgstr "Source :"
 msgid "Sources"
 msgstr "Sources"
 
-#: src/components/FederalWorkforce.tsx:182
 #: src/components/JurisdictionPageContent.tsx:436
 #: src/components/JurisdictionPageContent.tsx:451
 msgid "Sources:"
@@ -1904,7 +1848,7 @@ msgid "Spending by entity, FY {0}"
 msgstr "Dépenses par entité, exercice {0}"
 
 #. placeholder {0}: summary.financialYear
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:216
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:213
 msgid "Spending by ministry, FY {0}"
 msgstr "Dépenses par ministère, exercice {0}"
 
@@ -1918,7 +1862,7 @@ msgstr "Les données de dépenses ne sont pas encore disponibles pour cette comb
 msgid "Spending Database"
 msgstr "Base de données des dépenses"
 
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:179
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:176
 msgid "spending minus revenue (Vol I)"
 msgstr "dépenses moins revenus (vol. I)"
 
@@ -1947,10 +1891,6 @@ msgstr "Restez connecté en nous suivant sur"
 msgid "Steps to submit via Tor:"
 msgstr "Étapes pour soumettre via Tor :"
 
-#: src/components/TenureChart.tsx:9
-msgid "Student + Casual"
-msgstr "Étudiant + Occasionnel"
-
 #: src/app/[lang]/(main)/whistleblowers/page.tsx:28
 msgid "Submit anonymous tips securely using our encrypted whistleblower platform. Available via Tor for maximum privacy."
 msgstr "Soumettez des informations anonymes en toute sécurité grâce à notre plateforme de dénonciation chiffrée. Disponible via Tor pour une confidentialité maximale."
@@ -1976,7 +1916,7 @@ msgid "Summary"
 msgstr "Résumé"
 
 #. placeholder {0}: summary.financialYear
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:171
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:168
 msgid "Surplus in FY {0}"
 msgstr "Excédent de l’exercice {0}"
 
@@ -2029,17 +1969,9 @@ msgstr "Année d'imposition"
 msgid "Taxes"
 msgstr "Impôts"
 
-#: src/components/TenureChart.tsx:10
-msgid "Term"
-msgstr "Durée déterminée"
-
 #: src/components/Sankey/BudgetSankey.tsx:395
 msgid "Territorial Formula Financing"
 msgstr "Financement des territoires par formule"
-
-#: src/components/FederalWorkforce.tsx:155
-msgid "The average employee is 43.3 years old"
-msgstr "L'âge moyen des employés est de 43,3 ans"
 
 #: src/app/[lang]/(main)/about/faq.tsx:61
 msgid "The best way to support us is to engage with our content. Like, share, and comment on our posts on social media. Even better, share our work with a friend and encourage them to do the same. Together, we can expand the conversation and reach more people with these important facts."
@@ -2166,10 +2098,6 @@ msgstr "Total impôt fédéral"
 msgid "Total Financial Assets"
 msgstr "Total des actifs financiers"
 
-#: src/components/FederalWorkforce.tsx:118
-msgid "Total full-time equivalents"
-msgstr "Équivalents temps plein totaux"
-
 #: src/components/first-nations/FinancialPositionStats.tsx:191
 msgid "Total Liabilities"
 msgstr "Total des passifs"
@@ -2207,7 +2135,7 @@ msgid "Total revenue in {0}"
 msgstr "Revenus totaux en {0}"
 
 #. placeholder {0}: summary.financialYear
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:164
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:161
 msgid "Total revenue in FY {0}"
 msgstr "Revenus totaux de l’exercice {0}"
 
@@ -2233,11 +2161,11 @@ msgid "Total spending in {0}"
 msgstr "Dépenses totales en {0}"
 
 #. placeholder {0}: summary.financialYear
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:157
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:154
 msgid "Total spending in FY {0}"
 msgstr "Dépenses totales de l’exercice {0}"
 
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:191
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:188
 msgid "Total spending:"
 msgstr "Dépenses totales :"
 
@@ -2245,10 +2173,6 @@ msgstr "Dépenses totales :"
 #: src/components/TaxBreakdownAccordion.tsx:120
 msgid "Total Tax"
 msgstr "Impôt total"
-
-#: src/components/FederalWorkforce.tsx:130
-msgid "Total Wages"
-msgstr "Salaires totaux"
 
 #: src/components/LineItemTable.tsx:150
 msgid "Transfer payments"
@@ -2270,12 +2194,7 @@ msgstr "Traduction"
 msgid "Transport Canada"
 msgstr "Transports Canada"
 
-#: src/components/FederalWorkforce.tsx:188
-#: src/components/FederalWorkforce.tsx:209
-msgid "Treasury Board"
-msgstr "Conseil du Trésor"
-
-#: src/components/FederalWorkforceStrip.tsx:89
+#: src/components/FederalWorkforceStrip.tsx:165
 msgid "Treasury Board of Canada Secretariat"
 msgstr "Secrétariat du Conseil du Trésor du Canada"
 
@@ -2283,7 +2202,7 @@ msgstr "Secrétariat du Conseil du Trésor du Canada"
 msgid "Tribunal Award"
 msgstr "Décision du tribunal"
 
-#: src/components/FederalWorkforce.tsx:138
+#: src/components/FederalWorkforceStrip.tsx:126
 msgid "Type of Tenure"
 msgstr "Type d'emploi"
 
@@ -2332,7 +2251,7 @@ msgstr "Voir les données sources"
 
 #: src/app/[lang]/(main)/budget/page.tsx:242
 #: src/app/[lang]/(main)/federal/budget/page.tsx:281
-#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:209
+#: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:206
 #: src/components/JurisdictionPageContent.tsx:393
 msgid "View this chart in full screen"
 msgstr "Voir ce graphique en plein écran"
@@ -2454,12 +2373,7 @@ msgstr "Pourquoi avez-vous commencé ce projet?"
 msgid "Why Submit a Tip?"
 msgstr "Pourquoi soumettre une information?"
 
-#: src/components/FederalWorkforce.tsx:108
-msgid "Workforce figures are sourced from Treasury Board and PBO demographic data (latest available through 2023–24) and are independent of the Public Accounts fiscal year shown above."
-msgstr "Les chiffres sur l’effectif proviennent des données démographiques du Conseil du Trésor et du DPB (les plus récentes disponibles allant jusqu’à 2023-2024) et sont indépendants de l’exercice des Comptes publics indiqué ci-dessus."
-
 #: src/components/first-nations/RemunerationOverview.tsx:365
-#: src/components/SalaryDistributionChart.tsx:80
 msgid "Year"
 msgstr "Année"
 

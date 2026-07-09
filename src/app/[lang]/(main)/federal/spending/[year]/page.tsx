@@ -1,6 +1,5 @@
 import UpdatedAt from "@/app/[lang]/(main)/federal/spending/_common/updatedAt";
 import { BillionsBarList } from "@/components/BillionsBarList";
-import { FederalWorkforce } from "@/components/FederalWorkforce";
 import { FederalWorkforceStrip } from "@/components/FederalWorkforceStrip";
 import {
   InflationProvider,
@@ -25,7 +24,6 @@ import { YearSelector } from "@/components/YearSelector";
 import {
   getFederalIndex,
   getFederalSankey,
-  getFederalLatestYear,
   getFederalSummary,
   getFederalWorkforce,
   getFederalWorkforceSeries,
@@ -95,7 +93,6 @@ export default async function FederalYearOverview({
   );
 
   const methodologyPath = localizedPath("/federal/spending/methodology", lang);
-  const isLatestYear = yearNum === getFederalLatestYear();
   const workforce = getFederalWorkforce(year);
   const workforceSeries = workforce ? getFederalWorkforceSeries() : [];
 
@@ -242,8 +239,6 @@ export default async function FederalYearOverview({
               lang={lang}
             />
           )}
-
-          {isLatestYear && <FederalWorkforce />}
 
           <Section>
             <P className="text-sm text-foreground/60">

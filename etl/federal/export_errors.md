@@ -1,6 +1,6 @@
 # Federal export report
 
-Generated: 2026-07-08T19:25:05Z
+Generated: 2026-07-09T14:21:10Z
 
 Shipped years: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025
 
@@ -251,3 +251,17 @@ Standard-object GROSS total vs Vol II allotment expenditures, $B. Out-of-toleran
 - **immigration-refugees-and-citizenship**: allotment 6.874, standard-object gross 7.482, Δ +0.608 (tol ±0.137)
 - **innovation-science-and-industry**: allotment 11.147, standard-object gross 11.382, Δ +0.235 (tol ±0.223)
 - **public-services-and-procurement-canada**: allotment 10.552, standard-object gross 13.356, Δ +2.804 (tol ±0.211)
+
+## Workforce dimension sums (informational)
+
+Dimensions whose band counts sum >1% away from the year's headcount. The salary series covers the employment-equity population (a subset of the federal public service), so its shortfall is a scope difference, not an extraction error.
+
+- **2017 salary bands**: Σ 185484 vs headcount 262696 (-29.4%)
+- **2018 salary bands**: Σ 192467 vs headcount 273571 (-29.6%)
+- **2019 salary bands**: Σ 203268 vs headcount 287983 (-29.4%)
+- **2020 salary bands**: Σ 214120 vs headcount 300450 (-28.7%)
+- **2021 salary bands**: Σ 228345 vs headcount 319601 (-28.6%)
+- **2022 salary bands**: Σ 236133 vs headcount 335957 (-29.7%)
+- **2023 salary bands**: Σ 253411 vs headcount 357247 (-29.1%)
+- **2024 salary bands**: Σ 266433 vs headcount 367772 (-27.6%)
+- **2025 salary bands**: Σ 266935 vs headcount 357965 (-25.4%)

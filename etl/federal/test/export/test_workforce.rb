@@ -119,4 +119,53 @@ class TestExportWorkforce < Minitest::Test
 
     assert_equal first, second
   end
+
+  # --- demographics dimensions -----------------------------------------
+
+  def test_age_and_tenure_dimensions_sum_exactly_to_headcount
+    @command.call(['--year', '2024'])
+    wf = load(2024)
+
+    %w[ageBands tenure].each do |dim|
+      bands = wf[dim]
+      refute_nil bands, "expected #{dim} for 2024"
+      assert_equal wf['headcount'], bands.sum { |b| b['count'] },
+                   "#{dim} carries the published Unknown residual, so it sums exactly"
+      bands.each do |b|
+        assert b['key'] && !b['key'].empty?
+        assert b['label_en'] && b['label_fr']
+        assert_kind_of Integer, b['count']
+      end
+    end
+  end
+
+  # The salary series covers the employment-equity population (a subset of the
+  # federal public service): present from 2017, absent before, and its sum runs
+  # well below the headcount — a reported scope difference, not an error.
+  def test_salary_bands_present_from_2017_and_scope_reported
+    @command.call(['--all-years'])
+
+    refute load(2016).key?('salaryBands'), 'TBS does not publish salary ranges before 2017'
+    (2017..2025).each do |year|
+      bands = load(year)['salaryBands']
+      refute_nil bands, "expected salaryBands for #{year}"
+      sum = bands.sum { |b| b['count'] }
+      assert_operator sum, :>, 150_000
+      assert_operator sum, :<, load(year)['headcount']
+    end
+    report = File.read(@errors_path)
+    assert_includes report, 'Workforce dimension sums'
+    assert_includes report, 'salary bands'
+  end
+
+  def test_dimension_band_keys_are_stable_ids
+    @command.call(['--year', '2025'])
+    wf = load(2025)
+
+    assert_equal 'under-20', wf['ageBands'].first['key']
+    assert_equal '65-plus', wf['ageBands'][-2]['key'] # last real band before unknown
+    assert_includes wf['tenure'].map { |b| b['key'] }, 'indeterminate'
+    assert_equal 'under-50000', wf['salaryBands'].first['key']
+    assert_equal '150000-and-over', wf['salaryBands'].last['key']
+  end
 end

@@ -6,6 +6,240 @@
   "averagePersonnelCost": 148116,
   "source": "Treasury Board of Canada Secretariat — Population of the Federal Public Service",
   "source_url": "https://www.canada.ca/en/treasury-board-secretariat/services/innovation/human-resources-statistics/population-federal-public-service-department.html",
+  "ageBands": [
+    {
+      "key": "under-20",
+      "label_en": "<20",
+      "label_fr": "<20",
+      "count": 594
+    },
+    {
+      "key": "20-24",
+      "label_en": "20-24",
+      "label_fr": "20-24",
+      "count": 9933
+    },
+    {
+      "key": "25-29",
+      "label_en": "25-29",
+      "label_fr": "25-29",
+      "count": 17370
+    },
+    {
+      "key": "30-34",
+      "label_en": "30-34",
+      "label_fr": "30-34",
+      "count": 26707
+    },
+    {
+      "key": "35-39",
+      "label_en": "35-39",
+      "label_fr": "35-39",
+      "count": 35633
+    },
+    {
+      "key": "40-44",
+      "label_en": "40-44",
+      "label_fr": "40-44",
+      "count": 38414
+    },
+    {
+      "key": "45-49",
+      "label_en": "45-49",
+      "label_fr": "45-49",
+      "count": 38304
+    },
+    {
+      "key": "50-54",
+      "label_en": "50-54",
+      "label_fr": "50-54",
+      "count": 42296
+    },
+    {
+      "key": "55-59",
+      "label_en": "55-59",
+      "label_fr": "55-59",
+      "count": 32943
+    },
+    {
+      "key": "60-64",
+      "label_en": "60-64",
+      "label_fr": "60-64",
+      "count": 14831
+    },
+    {
+      "key": "65-plus",
+      "label_en": "65+",
+      "label_fr": "65+",
+      "count": 5667
+    },
+    {
+      "key": "unknown",
+      "label_en": "Unknown",
+      "label_fr": "Non disponible",
+      "count": 4
+    }
+  ],
+  "tenure": [
+    {
+      "key": "casual",
+      "label_en": "Casual",
+      "label_fr": "Employé occasionnel",
+      "count": 7505
+    },
+    {
+      "key": "indeterminate",
+      "label_en": "Indeterminate",
+      "label_fr": "Durée indéterminée",
+      "count": 222474
+    },
+    {
+      "key": "student",
+      "label_en": "Student",
+      "label_fr": "Étudiant",
+      "count": 6281
+    },
+    {
+      "key": "term",
+      "label_en": "Term",
+      "label_fr": "Durée déterminée",
+      "count": 26389
+    },
+    {
+      "key": "unknown",
+      "label_en": "Unknown",
+      "label_fr": "Non disponible",
+      "count": 47
+    }
+  ],
+  "salaryBands": [
+    {
+      "key": "under-5000",
+      "label_en": "Under 5,000",
+      "label_fr": "Moins de 5 000",
+      "count": 69
+    },
+    {
+      "key": "5000-to-9999",
+      "label_en": "5,000 to 9,999",
+      "label_fr": "De 5 000 à 9 999",
+      "count": 130
+    },
+    {
+      "key": "10000-to-14999",
+      "label_en": "10,000 to 14,999",
+      "label_fr": "De 10 000 à 14 999",
+      "count": 62
+    },
+    {
+      "key": "15000-to-19999",
+      "label_en": "15,000 to 19,999",
+      "label_fr": "De 15 000 à 19 999",
+      "count": 142
+    },
+    {
+      "key": "20000-to-24999",
+      "label_en": "20,000 to 24,999",
+      "label_fr": "De 20 000 à 24 999",
+      "count": 204
+    },
+    {
+      "key": "25000-to-29999",
+      "label_en": "25,000 to 29,999",
+      "label_fr": "De 25 000 à 29 999",
+      "count": 297
+    },
+    {
+      "key": "30000-to-34999",
+      "label_en": "30,000 to 34,999",
+      "label_fr": "De 30 000 à 34 999",
+      "count": 344
+    },
+    {
+      "key": "35000-to-39999",
+      "label_en": "35,000 to 39,999",
+      "label_fr": "De 35 000 à 39 999",
+      "count": 1453
+    },
+    {
+      "key": "40000-to-44999",
+      "label_en": "40,000 to 44,999",
+      "label_fr": "De 40 000 à 44 999",
+      "count": 3792
+    },
+    {
+      "key": "45000-to-49999",
+      "label_en": "45,000 to 49,999",
+      "label_fr": "De 45 000 à 49 999",
+      "count": 16631
+    },
+    {
+      "key": "50000-to-54999",
+      "label_en": "50,000 to 54,999",
+      "label_fr": "De 50 000 à 54 999",
+      "count": 20904
+    },
+    {
+      "key": "55000-to-59999",
+      "label_en": "55,000 to 59,999",
+      "label_fr": "De 55 000 à 59 999",
+      "count": 16962
+    },
+    {
+      "key": "60000-to-64999",
+      "label_en": "60,000 to 64,999",
+      "label_fr": "De 60 000 à 64 999",
+      "count": 15551
+    },
+    {
+      "key": "65000-to-69999",
+      "label_en": "65,000 to 69,999",
+      "label_fr": "De 65 000 à 69 999",
+      "count": 17825
+    },
+    {
+      "key": "70000-to-74999",
+      "label_en": "70,000 to 74,999",
+      "label_fr": "De 70 000 à 74 999",
+      "count": 13672
+    },
+    {
+      "key": "75000-to-79999",
+      "label_en": "75,000 to 79,999",
+      "label_fr": "De 75 000 à 79 999",
+      "count": 10527
+    },
+    {
+      "key": "80000-to-84999",
+      "label_en": "80,000 to 84,999",
+      "label_fr": "De 80 000 à 84 999",
+      "count": 18033
+    },
+    {
+      "key": "85000-to-89999",
+      "label_en": "85,000 to 89,999",
+      "label_fr": "De 85 000 à 89 999",
+      "count": 7279
+    },
+    {
+      "key": "90000-to-94999",
+      "label_en": "90,000 to 94,999",
+      "label_fr": "De 90 000 à 94 999",
+      "count": 7448
+    },
+    {
+      "key": "95000-to-99999",
+      "label_en": "95,000 to 99,999",
+      "label_fr": "De 95 000 à 99 999",
+      "count": 8433
+    },
+    {
+      "key": "100000-and-over",
+      "label_en": "100,000 and over",
+      "label_fr": "100 000 ou plus",
+      "count": 25726
+    }
+  ],
   "headcountByDepartment": [
     {
       "name": "Canada Revenue Agency",

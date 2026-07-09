@@ -84,4 +84,95 @@ class TestWorkforce < Minitest::Test
 
     assert_equal names.sort, names
   end
+
+  # --- demographics dimensions -----------------------------------------
+
+  def fixture(name)
+    File.read(File.join(FIXTURE_DIR, name))
+  end
+
+  def test_parse_bands_html_reads_the_federal_public_service_section_only
+    bands = @command.parse_bands_html(fixture('population-by-age-band-excerpt.html'))
+
+    # Government-wide figures (496), not the CPA (416) or SA (80) sections.
+    assert_equal [['<20', 496], ['20-24', 8101], ['65+', 5175], ['Unknown', 1]], bands[2015]
+    assert_equal 478, bands[2016].first[1]
+  end
+
+  def test_parse_bands_html_keeps_unknown_and_excludes_total
+    bands = @command.parse_bands_html(fixture('population-by-tenure-excerpt.html'))
+    labels = bands[2015].map(&:first)
+
+    assert_includes labels, 'Unknown'
+    refute_includes labels, 'Total'
+    assert_equal [['Casual', 8663], ['Indeterminate', 219_668], ['Unknown', 0]], bands[2015]
+  end
+
+  def test_parse_bands_csv_sums_universes_in_band_order
+    bands = @command.parse_bands_csv(fixture('age-band-excerpt.csv'), 'Ageband')
+
+    assert_equal [['<20', 520], ['20-24', 7429], ['65+', 4625]], bands[2014]
+    assert_equal [['<20', 496]], bands[2015]
+  end
+
+  def test_parse_salary_html_pairs_years_tables_and_french_labels
+    salary = @command.parse_salary_html(fixture('salary-range-excerpt-en.html'),
+                                        fixture('salary-range-excerpt-fr.html'))
+
+    assert_equal [2024, 2025], salary.keys.sort
+    first = salary[2025].first
+    assert_equal 'under-50000', first['key']
+    assert_equal 'Under 50,000', first['label_en']
+    assert_equal 'Moins de 50,000', first['label_fr']
+    assert_equal 3030, first['count']
+    # The footnoted Total row is not a band.
+    refute salary[2025].any? { |b| b['label_en'].match?(/total/i) }
+    # 2024 is absent from the FR fixture: English labels are kept.
+    assert_equal '150,000 and over', salary[2024].last['label_en']
+    assert_equal '150,000 and over', salary[2024].last['label_fr']
+    assert_equal '150000-and-over', salary[2024].last['key']
+  end
+
+  def test_band_key_is_stable_and_ascii
+    assert_equal 'under-20', @command.band_key('<20')
+    assert_equal '65-plus', @command.band_key('65+')
+    assert_equal 'unknown', @command.band_key('Unknown')
+    assert_equal '50000-to-54999', @command.band_key('50,000 to 54,999')
+    assert_equal '150000-and-over', @command.band_key('150,000 and over')
+  end
+
+  def test_backfill_bands_prefers_html_and_attaches_french_labels
+    html_bands = @command.parse_bands_html(fixture('population-by-age-band-excerpt.html'))
+    csv_bands = @command.parse_bands_csv(fixture('age-band-excerpt.csv'), 'Ageband')
+    dims = @command.backfill_bands(html_bands, csv_bands,
+                                   PbCli::Commands::Workforce::AGE_FR)
+
+    # 2014 exists only in the CSV; 2015 in both, HTML wins (496 not 496-from-csv).
+    assert_equal 520, dims[2014].first['count']
+    assert_equal 496, dims[2015].first['count']
+    assert_equal 4, dims[2015].size
+    unknown = dims[2015].find { |b| b['key'] == 'unknown' }
+    assert_equal 'Non disponible', unknown['label_fr']
+    assert_equal '<20', dims[2015].first['label_fr'] # numeric bands identical in French
+  end
+
+  def test_merge_carries_dimensions_per_year
+    dims = {
+      age: @command.backfill_bands(
+        @command.parse_bands_html(fixture('population-by-age-band-excerpt.html')),
+        @command.parse_bands_csv(fixture('age-band-excerpt.csv'), 'Ageband'),
+        PbCli::Commands::Workforce::AGE_FR
+      ),
+      salary: @command.parse_salary_html(fixture('salary-range-excerpt-en.html'),
+                                         fixture('salary-range-excerpt-fr.html'))
+    }
+    merged = @command.merge(@command.parse_html(@html), @command.parse_csv(@csv), dims)
+
+    assert merged[2015].key?('ageBands')
+    assert_equal 496, merged[2015]['ageBands'].first['count']
+    # The salary fixture has no 2015/2016 table: dimension omitted, never faked.
+    refute merged[2015].key?('salaryBands')
+    refute merged[2016].key?('salaryBands')
+    refute merged[2016].key?('tenure')
+  end
 end
