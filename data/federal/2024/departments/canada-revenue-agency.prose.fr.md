@@ -7,7 +7,7 @@ L'Agence du revenu du Canada (ARC) est l'institution fédérale responsable de l
 
 {{section:stats}}
 
-L'Agence du revenu du Canada a dépensé {{totalSpending}} au cours de l'exercice 2024, ce qui représente {{percentageOfFederal}} des 513,9 milliards de dollars de dépenses fédérales totales. Ses dépenses soutiennent principalement l'administration fiscale, la prestation de programmes de prestations, l'application de la conformité et la modernisation des TI.
+L'Agence du revenu du Canada a dépensé {{totalSpending}} au cours de l'exercice 2024, ce qui représente {{percentageOfFederal}} des 521,4 milliards de dollars de dépenses fédérales totales. Ses dépenses soutiennent principalement l'administration fiscale, la prestation de programmes de prestations, l'application de la conformité et la modernisation des TI.
 
 {{section:entities}}
 
@@ -15,7 +15,7 @@ Les dépenses de l'ARC ont augmenté plus rapidement que les dépenses fédéral
 
 {{section:historicalShare}}
 
-La plupart des dépenses de l'ARC sont consacrées au personnel et à l'infrastructure informatique soutenant la production des déclarations, la conformité et l'administration des prestations. Au cours de l'exercice 2024, 55,2 % des dépenses nettes de l'agence ont été allouées aux salaires, aux avantages sociaux et aux pensions. Ses plus importantes dépenses comprenaient le traitement de l'impôt sur le revenu des particuliers, les vérifications de l'impôt des sociétés et la prestation de programmes de prestations, ainsi que les accords intergouvernementaux avec les provinces et les territoires.
+La plupart des dépenses de l'ARC sont consacrées au personnel et à l'infrastructure informatique soutenant la production des déclarations, la conformité et l'administration des prestations. Au cours de l'exercice 2024, 35,1 % des dépenses nettes de l'agence ont été allouées aux salaires, aux avantages sociaux et aux pensions. Ses plus importantes dépenses comprenaient le traitement de l'impôt sur le revenu des particuliers, les vérifications de l'impôt des sociétés et la prestation de programmes de prestations, ainsi que les accords intergouvernementaux avec les provinces et les territoires.
 
 {{section:miniSankey}}
 
@@ -28,4 +28,5 @@ Chiffres : « 16,8 G$ » et « 3,2 % » de la page originale remplacés par {{to
 Comparaisons « depuis 1995 / +74,9 % / +302 % / 1,85 point de pourcentage » supprimées :
 fondées sur des données antérieures à 2014 absentes du JSON et sur l'ancienne base.
 Section tokens (spec Part A) added, EN/FR identical, reproducing the original production component order: stats, entities, historicalShare, miniSankey. Unreferenced sections auto-append in default order: lineItems.
+Figure sync (adversarial-review M1/M2/M3, 2026-07-10): total federal spending $513.9B->$521.4B (summary.json totalSpending 521.425); salary share 55.2%->35.1% (miniSankey Personnel 5.895203 / totalSpending 16.80193).
 -->

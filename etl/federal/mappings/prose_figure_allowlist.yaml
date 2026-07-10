@@ -1,0 +1,47 @@
+# Figure-consistency lint allowlist (PbCli::Prose::FigureLint).
+#
+# Each entry exempts one literal $ / % figure in a reviewed prose BODY that
+# cannot be derived from that department-year's shipped JSON because it quotes
+# the SOURCE Public Accounts / agency corporate reporting narrative rather than
+# our spending contract. Every entry must carry a `reason`. Keep EN and FR in
+# sync. Do NOT allowlist a figure that our own JSON contradicts (fix the prose
+# instead) -- this list is for genuinely-external, manually-verified figures.
+files:
+  2024/departments/canada-revenue-agency.prose.en.md:
+    - type: "$"
+      value: 379
+      reason: >-
+        CRA administers ~$379B of federal tax revenue (personal + corporate +
+        GST/other), quoted from the Public Accounts / CRA corporate reporting,
+        not our Vol II spending JSON. Internally consistent with the shipped
+        federal revenue (521.4B total, 459.5B revenue; 379/459.5 = 82.5%).
+    - type: "%"
+      value: 82
+      reason: >-
+        "more than 82% of federal revenues" -- the $379B share of federal
+        revenue (459.549B); source narrative figure, consistent, not in JSON.
+    - type: "$"
+      value: 46
+      reason: >-
+        "$46 billion in benefits and credits" (CCB, GST/HST credit, Canada
+        Carbon Rebate, etc.) administered by CRA -- operational context from
+        CRA corporate reporting; not independently verifiable from our JSON.
+    - type: "$"
+      value: 11.5
+      reason: >-
+        "recovered an estimated $11.5 billion in lost revenue" -- CRA
+        compliance/fiscal-impact figure from corporate reporting; operational
+        context, not a spending-basis total, not derivable from our JSON.
+  2024/departments/canada-revenue-agency.prose.fr.md:
+    - type: "$"
+      value: 379
+      reason: FR mirror of the EN $379B tax-revenue source figure.
+    - type: "%"
+      value: 82
+      reason: FR mirror of the EN "82% of federal revenues" source figure.
+    - type: "$"
+      value: 46
+      reason: FR mirror of the EN $46B benefits-administered source figure.
+    - type: "$"
+      value: 11.5
+      reason: FR mirror of the EN $11.5B recovered-revenue source figure.

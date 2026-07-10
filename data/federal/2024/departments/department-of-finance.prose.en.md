@@ -7,7 +7,7 @@ The Department of Finance (Finance Canada) is a central federal department respo
 
 {{section:stats}}
 
-The Department of Finance spent {{totalSpending}} in fiscal year (FY) 2024, or {{percentageOfFederal}} of the $513.9 billion in overall federal spending—the largest total of any federal department.
+The Department of Finance spent {{totalSpending}} in fiscal year (FY) 2024, or {{percentageOfFederal}} of the $521.4 billion in overall federal spending—the largest total of any federal department.
 
 {{section:entities}}
 
@@ -36,4 +36,5 @@ fell from 33.3% in 2014 to ~26.5% in 2024, so "increased" is wrong) and the pand
 totals ($410.2B/$420B/$720.3B — overall federal figures, not Finance-specific, unverifiable).
 Dropped generic direct/indirect boilerplate.
 Section tokens (spec Part A) added, EN/FR identical, reproducing the original production component order: stats, entities, historicalShare, miniSankey. Unreferenced sections auto-append in default order: lineItems.
+Figure sync (adversarial-review M1/M2/M3, 2026-07-10): total federal spending $513.9B->$521.4B (summary.json totalSpending 521.425).
 -->

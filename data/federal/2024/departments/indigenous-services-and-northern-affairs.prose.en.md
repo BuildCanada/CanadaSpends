@@ -15,7 +15,7 @@ Federal spending on Indigenous priorities shifts over time with population growt
 
 {{section:historicalShare}}
 
-The spending is split across two main entities: the Department of Indigenous Services, at roughly $47 billion, and the Department of Crown-Indigenous Relations and Northern Affairs, at roughly $16 billion, with small amounts flowing through Northern development and research bodies. Much of this spending takes the form of grants and contributions transferred to Indigenous communities, organizations, and governments rather than being spent internally.
+The spending is split across two main entities: the Department of Indigenous Services, at roughly $46 billion, and the Department of Crown-Indigenous Relations and Northern Affairs, at roughly $16 billion, with small amounts flowing through Northern development and research bodies. Much of this spending takes the form of grants and contributions transferred to Indigenous communities, organizations, and governments rather than being spent internally.
 
 {{section:miniSankey}}
 
@@ -30,4 +30,5 @@ Figure decisions (FY2024 basis = Volume II appropriations; department JSON total
 - Entity figures "~$47B" / "~$16B" retained (JSON entities: Dept of Indigenous Services 46.532284, Dept of CIRNAC 16.387092; shown on the page's Spending by Entity chart).
 - Cut Oath of Office / Rideau Hall / ministerial-tenure boilerplate and the direct-vs-indirect-spending definitional paragraph (orphaned chart lead-in).
 Section tokens (spec Part A) added, EN/FR identical, reproducing the original production component order: stats, entities, historicalShare, miniSankey. Unreferenced sections auto-append in default order: lineItems.
+Figure sync (adversarial-review M1/M2/M3, 2026-07-10): Dept of Indigenous Services entity $47B->$46B (entities value 46.477).
 -->

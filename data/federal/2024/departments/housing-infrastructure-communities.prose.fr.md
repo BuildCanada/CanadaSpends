@@ -7,11 +7,11 @@ Logement, Infrastructure et Collectivités Canada (LICC) est responsable des pol
 
 {{section:stats}}
 
-LICC a dépensé {{totalSpending}} au cours de l'exercice 2024, soit {{percentageOfFederal}} des 513,9 milliards de dollars de dépenses fédérales totales. Fondé en 2005 sous le nom de Bureau de l'infrastructure du Canada, le mandat et le budget du ministère se sont considérablement élargis, et sa part des dépenses fédérales a environ doublé au cours de la dernière décennie.
+LICC a dépensé {{totalSpending}} au cours de l'exercice 2024, soit {{percentageOfFederal}} des 521,4 milliards de dollars de dépenses fédérales totales. Fondé en 2005 sous le nom de Bureau de l'infrastructure du Canada, le mandat et le budget du ministère se sont considérablement élargis, et sa part des dépenses fédérales a environ doublé au cours de la dernière décennie.
 
 {{section:historicalShare}}
 
-Les dépenses sont dominées par deux entités : le Bureau de l'infrastructure du Canada (7,6 milliards de dollars) et la Société canadienne d'hypothèques et de logement (5,5 milliards de dollars), suivies de l'Autorité du pont Windsor-Detroit (1,3 milliard de dollars).
+Les dépenses sont dominées par deux entités : le Bureau de l'infrastructure du Canada (7,6 milliards de dollars) et la Société canadienne d'hypothèques et de logement (5,4 milliards de dollars), suivies de l'Autorité du pont Windsor-Detroit (1,3 milliard de dollars).
 
 {{section:entities}}
 
@@ -28,4 +28,5 @@ transferts restaurés et vérifiés dans le JSON. Supprimés : « huitième », 
 73,2 % », le « 250 000 $ » de 2005 (non vérifiable) et les totaux de la pandémie (ancienne base).
 La croissance de la part (1,37 % en 2014 → 2,83 % en 2024) est conservée qualitativement.
 Section tokens (spec Part A) added, EN/FR identical, reproducing the original production component order: stats, historicalShare, entities, miniSankey. Unreferenced sections auto-append in default order: lineItems.
+Figure sync (adversarial-review M1/M2/M3, 2026-07-10): total federal spending $513.9B->$521.4B (summary.json totalSpending 521.425); CMHC entity $5.5B->$5.4B (entities value 5.43).
 -->

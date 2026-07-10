@@ -35,12 +35,40 @@ import {
 import { formatNumber } from "@/components/Sankey/utils";
 import { initLingui } from "@/initLingui";
 import { locales } from "@/lib/constants";
-import { localizedPath } from "@/lib/utils";
-import { Trans } from "@lingui/react/macro";
+import { generateHreflangAlternates, localizedPath } from "@/lib/utils";
+import { Trans, useLingui } from "@lingui/react/macro";
 import { notFound } from "next/navigation";
 import { Fragment, type ReactNode } from "react";
 
 export const dynamicParams = false;
+
+// Per-page metadata (adversarial-review m12/m13): a distinct title/description
+// and hreflang/canonical per department-year, instead of the section-root
+// defaults from the layout. Alternates point at this page's fr/en twin.
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string; year: string; department: string }>;
+}) {
+  const { lang, year, department: slug } = await params;
+  initLingui(lang);
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const { t } = useLingui();
+  const valid = isValidFederalYear(year);
+  const department = valid ? getFederalDepartment(year, slug, lang) : null;
+  const summary = valid ? getFederalSummary(year, lang) : null;
+  const name = department?.name ?? slug;
+  const fy = summary?.financialYear ?? year;
+  return {
+    title: t`${name} Spending, FY ${fy} | Canada Spends`,
+    description: t`How ${name} spent its budget in fiscal year ${fy}, by entity, standard object, and transfer-payment program.`,
+    alternates: generateHreflangAlternates(
+      lang,
+      "/federal/spending/[year]/[department]",
+      { year, department: slug },
+    ),
+  };
+}
 
 export async function generateStaticParams() {
   const years = getFederalYears();
@@ -71,6 +99,19 @@ const DEFAULT_SECTION_ORDER = [
 // A whole-line section token, e.g. `{{section:miniSankey}}`.
 const SECTION_TOKEN_LINE = /^\{\{\s*section:([A-Za-z]+)\s*\}\}$/;
 
+// Escape HTML metacharacters so raw markup in a prose fragment (which is
+// LLM-generated civic copy) can never reach the DOM as active markup. This
+// runs BEFORE the bold/link markdown transforms, so `<img onerror=…>` becomes
+// inert text while `**x**` / `[t](u)` (plain ASCII) survive to be transformed.
+function escapeHtml(text: string): string {
+  return text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
 // Minimal, safe markdown-ish rendering for a single committed prose fragment
 // (spec §9). Reviewer-facing HTML comments never reach the DOM; figure
 // placeholders are interpolated from the JSON. Returns null when the fragment
@@ -96,11 +137,15 @@ function renderProseFragment(
         <P key={index}>
           <span
             dangerouslySetInnerHTML={{
-              __html: paragraph
+              // Escape first, THEN apply the two markdown transforms so no raw
+              // HTML survives. Link hrefs are allowlisted to http(s):// — any
+              // other scheme (javascript:, data:, …) renders as plain text.
+              __html: escapeHtml(paragraph)
                 .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
-                .replace(
-                  /\[([^\]]+)\]\(([^)]+)\)/g,
-                  '<a href="$2" class="text-blue-500 underline hover:text-blue-600" target="_blank" rel="noopener noreferrer">$1</a>',
+                .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (match, text, url) =>
+                  /^https?:\/\//i.test(url)
+                    ? `<a href="${url}" class="text-blue-500 underline hover:text-blue-600" target="_blank" rel="noopener noreferrer">${text}</a>`
+                    : match,
                 ),
             }}
           />
@@ -165,6 +210,18 @@ export default async function FederalDepartmentPage({
   }));
 
   const methodologyPath = localizedPath("/federal/spending/methodology", lang);
+  const overviewPath = localizedPath(`/federal/spending/${year}`, lang);
+
+  // Vol I ↔ Vol II seam (adversarial-review M5): the department page shows net
+  // standard-object (Vol II) spending, while the overview ranks the portfolio
+  // by its consolidated accrual expense (Vol I). When those differ materially
+  // (>5%), surface the accrual figure so the two site numbers reconcile.
+  const accrual = department.accrualSpending;
+  const showAccrualNote =
+    accrual != null &&
+    department.totalSpending > 0 &&
+    Math.abs(accrual - department.totalSpending) / department.totalSpending >
+      0.05;
   // Only real ministries (with a slug) link out; the appended Vol I statement
   // rows (Net actuarial losses, Provision) carry no slug and are excluded so
   // the "other departments" list never links to /undefined.
@@ -206,6 +263,17 @@ export default async function FederalDepartmentPage({
             }
           />
         </StatCardContainer>
+        {showAccrualNote && accrual != null && (
+          <P className="text-sm text-foreground/60">
+            <Trans>
+              On the consolidated accrual basis (Volume I), this
+              portfolio&rsquo;s expenses were {formatNumber(accrual, 1e9)} in FY{" "}
+              {summary.financialYear} — see the{" "}
+              <InternalLink href={overviewPath}>overview</InternalLink> and{" "}
+              <InternalLink href={methodologyPath}>methodology</InternalLink>.
+            </Trans>
+          </P>
+        )}
       </Section>
     ),
     miniSankey: (

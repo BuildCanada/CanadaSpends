@@ -7,11 +7,11 @@ Health Canada is the federal department responsible for protecting and improving
 
 {{section:stats}}
 
-Health Canada spent {{totalSpending}} in fiscal year (FY) 2024, or {{percentageOfFederal}} of the $513.9 billion in overall federal spending.
+Health Canada spent {{totalSpending}} in fiscal year (FY) 2024, or {{percentageOfFederal}} of the $521.4 billion in overall federal spending.
 
 {{section:entities}}
 
-Spending is spread across the health portfolio. In FY 2024 the core Department of Health spent $7.1 billion, the Public Health Agency of Canada $4.4 billion, the Canadian Institutes of Health Research $1.3 billion, and the Canadian Food Inspection Agency $1.1 billion.
+Spending is spread across the health portfolio. In FY 2024 the core Department of Health spent $6.8 billion, the Public Health Agency of Canada $4.4 billion, the Canadian Institutes of Health Research $1.3 billion, and the Canadian Food Inspection Agency $1.1 billion.
 
 {{section:historicalShare}}
 
@@ -35,4 +35,5 @@ Dropped "ranked tenth", "10 departments = 73.2%", "since 1995 / +74.9% / -19.9% 
 old basis, unverifiable, and $14.2B peak below the current total). Dropped generic
 direct/indirect boilerplate.
 Section tokens (spec Part A) added, EN/FR identical, reproducing the original production component order: stats, entities, historicalShare, miniSankey. Unreferenced sections auto-append in default order: lineItems.
+Figure sync (adversarial-review M1/M2/M3, 2026-07-10): total federal spending $513.9B->$521.4B (summary.json totalSpending 521.425); Department of Health entity $7.1B->$6.8B (entities value 6.842).
 -->

@@ -7,15 +7,15 @@ The Department of Innovation, Science and Industry (ISED) is the federal departm
 
 {{section:stats}}
 
-ISED spent {{totalSpending}} in fiscal year (FY) 2024, or {{percentageOfFederal}} of the $513.9 billion in overall federal spending, ranking eleventh among federal departments and placing it just outside the ten largest departments that together account for the large majority of federal spending.
+ISED spent {{totalSpending}} in fiscal year (FY) 2024, or {{percentageOfFederal}} of the $521.4 billion in overall federal spending, ranking eleventh among federal departments and placing it just outside the ten largest departments that together account for the large majority of federal spending.
 
 {{section:entities}}
 
-Federal spending shifts over time with population growth, changes in policy and programs, and emerging priorities, and acute events can move it sharply from year to year: during the COVID-19 pandemic, the Government of Canada's total expenses rose from $410.2 billion in 2019 to $420 billion in 2020 and $720.3 billion in 2021. ISED's own spending has grown over the long run, but its share of the federal budget has held close to {{percentageOfFederal}} over the past decade.
+Federal spending shifts over time with population growth, changes in policy and programs, and emerging priorities, and acute events can move it sharply from year to year: during the COVID-19 pandemic, the Government of Canada's total expenses rose from $346.2 billion in 2019 to $373.5 billion in 2020 and $644.2 billion in 2021. ISED's own spending has grown over the long run, but its share of the federal budget has held close to {{percentageOfFederal}} over the past decade.
 
 {{section:miniSankey}}
 
-ISED's budget is spread across several entities. The Department of Industry itself accounts for roughly $4.5 billion, with the balance flowing to science and research bodies in the portfolio — the National Research Council of Canada, the granting councils (the Natural Sciences and Engineering Research Council and the Social Sciences and Humanities Research Council), Statistics Canada, and the Canadian Space Agency, among others. The department is led by the Minister of Innovation, Science and Industry, a member of cabinet appointed by the Governor General on the advice of the Prime Minister.
+ISED's budget is spread across several entities. The Department of Industry itself accounts for roughly $4.3 billion, with the balance flowing to science and research bodies in the portfolio — the National Research Council of Canada, the granting councils (the Natural Sciences and Engineering Research Council and the Social Sciences and Humanities Research Council), Statistics Canada, and the Canadian Space Agency, among others. The department is led by the Minister of Innovation, Science and Industry, a member of cabinet appointed by the Governor General on the advice of the Prime Minister.
 
 <!--
 Figure decisions (FY2024 basis = Volume II; department JSON totalSpending 10.010487, percentageOfFederal 1.9478):
@@ -28,4 +28,5 @@ Figure decisions (FY2024 basis = Volume II; department JSON totalSpending 10.010
 - Entity figures/names restored from JSON entities (Department of Industry 4.469299, NRC 1.525981, NSERC 1.383259, SSHRC 1.160335, Statistics Canada 0.873709, Canadian Space Agency 0.450747; shown on the page's Spending by Entity chart).
 - Cut Oath of Office / Rideau Hall / ministerial-tenure boilerplate.
 Section tokens (spec Part A) added, EN/FR identical, reproducing the original production component order: stats, entities, miniSankey. Unreferenced sections auto-append in default order: historicalShare, lineItems.
+Figure sync (adversarial-review M1/M2/M3, 2026-07-10): total federal spending $513.9B->$521.4B (summary.json totalSpending 521.425); Dept of Industry entity $4.5B->$4.3B (entities value 4.348); COVID-era totals $410.2/$420/$720.3B -> $346.2/$373.5/$644.2B (2019/2020/2021 summary totals, accrual basis).
 -->

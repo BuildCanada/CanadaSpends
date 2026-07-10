@@ -21,9 +21,20 @@ module PbCli
       # skipping ids with no id, no text, or blank text.
       def collect
         items = {}
-        add_sankey(items)
+        # Departments and reconciliation are collected BEFORE the spending
+        # Sankey so that when a stable id is shared by sources with DIFFERENT
+        # English text, the department display name wins (add_item keeps the
+        # first text seen). The site loader keys the department title, its
+        # ministry-list entry, and its mini-Sankey root off that id, so the
+        # department name is the authoritative label. Without this order the
+        # lone cross-source collision -- `governor-general`, shared by the
+        # Sankey node "Office of the Secretary to the Governor General" and the
+        # "Governor General" department -- rendered the wrong French label
+        # ("Bureau du secrétaire...") on the department page (adversarial-review
+        # m7).
         add_departments(items)
         add_reconciliation(items)
+        add_sankey(items)
         items
       end
 

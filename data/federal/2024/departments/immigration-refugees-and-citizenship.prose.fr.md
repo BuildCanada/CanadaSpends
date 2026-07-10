@@ -7,7 +7,7 @@ Immigration, Réfugiés et Citoyenneté Canada (IRCC) est le ministère fédéra
 
 {{section:stats}}
 
-IRCC a dépensé {{totalSpending}} au cours de l'exercice 2024, soit {{percentageOfFederal}} des 513,9 milliards de dollars de dépenses fédérales totales. Sa part des dépenses fédérales a environ doublé au cours de la dernière décennie, à mesure que les volumes d'immigration et les programmes d'établissement ont augmenté.
+IRCC a dépensé {{totalSpending}} au cours de l'exercice 2024, soit {{percentageOfFederal}} des 521,4 milliards de dollars de dépenses fédérales totales. Sa part des dépenses fédérales a environ doublé au cours de la dernière décennie, à mesure que les volumes d'immigration et les programmes d'établissement ont augmenté.
 
 {{section:entities}}
 
@@ -25,4 +25,5 @@ transferts restaurés et vérifiés dans le JSON. Supprimés : « treizième »,
 fragment de titre « Dépenses du gouvernement fédéral isolées ». La croissance de la part
 (0,62 % en 2014 → 1,24 % en 2024) est conservée qualitativement.
 Section tokens (spec Part A) added, EN/FR identical, reproducing the original production component order: stats, entities, miniSankey. Unreferenced sections auto-append in default order: historicalShare, lineItems.
+Figure sync (adversarial-review M1/M2/M3, 2026-07-10): total federal spending $513.9B->$521.4B (summary.json totalSpending 521.425).
 -->

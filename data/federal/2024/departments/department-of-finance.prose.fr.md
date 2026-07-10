@@ -7,7 +7,7 @@ Le ministère des Finances (Finances Canada) est un ministère fédéral central
 
 {{section:stats}}
 
-Le ministère des Finances a dépensé {{totalSpending}} au cours de l'exercice 2024, soit {{percentageOfFederal}} des 513,9 milliards de dollars de dépenses fédérales totales—le total le plus élevé de tous les ministères fédéraux.
+Le ministère des Finances a dépensé {{totalSpending}} au cours de l'exercice 2024, soit {{percentageOfFederal}} des 521,4 milliards de dollars de dépenses fédérales totales—le total le plus élevé de tous les ministères fédéraux.
 
 {{section:entities}}
 
@@ -29,4 +29,5 @@ les transferts totalisent ~98,3 G$, soit ~72 %); remplacé par les grands progra
 transfert vérifiés dans le JSON. Comparaisons « depuis 1995 / +74,9 % / +41,4 % » et les
 totaux de la pandémie supprimés (non vérifiables / antérieurs à 2014).
 Section tokens (spec Part A) added, EN/FR identical, reproducing the original production component order: stats, entities, historicalShare, miniSankey. Unreferenced sections auto-append in default order: lineItems.
+Figure sync (adversarial-review M1/M2/M3, 2026-07-10): total federal spending $513.9B->$521.4B (summary.json totalSpending 521.425).
 -->

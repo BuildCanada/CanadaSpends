@@ -312,8 +312,12 @@ module PbCli
         # Remove elements with wb-invisible class (screen reader hints)
         clone.css('.wb-invisible').each(&:remove)
 
-        # Get the text and normalize whitespace
-        text = clone.text.strip.gsub(/\s+/, ' ')
+        # Collapse ASCII whitespace runs, then trim leading/trailing whitespace
+        # INCLUDING the non-breaking space that leaks from the source HTML
+        # (Ruby's \s / String#strip are ASCII-only, so a leading &nbsp;/
+        # otherwise survived \u2014 adversarial-review m11). Internal non-breaking
+        # spaces (e.g. "section 165") are legitimate typography and preserved.
+        text = clone.text.gsub(/\s+/, " ").gsub(/\A[\u00A0\u2007\u202F ]+|[\u00A0\u2007\u202F ]+\z/, "")
 
         # Remove any remaining footnote patterns that might have been missed
         # Patterns like "Link to footnote X" or standalone footnote markers

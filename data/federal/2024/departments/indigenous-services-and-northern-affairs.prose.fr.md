@@ -15,7 +15,7 @@ Les dépenses fédérales consacrées aux priorités autochtones évoluent au fi
 
 {{section:historicalShare}}
 
-Ces dépenses se répartissent entre deux entités principales : le ministère des Services aux Autochtones, à hauteur d'environ 47 milliards de dollars, et le ministère des Relations Couronne-Autochtones et des Affaires du Nord, à hauteur d'environ 16 milliards de dollars, de petits montants transitant par des organismes de développement et de recherche du Nord. Une grande partie de ces dépenses prend la forme de subventions et de contributions transférées aux communautés, organisations et gouvernements autochtones plutôt que d'être dépensée à l'interne.
+Ces dépenses se répartissent entre deux entités principales : le ministère des Services aux Autochtones, à hauteur d'environ 46 milliards de dollars, et le ministère des Relations Couronne-Autochtones et des Affaires du Nord, à hauteur d'environ 16 milliards de dollars, de petits montants transitant par des organismes de développement et de recherche du Nord. Une grande partie de ces dépenses prend la forme de subventions et de contributions transférées aux communautés, organisations et gouvernements autochtones plutôt que d'être dépensée à l'interne.
 
 {{section:miniSankey}}
 
@@ -23,4 +23,5 @@ SAC et RCAANC sont dirigés respectivement par la [ministre des Services aux Aut
 
 <!--
 Section tokens (spec Part A) added, EN/FR identical, reproducing the original production component order: stats, entities, historicalShare, miniSankey. Unreferenced sections auto-append in default order: lineItems.
+Figure sync (adversarial-review M1/M2/M3, 2026-07-10): Dept of Indigenous Services entity $47B->$46B (entities value 46.477).
 -->

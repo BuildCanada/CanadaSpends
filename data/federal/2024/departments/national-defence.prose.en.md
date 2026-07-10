@@ -7,11 +7,11 @@ The Department of National Defence (DND) and the Canadian Armed Forces (CAF) are
 
 {{section:stats}}
 
-The Department of National Defence spent {{totalSpending}} in fiscal year (FY) 2024, or {{percentageOfFederal}} of the $513.9 billion in total federal spending. This ranks it among the largest federal departments by expenditure, with spending driven largely by personnel costs, military procurement, and operational readiness.
+The Department of National Defence spent {{totalSpending}} in fiscal year (FY) 2024, or {{percentageOfFederal}} of the $521.4 billion in total federal spending. This ranks it among the largest federal departments by expenditure, with spending driven largely by personnel costs, military procurement, and operational readiness.
 
 {{section:entities}}
 
-Federal defence spending shifts over time with geopolitical tensions, defence modernization needs, and emerging threats such as cyber warfare, and events such as Russia's invasion of Ukraine and Arctic sovereignty disputes can influence military spending. Measured as a share of the federal budget, DND has edged down over the past decade, from roughly 7.8% in 2014 to {{percentageOfFederal}} in 2024.
+Federal defence spending shifts over time with geopolitical tensions, defence modernization needs, and emerging threats such as cyber warfare, and events such as Russia's invasion of Ukraine and Arctic sovereignty disputes can influence military spending. Measured as a share of the federal budget, DND has edged down over the past decade, from roughly 7.2% in 2014 to {{percentageOfFederal}} in 2024.
 
 {{section:historicalShare}}
 
@@ -28,4 +28,5 @@ Figure decisions (FY2024 basis = Volume II; department JSON totalSpending 34.848
 - CORRECTED the old claim that "the largest spending entities within DND were the Canadian Army, the Royal Canadian Navy, and the Royal Canadian Air Force" — this contradicts the page's Spending by Entity chart. JSON entities are Department of National Defence (33.805584), Communications Security Establishment (1.029201), and two tiny review bodies; the Army/Navy/Air Force are internal commands, not separate accounting entities. Reframed accordingly.
 - Cut Oath/tenure boilerplate and the direct-vs-indirect definitional paragraph.
 Section tokens (spec Part A) added, EN/FR identical, reproducing the original production component order: stats, entities, historicalShare, miniSankey. Unreferenced sections auto-append in default order: lineItems.
+Figure sync (adversarial-review M1/M2/M3, 2026-07-10): total federal spending $513.9B->$521.4B (summary.json totalSpending 521.425); 2014 share 7.8%->7.2% (historicalShare 2014 = 7.2132).
 -->

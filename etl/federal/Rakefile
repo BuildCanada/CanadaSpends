@@ -7,4 +7,29 @@ Rake::TestTask.new(:test) do |t|
   t.verbose = true
 end
 
-task default: :test
+# Figure-consistency guardrail over reviewed prose (adversarial-review
+# M1/M2/M3). Runs as part of the default task so CI catches any reviewed prose
+# whose literal $ / % figures drift from the shipped data.
+desc 'Verify every literal figure in reviewed prose ties to the shipped data'
+task :prose_figures do
+  $LOAD_PATH.unshift File.expand_path('lib', __dir__)
+  require 'pb_cli/prose/figure_lint_corpus'
+
+  data_dir = File.expand_path('../../data/federal', __dir__)
+  allowlist = File.expand_path('mappings/prose_figure_allowlist.yaml', __dir__)
+  results = PbCli::Prose::FigureLintCorpus.new(data_dir: data_dir, allowlist_path: allowlist).run
+  offenders = results.select { |r| r[:violations].any? }
+
+  if offenders.empty?
+    puts "prose-figures: #{results.size} reviewed files, 0 figure violations"
+  else
+    offenders.each do |r|
+      puts "FIGURE VIOLATION #{r[:rel]}"
+      r[:violations].each { |v| puts "    #{v}" }
+    end
+    total = offenders.sum { |r| r[:violations].size }
+    abort "prose-figures: #{total} violation(s) across #{offenders.size} file(s)"
+  end
+end
+
+task default: %i[test prose_figures]

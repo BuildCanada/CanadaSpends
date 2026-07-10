@@ -889,7 +889,7 @@ module PbCli
           'id' => "recon-#{year}-remainder",
           'name' => 'Consolidation, accrual and gross/net adjustments',
           'amount' => PbCli::Export::Units.round_billions(difference - named_sum),
-          'note' => 'Unattributed remainder: consolidated Crown corporations, accrual items, and gross (Vol II) vs net (Vol I) presentation differences. Equals the spending Sankey\'s "Accounting and consolidation adjustments" leaf.'
+          'note' => 'Unattributed remainder: consolidated Crown corporations, accrual items, and gross (Vol II) vs net (Vol I) presentation differences. Every published year is on the Vol I accrual basis, so the spending Sankey ties to the headline and no "Accounting and consolidation adjustments" leaf appears; that leaf remains a dormant safeguard that would surface only if a residual over $1M ever arose.'
         }
 
         {
@@ -908,8 +908,10 @@ module PbCli
       # difference. Net actuarial losses are now inside the Vol I headline total,
       # so they are a named item here (sign-normalized to a positive expense to
       # match the Sankey leaf). This set equals the non-offset Vol I leaves in
-      # the spending tree, so difference - Σ(items) equals the tree's
-      # accounting-basis-adjustments leaf.
+      # the spending tree; on the current accrual basis the tree ties to the
+      # headline with no adjustments leaf, so difference - Σ(items) is the
+      # unattributed remainder (the dormant adjustments-leaf safeguard would
+      # only surface if that remainder ever exceeded $1M).
       def vol1_only_items(year)
         @mapping.vol1_rules
                 .reject { |r| r['offset_node'] }
@@ -940,6 +942,7 @@ module PbCli
           'basis' => 'vol2_standard_object_net',
           'totalSpending' => total,
           'percentageOfFederal' => pct(total, vol1_total),
+          'accrualSpending' => accrual_spending(year, slug),
           'historicalShare' => historical_share(slug),
           'miniSankey' => {
             'breakdown' => 'standard_object',
@@ -949,6 +952,17 @@ module PbCli
           'transferPayments' => transfer_payments(slug, year),
           'lineItemsUnits' => 'dollars_cad'
         }
+      end
+
+      # The department's Vol I consolidated accrual expense for the year — the
+      # same per-slug Table 3.6 segment allocation used for summary.ministries
+      # (main-page-accrual-basis) — so the department page can quantify the
+      # Vol I ↔ Vol II seam (adversarial-review M5). null outside accrual years
+      # or when the slug has no accrual allocation (e.g. absorbed into a host).
+      def accrual_spending(year, slug)
+        return nil unless accrual_year?(year)
+
+        @slug_accrual.dig(year, slug)
       end
 
       # Public Accounts portfolio label(s) the slug is reported under that year,
@@ -1009,6 +1023,19 @@ module PbCli
         @mapping.resolve_slug(row)
       end
 
+      # Trim leading/trailing whitespace \u2014 including the non-breaking space that
+      # leaks from the Public Accounts HTML \u2014 from an EN source label. Ruby's
+      # \s / String#strip are ASCII-only, so a leading &nbsp;/ survived and made
+      # some transfer-payment descriptions diverge from their FR mirrors
+      # (adversarial-review m11). Only the ends are touched: internal
+      # non-breaking spaces (e.g. "section 165") are legitimate source
+      # typography and left intact. FR labels come from the translator.
+      def normalize_label_ws(text)
+        return text unless text.is_a?(String)
+
+        text.gsub(/\A[\u00A0\u2007\u202F\s]+|[\u00A0\u2007\u202F\s]+\z/, '')
+      end
+
       def transfer_payments(slug, year)
         rows = transfers_for(year).reject { |r| r['is_total_or_subtotal'] }
                                   .select { |r| r['category'] && !r['category'].to_s.empty? }
@@ -1018,7 +1045,7 @@ module PbCli
           {
             'id' => "#{slug}-#{year}-tp-#{format('%04d', i)}",
             'category' => r['category'],
-            'description' => r['description'],
+            'description' => normalize_label_ws(r['description']),
             'used' => PbCli::Export::Units.round_dollars(r['used_in_current_year'].to_f)
           }
         end
@@ -1414,7 +1441,14 @@ module PbCli
       end
 
       def write_json(path, data)
-        File.write(path, JSON.pretty_generate(data) + "\n")
+        # Normalize float exponents so output is byte-identical across json-gem
+        # versions: json 2.9.x zero-pads a one-digit exponent (5.0e-06), while
+        # the shipped data uses the single-digit form (5.0e-6). Only touches a
+        # JSON number token's exponent (digit + e + sign + "0" + digit,
+        # terminated by a structural char), never a quoted string. Deterministic
+        # output keeps re-export diffs to genuine data changes.
+        json = JSON.pretty_generate(data).gsub(/(\d)e([+-])0(\d)(?=[,\s\]}])/, '\1e\2\3')
+        File.write(path, json + "\n")
       end
     end
   end

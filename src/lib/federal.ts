@@ -109,6 +109,11 @@ export type FederalDepartment = {
   basis: string;
   totalSpending: number;
   percentageOfFederal: number;
+  // The Vol I consolidated accrual expense for this portfolio-year (same figure
+  // the overview ranks it by), when available; null outside accrual years or
+  // when the slug has no accrual allocation. Used to quantify the Vol I ↔ Vol II
+  // seam on the department page.
+  accrualSpending: number | null;
   historicalShare: FederalHistoricalPoint[];
   miniSankey: { spending_data: FederalSankeyNode };
   entities: FederalEntity[];
@@ -486,7 +491,10 @@ export function getFederalDepartmentProse(
       return null;
     }
     const parsed = matter(fs.readFileSync(file, "utf8"));
-    const reviewed = parsed.data?.reviewed !== false;
+    // Opt-in gate (spec §9): prose renders as reviewed ONLY with an explicit
+    // `reviewed: true`. A missing/malformed key defaults to unreviewed
+    // (stats-only), so unaudited copy can never reach users by omission.
+    const reviewed = parsed.data?.reviewed === true;
     return { content: parsed.content.trim(), reviewed };
   } catch {
     return null;

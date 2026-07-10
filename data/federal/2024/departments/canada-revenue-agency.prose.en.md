@@ -7,7 +7,7 @@ The Canada Revenue Agency (CRA) is the federal institution responsible for admin
 
 {{section:stats}}
 
-The Canada Revenue Agency spent {{totalSpending}} in fiscal year (FY) 2024, representing {{percentageOfFederal}} of the $513.9 billion in total federal spending. Its expenditures primarily support tax administration, benefit program delivery, compliance enforcement, and IT modernization.
+The Canada Revenue Agency spent {{totalSpending}} in fiscal year (FY) 2024, representing {{percentageOfFederal}} of the $521.4 billion in total federal spending. Its expenditures primarily support tax administration, benefit program delivery, compliance enforcement, and IT modernization.
 
 {{section:entities}}
 
@@ -15,7 +15,7 @@ CRA spending has grown faster than overall federal spending over the past decade
 
 {{section:historicalShare}}
 
-Most CRA spending is dedicated to personnel and the IT infrastructure that supports tax filing, compliance, and benefit administration. In FY 2024, 55.2% of the agency's net spending went to salaries, benefits, and pensions. Its largest expenditures included personal income tax processing, corporate tax audits, and benefit program delivery, alongside intergovernmental agreements with provinces and territories.
+Most CRA spending is dedicated to personnel and the IT infrastructure that supports tax filing, compliance, and benefit administration. In FY 2024, 35.1% of the agency's net spending went to salaries, benefits, and pensions. Its largest expenditures included personal income tax processing, corporate tax audits, and benefit program delivery, alongside intergovernmental agreements with provinces and territories.
 
 {{section:miniSankey}}
 
@@ -35,4 +35,5 @@ not spending-basis totals that would contradict the charts): 59,155 employees, $
 tax revenues, 82% of federal revenues, $46B benefits, $11.5B recovered, 55.2% salaries.
 Dropped generic direct/indirect-spending boilerplate (not CRA-specific).
 Section tokens (spec Part A) added, EN/FR identical, reproducing the original production component order: stats, entities, historicalShare, miniSankey. Unreferenced sections auto-append in default order: lineItems.
+Figure sync (adversarial-review M1/M2/M3, 2026-07-10): total federal spending $513.9B->$521.4B (summary.json totalSpending 521.425); salary share 55.2%->35.1% (miniSankey Personnel 5.895203 / totalSpending 16.80193).
 -->

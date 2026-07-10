@@ -7,11 +7,11 @@ Veterans Affairs Canada (VAC) is the federal department responsible for supporti
 
 {{section:stats}}
 
-VAC spent {{totalSpending}} in fiscal year (FY) 2024, or {{percentageOfFederal}} of the $513.9 billion in overall federal spending, ranking thirteenth among federal departments in total spending.
+VAC spent {{totalSpending}} in fiscal year (FY) 2024, or {{percentageOfFederal}} of the $521.4 billion in overall federal spending, ranking thirteenth among federal departments in total spending.
 
 {{section:entities}}
 
-Federal spending shifts over time with population growth, changes in policy and programs, and emerging priorities. Since 1995, overall federal spending has risen about 77% while VAC spending has grown roughly 51%, leaving the department's share of the federal budget close to where it stood in 1995. Acute events can also move spending sharply from year to year: during the COVID-19 pandemic, the Government of Canada's total expenses rose from $410.2 billion in 2019 to $420 billion in 2020 and $720.3 billion in 2021, while VAC's expenditures grew only modestly over the same period once adjusted for inflation.
+Federal spending shifts over time with population growth, changes in policy and programs, and emerging priorities. Over the long run, VAC spending has grown more slowly than overall federal spending, leaving the department's share of the federal budget close to where it stood decades ago. Acute events can also move spending sharply from year to year: during the COVID-19 pandemic, the Government of Canada's total expenses rose from $346.2 billion in 2019 to $373.5 billion in 2020 and $644.2 billion in 2021, while VAC's expenditures grew only modestly over the same period once adjusted for inflation.
 
 {{section:miniSankey}}
 
@@ -25,4 +25,5 @@ Figure decisions (FY2024 basis = Volume II; department JSON: totalSpending 6.071
 - Dropped original inflation-adjusted trend endpoints "$5.5B (2019) / $6.3B (2024)": not in JSON, and $6.3B would read against the nominal {{totalSpending}} ($6.07B) shown on the page's charts; rephrased qualitatively.
 - Dropped orphaned chart heading "10 departments accounted for 73.2%" and the ministerial appointment/Oath/Rideau Hall boilerplate.
 Section tokens (spec Part A) added, EN/FR identical, reproducing the original production component order: stats, entities, miniSankey. Unreferenced sections auto-append in default order: historicalShare, lineItems.
+Figure sync (adversarial-review M1/M2/M3, 2026-07-10): dropped unverifiable since-1995 growth (77%/51%), reworded qualitatively (m15); total federal spending $513.9B->$521.4B (summary.json totalSpending 521.425); COVID-era totals $410.2/$420/$720.3B -> $346.2/$373.5/$644.2B (2019/2020/2021 summary totals, accrual basis).
 -->

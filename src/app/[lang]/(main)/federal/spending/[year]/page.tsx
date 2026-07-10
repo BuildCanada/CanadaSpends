@@ -32,8 +32,8 @@ import {
 } from "@/lib/federal";
 import { initLingui } from "@/initLingui";
 import { locales } from "@/lib/constants";
-import { localizedPath } from "@/lib/utils";
-import { Trans } from "@lingui/react/macro";
+import { generateHreflangAlternates, localizedPath } from "@/lib/utils";
+import { Trans, useLingui } from "@lingui/react/macro";
 import { notFound } from "next/navigation";
 
 export const dynamicParams = false;
@@ -43,6 +43,31 @@ export async function generateStaticParams() {
   return locales.flatMap((lang) =>
     years.map((year) => ({ lang, year: String(year) })),
   );
+}
+
+// Per-page metadata (adversarial-review m12/m13): a distinct title/description
+// and hreflang/canonical for each year, instead of the section-root defaults
+// the layout supplies. The alternates point at this year's fr/en twin.
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string; year: string }>;
+}) {
+  const { lang, year } = await params;
+  initLingui(lang);
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const { t } = useLingui();
+  const summary = isValidFederalYear(year)
+    ? getFederalSummary(year, lang)
+    : null;
+  const fy = summary?.financialYear ?? year;
+  return {
+    title: t`Federal Government Spending, FY ${fy} | Canada Spends`,
+    description: t`How the Government of Canada spent its budget in fiscal year ${fy}, by department, theme, and program.`,
+    alternates: generateHreflangAlternates(lang, "/federal/spending/[year]", {
+      year,
+    }),
+  };
 }
 
 export default async function FederalYearOverview({

@@ -7,11 +7,11 @@ Le ministère de la Défense nationale (MDN) et les Forces armées canadiennes (
 
 {{section:stats}}
 
-Le ministère de la Défense nationale a dépensé {{totalSpending}} au cours de l'exercice 2024, soit {{percentageOfFederal}} des 513,9 milliards de dollars de dépenses fédérales totales. Cela le classe parmi les plus grands ministères fédéraux en termes de dépenses, largement motivées par les coûts de personnel, l'approvisionnement militaire et la disponibilité opérationnelle.
+Le ministère de la Défense nationale a dépensé {{totalSpending}} au cours de l'exercice 2024, soit {{percentageOfFederal}} des 521,4 milliards de dollars de dépenses fédérales totales. Cela le classe parmi les plus grands ministères fédéraux en termes de dépenses, largement motivées par les coûts de personnel, l'approvisionnement militaire et la disponibilité opérationnelle.
 
 {{section:entities}}
 
-Les dépenses de défense fédérales évoluent au fil du temps en fonction des tensions géopolitiques, des besoins de modernisation de la défense et des menaces émergentes telles que la cyberguerre, et des événements comme l'invasion de l'Ukraine par la Russie ou les différends sur la souveraineté de l'Arctique peuvent influencer les dépenses militaires. Mesurée en proportion du budget fédéral, la part du MDN a légèrement diminué au cours de la dernière décennie, passant d'environ 7,8 % en 2014 à {{percentageOfFederal}} en 2024.
+Les dépenses de défense fédérales évoluent au fil du temps en fonction des tensions géopolitiques, des besoins de modernisation de la défense et des menaces émergentes telles que la cyberguerre, et des événements comme l'invasion de l'Ukraine par la Russie ou les différends sur la souveraineté de l'Arctique peuvent influencer les dépenses militaires. Mesurée en proportion du budget fédéral, la part du MDN a légèrement diminué au cours de la dernière décennie, passant d'environ 7,2 % en 2014 à {{percentageOfFederal}} en 2024.
 
 {{section:historicalShare}}
 
@@ -21,4 +21,5 @@ La quasi-totalité de ces dépenses est déclarée sous le ministère de la Déf
 
 <!--
 Section tokens (spec Part A) added, EN/FR identical, reproducing the original production component order: stats, entities, historicalShare, miniSankey. Unreferenced sections auto-append in default order: lineItems.
+Figure sync (adversarial-review M1/M2/M3, 2026-07-10): total federal spending $513.9B->$521.4B (summary.json totalSpending 521.425); 2014 share 7.8%->7.2% (historicalShare 2014 = 7.2132).
 -->

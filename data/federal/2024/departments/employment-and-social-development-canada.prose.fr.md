@@ -7,7 +7,7 @@ source: hand-written (edited 2026-07-06)
 
 {{section:stats}}
 
-EDSC a dépensé {{totalSpending}} au cours de l'exercice 2024, soit {{percentageOfFederal}} des 513,9 milliards de dollars de dépenses fédérales totales, ce qui en fait l'un des ministères fédéraux aux dépenses les plus élevées.
+EDSC a dépensé {{totalSpending}} au cours de l'exercice 2024, soit {{percentageOfFederal}} des 521,4 milliards de dollars de dépenses fédérales totales, ce qui en fait l'un des ministères fédéraux aux dépenses les plus élevées.
 
 {{section:entities}}
 
@@ -31,4 +31,5 @@ de la pandémie supprimés (non vérifiables / antérieurs à 2014); la hausse l
 est conservée de façon qualitative.
 Section tokens (spec Part A) added, EN/FR identical, reproducing the original production component order: stats, entities, historicalShare, miniSankey. Unreferenced sections auto-append in default order: lineItems.
 Modification « retrait des autorisations » (2026-07-08) : reformulation de « ne font pas partie des crédits ministériels présentés ici » pour la présentation nette par article courant; aucun chiffre modifié.
+Figure sync (adversarial-review M1/M2/M3, 2026-07-10): total federal spending $513.9B->$521.4B (summary.json totalSpending 521.425).
 -->

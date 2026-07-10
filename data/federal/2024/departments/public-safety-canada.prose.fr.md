@@ -7,7 +7,7 @@ Sécurité publique, Institutions démocratiques et Affaires intergouvernemental
 
 {{section:stats}}
 
-Au cours de l'exercice 2024, Sécurité publique Canada a dépensé {{totalSpending}}, soit {{percentageOfFederal}} des 513,9 milliards de dollars de dépenses fédérales totales. La majeure partie de ces dépenses transite par les organismes du portefeuille plutôt que par le ministère central : la Gendarmerie royale du Canada en constitue de loin la plus grande composante, suivie du Service correctionnel du Canada, de l'Agence des services frontaliers du Canada et du Service canadien du renseignement de sécurité. Le portefeuille comprend également de plus petits organismes liés aux institutions démocratiques et aux affaires intergouvernementales, dont le Bureau du directeur général des élections et le Secrétariat des conférences intergouvernementales canadiennes.
+Au cours de l'exercice 2024, Sécurité publique Canada a dépensé {{totalSpending}}, soit {{percentageOfFederal}} des 521,4 milliards de dollars de dépenses fédérales totales. La majeure partie de ces dépenses transite par les organismes du portefeuille plutôt que par le ministère central : la Gendarmerie royale du Canada en constitue de loin la plus grande composante, suivie du Service correctionnel du Canada, de l'Agence des services frontaliers du Canada et du Service canadien du renseignement de sécurité. Le portefeuille comprend également de plus petits organismes liés aux institutions démocratiques et aux affaires intergouvernementales, dont le Bureau du directeur général des élections et le Secrétariat des conférences intergouvernementales canadiennes.
 
 {{section:entities}}
 
@@ -21,4 +21,5 @@ Le ministère est dirigé par le [ministre de la Sécurité publique](https://ww
 
 <!--
 Section tokens (spec Part A) added, EN/FR identical, reproducing the original production component order: stats, entities, miniSankey. Unreferenced sections auto-append in default order: historicalShare, lineItems.
+Figure sync (adversarial-review M1/M2/M3, 2026-07-10): total federal spending $513.9B->$521.4B (summary.json totalSpending 521.425).
 -->

@@ -7,7 +7,7 @@ Global Affairs Canada (GAC) is the federal department responsible for managing C
 
 {{section:stats}}
 
-Global Affairs Canada spent {{totalSpending}} in fiscal year (FY) 2024, representing {{percentageOfFederal}} of the $513.9 billion in overall federal spending, placing it among the mid-sized federal departments.
+Global Affairs Canada spent {{totalSpending}} in fiscal year (FY) 2024, representing {{percentageOfFederal}} of the $521.4 billion in overall federal spending, placing it among the mid-sized federal departments.
 
 {{section:entities}}
 
@@ -32,4 +32,5 @@ Dropped "since 1995 / +166.5% / 2% in 1995" (pre-2014 data absent from JSON; sha
 2.4% in 2014) and the truncated "five primary categories" and COVID-2020 surge lines
 (dangling/unverifiable). Dropped generic direct/indirect boilerplate.
 Section tokens (spec Part A) added, EN/FR identical, reproducing the original production component order: stats, entities, historicalShare, miniSankey. Unreferenced sections auto-append in default order: lineItems.
+Figure sync (adversarial-review M1/M2/M3, 2026-07-10): total federal spending $513.9B->$521.4B (summary.json totalSpending 521.425).
 -->

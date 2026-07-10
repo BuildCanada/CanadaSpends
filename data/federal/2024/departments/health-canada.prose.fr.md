@@ -7,11 +7,11 @@ Santé Canada est le ministère fédéral responsable de la protection et de l'a
 
 {{section:stats}}
 
-Santé Canada a dépensé {{totalSpending}} au cours de l'exercice 2024, soit {{percentageOfFederal}} des 513,9 milliards de dollars de dépenses fédérales totales.
+Santé Canada a dépensé {{totalSpending}} au cours de l'exercice 2024, soit {{percentageOfFederal}} des 521,4 milliards de dollars de dépenses fédérales totales.
 
 {{section:entities}}
 
-Les dépenses sont réparties dans l'ensemble du portefeuille de la santé. Au cours de l'exercice 2024, le ministère principal de la Santé a dépensé 7,1 milliards de dollars, l'Agence de la santé publique du Canada 4,4 milliards de dollars, les Instituts de recherche en santé du Canada 1,3 milliard de dollars et l'Agence canadienne d'inspection des aliments 1,1 milliard de dollars.
+Les dépenses sont réparties dans l'ensemble du portefeuille de la santé. Au cours de l'exercice 2024, le ministère principal de la Santé a dépensé 6,8 milliards de dollars, l'Agence de la santé publique du Canada 4,4 milliards de dollars, les Instituts de recherche en santé du Canada 1,3 milliard de dollars et l'Agence canadienne d'inspection des aliments 1,1 milliard de dollars.
 
 {{section:historicalShare}}
 
@@ -28,4 +28,5 @@ du portefeuille et transferts restaurés et vérifiés dans le JSON. Comparaison
 +74,9 % / -19,9 % / 3,14 points », « dixième », « 10 ministères = 73,2 % » et les totaux de la
 pandémie supprimés (non vérifiables / antérieurs à 2014; la part est restée stable depuis 2014).
 Section tokens (spec Part A) added, EN/FR identical, reproducing the original production component order: stats, entities, historicalShare, miniSankey. Unreferenced sections auto-append in default order: lineItems.
+Figure sync (adversarial-review M1/M2/M3, 2026-07-10): total federal spending $513.9B->$521.4B (summary.json totalSpending 521.425); Department of Health entity $7.1B->$6.8B (entities value 6.842).
 -->

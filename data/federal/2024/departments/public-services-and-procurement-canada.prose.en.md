@@ -7,15 +7,15 @@ Public Services and Procurement Canada (PSPC) is the federal department responsi
 
 {{section:stats}}
 
-PSPC spent {{totalSpending}} in fiscal year (FY) 2024, or {{percentageOfFederal}} of the $513.9 billion in overall federal spending. As a common-service provider, most of its budget funds procurement, accommodation, and information-technology services used by other departments rather than programs delivered directly to the public.
+PSPC spent {{totalSpending}} in fiscal year (FY) 2024, or {{percentageOfFederal}} of the $521.4 billion in overall federal spending. As a common-service provider, most of its budget funds procurement, accommodation, and information-technology services used by other departments rather than programs delivered directly to the public.
 
 {{section:entities}}
 
-Federal spending shifts over time with population growth, changes in policy and programs, and emerging priorities, and acute events can move it sharply: during the COVID-19 pandemic, the Government of Canada's total expenses rose from $410.2 billion in 2019 to $420 billion in 2020 and $720.3 billion in 2021. Measured as a share of the federal budget, PSPC has trended down over the past decade, from roughly 3.2% in 2014 to {{percentageOfFederal}} in 2024.
+Federal spending shifts over time with population growth, changes in policy and programs, and emerging priorities, and acute events can move it sharply: during the COVID-19 pandemic, the Government of Canada's total expenses rose from $346.2 billion in 2019 to $373.5 billion in 2020 and $644.2 billion in 2021. Measured as a share of the federal budget, PSPC has trended down over the past decade, from roughly 3.2% in 2014 to {{percentageOfFederal}} in 2024.
 
 {{section:miniSankey}}
 
-PSPC's spending is split across a few entities. The Department of Public Works and Government Services accounts for roughly $6.9 billion and Shared Services Canada — which delivers common information-technology infrastructure to the federal government — for roughly $3.7 billion, with smaller amounts flowing through bodies such as the National Capital Commission. The department is led by the Minister of Government Transformation, Public Services and Procurement, a member of cabinet appointed by the Governor General on the advice of the Prime Minister.
+PSPC's spending is split across a few entities. The Department of Public Works and Government Services accounts for roughly $5.4 billion and Shared Services Canada — which delivers common information-technology infrastructure to the federal government — for roughly $2.8 billion, with smaller amounts flowing through bodies such as the National Capital Commission. The department is led by the Minister of Government Transformation, Public Services and Procurement, a member of cabinet appointed by the Governor General on the advice of the Prime Minister.
 
 <!--
 Figure decisions (FY2024 basis = Volume II; department JSON totalSpending 10.676222, percentageOfFederal 2.0773):
@@ -28,4 +28,5 @@ Figure decisions (FY2024 basis = Volume II; department JSON totalSpending 10.676
 - Entity figures restored from JSON (PWGSC ~$6.9B, Shared Services Canada ~$3.7B; shown on the page's Spending by Entity chart).
 - Cut Oath of Office / Rideau Hall / ministerial-tenure boilerplate.
 Section tokens (spec Part A) added, EN/FR identical, reproducing the original production component order: stats, entities, miniSankey. Unreferenced sections auto-append in default order: historicalShare, lineItems.
+Figure sync (adversarial-review M1/M2/M3, 2026-07-10): total federal spending $513.9B->$521.4B (summary.json totalSpending 521.425); Public Works entity $6.9B->$5.4B (entities value 5.375); Shared Services Canada entity $3.7B->$2.8B (entities value 2.791); COVID-era totals $410.2/$420/$720.3B -> $346.2/$373.5/$644.2B (2019/2020/2021 summary totals, accrual basis).
 -->
