@@ -1,0 +1,185 @@
+{
+  "name": "Parks Canada",
+  "slug": "parks-canada",
+  "financialYearEnding": 2025,
+  "reportedAs": null,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 1.368746,
+  "percentageOfFederal": 0.2501,
+  "accrualSpending": 0.930973,
+  "historicalShare": [
+    {
+      "year": 2025,
+      "percentage": 0.2501
+    }
+  ],
+  "miniSankey": {
+    "breakdown": "standard_object",
+    "spending_data": {
+      "id": "parks-canada",
+      "name": "Parks Canada",
+      "children": [
+        {
+          "id": "parks-canada-2025-parks-canada-agency",
+          "name": "Parks Canada Agency",
+          "children": [
+            {
+              "id": "parks-canada-2025-parks-canada-agency-obj-1",
+              "name": "Personnel",
+              "amount": 0.626664
+            },
+            {
+              "id": "parks-canada-2025-parks-canada-agency-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.184496
+            },
+            {
+              "id": "parks-canada-2025-parks-canada-agency-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.173566
+            },
+            {
+              "id": "parks-canada-2025-parks-canada-agency-obj-10",
+              "name": "Transfer payments",
+              "children": [
+                {
+                  "id": "parks-canada-2025-tp-0000",
+                  "name": "Contributions in support of activities or projects related to national parks, national marine conservation areas, national historic sites and historic canals",
+                  "amount": 0.08663
+                },
+                {
+                  "id": "parks-canada-2025-tp-0004",
+                  "name": "Grants for the Implementation of Rights and Reconciliation Agreements in Atlantic Canada",
+                  "amount": 0.007275
+                },
+                {
+                  "id": "parks-canada-2025-tp-0002",
+                  "name": "Work placements through the Youth Employment and Skills Strategy",
+                  "amount": 0.003759
+                },
+                {
+                  "id": "parks-canada-2025-tp-0005",
+                  "name": "Grants in support of activities or projects related to national parks, national marine conservation areas, national historic sites and historic canals",
+                  "amount": 0.002472
+                },
+                {
+                  "id": "parks-canada-2025-tp-0007",
+                  "name": "Tallurutiup Imanga Inuit Stewardship Program Seed Fund",
+                  "amount": 0.0021
+                },
+                {
+                  "id": "parks-canada-2025-tp-0001",
+                  "name": "Contributions in support of the National Historic Sites Cost-Sharing Program",
+                  "amount": 0.001359
+                },
+                {
+                  "id": "parks-canada-2025-tp-0003",
+                  "name": "Grant to the International Peace Garden",
+                  "amount": 2.3e-5
+                }
+              ]
+            },
+            {
+              "id": "parks-canada-2025-parks-canada-agency-obj-5",
+              "name": "Rentals",
+              "amount": 0.066749
+            },
+            {
+              "id": "parks-canada-2025-parks-canada-agency-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.06327
+            },
+            {
+              "id": "parks-canada-2025-parks-canada-agency-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.060892
+            },
+            {
+              "id": "parks-canada-2025-parks-canada-agency-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.038687
+            },
+            {
+              "id": "parks-canada-2025-parks-canada-agency-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.023154
+            },
+            {
+              "id": "parks-canada-2025-parks-canada-agency-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.019718
+            },
+            {
+              "id": "parks-canada-2025-parks-canada-agency-obj-3",
+              "name": "Information",
+              "amount": 0.00793
+            },
+            {
+              "id": "parks-canada-2025-parks-canada-agency-obj-11",
+              "name": "Public debt charges",
+              "amount": 2.0e-6
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "entities": [
+    {
+      "id": "parks-canada-2025-entity-parks-canada-agency",
+      "name": "Parks Canada Agency",
+      "value": 1.368746
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "parks-canada-2025-tp-0000",
+      "category": "Contributions",
+      "description": "Contributions in support of activities or projects related to national parks, national marine conservation areas, national historic sites and historic canals",
+      "used": 86630720
+    },
+    {
+      "id": "parks-canada-2025-tp-0001",
+      "category": "Contributions",
+      "description": "Contributions in support of the National Historic Sites Cost-Sharing Program",
+      "used": 1358792
+    },
+    {
+      "id": "parks-canada-2025-tp-0002",
+      "category": "Contributions",
+      "description": "Work placements through the Youth Employment and Skills Strategy",
+      "used": 3758864
+    },
+    {
+      "id": "parks-canada-2025-tp-0003",
+      "category": "Grants",
+      "description": "Grant to the International Peace Garden",
+      "used": 22700
+    },
+    {
+      "id": "parks-canada-2025-tp-0004",
+      "category": "Grants",
+      "description": "Grants for the Implementation of Rights and Reconciliation Agreements in Atlantic Canada",
+      "used": 7275004
+    },
+    {
+      "id": "parks-canada-2025-tp-0005",
+      "category": "Grants",
+      "description": "Grants in support of activities or projects related to national parks, national marine conservation areas, national historic sites and historic canals",
+      "used": 2471562
+    },
+    {
+      "id": "parks-canada-2025-tp-0006",
+      "category": "Grants",
+      "description": "Items not required for the current year",
+      "used": 0
+    },
+    {
+      "id": "parks-canada-2025-tp-0007",
+      "category": "Grants",
+      "description": "Tallurutiup Imanga Inuit Stewardship Program Seed Fund",
+      "used": 2100000
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

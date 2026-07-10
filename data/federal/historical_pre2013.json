@@ -1,0 +1,702 @@
+{
+  "source": "Fiscal Reference Tables via current site hardcoded data (FederalSpendingChart.tsx, extracted 2026-07-05)",
+  "note": "Years 1995-2012 only; 2013+ computed from Public Accounts data at export time. Percentage of total federal spending, as fraction.",
+  "departments": {
+    "canada-revenue-agency": [
+      {
+        "year": 1995,
+        "percentage": 0.0142
+      },
+      {
+        "year": 1996,
+        "percentage": 0.0139
+      },
+      {
+        "year": 1997,
+        "percentage": 0.0149
+      },
+      {
+        "year": 1998,
+        "percentage": 0.0163
+      },
+      {
+        "year": 1999,
+        "percentage": 0.018
+      },
+      {
+        "year": 2000,
+        "percentage": 0.0191
+      },
+      {
+        "year": 2001,
+        "percentage": 0.0282
+      },
+      {
+        "year": 2002,
+        "percentage": 0.0209
+      },
+      {
+        "year": 2003,
+        "percentage": 0.0209
+      },
+      {
+        "year": 2004,
+        "percentage": 0.021
+      },
+      {
+        "year": 2005,
+        "percentage": 0.0155
+      },
+      {
+        "year": 2006,
+        "percentage": 0.0177
+      },
+      {
+        "year": 2007,
+        "percentage": 0.0153
+      },
+      {
+        "year": 2008,
+        "percentage": 0.019
+      },
+      {
+        "year": 2009,
+        "percentage": 0.0176
+      },
+      {
+        "year": 2010,
+        "percentage": 0.0161
+      },
+      {
+        "year": 2011,
+        "percentage": 0.0163
+      },
+      {
+        "year": 2012,
+        "percentage": 0.016
+      }
+    ],
+    "department-of-finance": [
+      {
+        "year": 1995,
+        "percentage": 0.328
+      },
+      {
+        "year": 1996,
+        "percentage": 0.363
+      },
+      {
+        "year": 1997,
+        "percentage": 0.4626
+      },
+      {
+        "year": 1998,
+        "percentage": 0.4305
+      },
+      {
+        "year": 1999,
+        "percentage": 0.4614
+      },
+      {
+        "year": 2000,
+        "percentage": 0.4609
+      },
+      {
+        "year": 2001,
+        "percentage": 0.4605
+      },
+      {
+        "year": 2002,
+        "percentage": 0.4252
+      },
+      {
+        "year": 2003,
+        "percentage": 0.3663
+      },
+      {
+        "year": 2004,
+        "percentage": 0.3661
+      },
+      {
+        "year": 2005,
+        "percentage": 0.3481
+      },
+      {
+        "year": 2006,
+        "percentage": 0.3805
+      },
+      {
+        "year": 2007,
+        "percentage": 0.3316
+      },
+      {
+        "year": 2008,
+        "percentage": 0.3495
+      },
+      {
+        "year": 2009,
+        "percentage": 0.3294
+      },
+      {
+        "year": 2010,
+        "percentage": 0.2859
+      },
+      {
+        "year": 2011,
+        "percentage": 0.3113
+      },
+      {
+        "year": 2012,
+        "percentage": 0.3116
+      }
+    ],
+    "employment-and-social-development-canada": [
+      {
+        "year": 1995,
+        "percentage": 0.2069
+      },
+      {
+        "year": 1996,
+        "percentage": 0.2109
+      },
+      {
+        "year": 1997,
+        "percentage": 0.1626
+      },
+      {
+        "year": 1998,
+        "percentage": 0.1666
+      },
+      {
+        "year": 1999,
+        "percentage": 0.1699
+      },
+      {
+        "year": 2000,
+        "percentage": 0.1705
+      },
+      {
+        "year": 2001,
+        "percentage": 0.1674
+      },
+      {
+        "year": 2002,
+        "percentage": 0.1695
+      },
+      {
+        "year": 2003,
+        "percentage": 0.1536
+      },
+      {
+        "year": 2004,
+        "percentage": 0.1562
+      },
+      {
+        "year": 2005,
+        "percentage": 0.1549
+      },
+      {
+        "year": 2006,
+        "percentage": 0.1635
+      },
+      {
+        "year": 2007,
+        "percentage": 0.1697
+      },
+      {
+        "year": 2008,
+        "percentage": 0.1782
+      },
+      {
+        "year": 2009,
+        "percentage": 0.175
+      },
+      {
+        "year": 2010,
+        "percentage": 0.1636
+      },
+      {
+        "year": 2011,
+        "percentage": 0.1822
+      },
+      {
+        "year": 2012,
+        "percentage": 0.177
+      }
+    ],
+    "global-affairs-canada": [
+      {
+        "year": 1995,
+        "percentage": 0.0245
+      },
+      {
+        "year": 1996,
+        "percentage": 0.0207
+      },
+      {
+        "year": 1997,
+        "percentage": 0.0221
+      },
+      {
+        "year": 1998,
+        "percentage": 0.0225
+      },
+      {
+        "year": 1999,
+        "percentage": 0.016
+      },
+      {
+        "year": 2000,
+        "percentage": 0.0234
+      },
+      {
+        "year": 2001,
+        "percentage": 0.0237
+      },
+      {
+        "year": 2002,
+        "percentage": 0.0248
+      },
+      {
+        "year": 2003,
+        "percentage": 0.0235
+      },
+      {
+        "year": 2004,
+        "percentage": 0.0244
+      },
+      {
+        "year": 2005,
+        "percentage": 0.0263
+      },
+      {
+        "year": 2006,
+        "percentage": 0.0254
+      },
+      {
+        "year": 2007,
+        "percentage": 0.0269
+      },
+      {
+        "year": 2008,
+        "percentage": 0.026
+      },
+      {
+        "year": 2009,
+        "percentage": 0.0263
+      },
+      {
+        "year": 2010,
+        "percentage": 0.0508
+      },
+      {
+        "year": 2011,
+        "percentage": 0.0248
+      },
+      {
+        "year": 2012,
+        "percentage": 0.0252
+      }
+    ],
+    "health-canada": [
+      {
+        "year": 1995,
+        "percentage": 0.0584
+      },
+      {
+        "year": 1996,
+        "percentage": 0.0571
+      },
+      {
+        "year": 1997,
+        "percentage": 0.0117
+      },
+      {
+        "year": 1998,
+        "percentage": 0.0126
+      },
+      {
+        "year": 1999,
+        "percentage": 0.0149
+      },
+      {
+        "year": 2000,
+        "percentage": 0.0209
+      },
+      {
+        "year": 2001,
+        "percentage": 0.0168
+      },
+      {
+        "year": 2002,
+        "percentage": 0.0195
+      },
+      {
+        "year": 2003,
+        "percentage": 0.0183
+      },
+      {
+        "year": 2004,
+        "percentage": 0.0253
+      },
+      {
+        "year": 2005,
+        "percentage": 0.0198
+      },
+      {
+        "year": 2006,
+        "percentage": 0.02
+      },
+      {
+        "year": 2007,
+        "percentage": 0.0196
+      },
+      {
+        "year": 2008,
+        "percentage": 0.0253
+      },
+      {
+        "year": 2009,
+        "percentage": 0.0219
+      },
+      {
+        "year": 2010,
+        "percentage": 0.0208
+      },
+      {
+        "year": 2011,
+        "percentage": 0.02
+      },
+      {
+        "year": 2012,
+        "percentage": 0.0203
+      }
+    ],
+    "housing-infrastructure-communities": [
+      {
+        "year": 2006,
+        "percentage": 0.0073
+      },
+      {
+        "year": 2007,
+        "percentage": 0.0066
+      },
+      {
+        "year": 2008,
+        "percentage": 0.0084
+      },
+      {
+        "year": 2009,
+        "percentage": 0.0095
+      },
+      {
+        "year": 2010,
+        "percentage": 0.0154
+      },
+      {
+        "year": 2011,
+        "percentage": 0.0231
+      },
+      {
+        "year": 2012,
+        "percentage": 0.0167
+      }
+    ],
+    "indigenous-services-and-northern-affairs": [
+      {
+        "year": 1995,
+        "percentage": 0.031
+      },
+      {
+        "year": 1996,
+        "percentage": 0.0327
+      },
+      {
+        "year": 1997,
+        "percentage": 0.0285
+      },
+      {
+        "year": 1998,
+        "percentage": 0.0304
+      },
+      {
+        "year": 1999,
+        "percentage": 0.0322
+      },
+      {
+        "year": 2000,
+        "percentage": 0.0306
+      },
+      {
+        "year": 2001,
+        "percentage": 0.0316
+      },
+      {
+        "year": 2002,
+        "percentage": 0.0313
+      },
+      {
+        "year": 2003,
+        "percentage": 0.0293
+      },
+      {
+        "year": 2004,
+        "percentage": 0.0288
+      },
+      {
+        "year": 2005,
+        "percentage": 0.0267
+      },
+      {
+        "year": 2006,
+        "percentage": 0.0279
+      },
+      {
+        "year": 2007,
+        "percentage": 0.0284
+      },
+      {
+        "year": 2008,
+        "percentage": 0.0335
+      },
+      {
+        "year": 2009,
+        "percentage": 0.0292
+      },
+      {
+        "year": 2010,
+        "percentage": 0.0271
+      },
+      {
+        "year": 2011,
+        "percentage": 0.0305
+      },
+      {
+        "year": 2012,
+        "percentage": 0.0291
+      }
+    ],
+    "national-defence": [
+      {
+        "year": 1995,
+        "percentage": 0.0734
+      },
+      {
+        "year": 1996,
+        "percentage": 0.0715
+      },
+      {
+        "year": 1997,
+        "percentage": 0.0706
+      },
+      {
+        "year": 1998,
+        "percentage": 0.0681
+      },
+      {
+        "year": 1999,
+        "percentage": 0.0671
+      },
+      {
+        "year": 2000,
+        "percentage": 0.0751
+      },
+      {
+        "year": 2001,
+        "percentage": 0.071
+      },
+      {
+        "year": 2002,
+        "percentage": 0.0745
+      },
+      {
+        "year": 2003,
+        "percentage": 0.0678
+      },
+      {
+        "year": 2004,
+        "percentage": 0.0696
+      },
+      {
+        "year": 2005,
+        "percentage": 0.0663
+      },
+      {
+        "year": 2006,
+        "percentage": 0.0703
+      },
+      {
+        "year": 2007,
+        "percentage": 0.0706
+      },
+      {
+        "year": 2008,
+        "percentage": 0.0753
+      },
+      {
+        "year": 2009,
+        "percentage": 0.0804
+      },
+      {
+        "year": 2010,
+        "percentage": 0.0725
+      },
+      {
+        "year": 2011,
+        "percentage": 0.0751
+      },
+      {
+        "year": 2012,
+        "percentage": 0.0755
+      }
+    ],
+    "public-safety-canada": [
+      {
+        "year": 1995,
+        "percentage": 0.0163
+      },
+      {
+        "year": 1996,
+        "percentage": 0.0166
+      },
+      {
+        "year": 1997,
+        "percentage": 0.0176
+      },
+      {
+        "year": 1998,
+        "percentage": 0.0183
+      },
+      {
+        "year": 1999,
+        "percentage": 0.0181
+      },
+      {
+        "year": 2000,
+        "percentage": 0.0196
+      },
+      {
+        "year": 2001,
+        "percentage": 0.0194
+      },
+      {
+        "year": 2002,
+        "percentage": 0.0218
+      },
+      {
+        "year": 2003,
+        "percentage": 0.0208
+      },
+      {
+        "year": 2004,
+        "percentage": 0.0209
+      },
+      {
+        "year": 2005,
+        "percentage": 0.026
+      },
+      {
+        "year": 2006,
+        "percentage": 0.0273
+      },
+      {
+        "year": 2007,
+        "percentage": 0.0277
+      },
+      {
+        "year": 2008,
+        "percentage": 0.0286
+      },
+      {
+        "year": 2009,
+        "percentage": 0.0321
+      },
+      {
+        "year": 2010,
+        "percentage": 0.0299
+      },
+      {
+        "year": 2011,
+        "percentage": 0.0306
+      },
+      {
+        "year": 2012,
+        "percentage": 0.0313
+      }
+    ],
+    "public-services-and-procurement-canada": [
+      {
+        "year": 1995,
+        "percentage": 0.026
+      },
+      {
+        "year": 1996,
+        "percentage": 0.025
+      },
+      {
+        "year": 1997,
+        "percentage": 0.024
+      },
+      {
+        "year": 1998,
+        "percentage": 0.023
+      },
+      {
+        "year": 1999,
+        "percentage": 0.022
+      },
+      {
+        "year": 2000,
+        "percentage": 0.021
+      },
+      {
+        "year": 2001,
+        "percentage": 0.02
+      },
+      {
+        "year": 2002,
+        "percentage": 0.019
+      },
+      {
+        "year": 2003,
+        "percentage": 0.018
+      },
+      {
+        "year": 2004,
+        "percentage": 0.017
+      },
+      {
+        "year": 2005,
+        "percentage": 0.019
+      },
+      {
+        "year": 2006,
+        "percentage": 0.018
+      },
+      {
+        "year": 2007,
+        "percentage": 0.017
+      },
+      {
+        "year": 2008,
+        "percentage": 0.018
+      },
+      {
+        "year": 2009,
+        "percentage": 0.019
+      },
+      {
+        "year": 2010,
+        "percentage": 0.018
+      },
+      {
+        "year": 2011,
+        "percentage": 0.017
+      },
+      {
+        "year": 2012,
+        "percentage": 0.018
+      }
+    ]
+  }
+}

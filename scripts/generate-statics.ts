@@ -43,6 +43,10 @@ interface StaticData {
         }
       >
     >; // province -> municipality -> data
+    federal: {
+      years: string[];
+      departmentsByYear: Record<string, string[]>; // year -> department slugs
+    };
     articles: Record<string, string[]>; // lang -> article slugs
   };
 }
@@ -90,6 +94,7 @@ function generateStaticData(): StaticData {
   const structure: StaticData["structure"] = {
     provincial: {},
     municipal: {},
+    federal: { years: [], departmentsByYear: {} },
     articles: {},
   };
 
@@ -211,6 +216,47 @@ function generateStaticData(): StaticData {
       };
     }
   }
+
+  // Federal pages (Public Accounts pipeline — data/federal/{year})
+  const federalPath = path.join(dataDir, "federal");
+  const federalYears = getAvailableYears(federalPath);
+  const federalDepartmentsByYear: Record<string, string[]> = {};
+  const federalLatestYear = federalYears[0];
+  if (federalLatestYear) {
+    const latestYearPath = path.join(
+      federalPath,
+      federalLatestYear,
+      "summary.json",
+    );
+    fileStats[toRelativePath(latestYearPath)] =
+      getFileLastModified(latestYearPath);
+  }
+  for (const year of federalYears) {
+    const yearSummaryPath = path.join(federalPath, year, "summary.json");
+    fileStats[toRelativePath(yearSummaryPath)] =
+      getFileLastModified(yearSummaryPath);
+
+    const departmentsDir = path.join(federalPath, year, "departments");
+    const departments: string[] = [];
+    if (fs.existsSync(departmentsDir)) {
+      const departmentFiles = fs
+        .readdirSync(departmentsDir)
+        .filter((f) => f.endsWith(".json"))
+        .map((f) => f.replace(".json", ""));
+      departments.push(...departmentFiles);
+
+      for (const department of departmentFiles) {
+        const departmentPath = path.join(departmentsDir, `${department}.json`);
+        fileStats[toRelativePath(departmentPath)] =
+          getFileLastModified(departmentPath);
+      }
+    }
+    federalDepartmentsByYear[year] = departments;
+  }
+  structure.federal = {
+    years: federalYears,
+    departmentsByYear: federalDepartmentsByYear,
+  };
 
   // Article pages
   for (const lang of locales) {

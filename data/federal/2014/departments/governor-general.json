@@ -1,0 +1,134 @@
+{
+  "name": "Governor General",
+  "slug": "governor-general",
+  "financialYearEnding": 2014,
+  "reportedAs": null,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 0.020307,
+  "percentageOfFederal": 0.0073,
+  "accrualSpending": 0.018669,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 0.0073
+    },
+    {
+      "year": 2015,
+      "percentage": 0.0074
+    },
+    {
+      "year": 2016,
+      "percentage": 0.0076
+    },
+    {
+      "year": 2017,
+      "percentage": 0.0073
+    },
+    {
+      "year": 2018,
+      "percentage": 0.0071
+    },
+    {
+      "year": 2019,
+      "percentage": 0.0067
+    },
+    {
+      "year": 2020,
+      "percentage": 0.0062
+    },
+    {
+      "year": 2021,
+      "percentage": 0.0038
+    },
+    {
+      "year": 2022,
+      "percentage": 0.0047
+    },
+    {
+      "year": 2023,
+      "percentage": 0.0052
+    },
+    {
+      "year": 2024,
+      "percentage": 0.0051
+    },
+    {
+      "year": 2025,
+      "percentage": 0.0054
+    }
+  ],
+  "miniSankey": {
+    "breakdown": "standard_object",
+    "spending_data": {
+      "id": "governor-general",
+      "name": "Governor General",
+      "children": [
+        {
+          "id": "governor-general-2014-governor-general",
+          "name": "Governor General",
+          "children": [
+            {
+              "id": "governor-general-2014-governor-general-obj-1",
+              "name": "Personnel",
+              "amount": 0.015738
+            },
+            {
+              "id": "governor-general-2014-governor-general-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.001461
+            },
+            {
+              "id": "governor-general-2014-governor-general-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000975
+            },
+            {
+              "id": "governor-general-2014-governor-general-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000612
+            },
+            {
+              "id": "governor-general-2014-governor-general-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.000545
+            },
+            {
+              "id": "governor-general-2014-governor-general-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000309
+            },
+            {
+              "id": "governor-general-2014-governor-general-obj-3",
+              "name": "Information",
+              "amount": 0.000273
+            },
+            {
+              "id": "governor-general-2014-governor-general-obj-5",
+              "name": "Rentals",
+              "amount": 0.00027
+            },
+            {
+              "id": "governor-general-2014-governor-general-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 9.9e-5
+            },
+            {
+              "id": "governor-general-2014-governor-general-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 2.5e-5
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "entities": [
+    {
+      "id": "governor-general-2014-entity-governor-general",
+      "name": "Governor General",
+      "value": 0.020307
+    }
+  ],
+  "transferPayments": [],
+  "lineItemsUnits": "dollars_cad"
+}

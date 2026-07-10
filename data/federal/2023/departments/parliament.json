@@ -1,0 +1,550 @@
+{
+  "name": "Parliament",
+  "slug": "parliament",
+  "financialYearEnding": 2023,
+  "reportedAs": null,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 0.829311,
+  "percentageOfFederal": 0.1717,
+  "accrualSpending": 0.813,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 0.1983
+    },
+    {
+      "year": 2015,
+      "percentage": 0.1995
+    },
+    {
+      "year": 2016,
+      "percentage": 0.2031
+    },
+    {
+      "year": 2017,
+      "percentage": 0.2066
+    },
+    {
+      "year": 2018,
+      "percentage": 0.2209
+    },
+    {
+      "year": 2019,
+      "percentage": 0.2113
+    },
+    {
+      "year": 2020,
+      "percentage": 0.203
+    },
+    {
+      "year": 2021,
+      "percentage": 0.1345
+    },
+    {
+      "year": 2022,
+      "percentage": 0.151
+    },
+    {
+      "year": 2023,
+      "percentage": 0.1717
+    },
+    {
+      "year": 2024,
+      "percentage": 0.1784
+    },
+    {
+      "year": 2025,
+      "percentage": 0.1754
+    }
+  ],
+  "miniSankey": {
+    "breakdown": "standard_object",
+    "spending_data": {
+      "id": "parliament",
+      "name": "Parliament",
+      "children": [
+        {
+          "id": "parliament-2023-house-of-commons",
+          "name": "House of Commons",
+          "children": [
+            {
+              "id": "parliament-2023-house-of-commons-obj-1",
+              "name": "Personnel",
+              "amount": 0.425653
+            },
+            {
+              "id": "parliament-2023-house-of-commons-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.043976
+            },
+            {
+              "id": "parliament-2023-house-of-commons-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.029197
+            },
+            {
+              "id": "parliament-2023-house-of-commons-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.026406
+            },
+            {
+              "id": "parliament-2023-house-of-commons-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.026191
+            },
+            {
+              "id": "parliament-2023-house-of-commons-obj-5",
+              "name": "Rentals",
+              "amount": 0.020972
+            },
+            {
+              "id": "parliament-2023-house-of-commons-obj-3",
+              "name": "Information",
+              "amount": 0.012962
+            },
+            {
+              "id": "parliament-2023-house-of-commons-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.011909
+            },
+            {
+              "id": "parliament-2023-house-of-commons-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.010178
+            },
+            {
+              "id": "parliament-2023-house-of-commons-external-revenues",
+              "name": "External revenues",
+              "amount": -0.004296
+            },
+            {
+              "id": "parliament-2023-house-of-commons-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.001425
+            },
+            {
+              "id": "parliament-2023-house-of-commons-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000791
+            }
+          ]
+        },
+        {
+          "id": "parliament-2023-senate",
+          "name": "Senate",
+          "children": [
+            {
+              "id": "parliament-2023-senate-obj-1",
+              "name": "Personnel",
+              "amount": 0.087663
+            },
+            {
+              "id": "parliament-2023-senate-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.007939
+            },
+            {
+              "id": "parliament-2023-senate-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.002855
+            },
+            {
+              "id": "parliament-2023-senate-obj-5",
+              "name": "Rentals",
+              "amount": 0.002082
+            },
+            {
+              "id": "parliament-2023-senate-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.001076
+            },
+            {
+              "id": "parliament-2023-senate-obj-3",
+              "name": "Information",
+              "amount": 0.001039
+            },
+            {
+              "id": "parliament-2023-senate-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.001019
+            },
+            {
+              "id": "parliament-2023-senate-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.000622
+            },
+            {
+              "id": "parliament-2023-senate-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000523
+            },
+            {
+              "id": "parliament-2023-senate-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 8.2e-5
+            }
+          ]
+        },
+        {
+          "id": "parliament-2023-parliamentary-protective-service",
+          "name": "Parliamentary Protective Service",
+          "children": [
+            {
+              "id": "parliament-2023-parliamentary-protective-service-obj-1",
+              "name": "Personnel",
+              "amount": 0.086245
+            },
+            {
+              "id": "parliament-2023-parliamentary-protective-service-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.00986
+            },
+            {
+              "id": "parliament-2023-parliamentary-protective-service-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.002902
+            },
+            {
+              "id": "parliament-2023-parliamentary-protective-service-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.001398
+            },
+            {
+              "id": "parliament-2023-parliamentary-protective-service-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.001069
+            },
+            {
+              "id": "parliament-2023-parliamentary-protective-service-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.001059
+            },
+            {
+              "id": "parliament-2023-parliamentary-protective-service-obj-5",
+              "name": "Rentals",
+              "amount": 0.000512
+            },
+            {
+              "id": "parliament-2023-parliamentary-protective-service-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000369
+            },
+            {
+              "id": "parliament-2023-parliamentary-protective-service-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000361
+            },
+            {
+              "id": "parliament-2023-parliamentary-protective-service-external-revenues",
+              "name": "External revenues",
+              "amount": -0.000109
+            },
+            {
+              "id": "parliament-2023-parliamentary-protective-service-obj-3",
+              "name": "Information",
+              "amount": 6.4e-5
+            }
+          ]
+        },
+        {
+          "id": "parliament-2023-library-of-parliament",
+          "name": "Library of Parliament",
+          "children": [
+            {
+              "id": "parliament-2023-library-of-parliament-obj-1",
+              "name": "Personnel",
+              "amount": 0.044726
+            },
+            {
+              "id": "parliament-2023-library-of-parliament-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.003352
+            },
+            {
+              "id": "parliament-2023-library-of-parliament-obj-3",
+              "name": "Information",
+              "amount": 0.002242
+            },
+            {
+              "id": "parliament-2023-library-of-parliament-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.00143
+            },
+            {
+              "id": "parliament-2023-library-of-parliament-external-revenues",
+              "name": "External revenues",
+              "amount": -0.000551
+            },
+            {
+              "id": "parliament-2023-library-of-parliament-obj-5",
+              "name": "Rentals",
+              "amount": 0.000476
+            },
+            {
+              "id": "parliament-2023-library-of-parliament-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.00041
+            },
+            {
+              "id": "parliament-2023-library-of-parliament-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000221
+            },
+            {
+              "id": "parliament-2023-library-of-parliament-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 4.1e-5
+            },
+            {
+              "id": "parliament-2023-library-of-parliament-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 7.0e-6
+            }
+          ]
+        },
+        {
+          "id": "parliament-2023-office-of-the-conflict-of-interest-and-ethics-commissioner",
+          "name": "Office of the Conflict of Interest and Ethics Commissioner",
+          "children": [
+            {
+              "id": "parliament-2023-office-of-the-conflict-of-interest-and-ethics-commissioner-obj-1",
+              "name": "Personnel",
+              "amount": 0.006237
+            },
+            {
+              "id": "parliament-2023-office-of-the-conflict-of-interest-and-ethics-commissioner-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.000585
+            },
+            {
+              "id": "parliament-2023-office-of-the-conflict-of-interest-and-ethics-commissioner-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000478
+            },
+            {
+              "id": "parliament-2023-office-of-the-conflict-of-interest-and-ethics-commissioner-obj-3",
+              "name": "Information",
+              "amount": 0.000115
+            },
+            {
+              "id": "parliament-2023-office-of-the-conflict-of-interest-and-ethics-commissioner-obj-2",
+              "name": "Transportation and communications",
+              "amount": 7.5e-5
+            },
+            {
+              "id": "parliament-2023-office-of-the-conflict-of-interest-and-ethics-commissioner-obj-5",
+              "name": "Rentals",
+              "amount": 4.7e-5
+            },
+            {
+              "id": "parliament-2023-office-of-the-conflict-of-interest-and-ethics-commissioner-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 4.1e-5
+            },
+            {
+              "id": "parliament-2023-office-of-the-conflict-of-interest-and-ethics-commissioner-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 2.0e-6
+            }
+          ]
+        },
+        {
+          "id": "parliament-2023-office-of-the-parliamentary-budget-officer",
+          "name": "Office of the Parliamentary Budget Officer",
+          "children": [
+            {
+              "id": "parliament-2023-office-of-the-parliamentary-budget-officer-obj-1",
+              "name": "Personnel",
+              "amount": 0.00526
+            },
+            {
+              "id": "parliament-2023-office-of-the-parliamentary-budget-officer-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.000387
+            },
+            {
+              "id": "parliament-2023-office-of-the-parliamentary-budget-officer-obj-5",
+              "name": "Rentals",
+              "amount": 0.000298
+            },
+            {
+              "id": "parliament-2023-office-of-the-parliamentary-budget-officer-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000276
+            },
+            {
+              "id": "parliament-2023-office-of-the-parliamentary-budget-officer-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000115
+            },
+            {
+              "id": "parliament-2023-office-of-the-parliamentary-budget-officer-obj-3",
+              "name": "Information",
+              "amount": 8.0e-5
+            },
+            {
+              "id": "parliament-2023-office-of-the-parliamentary-budget-officer-obj-2",
+              "name": "Transportation and communications",
+              "amount": 7.9e-5
+            },
+            {
+              "id": "parliament-2023-office-of-the-parliamentary-budget-officer-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 1.0e-6
+            }
+          ]
+        },
+        {
+          "id": "parliament-2023-secretariat-of-the-national-security-and-intelligence-committee-of-parliamentarians",
+          "name": "Secretariat of the National Security and Intelligence Committee of Parliamentarians",
+          "children": [
+            {
+              "id": "parliament-2023-secretariat-of-the-national-security-and-intelligence-committee-of-parliamentarians-obj-1",
+              "name": "Personnel",
+              "amount": 0.001644
+            },
+            {
+              "id": "parliament-2023-secretariat-of-the-national-security-and-intelligence-committee-of-parliamentarians-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.001051
+            },
+            {
+              "id": "parliament-2023-secretariat-of-the-national-security-and-intelligence-committee-of-parliamentarians-obj-5",
+              "name": "Rentals",
+              "amount": 9.8e-5
+            },
+            {
+              "id": "parliament-2023-secretariat-of-the-national-security-and-intelligence-committee-of-parliamentarians-obj-2",
+              "name": "Transportation and communications",
+              "amount": 3.9e-5
+            },
+            {
+              "id": "parliament-2023-secretariat-of-the-national-security-and-intelligence-committee-of-parliamentarians-obj-3",
+              "name": "Information",
+              "amount": 8.0e-6
+            },
+            {
+              "id": "parliament-2023-secretariat-of-the-national-security-and-intelligence-committee-of-parliamentarians-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 5.0e-6
+            },
+            {
+              "id": "parliament-2023-secretariat-of-the-national-security-and-intelligence-committee-of-parliamentarians-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 4.0e-6
+            },
+            {
+              "id": "parliament-2023-secretariat-of-the-national-security-and-intelligence-committee-of-parliamentarians-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 2.0e-6
+            }
+          ]
+        },
+        {
+          "id": "parliament-2023-office-of-the-senate-ethics-officer",
+          "name": "Office of the Senate Ethics Officer",
+          "children": [
+            {
+              "id": "parliament-2023-office-of-the-senate-ethics-officer-obj-1",
+              "name": "Personnel",
+              "amount": 0.000819
+            },
+            {
+              "id": "parliament-2023-office-of-the-senate-ethics-officer-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.000117
+            },
+            {
+              "id": "parliament-2023-office-of-the-senate-ethics-officer-obj-2",
+              "name": "Transportation and communications",
+              "amount": 1.9e-5
+            },
+            {
+              "id": "parliament-2023-office-of-the-senate-ethics-officer-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 6.0e-6
+            },
+            {
+              "id": "parliament-2023-office-of-the-senate-ethics-officer-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 3.0e-6
+            },
+            {
+              "id": "parliament-2023-office-of-the-senate-ethics-officer-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 1.0e-6
+            },
+            {
+              "id": "parliament-2023-office-of-the-senate-ethics-officer-obj-5",
+              "name": "Rentals",
+              "amount": 1.0e-6
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "entities": [
+    {
+      "id": "parliament-2023-entity-house-of-commons",
+      "name": "House of Commons",
+      "value": 0.552552
+    },
+    {
+      "id": "parliament-2023-entity-senate",
+      "name": "Senate",
+      "value": 0.1049
+    },
+    {
+      "id": "parliament-2023-entity-parliamentary-protective-service",
+      "name": "Parliamentary Protective Service",
+      "value": 0.101612
+    },
+    {
+      "id": "parliament-2023-entity-library-of-parliament",
+      "name": "Library of Parliament",
+      "value": 0.052354
+    },
+    {
+      "id": "parliament-2023-entity-office-of-the-conflict-of-interest-and-ethics-commissioner",
+      "name": "Office of the Conflict of Interest and Ethics Commissioner",
+      "value": 0.00758
+    },
+    {
+      "id": "parliament-2023-entity-office-of-the-parliamentary-budget-officer",
+      "name": "Office of the Parliamentary Budget Officer",
+      "value": 0.006496
+    },
+    {
+      "id": "parliament-2023-entity-secretariat-of-the-national-security-and-intelligence-committee-of-parliamentarians",
+      "name": "Secretariat of the National Security and Intelligence Committee of Parliamentarians",
+      "value": 0.002851
+    },
+    {
+      "id": "parliament-2023-entity-office-of-the-senate-ethics-officer",
+      "name": "Office of the Senate Ethics Officer",
+      "value": 0.000966
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "parliament-2023-tp-0000",
+      "category": "Contributions",
+      "description": "Contributions to Parliamentary Associations and Group(s)",
+      "used": 611906
+    },
+    {
+      "id": "parliament-2023-tp-0001",
+      "category": "Contributions",
+      "description": "Payments to Parliamentary and Procedural Associations",
+      "used": 1425007
+    },
+    {
+      "id": "parliament-2023-tp-0002",
+      "category": "Grants",
+      "description": "Payments out of Consolidated Revenue Fund for pensions to widows of former members",
+      "used": 10378
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

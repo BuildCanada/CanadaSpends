@@ -7,10 +7,6 @@ import "./SankeyChart.css";
 import { SankeyData } from "./SankeyChartD3";
 import { SankeyChartSingle } from "./SankeyChartSingle";
 import { formatNumber, sortNodesByAmount, transformToIdBased } from "./utils";
-import {
-  departmentNames,
-  nodeToDepartment,
-} from "@/lib/sankeyDepartmentMappings";
 import { colours } from "@/styles/colours";
 
 // Dynamically import React Select to avoid SSR hydration issues
@@ -36,14 +32,15 @@ interface SearchOptionType {
   label: string;
 }
 
-const getFlatData = (data: SankeyData) => {
-  const revenueRoot = hierarchy(data.revenue_data).sum((d) => {
-    return d.amount;
-  });
+// D3's sum() adds a node's own amount plus its descendants', so a parent
+// carrying its subtotal would be double-counted — count leaf amounts only.
+const leafAmount = (d: { amount?: number; children?: unknown[] }) =>
+  d.children && d.children.length ? 0 : d.amount || 0;
 
-  const spendingRoot = hierarchy(data.spending_data).sum((d) => {
-    return d.amount;
-  });
+const getFlatData = (data: SankeyData) => {
+  const revenueRoot = hierarchy(data.revenue_data).sum(leafAmount);
+
+  const spendingRoot = hierarchy(data.spending_data).sum(leafAmount);
 
   return {
     nodes: [
@@ -207,24 +204,10 @@ export function SankeyChart(props: SankeyChartProps) {
             inputId="sankey-search-input"
             value={searchedNode}
             options={flatData
-              ?.flatMap((d) => {
-                const base = {
-                  value: d.id!,
-                  label: d.displayName || d.name || "Unknown",
-                };
-
-                const deptSlug = nodeToDepartment[d.displayName];
-                if (deptSlug && departmentNames[deptSlug] && d.children) {
-                  return [
-                    base,
-                    {
-                      value: d.id!,
-                      label: departmentNames[deptSlug],
-                    },
-                  ];
-                }
-                return [base];
-              })
+              ?.map((d) => ({
+                value: d.id!,
+                label: d.displayName || d.name || "Unknown",
+              }))
               .filter((d) => d.value && d.label)}
             onChange={handleSearch}
             isClearable={true}

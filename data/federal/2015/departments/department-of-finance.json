@@ -1,0 +1,648 @@
+{
+  "name": "Finance",
+  "slug": "department-of-finance",
+  "financialYearEnding": 2015,
+  "reportedAs": null,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 86.198306,
+  "percentageOfFederal": 30.7352,
+  "accrualSpending": 86.494371,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 31.0335
+    },
+    {
+      "year": 2015,
+      "percentage": 30.7352
+    },
+    {
+      "year": 2016,
+      "percentage": 29.5515
+    },
+    {
+      "year": 2017,
+      "percentage": 28.6369
+    },
+    {
+      "year": 2018,
+      "percentage": 27.4522
+    },
+    {
+      "year": 2019,
+      "percentage": 27.2778
+    },
+    {
+      "year": 2020,
+      "percentage": 26.5605
+    },
+    {
+      "year": 2021,
+      "percentage": 18.3268
+    },
+    {
+      "year": 2022,
+      "percentage": 21.2122
+    },
+    {
+      "year": 2023,
+      "percentage": 24.3874
+    },
+    {
+      "year": 2024,
+      "percentage": 26.1034
+    },
+    {
+      "year": 2025,
+      "percentage": 26.2858
+    }
+  ],
+  "miniSankey": {
+    "breakdown": "standard_object",
+    "spending_data": {
+      "id": "department-of-finance",
+      "name": "Finance",
+      "children": [
+        {
+          "id": "department-of-finance-2015-finance-department",
+          "name": "Finance Department",
+          "children": [
+            {
+              "id": "department-of-finance-2015-finance-department-obj-10",
+              "name": "Transfer payments",
+              "children": [
+                {
+                  "id": "department-of-finance-2015-tp-0006",
+                  "name": "Canada health transfer",
+                  "amount": 29.915297
+                },
+                {
+                  "id": "department-of-finance-2015-tp-0012",
+                  "name": "Fiscal equalization",
+                  "amount": 15.528004
+                },
+                {
+                  "id": "department-of-finance-2015-tp-0007",
+                  "name": "Canada social transfer",
+                  "amount": 11.720312
+                },
+                {
+                  "id": "department-of-finance-2015-tp-0020",
+                  "name": "Territorial financing",
+                  "amount": 3.231693
+                },
+                {
+                  "id": "department-of-finance-2015-tp-0017",
+                  "name": "Payments to International Development Association",
+                  "amount": 0.82275
+                },
+                {
+                  "id": "department-of-finance-2015-tp-0010",
+                  "name": "Establishment of a Canadian Securities Regulation Regime and Canadian Regulatory Authority",
+                  "amount": 0.157429
+                },
+                {
+                  "id": "department-of-finance-2015-tp-0004",
+                  "name": "Additional fiscal equalization to Nova Scotia",
+                  "amount": 0.122202
+                },
+                {
+                  "id": "department-of-finance-2015-tp-0011",
+                  "name": "Fiscal Stabilization",
+                  "amount": 0.096321
+                },
+                {
+                  "id": "department-of-finance-2015-tp-0013",
+                  "name": "Incentive for provinces to eliminate taxes on capital",
+                  "amount": 0.088535
+                },
+                {
+                  "id": "department-of-finance-2015-tp-0015",
+                  "name": "Obligation to Ontario related to General Motors",
+                  "amount": 0.069897
+                },
+                {
+                  "id": "department-of-finance-2015-tp-0003",
+                  "name": "Additional fiscal equalization offset payment to Nova Scotia",
+                  "amount": 0.060066
+                },
+                {
+                  "id": "department-of-finance-2015-finance-department-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.143142,
+                  "isAggregate": true,
+                  "count": 5
+                }
+              ]
+            },
+            {
+              "id": "department-of-finance-2015-finance-department-obj-11",
+              "name": "Public debt charges",
+              "amount": 23.487916
+            },
+            {
+              "id": "department-of-finance-2015-finance-department-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.106185
+            },
+            {
+              "id": "department-of-finance-2015-finance-department-obj-1",
+              "name": "Personnel",
+              "amount": 0.08675
+            },
+            {
+              "id": "department-of-finance-2015-finance-department-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.012945
+            },
+            {
+              "id": "department-of-finance-2015-finance-department-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.010011
+            },
+            {
+              "id": "department-of-finance-2015-finance-department-obj-3",
+              "name": "Information",
+              "amount": 0.01
+            },
+            {
+              "id": "department-of-finance-2015-finance-department-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.005851
+            },
+            {
+              "id": "department-of-finance-2015-finance-department-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.003498
+            },
+            {
+              "id": "department-of-finance-2015-finance-department-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.002834
+            },
+            {
+              "name": "Other",
+              "id": "department-of-finance-2015-finance-department-other",
+              "amount": 0.001618,
+              "isAggregate": true,
+              "count": 2
+            },
+            {
+              "id": "department-of-finance-2015-finance-department-internal-revenues",
+              "name": "Internal revenues",
+              "amount": 0.000101
+            }
+          ]
+        },
+        {
+          "id": "department-of-finance-2015-ppp-canada-inc",
+          "name": "PPP Canada Inc.",
+          "children": [
+            {
+              "id": "department-of-finance-2015-ppp-canada-inc-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.2095
+            }
+          ]
+        },
+        {
+          "id": "department-of-finance-2015-office-of-the-superintendent-of-financial-institutions",
+          "name": "Office of the Superintendent of Financial Institutions",
+          "children": [
+            {
+              "id": "department-of-finance-2015-office-of-the-superintendent-of-financial-institutions-obj-1",
+              "name": "Personnel",
+              "amount": 0.107497
+            },
+            {
+              "id": "department-of-finance-2015-office-of-the-superintendent-of-financial-institutions-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.016346
+            },
+            {
+              "id": "department-of-finance-2015-office-of-the-superintendent-of-financial-institutions-obj-5",
+              "name": "Rentals",
+              "amount": 0.009952
+            },
+            {
+              "id": "department-of-finance-2015-office-of-the-superintendent-of-financial-institutions-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.004193
+            },
+            {
+              "id": "department-of-finance-2015-office-of-the-superintendent-of-financial-institutions-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.002826
+            },
+            {
+              "id": "department-of-finance-2015-office-of-the-superintendent-of-financial-institutions-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.002786
+            },
+            {
+              "id": "department-of-finance-2015-office-of-the-superintendent-of-financial-institutions-obj-3",
+              "name": "Information",
+              "amount": 0.001235
+            },
+            {
+              "id": "department-of-finance-2015-office-of-the-superintendent-of-financial-institutions-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000505
+            },
+            {
+              "id": "department-of-finance-2015-office-of-the-superintendent-of-financial-institutions-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000503
+            },
+            {
+              "id": "department-of-finance-2015-office-of-the-superintendent-of-financial-institutions-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.000466
+            }
+          ]
+        },
+        {
+          "id": "department-of-finance-2015-office-of-the-auditor-general",
+          "name": "Office of the Auditor General",
+          "children": [
+            {
+              "id": "department-of-finance-2015-office-of-the-auditor-general-obj-1",
+              "name": "Personnel",
+              "amount": 0.068737
+            },
+            {
+              "id": "department-of-finance-2015-office-of-the-auditor-general-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.0058
+            },
+            {
+              "id": "department-of-finance-2015-office-of-the-auditor-general-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.003504
+            },
+            {
+              "id": "department-of-finance-2015-office-of-the-auditor-general-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.002196
+            },
+            {
+              "id": "department-of-finance-2015-office-of-the-auditor-general-external-revenues",
+              "name": "External revenues",
+              "amount": 0.001129
+            },
+            {
+              "id": "department-of-finance-2015-office-of-the-auditor-general-obj-5",
+              "name": "Rentals",
+              "amount": 0.001078
+            },
+            {
+              "id": "department-of-finance-2015-office-of-the-auditor-general-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000741
+            },
+            {
+              "id": "department-of-finance-2015-office-of-the-auditor-general-obj-3",
+              "name": "Information",
+              "amount": 0.000454
+            },
+            {
+              "id": "department-of-finance-2015-office-of-the-auditor-general-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000245
+            },
+            {
+              "id": "department-of-finance-2015-office-of-the-auditor-general-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000237
+            }
+          ]
+        },
+        {
+          "id": "department-of-finance-2015-financial-transactions-and-reports-analysis-centre-of-canada",
+          "name": "Financial Transactions and Reports Analysis Centre of Canada",
+          "children": [
+            {
+              "id": "department-of-finance-2015-financial-transactions-and-reports-analysis-centre-of-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.036924
+            },
+            {
+              "id": "department-of-finance-2015-financial-transactions-and-reports-analysis-centre-of-canada-obj-5",
+              "name": "Rentals",
+              "amount": 0.005924
+            },
+            {
+              "id": "department-of-finance-2015-financial-transactions-and-reports-analysis-centre-of-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.003452
+            },
+            {
+              "id": "department-of-finance-2015-financial-transactions-and-reports-analysis-centre-of-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.001476
+            },
+            {
+              "id": "department-of-finance-2015-financial-transactions-and-reports-analysis-centre-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.001205
+            },
+            {
+              "id": "department-of-finance-2015-financial-transactions-and-reports-analysis-centre-of-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.001054
+            },
+            {
+              "id": "department-of-finance-2015-financial-transactions-and-reports-analysis-centre-of-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000761
+            },
+            {
+              "id": "department-of-finance-2015-financial-transactions-and-reports-analysis-centre-of-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000319
+            },
+            {
+              "id": "department-of-finance-2015-financial-transactions-and-reports-analysis-centre-of-canada-obj-3",
+              "name": "Information",
+              "amount": 0.000289
+            }
+          ]
+        },
+        {
+          "id": "department-of-finance-2015-financial-consumer-agency-of-canada",
+          "name": "Financial Consumer Agency of Canada",
+          "children": [
+            {
+              "id": "department-of-finance-2015-financial-consumer-agency-of-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.009781
+            },
+            {
+              "id": "department-of-finance-2015-financial-consumer-agency-of-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.003346
+            },
+            {
+              "id": "department-of-finance-2015-financial-consumer-agency-of-canada-obj-3",
+              "name": "Information",
+              "amount": 0.001886
+            },
+            {
+              "id": "department-of-finance-2015-financial-consumer-agency-of-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.001084
+            },
+            {
+              "id": "department-of-finance-2015-financial-consumer-agency-of-canada-obj-5",
+              "name": "Rentals",
+              "amount": 0.000823
+            },
+            {
+              "id": "department-of-finance-2015-financial-consumer-agency-of-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000513
+            },
+            {
+              "id": "department-of-finance-2015-financial-consumer-agency-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000328
+            },
+            {
+              "id": "department-of-finance-2015-financial-consumer-agency-of-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 9.7e-5
+            },
+            {
+              "id": "department-of-finance-2015-financial-consumer-agency-of-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 3.2e-5
+            }
+          ]
+        },
+        {
+          "id": "department-of-finance-2015-canadian-international-trade-tribunal",
+          "name": "Canadian International Trade Tribunal",
+          "children": [
+            {
+              "id": "department-of-finance-2015-canadian-international-trade-tribunal-obj-1",
+              "name": "Personnel",
+              "amount": 0.004845
+            },
+            {
+              "id": "department-of-finance-2015-canadian-international-trade-tribunal-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.00033
+            },
+            {
+              "id": "department-of-finance-2015-canadian-international-trade-tribunal-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000243
+            },
+            {
+              "id": "department-of-finance-2015-canadian-international-trade-tribunal-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000119
+            },
+            {
+              "id": "department-of-finance-2015-canadian-international-trade-tribunal-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 7.9e-5
+            },
+            {
+              "id": "department-of-finance-2015-canadian-international-trade-tribunal-obj-5",
+              "name": "Rentals",
+              "amount": 4.4e-5
+            },
+            {
+              "id": "department-of-finance-2015-canadian-international-trade-tribunal-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 3.0e-5
+            },
+            {
+              "id": "department-of-finance-2015-canadian-international-trade-tribunal-obj-3",
+              "name": "Information",
+              "amount": 2.4e-5
+            },
+            {
+              "id": "department-of-finance-2015-canadian-international-trade-tribunal-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 1.1e-5
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "entities": [
+    {
+      "id": "department-of-finance-2015-entity-finance-department",
+      "name": "Finance Department",
+      "value": 85.683357
+    },
+    {
+      "id": "department-of-finance-2015-entity-ppp-canada-inc",
+      "name": "PPP Canada Inc.",
+      "value": 0.2095
+    },
+    {
+      "id": "department-of-finance-2015-entity-office-of-the-superintendent-of-financial-institutions",
+      "name": "Office of the Superintendent of Financial Institutions",
+      "value": 0.146309
+    },
+    {
+      "id": "department-of-finance-2015-entity-office-of-the-auditor-general",
+      "name": "Office of the Auditor General",
+      "value": 0.084121
+    },
+    {
+      "id": "department-of-finance-2015-entity-financial-transactions-and-reports-analysis-centre-of-canada",
+      "name": "Financial Transactions and Reports Analysis Centre of Canada",
+      "value": 0.051404
+    },
+    {
+      "id": "department-of-finance-2015-entity-financial-consumer-agency-of-canada",
+      "name": "Financial Consumer Agency of Canada",
+      "value": 0.01789
+    },
+    {
+      "id": "department-of-finance-2015-entity-canadian-international-trade-tribunal",
+      "name": "Canadian International Trade Tribunal",
+      "value": 0.005725
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "department-of-finance-2015-tp-0000",
+      "category": "Contributions",
+      "description": "Contribution to the Harbourfront Centre",
+      "used": 5000000
+    },
+    {
+      "id": "department-of-finance-2015-tp-0001",
+      "category": "Contributions",
+      "description": "Items not required for the current year",
+      "used": 0
+    },
+    {
+      "id": "department-of-finance-2015-tp-0002",
+      "category": "Contributions",
+      "description": "Research and Policy Initiatives Assistance",
+      "used": 0
+    },
+    {
+      "id": "department-of-finance-2015-tp-0003",
+      "category": "Other transfer payments",
+      "description": "Additional fiscal equalization offset payment to Nova Scotia",
+      "used": 64481000
+    },
+    {
+      "id": "department-of-finance-2015-tp-0004",
+      "category": "Other transfer payments",
+      "description": "Additional fiscal equalization to Nova Scotia",
+      "used": 131184000
+    },
+    {
+      "id": "department-of-finance-2015-tp-0005",
+      "category": "Other transfer payments",
+      "description": "Alternative payments for standing programs",
+      "used": 0
+    },
+    {
+      "id": "department-of-finance-2015-tp-0006",
+      "category": "Other transfer payments",
+      "description": "Canada health transfer",
+      "used": 32114006363
+    },
+    {
+      "id": "department-of-finance-2015-tp-0007",
+      "category": "Other transfer payments",
+      "description": "Canada social transfer",
+      "used": 12581729000
+    },
+    {
+      "id": "department-of-finance-2015-tp-0008",
+      "category": "Other transfer payments",
+      "description": "Canadian Securities Regulation Regime Transition Office",
+      "used": 53100000
+    },
+    {
+      "id": "department-of-finance-2015-tp-0009",
+      "category": "Other transfer payments",
+      "description": "Debt payments on behalf of poor countries to International Organizations pursuant to section 18(1) of the Economic Recovery Act",
+      "used": 51200000
+    },
+    {
+      "id": "department-of-finance-2015-tp-0010",
+      "category": "Other transfer payments",
+      "description": "Establishment of a Canadian Securities Regulation Regime and Canadian Regulatory Authority",
+      "used": 169000000
+    },
+    {
+      "id": "department-of-finance-2015-tp-0011",
+      "category": "Other transfer payments",
+      "description": "Fiscal Stabilization",
+      "used": 103400000
+    },
+    {
+      "id": "department-of-finance-2015-tp-0012",
+      "category": "Other transfer payments",
+      "description": "Fiscal equalization",
+      "used": 16669278000
+    },
+    {
+      "id": "department-of-finance-2015-tp-0013",
+      "category": "Other transfer payments",
+      "description": "Incentive for provinces to eliminate taxes on capital",
+      "used": 95042000
+    },
+    {
+      "id": "department-of-finance-2015-tp-0014",
+      "category": "Other transfer payments",
+      "description": "Items not required for the current year",
+      "used": 0
+    },
+    {
+      "id": "department-of-finance-2015-tp-0015",
+      "category": "Other transfer payments",
+      "description": "Obligation to Ontario related to General Motors",
+      "used": 75034392
+    },
+    {
+      "id": "department-of-finance-2015-tp-0016",
+      "category": "Other transfer payments",
+      "description": "Payment to the International Bank for Reconstruction and Development for the Agriculture Advance Market commitment",
+      "used": 10000000
+    },
+    {
+      "id": "department-of-finance-2015-tp-0017",
+      "category": "Other transfer payments",
+      "description": "Payments to International Development Association",
+      "used": 883220000
+    },
+    {
+      "id": "department-of-finance-2015-tp-0018",
+      "category": "Other transfer payments",
+      "description": "Payments to Provinces Regarding Sales Tax Harmonization",
+      "used": 0
+    },
+    {
+      "id": "department-of-finance-2015-tp-0019",
+      "category": "Other transfer payments",
+      "description": "Statutory subsidies",
+      "used": 34363164
+    },
+    {
+      "id": "department-of-finance-2015-tp-0020",
+      "category": "Other transfer payments",
+      "description": "Territorial financing",
+      "used": 3469215474
+    },
+    {
+      "id": "department-of-finance-2015-tp-0021",
+      "category": "Other transfer payments",
+      "description": "Youth allowances recovery",
+      "used": 0
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

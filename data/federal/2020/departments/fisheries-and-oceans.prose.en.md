@@ -1,0 +1,13 @@
+---
+reviewed: false
+source: llm-first-pass
+generated: 2026-07-06
+---
+
+{{name}} is the federal department responsible for the management and conservation of Canada's fisheries and aquatic resources, the protection of oceans and freshwater ecosystems, and the safety of maritime navigation. Its responsibilities include enforcing fisheries regulations, supporting sustainable commercial and Indigenous fisheries, conducting scientific research on oceans and freshwater environments, and operating the Canadian Coast Guard's search-and-rescue, icebreaking, and marine safety services. The department also works with Indigenous communities, coastal provinces, and international partners on shared stewardship of fish stocks and marine habitats, and maintains a fleet of vessels and shore-based infrastructure used for scientific research, enforcement, and emergency response along Canada's coastlines and inland waterways.
+
+{{name}} spent {{totalSpending}} in the 2019–20 fiscal year, representing {{percentageOfFederal}} of federal spending that year.
+
+Nearly all of the department's spending was recorded within the Department of Fisheries and Oceans, administered through 6 appropriation votes. Its transfer payments included one of the department's larger contribution programs, supporting increased Aboriginal participation in commercial fisheries, cooperative fisheries management arrangements, and consultations respecting Aboriginal fisheries agreements, alongside contributions to support Aboriginal Reconciliation Agreements. Other, smaller transfer payments funded the Ocean and Freshwater Science Contribution Program, a contribution program to support Atlantic Canada's fish and seafood sector, and the Aboriginal Aquatic Resource and Oceans Management Program. Together, these transfer payments reflect a strong emphasis on Indigenous participation and reconciliation alongside support for scientific research and regional fishing industries.
+
+<!-- verification: Fisheries, Oceans and the Canadian Coast Guard confirmed from fact sheet (name field). Total spending and percentage figures use placeholders only. Top entity named: Department of Fisheries and Oceans — matches topEntities/topSankeyChildren (only entity present). Vote count (6) stated as literal integer per allowed exception. Transfer categories named: Aboriginal participation in commercial fisheries/cooperative fisheries management/Aboriginal fisheries agreements contributions, Aboriginal Reconciliation Agreements, Ocean and Freshwater Science Contribution Program, Atlantic Canada fish and seafood sector contribution program, Aboriginal Aquatic Resource and Oceans Management Program — all match topTransferPayments descriptions. No claim uses figures outside the three placeholders. -->

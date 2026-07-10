@@ -1,0 +1,647 @@
+{
+  "financialYearEnding": 2016,
+  "headcount": 258979,
+  "headcountAsOf": "2016-03-31",
+  "personnelSpending": 39.616656,
+  "averagePersonnelCost": 152972,
+  "source": "Treasury Board of Canada Secretariat — Population of the Federal Public Service",
+  "source_url": "https://www.canada.ca/en/treasury-board-secretariat/services/innovation/human-resources-statistics/population-federal-public-service-department.html",
+  "ageBands": [
+    {
+      "key": "under-20",
+      "label_en": "<20",
+      "label_fr": "<20",
+      "count": 501
+    },
+    {
+      "key": "20-24",
+      "label_en": "20-24",
+      "label_fr": "20-24",
+      "count": 8887
+    },
+    {
+      "key": "25-29",
+      "label_en": "25-29",
+      "label_fr": "25-29",
+      "count": 16727
+    },
+    {
+      "key": "30-34",
+      "label_en": "30-34",
+      "label_fr": "30-34",
+      "count": 27083
+    },
+    {
+      "key": "35-39",
+      "label_en": "35-39",
+      "label_fr": "35-39",
+      "count": 35339
+    },
+    {
+      "key": "40-44",
+      "label_en": "40-44",
+      "label_fr": "40-44",
+      "count": 37180
+    },
+    {
+      "key": "45-49",
+      "label_en": "45-49",
+      "label_fr": "45-49",
+      "count": 37668
+    },
+    {
+      "key": "50-54",
+      "label_en": "50-54",
+      "label_fr": "50-54",
+      "count": 43236
+    },
+    {
+      "key": "55-59",
+      "label_en": "55-59",
+      "label_fr": "55-59",
+      "count": 32326
+    },
+    {
+      "key": "60-64",
+      "label_en": "60-64",
+      "label_fr": "60-64",
+      "count": 14467
+    },
+    {
+      "key": "65-plus",
+      "label_en": "65+",
+      "label_fr": "65+",
+      "count": 5563
+    },
+    {
+      "key": "unknown",
+      "label_en": "Unknown",
+      "label_fr": "Non disponible",
+      "count": 2
+    }
+  ],
+  "tenure": [
+    {
+      "key": "casual",
+      "label_en": "Casual",
+      "label_fr": "Employé occasionnel",
+      "count": 9251
+    },
+    {
+      "key": "indeterminate",
+      "label_en": "Indeterminate",
+      "label_fr": "Durée indéterminée",
+      "count": 218544
+    },
+    {
+      "key": "student",
+      "label_en": "Student",
+      "label_fr": "Étudiant",
+      "count": 5712
+    },
+    {
+      "key": "term",
+      "label_en": "Term",
+      "label_fr": "Durée déterminée",
+      "count": 25472
+    },
+    {
+      "key": "unknown",
+      "label_en": "Unknown",
+      "label_fr": "Non disponible",
+      "count": 0
+    }
+  ],
+  "headcountByDepartment": [
+    {
+      "name": "Canada Revenue Agency",
+      "headcount": 39484,
+      "resolved": true,
+      "slug": "canada-revenue-agency"
+    },
+    {
+      "name": "National Defence",
+      "headcount": 22954,
+      "resolved": true,
+      "slug": "national-defence"
+    },
+    {
+      "name": "Employment and Social Development Canada",
+      "headcount": 22312,
+      "resolved": false
+    },
+    {
+      "name": "Correctional Service Canada",
+      "headcount": 17172,
+      "resolved": false
+    },
+    {
+      "name": "Canada Border Services Agency",
+      "headcount": 14171,
+      "resolved": true,
+      "slug": "public-safety-canada"
+    },
+    {
+      "name": "Public Services and Procurement Canada",
+      "headcount": 12061,
+      "resolved": false
+    },
+    {
+      "name": "Fisheries and Oceans Canada",
+      "headcount": 9901,
+      "resolved": false
+    },
+    {
+      "name": "Health Canada",
+      "headcount": 9189,
+      "resolved": false
+    },
+    {
+      "name": "Immigration, Refugees and Citizenship Canada",
+      "headcount": 6587,
+      "resolved": false
+    },
+    {
+      "name": "Royal Canadian Mounted Police",
+      "headcount": 6571,
+      "resolved": true,
+      "slug": "public-safety-canada"
+    },
+    {
+      "name": "Environment and Climate Change Canada",
+      "headcount": 6475,
+      "resolved": false
+    },
+    {
+      "name": "Canadian Food Inspection Agency",
+      "headcount": 5946,
+      "resolved": true,
+      "slug": "health-canada"
+    },
+    {
+      "name": "Global Affairs Canada",
+      "headcount": 5890,
+      "resolved": false
+    },
+    {
+      "name": "Statistics Canada",
+      "headcount": 5717,
+      "resolved": true,
+      "slug": "innovation-science-and-industry"
+    },
+    {
+      "name": "Agriculture and Agri-Food Canada",
+      "headcount": 5167,
+      "resolved": false
+    },
+    {
+      "name": "Shared Services Canada",
+      "headcount": 5157,
+      "resolved": true,
+      "slug": "public-services-and-procurement-canada"
+    },
+    {
+      "name": "Transport Canada",
+      "headcount": 5154,
+      "resolved": false
+    },
+    {
+      "name": "Innovation, Science and Economic Development Canada",
+      "headcount": 4776,
+      "resolved": false
+    },
+    {
+      "name": "Crown-Indigenous Relations and Northern Affairs Canada",
+      "headcount": 4582,
+      "resolved": false
+    },
+    {
+      "name": "Department of Justice Canada",
+      "headcount": 4461,
+      "resolved": false
+    },
+    {
+      "name": "Natural Resources Canada",
+      "headcount": 4191,
+      "resolved": false
+    },
+    {
+      "name": "Parks Canada",
+      "headcount": 3886,
+      "resolved": true,
+      "slug": "parks-canada"
+    },
+    {
+      "name": "National Research Council Canada",
+      "headcount": 3780,
+      "resolved": false
+    },
+    {
+      "name": "Veterans Affairs Canada",
+      "headcount": 3413,
+      "resolved": false
+    },
+    {
+      "name": "Public Health Agency of Canada",
+      "headcount": 2223,
+      "resolved": true,
+      "slug": "health-canada"
+    },
+    {
+      "name": "Communications Security Establishment",
+      "headcount": 2162,
+      "resolved": true,
+      "slug": "national-defence"
+    },
+    {
+      "name": "Canadian Heritage",
+      "headcount": 1762,
+      "resolved": true,
+      "slug": "canadian-heritage"
+    },
+    {
+      "name": "Treasury Board of Canada Secretariat",
+      "headcount": 1728,
+      "resolved": false
+    },
+    {
+      "name": "Statistical Survey Operations",
+      "headcount": 1701,
+      "resolved": false
+    },
+    {
+      "name": "Federal Judges not part of any department",
+      "headcount": 1141,
+      "resolved": false
+    },
+    {
+      "name": "Public Safety Canada",
+      "headcount": 1125,
+      "resolved": false
+    },
+    {
+      "name": "Immigration and Refugee Board of Canada",
+      "headcount": 973,
+      "resolved": false
+    },
+    {
+      "name": "Public Prosecution Service of Canada",
+      "headcount": 970,
+      "resolved": false
+    },
+    {
+      "name": "Library and Archives Canada",
+      "headcount": 938,
+      "resolved": false
+    },
+    {
+      "name": "Canadian Nuclear Safety Commission",
+      "headcount": 851,
+      "resolved": true,
+      "slug": "natural-resources"
+    },
+    {
+      "name": "Public Service Commission of Canada",
+      "headcount": 741,
+      "resolved": false
+    },
+    {
+      "name": "Department of Finance Canada",
+      "headcount": 735,
+      "resolved": false
+    },
+    {
+      "name": "Privy Council Office",
+      "headcount": 712,
+      "resolved": true,
+      "slug": "privy-council"
+    },
+    {
+      "name": "Courts Administration Service",
+      "headcount": 668,
+      "resolved": true,
+      "slug": "justice"
+    },
+    {
+      "name": "Office of the Superintendent of Financial Institutions Canada",
+      "headcount": 667,
+      "resolved": false
+    },
+    {
+      "name": "Canada School of Public Service",
+      "headcount": 648,
+      "resolved": true,
+      "slug": "treasury-board"
+    },
+    {
+      "name": "Elections Canada",
+      "headcount": 634,
+      "resolved": false
+    },
+    {
+      "name": "Canadian Space Agency",
+      "headcount": 616,
+      "resolved": true,
+      "slug": "innovation-science-and-industry"
+    },
+    {
+      "name": "Atlantic Canada Opportunities Agency",
+      "headcount": 615,
+      "resolved": true,
+      "slug": "regional-economic-development"
+    },
+    {
+      "name": "Office of the Auditor General of Canada",
+      "headcount": 588,
+      "resolved": false
+    },
+    {
+      "name": "Canada Energy Regulator",
+      "headcount": 469,
+      "resolved": false
+    },
+    {
+      "name": "Canadian Radio-television and Telecommunications Commission",
+      "headcount": 450,
+      "resolved": true,
+      "slug": "canadian-heritage"
+    },
+    {
+      "name": "Parole Board of Canada",
+      "headcount": 447,
+      "resolved": true,
+      "slug": "public-safety-canada"
+    },
+    {
+      "name": "Natural Sciences and Engineering Research Canada",
+      "headcount": 444,
+      "resolved": false
+    },
+    {
+      "name": "Canadian Institutes of Health Research",
+      "headcount": 409,
+      "resolved": true,
+      "slug": "health-canada"
+    },
+    {
+      "name": "Canadian Grain Commission",
+      "headcount": 403,
+      "resolved": true,
+      "slug": "agriculture-and-agri-food"
+    },
+    {
+      "name": "National Film Board",
+      "headcount": 389,
+      "resolved": true,
+      "slug": "canadian-heritage"
+    },
+    {
+      "name": "Administrative Tribunals Support Service of Canada",
+      "headcount": 374,
+      "resolved": true,
+      "slug": "justice"
+    },
+    {
+      "name": "Financial Transactions and Reports Analysis Centre of Canada",
+      "headcount": 374,
+      "resolved": true,
+      "slug": "department-of-finance"
+    },
+    {
+      "name": "Housing, Infrastructure and Communities Canada",
+      "headcount": 351,
+      "resolved": false
+    },
+    {
+      "name": "Canada Economic Development for Quebec Regions",
+      "headcount": 333,
+      "resolved": false
+    },
+    {
+      "name": "Western Economic Diversification Canada",
+      "headcount": 292,
+      "resolved": false
+    },
+    {
+      "name": "Offices of the information and Privacy Commissioners of Canada",
+      "headcount": 259,
+      "resolved": true,
+      "slug": "justice"
+    },
+    {
+      "name": "Impact Assessment Agency of Canada",
+      "headcount": 258,
+      "resolved": false
+    },
+    {
+      "name": "Canadian Transportation Agency",
+      "headcount": 239,
+      "resolved": true,
+      "slug": "transport-canada"
+    },
+    {
+      "name": "Federal Economic Development Agency for Southern Ontario",
+      "headcount": 222,
+      "resolved": true,
+      "slug": "regional-economic-development"
+    },
+    {
+      "name": "Transportation Safety Board of Canada",
+      "headcount": 215,
+      "resolved": false
+    },
+    {
+      "name": "Registrar of the Supreme Court of Canada",
+      "headcount": 212,
+      "resolved": true,
+      "slug": "justice"
+    },
+    {
+      "name": "Social Sciences and Humanities Research Council of Canada",
+      "headcount": 210,
+      "resolved": false
+    },
+    {
+      "name": "Canadian Human Rights Commission",
+      "headcount": 205,
+      "resolved": true,
+      "slug": "justice"
+    },
+    {
+      "name": "Office of the Governor General's Secretary",
+      "headcount": 166,
+      "resolved": true,
+      "slug": "governor-general"
+    },
+    {
+      "name": "Office of the Commissioner of Official Languages",
+      "headcount": 164,
+      "resolved": true,
+      "slug": "privy-council"
+    },
+    {
+      "name": "Financial Consumer Agency of Canada",
+      "headcount": 94,
+      "resolved": true,
+      "slug": "department-of-finance"
+    },
+    {
+      "name": "Women and Gender Equality Canada",
+      "headcount": 91,
+      "resolved": false
+    },
+    {
+      "name": "Indian Oil and Gas Canada",
+      "headcount": 85,
+      "resolved": false
+    },
+    {
+      "name": "Canadian Northern Economic Development Agency",
+      "headcount": 77,
+      "resolved": true,
+      "slug": "regional-economic-development"
+    },
+    {
+      "name": "Civilian Review and Complaints Commission for the RCMP",
+      "headcount": 71,
+      "resolved": false
+    },
+    {
+      "name": "Patented Medicine Prices Review Board Canada",
+      "headcount": 69,
+      "resolved": false
+    },
+    {
+      "name": "Canadian Dairy Commission",
+      "headcount": 60,
+      "resolved": true,
+      "slug": "agriculture-and-agri-food"
+    },
+    {
+      "name": "Office of the Commissioner for Federal Judicial Affairs Canada",
+      "headcount": 59,
+      "resolved": false
+    },
+    {
+      "name": "The Correctional Investigator Canada",
+      "headcount": 37,
+      "resolved": false
+    },
+    {
+      "name": "Military Grievances External Review Committee",
+      "headcount": 35,
+      "resolved": true,
+      "slug": "national-defence"
+    },
+    {
+      "name": "International Joint Commission",
+      "headcount": 32,
+      "resolved": false
+    },
+    {
+      "name": "Polar Knowledge Canada",
+      "headcount": 29,
+      "resolved": false
+    },
+    {
+      "name": "Military Police Complaints Commission of Canada",
+      "headcount": 26,
+      "resolved": false
+    },
+    {
+      "name": "Office of the Commissioner of Lobbying of Canada",
+      "headcount": 26,
+      "resolved": false
+    },
+    {
+      "name": "Office of the Public Sector Integrity Commissioner of Canada",
+      "headcount": 26,
+      "resolved": false
+    },
+    {
+      "name": "Canadian Intergovernmental Conference Secretariat",
+      "headcount": 22,
+      "resolved": true,
+      "slug": "privy-council"
+    },
+    {
+      "name": "Security Intelligence Review Committee",
+      "headcount": 20,
+      "resolved": true,
+      "slug": "privy-council"
+    },
+    {
+      "name": "Farm Products Council of Canada",
+      "headcount": 19,
+      "resolved": false
+    },
+    {
+      "name": "Copyright Board Canada",
+      "headcount": 14,
+      "resolved": false
+    },
+    {
+      "name": "RCMP External Review Committee",
+      "headcount": 7,
+      "resolved": false
+    },
+    {
+      "name": "Accessibility Standards Canada",
+      "headcount": 0,
+      "resolved": false
+    },
+    {
+      "name": "Canadian Polar Commission",
+      "headcount": 0,
+      "resolved": true,
+      "slug": "indigenous-services-and-northern-affairs"
+    },
+    {
+      "name": "Federal Economic Development Agency for Northern Ontario",
+      "headcount": 0,
+      "resolved": false
+    },
+    {
+      "name": "Indian Residential Schools Truth and Reconciliation Commission",
+      "headcount": 0,
+      "resolved": true,
+      "slug": "indigenous-services-and-northern-affairs"
+    },
+    {
+      "name": "Indigenous Services Canada",
+      "headcount": 0,
+      "resolved": false
+    },
+    {
+      "name": "Law Commission of Canada",
+      "headcount": 0,
+      "resolved": false
+    },
+    {
+      "name": "National Security and Intelligence Review Agency",
+      "headcount": 0,
+      "resolved": false
+    },
+    {
+      "name": "Office of the Intelligence Commissioner",
+      "headcount": 0,
+      "resolved": false
+    },
+    {
+      "name": "Office of the Prime Minister",
+      "headcount": 0,
+      "resolved": false
+    },
+    {
+      "name": "Secretariat of the National Security and Intelligence Committee of Parliamentarians",
+      "headcount": 0,
+      "resolved": false
+    },
+    {
+      "name": "Veterans Review and Appeal Board",
+      "headcount": 0,
+      "resolved": true,
+      "slug": "veterans-affairs"
+    }
+  ]
+}

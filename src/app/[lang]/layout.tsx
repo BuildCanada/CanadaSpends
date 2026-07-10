@@ -1,4 +1,5 @@
 import { allMessages } from "@/appRouterI18n";
+import { InflationModeProvider } from "@/components/InflationContext";
 import { LinguiClientProvider } from "@/components/LinguiClientProvider";
 import { initLingui, PageLangParam } from "@/initLingui";
 import { generateHreflangAlternates } from "@/lib/utils";
@@ -73,7 +74,7 @@ export default async function RootLayout({
             initialLocale={lang}
             initialMessages={allMessages[lang]!}
           >
-            {children}
+            <InflationModeProvider>{children}</InflationModeProvider>
             <Toaster position="top-right" richColors />
           </LinguiClientProvider>
         </PostHogProvider>

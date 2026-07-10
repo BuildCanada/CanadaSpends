@@ -1,0 +1,147 @@
+{
+  "name": "Governor General",
+  "slug": "governor-general",
+  "financialYearEnding": 2024,
+  "reportedAs": "Office of the Governor General's Secretary",
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 0.026416,
+  "percentageOfFederal": 0.0051,
+  "accrualSpending": 0.026,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 0.0073
+    },
+    {
+      "year": 2015,
+      "percentage": 0.0074
+    },
+    {
+      "year": 2016,
+      "percentage": 0.0076
+    },
+    {
+      "year": 2017,
+      "percentage": 0.0073
+    },
+    {
+      "year": 2018,
+      "percentage": 0.0071
+    },
+    {
+      "year": 2019,
+      "percentage": 0.0067
+    },
+    {
+      "year": 2020,
+      "percentage": 0.0062
+    },
+    {
+      "year": 2021,
+      "percentage": 0.0038
+    },
+    {
+      "year": 2022,
+      "percentage": 0.0047
+    },
+    {
+      "year": 2023,
+      "percentage": 0.0052
+    },
+    {
+      "year": 2024,
+      "percentage": 0.0051
+    },
+    {
+      "year": 2025,
+      "percentage": 0.0054
+    }
+  ],
+  "miniSankey": {
+    "breakdown": "standard_object",
+    "spending_data": {
+      "id": "governor-general",
+      "name": "Governor General",
+      "children": [
+        {
+          "id": "governor-general-2024-office-of-the-governor-general-s-secretary",
+          "name": "Office of the Governor General's Secretary",
+          "children": [
+            {
+              "id": "governor-general-2024-office-of-the-governor-general-s-secretary-obj-1",
+              "name": "Personnel",
+              "amount": 0.020639
+            },
+            {
+              "id": "governor-general-2024-office-of-the-governor-general-s-secretary-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.001375
+            },
+            {
+              "id": "governor-general-2024-office-of-the-governor-general-s-secretary-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.001086
+            },
+            {
+              "id": "governor-general-2024-office-of-the-governor-general-s-secretary-obj-10",
+              "name": "Transfer payments",
+              "children": [
+                {
+                  "id": "governor-general-2024-tp-0000",
+                  "name": "Annuities payable under the Governor General's Act (R.S.C., 1985 c. G-9)",
+                  "amount": 0.000952
+                }
+              ]
+            },
+            {
+              "id": "governor-general-2024-office-of-the-governor-general-s-secretary-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000932
+            },
+            {
+              "id": "governor-general-2024-office-of-the-governor-general-s-secretary-obj-5",
+              "name": "Rentals",
+              "amount": 0.000501
+            },
+            {
+              "id": "governor-general-2024-office-of-the-governor-general-s-secretary-obj-3",
+              "name": "Information",
+              "amount": 0.000462
+            },
+            {
+              "id": "governor-general-2024-office-of-the-governor-general-s-secretary-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000428
+            },
+            {
+              "id": "governor-general-2024-office-of-the-governor-general-s-secretary-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 3.1e-5
+            },
+            {
+              "id": "governor-general-2024-office-of-the-governor-general-s-secretary-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 1.0e-5
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "entities": [
+    {
+      "id": "governor-general-2024-entity-office-of-the-governor-general-s-secretary",
+      "name": "Office of the Governor General's Secretary",
+      "value": 0.026416
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "governor-general-2024-tp-0000",
+      "category": "Grants",
+      "description": "Annuities payable under the Governor General's Act (R.S.C., 1985 c. G-9)",
+      "used": 952367
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

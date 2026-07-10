@@ -1,0 +1,147 @@
+{
+  "name": "Governor General",
+  "slug": "governor-general",
+  "financialYearEnding": 2016,
+  "reportedAs": "Office of the Governor General's Secretary",
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 0.022318,
+  "percentageOfFederal": 0.0076,
+  "accrualSpending": 0.020218,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 0.0073
+    },
+    {
+      "year": 2015,
+      "percentage": 0.0074
+    },
+    {
+      "year": 2016,
+      "percentage": 0.0076
+    },
+    {
+      "year": 2017,
+      "percentage": 0.0073
+    },
+    {
+      "year": 2018,
+      "percentage": 0.0071
+    },
+    {
+      "year": 2019,
+      "percentage": 0.0067
+    },
+    {
+      "year": 2020,
+      "percentage": 0.0062
+    },
+    {
+      "year": 2021,
+      "percentage": 0.0038
+    },
+    {
+      "year": 2022,
+      "percentage": 0.0047
+    },
+    {
+      "year": 2023,
+      "percentage": 0.0052
+    },
+    {
+      "year": 2024,
+      "percentage": 0.0051
+    },
+    {
+      "year": 2025,
+      "percentage": 0.0054
+    }
+  ],
+  "miniSankey": {
+    "breakdown": "standard_object",
+    "spending_data": {
+      "id": "governor-general",
+      "name": "Governor General",
+      "children": [
+        {
+          "id": "governor-general-2016-office-of-the-governor-general-s-secretary",
+          "name": "Office of the Governor General's Secretary",
+          "children": [
+            {
+              "id": "governor-general-2016-office-of-the-governor-general-s-secretary-obj-1",
+              "name": "Personnel",
+              "amount": 0.015511
+            },
+            {
+              "id": "governor-general-2016-office-of-the-governor-general-s-secretary-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.00212
+            },
+            {
+              "id": "governor-general-2016-office-of-the-governor-general-s-secretary-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.001479
+            },
+            {
+              "id": "governor-general-2016-office-of-the-governor-general-s-secretary-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.001046
+            },
+            {
+              "id": "governor-general-2016-office-of-the-governor-general-s-secretary-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000608
+            },
+            {
+              "id": "governor-general-2016-office-of-the-governor-general-s-secretary-obj-10",
+              "name": "Transfer payments",
+              "children": [
+                {
+                  "id": "governor-general-2016-tp-0000",
+                  "name": "Annuities payable under the Governor General's Act",
+                  "amount": 0.00056
+                }
+              ]
+            },
+            {
+              "id": "governor-general-2016-office-of-the-governor-general-s-secretary-obj-3",
+              "name": "Information",
+              "amount": 0.000523
+            },
+            {
+              "id": "governor-general-2016-office-of-the-governor-general-s-secretary-obj-5",
+              "name": "Rentals",
+              "amount": 0.00036
+            },
+            {
+              "id": "governor-general-2016-office-of-the-governor-general-s-secretary-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000101
+            },
+            {
+              "id": "governor-general-2016-office-of-the-governor-general-s-secretary-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 1.0e-5
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "entities": [
+    {
+      "id": "governor-general-2016-entity-office-of-the-governor-general-s-secretary",
+      "name": "Office of the Governor General's Secretary",
+      "value": 0.022318
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "governor-general-2016-tp-0000",
+      "category": "Grants",
+      "description": "Annuities payable under the Governor General's Act",
+      "used": 560186
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

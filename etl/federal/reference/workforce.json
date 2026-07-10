@@ -1,0 +1,3463 @@
+{
+  "source": "Treasury Board of Canada Secretariat — Population of the Federal Public Service",
+  "source_urls": {
+    "html": "https://www.canada.ca/en/treasury-board-secretariat/services/innovation/human-resources-statistics/population-federal-public-service-department.html",
+    "csv": "https://www.canada.ca/content/dam/tbs-sct/documents/innovation/human-resources-statistics/ssa-pop-eng.csv",
+    "age_html": "https://www.canada.ca/en/treasury-board-secretariat/services/innovation/human-resources-statistics/population-federal-public-service-age-group.html",
+    "age_csv": "https://www.canada.ca/content/dam/tbs-sct/documents/innovation/human-resources-statistics/pag-ega-eng.csv",
+    "tenure_html": "https://www.canada.ca/en/treasury-board-secretariat/services/innovation/human-resources-statistics/population-federal-public-service-tenure.html",
+    "tenure_csv": "https://www.canada.ca/content/dam/tbs-sct/documents/innovation/human-resources-statistics/snet-adef-eng.csv",
+    "salary_html": "https://www.canada.ca/en/treasury-board-secretariat/services/innovation/human-resources-statistics/diversity-inclusion-statistics/distribution-public-service-canada-employees-designated-group-salary-range.html",
+    "salary_html_fr": "https://www.canada.ca/fr/secretariat-conseil-tresor/services/innovation/statistiques-ressources-humaines/statistiques-diversite-inclusion/repartition-employes-fonction-publique-canada-groupe-designe-echelle-salariale.html"
+  },
+  "retrieved": "2026-07-08",
+  "years": {
+    "2014": {
+      "headcount": 257138,
+      "headcountAsOf": "2014-03-31",
+      "source": "Treasury Board of Canada Secretariat — Population of the Federal Public Service",
+      "source_url": "https://www.canada.ca/content/dam/tbs-sct/documents/innovation/human-resources-statistics/ssa-pop-eng.csv",
+      "retrieved": "2026-07-08",
+      "ageBands": [
+        {
+          "key": "under-20",
+          "label_en": "<20",
+          "label_fr": "<20",
+          "count": 520
+        },
+        {
+          "key": "20-24",
+          "label_en": "20-24",
+          "label_fr": "20-24",
+          "count": 7429
+        },
+        {
+          "key": "25-29",
+          "label_en": "25-29",
+          "label_fr": "25-29",
+          "count": 17675
+        },
+        {
+          "key": "30-34",
+          "label_en": "30-34",
+          "label_fr": "30-34",
+          "count": 28266
+        },
+        {
+          "key": "35-39",
+          "label_en": "35-39",
+          "label_fr": "35-39",
+          "count": 34755
+        },
+        {
+          "key": "40-44",
+          "label_en": "40-44",
+          "label_fr": "40-44",
+          "count": 35923
+        },
+        {
+          "key": "45-49",
+          "label_en": "45-49",
+          "label_fr": "45-49",
+          "count": 39187
+        },
+        {
+          "key": "50-54",
+          "label_en": "50-54",
+          "label_fr": "50-54",
+          "count": 44919
+        },
+        {
+          "key": "55-59",
+          "label_en": "55-59",
+          "label_fr": "55-59",
+          "count": 30407
+        },
+        {
+          "key": "60-64",
+          "label_en": "60-64",
+          "label_fr": "60-64",
+          "count": 13253
+        },
+        {
+          "key": "65-plus",
+          "label_en": "65+",
+          "label_fr": "65+",
+          "count": 4804
+        }
+      ],
+      "tenure": [
+        {
+          "key": "casual",
+          "label_en": "Casual",
+          "label_fr": "Employé occasionnel",
+          "count": 8002
+        },
+        {
+          "key": "indeterminate",
+          "label_en": "Indeterminate",
+          "label_fr": "Durée indéterminée",
+          "count": 222721
+        },
+        {
+          "key": "student",
+          "label_en": "Student",
+          "label_fr": "Étudiant",
+          "count": 5189
+        },
+        {
+          "key": "term",
+          "label_en": "Term",
+          "label_fr": "Durée déterminée",
+          "count": 21226
+        }
+      ],
+      "headcountByDepartment": {
+        "Agriculture and Agri-Food Canada": 5291,
+        "Atlantic Canada Opportunities Agency": 591,
+        "Canada Border Services Agency": 14096,
+        "Canada Industrial Relations Board": 88,
+        "Canada Revenue Agency": 40279,
+        "Canada School of Public Service": 625,
+        "Canadian Dairy Commission": 51,
+        "Canadian Environmental Assessment Agency": 230,
+        "Canadian Food Inspection Agency": 6315,
+        "Canadian Grain Commission": 413,
+        "Canadian Heritage": 1821,
+        "Canadian Human Rights Commission": 199,
+        "Canadian Institutes of Health Research": 412,
+        "Canadian Intergovernmental Conference Secretariat": 24,
+        "Canadian International Trade Tribunal": 77,
+        "Canadian Nuclear Safety Commission": 821,
+        "Canadian Polar Commission": 11,
+        "Canadian Radio-television and Telecommunications Commission": 435,
+        "Canadian Space Agency": 621,
+        "Canadian Transportation Agency": 218,
+        "Civilian Review and Complaints Commission for the RCMP": 65,
+        "Communications Security Establishment": 2171,
+        "Competition Bureau Canada": 7,
+        "Copyright Board Canada": 13,
+        "Correctional Service Canada": 18259,
+        "Courts Administration Service": 614,
+        "Department of Finance Canada": 751,
+        "Department of Justice Canada": 4574,
+        "Economic Development Agency of Canada for the Regions of Quebec": 348,
+        "Elections Canada": 520,
+        "Employment and Social Development Canada": 21097,
+        "Environment and Climate Change Canada": 6550,
+        "Farm Products Council of Canada": 17,
+        "Federal Economic Development Agency for Southern Ontario": 224,
+        "Federal Judges not part of any department": 1110,
+        "Financial Consumer Agency of Canada": 78,
+        "Financial Transactions and Reports Analysis Centre of Canada": 347,
+        "Fisheries and Oceans Canada": 9958,
+        "Global Affairs Canada": 6027,
+        "Health Canada": 9341,
+        "Human Rights Tribunal of Canada": 20,
+        "Immigration and Refugee Board of Canada": 983,
+        "Immigration, Refugees and Citizenship Canada": 5927,
+        "Indian Oil and Gas Canada": 85,
+        "Indian Residential Schools Truth and Reconciliation Commission": 15,
+        "Indigenous and Northern Affairs Canada": 4857,
+        "Infrastructure Canada": 288,
+        "Innovation, Science and Economic Development Canada": 4711,
+        "International Joint Commission": 31,
+        "Library and Archives Canada": 1043,
+        "Military Grievances External Review Committee": 37,
+        "Military Police Complaints Commission of Canada": 14,
+        "National Defence": 23146,
+        "National Energy Board": 435,
+        "National Film Board": 420,
+        "National Research Council Canada": 3534,
+        "Natural Resources Canada": 4231,
+        "Office of the Auditor General of Canada": 581,
+        "Office of the Commissioner for Federal Judicial Affairs Canada": 58,
+        "Office of the Commissioner of Lobbying of Canada": 26,
+        "Office of the Commissioner of Official Languages": 171,
+        "Office of the Governor General's Secretary": 155,
+        "Office of the Public Sector Integrity Commissioner of Canada": 28,
+        "Office of the Superintendent of Financial Institutions Canada": 684,
+        "Offices of the information and Privacy Commissioners of Canada": 261,
+        "Parks Canada": 3175,
+        "Parole Board of Canada": 459,
+        "Patented Medicine Prices Review Board Canada": 55,
+        "Privy Council Office": 751,
+        "Public Health Agency of Canada": 2175,
+        "Public Prosecution Service of Canada": 969,
+        "Public Safety Canada": 1057,
+        "Public Servants Disclosure Protection Tribunal Canada": 9,
+        "Public Service Commission of Canada": 736,
+        "Public Service Labour Relations Board": 91,
+        "Public Service Staffing Tribunal": 31,
+        "Public Services and Procurement Canada": 11967,
+        "RCMP External Review Committee": 5,
+        "Registrar of the Supreme Court of Canada": 219,
+        "Registry of the Specific Claims Tribunal of Canada": 9,
+        "Royal Canadian Mounted Police (Civilian Staff)": 6065,
+        "Science and Engineering Research Canada": 409,
+        "Security Intelligence Review Committee": 16,
+        "Shared Services Canada": 5394,
+        "Social Sciences and Humanities Research Council of Canada": 205,
+        "Statistical Survey Operations": 1699,
+        "Statistics Canada": 4807,
+        "Status of Women Canada": 98,
+        "The Correctional Investigator Canada": 40,
+        "Transport Canada": 4771,
+        "Transportation Appeal Tribunal of Canada": 9,
+        "Transportation Safety Board of Canada": 203,
+        "Treasury Board of Canada Secretariat": 1778,
+        "Veterans Affairs Canada": 3188,
+        "Western Economic Diversification Canada": 318
+      }
+    },
+    "2015": {
+      "headcount": 257034,
+      "headcountAsOf": "2015-03-31",
+      "source": "Treasury Board of Canada Secretariat — Population of the Federal Public Service",
+      "source_url": "https://www.canada.ca/en/treasury-board-secretariat/services/innovation/human-resources-statistics/population-federal-public-service-department.html",
+      "retrieved": "2026-07-08",
+      "ageBands": [
+        {
+          "key": "under-20",
+          "label_en": "<20",
+          "label_fr": "<20",
+          "count": 496
+        },
+        {
+          "key": "20-24",
+          "label_en": "20-24",
+          "label_fr": "20-24",
+          "count": 8101
+        },
+        {
+          "key": "25-29",
+          "label_en": "25-29",
+          "label_fr": "25-29",
+          "count": 16878
+        },
+        {
+          "key": "30-34",
+          "label_en": "30-34",
+          "label_fr": "30-34",
+          "count": 27489
+        },
+        {
+          "key": "35-39",
+          "label_en": "35-39",
+          "label_fr": "35-39",
+          "count": 35088
+        },
+        {
+          "key": "40-44",
+          "label_en": "40-44",
+          "label_fr": "40-44",
+          "count": 36327
+        },
+        {
+          "key": "45-49",
+          "label_en": "45-49",
+          "label_fr": "45-49",
+          "count": 37859
+        },
+        {
+          "key": "50-54",
+          "label_en": "50-54",
+          "label_fr": "50-54",
+          "count": 44286
+        },
+        {
+          "key": "55-59",
+          "label_en": "55-59",
+          "label_fr": "55-59",
+          "count": 31476
+        },
+        {
+          "key": "60-64",
+          "label_en": "60-64",
+          "label_fr": "60-64",
+          "count": 13858
+        },
+        {
+          "key": "65-plus",
+          "label_en": "65+",
+          "label_fr": "65+",
+          "count": 5175
+        },
+        {
+          "key": "unknown",
+          "label_en": "Unknown",
+          "label_fr": "Non disponible",
+          "count": 1
+        }
+      ],
+      "tenure": [
+        {
+          "key": "casual",
+          "label_en": "Casual",
+          "label_fr": "Employé occasionnel",
+          "count": 8663
+        },
+        {
+          "key": "indeterminate",
+          "label_en": "Indeterminate",
+          "label_fr": "Durée indéterminée",
+          "count": 219668
+        },
+        {
+          "key": "student",
+          "label_en": "Student",
+          "label_fr": "Étudiant",
+          "count": 5500
+        },
+        {
+          "key": "term",
+          "label_en": "Term",
+          "label_fr": "Durée déterminée",
+          "count": 23203
+        },
+        {
+          "key": "unknown",
+          "label_en": "Unknown",
+          "label_fr": "Non disponible",
+          "count": 0
+        }
+      ],
+      "headcountByDepartment": {
+        "Accessibility Standards Canada": 0,
+        "Administrative Tribunals Support Service of Canada": 349,
+        "Agriculture and Agri-Food Canada": 5194,
+        "Atlantic Canada Opportunities Agency": 604,
+        "Canada Border Services Agency": 14113,
+        "Canada Economic Development for Quebec Regions": 331,
+        "Canada Energy Regulator": 447,
+        "Canada Revenue Agency": 40059,
+        "Canada School of Public Service": 646,
+        "Canadian Dairy Commission": 56,
+        "Canadian Food Inspection Agency": 6009,
+        "Canadian Grain Commission": 408,
+        "Canadian Heritage": 1773,
+        "Canadian Human Rights Commission": 204,
+        "Canadian Institutes of Health Research": 432,
+        "Canadian Intergovernmental Conference Secretariat": 23,
+        "Canadian Northern Economic Development Agency": 75,
+        "Canadian Nuclear Safety Commission": 822,
+        "Canadian Polar Commission": 14,
+        "Canadian Radio-television and Telecommunications Commission": 462,
+        "Canadian Space Agency": 600,
+        "Canadian Transportation Agency": 241,
+        "Civilian Review and Complaints Commission for the RCMP": 74,
+        "Communications Security Establishment": 2168,
+        "Copyright Board Canada": 17,
+        "Correctional Service Canada": 17639,
+        "Courts Administration Service": 618,
+        "Crown-Indigenous Relations and Northern Affairs Canada": 4684,
+        "Department of Finance Canada": 743,
+        "Department of Justice Canada": 4476,
+        "Elections Canada": 630,
+        "Employment and Social Development Canada": 21707,
+        "Environment and Climate Change Canada": 6595,
+        "Farm Products Council of Canada": 19,
+        "Federal Economic Development Agency for Northern Ontario": 0,
+        "Federal Economic Development Agency for Southern Ontario": 218,
+        "Federal Judges not part of any department": 1144,
+        "Financial Consumer Agency of Canada": 84,
+        "Financial Transactions and Reports Analysis Centre of Canada": 355,
+        "Fisheries and Oceans Canada": 9858,
+        "Global Affairs Canada": 5973,
+        "Health Canada": 9079,
+        "Housing, Infrastructure and Communities Canada": 354,
+        "Immigration and Refugee Board of Canada": 954,
+        "Immigration, Refugees and Citizenship Canada": 6385,
+        "Impact Assessment Agency of Canada": 229,
+        "Indian Oil and Gas Canada": 80,
+        "Indian Residential Schools Truth and Reconciliation Commission": 9,
+        "Indigenous Services Canada": 0,
+        "Innovation, Science and Economic Development Canada": 4742,
+        "International Joint Commission": 32,
+        "Law Commission of Canada": 0,
+        "Library and Archives Canada": 1026,
+        "Military Grievances External Review Committee": 42,
+        "Military Police Complaints Commission of Canada": 22,
+        "National Defence": 22611,
+        "National Film Board": 394,
+        "National Research Council Canada": 3618,
+        "National Security and Intelligence Review Agency": 0,
+        "Natural Resources Canada": 4149,
+        "Natural Sciences and Engineering Research Canada": 418,
+        "Office of the Auditor General of Canada": 571,
+        "Office of the Commissioner for Federal Judicial Affairs Canada": 54,
+        "Office of the Commissioner of Lobbying of Canada": 27,
+        "Office of the Commissioner of Official Languages": 172,
+        "Office of the Governor General's Secretary": 156,
+        "Office of the Intelligence Commissioner": 0,
+        "Office of the Prime Minister": 1,
+        "Office of the Public Sector Integrity Commissioner of Canada": 25,
+        "Office of the Superintendent of Financial Institutions Canada": 700,
+        "Offices of the information and Privacy Commissioners of Canada": 282,
+        "Parks Canada": 3394,
+        "Parole Board of Canada": 467,
+        "Patented Medicine Prices Review Board Canada": 60,
+        "Polar Knowledge Canada": 0,
+        "Privy Council Office": 727,
+        "Public Health Agency of Canada": 2186,
+        "Public Prosecution Service of Canada": 968,
+        "Public Safety Canada": 978,
+        "Public Service Commission of Canada": 738,
+        "Public Services and Procurement Canada": 12092,
+        "RCMP External Review Committee": 6,
+        "Registrar of the Supreme Court of Canada": 213,
+        "Royal Canadian Mounted Police": 6437,
+        "Secretariat of the National Security and Intelligence Committee of Parliamentarians": 0,
+        "Security Intelligence Review Committee": 18,
+        "Shared Services Canada": 5236,
+        "Social Sciences and Humanities Research Council of Canada": 209,
+        "Statistical Survey Operations": 1642,
+        "Statistics Canada": 4890,
+        "The Correctional Investigator Canada": 35,
+        "Transport Canada": 5205,
+        "Transportation Safety Board of Canada": 213,
+        "Treasury Board of Canada Secretariat": 1761,
+        "Veterans Affairs Canada": 3174,
+        "Veterans Review and Appeal Board": 0,
+        "Western Economic Diversification Canada": 297,
+        "Women and Gender Equality Canada": 92
+      }
+    },
+    "2016": {
+      "headcount": 258979,
+      "headcountAsOf": "2016-03-31",
+      "source": "Treasury Board of Canada Secretariat — Population of the Federal Public Service",
+      "source_url": "https://www.canada.ca/en/treasury-board-secretariat/services/innovation/human-resources-statistics/population-federal-public-service-department.html",
+      "retrieved": "2026-07-08",
+      "ageBands": [
+        {
+          "key": "under-20",
+          "label_en": "<20",
+          "label_fr": "<20",
+          "count": 501
+        },
+        {
+          "key": "20-24",
+          "label_en": "20-24",
+          "label_fr": "20-24",
+          "count": 8887
+        },
+        {
+          "key": "25-29",
+          "label_en": "25-29",
+          "label_fr": "25-29",
+          "count": 16727
+        },
+        {
+          "key": "30-34",
+          "label_en": "30-34",
+          "label_fr": "30-34",
+          "count": 27083
+        },
+        {
+          "key": "35-39",
+          "label_en": "35-39",
+          "label_fr": "35-39",
+          "count": 35339
+        },
+        {
+          "key": "40-44",
+          "label_en": "40-44",
+          "label_fr": "40-44",
+          "count": 37180
+        },
+        {
+          "key": "45-49",
+          "label_en": "45-49",
+          "label_fr": "45-49",
+          "count": 37668
+        },
+        {
+          "key": "50-54",
+          "label_en": "50-54",
+          "label_fr": "50-54",
+          "count": 43236
+        },
+        {
+          "key": "55-59",
+          "label_en": "55-59",
+          "label_fr": "55-59",
+          "count": 32326
+        },
+        {
+          "key": "60-64",
+          "label_en": "60-64",
+          "label_fr": "60-64",
+          "count": 14467
+        },
+        {
+          "key": "65-plus",
+          "label_en": "65+",
+          "label_fr": "65+",
+          "count": 5563
+        },
+        {
+          "key": "unknown",
+          "label_en": "Unknown",
+          "label_fr": "Non disponible",
+          "count": 2
+        }
+      ],
+      "tenure": [
+        {
+          "key": "casual",
+          "label_en": "Casual",
+          "label_fr": "Employé occasionnel",
+          "count": 9251
+        },
+        {
+          "key": "indeterminate",
+          "label_en": "Indeterminate",
+          "label_fr": "Durée indéterminée",
+          "count": 218544
+        },
+        {
+          "key": "student",
+          "label_en": "Student",
+          "label_fr": "Étudiant",
+          "count": 5712
+        },
+        {
+          "key": "term",
+          "label_en": "Term",
+          "label_fr": "Durée déterminée",
+          "count": 25472
+        },
+        {
+          "key": "unknown",
+          "label_en": "Unknown",
+          "label_fr": "Non disponible",
+          "count": 0
+        }
+      ],
+      "headcountByDepartment": {
+        "Accessibility Standards Canada": 0,
+        "Administrative Tribunals Support Service of Canada": 374,
+        "Agriculture and Agri-Food Canada": 5167,
+        "Atlantic Canada Opportunities Agency": 615,
+        "Canada Border Services Agency": 14171,
+        "Canada Economic Development for Quebec Regions": 333,
+        "Canada Energy Regulator": 469,
+        "Canada Revenue Agency": 39484,
+        "Canada School of Public Service": 648,
+        "Canadian Dairy Commission": 60,
+        "Canadian Food Inspection Agency": 5946,
+        "Canadian Grain Commission": 403,
+        "Canadian Heritage": 1762,
+        "Canadian Human Rights Commission": 205,
+        "Canadian Institutes of Health Research": 409,
+        "Canadian Intergovernmental Conference Secretariat": 22,
+        "Canadian Northern Economic Development Agency": 77,
+        "Canadian Nuclear Safety Commission": 851,
+        "Canadian Polar Commission": 0,
+        "Canadian Radio-television and Telecommunications Commission": 450,
+        "Canadian Space Agency": 616,
+        "Canadian Transportation Agency": 239,
+        "Civilian Review and Complaints Commission for the RCMP": 71,
+        "Communications Security Establishment": 2162,
+        "Copyright Board Canada": 14,
+        "Correctional Service Canada": 17172,
+        "Courts Administration Service": 668,
+        "Crown-Indigenous Relations and Northern Affairs Canada": 4582,
+        "Department of Finance Canada": 735,
+        "Department of Justice Canada": 4461,
+        "Elections Canada": 634,
+        "Employment and Social Development Canada": 22312,
+        "Environment and Climate Change Canada": 6475,
+        "Farm Products Council of Canada": 19,
+        "Federal Economic Development Agency for Northern Ontario": 0,
+        "Federal Economic Development Agency for Southern Ontario": 222,
+        "Federal Judges not part of any department": 1141,
+        "Financial Consumer Agency of Canada": 94,
+        "Financial Transactions and Reports Analysis Centre of Canada": 374,
+        "Fisheries and Oceans Canada": 9901,
+        "Global Affairs Canada": 5890,
+        "Health Canada": 9189,
+        "Housing, Infrastructure and Communities Canada": 351,
+        "Immigration and Refugee Board of Canada": 973,
+        "Immigration, Refugees and Citizenship Canada": 6587,
+        "Impact Assessment Agency of Canada": 258,
+        "Indian Oil and Gas Canada": 85,
+        "Indian Residential Schools Truth and Reconciliation Commission": 0,
+        "Indigenous Services Canada": 0,
+        "Innovation, Science and Economic Development Canada": 4776,
+        "International Joint Commission": 32,
+        "Law Commission of Canada": 0,
+        "Library and Archives Canada": 938,
+        "Military Grievances External Review Committee": 35,
+        "Military Police Complaints Commission of Canada": 26,
+        "National Defence": 22954,
+        "National Film Board": 389,
+        "National Research Council Canada": 3780,
+        "National Security and Intelligence Review Agency": 0,
+        "Natural Resources Canada": 4191,
+        "Natural Sciences and Engineering Research Canada": 444,
+        "Office of the Auditor General of Canada": 588,
+        "Office of the Commissioner for Federal Judicial Affairs Canada": 59,
+        "Office of the Commissioner of Lobbying of Canada": 26,
+        "Office of the Commissioner of Official Languages": 164,
+        "Office of the Governor General's Secretary": 166,
+        "Office of the Intelligence Commissioner": 0,
+        "Office of the Prime Minister": 0,
+        "Office of the Public Sector Integrity Commissioner of Canada": 26,
+        "Office of the Superintendent of Financial Institutions Canada": 667,
+        "Offices of the information and Privacy Commissioners of Canada": 259,
+        "Parks Canada": 3886,
+        "Parole Board of Canada": 447,
+        "Patented Medicine Prices Review Board Canada": 69,
+        "Polar Knowledge Canada": 29,
+        "Privy Council Office": 712,
+        "Public Health Agency of Canada": 2223,
+        "Public Prosecution Service of Canada": 970,
+        "Public Safety Canada": 1125,
+        "Public Service Commission of Canada": 741,
+        "Public Services and Procurement Canada": 12061,
+        "RCMP External Review Committee": 7,
+        "Registrar of the Supreme Court of Canada": 212,
+        "Royal Canadian Mounted Police": 6571,
+        "Secretariat of the National Security and Intelligence Committee of Parliamentarians": 0,
+        "Security Intelligence Review Committee": 20,
+        "Shared Services Canada": 5157,
+        "Social Sciences and Humanities Research Council of Canada": 210,
+        "Statistical Survey Operations": 1701,
+        "Statistics Canada": 5717,
+        "The Correctional Investigator Canada": 37,
+        "Transport Canada": 5154,
+        "Transportation Safety Board of Canada": 215,
+        "Treasury Board of Canada Secretariat": 1728,
+        "Veterans Affairs Canada": 3413,
+        "Veterans Review and Appeal Board": 0,
+        "Western Economic Diversification Canada": 292,
+        "Women and Gender Equality Canada": 91
+      }
+    },
+    "2017": {
+      "headcount": 262696,
+      "headcountAsOf": "2017-03-31",
+      "source": "Treasury Board of Canada Secretariat — Population of the Federal Public Service",
+      "source_url": "https://www.canada.ca/en/treasury-board-secretariat/services/innovation/human-resources-statistics/population-federal-public-service-department.html",
+      "retrieved": "2026-07-08",
+      "ageBands": [
+        {
+          "key": "under-20",
+          "label_en": "<20",
+          "label_fr": "<20",
+          "count": 594
+        },
+        {
+          "key": "20-24",
+          "label_en": "20-24",
+          "label_fr": "20-24",
+          "count": 9933
+        },
+        {
+          "key": "25-29",
+          "label_en": "25-29",
+          "label_fr": "25-29",
+          "count": 17370
+        },
+        {
+          "key": "30-34",
+          "label_en": "30-34",
+          "label_fr": "30-34",
+          "count": 26707
+        },
+        {
+          "key": "35-39",
+          "label_en": "35-39",
+          "label_fr": "35-39",
+          "count": 35633
+        },
+        {
+          "key": "40-44",
+          "label_en": "40-44",
+          "label_fr": "40-44",
+          "count": 38414
+        },
+        {
+          "key": "45-49",
+          "label_en": "45-49",
+          "label_fr": "45-49",
+          "count": 38304
+        },
+        {
+          "key": "50-54",
+          "label_en": "50-54",
+          "label_fr": "50-54",
+          "count": 42296
+        },
+        {
+          "key": "55-59",
+          "label_en": "55-59",
+          "label_fr": "55-59",
+          "count": 32943
+        },
+        {
+          "key": "60-64",
+          "label_en": "60-64",
+          "label_fr": "60-64",
+          "count": 14831
+        },
+        {
+          "key": "65-plus",
+          "label_en": "65+",
+          "label_fr": "65+",
+          "count": 5667
+        },
+        {
+          "key": "unknown",
+          "label_en": "Unknown",
+          "label_fr": "Non disponible",
+          "count": 4
+        }
+      ],
+      "tenure": [
+        {
+          "key": "casual",
+          "label_en": "Casual",
+          "label_fr": "Employé occasionnel",
+          "count": 7505
+        },
+        {
+          "key": "indeterminate",
+          "label_en": "Indeterminate",
+          "label_fr": "Durée indéterminée",
+          "count": 222474
+        },
+        {
+          "key": "student",
+          "label_en": "Student",
+          "label_fr": "Étudiant",
+          "count": 6281
+        },
+        {
+          "key": "term",
+          "label_en": "Term",
+          "label_fr": "Durée déterminée",
+          "count": 26389
+        },
+        {
+          "key": "unknown",
+          "label_en": "Unknown",
+          "label_fr": "Non disponible",
+          "count": 47
+        }
+      ],
+      "salaryBands": [
+        {
+          "key": "under-5000",
+          "label_en": "Under 5,000",
+          "label_fr": "Moins de 5 000",
+          "count": 69
+        },
+        {
+          "key": "5000-to-9999",
+          "label_en": "5,000 to 9,999",
+          "label_fr": "De 5 000 à 9 999",
+          "count": 130
+        },
+        {
+          "key": "10000-to-14999",
+          "label_en": "10,000 to 14,999",
+          "label_fr": "De 10 000 à 14 999",
+          "count": 62
+        },
+        {
+          "key": "15000-to-19999",
+          "label_en": "15,000 to 19,999",
+          "label_fr": "De 15 000 à 19 999",
+          "count": 142
+        },
+        {
+          "key": "20000-to-24999",
+          "label_en": "20,000 to 24,999",
+          "label_fr": "De 20 000 à 24 999",
+          "count": 204
+        },
+        {
+          "key": "25000-to-29999",
+          "label_en": "25,000 to 29,999",
+          "label_fr": "De 25 000 à 29 999",
+          "count": 297
+        },
+        {
+          "key": "30000-to-34999",
+          "label_en": "30,000 to 34,999",
+          "label_fr": "De 30 000 à 34 999",
+          "count": 344
+        },
+        {
+          "key": "35000-to-39999",
+          "label_en": "35,000 to 39,999",
+          "label_fr": "De 35 000 à 39 999",
+          "count": 1453
+        },
+        {
+          "key": "40000-to-44999",
+          "label_en": "40,000 to 44,999",
+          "label_fr": "De 40 000 à 44 999",
+          "count": 3792
+        },
+        {
+          "key": "45000-to-49999",
+          "label_en": "45,000 to 49,999",
+          "label_fr": "De 45 000 à 49 999",
+          "count": 16631
+        },
+        {
+          "key": "50000-to-54999",
+          "label_en": "50,000 to 54,999",
+          "label_fr": "De 50 000 à 54 999",
+          "count": 20904
+        },
+        {
+          "key": "55000-to-59999",
+          "label_en": "55,000 to 59,999",
+          "label_fr": "De 55 000 à 59 999",
+          "count": 16962
+        },
+        {
+          "key": "60000-to-64999",
+          "label_en": "60,000 to 64,999",
+          "label_fr": "De 60 000 à 64 999",
+          "count": 15551
+        },
+        {
+          "key": "65000-to-69999",
+          "label_en": "65,000 to 69,999",
+          "label_fr": "De 65 000 à 69 999",
+          "count": 17825
+        },
+        {
+          "key": "70000-to-74999",
+          "label_en": "70,000 to 74,999",
+          "label_fr": "De 70 000 à 74 999",
+          "count": 13672
+        },
+        {
+          "key": "75000-to-79999",
+          "label_en": "75,000 to 79,999",
+          "label_fr": "De 75 000 à 79 999",
+          "count": 10527
+        },
+        {
+          "key": "80000-to-84999",
+          "label_en": "80,000 to 84,999",
+          "label_fr": "De 80 000 à 84 999",
+          "count": 18033
+        },
+        {
+          "key": "85000-to-89999",
+          "label_en": "85,000 to 89,999",
+          "label_fr": "De 85 000 à 89 999",
+          "count": 7279
+        },
+        {
+          "key": "90000-to-94999",
+          "label_en": "90,000 to 94,999",
+          "label_fr": "De 90 000 à 94 999",
+          "count": 7448
+        },
+        {
+          "key": "95000-to-99999",
+          "label_en": "95,000 to 99,999",
+          "label_fr": "De 95 000 à 99 999",
+          "count": 8433
+        },
+        {
+          "key": "100000-and-over",
+          "label_en": "100,000 and over",
+          "label_fr": "100 000 ou plus",
+          "count": 25726
+        }
+      ],
+      "headcountByDepartment": {
+        "Accessibility Standards Canada": 0,
+        "Administrative Tribunals Support Service of Canada": 570,
+        "Agriculture and Agri-Food Canada": 5234,
+        "Atlantic Canada Opportunities Agency": 593,
+        "Canada Border Services Agency": 13707,
+        "Canada Economic Development for Quebec Regions": 336,
+        "Canada Energy Regulator": 456,
+        "Canada Revenue Agency": 40223,
+        "Canada School of Public Service": 610,
+        "Canadian Dairy Commission": 61,
+        "Canadian Food Inspection Agency": 6180,
+        "Canadian Grain Commission": 435,
+        "Canadian Heritage": 1759,
+        "Canadian Human Rights Commission": 191,
+        "Canadian Institutes of Health Research": 462,
+        "Canadian Intergovernmental Conference Secretariat": 22,
+        "Canadian Northern Economic Development Agency": 78,
+        "Canadian Nuclear Safety Commission": 859,
+        "Canadian Polar Commission": 0,
+        "Canadian Radio-television and Telecommunications Commission": 462,
+        "Canadian Space Agency": 655,
+        "Canadian Transportation Agency": 223,
+        "Civilian Review and Complaints Commission for the RCMP": 67,
+        "Communications Security Establishment": 2209,
+        "Copyright Board Canada": 14,
+        "Correctional Service Canada": 17109,
+        "Courts Administration Service": 636,
+        "Crown-Indigenous Relations and Northern Affairs Canada": 4708,
+        "Department of Finance Canada": 747,
+        "Department of Justice Canada": 4461,
+        "Elections Canada": 584,
+        "Employment and Social Development Canada": 23729,
+        "Environment and Climate Change Canada": 6601,
+        "Farm Products Council of Canada": 0,
+        "Federal Economic Development Agency for Northern Ontario": 0,
+        "Federal Economic Development Agency for Southern Ontario": 217,
+        "Federal Judges not part of any department": 1128,
+        "Financial Consumer Agency of Canada": 99,
+        "Financial Transactions and Reports Analysis Centre of Canada": 378,
+        "Fisheries and Oceans Canada": 10230,
+        "Global Affairs Canada": 6061,
+        "Health Canada": 9327,
+        "Housing, Infrastructure and Communities Canada": 329,
+        "Immigration and Refugee Board of Canada": 1031,
+        "Immigration, Refugees and Citizenship Canada": 6465,
+        "Impact Assessment Agency of Canada": 289,
+        "Indian Oil and Gas Canada": 88,
+        "Indian Residential Schools Truth and Reconciliation Commission": 0,
+        "Indigenous Services Canada": 0,
+        "Innovation, Science and Economic Development Canada": 4947,
+        "International Joint Commission": 32,
+        "Law Commission of Canada": 0,
+        "Library and Archives Canada": 930,
+        "Military Grievances External Review Committee": 39,
+        "Military Police Complaints Commission of Canada": 25,
+        "National Defence": 23178,
+        "National Film Board": 371,
+        "National Research Council Canada": 3864,
+        "National Security and Intelligence Review Agency": 0,
+        "Natural Resources Canada": 4264,
+        "Natural Sciences and Engineering Research Canada": 442,
+        "Office of the Auditor General of Canada": 617,
+        "Office of the Commissioner for Federal Judicial Affairs Canada": 59,
+        "Office of the Commissioner of Lobbying of Canada": 24,
+        "Office of the Commissioner of Official Languages": 155,
+        "Office of the Governor General's Secretary": 149,
+        "Office of the Intelligence Commissioner": 0,
+        "Office of the Prime Minister": 0,
+        "Office of the Public Sector Integrity Commissioner of Canada": 24,
+        "Office of the Superintendent of Financial Institutions Canada": 688,
+        "Offices of the information and Privacy Commissioners of Canada": 261,
+        "Parks Canada": 3976,
+        "Parole Board of Canada": 448,
+        "Patented Medicine Prices Review Board Canada": 69,
+        "Polar Knowledge Canada": 27,
+        "Privy Council Office": 799,
+        "Public Health Agency of Canada": 2234,
+        "Public Prosecution Service of Canada": 990,
+        "Public Safety Canada": 1149,
+        "Public Service Commission of Canada": 780,
+        "Public Services and Procurement Canada": 12894,
+        "RCMP External Review Committee": 6,
+        "Registrar of the Supreme Court of Canada": 216,
+        "Royal Canadian Mounted Police": 6801,
+        "Secretariat of the National Security and Intelligence Committee of Parliamentarians": 0,
+        "Security Intelligence Review Committee": 22,
+        "Shared Services Canada": 5257,
+        "Social Sciences and Humanities Research Council of Canada": 211,
+        "Statistical Survey Operations": 1797,
+        "Statistics Canada": 5187,
+        "The Correctional Investigator Canada": 36,
+        "Transport Canada": 4782,
+        "Transportation Safety Board of Canada": 209,
+        "Treasury Board of Canada Secretariat": 1841,
+        "Veterans Affairs Canada": 2809,
+        "Veterans Review and Appeal Board": 86,
+        "Western Economic Diversification Canada": 279,
+        "Women and Gender Equality Canada": 99
+      }
+    },
+    "2018": {
+      "headcount": 273571,
+      "headcountAsOf": "2018-03-31",
+      "source": "Treasury Board of Canada Secretariat — Population of the Federal Public Service",
+      "source_url": "https://www.canada.ca/en/treasury-board-secretariat/services/innovation/human-resources-statistics/population-federal-public-service-department.html",
+      "retrieved": "2026-07-08",
+      "ageBands": [
+        {
+          "key": "under-20",
+          "label_en": "<20",
+          "label_fr": "<20",
+          "count": 761
+        },
+        {
+          "key": "20-24",
+          "label_en": "20-24",
+          "label_fr": "20-24",
+          "count": 12293
+        },
+        {
+          "key": "25-29",
+          "label_en": "25-29",
+          "label_fr": "25-29",
+          "count": 20267
+        },
+        {
+          "key": "30-34",
+          "label_en": "30-34",
+          "label_fr": "30-34",
+          "count": 27506
+        },
+        {
+          "key": "35-39",
+          "label_en": "35-39",
+          "label_fr": "35-39",
+          "count": 36396
+        },
+        {
+          "key": "40-44",
+          "label_en": "40-44",
+          "label_fr": "40-44",
+          "count": 40131
+        },
+        {
+          "key": "45-49",
+          "label_en": "45-49",
+          "label_fr": "45-49",
+          "count": 39463
+        },
+        {
+          "key": "50-54",
+          "label_en": "50-54",
+          "label_fr": "50-54",
+          "count": 41379
+        },
+        {
+          "key": "55-59",
+          "label_en": "55-59",
+          "label_fr": "55-59",
+          "count": 33731
+        },
+        {
+          "key": "60-64",
+          "label_en": "60-64",
+          "label_fr": "60-64",
+          "count": 15547
+        },
+        {
+          "key": "65-plus",
+          "label_en": "65+",
+          "label_fr": "65+",
+          "count": 6092
+        },
+        {
+          "key": "unknown",
+          "label_en": "Unknown",
+          "label_fr": "Non disponible",
+          "count": 5
+        }
+      ],
+      "tenure": [
+        {
+          "key": "casual",
+          "label_en": "Casual",
+          "label_fr": "Employé occasionnel",
+          "count": 8397
+        },
+        {
+          "key": "indeterminate",
+          "label_en": "Indeterminate",
+          "label_fr": "Durée indéterminée",
+          "count": 228720
+        },
+        {
+          "key": "student",
+          "label_en": "Student",
+          "label_fr": "Étudiant",
+          "count": 7426
+        },
+        {
+          "key": "term",
+          "label_en": "Term",
+          "label_fr": "Durée déterminée",
+          "count": 28969
+        },
+        {
+          "key": "unknown",
+          "label_en": "Unknown",
+          "label_fr": "Non disponible",
+          "count": 59
+        }
+      ],
+      "salaryBands": [
+        {
+          "key": "under-5000",
+          "label_en": "Under 5,000",
+          "label_fr": "Moins de 5 000",
+          "count": 83
+        },
+        {
+          "key": "5000-to-9999",
+          "label_en": "5,000 to 9,999",
+          "label_fr": "De 5 000 à 9 999",
+          "count": 129
+        },
+        {
+          "key": "10000-to-14999",
+          "label_en": "10,000 to 14,999",
+          "label_fr": "De 10 000 à 14 999",
+          "count": 57
+        },
+        {
+          "key": "15000-to-19999",
+          "label_en": "15,000 to 19,999",
+          "label_fr": "De 15 000 à 19 999",
+          "count": 160
+        },
+        {
+          "key": "20000-to-24999",
+          "label_en": "20,000 to 24,999",
+          "label_fr": "De 20 000 à 24 999",
+          "count": 160
+        },
+        {
+          "key": "25000-to-29999",
+          "label_en": "25,000 to 29,999",
+          "label_fr": "De 25 000 à 29 999",
+          "count": 252
+        },
+        {
+          "key": "30000-to-34999",
+          "label_en": "30,000 to 34,999",
+          "label_fr": "De 30 000 à 34 999",
+          "count": 376
+        },
+        {
+          "key": "35000-to-39999",
+          "label_en": "35,000 to 39,999",
+          "label_fr": "De 35 000 à 39 999",
+          "count": 592
+        },
+        {
+          "key": "40000-to-44999",
+          "label_en": "40,000 to 44,999",
+          "label_fr": "De 40 000 à 44 999",
+          "count": 2144
+        },
+        {
+          "key": "45000-to-49999",
+          "label_en": "45,000 to 49,999",
+          "label_fr": "De 45 000 à 49 999",
+          "count": 6873
+        },
+        {
+          "key": "50000-to-54999",
+          "label_en": "50,000 to 54,999",
+          "label_fr": "De 50 000 à 54 999",
+          "count": 17345
+        },
+        {
+          "key": "55000-to-59999",
+          "label_en": "55,000 to 59,999",
+          "label_fr": "De 55 000 à 59 999",
+          "count": 21616
+        },
+        {
+          "key": "60000-to-64999",
+          "label_en": "60,000 to 64,999",
+          "label_fr": "De 60 000 à 64 999",
+          "count": 16539
+        },
+        {
+          "key": "65000-to-69999",
+          "label_en": "65,000 to 69,999",
+          "label_fr": "De 65 000 à 69 999",
+          "count": 20799
+        },
+        {
+          "key": "70000-to-74999",
+          "label_en": "70,000 to 74,999",
+          "label_fr": "De 70 000 à 74 999",
+          "count": 18553
+        },
+        {
+          "key": "75000-to-79999",
+          "label_en": "75,000 to 79,999",
+          "label_fr": "De 75 000 à 79 999",
+          "count": 9028
+        },
+        {
+          "key": "80000-to-84999",
+          "label_en": "80,000 to 84,999",
+          "label_fr": "De 80 000 à 84 999",
+          "count": 10793
+        },
+        {
+          "key": "85000-to-89999",
+          "label_en": "85,000 to 89,999",
+          "label_fr": "De 85 000 à 89 999",
+          "count": 16294
+        },
+        {
+          "key": "90000-to-94999",
+          "label_en": "90,000 to 94,999",
+          "label_fr": "De 90 000 à 94 999",
+          "count": 8631
+        },
+        {
+          "key": "95000-to-99999",
+          "label_en": "95,000 to 99,999",
+          "label_fr": "De 95 000 à 99 999",
+          "count": 7658
+        },
+        {
+          "key": "100000-and-over",
+          "label_en": "100,000 and over",
+          "label_fr": "100 000 ou plus",
+          "count": 34385
+        }
+      ],
+      "headcountByDepartment": {
+        "Accessibility Standards Canada": 0,
+        "Administrative Tribunals Support Service of Canada": 548,
+        "Agriculture and Agri-Food Canada": 5277,
+        "Atlantic Canada Opportunities Agency": 586,
+        "Canada Border Services Agency": 14013,
+        "Canada Economic Development for Quebec Regions": 307,
+        "Canada Energy Regulator": 477,
+        "Canada Revenue Agency": 42152,
+        "Canada School of Public Service": 599,
+        "Canadian Dairy Commission": 68,
+        "Canadian Food Inspection Agency": 6249,
+        "Canadian Grain Commission": 426,
+        "Canadian Heritage": 1841,
+        "Canadian Human Rights Commission": 206,
+        "Canadian Institutes of Health Research": 470,
+        "Canadian Intergovernmental Conference Secretariat": 21,
+        "Canadian Northern Economic Development Agency": 81,
+        "Canadian Nuclear Safety Commission": 899,
+        "Canadian Polar Commission": 0,
+        "Canadian Radio-television and Telecommunications Commission": 455,
+        "Canadian Space Agency": 647,
+        "Canadian Transportation Agency": 235,
+        "Civilian Review and Complaints Commission for the RCMP": 67,
+        "Communications Security Establishment": 2361,
+        "Copyright Board Canada": 16,
+        "Correctional Service Canada": 17146,
+        "Courts Administration Service": 647,
+        "Crown-Indigenous Relations and Northern Affairs Canada": 4931,
+        "Department of Finance Canada": 788,
+        "Department of Justice Canada": 4532,
+        "Elections Canada": 676,
+        "Employment and Social Development Canada": 24739,
+        "Environment and Climate Change Canada": 6836,
+        "Farm Products Council of Canada": 0,
+        "Federal Economic Development Agency for Northern Ontario": 0,
+        "Federal Economic Development Agency for Southern Ontario": 235,
+        "Federal Judges not part of any department": 1165,
+        "Financial Consumer Agency of Canada": 115,
+        "Financial Transactions and Reports Analysis Centre of Canada": 372,
+        "Fisheries and Oceans Canada": 11138,
+        "Global Affairs Canada": 6354,
+        "Health Canada": 9739,
+        "Housing, Infrastructure and Communities Canada": 401,
+        "Immigration and Refugee Board of Canada": 1087,
+        "Immigration, Refugees and Citizenship Canada": 6993,
+        "Impact Assessment Agency of Canada": 278,
+        "Indian Oil and Gas Canada": 88,
+        "Indian Residential Schools Truth and Reconciliation Commission": 0,
+        "Indigenous Services Canada": 0,
+        "Innovation, Science and Economic Development Canada": 5146,
+        "International Joint Commission": 31,
+        "Law Commission of Canada": 0,
+        "Library and Archives Canada": 927,
+        "Military Grievances External Review Committee": 33,
+        "Military Police Complaints Commission of Canada": 18,
+        "National Defence": 24024,
+        "National Film Board": 399,
+        "National Research Council Canada": 3871,
+        "National Security and Intelligence Review Agency": 0,
+        "Natural Resources Canada": 4358,
+        "Natural Sciences and Engineering Research Canada": 447,
+        "Office of the Auditor General of Canada": 603,
+        "Office of the Commissioner for Federal Judicial Affairs Canada": 62,
+        "Office of the Commissioner of Lobbying of Canada": 22,
+        "Office of the Commissioner of Official Languages": 164,
+        "Office of the Governor General's Secretary": 148,
+        "Office of the Intelligence Commissioner": 0,
+        "Office of the Prime Minister": 0,
+        "Office of the Public Sector Integrity Commissioner of Canada": 23,
+        "Office of the Superintendent of Financial Institutions Canada": 721,
+        "Offices of the information and Privacy Commissioners of Canada": 256,
+        "Parks Canada": 4202,
+        "Parole Board of Canada": 453,
+        "Patented Medicine Prices Review Board Canada": 61,
+        "Polar Knowledge Canada": 61,
+        "Privy Council Office": 1006,
+        "Public Health Agency of Canada": 2159,
+        "Public Prosecution Service of Canada": 1005,
+        "Public Safety Canada": 1205,
+        "Public Service Commission of Canada": 809,
+        "Public Services and Procurement Canada": 13988,
+        "RCMP External Review Committee": 6,
+        "Registrar of the Supreme Court of Canada": 230,
+        "Royal Canadian Mounted Police": 7240,
+        "Secretariat of the National Security and Intelligence Committee of Parliamentarians": 0,
+        "Security Intelligence Review Committee": 25,
+        "Shared Services Canada": 5816,
+        "Social Sciences and Humanities Research Council of Canada": 210,
+        "Statistical Survey Operations": 1504,
+        "Statistics Canada": 5210,
+        "The Correctional Investigator Canada": 33,
+        "Transport Canada": 5362,
+        "Transportation Safety Board of Canada": 210,
+        "Treasury Board of Canada Secretariat": 1954,
+        "Veterans Affairs Canada": 2800,
+        "Veterans Review and Appeal Board": 85,
+        "Western Economic Diversification Canada": 302,
+        "Women and Gender Equality Canada": 121
+      }
+    },
+    "2019": {
+      "headcount": 287983,
+      "headcountAsOf": "2019-03-31",
+      "source": "Treasury Board of Canada Secretariat — Population of the Federal Public Service",
+      "source_url": "https://www.canada.ca/en/treasury-board-secretariat/services/innovation/human-resources-statistics/population-federal-public-service-department.html",
+      "retrieved": "2026-07-08",
+      "ageBands": [
+        {
+          "key": "under-20",
+          "label_en": "<20",
+          "label_fr": "<20",
+          "count": 854
+        },
+        {
+          "key": "20-24",
+          "label_en": "20-24",
+          "label_fr": "20-24",
+          "count": 14807
+        },
+        {
+          "key": "25-29",
+          "label_en": "25-29",
+          "label_fr": "25-29",
+          "count": 24313
+        },
+        {
+          "key": "30-34",
+          "label_en": "30-34",
+          "label_fr": "30-34",
+          "count": 28644
+        },
+        {
+          "key": "35-39",
+          "label_en": "35-39",
+          "label_fr": "35-39",
+          "count": 37713
+        },
+        {
+          "key": "40-44",
+          "label_en": "40-44",
+          "label_fr": "40-44",
+          "count": 42229
+        },
+        {
+          "key": "45-49",
+          "label_en": "45-49",
+          "label_fr": "45-49",
+          "count": 40803
+        },
+        {
+          "key": "50-54",
+          "label_en": "50-54",
+          "label_fr": "50-54",
+          "count": 40927
+        },
+        {
+          "key": "55-59",
+          "label_en": "55-59",
+          "label_fr": "55-59",
+          "count": 34581
+        },
+        {
+          "key": "60-64",
+          "label_en": "60-64",
+          "label_fr": "60-64",
+          "count": 16429
+        },
+        {
+          "key": "65-plus",
+          "label_en": "65+",
+          "label_fr": "65+",
+          "count": 6677
+        },
+        {
+          "key": "unknown",
+          "label_en": "Unknown",
+          "label_fr": "Non disponible",
+          "count": 6
+        }
+      ],
+      "tenure": [
+        {
+          "key": "casual",
+          "label_en": "Casual",
+          "label_fr": "Employé occasionnel",
+          "count": 8984
+        },
+        {
+          "key": "indeterminate",
+          "label_en": "Indeterminate",
+          "label_fr": "Durée indéterminée",
+          "count": 239645
+        },
+        {
+          "key": "student",
+          "label_en": "Student",
+          "label_fr": "Étudiant",
+          "count": 8156
+        },
+        {
+          "key": "term",
+          "label_en": "Term",
+          "label_fr": "Durée déterminée",
+          "count": 31145
+        },
+        {
+          "key": "unknown",
+          "label_en": "Unknown",
+          "label_fr": "Non disponible",
+          "count": 53
+        }
+      ],
+      "salaryBands": [
+        {
+          "key": "under-5000",
+          "label_en": "Under 5,000",
+          "label_fr": "Moins de 5 000",
+          "count": 70
+        },
+        {
+          "key": "5000-to-9999",
+          "label_en": "5,000 to 9,999",
+          "label_fr": "De 5 000 à 9 999",
+          "count": 142
+        },
+        {
+          "key": "10000-to-14999",
+          "label_en": "10,000 to 14,999",
+          "label_fr": "De 10 000 à 14 999",
+          "count": 92
+        },
+        {
+          "key": "15000-to-19999",
+          "label_en": "15,000 to 19,999",
+          "label_fr": "De 15 000 à 19 999",
+          "count": 176
+        },
+        {
+          "key": "20000-to-24999",
+          "label_en": "20,000 to 24,999",
+          "label_fr": "De 20 000 à 24 999",
+          "count": 181
+        },
+        {
+          "key": "25000-to-34999",
+          "label_en": "25,000 to 34,999",
+          "label_fr": "De 25 000 à 34 999",
+          "count": 585
+        },
+        {
+          "key": "35000-to-49999",
+          "label_en": "35,000 to 49,999",
+          "label_fr": "De 35 000 à 49 999",
+          "count": 9685
+        },
+        {
+          "key": "50000-to-74999",
+          "label_en": "50,000 to 74,999",
+          "label_fr": "De 50 000 à 74 999",
+          "count": 88942
+        },
+        {
+          "key": "75000-to-99999",
+          "label_en": "75,000 to 99,999",
+          "label_fr": "De 75 000 à 99 999",
+          "count": 66203
+        },
+        {
+          "key": "100000-to-149999",
+          "label_en": "100,000 to 149,999",
+          "label_fr": "De 100 000 à 149 999",
+          "count": 34824
+        },
+        {
+          "key": "150000-to-199999",
+          "label_en": "150,000 to 199,999",
+          "label_fr": "De 150 000 à 199 999",
+          "count": 2220
+        },
+        {
+          "key": "200000-to-249999",
+          "label_en": "200,000 to 249,999",
+          "label_fr": "De 200 000 à 249 999",
+          "count": 145
+        },
+        {
+          "key": "250000-and-over",
+          "label_en": "250,000 and over",
+          "label_fr": "250 000 ou plus",
+          "count": 3
+        }
+      ],
+      "headcountByDepartment": {
+        "Accessibility Standards Canada": 0,
+        "Administrative Tribunals Support Service of Canada": 579,
+        "Agriculture and Agri-Food Canada": 5292,
+        "Atlantic Canada Opportunities Agency": 588,
+        "Canada Border Services Agency": 14469,
+        "Canada Economic Development for Quebec Regions": 324,
+        "Canada Energy Regulator": 479,
+        "Canada Revenue Agency": 43908,
+        "Canada School of Public Service": 620,
+        "Canadian Dairy Commission": 65,
+        "Canadian Food Inspection Agency": 6247,
+        "Canadian Grain Commission": 429,
+        "Canadian Heritage": 1862,
+        "Canadian Human Rights Commission": 199,
+        "Canadian Institutes of Health Research": 502,
+        "Canadian Intergovernmental Conference Secretariat": 24,
+        "Canadian Northern Economic Development Agency": 76,
+        "Canadian Nuclear Safety Commission": 903,
+        "Canadian Polar Commission": 0,
+        "Canadian Radio-television and Telecommunications Commission": 493,
+        "Canadian Space Agency": 692,
+        "Canadian Transportation Agency": 272,
+        "Civilian Review and Complaints Commission for the RCMP": 76,
+        "Communications Security Establishment": 2549,
+        "Copyright Board Canada": 15,
+        "Correctional Service Canada": 17482,
+        "Courts Administration Service": 715,
+        "Crown-Indigenous Relations and Northern Affairs Canada": 5087,
+        "Department of Finance Canada": 802,
+        "Department of Justice Canada": 4659,
+        "Elections Canada": 777,
+        "Employment and Social Development Canada": 25160,
+        "Environment and Climate Change Canada": 7276,
+        "Farm Products Council of Canada": 0,
+        "Federal Economic Development Agency for Northern Ontario": 0,
+        "Federal Economic Development Agency for Southern Ontario": 240,
+        "Federal Judges not part of any department": 1198,
+        "Financial Consumer Agency of Canada": 128,
+        "Financial Transactions and Reports Analysis Centre of Canada": 361,
+        "Fisheries and Oceans Canada": 11911,
+        "Global Affairs Canada": 6561,
+        "Health Canada": 10794,
+        "Housing, Infrastructure and Communities Canada": 514,
+        "Immigration and Refugee Board of Canada": 1413,
+        "Immigration, Refugees and Citizenship Canada": 7864,
+        "Impact Assessment Agency of Canada": 330,
+        "Indian Oil and Gas Canada": 87,
+        "Indian Residential Schools Truth and Reconciliation Commission": 0,
+        "Indigenous Services Canada": 0,
+        "Innovation, Science and Economic Development Canada": 5459,
+        "International Joint Commission": 30,
+        "Law Commission of Canada": 0,
+        "Library and Archives Canada": 981,
+        "Military Grievances External Review Committee": 37,
+        "Military Police Complaints Commission of Canada": 25,
+        "National Defence": 25278,
+        "National Film Board": 392,
+        "National Research Council Canada": 4058,
+        "National Security and Intelligence Review Agency": 0,
+        "Natural Resources Canada": 4551,
+        "Natural Sciences and Engineering Research Canada": 475,
+        "Office of the Auditor General of Canada": 601,
+        "Office of the Commissioner for Federal Judicial Affairs Canada": 58,
+        "Office of the Commissioner of Lobbying of Canada": 25,
+        "Office of the Commissioner of Official Languages": 174,
+        "Office of the Governor General's Secretary": 148,
+        "Office of the Intelligence Commissioner": 0,
+        "Office of the Prime Minister": 0,
+        "Office of the Public Sector Integrity Commissioner of Canada": 25,
+        "Office of the Superintendent of Financial Institutions Canada": 769,
+        "Offices of the information and Privacy Commissioners of Canada": 252,
+        "Parks Canada": 4356,
+        "Parole Board of Canada": 462,
+        "Patented Medicine Prices Review Board Canada": 74,
+        "Polar Knowledge Canada": 61,
+        "Privy Council Office": 1075,
+        "Public Health Agency of Canada": 2379,
+        "Public Prosecution Service of Canada": 991,
+        "Public Safety Canada": 1329,
+        "Public Service Commission of Canada": 889,
+        "Public Services and Procurement Canada": 15721,
+        "RCMP External Review Committee": 8,
+        "Registrar of the Supreme Court of Canada": 225,
+        "Royal Canadian Mounted Police": 7564,
+        "Secretariat of the National Security and Intelligence Committee of Parliamentarians": 5,
+        "Security Intelligence Review Committee": 22,
+        "Shared Services Canada": 6528,
+        "Social Sciences and Humanities Research Council of Canada": 244,
+        "Statistical Survey Operations": 1485,
+        "Statistics Canada": 5405,
+        "The Correctional Investigator Canada": 41,
+        "Transport Canada": 5683,
+        "Transportation Safety Board of Canada": 216,
+        "Treasury Board of Canada Secretariat": 2125,
+        "Veterans Affairs Canada": 3159,
+        "Veterans Review and Appeal Board": 79,
+        "Western Economic Diversification Canada": 316,
+        "Women and Gender Equality Canada": 181
+      }
+    },
+    "2020": {
+      "headcount": 300450,
+      "headcountAsOf": "2020-03-31",
+      "source": "Treasury Board of Canada Secretariat — Population of the Federal Public Service",
+      "source_url": "https://www.canada.ca/en/treasury-board-secretariat/services/innovation/human-resources-statistics/population-federal-public-service-department.html",
+      "retrieved": "2026-07-08",
+      "ageBands": [
+        {
+          "key": "under-20",
+          "label_en": "<20",
+          "label_fr": "<20",
+          "count": 897
+        },
+        {
+          "key": "20-24",
+          "label_en": "20-24",
+          "label_fr": "20-24",
+          "count": 16298
+        },
+        {
+          "key": "25-29",
+          "label_en": "25-29",
+          "label_fr": "25-29",
+          "count": 27772
+        },
+        {
+          "key": "30-34",
+          "label_en": "30-34",
+          "label_fr": "30-34",
+          "count": 30046
+        },
+        {
+          "key": "35-39",
+          "label_en": "35-39",
+          "label_fr": "35-39",
+          "count": 38595
+        },
+        {
+          "key": "40-44",
+          "label_en": "40-44",
+          "label_fr": "40-44",
+          "count": 44141
+        },
+        {
+          "key": "45-49",
+          "label_en": "45-49",
+          "label_fr": "45-49",
+          "count": 42223
+        },
+        {
+          "key": "50-54",
+          "label_en": "50-54",
+          "label_fr": "50-54",
+          "count": 40704
+        },
+        {
+          "key": "55-59",
+          "label_en": "55-59",
+          "label_fr": "55-59",
+          "count": 35357
+        },
+        {
+          "key": "60-64",
+          "label_en": "60-64",
+          "label_fr": "60-64",
+          "count": 17199
+        },
+        {
+          "key": "65-plus",
+          "label_en": "65+",
+          "label_fr": "65+",
+          "count": 7216
+        },
+        {
+          "key": "unknown",
+          "label_en": "Unknown",
+          "label_fr": "Non disponible",
+          "count": 2
+        }
+      ],
+      "tenure": [
+        {
+          "key": "casual",
+          "label_en": "Casual",
+          "label_fr": "Employé occasionnel",
+          "count": 8573
+        },
+        {
+          "key": "indeterminate",
+          "label_en": "Indeterminate",
+          "label_fr": "Durée indéterminée",
+          "count": 249973
+        },
+        {
+          "key": "student",
+          "label_en": "Student",
+          "label_fr": "Étudiant",
+          "count": 8852
+        },
+        {
+          "key": "term",
+          "label_en": "Term",
+          "label_fr": "Durée déterminée",
+          "count": 33010
+        },
+        {
+          "key": "unknown",
+          "label_en": "Unknown",
+          "label_fr": "Non disponible",
+          "count": 42
+        }
+      ],
+      "salaryBands": [
+        {
+          "key": "under-5000",
+          "label_en": "Under 5,000",
+          "label_fr": "Moins de 5 000",
+          "count": 61
+        },
+        {
+          "key": "5000-to-9999",
+          "label_en": "5,000 to 9,999",
+          "label_fr": "De 5 000 à 9 999",
+          "count": 175
+        },
+        {
+          "key": "10000-to-14999",
+          "label_en": "10,000 to 14,999",
+          "label_fr": "De 10 000 à 14 999",
+          "count": 66
+        },
+        {
+          "key": "15000-to-19999",
+          "label_en": "15,000 to 19,999",
+          "label_fr": "De 15 000 à 19 999",
+          "count": 201
+        },
+        {
+          "key": "20000-to-24999",
+          "label_en": "20,000 to 24,999",
+          "label_fr": "De 20 000 à 24 999",
+          "count": 214
+        },
+        {
+          "key": "25000-to-34999",
+          "label_en": "25,000 to 34,999",
+          "label_fr": "De 25 000 à 34 999",
+          "count": 651
+        },
+        {
+          "key": "35000-to-49999",
+          "label_en": "35,000 to 49,999",
+          "label_fr": "De 35 000 à 49 999",
+          "count": 8948
+        },
+        {
+          "key": "50000-to-74999",
+          "label_en": "50,000 to 74,999",
+          "label_fr": "De 50 000 à 74 999",
+          "count": 92653
+        },
+        {
+          "key": "75000-to-99999",
+          "label_en": "75,000 to 99,999",
+          "label_fr": "De 75 000 à 99 999",
+          "count": 67327
+        },
+        {
+          "key": "100000-to-149999",
+          "label_en": "100,000 to 149,999",
+          "label_fr": "De 100 000 à 149 999",
+          "count": 40265
+        },
+        {
+          "key": "150000-to-199999",
+          "label_en": "150,000 to 199,999",
+          "label_fr": "De 150 000 à 199 999",
+          "count": 3240
+        },
+        {
+          "key": "200000-to-249999",
+          "label_en": "200,000 to 249,999",
+          "label_fr": "De 200 000 à 249 999",
+          "count": 314
+        },
+        {
+          "key": "250000-and-over",
+          "label_en": "250,000 and over",
+          "label_fr": "250 000 ou plus",
+          "count": 5
+        }
+      ],
+      "headcountByDepartment": {
+        "Accessibility Standards Canada": 0,
+        "Administrative Tribunals Support Service of Canada": 587,
+        "Agriculture and Agri-Food Canada": 5531,
+        "Atlantic Canada Opportunities Agency": 594,
+        "Canada Border Services Agency": 14971,
+        "Canada Economic Development for Quebec Regions": 320,
+        "Canada Energy Regulator": 503,
+        "Canada Revenue Agency": 45019,
+        "Canada School of Public Service": 668,
+        "Canadian Dairy Commission": 65,
+        "Canadian Food Inspection Agency": 6042,
+        "Canadian Grain Commission": 430,
+        "Canadian Heritage": 1889,
+        "Canadian Human Rights Commission": 242,
+        "Canadian Institutes of Health Research": 505,
+        "Canadian Intergovernmental Conference Secretariat": 23,
+        "Canadian Northern Economic Development Agency": 99,
+        "Canadian Nuclear Safety Commission": 863,
+        "Canadian Polar Commission": 0,
+        "Canadian Radio-television and Telecommunications Commission": 534,
+        "Canadian Space Agency": 686,
+        "Canadian Transportation Agency": 292,
+        "Civilian Review and Complaints Commission for the RCMP": 80,
+        "Communications Security Establishment": 2752,
+        "Copyright Board Canada": 16,
+        "Correctional Service Canada": 17818,
+        "Courts Administration Service": 788,
+        "Crown-Indigenous Relations and Northern Affairs Canada": 5418,
+        "Department of Finance Canada": 833,
+        "Department of Justice Canada": 4844,
+        "Elections Canada": 903,
+        "Employment and Social Development Canada": 27115,
+        "Environment and Climate Change Canada": 7550,
+        "Farm Products Council of Canada": 0,
+        "Federal Economic Development Agency for Northern Ontario": 0,
+        "Federal Economic Development Agency for Southern Ontario": 274,
+        "Federal Judges not part of any department": 1204,
+        "Financial Consumer Agency of Canada": 147,
+        "Financial Transactions and Reports Analysis Centre of Canada": 376,
+        "Fisheries and Oceans Canada": 12654,
+        "Global Affairs Canada": 6860,
+        "Health Canada": 11223,
+        "Housing, Infrastructure and Communities Canada": 617,
+        "Immigration and Refugee Board of Canada": 1742,
+        "Immigration, Refugees and Citizenship Canada": 8496,
+        "Impact Assessment Agency of Canada": 438,
+        "Indian Oil and Gas Canada": 88,
+        "Indian Residential Schools Truth and Reconciliation Commission": 0,
+        "Indigenous Services Canada": 0,
+        "Innovation, Science and Economic Development Canada": 5516,
+        "International Joint Commission": 34,
+        "Law Commission of Canada": 0,
+        "Library and Archives Canada": 1000,
+        "Military Grievances External Review Committee": 41,
+        "Military Police Complaints Commission of Canada": 28,
+        "National Defence": 26047,
+        "National Film Board": 388,
+        "National Research Council Canada": 4215,
+        "National Security and Intelligence Review Agency": 0,
+        "Natural Resources Canada": 4574,
+        "Natural Sciences and Engineering Research Canada": 511,
+        "Office of the Auditor General of Canada": 639,
+        "Office of the Commissioner for Federal Judicial Affairs Canada": 66,
+        "Office of the Commissioner of Lobbying of Canada": 26,
+        "Office of the Commissioner of Official Languages": 173,
+        "Office of the Governor General's Secretary": 167,
+        "Office of the Intelligence Commissioner": 0,
+        "Office of the Prime Minister": 0,
+        "Office of the Public Sector Integrity Commissioner of Canada": 27,
+        "Office of the Superintendent of Financial Institutions Canada": 848,
+        "Offices of the information and Privacy Commissioners of Canada": 302,
+        "Parks Canada": 4519,
+        "Parole Board of Canada": 485,
+        "Patented Medicine Prices Review Board Canada": 80,
+        "Polar Knowledge Canada": 72,
+        "Privy Council Office": 1011,
+        "Public Health Agency of Canada": 2340,
+        "Public Prosecution Service of Canada": 1035,
+        "Public Safety Canada": 1269,
+        "Public Service Commission of Canada": 955,
+        "Public Services and Procurement Canada": 16892,
+        "RCMP External Review Committee": 10,
+        "Registrar of the Supreme Court of Canada": 237,
+        "Royal Canadian Mounted Police": 8022,
+        "Secretariat of the National Security and Intelligence Committee of Parliamentarians": 9,
+        "Security Intelligence Review Committee": 20,
+        "Shared Services Canada": 7185,
+        "Social Sciences and Humanities Research Council of Canada": 275,
+        "Statistical Survey Operations": 1454,
+        "Statistics Canada": 5452,
+        "The Correctional Investigator Canada": 38,
+        "Transport Canada": 5877,
+        "Transportation Safety Board of Canada": 225,
+        "Treasury Board of Canada Secretariat": 2276,
+        "Veterans Affairs Canada": 3321,
+        "Veterans Review and Appeal Board": 77,
+        "Western Economic Diversification Canada": 349,
+        "Women and Gender Equality Canada": 264
+      }
+    },
+    "2021": {
+      "headcount": 319601,
+      "headcountAsOf": "2021-03-31",
+      "source": "Treasury Board of Canada Secretariat — Population of the Federal Public Service",
+      "source_url": "https://www.canada.ca/en/treasury-board-secretariat/services/innovation/human-resources-statistics/population-federal-public-service-department.html",
+      "retrieved": "2026-07-08",
+      "ageBands": [
+        {
+          "key": "under-20",
+          "label_en": "<20",
+          "label_fr": "<20",
+          "count": 593
+        },
+        {
+          "key": "20-24",
+          "label_en": "20-24",
+          "label_fr": "20-24",
+          "count": 16194
+        },
+        {
+          "key": "25-29",
+          "label_en": "25-29",
+          "label_fr": "25-29",
+          "count": 31653
+        },
+        {
+          "key": "30-34",
+          "label_en": "30-34",
+          "label_fr": "30-34",
+          "count": 32794
+        },
+        {
+          "key": "35-39",
+          "label_en": "35-39",
+          "label_fr": "35-39",
+          "count": 40929
+        },
+        {
+          "key": "40-44",
+          "label_en": "40-44",
+          "label_fr": "40-44",
+          "count": 46623
+        },
+        {
+          "key": "45-49",
+          "label_en": "45-49",
+          "label_fr": "45-49",
+          "count": 44677
+        },
+        {
+          "key": "50-54",
+          "label_en": "50-54",
+          "label_fr": "50-54",
+          "count": 41975
+        },
+        {
+          "key": "55-59",
+          "label_en": "55-59",
+          "label_fr": "55-59",
+          "count": 36737
+        },
+        {
+          "key": "60-64",
+          "label_en": "60-64",
+          "label_fr": "60-64",
+          "count": 19028
+        },
+        {
+          "key": "65-plus",
+          "label_en": "65+",
+          "label_fr": "65+",
+          "count": 8395
+        },
+        {
+          "key": "unknown",
+          "label_en": "Unknown",
+          "label_fr": "Non disponible",
+          "count": 3
+        }
+      ],
+      "tenure": [
+        {
+          "key": "casual",
+          "label_en": "Casual",
+          "label_fr": "Employé occasionnel",
+          "count": 9336
+        },
+        {
+          "key": "indeterminate",
+          "label_en": "Indeterminate",
+          "label_fr": "Durée indéterminée",
+          "count": 262667
+        },
+        {
+          "key": "student",
+          "label_en": "Student",
+          "label_fr": "Étudiant",
+          "count": 8064
+        },
+        {
+          "key": "term",
+          "label_en": "Term",
+          "label_fr": "Durée déterminée",
+          "count": 39505
+        },
+        {
+          "key": "unknown",
+          "label_en": "Unknown",
+          "label_fr": "Non disponible",
+          "count": 29
+        }
+      ],
+      "salaryBands": [
+        {
+          "key": "under-5000",
+          "label_en": "Under 5,000",
+          "label_fr": "Moins de 5 000",
+          "count": 54
+        },
+        {
+          "key": "5000-to-9999",
+          "label_en": "5,000 to 9,999",
+          "label_fr": "De 5 000 à 9 999",
+          "count": 148
+        },
+        {
+          "key": "10000-to-14999",
+          "label_en": "10,000 to 14,999",
+          "label_fr": "De 10 000 à 14 999",
+          "count": 57
+        },
+        {
+          "key": "15000-to-19999",
+          "label_en": "15,000 to 19,999",
+          "label_fr": "De 15 000 à 19 999",
+          "count": 154
+        },
+        {
+          "key": "20000-to-24999",
+          "label_en": "20,000 to 24,999",
+          "label_fr": "De 20 000 à 24 999",
+          "count": 228
+        },
+        {
+          "key": "25000-to-34999",
+          "label_en": "25,000 to 34,999",
+          "label_fr": "De 25 000 à 34 999",
+          "count": 509
+        },
+        {
+          "key": "35000-to-49999",
+          "label_en": "35,000 to 49,999",
+          "label_fr": "De 35 000 à 49 999",
+          "count": 4326
+        },
+        {
+          "key": "50000-to-74999",
+          "label_en": "50,000 to 74,999",
+          "label_fr": "De 50 000 à 74 999",
+          "count": 94309
+        },
+        {
+          "key": "75000-to-99999",
+          "label_en": "75,000 to 99,999",
+          "label_fr": "De 75 000 à 99 999",
+          "count": 75358
+        },
+        {
+          "key": "100000-to-149999",
+          "label_en": "100,000 to 149,999",
+          "label_fr": "De 100 000 à 149 999",
+          "count": 49221
+        },
+        {
+          "key": "150000-to-199999",
+          "label_en": "150,000 to 199,999",
+          "label_fr": "De 150 000 à 199 999",
+          "count": 3634
+        },
+        {
+          "key": "200000-to-249999",
+          "label_en": "200,000 to 249,999",
+          "label_fr": "De 200 000 à 249 999",
+          "count": 342
+        },
+        {
+          "key": "250000-and-over",
+          "label_en": "250,000 and over",
+          "label_fr": "250 000 ou plus",
+          "count": 5
+        }
+      ],
+      "headcountByDepartment": {
+        "Accessibility Standards Canada": 0,
+        "Administrative Tribunals Support Service of Canada": 628,
+        "Agriculture and Agri-Food Canada": 5495,
+        "Atlantic Canada Opportunities Agency": 626,
+        "Canada Border Services Agency": 15224,
+        "Canada Economic Development for Quebec Regions": 360,
+        "Canada Energy Regulator": 553,
+        "Canada Revenue Agency": 47426,
+        "Canada School of Public Service": 647,
+        "Canadian Dairy Commission": 71,
+        "Canadian Food Inspection Agency": 6539,
+        "Canadian Grain Commission": 447,
+        "Canadian Heritage": 1935,
+        "Canadian Human Rights Commission": 252,
+        "Canadian Institutes of Health Research": 539,
+        "Canadian Intergovernmental Conference Secretariat": 22,
+        "Canadian Northern Economic Development Agency": 109,
+        "Canadian Nuclear Safety Commission": 862,
+        "Canadian Polar Commission": 0,
+        "Canadian Radio-television and Telecommunications Commission": 541,
+        "Canadian Space Agency": 744,
+        "Canadian Transportation Agency": 355,
+        "Civilian Review and Complaints Commission for the RCMP": 77,
+        "Communications Security Establishment": 2974,
+        "Copyright Board Canada": 16,
+        "Correctional Service Canada": 17904,
+        "Courts Administration Service": 765,
+        "Crown-Indigenous Relations and Northern Affairs Canada": 2072,
+        "Department of Finance Canada": 853,
+        "Department of Justice Canada": 4972,
+        "Elections Canada": 1261,
+        "Employment and Social Development Canada": 32697,
+        "Environment and Climate Change Canada": 7616,
+        "Farm Products Council of Canada": 0,
+        "Federal Economic Development Agency for Northern Ontario": 0,
+        "Federal Economic Development Agency for Southern Ontario": 316,
+        "Federal Judges not part of any department": 1209,
+        "Financial Consumer Agency of Canada": 161,
+        "Financial Transactions and Reports Analysis Centre of Canada": 401,
+        "Fisheries and Oceans Canada": 13526,
+        "Global Affairs Canada": 6994,
+        "Health Canada": 9204,
+        "Housing, Infrastructure and Communities Canada": 700,
+        "Immigration and Refugee Board of Canada": 1993,
+        "Immigration, Refugees and Citizenship Canada": 8991,
+        "Impact Assessment Agency of Canada": 460,
+        "Indian Oil and Gas Canada": 88,
+        "Indian Residential Schools Truth and Reconciliation Commission": 0,
+        "Indigenous Services Canada": 6670,
+        "Innovation, Science and Economic Development Canada": 5700,
+        "International Joint Commission": 31,
+        "Law Commission of Canada": 0,
+        "Library and Archives Canada": 926,
+        "Military Grievances External Review Committee": 46,
+        "Military Police Complaints Commission of Canada": 28,
+        "National Defence": 26422,
+        "National Film Board": 389,
+        "National Research Council Canada": 4380,
+        "National Security and Intelligence Review Agency": 73,
+        "Natural Resources Canada": 4685,
+        "Natural Sciences and Engineering Research Canada": 536,
+        "Office of the Auditor General of Canada": 749,
+        "Office of the Commissioner for Federal Judicial Affairs Canada": 72,
+        "Office of the Commissioner of Lobbying of Canada": 25,
+        "Office of the Commissioner of Official Languages": 177,
+        "Office of the Governor General's Secretary": 158,
+        "Office of the Intelligence Commissioner": 0,
+        "Office of the Prime Minister": 1,
+        "Office of the Public Sector Integrity Commissioner of Canada": 34,
+        "Office of the Superintendent of Financial Institutions Canada": 903,
+        "Offices of the information and Privacy Commissioners of Canada": 323,
+        "Parks Canada": 4666,
+        "Parole Board of Canada": 479,
+        "Patented Medicine Prices Review Board Canada": 79,
+        "Polar Knowledge Canada": 69,
+        "Privy Council Office": 1076,
+        "Public Health Agency of Canada": 3281,
+        "Public Prosecution Service of Canada": 1082,
+        "Public Safety Canada": 1256,
+        "Public Service Commission of Canada": 878,
+        "Public Services and Procurement Canada": 17085,
+        "RCMP External Review Committee": 15,
+        "Registrar of the Supreme Court of Canada": 233,
+        "Royal Canadian Mounted Police": 8436,
+        "Secretariat of the National Security and Intelligence Committee of Parliamentarians": 6,
+        "Security Intelligence Review Committee": 0,
+        "Shared Services Canada": 7553,
+        "Social Sciences and Humanities Research Council of Canada": 308,
+        "Statistical Survey Operations": 2208,
+        "Statistics Canada": 6360,
+        "The Correctional Investigator Canada": 38,
+        "Transport Canada": 6339,
+        "Transportation Safety Board of Canada": 231,
+        "Treasury Board of Canada Secretariat": 2355,
+        "Veterans Affairs Canada": 3799,
+        "Veterans Review and Appeal Board": 93,
+        "Western Economic Diversification Canada": 394,
+        "Women and Gender Equality Canada": 329
+      }
+    },
+    "2022": {
+      "headcount": 335957,
+      "headcountAsOf": "2022-03-31",
+      "source": "Treasury Board of Canada Secretariat — Population of the Federal Public Service",
+      "source_url": "https://www.canada.ca/en/treasury-board-secretariat/services/innovation/human-resources-statistics/population-federal-public-service-department.html",
+      "retrieved": "2026-07-08",
+      "ageBands": [
+        {
+          "key": "under-20",
+          "label_en": "<20",
+          "label_fr": "<20",
+          "count": 782
+        },
+        {
+          "key": "20-24",
+          "label_en": "20-24",
+          "label_fr": "20-24",
+          "count": 17590
+        },
+        {
+          "key": "25-29",
+          "label_en": "25-29",
+          "label_fr": "25-29",
+          "count": 35642
+        },
+        {
+          "key": "30-34",
+          "label_en": "30-34",
+          "label_fr": "30-34",
+          "count": 36715
+        },
+        {
+          "key": "35-39",
+          "label_en": "35-39",
+          "label_fr": "35-39",
+          "count": 42781
+        },
+        {
+          "key": "40-44",
+          "label_en": "40-44",
+          "label_fr": "40-44",
+          "count": 48693
+        },
+        {
+          "key": "45-49",
+          "label_en": "45-49",
+          "label_fr": "45-49",
+          "count": 46952
+        },
+        {
+          "key": "50-54",
+          "label_en": "50-54",
+          "label_fr": "50-54",
+          "count": 42912
+        },
+        {
+          "key": "55-59",
+          "label_en": "55-59",
+          "label_fr": "55-59",
+          "count": 36122
+        },
+        {
+          "key": "60-64",
+          "label_en": "60-64",
+          "label_fr": "60-64",
+          "count": 19158
+        },
+        {
+          "key": "65-plus",
+          "label_en": "65+",
+          "label_fr": "65+",
+          "count": 8609
+        },
+        {
+          "key": "unknown",
+          "label_en": "Unknown",
+          "label_fr": "Non disponible",
+          "count": 1
+        }
+      ],
+      "tenure": [
+        {
+          "key": "casual",
+          "label_en": "Casual",
+          "label_fr": "Employé occasionnel",
+          "count": 9648
+        },
+        {
+          "key": "indeterminate",
+          "label_en": "Indeterminate",
+          "label_fr": "Durée indéterminée",
+          "count": 271476
+        },
+        {
+          "key": "student",
+          "label_en": "Student",
+          "label_fr": "Étudiant",
+          "count": 8926
+        },
+        {
+          "key": "term",
+          "label_en": "Term",
+          "label_fr": "Durée déterminée",
+          "count": 45877
+        },
+        {
+          "key": "unknown",
+          "label_en": "Unknown",
+          "label_fr": "Non disponible",
+          "count": 30
+        }
+      ],
+      "salaryBands": [
+        {
+          "key": "under-5000",
+          "label_en": "Under 5,000",
+          "label_fr": "Moins de 5 000",
+          "count": 64
+        },
+        {
+          "key": "5000-to-9999",
+          "label_en": "5,000 to 9,999",
+          "label_fr": "De 5 000 à 9 999",
+          "count": 151
+        },
+        {
+          "key": "10000-to-14999",
+          "label_en": "10,000 to 14,999",
+          "label_fr": "De 10 000 à 14 999",
+          "count": 43
+        },
+        {
+          "key": "15000-to-19999",
+          "label_en": "15,000 to 19,999",
+          "label_fr": "De 15 000 à 19 999",
+          "count": 174
+        },
+        {
+          "key": "20000-to-24999",
+          "label_en": "20,000 to 24,999",
+          "label_fr": "De 20 000 à 24 999",
+          "count": 214
+        },
+        {
+          "key": "25000-to-34999",
+          "label_en": "25,000 to 34,999",
+          "label_fr": "De 25 000 à 34 999",
+          "count": 472
+        },
+        {
+          "key": "35000-to-49999",
+          "label_en": "35,000 to 49,999",
+          "label_fr": "De 35 000 à 49 999",
+          "count": 4079
+        },
+        {
+          "key": "50000-to-74999",
+          "label_en": "50,000 to 74,999",
+          "label_fr": "De 50 000 à 74 999",
+          "count": 94840
+        },
+        {
+          "key": "75000-to-99999",
+          "label_en": "75,000 to 99,999",
+          "label_fr": "De 75 000 à 99 999",
+          "count": 76910
+        },
+        {
+          "key": "100000-to-149999",
+          "label_en": "100,000 to 149,999",
+          "label_fr": "De 100 000 à 149 999",
+          "count": 54726
+        },
+        {
+          "key": "150000-to-199999",
+          "label_en": "150,000 to 199,999",
+          "label_fr": "De 150 000 à 199 999",
+          "count": 4032
+        },
+        {
+          "key": "200000-to-249999",
+          "label_en": "200,000 to 249,999",
+          "label_fr": "De 200 000 à 249 999",
+          "count": 422
+        },
+        {
+          "key": "250000-and-over",
+          "label_en": "250,000 and over",
+          "label_fr": "250 000 ou plus",
+          "count": 6
+        }
+      ],
+      "headcountByDepartment": {
+        "Accessibility Standards Canada": 44,
+        "Administrative Tribunals Support Service of Canada": 655,
+        "Agriculture and Agri-Food Canada": 5638,
+        "Atlantic Canada Opportunities Agency": 624,
+        "Canada Border Services Agency": 15441,
+        "Canada Economic Development for Quebec Regions": 374,
+        "Canada Energy Regulator": 556,
+        "Canada Revenue Agency": 54933,
+        "Canada School of Public Service": 707,
+        "Canadian Dairy Commission": 70,
+        "Canadian Food Inspection Agency": 6603,
+        "Canadian Grain Commission": 455,
+        "Canadian Heritage": 2062,
+        "Canadian Human Rights Commission": 279,
+        "Canadian Institutes of Health Research": 569,
+        "Canadian Intergovernmental Conference Secretariat": 26,
+        "Canadian Northern Economic Development Agency": 113,
+        "Canadian Nuclear Safety Commission": 858,
+        "Canadian Polar Commission": 0,
+        "Canadian Radio-television and Telecommunications Commission": 546,
+        "Canadian Space Agency": 789,
+        "Canadian Transportation Agency": 291,
+        "Civilian Review and Complaints Commission for the RCMP": 81,
+        "Communications Security Establishment": 3018,
+        "Copyright Board Canada": 16,
+        "Correctional Service Canada": 17925,
+        "Courts Administration Service": 758,
+        "Crown-Indigenous Relations and Northern Affairs Canada": 2092,
+        "Department of Finance Canada": 875,
+        "Department of Justice Canada": 5070,
+        "Elections Canada": 1046,
+        "Employment and Social Development Canada": 35609,
+        "Environment and Climate Change Canada": 7840,
+        "Farm Products Council of Canada": 0,
+        "Federal Economic Development Agency for Northern Ontario": 0,
+        "Federal Economic Development Agency for Southern Ontario": 344,
+        "Federal Judges not part of any department": 1190,
+        "Financial Consumer Agency of Canada": 196,
+        "Financial Transactions and Reports Analysis Centre of Canada": 523,
+        "Fisheries and Oceans Canada": 13537,
+        "Global Affairs Canada": 7112,
+        "Health Canada": 9886,
+        "Housing, Infrastructure and Communities Canada": 1043,
+        "Immigration and Refugee Board of Canada": 2114,
+        "Immigration, Refugees and Citizenship Canada": 10248,
+        "Impact Assessment Agency of Canada": 432,
+        "Indian Oil and Gas Canada": 85,
+        "Indian Residential Schools Truth and Reconciliation Commission": 0,
+        "Indigenous Services Canada": 7030,
+        "Innovation, Science and Economic Development Canada": 6094,
+        "International Joint Commission": 33,
+        "Law Commission of Canada": 0,
+        "Library and Archives Canada": 842,
+        "Military Grievances External Review Committee": 44,
+        "Military Police Complaints Commission of Canada": 28,
+        "National Defence": 26399,
+        "National Film Board": 379,
+        "National Research Council Canada": 4301,
+        "National Security and Intelligence Review Agency": 67,
+        "Natural Resources Canada": 4737,
+        "Natural Sciences and Engineering Research Canada": 524,
+        "Office of the Auditor General of Canada": 655,
+        "Office of the Commissioner for Federal Judicial Affairs Canada": 68,
+        "Office of the Commissioner of Lobbying of Canada": 28,
+        "Office of the Commissioner of Official Languages": 178,
+        "Office of the Governor General's Secretary": 177,
+        "Office of the Intelligence Commissioner": 3,
+        "Office of the Prime Minister": 0,
+        "Office of the Public Sector Integrity Commissioner of Canada": 31,
+        "Office of the Superintendent of Financial Institutions Canada": 942,
+        "Offices of the information and Privacy Commissioners of Canada": 356,
+        "Parks Canada": 4702,
+        "Parole Board of Canada": 463,
+        "Patented Medicine Prices Review Board Canada": 77,
+        "Polar Knowledge Canada": 75,
+        "Privy Council Office": 1130,
+        "Public Health Agency of Canada": 4254,
+        "Public Prosecution Service of Canada": 1118,
+        "Public Safety Canada": 1381,
+        "Public Service Commission of Canada": 899,
+        "Public Services and Procurement Canada": 17178,
+        "RCMP External Review Committee": 22,
+        "Registrar of the Supreme Court of Canada": 221,
+        "Royal Canadian Mounted Police": 8690,
+        "Secretariat of the National Security and Intelligence Committee of Parliamentarians": 6,
+        "Security Intelligence Review Committee": 0,
+        "Shared Services Canada": 7948,
+        "Social Sciences and Humanities Research Council of Canada": 304,
+        "Statistical Survey Operations": 2318,
+        "Statistics Canada": 6364,
+        "The Correctional Investigator Canada": 37,
+        "Transport Canada": 6063,
+        "Transportation Safety Board of Canada": 226,
+        "Treasury Board of Canada Secretariat": 2378,
+        "Veterans Affairs Canada": 3566,
+        "Veterans Review and Appeal Board": 97,
+        "Western Economic Diversification Canada": 461,
+        "Women and Gender Equality Canada": 390
+      }
+    },
+    "2023": {
+      "headcount": 357247,
+      "headcountAsOf": "2023-03-31",
+      "source": "Treasury Board of Canada Secretariat — Population of the Federal Public Service",
+      "source_url": "https://www.canada.ca/en/treasury-board-secretariat/services/innovation/human-resources-statistics/population-federal-public-service-department.html",
+      "retrieved": "2026-07-08",
+      "ageBands": [
+        {
+          "key": "under-20",
+          "label_en": "<20",
+          "label_fr": "<20",
+          "count": 921
+        },
+        {
+          "key": "20-24",
+          "label_en": "20-24",
+          "label_fr": "20-24",
+          "count": 17640
+        },
+        {
+          "key": "25-29",
+          "label_en": "25-29",
+          "label_fr": "25-29",
+          "count": 38926
+        },
+        {
+          "key": "30-34",
+          "label_en": "30-34",
+          "label_fr": "30-34",
+          "count": 41966
+        },
+        {
+          "key": "35-39",
+          "label_en": "35-39",
+          "label_fr": "35-39",
+          "count": 45502
+        },
+        {
+          "key": "40-44",
+          "label_en": "40-44",
+          "label_fr": "40-44",
+          "count": 51852
+        },
+        {
+          "key": "45-49",
+          "label_en": "45-49",
+          "label_fr": "45-49",
+          "count": 50223
+        },
+        {
+          "key": "50-54",
+          "label_en": "50-54",
+          "label_fr": "50-54",
+          "count": 45049
+        },
+        {
+          "key": "55-59",
+          "label_en": "55-59",
+          "label_fr": "55-59",
+          "count": 35942
+        },
+        {
+          "key": "60-64",
+          "label_en": "60-64",
+          "label_fr": "60-64",
+          "count": 20039
+        },
+        {
+          "key": "65-plus",
+          "label_en": "65+",
+          "label_fr": "65+",
+          "count": 9186
+        },
+        {
+          "key": "unknown",
+          "label_en": "Unknown",
+          "label_fr": "Non disponible",
+          "count": 1
+        }
+      ],
+      "tenure": [
+        {
+          "key": "casual",
+          "label_en": "Casual",
+          "label_fr": "Employé occasionnel",
+          "count": 8643
+        },
+        {
+          "key": "indeterminate",
+          "label_en": "Indeterminate",
+          "label_fr": "Durée indéterminée",
+          "count": 290981
+        },
+        {
+          "key": "student",
+          "label_en": "Student",
+          "label_fr": "Étudiant",
+          "count": 9203
+        },
+        {
+          "key": "term",
+          "label_en": "Term",
+          "label_fr": "Durée déterminée",
+          "count": 48361
+        },
+        {
+          "key": "unknown",
+          "label_en": "Unknown",
+          "label_fr": "Non disponible",
+          "count": 59
+        }
+      ],
+      "salaryBands": [
+        {
+          "key": "under-50000",
+          "label_en": "Under 50,000",
+          "label_fr": "Moins de 50 000",
+          "count": 5506
+        },
+        {
+          "key": "50000-to-54999",
+          "label_en": "50,000 to 54,999",
+          "label_fr": "De 50 000 à 54 999",
+          "count": 17514
+        },
+        {
+          "key": "55000-to-59999",
+          "label_en": "55,000 to 59,999",
+          "label_fr": "De 55 000 à 59 999",
+          "count": 16746
+        },
+        {
+          "key": "60000-to-64999",
+          "label_en": "60,000 to 64,999",
+          "label_fr": "De 60 000 à 64 999",
+          "count": 20458
+        },
+        {
+          "key": "65000-to-69999",
+          "label_en": "65,000 to 69,999",
+          "label_fr": "De 65 000 à 69 999",
+          "count": 23218
+        },
+        {
+          "key": "70000-to-74999",
+          "label_en": "70,000 to 74,999",
+          "label_fr": "De 70 000 à 74 999",
+          "count": 25292
+        },
+        {
+          "key": "75000-to-79999",
+          "label_en": "75,000 to 79,999",
+          "label_fr": "De 75 000 à 79 999",
+          "count": 16021
+        },
+        {
+          "key": "80000-to-84999",
+          "label_en": "80,000 to 84,999",
+          "label_fr": "De 80 000 à 84 999",
+          "count": 11295
+        },
+        {
+          "key": "85000-to-89999",
+          "label_en": "85,000 to 89,999",
+          "label_fr": "De 85 000 à 89 999",
+          "count": 22431
+        },
+        {
+          "key": "90000-to-94999",
+          "label_en": "90,000 to 94,999",
+          "label_fr": "De 90 000 à 94 999",
+          "count": 22142
+        },
+        {
+          "key": "95000-to-99999",
+          "label_en": "95,000 to 99,999",
+          "label_fr": "De 95 000 à 99 999",
+          "count": 8853
+        },
+        {
+          "key": "100000-to-104999",
+          "label_en": "100,000 to 104,999",
+          "label_fr": "De 100 000 à 104 999",
+          "count": 12844
+        },
+        {
+          "key": "105000-to-109999",
+          "label_en": "105,000 to 109,999",
+          "label_fr": "De 105 000 à 109 999",
+          "count": 9098
+        },
+        {
+          "key": "110000-to-114999",
+          "label_en": "110,000 to 114,999",
+          "label_fr": "De 110 000 à 114 999",
+          "count": 8511
+        },
+        {
+          "key": "115000-to-119999",
+          "label_en": "115,000 to 119,999",
+          "label_fr": "De 115 000 à 119 999",
+          "count": 6834
+        },
+        {
+          "key": "120000-to-124999",
+          "label_en": "120,000 to 124,999",
+          "label_fr": "De 120 000 à 124 999",
+          "count": 5895
+        },
+        {
+          "key": "125000-to-149999",
+          "label_en": "125,000 to 149,999",
+          "label_fr": "De 125 000 à 149 999",
+          "count": 14596
+        },
+        {
+          "key": "150000-and-over",
+          "label_en": "150,000 and over",
+          "label_fr": "150 000 ou plus",
+          "count": 6157
+        }
+      ],
+      "headcountByDepartment": {
+        "Accessibility Standards Canada": 55,
+        "Administrative Tribunals Support Service of Canada": 722,
+        "Agriculture and Agri-Food Canada": 5677,
+        "Atlantic Canada Opportunities Agency": 623,
+        "Canada Border Services Agency": 16520,
+        "Canada Economic Development for Quebec Regions": 370,
+        "Canada Energy Regulator": 572,
+        "Canada Revenue Agency": 59019,
+        "Canada School of Public Service": 742,
+        "Canadian Dairy Commission": 73,
+        "Canadian Food Inspection Agency": 6929,
+        "Canadian Grain Commission": 453,
+        "Canadian Heritage": 1975,
+        "Canadian Human Rights Commission": 297,
+        "Canadian Institutes of Health Research": 614,
+        "Canadian Intergovernmental Conference Secretariat": 28,
+        "Canadian Northern Economic Development Agency": 111,
+        "Canadian Nuclear Safety Commission": 930,
+        "Canadian Polar Commission": 0,
+        "Canadian Radio-television and Telecommunications Commission": 564,
+        "Canadian Space Agency": 885,
+        "Canadian Transportation Agency": 313,
+        "Civilian Review and Complaints Commission for the RCMP": 92,
+        "Communications Security Establishment": 3161,
+        "Copyright Board Canada": 17,
+        "Correctional Service Canada": 18527,
+        "Courts Administration Service": 810,
+        "Crown-Indigenous Relations and Northern Affairs Canada": 2204,
+        "Department of Finance Canada": 908,
+        "Department of Justice Canada": 5378,
+        "Elections Canada": 1040,
+        "Employment and Social Development Canada": 38983,
+        "Environment and Climate Change Canada": 8411,
+        "Farm Products Council of Canada": 0,
+        "Federal Economic Development Agency for Northern Ontario": 0,
+        "Federal Economic Development Agency for Southern Ontario": 331,
+        "Federal Judges not part of any department": 1183,
+        "Financial Consumer Agency of Canada": 216,
+        "Financial Transactions and Reports Analysis Centre of Canada": 545,
+        "Fisheries and Oceans Canada": 14526,
+        "Global Affairs Canada": 7460,
+        "Health Canada": 10003,
+        "Housing, Infrastructure and Communities Canada": 1350,
+        "Immigration and Refugee Board of Canada": 2304,
+        "Immigration, Refugees and Citizenship Canada": 12258,
+        "Impact Assessment Agency of Canada": 452,
+        "Indian Oil and Gas Canada": 75,
+        "Indian Residential Schools Truth and Reconciliation Commission": 0,
+        "Indigenous Services Canada": 7722,
+        "Innovation, Science and Economic Development Canada": 6331,
+        "International Joint Commission": 33,
+        "Law Commission of Canada": 0,
+        "Library and Archives Canada": 1013,
+        "Military Grievances External Review Committee": 48,
+        "Military Police Complaints Commission of Canada": 32,
+        "National Defence": 27356,
+        "National Film Board": 383,
+        "National Research Council Canada": 4423,
+        "National Security and Intelligence Review Agency": 92,
+        "Natural Resources Canada": 5302,
+        "Natural Sciences and Engineering Research Canada": 543,
+        "Office of the Auditor General of Canada": 793,
+        "Office of the Commissioner for Federal Judicial Affairs Canada": 68,
+        "Office of the Commissioner of Lobbying of Canada": 27,
+        "Office of the Commissioner of Official Languages": 167,
+        "Office of the Governor General's Secretary": 184,
+        "Office of the Intelligence Commissioner": 6,
+        "Office of the Prime Minister": 0,
+        "Office of the Public Sector Integrity Commissioner of Canada": 36,
+        "Office of the Superintendent of Financial Institutions Canada": 1139,
+        "Offices of the information and Privacy Commissioners of Canada": 304,
+        "Parks Canada": 4811,
+        "Parole Board of Canada": 494,
+        "Patented Medicine Prices Review Board Canada": 83,
+        "Polar Knowledge Canada": 89,
+        "Privy Council Office": 1212,
+        "Public Health Agency of Canada": 4211,
+        "Public Prosecution Service of Canada": 1173,
+        "Public Safety Canada": 1622,
+        "Public Service Commission of Canada": 975,
+        "Public Services and Procurement Canada": 18114,
+        "RCMP External Review Committee": 25,
+        "Registrar of the Supreme Court of Canada": 248,
+        "Royal Canadian Mounted Police": 9386,
+        "Secretariat of the National Security and Intelligence Committee of Parliamentarians": 9,
+        "Security Intelligence Review Committee": 0,
+        "Shared Services Canada": 8879,
+        "Social Sciences and Humanities Research Council of Canada": 341,
+        "Statistical Survey Operations": 1732,
+        "Statistics Canada": 6219,
+        "The Correctional Investigator Canada": 36,
+        "Transport Canada": 6366,
+        "Transportation Safety Board of Canada": 209,
+        "Treasury Board of Canada Secretariat": 2555,
+        "Veterans Affairs Canada": 3651,
+        "Veterans Review and Appeal Board": 113,
+        "Western Economic Diversification Canada": 518,
+        "Women and Gender Equality Canada": 468
+      }
+    },
+    "2024": {
+      "headcount": 367772,
+      "headcountAsOf": "2024-03-31",
+      "source": "Treasury Board of Canada Secretariat — Population of the Federal Public Service",
+      "source_url": "https://www.canada.ca/en/treasury-board-secretariat/services/innovation/human-resources-statistics/population-federal-public-service-department.html",
+      "retrieved": "2026-07-08",
+      "ageBands": [
+        {
+          "key": "under-20",
+          "label_en": "<20",
+          "label_fr": "<20",
+          "count": 878
+        },
+        {
+          "key": "20-24",
+          "label_en": "20-24",
+          "label_fr": "20-24",
+          "count": 16798
+        },
+        {
+          "key": "25-29",
+          "label_en": "25-29",
+          "label_fr": "25-29",
+          "count": 39400
+        },
+        {
+          "key": "30-34",
+          "label_en": "30-34",
+          "label_fr": "30-34",
+          "count": 44713
+        },
+        {
+          "key": "35-39",
+          "label_en": "35-39",
+          "label_fr": "35-39",
+          "count": 46668
+        },
+        {
+          "key": "40-44",
+          "label_en": "40-44",
+          "label_fr": "40-44",
+          "count": 53493
+        },
+        {
+          "key": "45-49",
+          "label_en": "45-49",
+          "label_fr": "45-49",
+          "count": 52750
+        },
+        {
+          "key": "50-54",
+          "label_en": "50-54",
+          "label_fr": "50-54",
+          "count": 46276
+        },
+        {
+          "key": "55-59",
+          "label_en": "55-59",
+          "label_fr": "55-59",
+          "count": 35977
+        },
+        {
+          "key": "60-64",
+          "label_en": "60-64",
+          "label_fr": "60-64",
+          "count": 20994
+        },
+        {
+          "key": "65-plus",
+          "label_en": "65+",
+          "label_fr": "65+",
+          "count": 9824
+        },
+        {
+          "key": "unknown",
+          "label_en": "Unknown",
+          "label_fr": "Non disponible",
+          "count": 1
+        }
+      ],
+      "tenure": [
+        {
+          "key": "casual",
+          "label_en": "Casual",
+          "label_fr": "Employé occasionnel",
+          "count": 6990
+        },
+        {
+          "key": "indeterminate",
+          "label_en": "Indeterminate",
+          "label_fr": "Durée indéterminée",
+          "count": 304131
+        },
+        {
+          "key": "student",
+          "label_en": "Student",
+          "label_fr": "Étudiant",
+          "count": 9120
+        },
+        {
+          "key": "term",
+          "label_en": "Term",
+          "label_fr": "Durée déterminée",
+          "count": 47460
+        },
+        {
+          "key": "unknown",
+          "label_en": "Unknown",
+          "label_fr": "Non disponible",
+          "count": 71
+        }
+      ],
+      "salaryBands": [
+        {
+          "key": "under-50000",
+          "label_en": "Under 50,000",
+          "label_fr": "Moins de 50,000",
+          "count": 4617
+        },
+        {
+          "key": "50000-to-54999",
+          "label_en": "50,000 to 54,999",
+          "label_fr": "De 50,000 à 54,999",
+          "count": 2526
+        },
+        {
+          "key": "55000-to-59999",
+          "label_en": "55,000 to 59,999",
+          "label_fr": "De 55,000 à 59,999",
+          "count": 7227
+        },
+        {
+          "key": "60000-to-64999",
+          "label_en": "60,000 to 64,999",
+          "label_fr": "De 60,000 à 64,999",
+          "count": 24922
+        },
+        {
+          "key": "65000-to-69999",
+          "label_en": "65,000 to 69,999",
+          "label_fr": "De 65,000 à 69,999",
+          "count": 24299
+        },
+        {
+          "key": "70000-to-74999",
+          "label_en": "70,000 to 74,999",
+          "label_fr": "De 70,000 à 74,999",
+          "count": 24361
+        },
+        {
+          "key": "75000-to-79999",
+          "label_en": "75,000 to 79,999",
+          "label_fr": "De 75,000 à 79,999",
+          "count": 20275
+        },
+        {
+          "key": "80000-to-84999",
+          "label_en": "80,000 to 84,999",
+          "label_fr": "De 80,000 à 84,999",
+          "count": 22858
+        },
+        {
+          "key": "85000-to-89999",
+          "label_en": "85,000 to 89,999",
+          "label_fr": "De 85,000 à 89,999",
+          "count": 16989
+        },
+        {
+          "key": "90000-to-94999",
+          "label_en": "90,000 to 94,999",
+          "label_fr": "De 90,000 à 94,999",
+          "count": 12132
+        },
+        {
+          "key": "95000-to-99999",
+          "label_en": "95,000 to 99,999",
+          "label_fr": "De 95,000 à 99,999",
+          "count": 13604
+        },
+        {
+          "key": "100000-to-104999",
+          "label_en": "100,000 to 104,999",
+          "label_fr": "De 100,000 à 104,999",
+          "count": 20277
+        },
+        {
+          "key": "105000-to-109999",
+          "label_en": "105,000 to 109,999",
+          "label_fr": "De 105,000 à 109,999",
+          "count": 10468
+        },
+        {
+          "key": "110000-to-114999",
+          "label_en": "110,000 to 114,999",
+          "label_fr": "De 110,000 à 114,999",
+          "count": 11870
+        },
+        {
+          "key": "115000-to-119999",
+          "label_en": "115,000 to 119,999",
+          "label_fr": "De 115,000 à 119,999",
+          "count": 6325
+        },
+        {
+          "key": "120000-to-124999",
+          "label_en": "120,000 to 124,999",
+          "label_fr": "De 120,000 à 124,999",
+          "count": 9528
+        },
+        {
+          "key": "125000-to-149999",
+          "label_en": "125,000 to 149,999",
+          "label_fr": "De 125,000 à 149,999",
+          "count": 24432
+        },
+        {
+          "key": "150000-and-over",
+          "label_en": "150,000 and over",
+          "label_fr": "150,000 ou plus",
+          "count": 9723
+        }
+      ],
+      "headcountByDepartment": {
+        "Accessibility Standards Canada": 60,
+        "Administrative Tribunals Support Service of Canada": 706,
+        "Agriculture and Agri-Food Canada": 5774,
+        "Atlantic Canada Opportunities Agency": 602,
+        "Canada Border Services Agency": 17226,
+        "Canada Economic Development for Quebec Regions": 376,
+        "Canada Energy Regulator": 573,
+        "Canada Revenue Agency": 59155,
+        "Canada School of Public Service": 679,
+        "Canadian Dairy Commission": 75,
+        "Canadian Food Inspection Agency": 6833,
+        "Canadian Grain Commission": 466,
+        "Canadian Heritage": 1929,
+        "Canadian Human Rights Commission": 300,
+        "Canadian Institutes of Health Research": 618,
+        "Canadian Intergovernmental Conference Secretariat": 39,
+        "Canadian Northern Economic Development Agency": 115,
+        "Canadian Nuclear Safety Commission": 969,
+        "Canadian Polar Commission": 0,
+        "Canadian Radio-television and Telecommunications Commission": 639,
+        "Canadian Space Agency": 948,
+        "Canadian Transportation Agency": 377,
+        "Civilian Review and Complaints Commission for the RCMP": 107,
+        "Communications Security Establishment": 3490,
+        "Copyright Board Canada": 19,
+        "Correctional Service Canada": 18990,
+        "Courts Administration Service": 861,
+        "Crown-Indigenous Relations and Northern Affairs Canada": 2088,
+        "Department of Finance Canada": 942,
+        "Department of Justice Canada": 5637,
+        "Elections Canada": 1250,
+        "Employment and Social Development Canada": 39089,
+        "Environment and Climate Change Canada": 8901,
+        "Farm Products Council of Canada": 0,
+        "Federal Economic Development Agency for Northern Ontario": 89,
+        "Federal Economic Development Agency for Southern Ontario": 321,
+        "Federal Judges not part of any department": 1185,
+        "Financial Consumer Agency of Canada": 231,
+        "Financial Transactions and Reports Analysis Centre of Canada": 556,
+        "Fisheries and Oceans Canada": 14716,
+        "Global Affairs Canada": 7439,
+        "Health Canada": 10187,
+        "Housing, Infrastructure and Communities Canada": 1506,
+        "Immigration and Refugee Board of Canada": 2579,
+        "Immigration, Refugees and Citizenship Canada": 13092,
+        "Impact Assessment Agency of Canada": 535,
+        "Indian Oil and Gas Canada": 79,
+        "Indian Residential Schools Truth and Reconciliation Commission": 0,
+        "Indigenous Services Canada": 8637,
+        "Innovation, Science and Economic Development Canada": 6531,
+        "International Joint Commission": 32,
+        "Law Commission of Canada": 5,
+        "Library and Archives Canada": 1173,
+        "Military Grievances External Review Committee": 52,
+        "Military Police Complaints Commission of Canada": 33,
+        "National Defence": 28740,
+        "National Film Board": 388,
+        "National Research Council Canada": 4519,
+        "National Security and Intelligence Review Agency": 85,
+        "Natural Resources Canada": 5751,
+        "Natural Sciences and Engineering Research Canada": 522,
+        "Office of the Auditor General of Canada": 836,
+        "Office of the Commissioner for Federal Judicial Affairs Canada": 65,
+        "Office of the Commissioner of Lobbying of Canada": 32,
+        "Office of the Commissioner of Official Languages": 178,
+        "Office of the Governor General's Secretary": 172,
+        "Office of the Intelligence Commissioner": 5,
+        "Office of the Prime Minister": 0,
+        "Office of the Public Sector Integrity Commissioner of Canada": 34,
+        "Office of the Superintendent of Financial Institutions Canada": 1323,
+        "Offices of the information and Privacy Commissioners of Canada": 323,
+        "Parks Canada": 4929,
+        "Parole Board of Canada": 554,
+        "Patented Medicine Prices Review Board Canada": 81,
+        "Polar Knowledge Canada": 82,
+        "Privy Council Office": 1288,
+        "Public Health Agency of Canada": 4251,
+        "Public Prosecution Service of Canada": 1177,
+        "Public Safety Canada": 1695,
+        "Public Service Commission of Canada": 892,
+        "Public Services and Procurement Canada": 18961,
+        "RCMP External Review Committee": 24,
+        "Registrar of the Supreme Court of Canada": 249,
+        "Royal Canadian Mounted Police": 10309,
+        "Secretariat of the National Security and Intelligence Committee of Parliamentarians": 7,
+        "Security Intelligence Review Committee": 0,
+        "Shared Services Canada": 9502,
+        "Social Sciences and Humanities Research Council of Canada": 379,
+        "Statistical Survey Operations": 9,
+        "Statistics Canada": 7220,
+        "The Correctional Investigator Canada": 39,
+        "Transport Canada": 6714,
+        "Transportation Safety Board of Canada": 218,
+        "Treasury Board of Canada Secretariat": 2501,
+        "Veterans Affairs Canada": 3792,
+        "Veterans Review and Appeal Board": 161,
+        "Western Economic Diversification Canada": 511,
+        "Women and Gender Equality Canada": 443
+      }
+    },
+    "2025": {
+      "headcount": 357965,
+      "headcountAsOf": "2025-03-31",
+      "source": "Treasury Board of Canada Secretariat — Population of the Federal Public Service",
+      "source_url": "https://www.canada.ca/en/treasury-board-secretariat/services/innovation/human-resources-statistics/population-federal-public-service-department.html",
+      "retrieved": "2026-07-08",
+      "ageBands": [
+        {
+          "key": "under-20",
+          "label_en": "<20",
+          "label_fr": "<20",
+          "count": 632
+        },
+        {
+          "key": "20-24",
+          "label_en": "20-24",
+          "label_fr": "20-24",
+          "count": 13444
+        },
+        {
+          "key": "25-29",
+          "label_en": "25-29",
+          "label_fr": "25-29",
+          "count": 34987
+        },
+        {
+          "key": "30-34",
+          "label_en": "30-34",
+          "label_fr": "30-34",
+          "count": 44150
+        },
+        {
+          "key": "35-39",
+          "label_en": "35-39",
+          "label_fr": "35-39",
+          "count": 45591
+        },
+        {
+          "key": "40-44",
+          "label_en": "40-44",
+          "label_fr": "40-44",
+          "count": 52253
+        },
+        {
+          "key": "45-49",
+          "label_en": "45-49",
+          "label_fr": "45-49",
+          "count": 53408
+        },
+        {
+          "key": "50-54",
+          "label_en": "50-54",
+          "label_fr": "50-54",
+          "count": 46729
+        },
+        {
+          "key": "55-59",
+          "label_en": "55-59",
+          "label_fr": "55-59",
+          "count": 35569
+        },
+        {
+          "key": "60-64",
+          "label_en": "60-64",
+          "label_fr": "60-64",
+          "count": 21107
+        },
+        {
+          "key": "65-plus",
+          "label_en": "65+",
+          "label_fr": "65+",
+          "count": 10094
+        },
+        {
+          "key": "unknown",
+          "label_en": "Unknown",
+          "label_fr": "Non disponible",
+          "count": 1
+        }
+      ],
+      "tenure": [
+        {
+          "key": "casual",
+          "label_en": "Casual",
+          "label_fr": "Employé occasionnel",
+          "count": 4210
+        },
+        {
+          "key": "indeterminate",
+          "label_en": "Indeterminate",
+          "label_fr": "Durée indéterminée",
+          "count": 306872
+        },
+        {
+          "key": "student",
+          "label_en": "Student",
+          "label_fr": "Étudiant",
+          "count": 7370
+        },
+        {
+          "key": "term",
+          "label_en": "Term",
+          "label_fr": "Durée déterminée",
+          "count": 39468
+        },
+        {
+          "key": "unknown",
+          "label_en": "Unknown",
+          "label_fr": "Non disponible",
+          "count": 45
+        }
+      ],
+      "salaryBands": [
+        {
+          "key": "under-50000",
+          "label_en": "Under 50,000",
+          "label_fr": "Moins de 50,000",
+          "count": 3030
+        },
+        {
+          "key": "50000-to-54999",
+          "label_en": "50,000 to 54,999",
+          "label_fr": "De 50,000 à 54,999",
+          "count": 2380
+        },
+        {
+          "key": "55000-to-59999",
+          "label_en": "55,000 to 59,999",
+          "label_fr": "De 55,000 à 59,999",
+          "count": 4939
+        },
+        {
+          "key": "60000-to-64999",
+          "label_en": "60,000 to 64,999",
+          "label_fr": "De 60,000 à 64,999",
+          "count": 16840
+        },
+        {
+          "key": "65000-to-69999",
+          "label_en": "65,000 to 69,999",
+          "label_fr": "De 65,000 à 69,999",
+          "count": 26281
+        },
+        {
+          "key": "70000-to-74999",
+          "label_en": "70,000 to 74,999",
+          "label_fr": "De 70,000 à 74,999",
+          "count": 24013
+        },
+        {
+          "key": "75000-to-79999",
+          "label_en": "75,000 to 79,999",
+          "label_fr": "De 75,000 à 79,999",
+          "count": 21450
+        },
+        {
+          "key": "80000-to-84999",
+          "label_en": "80,000 to 84,999",
+          "label_fr": "De 80,000 à 84,999",
+          "count": 13992
+        },
+        {
+          "key": "85000-to-89999",
+          "label_en": "85,000 to 89,999",
+          "label_fr": "De 85,000 à 89,999",
+          "count": 21082
+        },
+        {
+          "key": "90000-to-94999",
+          "label_en": "90,000 to 94,999",
+          "label_fr": "De 90,000 à 94,999",
+          "count": 7519
+        },
+        {
+          "key": "95000-to-99999",
+          "label_en": "95,000 to 99,999",
+          "label_fr": "De 95,000 à 99,999",
+          "count": 14607
+        },
+        {
+          "key": "100000-to-104999",
+          "label_en": "100,000 to 104,999",
+          "label_fr": "De 100,000 à 104,999",
+          "count": 27637
+        },
+        {
+          "key": "105000-to-109999",
+          "label_en": "105,000 to 109,999",
+          "label_fr": "De 105,000 à 109,999",
+          "count": 10066
+        },
+        {
+          "key": "110000-to-114999",
+          "label_en": "110,000 to 114,999",
+          "label_fr": "De 110,000 à 114,999",
+          "count": 9428
+        },
+        {
+          "key": "115000-to-119999",
+          "label_en": "115,000 to 119,999",
+          "label_fr": "De 115,000 à 119,999",
+          "count": 11641
+        },
+        {
+          "key": "120000-to-124999",
+          "label_en": "120,000 to 124,999",
+          "label_fr": "De 120,000 à 124,999",
+          "count": 5833
+        },
+        {
+          "key": "125000-to-149999",
+          "label_en": "125,000 to 149,999",
+          "label_fr": "De 125,000 à 149,999",
+          "count": 33372
+        },
+        {
+          "key": "150000-and-over",
+          "label_en": "150,000 and over",
+          "label_fr": "150,000 ou plus",
+          "count": 12825
+        }
+      ],
+      "headcountByDepartment": {
+        "Accessibility Standards Canada": 62,
+        "Administrative Tribunals Support Service of Canada": 679,
+        "Agriculture and Agri-Food Canada": 5690,
+        "Atlantic Canada Opportunities Agency": 579,
+        "Canada Border Services Agency": 17234,
+        "Canada Economic Development for Quebec Regions": 371,
+        "Canada Energy Regulator": 582,
+        "Canada Revenue Agency": 52499,
+        "Canada School of Public Service": 597,
+        "Canadian Dairy Commission": 85,
+        "Canadian Food Inspection Agency": 6380,
+        "Canadian Grain Commission": 463,
+        "Canadian Heritage": 1910,
+        "Canadian Human Rights Commission": 287,
+        "Canadian Institutes of Health Research": 523,
+        "Canadian Intergovernmental Conference Secretariat": 40,
+        "Canadian Northern Economic Development Agency": 123,
+        "Canadian Nuclear Safety Commission": 1004,
+        "Canadian Polar Commission": 0,
+        "Canadian Radio-television and Telecommunications Commission": 733,
+        "Canadian Space Agency": 1015,
+        "Canadian Transportation Agency": 358,
+        "Civilian Review and Complaints Commission for the RCMP": 96,
+        "Communications Security Establishment": 3686,
+        "Copyright Board Canada": 22,
+        "Correctional Service Canada": 18902,
+        "Courts Administration Service": 831,
+        "Crown-Indigenous Relations and Northern Affairs Canada": 1892,
+        "Department of Finance Canada": 963,
+        "Department of Justice Canada": 5608,
+        "Elections Canada": 1729,
+        "Employment and Social Development Canada": 39154,
+        "Environment and Climate Change Canada": 8778,
+        "Farm Products Council of Canada": 0,
+        "Federal Economic Development Agency for Northern Ontario": 103,
+        "Federal Economic Development Agency for Southern Ontario": 240,
+        "Federal Judges not part of any department": 1224,
+        "Financial Consumer Agency of Canada": 239,
+        "Financial Transactions and Reports Analysis Centre of Canada": 541,
+        "Fisheries and Oceans Canada": 14451,
+        "Global Affairs Canada": 7657,
+        "Health Canada": 9628,
+        "Housing, Infrastructure and Communities Canada": 1667,
+        "Immigration and Refugee Board of Canada": 2507,
+        "Immigration, Refugees and Citizenship Canada": 11148,
+        "Impact Assessment Agency of Canada": 586,
+        "Indian Oil and Gas Canada": 87,
+        "Indian Residential Schools Truth and Reconciliation Commission": 0,
+        "Indigenous Services Canada": 8577,
+        "Innovation, Science and Economic Development Canada": 6526,
+        "International Joint Commission": 30,
+        "Law Commission of Canada": 6,
+        "Library and Archives Canada": 1138,
+        "Military Grievances External Review Committee": 54,
+        "Military Police Complaints Commission of Canada": 29,
+        "National Defence": 29121,
+        "National Film Board": 343,
+        "National Research Council Canada": 4688,
+        "National Security and Intelligence Review Agency": 89,
+        "Natural Resources Canada": 6044,
+        "Natural Sciences and Engineering Research Canada": 541,
+        "Office of the Auditor General of Canada": 746,
+        "Office of the Commissioner for Federal Judicial Affairs Canada": 73,
+        "Office of the Commissioner of Lobbying of Canada": 33,
+        "Office of the Commissioner of Official Languages": 170,
+        "Office of the Governor General's Secretary": 163,
+        "Office of the Intelligence Commissioner": 4,
+        "Office of the Prime Minister": 0,
+        "Office of the Public Sector Integrity Commissioner of Canada": 35,
+        "Office of the Superintendent of Financial Institutions Canada": 1256,
+        "Offices of the information and Privacy Commissioners of Canada": 353,
+        "Parks Canada": 4842,
+        "Parole Board of Canada": 496,
+        "Patented Medicine Prices Review Board Canada": 80,
+        "Polar Knowledge Canada": 92,
+        "Privy Council Office": 1208,
+        "Public Health Agency of Canada": 3372,
+        "Public Prosecution Service of Canada": 1149,
+        "Public Safety Canada": 1789,
+        "Public Service Commission of Canada": 803,
+        "Public Services and Procurement Canada": 18936,
+        "RCMP External Review Committee": 23,
+        "Registrar of the Supreme Court of Canada": 249,
+        "Royal Canadian Mounted Police": 11220,
+        "Secretariat of the National Security and Intelligence Committee of Parliamentarians": 10,
+        "Security Intelligence Review Committee": 0,
+        "Shared Services Canada": 8894,
+        "Social Sciences and Humanities Research Council of Canada": 387,
+        "Statistical Survey Operations": 4,
+        "Statistics Canada": 7274,
+        "The Correctional Investigator Canada": 36,
+        "Transport Canada": 6666,
+        "Transportation Safety Board of Canada": 230,
+        "Treasury Board of Canada Secretariat": 2374,
+        "Veterans Affairs Canada": 3779,
+        "Veterans Review and Appeal Board": 178,
+        "Western Economic Diversification Canada": 507,
+        "Women and Gender Equality Canada": 395
+      }
+    }
+  }
+}

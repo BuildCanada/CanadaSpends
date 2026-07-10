@@ -1,0 +1,680 @@
+{
+  "name": "Health",
+  "slug": "health-canada",
+  "financialYearEnding": 2018,
+  "reportedAs": null,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 5.944073,
+  "percentageOfFederal": 1.8003,
+  "accrualSpending": 3.706338,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 2.388
+    },
+    {
+      "year": 2015,
+      "percentage": 2.4132
+    },
+    {
+      "year": 2016,
+      "percentage": 2.274
+    },
+    {
+      "year": 2017,
+      "percentage": 2.1269
+    },
+    {
+      "year": 2018,
+      "percentage": 1.8003
+    },
+    {
+      "year": 2019,
+      "percentage": 1.4439
+    },
+    {
+      "year": 2020,
+      "percentage": 1.482
+    },
+    {
+      "year": 2021,
+      "percentage": 2.2048
+    },
+    {
+      "year": 2022,
+      "percentage": 3.3701
+    },
+    {
+      "year": 2023,
+      "percentage": 2.5801
+    },
+    {
+      "year": 2024,
+      "percentage": 2.6298
+    },
+    {
+      "year": 2025,
+      "percentage": 2.3318
+    }
+  ],
+  "miniSankey": {
+    "breakdown": "standard_object",
+    "spending_data": {
+      "id": "health-canada",
+      "name": "Health",
+      "children": [
+        {
+          "id": "health-canada-2018-department-of-health",
+          "name": "Department of Health",
+          "children": [
+            {
+              "id": "health-canada-2018-department-of-health-obj-10",
+              "name": "Transfer payments",
+              "amount": 1.725221
+            },
+            {
+              "id": "health-canada-2018-department-of-health-obj-1",
+              "name": "Personnel",
+              "amount": 0.920725
+            },
+            {
+              "id": "health-canada-2018-department-of-health-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.371431
+            },
+            {
+              "id": "health-canada-2018-department-of-health-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.3636
+            },
+            {
+              "id": "health-canada-2018-department-of-health-external-revenues",
+              "name": "External revenues",
+              "amount": -0.188462
+            },
+            {
+              "id": "health-canada-2018-department-of-health-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.170806
+            },
+            {
+              "id": "health-canada-2018-department-of-health-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.05553
+            },
+            {
+              "id": "health-canada-2018-department-of-health-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.028271
+            },
+            {
+              "name": "Other",
+              "id": "health-canada-2018-department-of-health-other",
+              "amount": 0.021795,
+              "isAggregate": true,
+              "count": 2
+            },
+            {
+              "id": "health-canada-2018-department-of-health-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.021262
+            },
+            {
+              "id": "health-canada-2018-department-of-health-obj-5",
+              "name": "Rentals",
+              "amount": 0.01809
+            },
+            {
+              "id": "health-canada-2018-department-of-health-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.017216
+            }
+          ]
+        },
+        {
+          "id": "health-canada-2018-canadian-institutes-of-health-research",
+          "name": "Canadian Institutes of Health Research",
+          "children": [
+            {
+              "id": "health-canada-2018-canadian-institutes-of-health-research-obj-10",
+              "name": "Transfer payments",
+              "amount": 1.035405
+            },
+            {
+              "id": "health-canada-2018-canadian-institutes-of-health-research-obj-1",
+              "name": "Personnel",
+              "amount": 0.049124
+            },
+            {
+              "id": "health-canada-2018-canadian-institutes-of-health-research-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.004975
+            },
+            {
+              "id": "health-canada-2018-canadian-institutes-of-health-research-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.004639
+            },
+            {
+              "id": "health-canada-2018-canadian-institutes-of-health-research-obj-5",
+              "name": "Rentals",
+              "amount": 0.001253
+            },
+            {
+              "id": "health-canada-2018-canadian-institutes-of-health-research-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000939
+            },
+            {
+              "id": "health-canada-2018-canadian-institutes-of-health-research-obj-3",
+              "name": "Information",
+              "amount": 0.000526
+            },
+            {
+              "id": "health-canada-2018-canadian-institutes-of-health-research-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000144
+            },
+            {
+              "id": "health-canada-2018-canadian-institutes-of-health-research-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.00012
+            },
+            {
+              "id": "health-canada-2018-canadian-institutes-of-health-research-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 3.6e-5
+            }
+          ]
+        },
+        {
+          "id": "health-canada-2018-canadian-food-inspection-agency",
+          "name": "Canadian Food Inspection Agency",
+          "children": [
+            {
+              "id": "health-canada-2018-canadian-food-inspection-agency-obj-1",
+              "name": "Personnel",
+              "amount": 0.559616
+            },
+            {
+              "id": "health-canada-2018-canadian-food-inspection-agency-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.075917
+            },
+            {
+              "id": "health-canada-2018-canadian-food-inspection-agency-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.018335
+            },
+            {
+              "id": "health-canada-2018-canadian-food-inspection-agency-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.01766
+            },
+            {
+              "id": "health-canada-2018-canadian-food-inspection-agency-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.016824
+            },
+            {
+              "id": "health-canada-2018-canadian-food-inspection-agency-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.015916
+            },
+            {
+              "id": "health-canada-2018-canadian-food-inspection-agency-obj-5",
+              "name": "Rentals",
+              "amount": 0.012586
+            },
+            {
+              "id": "health-canada-2018-canadian-food-inspection-agency-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.012001
+            },
+            {
+              "id": "health-canada-2018-canadian-food-inspection-agency-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.007177
+            },
+            {
+              "id": "health-canada-2018-canadian-food-inspection-agency-obj-3",
+              "name": "Information",
+              "amount": 0.002986
+            }
+          ]
+        },
+        {
+          "id": "health-canada-2018-public-health-agency-of-canada",
+          "name": "Public Health Agency of Canada",
+          "children": [
+            {
+              "id": "health-canada-2018-public-health-agency-of-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.226299
+            },
+            {
+              "id": "health-canada-2018-public-health-agency-of-canada-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.21711
+            },
+            {
+              "id": "health-canada-2018-public-health-agency-of-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.082756
+            },
+            {
+              "id": "health-canada-2018-public-health-agency-of-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.032349
+            },
+            {
+              "id": "health-canada-2018-public-health-agency-of-canada-obj-3",
+              "name": "Information",
+              "amount": 0.020345
+            },
+            {
+              "id": "health-canada-2018-public-health-agency-of-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.0128
+            },
+            {
+              "id": "health-canada-2018-public-health-agency-of-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.006875
+            },
+            {
+              "id": "health-canada-2018-public-health-agency-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.003409
+            },
+            {
+              "id": "health-canada-2018-public-health-agency-of-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.002987
+            },
+            {
+              "name": "Other",
+              "id": "health-canada-2018-public-health-agency-of-canada-other",
+              "amount": 0.002837,
+              "isAggregate": true,
+              "count": 2
+            },
+            {
+              "id": "health-canada-2018-public-health-agency-of-canada-external-revenues",
+              "name": "External revenues",
+              "amount": -0.000601
+            },
+            {
+              "id": "health-canada-2018-public-health-agency-of-canada-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -6.4e-5
+            }
+          ]
+        },
+        {
+          "id": "health-canada-2018-patented-medicine-prices-review-board",
+          "name": "Patented Medicine Prices Review Board",
+          "children": [
+            {
+              "id": "health-canada-2018-patented-medicine-prices-review-board-obj-1",
+              "name": "Personnel",
+              "amount": 0.007236
+            },
+            {
+              "id": "health-canada-2018-patented-medicine-prices-review-board-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.001498
+            },
+            {
+              "id": "health-canada-2018-patented-medicine-prices-review-board-obj-3",
+              "name": "Information",
+              "amount": 0.000425
+            },
+            {
+              "id": "health-canada-2018-patented-medicine-prices-review-board-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000276
+            },
+            {
+              "id": "health-canada-2018-patented-medicine-prices-review-board-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000149
+            },
+            {
+              "id": "health-canada-2018-patented-medicine-prices-review-board-obj-5",
+              "name": "Rentals",
+              "amount": 9.7e-5
+            },
+            {
+              "id": "health-canada-2018-patented-medicine-prices-review-board-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 3.2e-5
+            },
+            {
+              "id": "health-canada-2018-patented-medicine-prices-review-board-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 1.6e-5
+            },
+            {
+              "id": "health-canada-2018-patented-medicine-prices-review-board-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 1.0e-5
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "entities": [
+    {
+      "id": "health-canada-2018-entity-department-of-health",
+      "name": "Department of Health",
+      "value": 3.491053
+    },
+    {
+      "id": "health-canada-2018-entity-canadian-institutes-of-health-research",
+      "name": "Canadian Institutes of Health Research",
+      "value": 1.097161
+    },
+    {
+      "id": "health-canada-2018-entity-canadian-food-inspection-agency",
+      "name": "Canadian Food Inspection Agency",
+      "value": 0.739018
+    },
+    {
+      "id": "health-canada-2018-entity-public-health-agency-of-canada",
+      "name": "Public Health Agency of Canada",
+      "value": 0.607102
+    },
+    {
+      "id": "health-canada-2018-entity-patented-medicine-prices-review-board",
+      "name": "Patented Medicine Prices Review Board",
+      "value": 0.009739
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "health-canada-2018-tp-0000",
+      "category": "Contributions",
+      "description": "Canada Brain Research Fund Program",
+      "used": 20000000
+    },
+    {
+      "id": "health-canada-2018-tp-0001",
+      "category": "Contributions",
+      "description": "Canadian Blood Services: Blood Research and Development Program",
+      "used": 6250000
+    },
+    {
+      "id": "health-canada-2018-tp-0002",
+      "category": "Contributions",
+      "description": "Compensation payments in accordance with established by Regulations under the Health of Animals Act and the Plant Protection Act, and authorized pursuant to the Canadian Food Inspection Agency Act",
+      "used": 6372561
+    },
+    {
+      "id": "health-canada-2018-tp-0003",
+      "category": "Contributions",
+      "description": "Contribution in support of the Federal Initiative on HIV/AIDS",
+      "used": 29069527
+    },
+    {
+      "id": "health-canada-2018-tp-0004",
+      "category": "Contributions",
+      "description": "Contribution to Canada Health Infoway",
+      "used": 47000000
+    },
+    {
+      "id": "health-canada-2018-tp-0005",
+      "category": "Contributions",
+      "description": "Contribution to strengthen Canada's organs and tissues donation and transplantation system",
+      "used": 3580000
+    },
+    {
+      "id": "health-canada-2018-tp-0006",
+      "category": "Contributions",
+      "description": "Contribution to the Canadian Agency for Drugs and Technologies in Health",
+      "used": 18058769
+    },
+    {
+      "id": "health-canada-2018-tp-0007",
+      "category": "Contributions",
+      "description": "Contribution to the Canadian Foundation for Healthcare Improvement",
+      "used": 17000000
+    },
+    {
+      "id": "health-canada-2018-tp-0008",
+      "category": "Contributions",
+      "description": "Contribution to the Canadian Institute for Health Information",
+      "used": 81748979
+    },
+    {
+      "id": "health-canada-2018-tp-0009",
+      "category": "Contributions",
+      "description": "Contribution to the Canadian Partnership Against Cancer",
+      "used": 39854241
+    },
+    {
+      "id": "health-canada-2018-tp-0010",
+      "category": "Contributions",
+      "description": "Contribution to the Canadian Patient Safety Institute",
+      "used": 7600000
+    },
+    {
+      "id": "health-canada-2018-tp-0011",
+      "category": "Contributions",
+      "description": "Contributions for First Nations and Inuit Health Infrastructure Support",
+      "used": 571624276
+    },
+    {
+      "id": "health-canada-2018-tp-0012",
+      "category": "Contributions",
+      "description": "Contributions for First Nations and Inuit Primary Health Care",
+      "used": 607762078
+    },
+    {
+      "id": "health-canada-2018-tp-0013",
+      "category": "Contributions",
+      "description": "Contributions for First Nations and Inuit Supplementary Health Benefits",
+      "used": 142170853
+    },
+    {
+      "id": "health-canada-2018-tp-0014",
+      "category": "Contributions",
+      "description": "Contributions in support of the Federal Assistance Program",
+      "used": 804035
+    },
+    {
+      "id": "health-canada-2018-tp-0015",
+      "category": "Contributions",
+      "description": "Contributions to Canadian Blood Services and/or other designated transfusion/transplantation centres to support adverse event surveillance activities",
+      "used": 1711430
+    },
+    {
+      "id": "health-canada-2018-tp-0016",
+      "category": "Contributions",
+      "description": "Contributions to incorporated local or regional non-profit Aboriginal organizations and institutions for the purpose of developing early intervention programs for Aboriginal pre-school children and their families",
+      "used": 44118458
+    },
+    {
+      "id": "health-canada-2018-tp-0017",
+      "category": "Contributions",
+      "description": "Contributions to individuals and organizations in support of public health infrastructure",
+      "used": 0
+    },
+    {
+      "id": "health-canada-2018-tp-0018",
+      "category": "Contributions",
+      "description": "Contributions to individuals and organizations to support health promotion projects in the areas of building community capacity, stimulating knowledge development and dissemination, and partnership building/intersectoral collaboration",
+      "used": 56681545
+    },
+    {
+      "id": "health-canada-2018-tp-0019",
+      "category": "Contributions",
+      "description": "Contributions to non-government organizations, corporations, other levels of government, post-secondary institutions and individuals to support development and creation of public health workforce products and tools",
+      "used": 0
+    },
+    {
+      "id": "health-canada-2018-tp-0020",
+      "category": "Contributions",
+      "description": "Contributions to non-profit organizations to support, on a long-term basis, the development and provision of preventative and early intervention services aimed at addressing the health and developmental problems experienced by young children at risk in Canada",
+      "used": 81821038
+    },
+    {
+      "id": "health-canada-2018-tp-0021",
+      "category": "Contributions",
+      "description": "Health Care Policy Contribution Program",
+      "used": 8737838
+    },
+    {
+      "id": "health-canada-2018-tp-0022",
+      "category": "Contributions",
+      "description": "Items not required for the current year",
+      "used": 0
+    },
+    {
+      "id": "health-canada-2018-tp-0023",
+      "category": "Contributions",
+      "description": "Mental Health Commission of Canada Contributions Program",
+      "used": 14250000
+    },
+    {
+      "id": "health-canada-2018-tp-0024",
+      "category": "Contributions",
+      "description": "Official Languages Health Contribution Program",
+      "used": 33800001
+    },
+    {
+      "id": "health-canada-2018-tp-0025",
+      "category": "Contributions",
+      "description": "Substance Use and Addictions Program",
+      "used": 12969040
+    },
+    {
+      "id": "health-canada-2018-tp-0026",
+      "category": "Contributions",
+      "description": "Thalidomide Survivors Contribution Program",
+      "used": 9967690
+    },
+    {
+      "id": "health-canada-2018-tp-0027",
+      "category": "Grants",
+      "description": "Business-Led Networks of Centres of Excellence",
+      "used": 3344250
+    },
+    {
+      "id": "health-canada-2018-tp-0028",
+      "category": "Grants",
+      "description": "Canada 150 Research Chairs",
+      "used": 818219
+    },
+    {
+      "id": "health-canada-2018-tp-0029",
+      "category": "Grants",
+      "description": "Canada Excellence Research Chairs",
+      "used": 7933333
+    },
+    {
+      "id": "health-canada-2018-tp-0030",
+      "category": "Grants",
+      "description": "Canada First Research Excellence Fund",
+      "used": 34646332
+    },
+    {
+      "id": "health-canada-2018-tp-0031",
+      "category": "Grants",
+      "description": "Canada Graduate Scholarships",
+      "used": 21150359
+    },
+    {
+      "id": "health-canada-2018-tp-0032",
+      "category": "Grants",
+      "description": "Centres of Excellence for Commercialization and Research",
+      "used": 12328500
+    },
+    {
+      "id": "health-canada-2018-tp-0033",
+      "category": "Grants",
+      "description": "College and Community Innovation Program",
+      "used": 25000
+    },
+    {
+      "id": "health-canada-2018-tp-0034",
+      "category": "Grants",
+      "description": "Grant to Canada Health Infoway Inc. to accelerate the development of electronic health records, common information technology standards across the country, and the further applications of tele-health applications",
+      "used": 25847647
+    },
+    {
+      "id": "health-canada-2018-tp-0035",
+      "category": "Grants",
+      "description": "Grant to Ontario to enhance the capacity of the pan-Canadian Pharmaceutical Alliance",
+      "used": 30000000
+    },
+    {
+      "id": "health-canada-2018-tp-0036",
+      "category": "Grants",
+      "description": "Grant to eligible non-profit international organizations in support of their projects or programs on health",
+      "used": 1505777
+    },
+    {
+      "id": "health-canada-2018-tp-0037",
+      "category": "Grants",
+      "description": "Grant to graduate students, post-graduate students and Canadian post-secondary institutions to increase professional capacity and training levels in order to build an effective public health sector",
+      "used": 0
+    },
+    {
+      "id": "health-canada-2018-tp-0038",
+      "category": "Grants",
+      "description": "Grants for research projects and personnel support",
+      "used": 911875155
+    },
+    {
+      "id": "health-canada-2018-tp-0039",
+      "category": "Grants",
+      "description": "Grants to individuals and organizations in support of health promotion projects in the areas of building community capacity, stimulating knowledge development and dissemination, and partnership building/intersectorial collaboration",
+      "used": 2001628
+    },
+    {
+      "id": "health-canada-2018-tp-0040",
+      "category": "Grants",
+      "description": "Grants to individuals and organizations in support of public health infrastructure",
+      "used": 200157
+    },
+    {
+      "id": "health-canada-2018-tp-0041",
+      "category": "Grants",
+      "description": "Industrial Research Chairs for Colleges",
+      "used": 280000
+    },
+    {
+      "id": "health-canada-2018-tp-0042",
+      "category": "Grants",
+      "description": "Institute support grants",
+      "used": 13000000
+    },
+    {
+      "id": "health-canada-2018-tp-0043",
+      "category": "Grants",
+      "description": "Items not required for the current year",
+      "used": 0
+    },
+    {
+      "id": "health-canada-2018-tp-0044",
+      "category": "Grants",
+      "description": "Networks of Centres of Excellence",
+      "used": 21740000
+    },
+    {
+      "id": "health-canada-2018-tp-0045",
+      "category": "Grants",
+      "description": "Territorial Health Investment Fund",
+      "used": 27000000
+    },
+    {
+      "id": "health-canada-2018-tp-0046",
+      "category": "Grants",
+      "description": "Vanier Canada Graduate Scholarships",
+      "used": 8264193
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

@@ -1,0 +1,11 @@
+---
+reviewed: false
+source: llm-first-pass
+generated: 2026-07-06
+---
+
+L'Agence du revenu du Canada administre les lois fiscales fédérales et, pour le compte de la plupart des provinces et des territoires, un ensemble de programmes fiscaux provinciaux et territoriaux. Elle est responsable de la perception des recettes, du versement des prestations et des crédits aux particuliers et aux familles, ainsi que de l'application de la législation fiscale canadienne au moyen d'activités de cotisation, de vérification et d'exécution. L'Agence joue également un rôle dans l'administration de certains programmes et paiements non fiscaux pour le compte du gouvernement, en plus de ses fonctions principales d'administration fiscale, et collabore avec les contribuables, les employeurs et d'autres institutions afin de traiter les déclarations, d'émettre les remboursements et de régler les différends relatifs aux obligations fiscales.
+
+Au cours de l'exercice 2013-2014, {{name}} a enregistré des dépenses totales de {{totalSpending}}, ce qui représente {{percentageOfFederal}} des dépenses fédérales de l'année. Le pouvoir de dépenser était réparti entre dix crédits, et l'ensemble des dépenses déclarées a été attribué à l'Agence du revenu du Canada, seule entité de l'organisme, ce qui reflète sa structure d'organisme unique sans organisations de portefeuille distinctes.
+
+Une partie des dépenses de l'Agence correspondait à des paiements de transfert versés pour le compte du gouvernement plutôt qu'à des coûts de fonctionnement de l'Agence. Les paiements de l'incitatif à agir pour le climat ont constitué le plus important de ces paiements de transfert, loin devant l'Allocation spéciale pour enfants, qui vise à subvenir aux besoins des enfants pris en charge par un ministère ou un organisme public plutôt que par un particulier, et la répartition de la redevance sur les combustibles et des redevances sur l'excédent d'émissions, qui a été la plus modeste des trois. Ensemble, ces paiements illustrent le rôle plus large de l'Agence à titre d'administratrice de paiements, en plus de ses fonctions de perception fiscale et de conformité, un rôle qui s'est accru à mesure qu'un nombre croissant de prestations et de crédits fédéraux sont versés par l'entremise du régime fiscal plutôt que par des circuits de prestation distincts.

@@ -1,0 +1,23 @@
+---
+reviewed: false
+source: llm-first-pass
+generated: 2026-07-06
+---
+
+Le ministère des Finances est le ministère fédéral responsable de la politique budgétaire, du budget fédéral et de la gestion globale des finances du gouvernement. Son mandat comprend l'analyse économique et financière, la surveillance du secteur financier et l'administration des principaux paiements de transfert législatifs aux provinces et aux territoires, ainsi que le soutien à un certain nombre d'organismes et d'organismes de réglementation connexes du secteur financier. Comme plusieurs des plus importants programmes de transfert du gouvernement aux provinces et aux territoires sont administrés par Finances, ses dépenses déclarées tendent à être dominées par ces obligations législatives plutôt que par des programmes ministériels discrétionnaires.
+
+Au cours de l'exercice 2014-2015, Finances a déclaré des dépenses totales de {{totalSpending}}, soit {{percentageOfFederal}} des dépenses fédérales totales de l'année, ce qui en fait l'une des plus importantes organisations fédérales en matière de crédits totaux. Ces dépenses ont été déclarées par l'entremise des crédits du ministère pour l'exercice se terminant en 2015, couvrant à la fois le ministère lui-même et les organisations connexes de son portefeuille.
+
+La quasi-totalité de ces dépenses se trouvait au sein même du ministère, des montants plus modestes étant attribués, par ordre décroissant, à PPP Canada Inc., au Bureau du surintendant des institutions financières, au Bureau du vérificateur général, au Centre d'analyse des opérations et déclarations financières du Canada, à l'Agence de la consommation en matière financière du Canada et au Tribunal canadien du commerce extérieur. Les crédits du ministère pour l'année étaient répartis entre 15 crédits, comprenant les dépenses de programme, les dépenses de fonctionnement, les subventions et contributions, ainsi que l'autorisation de versements à l'Association internationale de développement en vertu de la Loi sur les accords de Bretton Woods et des accords connexes, en plus d'un crédit lié à la Loi sur le Bureau de transition vers un régime canadien de réglementation des valeurs mobilières. Ce grand nombre de crédits reflète l'éventail des pouvoirs législatifs et des organisations connexes administrés par le ministère.
+
+Les paiements de transfert du ministère étaient dominés par des paiements législatifs aux provinces et aux territoires plutôt que par des subventions ou contributions discrétionnaires. Les plus importants étaient le Transfert canadien en matière de santé, la péréquation fiscale et le Transfert canadien en matière de programmes sociaux, suivis de la formule de financement des territoires et des versements à l'Association internationale de développement. Ensemble, ces cinq catégories, toutes classées comme autres paiements de transfert, constituaient les transferts les plus importants déclarés par le ministère pour l'année.
+
+<!-- verification :
+- La description du mandat au paragraphe 1 constitue un contexte général et non controversé sur la raison d'être du ministère des Finances, non tirée de la fiche de données (permis).
+- Les entités nommées (ministère, PPP Canada Inc., Bureau du surintendant des institutions financières, Bureau du vérificateur général, Centre d'analyse des opérations et déclarations financières du Canada, Agence de la consommation en matière financière du Canada, Tribunal canadien du commerce extérieur) correspondent exactement à topSankeyChildren/topEntities.
+- Le nombre de crédits (15) correspond au champ voteCount ; les crédits nommés (dépenses de programme, dépenses de fonctionnement, subventions et contributions, autorisation Bretton Woods/Association internationale de développement) correspondent exactement à voteDescriptions.
+- Les catégories de transfert nommées (Transfert canadien en matière de santé, péréquation fiscale, Transfert canadien en matière de programmes sociaux, financement des territoires, versements à l'Association internationale de développement) correspondent exactement aux descriptions de topTransferPayments.
+- L'affirmation selon laquelle Finances était « l'une des plus importantes organisations fédérales » constitue une inférence qualitative à partir du pourcentage nettement plus élevé que celui des cinq autres ministères de ce lot, et non un chiffre littéral — signalé pour l'examen humain au cas où une lecture plus stricte interdirait même les superlatifs qualitatifs.
+- Aucun montant en dollars ni pourcentage littéral utilisé en dehors des trois espaces réservés.
+- Incertain : aucun au-delà de la remarque sur le superlatif ci-dessus.
+-->

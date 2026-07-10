@@ -1,0 +1,170 @@
+{
+  "name": "Democratic Institutions",
+  "slug": "democratic-institutions",
+  "financialYearEnding": 2019,
+  "reportedAs": null,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 0.18389,
+  "percentageOfFederal": 0.0531,
+  "accrualSpending": 0.174677,
+  "historicalShare": [
+    {
+      "year": 2019,
+      "percentage": 0.0531
+    },
+    {
+      "year": 2025,
+      "percentage": 0.0579
+    }
+  ],
+  "miniSankey": {
+    "breakdown": "standard_object",
+    "spending_data": {
+      "id": "democratic-institutions",
+      "name": "Democratic Institutions",
+      "children": [
+        {
+          "id": "democratic-institutions-2019-office-of-the-chief-electoral-officer",
+          "name": "Office of the Chief Electoral Officer",
+          "children": [
+            {
+              "id": "democratic-institutions-2019-office-of-the-chief-electoral-officer-obj-1",
+              "name": "Personnel",
+              "amount": 0.078567
+            },
+            {
+              "id": "democratic-institutions-2019-office-of-the-chief-electoral-officer-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.053059
+            },
+            {
+              "id": "democratic-institutions-2019-office-of-the-chief-electoral-officer-obj-5",
+              "name": "Rentals",
+              "amount": 0.025264
+            },
+            {
+              "id": "democratic-institutions-2019-office-of-the-chief-electoral-officer-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.010866
+            },
+            {
+              "id": "democratic-institutions-2019-office-of-the-chief-electoral-officer-obj-3",
+              "name": "Information",
+              "amount": 0.006048
+            },
+            {
+              "id": "democratic-institutions-2019-office-of-the-chief-electoral-officer-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.004248
+            },
+            {
+              "id": "democratic-institutions-2019-office-of-the-chief-electoral-officer-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.002637
+            },
+            {
+              "id": "democratic-institutions-2019-office-of-the-chief-electoral-officer-obj-10",
+              "name": "Transfer payments",
+              "children": [
+                {
+                  "id": "democratic-institutions-2019-tp-0002",
+                  "name": "Subsidies to electoral district associations' auditors",
+                  "amount": 0.000761
+                },
+                {
+                  "id": "democratic-institutions-2019-tp-0000",
+                  "name": "Reimbursement of election expenses to candidates and payments of subsidies to candidates' auditors for the current year by-elections",
+                  "amount": 0.000484
+                },
+                {
+                  "id": "democratic-institutions-2019-tp-0001",
+                  "name": "Reimbursement of election expenses to candidates, and payments of subsidies to candidates' auditors for other general elections and by-elections",
+                  "amount": 0.000244
+                }
+              ]
+            },
+            {
+              "id": "democratic-institutions-2019-office-of-the-chief-electoral-officer-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.000855
+            },
+            {
+              "id": "democratic-institutions-2019-office-of-the-chief-electoral-officer-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000452
+            },
+            {
+              "id": "democratic-institutions-2019-office-of-the-chief-electoral-officer-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000258
+            },
+            {
+              "id": "democratic-institutions-2019-office-of-the-chief-electoral-officer-obj-11",
+              "name": "Public debt charges",
+              "amount": 5.0e-6
+            }
+          ]
+        },
+        {
+          "id": "democratic-institutions-2019-leaders-debates-commission",
+          "name": "Leaders' Debates Commission",
+          "children": [
+            {
+              "id": "democratic-institutions-2019-leaders-debates-commission-obj-1",
+              "name": "Personnel",
+              "amount": 0.00012
+            },
+            {
+              "id": "democratic-institutions-2019-leaders-debates-commission-obj-2",
+              "name": "Transportation and communications",
+              "amount": 1.3e-5
+            },
+            {
+              "id": "democratic-institutions-2019-leaders-debates-commission-obj-4",
+              "name": "Professional and special services",
+              "amount": 8.0e-6
+            },
+            {
+              "id": "democratic-institutions-2019-leaders-debates-commission-obj-5",
+              "name": "Rentals",
+              "amount": 1.0e-6
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "entities": [
+    {
+      "id": "democratic-institutions-2019-entity-office-of-the-chief-electoral-officer",
+      "name": "Office of the Chief Electoral Officer",
+      "value": 0.183748
+    },
+    {
+      "id": "democratic-institutions-2019-entity-leaders-debates-commission",
+      "name": "Leaders' Debates Commission",
+      "value": 0.000142
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "democratic-institutions-2019-tp-0000",
+      "category": "Other transfer payments",
+      "description": "Reimbursement of election expenses to candidates and payments of subsidies to candidates' auditors for the current year by-elections",
+      "used": 484116
+    },
+    {
+      "id": "democratic-institutions-2019-tp-0001",
+      "category": "Other transfer payments",
+      "description": "Reimbursement of election expenses to candidates, and payments of subsidies to candidates' auditors for other general elections and by-elections",
+      "used": 243952
+    },
+    {
+      "id": "democratic-institutions-2019-tp-0002",
+      "category": "Other transfer payments",
+      "description": "Subsidies to electoral district associations' auditors",
+      "used": 761381
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

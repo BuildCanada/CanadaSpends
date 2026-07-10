@@ -1,0 +1,503 @@
+# Thematic tree for the federal spending Sankey, per spec §6
+# (docs/specs/federal-public-accounts-pipeline.md).
+#
+# Node ids and name_en reproduce the current hand-curated FY2024 tree in
+# src/components/Sankey/index.tsx. `rules` attach to leaf-most thematic nodes
+# and assign Vol II lines (from budgetary_details_by_allotment +
+# transfer_payments_by_ministry) to that node. Administrative detail below a
+# mapped node (organizations / votes / line items) is generated from data.
+#
+# Rule keys:
+#   ministry:       portfolio slug from ministry_slugs.yaml (matches ALL of
+#                   that portfolio's ministry-name variants and years)
+#   ministry_name:  raw ministry_name_normalized — used ONLY where one slug
+#                   aggregates ministries that the tree splits (ISC vs CIRNAC)
+#   organization:   exact `organization` string; matches in ANY ministry and
+#                   ANY year (orgs migrate between portfolios — org rules
+#                   deliberately follow the org, not its parent ministry)
+#   line:           regex against line description (allotment or transfer
+#                   payment description), scoped by ministry/organization if
+#                   both are given
+#   source: vol1    node is NOT fed from Vol II — the export command fills it
+#                   from Volume I consolidated data. Exactly one of:
+#                     vol1_line:   line label in the Consolidated Statement of
+#                                  Operations CSV (cdeif-tycfi-*), matched at
+#                                  the row's deepest non-empty level
+#                     vol1_dataset_column: column of the extracted Vol I
+#                                  Table 3.7 major-transfers dataset; with
+#                                  dataset_scope: provinces|territories|all,
+#                                  province/territory children are emitted
+#                     vol1_special: named computation implemented in code
+#                                  (fiscal_arrangements_residual = statement
+#                                  "Fiscal arrangements" minus the 3.7
+#                                  dataset's gross fiscal_arrangements — i.e.
+#                                  the Quebec abatement / youth allowances
+#                                  recovery)
+#                   offset_node: <node-id> subtracts the same amount from the
+#                   named Vol II-fed node — used when the Vol I amount is
+#                   contained inside a ministry's lump "Statutory amounts"
+#                   Vol II row, so the tree does not double-count. Nodes
+#                   without offset_node are OUTSIDE Vol II appropriations
+#                   (tax-system / specified-purpose-account / accrual items)
+#                   and appear in reconciliation.json as named differences.
+#                   accrual_offset_node: <node-id> subtracts the amount ONLY in
+#                   Vol I accrual years (main-page-accrual-basis spec) — used
+#                   for items (EI, CCB, carbon rebate, CEWS, COVID) that are
+#                   OUTSIDE Vol II but INSIDE the owning ministry's Table 3.6
+#                   portfolio total, so on the accrual basis they must be carved
+#                   out of that slug's allocation. Ignored in fallback years.
+#   source: segment node is filled from a Vol I Table 3.6 standalone segment
+#                   (segment_id: its stable id) in accrual years, 0 otherwise.
+#
+# Matching precedence: line > organization > ministry_name > ministry.
+# Two matches at the SAME precedence level = export error (no double count).
+# A ministry-level rule is the catch-all for a portfolio; org/line rules
+# carve exceptions out of it.
+#
+# unassigned_policy: fail — any Vol II line (excluding is_total_or_subtotal
+# rows) matched by no rule is an export error.
+
+unassigned_policy: fail
+
+themes:
+  - id: economy-and-standard-of-living
+    name_en: Economy and Standard of Living
+    children:
+      - id: standard-of-living-and-inequalities
+        name_en: Standard of Living and Assistance to Address Inequalities
+        children:
+          - id: health
+            name_en: Health
+            children:
+              - id: health-research
+                name_en: Health Research
+                rules:
+                  - organization: Canadian Institutes of Health Research
+              - id: health-care-systems-protection
+                name_en: Health Care Systems + Protection
+                rules:
+                  - ministry: health-canada        # catch-all for the portfolio
+                  - organization: Patented Medicine Prices Review Board
+              - id: food-safety
+                name_en: Food Safety
+                rules:
+                  - organization: Canadian Food Inspection Agency
+              - id: public-health-disease-prevention
+                name_en: Public Health + Disease Prevention
+                rules:
+                  - organization: Public Health Agency of Canada
+          - id: standard-of-living
+            name_en: Standard of Living
+            children:
+              - id: revenue-canada
+                name_en: Revenue Canada
+                rules:
+                  - ministry: canada-revenue-agency
+              - id: employment-training
+                name_en: Employment + Training
+                rules:
+                  # Catch-all for ESDC; OAS/GIS statutory lines are pulled out
+                  # by line rules under social-security below.
+                  - ministry: employment-and-social-development-canada
+              - id: housing-assistance
+                name_en: Housing Assistance
+                rules:
+                  - organization: Canada Mortgage and Housing Corporation
+              - id: gender-equality
+                name_en: Gender Equality
+                rules:
+                  - ministry: women-and-gender-equality
+              - id: official-languages-culture
+                name_en: Official Languages + Culture
+                rules:
+                  - ministry: canadian-heritage
+              - id: support-for-veterans
+                name_en: Support for Veterans
+                rules:
+                  - ministry: veterans-affairs
+              - id: carbon-tax-rebate
+                name_en: Carbon Tax Rebate
+                rules:
+                  - source: vol1
+                    vol1_line:   # label drifts across statement editions
+                      - Pollution pricing proceeds returned
+                      - Proceeds from the pollution pricing framework returned
+                    # On the Vol I accrual basis the fuel-charge proceeds are
+                    # inside National Revenue's 3.6 portfolio total, so offset
+                    # the CRA catch-all (accrual years only; Vol II does not
+                    # carry this tax-system item, so no offset in fallback years).
+                    accrual_offset_node: revenue-canada
+                    vol1_hint: Canada Carbon Rebate / fuel charge proceeds returned (tax system; not in Vol II appropriations)
+      - id: economy-infrastructure
+        name_en: Economy + Infrastructure
+        children:
+          - id: innovation-research
+            name_en: Innovation + Research
+            children:
+              - id: investment-growth-commercialization
+                name_en: Investment, Growth and Commercialization
+                rules:
+                  # Catch-all for the ISED/ISI portfolio; research councils,
+                  # StatCan, CSA and regional agencies are carved out below.
+                  - ministry: innovation-science-and-industry
+              - id: research
+                name_en: Research
+                rules:
+                  - organization: National Research Council of Canada
+                  - organization: Natural Sciences and Engineering Research Council
+                  - organization: Social Sciences and Humanities Research Council
+              - id: statistics-canada
+                name_en: Statistics Canada
+                rules:
+                  - organization: Statistics Canada
+              - id: other-boards-councils
+                name_en: Other Boards + Councils
+                rules:
+                  - organization: Copyright Board
+                  - organization: Standards Council of Canada
+                  - organization: Canadian Tourism Commission
+          - id: community-regional-development
+            name_en: Community and Regional Development
+            rules:
+              # Regional development agencies appear both as standalone
+              # ministries (some years) and as organizations nested under
+              # ISI / Privy Council / Indigenous Services (other years).
+              # Org rules follow them wherever they sit.
+              - ministry: regional-economic-development
+              - organization: Atlantic Canada Opportunities Agency
+              - organization: Economic Development Agency of Canada for the Regions of Quebec
+              - organization: Canadian Northern Economic Development Agency
+              - organization: Department of Western Economic Diversification
+              - organization: Federal Economic Development Agency for Southern Ontario
+              - organization: Federal Economic Development Agency for Northern Ontario
+              - organization: Pacific Economic Development Agency of Canada
+          - id: fisheries
+            name_en: Fisheries
+            rules:
+              - ministry: fisheries-and-oceans
+          - id: agriculture
+            name_en: Agriculture
+            rules:
+              - ministry: agriculture-and-agri-food
+          - id: space
+            name_en: Space
+            rules:
+              - organization: Canadian Space Agency
+          - id: banking-finance
+            name_en: Banking + Finance
+            rules:
+              - organization: Office of the Superintendent of Financial Institutions
+              - organization: Financial Consumer Agency of Canada
+              - organization: Financial Transactions and Reports Analysis Centre of Canada
+          - id: environment-climate-change
+            name_en: Environment and Climate Change
+            children:
+              - id: environment-programs
+                name_en: Other Environment and Climate Change Programs
+                rules:
+                  - ministry: environment-and-climate-change   # catch-all; Parks carved out
+              - id: national-parks
+                name_en: National Parks
+                rules:
+                  - ministry: parks-canada
+                  - organization: Parks Canada Agency
+          - id: natural-resources-management
+            name_en: Natural Resources Management
+            rules:
+              - ministry: natural-resources
+          - id: infrastructure-investments
+            name_en: Infrastructure Investments
+            rules:
+              # Catch-all for HICC; CMHC is carved out to housing-assistance.
+              - ministry: housing-infrastructure-communities
+          - id: transportation
+            name_en: Transportation
+            rules:
+              - ministry: transport-canada
+              # Transport-safety investigator sits under the Privy Council
+              # ministry in Public Accounts; thematically it belongs here.
+              - organization: Canadian Transportation Accident Investigation and Safety Board
+
+  - id: social-security
+    name_en: Social Security
+    children:
+      - id: retirement-benefits
+        name_en: Retirement Benefits
+        rules:
+          # OAS/GIS/allowance sits inside ESDC's lump "Statutory amounts"
+          # Vol II row (never broken out, any year), so it is sourced from
+          # the Vol I statement and offset against the ESDC catch-all.
+          - source: vol1
+            vol1_line: Old age security benefits, guaranteed income supplement and spouse's allowance
+            offset_node: employment-training
+      - id: employment-insurance
+        name_en: Employment Insurance
+        rules:
+          - source: vol1
+            vol1_line: Employment insurance and support measures
+            # EI is inside ESDC's 3.6 portfolio total on the accrual basis, so
+            # offset the ESDC catch-all (accrual years only); on Vol II it is
+            # paid from the EI Operating Account, outside appropriations.
+            accrual_offset_node: employment-training
+            vol1_hint: EI benefits are paid from the EI Operating Account (consolidated specified purpose account), not Vol II appropriations
+      - id: childrens-benefits
+        name_en: Children's Benefits
+        rules:
+          - source: vol1
+            vol1_line: Children's benefits
+            # CCB is inside National Revenue's 3.6 portfolio total (accrual).
+            accrual_offset_node: revenue-canada
+            vol1_hint: Canada Child Benefit — refundable tax credit, tax system
+      - id: covid-income-support
+        name_en: COVID-19 Income Support
+        rules:
+          - source: vol1
+            vol1_line: COVID-19 income support for workers
+            # CERB/CRB income support is inside ESDC's 3.6 portfolio total.
+            accrual_offset_node: employment-training
+            vol1_hint: CERB/CRB recoveries and adjustments (negative in recent years)
+      - id: canada-emergency-wage-subsidy
+        name_en: Canada Emergency Wage Subsidy
+        rules:
+          - source: vol1
+            vol1_line: Canada emergency wage subsidy
+            # CEWS is inside National Revenue's 3.6 portfolio total (accrual).
+            accrual_offset_node: revenue-canada
+            vol1_hint: CEWS — refundable tax credit, tax system
+
+  - id: safety
+    name_en: Safety
+    children:
+      - id: public-safety
+        name_en: Public Safety
+        children:
+          - id: csis
+            name_en: CSIS
+            rules:
+              - organization: Canadian Security Intelligence Service
+          - id: corrections
+            name_en: Corrections
+            rules:
+              - organization: Correctional Service of Canada
+              - organization: Parole Board of Canada
+              - organization: Office of the Correctional Investigator of Canada
+          - id: rcmp
+            name_en: RCMP
+            rules:
+              - organization: Royal Canadian Mounted Police
+              - organization: Royal Canadian Mounted Police External Review Committee
+              - organization: Civilian Review and Complaints Commission for the Royal Canadian Mounted Police
+          - id: community-safety-emergency
+            name_en: Community Safety
+            rules:
+              # Catch-all for the Public Safety portfolio (department incl.
+              # disaster relief and community safety programs, plus small
+              # bodies not carved out above).
+              - ministry: public-safety-canada
+          - id: elections
+            name_en: Office of the Chief Electoral Officer
+            rules:
+              - ministry: democratic-institutions
+              - organization: Office of the Chief Electoral Officer
+              - organization: Leaders' Debates Commission
+          - id: justice-system
+            name_en: Justice System
+            rules:
+              - ministry: justice
+      - id: immigration-border-security
+        name_en: Immigration + Border Security
+        children:
+          - id: border-security
+            name_en: Border Security
+            rules:
+              # CBSA sits under the Public Safety ministry in Public Accounts;
+              # the current tree groups it with immigration.
+              - organization: Canada Border Services Agency
+          - id: immigration-services
+            name_en: Other Immigration Services
+            rules:
+              - ministry: immigration-refugees-and-citizenship
+
+  - id: other
+    name_en: Other
+    children:
+      - id: public-works-government-services
+        name_en: Public Works + Government Services
+        children:
+          - id: government-it-operations
+            name_en: Government IT Operations
+            rules:
+              - organization: Shared Services Canada
+          - id: other-public-services-procurement
+            name_en: Other Public Services + Procurement
+            rules:
+              - ministry: public-services-and-procurement-canada
+      - id: functioning-of-government
+        name_en: Functioning of Government
+        children:
+          - id: parliament
+            name_en: Parliament
+            rules:
+              - ministry: parliament
+          - id: privy-council-office
+            name_en: Privy Council Office
+            rules:
+              # Catch-all for the PCO portfolio; PacifiCan and the transport
+              # safety board are carved out by org rules elsewhere.
+              - ministry: privy-council
+          - id: treasury-board
+            name_en: Treasury Board
+            rules:
+              - ministry: treasury-board
+          - id: governor-general
+            name_en: Office of the Secretary to the Governor General
+            rules:
+              - ministry: governor-general
+          - id: audit-agents
+            name_en: Audit + Agents of Parliament
+            # NOT in the current tree (parity note): the OAG sits under the
+            # Finance ministry in Public Accounts and has no current node.
+            rules:
+              - organization: Office of the Auditor General
+      - id: crown-corporations-and-other-entities
+        name_en: Crown corporations and other entities
+        rules:
+          # The 2014–2016 Table 3.6 editions carry a standalone "Crown
+          # corporations and other entities" segment (no portfolio breakdown);
+          # later editions consolidate those expenses into the portfolios.
+          # Sourced from the 3.6 segment (restatement-scaled), 0 in other years.
+          - source: segment
+            segment_id: crown-corporations-and-other-entities
+            segment_hint: Consolidated Crown corporations lump (Vol I Table 3.6 standalone segment, 2014-2016 editions only)
+
+  - id: transfers-to-provinces
+    name_en: Transfers to Provinces
+    link: https://www.canada.ca/en/department-finance/programs/federal-transfers/major-federal-transfers.html
+    children:
+      # The major federal transfers all live inside Finance's lump "Statutory
+      # amounts" Vol II row (never broken out, any year). They are sourced
+      # from Vol I — the Table 3.7 dataset where province-level children are
+      # wanted, the statement CSV otherwise — and offset against the Finance
+      # catch-all (other-major-transfers) so nothing double-counts.
+      # scale_to_line pro-rates the (cash) province rows so they sum to the
+      # (accrual) statement line — the current site does the same.
+      - id: health-transfer
+        name_en: Health Transfer to Provinces
+        rules:
+          - source: vol1
+            vol1_dataset_column: canada_health_transfer
+            dataset_scope: all
+            scale_to_line: Canada Health Transfer
+            offset_node: other-major-transfers
+      - id: social-transfer
+        name_en: Social Transfer to Provinces
+        rules:
+          - source: vol1
+            vol1_dataset_column: canada_social_transfer
+            dataset_scope: all
+            scale_to_line: Canada Social Transfer
+            offset_node: other-major-transfers
+      - id: equalization
+        name_en: Equalization Payments to Provinces
+        rules:
+          # fiscal_arrangements for the 10 provinces = equalization; for the
+          # territories it is Territorial Formula Financing (left in the
+          # Finance residual below, as on the current site).
+          - source: vol1
+            vol1_dataset_column: fiscal_arrangements
+            dataset_scope: provinces
+            offset_node: other-major-transfers
+      - id: quebec-tax-offset
+        name_en: Quebec Tax Offset
+        rules:
+          # Statement "Fiscal arrangements" is net of the Quebec abatement /
+          # youth allowances recovery; the 3.7 dataset column is gross. The
+          # difference is the abatement (negative).
+          - source: vol1
+            vol1_special: fiscal_arrangements_residual
+            offset_node: other-major-transfers
+      - id: other-major-transfers
+        name_en: Other Major Transfers
+        rules:
+          # Catch-all for the Finance portfolio: after the offsets above and
+          # the debt-charges offset below, the residual is Territorial Formula
+          # Financing + Finance's small operating spend + Vol II-vs-Vol I
+          # basis drift. Canada-wide ELCC (an ESDC statutory transfer) is
+          # added from Vol I and offset against ESDC, matching the current
+          # site's placement under Transfers to Provinces.
+          - ministry: department-of-finance
+          - source: vol1
+            vol1_line: Canada-wide Early Learning and Child Care
+            offset_node: employment-training
+
+  - id: obligations
+    name_en: Obligations
+    children:
+      - id: net-interest-on-debt
+        name_en: Net Interest on Debt
+        rules:
+          # Vol I consolidated public debt charges (matches the current
+          # site's 47.27 for FY2024 exactly). The Vol II counterpart is
+          # inside Finance's lump statutory row, hence the offset.
+          - source: vol1
+            vol1_line: Public debt charges
+            offset_node: other-major-transfers
+      - id: net-actuarial-losses
+        name_en: Net actuarial losses
+        rules:
+          # Net actuarial losses on pensions and future benefits (accrual item,
+          # Vol I only). The statement CSV stores this lvl1 section sign-inverted
+          # (a loss is negative — FY2024 -7489 = a $7.489B loss), so `negate`
+          # presents it as a positive cost alongside net interest on debt. A
+          # genuine actuarial GAIN year would be negative here, which is truthful.
+          - source: vol1
+            vol1_line: Net actuarial losses
+            vol1_hint: Net actuarial losses on pensions and future benefits (accrual item, Vol I only)
+            negate: true
+      - id: provision-for-valuation
+        name_en: Provision for valuation and other items
+        rules:
+          # A standalone Vol I Table 3.6 segment (not a ministerial portfolio,
+          # not in Vol II appropriations): the year-end provision for valuation
+          # of assets/liabilities and other consolidation items. Sourced from
+          # the 3.6 segment total in accrual years (0 in fallback years, where
+          # the adjustments leaf absorbs it). Can be negative in some years.
+          - source: segment
+            segment_id: provision-for-valuation
+            segment_hint: Provision for valuation and other items (Vol I Table 3.6 standalone segment; accrual, Vol I only)
+
+  - id: defence
+    name_en: Defence
+    children:
+      - id: defence-operations
+        name_en: Defence Operations
+        rules:
+          # Catch-all for DND (dept + review bodies). The current tree's
+          # program-level leaves (Ready Forces, Defence Procurement, …) come
+          # from DND departmental results, not Public Accounts — generated
+          # children will be vote/allotment level instead (parity note).
+          - ministry: national-defence
+      - id: communications-security-establishment
+        name_en: Communications Security Establishment
+        rules:
+          - organization: Communications Security Establishment
+
+  - id: indigenous-priorities
+    name_en: Indigenous Priorities
+    children:
+      - id: indigenous-well-being
+        name_en: Indigenous Well-Being + Self Determination
+        rules:
+          # The site slug aggregates ISC + CIRNAC, but the tree splits them —
+          # ministry_name matches the raw normalized name, not the slug.
+          - ministry_name: Indigenous Services
+      - id: crown-indigenous-relations
+        name_en: Crown-Indigenous Relations
+        rules:
+          - ministry_name: Crown-Indigenous Relations and Northern Affairs
+          - ministry_name: Crown-Indigenous Relations
+
+  - id: international-affairs
+    name_en: International Affairs
+    rules:
+      - ministry: global-affairs-canada

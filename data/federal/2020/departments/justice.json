@@ -1,0 +1,817 @@
+{
+  "name": "Justice",
+  "slug": "justice",
+  "financialYearEnding": 2020,
+  "reportedAs": null,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 1.899834,
+  "percentageOfFederal": 0.5086,
+  "accrualSpending": 1.912,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 0.8043
+    },
+    {
+      "year": 2015,
+      "percentage": 0.8011
+    },
+    {
+      "year": 2016,
+      "percentage": 0.7744
+    },
+    {
+      "year": 2017,
+      "percentage": 0.5289
+    },
+    {
+      "year": 2018,
+      "percentage": 0.5164
+    },
+    {
+      "year": 2019,
+      "percentage": 0.5304
+    },
+    {
+      "year": 2020,
+      "percentage": 0.5086
+    },
+    {
+      "year": 2021,
+      "percentage": 0.3017
+    },
+    {
+      "year": 2022,
+      "percentage": 0.4122
+    },
+    {
+      "year": 2023,
+      "percentage": 0.4606
+    },
+    {
+      "year": 2024,
+      "percentage": 0.4694
+    },
+    {
+      "year": 2025,
+      "percentage": 0.5085
+    }
+  ],
+  "miniSankey": {
+    "breakdown": "standard_object",
+    "spending_data": {
+      "id": "justice",
+      "name": "Justice",
+      "children": [
+        {
+          "id": "justice-2020-department-of-justice",
+          "name": "Department of Justice",
+          "children": [
+            {
+              "id": "justice-2020-department-of-justice-obj-1",
+              "name": "Personnel",
+              "amount": 0.629364
+            },
+            {
+              "id": "justice-2020-department-of-justice-obj-10",
+              "name": "Transfer payments",
+              "children": [
+                {
+                  "id": "justice-2020-tp-0009",
+                  "name": "Contributions to the provinces and territories in support of the youth justice services",
+                  "amount": 0.141534
+                },
+                {
+                  "id": "justice-2020-tp-0011",
+                  "name": "Contributions to the provinces to assist in the operation of criminal legal aid",
+                  "amount": 0.127185
+                },
+                {
+                  "id": "justice-2020-tp-0012",
+                  "name": "Contributions to the provinces to assist in the operation of immigration and refugee legal aid",
+                  "amount": 0.054427
+                },
+                {
+                  "id": "justice-2020-tp-0002",
+                  "name": "Contributions from the Victims Fund",
+                  "amount": 0.026231
+                },
+                {
+                  "id": "justice-2020-tp-0003",
+                  "name": "Contributions in support of the Canadian Family Justice Fund",
+                  "amount": 0.016028
+                },
+                {
+                  "id": "justice-2020-tp-0015",
+                  "name": "Contributions under the Indigenous Justice Program Fund",
+                  "amount": 0.012992
+                },
+                {
+                  "id": "justice-2020-tp-0010",
+                  "name": "Contributions to the provinces and territories in support of the youth justice services—Intensive Rehabilitative Custody and Supervision Program",
+                  "amount": 0.011036
+                },
+                {
+                  "id": "justice-2020-tp-0014",
+                  "name": "Contributions under the Access to Justice in Both Official Languages Support Fund",
+                  "amount": 0.008953
+                },
+                {
+                  "id": "justice-2020-tp-0013",
+                  "name": "Contributions to the provinces under the Indigenous Courtwork Program",
+                  "amount": 0.007981
+                },
+                {
+                  "id": "justice-2020-tp-0000",
+                  "name": "Contributions for Access to Justice Services to the Territories (being Legal Aid, Indigenous Courtwork and Public Legal Education and Information Services)",
+                  "amount": 0.007079
+                },
+                {
+                  "id": "justice-2020-tp-0016",
+                  "name": "Contributions under the Justice Partnership and Innovation Program",
+                  "amount": 0.005586
+                },
+                {
+                  "id": "justice-2020-department-of-justice-tp-other",
+                  "name": "Other transfer programs",
+                  "amount": 0.021017,
+                  "isAggregate": true,
+                  "count": 15
+                }
+              ]
+            },
+            {
+              "id": "justice-2020-department-of-justice-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.344174
+            },
+            {
+              "id": "justice-2020-department-of-justice-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.037923
+            },
+            {
+              "id": "justice-2020-department-of-justice-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.012882
+            },
+            {
+              "id": "justice-2020-department-of-justice-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.009987
+            },
+            {
+              "id": "justice-2020-department-of-justice-obj-5",
+              "name": "Rentals",
+              "amount": 0.008177
+            },
+            {
+              "id": "justice-2020-department-of-justice-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.00795
+            },
+            {
+              "id": "justice-2020-department-of-justice-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.005875
+            },
+            {
+              "id": "justice-2020-department-of-justice-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.0031
+            },
+            {
+              "id": "justice-2020-department-of-justice-obj-3",
+              "name": "Information",
+              "amount": 0.002647
+            },
+            {
+              "id": "justice-2020-department-of-justice-external-revenues",
+              "name": "External revenues",
+              "amount": -0.001059
+            }
+          ]
+        },
+        {
+          "id": "justice-2020-office-of-the-commissioner-for-federal-judicial-affairs",
+          "name": "Office of the Commissioner for Federal Judicial Affairs",
+          "children": [
+            {
+              "id": "justice-2020-office-of-the-commissioner-for-federal-judicial-affairs-obj-1",
+              "name": "Personnel",
+              "amount": 0.58205
+            },
+            {
+              "id": "justice-2020-office-of-the-commissioner-for-federal-judicial-affairs-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.022677
+            },
+            {
+              "id": "justice-2020-office-of-the-commissioner-for-federal-judicial-affairs-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.016429
+            },
+            {
+              "id": "justice-2020-office-of-the-commissioner-for-federal-judicial-affairs-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.005903
+            },
+            {
+              "id": "justice-2020-office-of-the-commissioner-for-federal-judicial-affairs-obj-5",
+              "name": "Rentals",
+              "amount": 0.00044
+            },
+            {
+              "id": "justice-2020-office-of-the-commissioner-for-federal-judicial-affairs-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000268
+            },
+            {
+              "id": "justice-2020-office-of-the-commissioner-for-federal-judicial-affairs-obj-3",
+              "name": "Information",
+              "amount": 0.000149
+            },
+            {
+              "id": "justice-2020-office-of-the-commissioner-for-federal-judicial-affairs-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000121
+            },
+            {
+              "id": "justice-2020-office-of-the-commissioner-for-federal-judicial-affairs-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 6.1e-5
+            },
+            {
+              "id": "justice-2020-office-of-the-commissioner-for-federal-judicial-affairs-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -4.0e-5
+            }
+          ]
+        },
+        {
+          "id": "justice-2020-office-of-the-director-of-public-prosecutions",
+          "name": "Office of the Director of Public Prosecutions",
+          "children": [
+            {
+              "id": "justice-2020-office-of-the-director-of-public-prosecutions-obj-1",
+              "name": "Personnel",
+              "amount": 0.13677
+            },
+            {
+              "id": "justice-2020-office-of-the-director-of-public-prosecutions-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.055234
+            },
+            {
+              "id": "justice-2020-office-of-the-director-of-public-prosecutions-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.016638
+            },
+            {
+              "id": "justice-2020-office-of-the-director-of-public-prosecutions-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.007458
+            },
+            {
+              "id": "justice-2020-office-of-the-director-of-public-prosecutions-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.003079
+            },
+            {
+              "id": "justice-2020-office-of-the-director-of-public-prosecutions-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.002233
+            },
+            {
+              "id": "justice-2020-office-of-the-director-of-public-prosecutions-obj-5",
+              "name": "Rentals",
+              "amount": 0.00212
+            },
+            {
+              "id": "justice-2020-office-of-the-director-of-public-prosecutions-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.001562
+            },
+            {
+              "id": "justice-2020-office-of-the-director-of-public-prosecutions-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000866
+            },
+            {
+              "id": "justice-2020-office-of-the-director-of-public-prosecutions-obj-3",
+              "name": "Information",
+              "amount": 0.000537
+            },
+            {
+              "id": "justice-2020-office-of-the-director-of-public-prosecutions-external-revenues",
+              "name": "External revenues",
+              "amount": -0.000289
+            }
+          ]
+        },
+        {
+          "id": "justice-2020-courts-administration-service",
+          "name": "Courts Administration Service",
+          "children": [
+            {
+              "id": "justice-2020-courts-administration-service-obj-1",
+              "name": "Personnel",
+              "amount": 0.064844
+            },
+            {
+              "id": "justice-2020-courts-administration-service-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.014198
+            },
+            {
+              "id": "justice-2020-courts-administration-service-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.003828
+            },
+            {
+              "id": "justice-2020-courts-administration-service-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.003119
+            },
+            {
+              "id": "justice-2020-courts-administration-service-obj-5",
+              "name": "Rentals",
+              "amount": 0.003077
+            },
+            {
+              "id": "justice-2020-courts-administration-service-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.002567
+            },
+            {
+              "id": "justice-2020-courts-administration-service-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.002173
+            },
+            {
+              "id": "justice-2020-courts-administration-service-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000893
+            },
+            {
+              "id": "justice-2020-courts-administration-service-obj-3",
+              "name": "Information",
+              "amount": 0.000511
+            },
+            {
+              "id": "justice-2020-courts-administration-service-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000117
+            }
+          ]
+        },
+        {
+          "id": "justice-2020-administrative-tribunals-support-service-of-canada",
+          "name": "Administrative Tribunals Support Service of Canada",
+          "children": [
+            {
+              "id": "justice-2020-administrative-tribunals-support-service-of-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.071421
+            },
+            {
+              "id": "justice-2020-administrative-tribunals-support-service-of-canada-external-revenues",
+              "name": "External revenues",
+              "amount": -0.012443
+            },
+            {
+              "id": "justice-2020-administrative-tribunals-support-service-of-canada-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.011734
+            },
+            {
+              "id": "justice-2020-administrative-tribunals-support-service-of-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.008607
+            },
+            {
+              "id": "justice-2020-administrative-tribunals-support-service-of-canada-obj-5",
+              "name": "Rentals",
+              "amount": 0.003336
+            },
+            {
+              "id": "justice-2020-administrative-tribunals-support-service-of-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.003124
+            },
+            {
+              "id": "justice-2020-administrative-tribunals-support-service-of-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000892
+            },
+            {
+              "id": "justice-2020-administrative-tribunals-support-service-of-canada-obj-3",
+              "name": "Information",
+              "amount": 0.000728
+            },
+            {
+              "id": "justice-2020-administrative-tribunals-support-service-of-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000553
+            },
+            {
+              "id": "justice-2020-administrative-tribunals-support-service-of-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.000398
+            },
+            {
+              "id": "justice-2020-administrative-tribunals-support-service-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000166
+            }
+          ]
+        },
+        {
+          "id": "justice-2020-offices-of-the-information-and-privacy-commissioners-of-canada",
+          "name": "Offices of the Information and Privacy Commissioners of Canada",
+          "children": [
+            {
+              "id": "justice-2020-offices-of-the-information-and-privacy-commissioners-of-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.031635
+            },
+            {
+              "id": "justice-2020-offices-of-the-information-and-privacy-commissioners-of-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.006529
+            },
+            {
+              "id": "justice-2020-offices-of-the-information-and-privacy-commissioners-of-canada-obj-5",
+              "name": "Rentals",
+              "amount": 0.001259
+            },
+            {
+              "id": "justice-2020-offices-of-the-information-and-privacy-commissioners-of-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000962
+            },
+            {
+              "id": "justice-2020-offices-of-the-information-and-privacy-commissioners-of-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000823
+            },
+            {
+              "id": "justice-2020-offices-of-the-information-and-privacy-commissioners-of-canada-obj-3",
+              "name": "Information",
+              "amount": 0.000598
+            },
+            {
+              "id": "justice-2020-offices-of-the-information-and-privacy-commissioners-of-canada-obj-10",
+              "name": "Transfer payments",
+              "amount": 0.000493
+            },
+            {
+              "id": "justice-2020-offices-of-the-information-and-privacy-commissioners-of-canada-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 0.000346
+            },
+            {
+              "id": "justice-2020-offices-of-the-information-and-privacy-commissioners-of-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000206
+            },
+            {
+              "id": "justice-2020-offices-of-the-information-and-privacy-commissioners-of-canada-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.000194
+            },
+            {
+              "id": "justice-2020-offices-of-the-information-and-privacy-commissioners-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.000177
+            },
+            {
+              "id": "justice-2020-offices-of-the-information-and-privacy-commissioners-of-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 9.0e-5
+            }
+          ]
+        },
+        {
+          "id": "justice-2020-registrar-of-the-supreme-court-of-canada",
+          "name": "Registrar of the Supreme Court of Canada",
+          "children": [
+            {
+              "id": "justice-2020-registrar-of-the-supreme-court-of-canada-obj-1",
+              "name": "Personnel",
+              "amount": 0.030182
+            },
+            {
+              "id": "justice-2020-registrar-of-the-supreme-court-of-canada-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.002821
+            },
+            {
+              "id": "justice-2020-registrar-of-the-supreme-court-of-canada-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.001534
+            },
+            {
+              "id": "justice-2020-registrar-of-the-supreme-court-of-canada-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.001124
+            },
+            {
+              "id": "justice-2020-registrar-of-the-supreme-court-of-canada-obj-5",
+              "name": "Rentals",
+              "amount": 0.001073
+            },
+            {
+              "id": "justice-2020-registrar-of-the-supreme-court-of-canada-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000464
+            },
+            {
+              "id": "justice-2020-registrar-of-the-supreme-court-of-canada-obj-3",
+              "name": "Information",
+              "amount": 0.000262
+            },
+            {
+              "id": "justice-2020-registrar-of-the-supreme-court-of-canada-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.00024
+            },
+            {
+              "id": "justice-2020-registrar-of-the-supreme-court-of-canada-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 8.2e-5
+            }
+          ]
+        },
+        {
+          "id": "justice-2020-canadian-human-rights-commission",
+          "name": "Canadian Human Rights Commission",
+          "children": [
+            {
+              "id": "justice-2020-canadian-human-rights-commission-obj-1",
+              "name": "Personnel",
+              "amount": 0.02227
+            },
+            {
+              "id": "justice-2020-canadian-human-rights-commission-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.002322
+            },
+            {
+              "id": "justice-2020-canadian-human-rights-commission-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.001488
+            },
+            {
+              "id": "justice-2020-canadian-human-rights-commission-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.000791
+            },
+            {
+              "id": "justice-2020-canadian-human-rights-commission-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.000456
+            },
+            {
+              "id": "justice-2020-canadian-human-rights-commission-obj-5",
+              "name": "Rentals",
+              "amount": 0.000352
+            },
+            {
+              "id": "justice-2020-canadian-human-rights-commission-obj-3",
+              "name": "Information",
+              "amount": 0.000138
+            },
+            {
+              "id": "justice-2020-canadian-human-rights-commission-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.000122
+            },
+            {
+              "id": "justice-2020-canadian-human-rights-commission-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 3.3e-5
+            },
+            {
+              "id": "justice-2020-canadian-human-rights-commission-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 2.5e-5
+            },
+            {
+              "id": "justice-2020-canadian-human-rights-commission-obj-8",
+              "name": "Acquisition of land, buildings and works",
+              "amount": 2.1e-5
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "entities": [
+    {
+      "id": "justice-2020-entity-department-of-justice",
+      "name": "Department of Justice",
+      "value": 0.812721
+    },
+    {
+      "id": "justice-2020-entity-office-of-the-commissioner-for-federal-judicial-affairs",
+      "name": "Office of the Commissioner for Federal Judicial Affairs",
+      "value": 0.628058
+    },
+    {
+      "id": "justice-2020-entity-office-of-the-director-of-public-prosecutions",
+      "name": "Office of the Director of Public Prosecutions",
+      "value": 0.192932
+    },
+    {
+      "id": "justice-2020-entity-courts-administration-service",
+      "name": "Courts Administration Service",
+      "value": 0.095327
+    },
+    {
+      "id": "justice-2020-entity-administrative-tribunals-support-service-of-canada",
+      "name": "Administrative Tribunals Support Service of Canada",
+      "value": 0.065048
+    },
+    {
+      "id": "justice-2020-entity-offices-of-the-information-and-privacy-commissioners-of-canada",
+      "name": "Offices of the Information and Privacy Commissioners of Canada",
+      "value": 0.042924
+    },
+    {
+      "id": "justice-2020-entity-registrar-of-the-supreme-court-of-canada",
+      "name": "Registrar of the Supreme Court of Canada",
+      "value": 0.037782
+    },
+    {
+      "id": "justice-2020-entity-canadian-human-rights-commission",
+      "name": "Canadian Human Rights Commission",
+      "value": 0.025042
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "justice-2020-tp-0000",
+      "category": "Contributions",
+      "description": "Contributions for Access to Justice Services to the Territories (being Legal Aid, Indigenous Courtwork and Public Legal Education and Information Services)",
+      "used": 7086592
+    },
+    {
+      "id": "justice-2020-tp-0001",
+      "category": "Contributions",
+      "description": "Contributions for legal advice for complainants of sexual harassment in the workplace",
+      "used": 2347327
+    },
+    {
+      "id": "justice-2020-tp-0002",
+      "category": "Contributions",
+      "description": "Contributions from the Victims Fund",
+      "used": 26260872
+    },
+    {
+      "id": "justice-2020-tp-0003",
+      "category": "Contributions",
+      "description": "Contributions in support of the Canadian Family Justice Fund",
+      "used": 16045868
+    },
+    {
+      "id": "justice-2020-tp-0004",
+      "category": "Contributions",
+      "description": "Contributions in support of the Youth Justice Fund",
+      "used": 3185217
+    },
+    {
+      "id": "justice-2020-tp-0005",
+      "category": "Contributions",
+      "description": "Contributions to support the implementation of official languages requirements under the Contraventions Act",
+      "used": 4866243
+    },
+    {
+      "id": "justice-2020-tp-0006",
+      "category": "Contributions",
+      "description": "Contributions to the European Commission for Democracy through Law—Venice Commission",
+      "used": 71761
+    },
+    {
+      "id": "justice-2020-tp-0007",
+      "category": "Contributions",
+      "description": "Contributions to the Hague Conference on Private International Law",
+      "used": 310491
+    },
+    {
+      "id": "justice-2020-tp-0008",
+      "category": "Contributions",
+      "description": "Contributions to the International Institute for the Unification of Private Law (UNIDROIT)",
+      "used": 170000
+    },
+    {
+      "id": "justice-2020-tp-0009",
+      "category": "Contributions",
+      "description": "Contributions to the provinces and territories in support of the youth justice services",
+      "used": 141692415
+    },
+    {
+      "id": "justice-2020-tp-0010",
+      "category": "Contributions",
+      "description": "Contributions to the provinces and territories in support of the youth justice services—Intensive Rehabilitative Custody and Supervision Program",
+      "used": 11048000
+    },
+    {
+      "id": "justice-2020-tp-0011",
+      "category": "Contributions",
+      "description": "Contributions to the provinces to assist in the operation of criminal legal aid",
+      "used": 127327507
+    },
+    {
+      "id": "justice-2020-tp-0012",
+      "category": "Contributions",
+      "description": "Contributions to the provinces to assist in the operation of immigration and refugee legal aid",
+      "used": 54488320
+    },
+    {
+      "id": "justice-2020-tp-0013",
+      "category": "Contributions",
+      "description": "Contributions to the provinces under the Indigenous Courtwork Program",
+      "used": 7989918
+    },
+    {
+      "id": "justice-2020-tp-0014",
+      "category": "Contributions",
+      "description": "Contributions under the Access to Justice in Both Official Languages Support Fund",
+      "used": 8962934
+    },
+    {
+      "id": "justice-2020-tp-0015",
+      "category": "Contributions",
+      "description": "Contributions under the Indigenous Justice Program Fund",
+      "used": 13006109
+    },
+    {
+      "id": "justice-2020-tp-0016",
+      "category": "Contributions",
+      "description": "Contributions under the Justice Partnership and Innovation Program",
+      "used": 5592354
+    },
+    {
+      "id": "justice-2020-tp-0017",
+      "category": "Contributions",
+      "description": "Contributions under the Special Advocates Program",
+      "used": 22400
+    },
+    {
+      "id": "justice-2020-tp-0018",
+      "category": "Contributions",
+      "description": "Contributions under the State-Funded Counsel Component of the Legal Aid Program",
+      "used": 907107
+    },
+    {
+      "id": "justice-2020-tp-0019",
+      "category": "Contributions",
+      "description": "Drug Treatment Court Funding Program",
+      "used": 3692000
+    },
+    {
+      "id": "justice-2020-tp-0020",
+      "category": "Contributions",
+      "description": "Integrated Market Enforcement Teams Reserve Fund",
+      "used": 0
+    },
+    {
+      "id": "justice-2020-tp-0021",
+      "category": "Contributions",
+      "description": "The Personal Information Protection and Electronic Documents Act Contribution Program",
+      "used": 492608
+    },
+    {
+      "id": "justice-2020-tp-0022",
+      "category": "Grants",
+      "description": "Grant under the Justice Partnership and Innovation Program",
+      "used": 2894288
+    },
+    {
+      "id": "justice-2020-tp-0023",
+      "category": "Grants",
+      "description": "Grants from the Victims Fund",
+      "used": 1782728
+    },
+    {
+      "id": "justice-2020-tp-0024",
+      "category": "Grants",
+      "description": "Grants in support of the Youth Justice Fund",
+      "used": 73000
+    },
+    {
+      "id": "justice-2020-tp-0025",
+      "category": "Grants",
+      "description": "Grants under the Access to Justice in both Official Languages Support Fund",
+      "used": 176363
+    },
+    {
+      "id": "justice-2020-tp-0026",
+      "category": "Grants",
+      "description": "Grants under the Indigenous Justice Program Fund",
+      "used": 49777
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}

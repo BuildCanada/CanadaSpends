@@ -1,0 +1,185 @@
+{
+  "name": "National Revenue",
+  "slug": "canada-revenue-agency",
+  "financialYearEnding": 2022,
+  "reportedAs": null,
+  "basis": "vol2_standard_object_net",
+  "totalSpending": 9.489295,
+  "percentageOfFederal": 1.8843,
+  "accrualSpending": 75.674797,
+  "historicalShare": [
+    {
+      "year": 2014,
+      "percentage": 1.6989
+    },
+    {
+      "year": 2015,
+      "percentage": 1.673
+    },
+    {
+      "year": 2016,
+      "percentage": 1.6218
+    },
+    {
+      "year": 2017,
+      "percentage": 1.4169
+    },
+    {
+      "year": 2018,
+      "percentage": 1.4258
+    },
+    {
+      "year": 2019,
+      "percentage": 1.4793
+    },
+    {
+      "year": 2020,
+      "percentage": 1.9271
+    },
+    {
+      "year": 2021,
+      "percentage": 1.5499
+    },
+    {
+      "year": 2022,
+      "percentage": 1.8843
+    },
+    {
+      "year": 2023,
+      "percentage": 2.7138
+    },
+    {
+      "year": 2024,
+      "percentage": 3.2223
+    },
+    {
+      "year": 2025,
+      "percentage": 4.0525
+    }
+  ],
+  "miniSankey": {
+    "breakdown": "standard_object",
+    "spending_data": {
+      "id": "canada-revenue-agency",
+      "name": "National Revenue",
+      "children": [
+        {
+          "id": "canada-revenue-agency-2022-canada-revenue-agency",
+          "name": "Canada Revenue Agency",
+          "children": [
+            {
+              "id": "canada-revenue-agency-2022-canada-revenue-agency-obj-1",
+              "name": "Personnel",
+              "amount": 4.66649
+            },
+            {
+              "id": "canada-revenue-agency-2022-canada-revenue-agency-obj-10",
+              "name": "Transfer payments",
+              "children": [
+                {
+                  "id": "canada-revenue-agency-2022-tp-0003",
+                  "name": "Distribution of fuel charge (Climate Action Incentive Payment) under section 165 of the Greenhouse Gas Pollution Pricing Act",
+                  "amount": 3.762782
+                },
+                {
+                  "id": "canada-revenue-agency-2022-tp-0000",
+                  "name": "Children's Special Allowance payments (Children's Special Allowance Act)",
+                  "amount": 0.3725
+                },
+                {
+                  "id": "canada-revenue-agency-2022-tp-0002",
+                  "name": "Distribution of fuel and excess emission charges (to provinces and territories) under sections 165 and 188 of the Greenhouse Gas Pollution Pricing Act",
+                  "amount": 0.052434
+                },
+                {
+                  "id": "canada-revenue-agency-2022-tp-0001",
+                  "name": "Community Volunteer Income Tax Program Grant",
+                  "amount": 1.0e-6
+                }
+              ]
+            },
+            {
+              "id": "canada-revenue-agency-2022-canada-revenue-agency-obj-4",
+              "name": "Professional and special services",
+              "amount": 0.523126
+            },
+            {
+              "id": "canada-revenue-agency-2022-canada-revenue-agency-internal-revenues",
+              "name": "Internal revenues",
+              "amount": -0.443518
+            },
+            {
+              "id": "canada-revenue-agency-2022-canada-revenue-agency-obj-5",
+              "name": "Rentals",
+              "amount": 0.287267
+            },
+            {
+              "id": "canada-revenue-agency-2022-canada-revenue-agency-obj-9",
+              "name": "Acquisition of machinery and equipment",
+              "amount": 0.081386
+            },
+            {
+              "id": "canada-revenue-agency-2022-canada-revenue-agency-obj-2",
+              "name": "Transportation and communications",
+              "amount": 0.071372
+            },
+            {
+              "id": "canada-revenue-agency-2022-canada-revenue-agency-obj-6",
+              "name": "Repair and maintenance",
+              "amount": 0.060614
+            },
+            {
+              "id": "canada-revenue-agency-2022-canada-revenue-agency-obj-3",
+              "name": "Information",
+              "amount": 0.021709
+            },
+            {
+              "id": "canada-revenue-agency-2022-canada-revenue-agency-obj-12",
+              "name": "Other subsidies and payments",
+              "amount": 0.020334
+            },
+            {
+              "id": "canada-revenue-agency-2022-canada-revenue-agency-obj-7",
+              "name": "Utilities, materials and supplies",
+              "amount": 0.012798
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "entities": [
+    {
+      "id": "canada-revenue-agency-2022-entity-canada-revenue-agency",
+      "name": "Canada Revenue Agency",
+      "value": 9.489295
+    }
+  ],
+  "transferPayments": [
+    {
+      "id": "canada-revenue-agency-2022-tp-0000",
+      "category": "Other transfer payments",
+      "description": "Children's Special Allowance payments (Children's Special Allowance Act)",
+      "used": 372417276
+    },
+    {
+      "id": "canada-revenue-agency-2022-tp-0001",
+      "category": "Other transfer payments",
+      "description": "Community Volunteer Income Tax Program Grant",
+      "used": 936
+    },
+    {
+      "id": "canada-revenue-agency-2022-tp-0002",
+      "category": "Other transfer payments",
+      "description": "Distribution of fuel and excess emission charges (to provinces and territories) under sections 165 and 188 of the Greenhouse Gas Pollution Pricing Act",
+      "used": 52422245
+    },
+    {
+      "id": "canada-revenue-agency-2022-tp-0003",
+      "category": "Other transfer payments",
+      "description": "Distribution of fuel charge (Climate Action Incentive Payment) under section 165 of the Greenhouse Gas Pollution Pricing Act",
+      "used": 3761940968
+    }
+  ],
+  "lineItemsUnits": "dollars_cad"
+}
