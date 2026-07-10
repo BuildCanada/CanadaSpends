@@ -89,6 +89,18 @@ export interface ProvincialTaxConfig {
   surtax?: SurtaxConfig;
   healthPremium?: HealthPremiumConfig;
   federalAbatement?: FederalAbatementConfig;
+  // Province-specific pension plan that replaces the federal CPP
+  // (e.g., Quebec residents pay QPP instead of CPP).
+  pensionPlanOverride?: CappedContributionConfig;
+  // Province-specific second additional pension plan that replaces CPP2
+  // (e.g., Quebec QPP2).
+  pensionPlanAdditionalOverride?: Cpp2Config;
+  // Province-specific Employment Insurance rate that replaces the federal
+  // EI rate (Quebec residents pay a reduced EI rate because the province
+  // administers its own parental insurance plan via QPIP).
+  eiOverride?: CappedContributionConfig;
+  // Province-administered parental insurance plan (e.g., Quebec QPIP).
+  parentalInsurance?: CappedContributionConfig;
 }
 
 // Spending data for a province
@@ -122,7 +134,8 @@ export interface TaxLineItem {
     | "surtax"
     | "healthPremium"
     | "incomeTaxProvincial"
-    | "federalAbatement";
+    | "federalAbatement"
+    | "parentalInsurance";
 }
 
 // Detailed calculation result
@@ -144,6 +157,7 @@ export interface DetailedTaxCalculation {
   eiContribution: number;
   cppContribution: number;
   cpp2Contribution: number;
+  parentalInsuranceContribution: number;
   surtax: number;
   healthPremium: number;
   federalAbatement: number;

@@ -292,10 +292,18 @@ function FederalTaxCard({
   );
   const incomeTaxAmount = Math.max(0, incomeTaxBeforeCredit - bpaCredit);
 
-  // Calculate payroll contributions
-  const cppAmount = calculateCappedContribution(income, config.cpp);
-  const cpp2Amount = calculateCpp2Contribution(income, config.cpp2);
-  const eiAmount = calculateCappedContribution(income, config.ei);
+  // Resolve EI override (Quebec residents pay a reduced rate). The pension
+  // plan, when overridden, is administered provincially (Retraite Québec)
+  // and is rendered in the Provincial card instead.
+  const eiConfig = provincialConfig.eiOverride ?? config.ei;
+  const hasProvincialPension = !!provincialConfig.pensionPlanOverride;
+  const cppAmount = hasProvincialPension
+    ? 0
+    : calculateCappedContribution(income, config.cpp);
+  const cpp2Amount = hasProvincialPension
+    ? 0
+    : calculateCpp2Contribution(income, config.cpp2);
+  const eiAmount = calculateCappedContribution(income, eiConfig);
   const payrollTotal = cppAmount + cpp2Amount + eiAmount;
 
   // Calculate federal abatement (Quebec Abatement)
@@ -349,45 +357,49 @@ function FederalTaxCard({
           </h4>
           <table className="w-full text-left text-sm">
             <tbody>
+              {!hasProvincialPension && (
+                <>
+                  <tr>
+                    <td className="py-1 text-muted-foreground">
+                      <div>{config.cpp.shortName}</div>
+                      <div className="text-xs text-muted-foreground/70">
+                        {formatAmount(config.cpp.exemption)} -{" "}
+                        {formatAmount(config.cpp.maxEarnings)}
+                      </div>
+                    </td>
+                    <td className="py-1 text-right align-top w-20">
+                      {formatPercent(config.cpp.rate)}
+                    </td>
+                    <td className="py-1 text-right font-medium align-top w-20">
+                      {formatAmount(cppAmount)}
+                    </td>
+                  </tr>
+                  <tr className={cpp2Amount === 0 ? "opacity-40" : ""}>
+                    <td className="py-1 text-muted-foreground">
+                      <div>{config.cpp2.shortName}</div>
+                      <div className="text-xs text-muted-foreground/70">
+                        {formatAmount(config.cpp2.ympe)} -{" "}
+                        {formatAmount(config.cpp2.yampe)}
+                      </div>
+                    </td>
+                    <td className="py-1 text-right align-top w-20">
+                      {formatPercent(config.cpp2.rate)}
+                    </td>
+                    <td className="py-1 text-right font-medium align-top w-20">
+                      {formatAmount(cpp2Amount)}
+                    </td>
+                  </tr>
+                </>
+              )}
               <tr>
                 <td className="py-1 text-muted-foreground">
-                  <div>{config.cpp.shortName}</div>
+                  <div>{eiConfig.shortName}</div>
                   <div className="text-xs text-muted-foreground/70">
-                    {formatAmount(config.cpp.exemption)} -{" "}
-                    {formatAmount(config.cpp.maxEarnings)}
+                    <Trans>First</Trans> {formatAmount(eiConfig.maxEarnings)}
                   </div>
                 </td>
                 <td className="py-1 text-right align-top w-20">
-                  {formatPercent(config.cpp.rate)}
-                </td>
-                <td className="py-1 text-right font-medium align-top w-20">
-                  {formatAmount(cppAmount)}
-                </td>
-              </tr>
-              <tr className={cpp2Amount === 0 ? "opacity-40" : ""}>
-                <td className="py-1 text-muted-foreground">
-                  <div>{config.cpp2.shortName}</div>
-                  <div className="text-xs text-muted-foreground/70">
-                    {formatAmount(config.cpp2.ympe)} -{" "}
-                    {formatAmount(config.cpp2.yampe)}
-                  </div>
-                </td>
-                <td className="py-1 text-right align-top w-20">
-                  {formatPercent(config.cpp2.rate)}
-                </td>
-                <td className="py-1 text-right font-medium align-top w-20">
-                  {formatAmount(cpp2Amount)}
-                </td>
-              </tr>
-              <tr>
-                <td className="py-1 text-muted-foreground">
-                  <div>{config.ei.shortName}</div>
-                  <div className="text-xs text-muted-foreground/70">
-                    <Trans>First</Trans> {formatAmount(config.ei.maxEarnings)}
-                  </div>
-                </td>
-                <td className="py-1 text-right align-top w-20">
-                  {formatPercent(config.ei.rate)}
+                  {formatPercent(eiConfig.rate)}
                 </td>
                 <td className="py-1 text-right font-medium align-top w-20">
                   {formatAmount(eiAmount)}
@@ -447,9 +459,25 @@ function ProvincialTaxCard({
   const healthPremiumAmount = config.healthPremium
     ? calculateHealthPremium(income, config.healthPremium)
     : 0;
+  const parentalInsuranceAmount = config.parentalInsurance
+    ? calculateCappedContribution(income, config.parentalInsurance)
+    : 0;
+  // Province-administered pension plan (e.g., Quebec QPP / QPP2)
+  const provincialPensionAmount = config.pensionPlanOverride
+    ? calculateCappedContribution(income, config.pensionPlanOverride)
+    : 0;
+  const provincialPensionAdditionalAmount = config.pensionPlanAdditionalOverride
+    ? calculateCpp2Contribution(income, config.pensionPlanAdditionalOverride)
+    : 0;
 
   // Overall total
-  const totalProvincialTax = provincialTax + surtaxAmount + healthPremiumAmount;
+  const totalProvincialTax =
+    provincialTax +
+    surtaxAmount +
+    healthPremiumAmount +
+    parentalInsuranceAmount +
+    provincialPensionAmount +
+    provincialPensionAdditionalAmount;
 
   return (
     <div className="bg-card rounded-lg shadow-sm border p-6 flex flex-col">
@@ -531,6 +559,92 @@ function ProvincialTaxCard({
                 {formatAmount(healthPremiumAmount)}
               </span>
             </div>
+          </div>
+        )}
+
+        {/* Province-administered pension plan (e.g., Quebec QPP / QPP2) */}
+        {config.pensionPlanOverride && (
+          <div className="mt-6 pt-4 border-t border-border">
+            <h4 className="font-semibold text-base mb-3">
+              {config.pensionPlanOverride.name}
+            </h4>
+            <table className="w-full text-left text-sm">
+              <tbody>
+                <tr>
+                  <td className="py-1 text-muted-foreground">
+                    <div>{config.pensionPlanOverride.shortName}</div>
+                    <div className="text-xs text-muted-foreground/70">
+                      {formatAmount(config.pensionPlanOverride.exemption)} -{" "}
+                      {formatAmount(config.pensionPlanOverride.maxEarnings)}
+                    </div>
+                  </td>
+                  <td className="py-1 text-right align-top w-20">
+                    {formatPercent(config.pensionPlanOverride.rate)}
+                  </td>
+                  <td className="py-1 text-right font-medium align-top w-20">
+                    {formatAmount(provincialPensionAmount)}
+                  </td>
+                </tr>
+                {config.pensionPlanAdditionalOverride && (
+                  <tr
+                    className={
+                      provincialPensionAdditionalAmount === 0
+                        ? "opacity-40"
+                        : ""
+                    }
+                  >
+                    <td className="py-1 text-muted-foreground">
+                      <div>
+                        {config.pensionPlanAdditionalOverride.shortName}
+                      </div>
+                      <div className="text-xs text-muted-foreground/70">
+                        {formatAmount(
+                          config.pensionPlanAdditionalOverride.ympe,
+                        )}{" "}
+                        -{" "}
+                        {formatAmount(
+                          config.pensionPlanAdditionalOverride.yampe,
+                        )}
+                      </div>
+                    </td>
+                    <td className="py-1 text-right align-top w-20">
+                      {formatPercent(config.pensionPlanAdditionalOverride.rate)}
+                    </td>
+                    <td className="py-1 text-right font-medium align-top w-20">
+                      {formatAmount(provincialPensionAdditionalAmount)}
+                    </td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
+          </div>
+        )}
+
+        {/* Provincial parental insurance (e.g., Quebec QPIP) */}
+        {config.parentalInsurance && (
+          <div className="mt-6 pt-4 border-t border-border">
+            <h4 className="font-semibold text-base mb-3">
+              {config.parentalInsurance.name}
+            </h4>
+            <table className="w-full text-left text-sm">
+              <tbody>
+                <tr>
+                  <td className="py-1 text-muted-foreground">
+                    <div>{config.parentalInsurance.shortName}</div>
+                    <div className="text-xs text-muted-foreground/70">
+                      <Trans>First</Trans>{" "}
+                      {formatAmount(config.parentalInsurance.maxEarnings)}
+                    </div>
+                  </td>
+                  <td className="py-1 text-right align-top w-20">
+                    {formatPercent(config.parentalInsurance.rate)}
+                  </td>
+                  <td className="py-1 text-right font-medium align-top w-20">
+                    {formatAmount(parentalInsuranceAmount)}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         )}
       </div>
