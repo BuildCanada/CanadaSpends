@@ -140,6 +140,14 @@ export default function DesktopNav(props: DesktopNavProps) {
                   className="bg-popover rounded-md shadow-lg p-1 flex flex-col min-w-50 z-200"
                   sideOffset={8}
                 >
+                  <DropdownMenu.Item asChild>
+                    <Link
+                      href={`/${i18n.locale}/municipal`}
+                      className="px-3 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground rounded cursor-pointer"
+                    >
+                      <Trans>All financial statements</Trans>
+                    </Link>
+                  </DropdownMenu.Item>
                   {municipalitiesByProvince.map(
                     ({ province, municipalities }) => (
                       <DropdownMenu.Sub key={province}>

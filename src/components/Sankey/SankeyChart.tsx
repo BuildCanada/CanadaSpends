@@ -113,6 +113,7 @@ export function SankeyChart(props: SankeyChartProps) {
   );
   const [searchResult, setSearchResult] = useState<Node | null>(null);
   const [hoverNode, setHoverNode] = useState<HoverNodeType | null>(null);
+  const [flowTotals, setFlowTotals] = useState({ revenue: 0, spending: 0 });
   // Mouse position as fallback - ensures tooltip still works if blockRect is missing
   const [mousePosition, setMousePosition] = useState<{
     x: number;
@@ -133,6 +134,7 @@ export function SankeyChart(props: SankeyChartProps) {
     const { nodes, revenueTotal, spendingTotal } = getFlatData(transformedData);
 
     setFlatData(nodes);
+    setFlowTotals({ revenue: revenueTotal, spending: spendingTotal });
     setTotalAmount(Math.max(revenueTotal, spendingTotal));
   }, [props.data]);
 
@@ -299,7 +301,9 @@ export function SankeyChart(props: SankeyChartProps) {
               }
               height={chartHeight}
               amountScalingFactor={amountScalingFactor}
-              onMouseOver={handleMouseOver(chartData.revenue)}
+              onMouseOver={handleMouseOver(
+                chartData.revenue || flowTotals.revenue,
+              )}
               onMouseOut={handleMouseOut}
             />
             <SankeyChartSingle
@@ -313,7 +317,9 @@ export function SankeyChart(props: SankeyChartProps) {
               }
               height={chartHeight}
               amountScalingFactor={amountScalingFactor}
-              onMouseOver={handleMouseOver(chartData.spending)}
+              onMouseOver={handleMouseOver(
+                chartData.spending || flowTotals.spending,
+              )}
               onMouseOut={handleMouseOut}
             />
           </div>

@@ -1,15 +1,16 @@
-import { MunicipalYearPageContent } from "@/app/[lang]/(main)/municipal/[province]/[municipality]/[year]/page";
-import { BASE_URL } from "@/lib/constants";
+import { getMunicipalitiesByProvince } from "@/lib/jurisdictions";
+import { getAvailableYearsForJurisdiction } from "@/lib/jurisdictions";
+import { BASE_URL, locales } from "@/lib/constants";
 import {
-  getMunicipalitiesByProvince,
-  getAvailableYearsForJurisdiction,
-} from "@/lib/jurisdictions";
-import { locales } from "@/lib/constants";
+  getMunicipalityFinancialStatements,
+  latestMunicipalFinancialYear,
+} from "@/lib/municipal-financial-statements";
+import { notFound, redirect } from "next/navigation";
+import type { Metadata } from "next";
 import { generateHreflangAlternates } from "@/lib/utils";
-import { notFound } from "next/navigation";
-import { Metadata } from "next";
 
-export const dynamicParams = false;
+export const dynamicParams = true;
+export const dynamic = "force-dynamic";
 
 export async function generateStaticParams() {
   const municipalitiesByProvince = getMunicipalitiesByProvince();
@@ -25,27 +26,36 @@ export async function generateStaticParams() {
   );
 }
 
+async function latestYearFor(province: string, municipality: string) {
+  try {
+    const statements = await getMunicipalityFinancialStatements(
+      province,
+      municipality,
+    );
+    return latestMunicipalFinancialYear(statements);
+  } catch {
+    const years = getAvailableYearsForJurisdiction(
+      `${province}/${municipality}`,
+    );
+    return years.length ? Math.max(...years.map(Number)) : null;
+  }
+}
+
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ province: string; municipality: string; lang: string }>;
 }): Promise<Metadata> {
   const { province, municipality, lang } = await params;
-  const jurisdictionSlug = `${province}/${municipality}`;
-  const years = getAvailableYearsForJurisdiction(jurisdictionSlug);
-  const latestYear = years.length > 0 ? years[0] : null;
+  const latestYear = await latestYearFor(province, municipality);
+  if (!latestYear) return {};
 
-  if (!latestYear) {
-    return {};
-  }
-
-  // Set canonical URL to the latest year's URL to avoid duplicate content SEO issues
   const canonical = `${BASE_URL}/${lang}/municipal/${province}/${municipality}/${latestYear}`;
   return {
     alternates: {
       ...generateHreflangAlternates(
         lang,
-        `/municipal/[province]/[municipality]`,
+        "/municipal/[province]/[municipality]",
         { province, municipality },
       ),
       canonical,
@@ -59,24 +69,10 @@ export default async function MunicipalPage({
   params: Promise<{ province: string; municipality: string; lang: string }>;
 }) {
   const { province, municipality, lang } = await params;
+  const latestYear = await latestYearFor(province, municipality);
+  if (!latestYear) notFound();
 
-  const jurisdictionSlug = `${province}/${municipality}`;
-
-  // Get the latest year for this municipality
-  const years = getAvailableYearsForJurisdiction(jurisdictionSlug);
-  const latestYear = years.length > 0 ? years[0] : null;
-
-  if (!latestYear) {
-    notFound();
-  }
-
-  // Use the component from the year route
-  return (
-    <MunicipalYearPageContent
-      province={province}
-      municipality={municipality}
-      year={latestYear}
-      lang={lang}
-    />
-  );
+  // This target advances whenever a newer statement is reviewed. Keep the
+  // redirect temporary so browsers and CDNs cannot pin the yearless URL.
+  redirect(`/${lang}/municipal/${province}/${municipality}/${latestYear}`);
 }
