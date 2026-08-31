@@ -301,7 +301,9 @@ export function SankeyChart(props: SankeyChartProps) {
               }
               height={chartHeight}
               amountScalingFactor={amountScalingFactor}
-              onMouseOver={handleMouseOver(flowTotals.revenue)}
+              onMouseOver={handleMouseOver(
+                chartData.revenue || flowTotals.revenue,
+              )}
               onMouseOut={handleMouseOut}
             />
             <SankeyChartSingle
@@ -315,7 +317,9 @@ export function SankeyChart(props: SankeyChartProps) {
               }
               height={chartHeight}
               amountScalingFactor={amountScalingFactor}
-              onMouseOver={handleMouseOver(flowTotals.spending)}
+              onMouseOver={handleMouseOver(
+                chartData.spending || flowTotals.spending,
+              )}
               onMouseOut={handleMouseOut}
             />
           </div>

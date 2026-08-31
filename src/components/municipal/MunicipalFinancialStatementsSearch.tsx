@@ -83,7 +83,8 @@ export function MunicipalFinancialStatementsSearch({
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {filtered.map((municipality) => {
-          const latestYear = municipality.available_years[0];
+          const latestYear = Math.max(...municipality.available_years);
+          const earliestYear = Math.min(...municipality.available_years);
           return (
             <Link
               key={municipality.canonical_id}
@@ -107,7 +108,7 @@ export function MunicipalFinancialStatementsSearch({
                       one="# year"
                       other="# years"
                     />{" "}
-                    · {municipality.available_years.at(-1)}–{latestYear}
+                    · {earliestYear}–{latestYear}
                   </>
                 )}
               </span>

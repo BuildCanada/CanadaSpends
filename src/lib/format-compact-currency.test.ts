@@ -37,4 +37,16 @@ describe("formatCompactCurrency", () => {
       }),
     ).toBe("$7.3M");
   });
+
+  it("promotes values that round across a compact-unit boundary", () => {
+    expect(formatCompactCurrency(999_999, { maximumFractionDigits: 2 })).toBe(
+      "$1M",
+    );
+    expect(formatCompactCurrency(999.9, { maximumFractionDigits: 0 })).toBe(
+      "$1K",
+    );
+    expect(
+      formatCompactCurrency(999_999_999, { maximumFractionDigits: 1 }),
+    ).toBe("$1B");
+  });
 });
