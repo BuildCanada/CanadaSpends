@@ -17,6 +17,16 @@ msgstr ""
 msgid "— Canada Spends Team"
 msgstr "— Canada Spends Team"
 
+#. placeholder {0}: filtered.length
+#: src/components/municipal/MunicipalFinancialStatementsSearch.tsx:77
+msgid "{0, plural, one {# municipality with reviewed financial data} other {# municipalities with reviewed financial data}}"
+msgstr "{0, plural, one {# municipality with reviewed financial data} other {# municipalities with reviewed financial data}}"
+
+#. placeholder {0}: municipality.available_years.length
+#: src/components/municipal/MunicipalFinancialStatementsSearch.tsx:105
+msgid "{0, plural, one {# year} other {# years}}"
+msgstr "{0, plural, one {# year} other {# years}}"
+
 #. placeholder {0}: department.agenciesHeading
 #. placeholder {0}: department.leadershipHeading
 #. placeholder {0}: department.name
@@ -31,6 +41,11 @@ msgstr "— Canada Spends Team"
 #: src/components/DepartmentList.tsx:113
 msgid "{0}"
 msgstr "{0}"
+
+#. placeholder {0}: verification.summary.fail
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:250
+msgid "{0} failed"
+msgstr "{0} failed"
 
 #. placeholder {0}: department.name
 #: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:451
@@ -83,6 +98,23 @@ msgstr "{0} line items · all figures in real {baseYear} dollars"
 msgid "{0} of federal income tax"
 msgstr "{0} of federal income tax"
 
+#. placeholder {0}: verification.summary.pass
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:241
+msgid "{0} passed"
+msgstr "{0} passed"
+
+#. placeholder {0}: formatCurrency( statement.per_capita.total_expenses, lang, )
+#. placeholder {0}: formatCurrency( statement.per_capita.total_revenue, lang, )
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:503
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:528
+msgid "{0} per resident"
+msgstr "{0} per resident"
+
+#. placeholder {0}: verification.summary.skip
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:245
+msgid "{0} skipped"
+msgstr "{0} skipped"
+
 #. placeholder {0}: jurisdiction.name
 #. placeholder {1}: jurisdiction.financialYear
 #: src/components/JurisdictionPageContent.tsx:357
@@ -98,6 +130,14 @@ msgstr "{0}’s share of federal spending"
 #: src/app/[lang]/(main)/first-nations/[bcid]/page.tsx:62
 msgid "{0}{provinceSuffix} - No financial data is currently available under the First Nations Financial Transparency Act."
 msgstr "{0}{provinceSuffix} - No financial data is currently available under the First Nations Financial Transparency Act."
+
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:568
+msgid "{censusYear} Census"
+msgstr "{censusYear} Census"
+
+#: src/components/municipal/MunicipalFinancialStatementsSearch.tsx:102
+msgid "{latestYear} financial statements"
+msgstr "{latestYear} financial statements"
 
 #: src/app/[lang]/(main)/federal/spending/[year]/[department]/page.tsx:63
 msgid "{name} Spending, FY {fy} | Canada Spends"
@@ -141,8 +181,8 @@ msgstr "© 2025 Canada Spends. All rights reserved. A Project of <0>Build Canada
 msgid "100,000"
 msgstr "100,000"
 
-#: src/components/MainLayout/_components/DesktopNav.tsx:279
-#: src/components/MainLayout/_components/MobileMenu.tsx:188
+#: src/components/MainLayout/_components/DesktopNav.tsx:287
+#: src/components/MainLayout/_components/MobileMenu.tsx:197
 msgid "About"
 msgstr "About"
 
@@ -150,7 +190,7 @@ msgstr "About"
 msgid "About GlobaLeaks"
 msgstr "About GlobaLeaks"
 
-#: src/components/MainLayout/_components/DesktopNav.tsx:293
+#: src/components/MainLayout/_components/DesktopNav.tsx:301
 #: src/components/MainLayout/Footer.tsx:41
 msgid "About Us"
 msgstr "About Us"
@@ -167,6 +207,10 @@ msgstr "Accounting and consolidation adjustments"
 #: src/components/first-nations/FinancialPositionStats.tsx:194
 msgid "Accounts payable, long-term debt, and other obligations owed to external parties."
 msgstr "Accounts payable, long-term debt, and other obligations owed to external parties."
+
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:39
+msgid "Accumulated surplus"
+msgstr "Accumulated surplus"
 
 #: src/components/first-nations/FinancialPositionStats.tsx:310
 msgid "Accumulated Surplus"
@@ -196,6 +240,11 @@ msgstr "All data presented regarding government spending is sourced directly fro
 msgid "All expenses incurred during the fiscal year including program delivery, administration, and capital costs."
 msgstr "All expenses incurred during the fiscal year including program delivery, administration, and capital costs."
 
+#: src/components/MainLayout/_components/DesktopNav.tsx:148
+#: src/components/MainLayout/_components/MobileMenu.tsx:132
+msgid "All financial statements"
+msgstr "All financial statements"
+
 #: src/app/[lang]/(main)/budget/page.tsx:270
 #: src/app/[lang]/(main)/federal/budget/page.tsx:309
 msgid "All government budget data is sourced from official databases, but due to the complexity of these systems, occasional errors may occur despite our best efforts. This page is also based on government memos and leaks, so it is not an official release of the Fall 2025 Budget. We aim to make this information more accessible and accurate, and we welcome feedback. If you notice any issues, please let us know <0>here</0> — we appreciate it and will work to address them promptly."
@@ -212,6 +261,18 @@ msgstr "All of the information we use comes from publicly available databases an
 #: src/components/JurisdictionPageContent.tsx:183
 msgid "All program and operating spending recorded for the fiscal year."
 msgstr "All program and operating spending recorded for the fiscal year."
+
+#: src/components/municipal/MunicipalFinancialStatementsSearch.tsx:65
+msgid "All provinces and territories"
+msgstr "All provinces and territories"
+
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:536
+msgid "All reported municipal expenses"
+msgstr "All reported municipal expenses"
+
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:511
+msgid "All reported municipal revenue"
+msgstr "All reported municipal revenue"
 
 #: src/components/JurisdictionPageContent.tsx:163
 msgid "All revenue collected during the fiscal year, including taxes, transfers, and other sources."
@@ -257,6 +318,11 @@ msgstr "Annual interest payments on outstanding debt. This represents the cost o
 msgid "Annual municipal spending per {0} resident"
 msgstr "Annual municipal spending per {0} resident"
 
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:47
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:486
+msgid "Annual surplus (deficit)"
+msgstr "Annual surplus (deficit)"
+
 #: src/app/[lang]/(main)/search/[database]/[id]/page.tsx:94
 msgid "Application ID"
 msgstr "Application ID"
@@ -294,6 +360,10 @@ msgstr "As of fiscal year end {0}"
 #: src/components/first-nations/FinancialPositionStats.tsx:301
 msgid "As of fiscal year end {fiscalYear}"
 msgstr "As of fiscal year end {fiscalYear}"
+
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:607
+msgid "Assets, liabilities, and accumulated surplus at the end of the fiscal year."
+msgstr "Assets, liabilities, and accumulated surplus at the end of the fiscal year."
 
 #: src/components/first-nations/FirstNationsPageContent.tsx:373
 msgid "Assets, liabilities, and net financial position as of the end of fiscal year {fiscalYear}."
@@ -334,6 +404,10 @@ msgstr "Based on income of {0}"
 #: src/app/[lang]/(main)/tax-visualizer/page.tsx:250
 msgid "BPA credit ({0} × {1})"
 msgstr "BPA credit ({0} × {1})"
+
+#: src/components/HeroButtons.tsx:87
+msgid "Browse all financial statements"
+msgstr "Browse all financial statements"
 
 #: src/app/[lang]/(main)/first-nations/[bcid]/page.tsx:133
 msgid "Browse all First Nations"
@@ -428,6 +502,10 @@ msgstr "Cash, investments, accounts receivable, and other assets that can be con
 msgid "Category"
 msgstr "Category"
 
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:558
+msgid "Census context makes municipal totals easier to compare, while recognizing that municipal boundaries and service responsibilities differ."
+msgstr "Census context makes municipal totals easier to compare, while recognizing that municipal boundaries and service responsibilities differ."
+
 #: src/components/first-nations/RemunerationOverview.tsx:401
 msgid "Chief"
 msgstr "Chief"
@@ -447,6 +525,10 @@ msgstr "Co-Applicant(s)"
 #: src/app/[lang]/(main)/search/[database]/[id]/page.tsx:272
 msgid "Collaboration Type"
 msgstr "Collaboration Type"
+
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:555
+msgid "Community context"
+msgstr "Community context"
 
 #: src/app/[lang]/(main)/first-nations/remuneration/page.tsx:34
 msgid "Compare remuneration data across First Nations from annual reports published under the FNFTA."
@@ -494,8 +576,8 @@ msgstr "consolidated federal revenue (Vol I)"
 msgid "consolidated federal spending (Vol I)"
 msgstr "consolidated federal spending (Vol I)"
 
-#: src/components/MainLayout/_components/DesktopNav.tsx:310
-#: src/components/MainLayout/_components/MobileMenu.tsx:195
+#: src/components/MainLayout/_components/DesktopNav.tsx:318
+#: src/components/MainLayout/_components/MobileMenu.tsx:204
 #: src/components/MainLayout/Footer.tsx:54
 msgid "Contact"
 msgstr "Contact"
@@ -573,6 +655,10 @@ msgstr "Department Spending Reductions"
 #: src/components/LineItemTable.tsx:91
 msgid "Description"
 msgstr "Description"
+
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:277
+msgid "Details"
+msgstr "Details"
 
 #: src/components/Sankey/BudgetSankey.tsx:433
 msgid "Direct program expenses"
@@ -716,8 +802,14 @@ msgstr "Expected Results"
 #: src/components/first-nations/RemunerationOverview.tsx:651
 #: src/components/first-nations/RemunerationOverview.tsx:797
 #: src/components/first-nations/RemunerationTable.tsx:259
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:183
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:431
 msgid "Expenses"
 msgstr "Expenses"
+
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:589
+msgid "Expenses per resident"
+msgstr "Expenses per resident"
 
 #: src/app/[lang]/(main)/federal/budget/layout.tsx:17
 msgid "Explore Canada's federal budget with interactive visualizations and detailed analysis of government revenue and expenditures."
@@ -739,7 +831,7 @@ msgstr "Explore financial data from First Nations across Canada. Data is extract
 msgid "Explore financial data from First Nations across Canada. View statements of operations, financial positions, and remuneration from annual reports published under the First Nations Financial Transparency Act (FNFTA)."
 msgstr "Explore financial data from First Nations across Canada. View statements of operations, financial positions, and remuneration from annual reports published under the First Nations Financial Transparency Act (FNFTA)."
 
-#: src/components/HeroButtons.tsx:110
+#: src/components/HeroButtons.tsx:118
 msgid "Explore First Nations Spending"
 msgstr "Explore First Nations Spending"
 
@@ -763,6 +855,14 @@ msgstr "Explore other federal departments"
 msgid "Explore Provincial Spending"
 msgstr "Explore Provincial Spending"
 
+#: src/app/[lang]/(main)/municipal/page.tsx:44
+msgid "Explore revenue, expenses, assets, liabilities, and accumulated surplus reported by municipalities across Canada."
+msgstr "Explore revenue, expenses, assets, liabilities, and accumulated surplus reported by municipalities across Canada."
+
+#: src/app/[lang]/(main)/municipal/page.tsx:22
+msgid "Explore reviewed financial statement data for municipalities across Canada."
+msgstr "Explore reviewed financial statement data for municipalities across Canada."
+
 #: src/app/[lang]/(main)/search/[database]/[id]/page.tsx:137
 msgid "External ID"
 msgstr "External ID"
@@ -770,6 +870,10 @@ msgstr "External ID"
 #: src/app/[lang]/(main)/page.tsx:116
 msgid "Facts about Spending"
 msgstr "Facts about Spending"
+
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:293
+msgid "Fail"
+msgstr "Fail"
 
 #: src/app/[lang]/(main)/articles/page.tsx:55
 msgid "Featured Articles"
@@ -836,6 +940,10 @@ msgstr "Federal Total"
 msgid "Federal workforce"
 msgstr "Federal workforce"
 
+#: src/components/municipal/MunicipalFinancialStatementsSearch.tsx:57
+msgid "Filter by province or territory"
+msgstr "Filter by province or territory"
+
 #: src/components/DepartmentList.tsx:15
 msgid "Finance Canada"
 msgstr "Finance Canada"
@@ -868,14 +976,28 @@ msgstr "Financial liabilities less financial assets"
 msgid "Financial liabilities minus financial assets. A negative value indicates net financial assets."
 msgstr "Financial liabilities minus financial assets. A negative value indicates net financial assets."
 
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:604
+msgid "Financial position"
+msgstr "Financial position"
+
 #. placeholder {0}: jurisdiction.financialYear
 #: src/components/JurisdictionPageContent.tsx:399
 msgid "Financial Position {0}"
 msgstr "Financial Position {0}"
 
+#. placeholder {0}: statement.fiscal_year
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:475
+msgid "Financial summary for {0}"
+msgstr "Financial summary for {0}"
+
 #: src/components/first-nations/FirstNationsPageContent.tsx:343
 msgid "Financial Summary FY {fiscalYear}"
 msgstr "Financial Summary FY {fiscalYear}"
+
+#. placeholder {0}: statement.fiscal_year
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:594
+msgid "Financial year {0}"
+msgstr "Financial year {0}"
 
 #: src/app/[lang]/(main)/tax-visualizer/page.tsx:398
 #: src/app/[lang]/(main)/tax-visualizer/page.tsx:635
@@ -888,8 +1010,8 @@ msgid "First Nation"
 msgstr "First Nation"
 
 #: src/app/[lang]/(main)/first-nations/[bcid]/page.tsx:59
-#: src/components/MainLayout/_components/DesktopNav.tsx:188
-#: src/components/MainLayout/_components/MobileMenu.tsx:147
+#: src/components/MainLayout/_components/DesktopNav.tsx:196
+#: src/components/MainLayout/_components/MobileMenu.tsx:156
 msgid "First Nations"
 msgstr "First Nations"
 
@@ -951,6 +1073,10 @@ msgstr "FY"
 msgid "FY {0} Revenue and Spending"
 msgstr "FY {0} Revenue and Spending"
 
+#: src/components/FinancialYearSelector.tsx:38
+msgid "FY {year}"
+msgstr "FY {year}"
+
 #. placeholder {0}: jurisdiction.name
 #. placeholder {1}: jurisdiction.name
 #: src/components/JurisdictionPageContent.tsx:348
@@ -961,7 +1087,7 @@ msgstr "Get data-driven insights into how the {0} government’s revenue and spe
 msgid "Get data-driven insights into how the federal government’s revenue and spending affect Canadian lives and programs."
 msgstr "Get data-driven insights into how the federal government’s revenue and spending affect Canadian lives and programs."
 
-#: src/components/MainLayout/_components/DesktopNav.tsx:302
+#: src/components/MainLayout/_components/DesktopNav.tsx:310
 #: src/components/MainLayout/Footer.tsx:49
 msgid "Get Involved"
 msgstr "Get Involved"
@@ -1094,6 +1220,10 @@ msgstr "How federal spending pages are built from Public Accounts of Canada data
 msgid "How ministry and Sankey totals are allocated"
 msgstr "How ministry and Sankey totals are allocated"
 
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:478
+msgid "How much the municipality reported earning and spending during the fiscal year."
+msgstr "How much the municipality reported earning and spending during the fiscal year."
+
 #: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:66
 msgid "How the Government of Canada spent its budget in fiscal year {fy}, by department, theme, and program."
 msgstr "How the Government of Canada spent its budget in fiscal year {fy}, by department, theme, and program."
@@ -1145,6 +1275,10 @@ msgstr "In-depth analysis and insights about Canadian government spending, budge
 msgid "Income Tax Revenues"
 msgstr "Income Tax Revenues"
 
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:228
+msgid "Independent verification completed"
+msgstr "Independent verification completed"
+
 #: src/components/DepartmentList.tsx:21
 msgid "Indigenous Services Canada + Crown-Indigenous Relations and Northern Affairs Canada"
 msgstr "Indigenous Services Canada + Crown-Indigenous Relations and Northern Affairs Canada"
@@ -1190,9 +1324,9 @@ msgstr "It doesn't have to be this way."
 msgid "Item"
 msgstr "Item"
 
-#: src/components/MainLayout/_components/DesktopNav.tsx:330
+#: src/components/MainLayout/_components/DesktopNav.tsx:338
 #: src/components/MainLayout/_components/MobileMenu.tsx:22
-#: src/components/MainLayout/_components/MobileMenu.tsx:211
+#: src/components/MainLayout/_components/MobileMenu.tsx:220
 msgid "Join Build Canada"
 msgstr "Join Build Canada"
 
@@ -1203,6 +1337,10 @@ msgstr "Key Dates"
 #: src/app/[lang]/(main)/search/[database]/[id]/DetailsPage.tsx:82
 msgid "Keywords"
 msgstr "Keywords"
+
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:572
+msgid "Land area"
+msgstr "Land area"
 
 #: src/components/first-nations/FirstNationsPageContent.tsx:395
 msgid "Land Claims"
@@ -1290,6 +1428,18 @@ msgstr "More coming soon..."
 msgid "Municipal"
 msgstr "Municipal"
 
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:574
+msgid "Municipal census subdivision"
+msgstr "Municipal census subdivision"
+
+#: src/app/[lang]/(main)/municipal/page.tsx:41
+msgid "Municipal Financial Statements"
+msgstr "Municipal Financial Statements"
+
+#: src/app/[lang]/(main)/municipal/page.tsx:21
+msgid "Municipal Financial Statements | Canada Spends"
+msgstr "Municipal Financial Statements | Canada Spends"
+
 #: src/components/first-nations/RemunerationOverview.tsx:788
 #: src/components/first-nations/RemunerationTable.tsx:114
 msgid "Name"
@@ -1323,6 +1473,10 @@ msgstr "Net Debt"
 #: src/components/JurisdictionPageContent.tsx:213
 msgid "Net Debt is what remains after subtracting financial assets (like cash and investments) from the Total Debt. It represents the debt that isn't immediately covered by liquid assets."
 msgstr "Net Debt is what remains after subtracting financial assets (like cash and investments) from the Total Debt. It represents the debt that isn't immediately covered by liquid assets."
+
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:35
+msgid "Net financial assets (debt)"
+msgstr "Net financial assets (debt)"
 
 #: src/components/Sankey/BudgetSankey.tsx:517
 msgid "Net Foreign Exchange Revenue and Return on Investments"
@@ -1371,6 +1525,10 @@ msgstr "No individual entries available."
 #: src/components/LineItemTable.tsx:220
 msgid "No matching line items."
 msgstr "No matching line items."
+
+#: src/components/municipal/MunicipalFinancialStatementsSearch.tsx:121
+msgid "No municipalities match those filters."
+msgstr "No municipalities match those filters."
 
 #: src/components/first-nations/FirstNationsNotes.tsx:20
 msgid "No notes available."
@@ -1464,6 +1622,10 @@ msgstr "On-Reserve Pop."
 msgid "Open Tor Browser and wait for it to connect."
 msgstr "Open Tor Browser and wait for it to connect."
 
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:41
+msgid "Opening accumulated surplus"
+msgstr "Opening accumulated surplus"
+
 #: src/app/[lang]/(main)/budget/page.tsx:195
 #: src/app/[lang]/(main)/federal/budget/page.tsx:234
 msgid "Operational Spend"
@@ -1515,14 +1677,25 @@ msgstr "Other transfer payments"
 msgid "Our government is going to have to make hard choices about our nation's spending to ensure we can invest in creating a competitive, resilient, and independent nation. We care about giving Canadians the facts about spending so they can engage in this conversation with elected officials."
 msgstr "Our government is going to have to make hard choices about our nation's spending to ensure we can invest in creating a competitive, resilient, and independent nation. We care about giving Canadians the facts about spending so they can engage in this conversation with elected officials."
 
-#: src/components/MainLayout/_components/DesktopNav.tsx:202
-#: src/components/MainLayout/_components/MobileMenu.tsx:155
+#: src/components/MainLayout/_components/DesktopNav.tsx:210
+#: src/components/MainLayout/_components/MobileMenu.tsx:164
 msgid "Overview"
 msgstr "Overview"
+
+#. placeholder {0}: fact.source_page
+#. placeholder {0}: item.source_page
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:147
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:453
+msgid "page {0}"
+msgstr "page {0}"
 
 #: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:225
 msgid "Parenthesized negatives, internal consolidation adjustments, and total or subtotal rows are flagged and excluded from Sankey leaves to avoid double counting, but they are retained in the line-item tables so the full detail remains available."
 msgstr "Parenthesized negatives, internal consolidation adjustments, and total or subtotal rows are flagged and excluded from Sankey leaves to avoid double counting, but they are retained in the line-item tables so the full detail remains available."
+
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:289
+msgid "Pass"
+msgstr "Pass"
 
 #: src/app/[lang]/(main)/search/[database]/[id]/page.tsx:338
 msgid "Payment Amount"
@@ -1567,6 +1740,14 @@ msgstr "Pollution pricing"
 msgid "Pollution pricing proceeds"
 msgstr "Pollution pricing proceeds"
 
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:566
+msgid "Population"
+msgstr "Population"
+
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:579
+msgid "Population density"
+msgstr "Population density"
+
 #: src/components/first-nations/RemunerationOverview.tsx:791
 #: src/components/first-nations/RemunerationTable.tsx:107
 msgid "Position"
@@ -1597,6 +1778,10 @@ msgstr "Program Name"
 #: src/app/[lang]/(main)/search/[database]/[id]/page.tsx:131
 msgid "Program Type"
 msgstr "Program Type"
+
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:540
+msgid "Program, service, administration, financing, and amortization expenses."
+msgstr "Program, service, administration, financing, and amortization expenses."
 
 #: src/app/[lang]/(main)/search/[database]/[id]/page.tsx:235
 msgid "Project Number"
@@ -1708,14 +1893,23 @@ msgid "Regions"
 msgstr "Regions"
 
 #: src/components/first-nations/RemunerationTable.tsx:233
-#: src/components/MainLayout/_components/DesktopNav.tsx:210
-#: src/components/MainLayout/_components/MobileMenu.tsx:166
+#: src/components/MainLayout/_components/DesktopNav.tsx:218
+#: src/components/MainLayout/_components/MobileMenu.tsx:175
 msgid "Remuneration"
 msgstr "Remuneration"
 
 #: src/components/first-nations/FirstNationsPageContent.tsx:423
 msgid "Remuneration and Expenses"
 msgstr "Remuneration and Expenses"
+
+#. placeholder {0}: fact.raw_label
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:137
+msgid "Reported as “{0}”"
+msgstr "Reported as “{0}”"
+
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:409
+msgid "Reported revenue and expense details"
+msgstr "Reported revenue and expense details"
 
 #: src/app/[lang]/(main)/search/[database]/[id]/page.tsx:277
 msgid "Reporting Organization"
@@ -1725,6 +1919,14 @@ msgstr "Reporting Organization"
 #: src/app/[lang]/(main)/search/[database]/[id]/page.tsx:134
 msgid "Research Subject"
 msgstr "Research Subject"
+
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:584
+msgid "Residents per km²"
+msgstr "Residents per km²"
+
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:271
+msgid "Result"
+msgstr "Result"
 
 #: src/app/[lang]/(main)/search/[database]/[id]/page.tsx:267
 msgid "Results Achieved"
@@ -1736,6 +1938,8 @@ msgstr "Retirement Benefits"
 
 #: src/app/[lang]/(main)/budget/page.tsx:184
 #: src/app/[lang]/(main)/federal/budget/page.tsx:223
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:177
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:429
 #: src/components/Sankey/BudgetSankey.tsx:456
 msgid "Revenue"
 msgstr "Revenue"
@@ -1747,6 +1951,25 @@ msgstr "Revenue and Expenses FY {fiscalYear}"
 #: src/app/[lang]/(main)/federal/spending/[year]/page.tsx:195
 msgid "revenue minus spending (Vol I)"
 msgstr "revenue minus spending (Vol I)"
+
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:488
+msgid "Revenue remaining after expenses"
+msgstr "Revenue remaining after expenses"
+
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:383
+msgid "Revenue sources flow in from the left and spending by service or function flows out on the right. Revenue offsets and losses are shown as outflows, while expense recoveries are shown as inflows. Values come from detailed schedules in the audited financial statements."
+msgstr "Revenue sources flow in from the left and spending by service or function flows out on the right. Revenue offsets and losses are shown as outflows, while expense recoveries are shown as inflows. Values come from detailed schedules in the audited financial statements."
+
+#. placeholder {0}: verification.reviewed_by
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:234
+msgid "Reviewed by {0} on {reviewedAt}"
+msgstr "Reviewed by {0} on {reviewedAt}"
+
+#. placeholder {0}: municipality.name
+#. placeholder {1}: municipality.province_name
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:351
+msgid "Reviewed financial statement data for {0} in {1}, for the fiscal year ending {fiscalYearEnd}."
+msgstr "Reviewed financial statement data for {0} in {1}, for the fiscal year ending {fiscalYearEnd}."
 
 #: src/components/FederalWorkforceStrip.tsx:89
 msgid "salaries and benefits (standard object)"
@@ -1767,6 +1990,11 @@ msgstr "Save your receipt code securely—you will need it to check for response
 #: src/components/LineItemTable.tsx:160
 msgid "Search line items…"
 msgstr "Search line items…"
+
+#: src/components/municipal/MunicipalFinancialStatementsSearch.tsx:45
+#: src/components/municipal/MunicipalFinancialStatementsSearch.tsx:51
+msgid "Search municipalities"
+msgstr "Search municipalities"
 
 #: src/app/[lang]/(main)/whistleblowers/page.tsx:153
 msgid "Security Tips"
@@ -1809,6 +2037,10 @@ msgstr "Showing {0} of {1} First Nations"
 msgid "Showing {0} of {1} results"
 msgstr "Showing {0} of {1} results"
 
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:291
+msgid "Skipped"
+msgstr "Skipped"
+
 #: src/components/Sankey/BudgetSankey.tsx:347
 msgid "Social Security"
 msgstr "Social Security"
@@ -1826,6 +2058,10 @@ msgstr "Source"
 #: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:361
 msgid "Source and licence"
 msgstr "Source and licence"
+
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:641
+msgid "Source and methodology"
+msgstr "Source and methodology"
 
 #: src/components/first-nations/RemunerationOverview.tsx:601
 msgid "Source PDF"
@@ -1879,9 +2115,9 @@ msgstr "Spending by ministry, FY {0}"
 msgid "Spending data is not yet available for this province and year combination. The income tax calculation above is still accurate based on {year} tax rates."
 msgstr "Spending data is not yet available for this province and year combination. The income tax calculation above is still accurate based on {year} tax rates."
 
-#: src/components/MainLayout/_components/DesktopNav.tsx:249
-#: src/components/MainLayout/_components/DesktopNav.tsx:268
-#: src/components/MainLayout/_components/MobileMenu.tsx:181
+#: src/components/MainLayout/_components/DesktopNav.tsx:257
+#: src/components/MainLayout/_components/DesktopNav.tsx:276
+#: src/components/MainLayout/_components/MobileMenu.tsx:190
 msgid "Spending Database"
 msgstr "Spending Database"
 
@@ -1986,15 +2222,23 @@ msgstr "Tax Visualizer | Canada Spends"
 msgid "Tax Year"
 msgstr "Tax Year"
 
-#: src/components/MainLayout/_components/DesktopNav.tsx:241
-#: src/components/MainLayout/_components/DesktopNav.tsx:261
-#: src/components/MainLayout/_components/MobileMenu.tsx:174
+#: src/components/MainLayout/_components/DesktopNav.tsx:249
+#: src/components/MainLayout/_components/DesktopNav.tsx:269
+#: src/components/MainLayout/_components/MobileMenu.tsx:183
 msgid "Taxes"
 msgstr "Taxes"
+
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:515
+msgid "Taxes, transfers, fees, services, and other reported income."
+msgstr "Taxes, transfers, fees, services, and other reported income."
 
 #: src/components/Sankey/BudgetSankey.tsx:395
 msgid "Territorial Formula Financing"
 msgstr "Territorial Formula Financing"
+
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:274
+msgid "Test"
+msgstr "Test"
 
 #: src/app/[lang]/(main)/about/faq.tsx:61
 msgid "The best way to support us is to engage with our content. Like, share, and comment on our posts on social media. Even better, share our work with a friend and encourage them to do the same. Together, we can expand the conversation and reach more people with these important facts."
@@ -2012,9 +2256,19 @@ msgstr "The difference between revenue and spending. A surplus indicates revenue
 msgid "The difference between total revenue and total expenses. A surplus indicates revenue exceeded expenses."
 msgstr "The difference between total revenue and total expenses. A surplus indicates revenue exceeded expenses."
 
+#. placeholder {0}: formatNumber(context.population, lang, 0)
+#. placeholder {1}: formatNumber(context.area_sq_km || 0, lang)
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:359
+msgid "The municipality serves a {censusYear} Census population of {0} across {1} square kilometres."
+msgstr "The municipality serves a {censusYear} Census population of {0} across {1} square kilometres."
+
 #: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:194
 msgid "The previous hand-authored pages contained curated aggregations — for example, hand-massaged negative leaves and thematic groupings that split a single ministry across categories. Every node where the generated tree differs from the previous values is enumerated in the parity report with a reason code (basis, mapping, rounding, or source correction)."
 msgstr "The previous hand-authored pages contained curated aggregations — for example, hand-massaged negative leaves and thematic groupings that split a single ministry across categories. Every node where the generated tree differs from the previous values is enumerated in the parity report with a reason code (basis, mapping, rounding, or source correction)."
+
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:490
+msgid "The reported difference between annual revenue and expenses, including any separately presented adjustments."
+msgstr "The reported difference between annual revenue and expenses, including any separately presented adjustments."
 
 #: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:253
 msgid "The Sankey uses a curated thematic tree. A maintained mapping assigns each Public Accounts line to a thematic node, mostly at the ministry or organization level with line-level overrides where needed. Each node is truncated to its largest children with the remainder rolled into an “Other” aggregate."
@@ -2035,6 +2289,10 @@ msgstr "Thematic mapping"
 #: src/app/[lang]/(main)/search/[database]/[id]/page.tsx:132
 msgid "Theme"
 msgstr "Theme"
+
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:412
+msgid "These are the detailed rows extracted from the audited statement. This table preserves every signed amount, including negative and consolidation entries that the Sankey repositions as offsets or recoveries."
+msgstr "These are the detailed rows extracted from the audited statement. This table preserves every signed amount, including negative and consolidation entries that the Sankey repositions as offsets or recoveries."
 
 #: src/app/[lang]/(main)/federal/spending/methodology/page.tsx:57
 msgid "These pages are generated from the Public Accounts of Canada. This page documents the accounting bases, curation choices, and known differences so the numbers are traceable to source."
@@ -2061,7 +2319,7 @@ msgstr "This visualization shows how your income tax contributions are allocated
 msgid "to help us support our mission."
 msgstr "to help us support our mission."
 
-#: src/components/MainLayout/_components/DesktopNav.tsx:227
+#: src/components/MainLayout/_components/DesktopNav.tsx:235
 msgid "Tools"
 msgstr "Tools"
 
@@ -2105,6 +2363,11 @@ msgstr "Total Debt is the government's complete outstanding debt. This is the fi
 msgid "Total difference"
 msgstr "Total difference"
 
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:45
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:524
+msgid "Total expenses"
+msgstr "Total expenses"
+
 #: src/components/first-nations/FirstNationsPageContent.tsx:261
 msgid "Total Expenses"
 msgstr "Total Expenses"
@@ -2117,9 +2380,17 @@ msgstr "Total expenses in FY {fiscalYear}"
 msgid "Total Federal Tax"
 msgstr "Total Federal Tax"
 
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:31
+msgid "Total financial assets"
+msgstr "Total financial assets"
+
 #: src/components/first-nations/FinancialPositionStats.tsx:168
 msgid "Total Financial Assets"
 msgstr "Total Financial Assets"
+
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:33
+msgid "Total liabilities"
+msgstr "Total liabilities"
 
 #: src/components/first-nations/FinancialPositionStats.tsx:191
 msgid "Total Liabilities"
@@ -2128,6 +2399,10 @@ msgstr "Total Liabilities"
 #: src/components/first-nations/FinancialPositionStats.tsx:278
 msgid "Total net assets"
 msgstr "Total net assets"
+
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:37
+msgid "Total non-financial assets"
+msgstr "Total non-financial assets"
 
 #: src/components/first-nations/ClaimsTable.tsx:148
 msgid "Total Payments"
@@ -2146,6 +2421,11 @@ msgstr "Total property tax revenue divided by population. Primary revenue source
 #: src/components/first-nations/RemunerationOverview.tsx:584
 msgid "Total Remuneration"
 msgstr "Total Remuneration"
+
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:43
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:499
+msgid "Total revenue"
+msgstr "Total revenue"
 
 #: src/components/first-nations/FirstNationsPageContent.tsx:241
 #: src/components/JurisdictionPageContent.tsx:160
@@ -2241,6 +2521,14 @@ msgstr "Units"
 msgid "Use a computer you trust, not one provided by your employer."
 msgstr "Use a computer you trust, not one provided by your employer."
 
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:644
+msgid "Values are extracted from the municipality’s published financial statements and independently reviewed before publication. Page links point to the reported figure in the source document."
+msgstr "Values are extracted from the municipality’s published financial statements and independently reviewed before publication. Page links point to the reported figure in the source document."
+
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:230
+msgid "Verification requires attention"
+msgstr "Verification requires attention"
+
 #: src/components/DepartmentList.tsx:45
 msgid "Veterans Affairs"
 msgstr "Veterans Affairs"
@@ -2249,6 +2537,11 @@ msgstr "Veterans Affairs"
 #: src/app/[lang]/(main)/first-nations/[bcid]/[year]/page.tsx:59
 msgid "View {year} financial statements for {0}{provinceSuffix}. Includes statement of operations, financial position, and remuneration data from the First Nations Financial Transparency Act annual report."
 msgstr "View {year} financial statements for {0}{provinceSuffix}. Includes statement of operations, financial position, and remuneration data from the First Nations Financial Transparency Act annual report."
+
+#. placeholder {0}: verification.summary.total
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:262
+msgid "View all {0} verification checks"
+msgstr "View all {0} verification checks"
 
 #: src/app/[lang]/(main)/tax-visualizer/page.tsx:858
 #: src/components/TaxBreakdownAccordion.tsx:100
@@ -2264,13 +2557,17 @@ msgstr "View Federal 2025 Budget Details"
 msgid "View financial data for {0}{provinceSuffix} from the First Nations Financial Transparency Act annual reports."
 msgstr "View financial data for {0}{provinceSuffix} from the First Nations Financial Transparency Act annual reports."
 
-#: src/components/first-nations/FirstNationsYearSelector.tsx:26
+#: src/components/FinancialYearSelector.tsx:22
 msgid "View Other Fiscal Years"
 msgstr "View Other Fiscal Years"
 
 #: src/app/[lang]/(main)/search/[database]/[id]/DetailsPage.tsx:101
 msgid "View source data"
 msgstr "View source data"
+
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:658
+msgid "View source financial statements"
+msgstr "View source financial statements"
 
 #: src/app/[lang]/(main)/budget/page.tsx:242
 #: src/app/[lang]/(main)/federal/budget/page.tsx:281
@@ -2372,14 +2669,18 @@ msgstr "What Makes a Good Tip?"
 msgid "Where do you get the data on your website?"
 msgstr "Where do you get the data on your website?"
 
+#: src/components/municipal/MunicipalFinancialStatementContent.tsx:373
+msgid "Where the money came from and where it went"
+msgstr "Where the money came from and where it went"
+
 #: src/app/[lang]/(main)/tax-visualizer/page.tsx:826
 #: src/app/[lang]/(main)/tax-visualizer/page.tsx:880
 msgid "Where Your Tax Dollars Go"
 msgstr "Where Your Tax Dollars Go"
 
 #: src/app/[lang]/(main)/whistleblowers/page.tsx:44
-#: src/components/MainLayout/_components/DesktopNav.tsx:318
-#: src/components/MainLayout/_components/MobileMenu.tsx:202
+#: src/components/MainLayout/_components/DesktopNav.tsx:326
+#: src/components/MainLayout/_components/MobileMenu.tsx:211
 #: src/components/MainLayout/Footer.tsx:59
 msgid "Whistleblowers"
 msgstr "Whistleblowers"

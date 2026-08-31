@@ -1,18 +1,15 @@
 import { SankeyNode } from "./SankeyChartD3";
+import { formatCompactCurrency } from "@/lib/format-compact-currency";
 
 export const formatNumber = (amount: number, scalingFactor = 1e9) => {
-  return Intl.NumberFormat("en-US", {
-    style: "currency",
+  const scaledAmount = Number(amount * scalingFactor);
+
+  return formatCompactCurrency(scaledAmount, {
+    locale: "en-US",
     currency: "USD",
-    notation: "compact",
     maximumFractionDigits:
-      Math.abs(amount * scalingFactor) >= 1e9
-        ? 2
-        : Math.abs(amount * scalingFactor) >= 1e6
-          ? 1
-          : 0,
-    minimumFractionDigits: 0,
-  }).format(Number(amount * scalingFactor));
+      Math.abs(scaledAmount) >= 1e9 ? 2 : Math.abs(scaledAmount) >= 1e6 ? 1 : 0,
+  });
 };
 
 // Generate a unique ID from a name string

@@ -79,6 +79,14 @@ export function HeroButtons({
             className="bg-popover text-popover-foreground rounded-md shadow-lg p-1 flex flex-col min-w-50 z-200 max-h-80 overflow-y-auto"
             sideOffset={4}
           >
+            <DropdownMenu.Item asChild>
+              <Link
+                href={`/${i18n.locale}/municipal`}
+                className="px-3 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground rounded cursor-pointer"
+              >
+                <Trans>Browse all financial statements</Trans>
+              </Link>
+            </DropdownMenu.Item>
             {municipalitiesByProvince.map(({ province, municipalities }) => (
               <div key={province}>
                 <div className="px-3 py-2 text-xs font-semibold text-muted-foreground">

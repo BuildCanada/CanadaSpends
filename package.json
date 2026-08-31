@@ -4,10 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
+    "dev:municipal": "YORK_FACTORY_API_URL=http://127.0.0.1:3001/api/v1 next dev --turbopack",
     "dev:ntp": "next dev",
     "build": "pnpm extract && pnpm generate-statics && next build",
     "generate-statics": "tsx scripts/generate-statics.ts",
     "start": "next start",
+    "test": "vitest run",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,md}\"",
@@ -91,7 +93,8 @@
     "simple-git-hooks": "^2.13.1",
     "tailwindcss": "^4.1.12",
     "tsx": "^4.20.4",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.2",
+    "vitest": "3.2.4"
   },
   "packageManager": "pnpm@9.5.0+sha512.140036830124618d624a2187b50d04289d5a087f326c9edfc0ccd733d76c4f52c3a313d4fc148794a2a9d81553016004e6742e8cf850670268a7387fc220c903",
   "lint-staged": {

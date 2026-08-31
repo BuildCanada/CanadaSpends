@@ -27,6 +27,11 @@ pnpm install
 pnpm run dev
 ```
 
+Municipal financial statements are loaded server-side from York Factory. Set
+`YORK_FACTORY_API_URL` to override the default production API base (for example,
+run Rails with `bin/rails server -p 3001`, then set
+`YORK_FACTORY_API_URL=http://localhost:3001/api/v1` when starting Canada Spends).
+
 ## Linting
 
 This project uses ESLint with Next.js configuration. Run linting with:

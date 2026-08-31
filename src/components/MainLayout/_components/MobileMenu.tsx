@@ -123,6 +123,15 @@ export function MobileMenu(props: MobileMenuProps) {
         <p className="px-3 pl-7 text-sm font-medium text-muted-foreground">
           <Trans>Municipal</Trans>
         </p>
+        <MobileNavLink
+          href={`/${i18n.locale}/municipal`}
+          active={pathname === `/${i18n.locale}/municipal`}
+          onClick={() => setIsMenuOpen(false)}
+        >
+          <span className="pl-8 inline-block">
+            <Trans>All financial statements</Trans>
+          </span>
+        </MobileNavLink>
         {municipalitiesByProvince.map(({ province, municipalities }) => (
           <div key={province}>
             <p className="px-3 pl-11 pt-2 text-xs font-medium text-muted-foreground">
