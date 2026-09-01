@@ -18,6 +18,7 @@ export const NOVA_SCOTIA_TAX_CONFIG: ProvincialTaxConfig = {
       { min: 95883, max: 154650, rate: 0.175 },
       { min: 154650, max: null, rate: 0.21 },
     ],
-    basicPersonalAmount: 8744,
+    // NS raised the BPA to $11,744 for all filers in 2025 (per CRA T4127).
+    basicPersonalAmount: 11744,
   },
 };

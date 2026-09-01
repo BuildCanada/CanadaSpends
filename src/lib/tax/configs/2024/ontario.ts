@@ -17,8 +17,8 @@ export const ONTARIO_TAX_CONFIG: ProvincialTaxConfig = {
     type: "surtax",
     name: "Ontario Surtax",
     tiers: [
-      { threshold: 5710, rate: 0.2 },
-      { threshold: 7307, rate: 0.36 },
+      { threshold: 5554, rate: 0.2 },
+      { threshold: 7108, rate: 0.36 },
     ],
   },
   healthPremium: {

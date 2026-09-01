@@ -148,7 +148,7 @@ export function getTaxConfig(
  * Get all supported years (excludes years not ready for public display)
  */
 export function getSupportedYears(): SupportedYear[] {
-  const hiddenYears = ["2026"];
+  const hiddenYears: string[] = [];
   return (Object.keys(TAX_CONFIGS) as SupportedYear[]).filter(
     (year) => !hiddenYears.includes(year),
   );

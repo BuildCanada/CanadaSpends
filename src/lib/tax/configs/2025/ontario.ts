@@ -16,9 +16,11 @@ export const ONTARIO_TAX_CONFIG: ProvincialTaxConfig = {
   surtax: {
     type: "surtax",
     name: "Ontario Surtax",
+    // 2025 thresholds per CRA T4127 (122nd ed.): 20% of Ontario tax over
+    // $5,710 plus 36% of Ontario tax over $7,307.
     tiers: [
-      { threshold: 5870, rate: 0.2 },
-      { threshold: 7511, rate: 0.36 },
+      { threshold: 5710, rate: 0.2 },
+      { threshold: 7307, rate: 0.36 },
     ],
   },
   healthPremium: {
