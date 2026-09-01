@@ -54,4 +54,4 @@ This project automatically runs linting checks and formatting before each commit
 npx simple-git-hooks
 ```
 
-If linting fails, the commit will be blocked until issues are resolved.
+If linting fails, the commit will be blocked.
