@@ -22,6 +22,11 @@ export interface CappedContributionConfig {
   exemption: number;
   maxEarnings: number;
   maxContribution: number;
+  // For CPP/QPP: the historical "base" rate (pre-2019 enhancement). The
+  // portion of the contribution attributable to (rate - baseRate) is the
+  // "enhanced" CPP/QPP contribution and is deductible from taxable income
+  // on CRA line 22215. If unset, no enhanced deduction is computed.
+  baseRate?: number;
 }
 
 // Surtax config (Ontario surtax - tiers applied to base tax)
@@ -161,6 +166,7 @@ export interface DetailedTaxCalculation {
   surtax: number;
   healthPremium: number;
   federalAbatement: number;
+  cppQppEnhancedDeduction: number;
 
   // Metadata
   year: string;

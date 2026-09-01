@@ -2,6 +2,7 @@ import {
   calculateBracketTax,
   calculateCappedContribution,
   calculateCpp2Contribution,
+  calculateEnhancedContributionPortion,
   calculateFederalAbatement,
   calculateHealthPremium,
   calculateSurtax,
@@ -57,20 +58,6 @@ function calculateWithConfig(
     .pensionPlanOverride
     ? "provincial"
     : "federal";
-
-  // Federal income tax
-  const federalIncomeTax = calculateBracketTax(
-    income,
-    config.federal.incomeTax,
-  );
-  lineItems.push({
-    id: "federal-income-tax",
-    name: "Federal Income Tax",
-    level: "federal",
-    amount: federalIncomeTax,
-    effectiveRate: income > 0 ? (federalIncomeTax / income) * 100 : 0,
-    category: "incomeTax",
-  });
 
   // EI contribution (Quebec residents pay a reduced rate; see eiConfig)
   const eiContribution = calculateCappedContribution(income, eiConfig);
@@ -130,9 +117,33 @@ function calculateWithConfig(
     }
   }
 
-  // Provincial income tax
+  // CRA line 22215: deduction for the "enhanced" portion of CPP/QPP
+  // contributions on employment income. The first-additional enhancement
+  // (rate above pre-2019 baseRate) and the entire second-additional
+  // contribution (CPP2/QPP2) are deductible from taxable income.
+  const cppQppEnhancedDeduction =
+    calculateEnhancedContributionPortion(cppContribution, pensionConfig) +
+    cpp2Contribution;
+  const taxableIncome = Math.max(0, income - cppQppEnhancedDeduction);
+
+  // Federal income tax (computed on taxable income after the line 22215
+  // deduction).
+  const federalIncomeTax = calculateBracketTax(
+    taxableIncome,
+    config.federal.incomeTax,
+  );
+  lineItems.push({
+    id: "federal-income-tax",
+    name: "Federal Income Tax",
+    level: "federal",
+    amount: federalIncomeTax,
+    effectiveRate: income > 0 ? (federalIncomeTax / income) * 100 : 0,
+    category: "incomeTax",
+  });
+
+  // Provincial income tax (also on taxable income after the deduction).
   const provincialIncomeTax = calculateBracketTax(
-    income,
+    taxableIncome,
     config.provincial.incomeTax,
   );
   const provinceName =
@@ -241,6 +252,7 @@ function calculateWithConfig(
     surtax,
     healthPremium,
     federalAbatement,
+    cppQppEnhancedDeduction,
 
     // Metadata
     year: config.year,
