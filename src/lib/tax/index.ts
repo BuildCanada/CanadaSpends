@@ -45,6 +45,7 @@ export {
   calculateBracketTax,
   calculateCappedContribution,
   calculateCpp2Contribution,
+  calculateEnhancedContributionPortion,
   calculateHealthPremium,
   calculateSurtax,
   calculateTaxFromBrackets,

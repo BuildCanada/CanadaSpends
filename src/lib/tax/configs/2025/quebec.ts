@@ -38,6 +38,7 @@ export const QUEBEC_TAX_CONFIG: ProvincialTaxConfig = {
     name: "Québec Pension Plan",
     shortName: "QPP",
     rate: 0.064,
+    baseRate: 0.054,
     exemption: 3500,
     maxEarnings: 71300,
     maxContribution: 4339.2,

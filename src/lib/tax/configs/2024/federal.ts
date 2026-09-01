@@ -27,6 +27,7 @@ export const FEDERAL_TAX_CONFIG: FederalTaxConfig = {
     name: "Canada Pension Plan",
     shortName: "CPP",
     rate: 0.0595,
+    baseRate: 0.0495,
     exemption: 3500,
     maxEarnings: 68500,
     maxContribution: 3867.5,
