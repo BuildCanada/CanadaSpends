@@ -9,6 +9,8 @@
     "generate-statics": "tsx scripts/generate-statics.ts",
     "start": "next start",
     "lint": "next lint",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "lint:fix": "next lint --fix",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,md}\"",
     "prepare": "node -e \"if (!process.env.CI) { require('child_process').execSync('npx simple-git-hooks', {stdio: 'inherit'}) }\"",
@@ -91,7 +93,8 @@
     "simple-git-hooks": "^2.13.1",
     "tailwindcss": "^4.1.12",
     "tsx": "^4.20.4",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.2",
+    "vitest": "^4.1.11"
   },
   "packageManager": "pnpm@9.5.0+sha512.140036830124618d624a2187b50d04289d5a087f326c9edfc0ccd733d76c4f52c3a313d4fc148794a2a9d81553016004e6742e8cf850670268a7387fc220c903",
   "lint-staged": {
