@@ -295,15 +295,6 @@ export default function DesktopNav(props: DesktopNavProps) {
             </DropdownMenu.Item>
             <DropdownMenu.Item asChild>
               <Link
-                href="https://buildcanada.com/get-involved"
-                className="px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground rounded cursor-pointer"
-                target="_blank"
-              >
-                <Trans>Get Involved</Trans>
-              </Link>
-            </DropdownMenu.Item>
-            <DropdownMenu.Item asChild>
-              <Link
                 href={`/${i18n.locale}/contact`}
                 className="px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground rounded cursor-pointer"
               >
@@ -322,12 +313,12 @@ export default function DesktopNav(props: DesktopNavProps) {
         </DropdownMenu.Portal>
       </DropdownMenu.Root>
       <a
-        href="https://buildcanada.com/get-involved?utm_source=canadaspends&utm_medium=header"
+        href="https://www.buildcanada.com/?utm_source=canadaspends&utm_medium=header"
         target="_blank"
         rel="noopener noreferrer"
         className="bg-primary text-primary-foreground px-4 py-2 rounded-md text-sm font-semibold hover:bg-primary/90 transition-colors"
       >
-        <Trans>Join Build Canada</Trans>
+        <Trans>Follow Build Canada</Trans>
       </a>
     </nav>
   );

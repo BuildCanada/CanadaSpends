@@ -14,12 +14,12 @@ export function MobileMenuButton(props: MobileMenuButtonProps) {
   return (
     <div className="flex min-[900px]:hidden items-center gap-2">
       <a
-        href="https://buildcanada.com/get-involved?utm_source=canadaspends&utm_medium=header_mobile&utm_campaign=transparency"
+        href="https://www.buildcanada.com/?utm_source=canadaspends&utm_medium=header_mobile&utm_campaign=transparency"
         target="_blank"
         rel="noopener noreferrer"
         className="bg-primary text-primary-foreground px-3 py-1.5 rounded-md text-sm font-semibold hover:bg-primary/90 transition-colors whitespace-nowrap"
       >
-        <Trans>Join Build Canada</Trans>
+        <Trans>Follow Build Canada</Trans>
       </a>
       <button
         type="button"
@@ -202,13 +202,13 @@ export function MobileMenu(props: MobileMenuProps) {
           <Trans>Whistleblowers</Trans>
         </MobileNavLink>
         <a
-          href="https://buildcanada.com/get-involved?utm_source=canadaspends&utm_medium=header_mobile_menu&utm_campaign=transparency"
+          href="https://www.buildcanada.com/?utm_source=canadaspends&utm_medium=header_mobile_menu&utm_campaign=transparency"
           target="_blank"
           rel="noopener noreferrer"
           className="block mx-3 mt-4 bg-primary text-primary-foreground px-4 py-2 rounded-md text-base font-semibold text-center hover:bg-primary/90 transition-colors"
           onClick={() => setIsMenuOpen(false)}
         >
-          <Trans>Join Build Canada</Trans>
+          <Trans>Follow Build Canada</Trans>
         </a>
       </div>
     </div>
