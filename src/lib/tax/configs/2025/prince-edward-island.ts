@@ -18,6 +18,6 @@ export const PRINCE_EDWARD_ISLAND_TAX_CONFIG: ProvincialTaxConfig = {
       { min: 105000, max: 140000, rate: 0.1762 },
       { min: 140000, max: null, rate: 0.19 },
     ],
-    basicPersonalAmount: 13876,
+    basicPersonalAmount: 14650,
   },
 };

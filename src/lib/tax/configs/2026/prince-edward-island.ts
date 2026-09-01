@@ -4,12 +4,15 @@ export const PRINCE_EDWARD_ISLAND_TAX_CONFIG: ProvincialTaxConfig = {
   incomeTax: {
     type: "bracket",
     name: "Prince Edward Island Income Tax",
+    // 2026 brackets per CRA (adds a sixth 20% bracket over $200,000):
+    // https://www.canada.ca/en/revenue-agency/services/tax/individuals/tax-rates-brackets/current-year.html
     brackets: [
-      { min: 0, max: 33328, rate: 0.095 },
-      { min: 33328, max: 64656, rate: 0.1325 },
-      { min: 64656, max: 105000, rate: 0.1637 },
-      { min: 105000, max: 140000, rate: 0.1765 },
-      { min: 140000, max: null, rate: 0.19 },
+      { min: 0, max: 33928, rate: 0.095 },
+      { min: 33928, max: 65820, rate: 0.1347 },
+      { min: 65820, max: 106890, rate: 0.166 },
+      { min: 106890, max: 142520, rate: 0.1762 },
+      { min: 142520, max: 200000, rate: 0.19 },
+      { min: 200000, max: null, rate: 0.2 },
     ],
     basicPersonalAmount: 15000,
   },

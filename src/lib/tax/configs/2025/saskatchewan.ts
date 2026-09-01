@@ -16,6 +16,7 @@ export const SASKATCHEWAN_TAX_CONFIG: ProvincialTaxConfig = {
       { min: 53463, max: 152750, rate: 0.125 },
       { min: 152750, max: null, rate: 0.145 },
     ],
-    basicPersonalAmount: 18991,
+    // Includes the Saskatchewan Affordability Act $500 increase (per CRA T4127).
+    basicPersonalAmount: 19491,
   },
 };
