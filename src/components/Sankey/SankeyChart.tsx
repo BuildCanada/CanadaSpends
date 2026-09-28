@@ -13,11 +13,20 @@ import {
 } from "@/lib/sankeyDepartmentMappings";
 import { colours } from "@/styles/colours";
 
-// Dynamically import React Select to avoid SSR hydration issues
-const Select = dynamic(() => import("react-select"), {
-  ssr: false,
-  loading: () => <div className="search-select-placeholder">Loading...</div>,
-}) as any;
+// Dynamically import React Select to avoid SSR hydration issues.
+// If the chunk fails to load twice, render no search box: a rejected
+// dynamic import otherwise reaches the root error boundary and replaces
+// the whole page.
+const Select = dynamic(
+  () =>
+    import("react-select")
+      .catch(() => import("react-select"))
+      .catch(() => () => null),
+  {
+    ssr: false,
+    loading: () => <div className="search-select-placeholder">Loading...</div>,
+  },
+) as any;
 
 type FlatDataNodes = ReturnType<typeof getFlatData>["nodes"];
 type Node = FlatDataNodes[number] & {
