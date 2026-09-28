@@ -14,9 +14,8 @@ import {
 import { colours } from "@/styles/colours";
 
 // Dynamically import React Select to avoid SSR hydration issues.
-// If the chunk fails to load twice, render no search box: a rejected
-// dynamic import otherwise reaches the root error boundary and replaces
-// the whole page.
+// Retry a failed chunk once, then render no search box instead of letting
+// the error replace the whole page.
 const Select = dynamic(
   () =>
     import("react-select")
