@@ -14,13 +14,15 @@ import {
   calculateCpp2Contribution,
   calculateDetailedTax,
   calculateEnhancedContributionPortion,
+  type CreditLine,
+  type DetailedTaxCalculation,
   calculateHealthPremium,
-  calculateSurtax,
   formatCurrency,
   getBracketTaxBreakdown,
   getSupportedYears,
   getTaxConfig,
   SupportedYear,
+  type TaxBracket,
   TaxYearProvinceConfig,
 } from "@/lib/tax";
 import { localizedPath } from "@/lib/utils";
@@ -189,24 +191,23 @@ function formatPercent(rate: number): string {
   return `${(rate * 100).toFixed((rate * 100) % 1 === 0 ? 0 : 2)}%`;
 }
 
-// Income tax brackets section with calculated amounts
+// Income tax brackets section: tax by bracket on taxable income, less the
+// non-refundable credits the calculator applied
 function IncomeTaxBracketsSection({
   title,
-  config,
-  income,
+  brackets,
+  taxableIncome,
+  credits,
+  tax,
 }: {
   title: string;
-  config: {
-    brackets: Array<{ min: number; max: number | null; rate: number }>;
-    basicPersonalAmount: number;
-  };
-  income: number;
+  brackets: TaxBracket[];
+  taxableIncome: number;
+  credits: CreditLine[];
+  tax: number;
 }) {
-  const breakdown = getBracketTaxBreakdown(income, config.brackets);
-  const lowestRate = config.brackets[0]?.rate ?? 0;
-  const bpaCredit = config.basicPersonalAmount * lowestRate;
-  const totalBeforeCredit = breakdown.reduce((sum, b) => sum + b.taxAmount, 0);
-  const totalAfterCredit = Math.max(0, totalBeforeCredit - bpaCredit);
+  const breakdown = getBracketTaxBreakdown(taxableIncome, brackets);
+  const creditRate = brackets[0]?.rate ?? 0;
 
   return (
     <div>
@@ -246,24 +247,27 @@ function IncomeTaxBracketsSection({
               </td>
             </tr>
           ))}
-          <tr className="border-t border-border">
-            <td className="py-1 text-muted-foreground text-xs" colSpan={2}>
-              <Trans>
-                BPA credit ({formatAmount(config.basicPersonalAmount)} ×{" "}
-                {formatPercent(lowestRate)})
-              </Trans>
-            </td>
-            <td className="py-1 text-right font-medium text-red-600">
-              -{formatAmount(bpaCredit)}
-            </td>
-          </tr>
+          {credits.map((credit, index) => (
+            <tr
+              key={credit.id}
+              className={index === 0 ? "border-t border-border" : ""}
+            >
+              <td className="py-1 text-muted-foreground text-xs" colSpan={2}>
+                <Trans>
+                  {credit.name} credit ({formatAmount(credit.amount)} ×{" "}
+                  {formatPercent(creditRate)})
+                </Trans>
+              </td>
+              <td className="py-1 text-right font-medium text-red-600">
+                -{formatAmount(credit.value)}
+              </td>
+            </tr>
+          ))}
           <tr className="font-semibold">
             <td className="py-1" colSpan={2}>
               <Trans>Total</Trans>
             </td>
-            <td className="py-1 text-right">
-              {formatAmount(totalAfterCredit)}
-            </td>
+            <td className="py-1 text-right">{formatAmount(tax)}</td>
           </tr>
         </tbody>
       </table>
@@ -408,6 +412,7 @@ interface FederalTaxCardProps {
   provincialConfig: TaxYearProvinceConfig["provincial"];
   income: number;
   taxableBreakdown: TaxableIncomeBreakdown;
+  calculation: DetailedTaxCalculation;
 }
 
 function FederalTaxCard({
@@ -415,6 +420,7 @@ function FederalTaxCard({
   provincialConfig,
   income,
   taxableBreakdown,
+  calculation,
 }: FederalTaxCardProps) {
   const eiConfig = provincialConfig.eiOverride ?? config.ei;
   const hasProvincialPension = !!provincialConfig.pensionPlanOverride;
@@ -427,28 +433,15 @@ function FederalTaxCard({
   const eiAmount = calculateCappedContribution(income, eiConfig);
   const payrollTotal = cppAmount + cpp2Amount + eiAmount;
 
-  // Federal income tax is computed on taxable income (after the line 22215
-  // CPP/QPP enhanced deduction).
+  // Federal income tax comes from the calculator: brackets on taxable income
+  // (after the line 22215 deduction), less non-refundable credits.
   const { taxableIncome } = taxableBreakdown;
-  const breakdown = getBracketTaxBreakdown(
-    taxableIncome,
-    config.incomeTax.brackets,
-  );
-  const lowestRate = config.incomeTax.brackets[0]?.rate ?? 0;
-  const bpaCredit = config.incomeTax.basicPersonalAmount * lowestRate;
-  const incomeTaxBeforeCredit = breakdown.reduce(
-    (sum, b) => sum + b.taxAmount,
-    0,
-  );
-  const incomeTaxAmount = Math.max(0, incomeTaxBeforeCredit - bpaCredit);
+  const incomeTaxAmount = calculation.federalIncomeTax;
 
   const federalAbatementConfig = provincialConfig.federalAbatement;
-  const federalAbatementAmount = federalAbatementConfig
-    ? incomeTaxAmount * federalAbatementConfig.rate
-    : 0;
+  const federalAbatementAmount = calculation.federalAbatement;
 
-  const totalFederalTax =
-    incomeTaxAmount + payrollTotal - federalAbatementAmount;
+  const totalFederalTax = calculation.federalTax;
 
   return (
     <div className="bg-card rounded-lg shadow-sm border p-6 flex flex-col">
@@ -463,8 +456,10 @@ function FederalTaxCard({
         {/* Income Tax Brackets (applied to taxable income) */}
         <IncomeTaxBracketsSection
           title={config.incomeTax.name}
-          config={config.incomeTax}
-          income={taxableIncome}
+          brackets={config.incomeTax.brackets}
+          taxableIncome={taxableIncome}
+          credits={calculation.federalCredits}
+          tax={incomeTaxAmount}
         />
 
         {/* Federal Abatement (if applicable) */}
@@ -574,6 +569,7 @@ interface ProvincialTaxCardProps {
   config: TaxYearProvinceConfig["provincial"];
   income: number;
   taxableBreakdown: TaxableIncomeBreakdown;
+  calculation: DetailedTaxCalculation;
 }
 
 function ProvincialTaxCard({
@@ -581,6 +577,7 @@ function ProvincialTaxCard({
   config,
   income,
   taxableBreakdown,
+  calculation,
 }: ProvincialTaxCardProps) {
   const healthPremiumAmount = config.healthPremium
     ? calculateHealthPremium(income, config.healthPremium)
@@ -595,32 +592,14 @@ function ProvincialTaxCard({
     ? calculateCpp2Contribution(income, config.pensionPlanAdditionalOverride)
     : 0;
 
-  // Provincial income tax is computed on taxable income (after the line
-  // 22215 CPP/QPP enhanced deduction).
+  // Provincial income tax comes from the calculator: brackets on taxable
+  // income (after the line 22215 deduction), less non-refundable credits.
   const { taxableIncome } = taxableBreakdown;
-  const breakdown = getBracketTaxBreakdown(
-    taxableIncome,
-    config.incomeTax.brackets,
-  );
-  const lowestRate = config.incomeTax.brackets[0]?.rate ?? 0;
-  const bpaCredit = config.incomeTax.basicPersonalAmount * lowestRate;
-  const provincialTaxBeforeCredit = breakdown.reduce(
-    (sum, b) => sum + b.taxAmount,
-    0,
-  );
-  const provincialTax = Math.max(0, provincialTaxBeforeCredit - bpaCredit);
+  const provincialTax = calculation.provincialIncomeTax;
+  const surtaxAmount = calculation.surtax;
+  const taxReductions = calculation.provincialTaxReductions;
 
-  const surtaxAmount = config.surtax
-    ? calculateSurtax(provincialTax, config.surtax)
-    : 0;
-
-  const totalProvincialTax =
-    provincialTax +
-    surtaxAmount +
-    healthPremiumAmount +
-    parentalInsuranceAmount +
-    provincialPensionAmount +
-    provincialPensionAdditionalAmount;
+  const totalProvincialTax = calculation.provincialTax;
 
   return (
     <div className="bg-card rounded-lg shadow-sm border p-6 flex flex-col">
@@ -635,8 +614,10 @@ function ProvincialTaxCard({
         {/* Income Tax Brackets (applied to taxable income) */}
         <IncomeTaxBracketsSection
           title={config.incomeTax.name}
-          config={config.incomeTax}
-          income={taxableIncome}
+          brackets={config.incomeTax.brackets}
+          taxableIncome={taxableIncome}
+          credits={calculation.provincialCredits}
+          tax={provincialTax}
         />
 
         {/* Surtax (if applicable) */}
@@ -686,6 +667,29 @@ function ProvincialTaxCard({
                     {formatAmount(surtaxAmount)}
                   </td>
                 </tr>
+              </tbody>
+            </table>
+          </div>
+        )}
+
+        {/* Low-income tax reductions (e.g., BC tax reduction credit) */}
+        {taxReductions.length > 0 && (
+          <div className="mt-6 pt-4 border-t border-border">
+            <h4 className="font-semibold text-base mb-2">
+              <Trans>Low-income tax reductions</Trans>
+            </h4>
+            <table className="w-full text-left text-sm">
+              <tbody>
+                {taxReductions.map((reduction) => (
+                  <tr key={reduction.id}>
+                    <td className="py-1 text-muted-foreground">
+                      {reduction.name}
+                    </td>
+                    <td className="py-1 text-right font-medium text-red-600 w-20">
+                      -{formatAmount(reduction.amount)}
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
@@ -829,6 +833,11 @@ function TaxDetails({
 }: TaxDetailsProps) {
   const provinceName = PROVINCE_NAMES[config.province] || config.province;
   const taxableBreakdown = computeTaxableIncomeBreakdown(income, config);
+  const calculation = calculateDetailedTax(
+    income,
+    config.province,
+    config.year,
+  );
 
   return (
     <div id="tax-details" className="mt-16 scroll-mt-8">
@@ -858,12 +867,14 @@ function TaxDetails({
           provincialConfig={config.provincial}
           income={income}
           taxableBreakdown={taxableBreakdown}
+          calculation={calculation}
         />
         <ProvincialTaxCard
           provinceName={provinceName}
           config={config.provincial}
           income={income}
           taxableBreakdown={taxableBreakdown}
+          calculation={calculation}
         />
       </div>
     </div>

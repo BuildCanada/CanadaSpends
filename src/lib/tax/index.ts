@@ -21,12 +21,15 @@ export {
 
 // Type exports
 export type {
+  BpaPhaseOutConfig,
   BracketTaxConfig,
   CappedContributionConfig,
+  CreditLine,
   DetailedTaxCalculation,
   FederalTaxConfig,
   HealthPremiumConfig,
   HealthPremiumTier,
+  IncomeCreditsConfig,
   ProvincialTaxConfig,
   SpendingCategoryConfig,
   SpendingConfig,
@@ -37,18 +40,24 @@ export type {
   TaxBracket,
   TaxCalculation,
   TaxLineItem,
+  TaxReductionConfig,
+  TaxReductionLine,
   TaxYearProvinceConfig,
 } from "./types";
 
 // Calculator function exports (for direct use)
 export {
+  basicPersonalAmountFor,
   calculateBracketTax,
   calculateCappedContribution,
   calculateCpp2Contribution,
   calculateEnhancedContributionPortion,
   calculateHealthPremium,
+  calculateIncomeCredits,
+  calculateIncomeTax,
   calculateSurtax,
   calculateTaxFromBrackets,
+  calculateTaxReductions,
   getBracketTaxBreakdown,
 } from "./calculators";
 export type { BracketTaxBreakdown } from "./calculators";
