@@ -5,14 +5,13 @@ import { Trans } from "@lingui/react/macro";
 
 import { formatWholeDollars, RateCurvePoint } from "@/lib/tax";
 
-import { formatDollarTick, niceTicks } from "./chartScale";
+import { formatDollarTick, niceRange, niceTicks } from "./chartScale";
 import { planColor } from "./planColors";
 
 const WIDTH = 760;
-const HEIGHT = 320;
 const MARGIN = { top: 16, right: 16, bottom: 36, left: 64 };
 const PLOT_W = WIDTH - MARGIN.left - MARGIN.right;
-const PLOT_H = HEIGHT - MARGIN.top - MARGIN.bottom;
+const HEIGHTS = { total: 320, difference: 220 };
 
 function signed(amount: number) {
   const rounded = Math.round(amount);
@@ -24,29 +23,49 @@ interface TaxPaidChartProps {
   labels: string[];
   maxIncome: number;
   income: number;
+  /**
+   * "total": tax paid by each plan. "difference": each plan's tax minus
+   * plan A's, so plans that are close in total tax are still easy to tell
+   * apart (plan A is the zero line).
+   */
+  mode?: "total" | "difference";
 }
 
 /**
- * Total tax paid (y) by income (x), one line per plan.
+ * Tax paid (y) by income (x), one line per plan.
  */
 export function TaxPaidChart({
   points,
   labels,
   maxIncome,
   income,
+  mode = "total",
 }: TaxPaidChartProps) {
   const [hoverIndex, setHoverIndex] = useState<number | null>(null);
   const seriesCount = labels.length;
+  const HEIGHT = HEIGHTS[mode];
+  const PLOT_H = HEIGHT - MARGIN.top - MARGIN.bottom;
+  const value = (p: RateCurvePoint, s: number) =>
+    mode === "total" ? p.taxes[s] : p.taxes[s] - p.taxes[0];
 
   const { x, y, yTicks, xTicks, paths } = useMemo(() => {
-    const yScale = niceTicks(Math.max(...points.flatMap((p) => p.taxes)));
+    const values = points.flatMap((p) =>
+      Array.from({ length: seriesCount }, (_, s) => value(p, s)),
+    );
+    const yScale =
+      mode === "total"
+        ? { min: 0, ...niceTicks(Math.max(...values)) }
+        : niceRange(Math.min(...values), Math.max(...values));
     const x = (v: number) => MARGIN.left + (v / maxIncome) * PLOT_W;
-    const y = (v: number) => MARGIN.top + PLOT_H - (v / yScale.max) * PLOT_H;
+    const y = (v: number) =>
+      MARGIN.top +
+      PLOT_H -
+      ((v - yScale.min) / (yScale.max - yScale.min)) * PLOT_H;
     const paths = Array.from({ length: seriesCount }, (_, s) =>
       points
         .map(
           (p, i) =>
-            `${i === 0 ? "M" : "L"}${x(p.income).toFixed(1)},${y(p.taxes[s]).toFixed(1)}`,
+            `${i === 0 ? "M" : "L"}${x(p.income).toFixed(1)},${y(value(p, s)).toFixed(1)}`,
         )
         .join(" "),
     );
@@ -57,7 +76,8 @@ export function TaxPaidChart({
       xTicks: [0, 0.25, 0.5, 0.75, 1].map((f) => f * maxIncome),
       paths,
     };
-  }, [points, maxIncome, seriesCount]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [points, maxIncome, seriesCount, mode, PLOT_H]);
 
   const hovered = hoverIndex !== null ? points[hoverIndex] : null;
   const markerIncome = Math.min(income, maxIncome);
@@ -80,30 +100,40 @@ export function TaxPaidChart({
 
   return (
     <figure className="m-0">
-      <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-foreground/70 mb-3">
-        {labels.map((label, i) => (
-          <span key={i} className="inline-flex items-center gap-2">
-            <svg width="24" height="4" aria-hidden>
-              <line
-                x1="0"
-                x2="24"
-                y1="2"
-                y2="2"
-                stroke={planColor(i)}
-                strokeWidth={i === 0 ? 2 : 3}
-                strokeDasharray={i === 0 ? "5 4" : undefined}
-              />
-            </svg>
-            {label}
-          </span>
-        ))}
-      </div>
+      {mode === "total" ? (
+        <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-foreground/70 mb-3">
+          {labels.map((label, i) => (
+            <span key={i} className="inline-flex items-center gap-2">
+              <svg width="24" height="4" aria-hidden>
+                <line
+                  x1="0"
+                  x2="24"
+                  y1="2"
+                  y2="2"
+                  stroke={planColor(i)}
+                  strokeWidth={i === 0 ? 2 : 3}
+                  strokeDasharray={i === 0 ? "5 4" : undefined}
+                />
+              </svg>
+              {label}
+            </span>
+          ))}
+        </div>
+      ) : (
+        <div className="text-sm font-medium text-foreground/70 mb-2">
+          <Trans>Difference from {labels[0]}</Trans>
+        </div>
+      )}
       <div className="relative">
         <svg
           viewBox={`0 0 ${WIDTH} ${HEIGHT}`}
           className="w-full h-auto touch-none select-none"
           role="img"
-          aria-label={`Total tax paid by income: ${labels.join(", ")}`}
+          aria-label={
+            mode === "total"
+              ? `Total tax paid by income: ${labels.join(", ")}`
+              : `Difference in tax paid from ${labels[0]} by income: ${labels.slice(1).join(", ")}`
+          }
           onPointerMove={handleMove}
           onPointerLeave={() => setHoverIndex(null)}
         >
@@ -115,7 +145,11 @@ export function TaxPaidChart({
                 y1={y(tick)}
                 y2={y(tick)}
                 stroke="currentColor"
-                className="text-foreground/10"
+                className={
+                  tick === 0 && mode === "difference"
+                    ? "text-foreground/30"
+                    : "text-foreground/10"
+                }
               />
               <text
                 x={MARGIN.left - 8}
@@ -167,7 +201,7 @@ export function TaxPaidChart({
             <circle
               key={s}
               cx={x(markerIncome)}
-              cy={y(nearest.taxes[s])}
+              cy={y(value(nearest, s))}
               r={s === 0 ? 4.5 : 5}
               fill={s === 0 ? "var(--color-card)" : planColor(s)}
               stroke={s === 0 ? planColor(0) : "var(--color-card)"}
@@ -189,7 +223,7 @@ export function TaxPaidChart({
                 <circle
                   key={s}
                   cx={x(hovered.income)}
-                  cy={y(hovered.taxes[s])}
+                  cy={y(value(hovered, s))}
                   r={4}
                   fill={planColor(s)}
                 />

@@ -164,10 +164,23 @@ export function TaxChartSection({
         maxIncome={maxIncome}
         income={income}
       />
+      {comparison.plans.length > 1 && (
+        <div className="mt-6">
+          <TaxPaidChart
+            mode="difference"
+            points={curve}
+            labels={comparison.plans.map((p) => p.label)}
+            maxIncome={maxIncome}
+            income={income}
+          />
+        </div>
+      )}
       <p className="text-xs text-foreground/50 mt-2">
         <Trans>
           Total tax paid (income tax, CPP/QPP, EI and premiums) by employment
-          income. The dotted line marks the selected income.
+          income, and how much more or less each plan charges than{" "}
+          {comparison.reference.label}. The dotted line marks the selected
+          income.
         </Trans>
       </p>
     </div>

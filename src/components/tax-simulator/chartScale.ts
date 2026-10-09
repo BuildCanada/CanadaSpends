@@ -19,6 +19,7 @@ export function niceTicks(max: number, target = 5) {
 
 /** Compact dollar label for axis ticks: $0, $25k, $1.5M. */
 export function formatDollarTick(v: number): string {
+  if (v < 0) return `−${formatDollarTick(-v)}`;
   if (v >= 1_000_000) {
     const m = v / 1_000_000;
     return `$${Number.isInteger(m) ? m : m.toFixed(1)}M`;
@@ -28,4 +29,26 @@ export function formatDollarTick(v: number): string {
     return `$${Number.isInteger(k) ? k : k.toFixed(1)}k`;
   }
   return `$${Math.round(v)}`;
+}
+
+/**
+ * Nice ticks for a range that may include negative values (always
+ * including zero), e.g. differences between plans.
+ */
+export function niceRange(min: number, max: number, target = 4) {
+  const lo = Math.min(0, min);
+  const hi = Math.max(0, max);
+  const span = hi - lo || 1;
+  const rough = span / target;
+  const magnitude = 10 ** Math.floor(Math.log10(rough));
+  const step =
+    [1, 2, 2.5, 5, 10].map((m) => m * magnitude).find((s) => s >= rough) ??
+    10 * magnitude;
+  const niceMin = Math.floor(lo / step) * step;
+  const niceMax = Math.ceil(hi / step) * step || step;
+  const ticks: number[] = [];
+  for (let v = niceMin; v <= niceMax + step / 2; v += step) {
+    ticks.push(Math.abs(v) < step / 1e6 ? 0 : v);
+  }
+  return { min: niceMin, max: niceMax, ticks };
 }
