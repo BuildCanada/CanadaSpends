@@ -44,11 +44,11 @@ describe("French scenario text", () => {
       scenario.plans.map((p, i) => planLabel(p, i, scenario.plans, "fr")),
     ).toEqual([
       `Colombie-Britannique ${SCENARIO_YEAR}`,
-      "Changement proposé",
+      "Changement simulé",
       `Québec ${SCENARIO_YEAR}`,
     ]);
     expect(scenarioTitle(scenario, "fr")).toBe(
-      "Colombie-Britannique : changement fiscal proposé",
+      "Changement fiscal simulé : Colombie-Britannique",
     );
   });
 
@@ -58,9 +58,7 @@ describe("French scenario text", () => {
       compareScenario(scenario, "fr")!,
       "fr",
     );
-    expect(text).toMatch(
-      /^Pour un revenu de \$100,000\. Changement proposé : /,
-    );
+    expect(text).toMatch(/^Pour un revenu de \$100,000\. Changement simulé : /);
     expect(text).toContain("de moins par année que Colombie-Britannique");
     expect(text).toMatch(/\d+,\d %/); // French decimal comma
   });

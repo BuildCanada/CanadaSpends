@@ -242,7 +242,7 @@ describe("neutral labels and titles", () => {
     ];
     expect(plans.map((p, i) => planLabel(p, i, plans))).toEqual([
       `Ontario ${SCENARIO_YEAR}`,
-      "Proposed change",
+      "Simulated change",
     ]);
   });
 
@@ -255,13 +255,13 @@ describe("neutral labels and titles", () => {
     ];
     expect(plans.map((p, i) => planLabel(p, i, plans))).toEqual([
       `British Columbia ${SCENARIO_YEAR}`,
-      "Proposal 1",
+      "Simulated change 1",
       `Alberta ${SCENARIO_YEAR}`,
-      "Proposal 2",
+      "Simulated change 2",
     ]);
   });
 
-  it("titles proposals '<Province> Proposed Tax Change'", () => {
+  it("titles scenarios 'Simulated Tax Change: <Province>'", () => {
     expect(
       scenarioTitle({
         income: 1,
@@ -271,16 +271,16 @@ describe("neutral labels and titles", () => {
           createPlan("alberta"),
         ],
       }),
-    ).toBe("British Columbia Proposed Tax Change");
+    ).toBe("Simulated Tax Change: British Columbia");
   });
 
-  it("titles a comparison of current law only '<Province> Tax Comparison'", () => {
+  it("uses the same title when only comparing provinces' current law", () => {
     expect(
       scenarioTitle({
         income: 1,
         plans: [createPlan("ontario"), createPlan("alberta")],
       }),
-    ).toBe("Ontario Tax Comparison");
+    ).toBe("Simulated Tax Change: Ontario");
   });
 });
 

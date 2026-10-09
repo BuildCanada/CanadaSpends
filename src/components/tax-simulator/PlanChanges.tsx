@@ -96,7 +96,7 @@ function LevelChanges({
               <Trans>Current</Trans>
             </th>
             <th className="pb-1.5 pl-3 font-medium text-right">
-              <Trans>Proposed</Trans>
+              <Trans>Simulated</Trans>
             </th>
           </tr>
         </thead>
