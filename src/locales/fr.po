@@ -737,6 +737,11 @@ msgstr "Taxes sur le carbone"
 msgid "Cash, investments, accounts receivable, and other assets that can be converted to cash."
 msgstr "Encaisse, placements, comptes débiteurs et autres actifs pouvant être convertis en espèces."
 
+#. placeholder {0}: comparison.reference.label
+#: src/components/tax-simulator/ComparisonResults.tsx:364
+msgid "Change vs {0}"
+msgstr ""
+
 #: src/components/first-nations/RemunerationOverview.tsx:401
 msgid "Chief"
 msgstr "Chef"
@@ -860,7 +865,7 @@ msgstr "Contributeurs / Supporteurs"
 msgid "Copy and paste the following .onion address into the Tor Browser:"
 msgstr "Copiez et collez l'adresse .onion suivante dans le navigateur Tor :"
 
-#: src/components/tax-simulator/ComparisonResults.tsx:457
+#: src/components/tax-simulator/ComparisonResults.tsx:465
 msgid "Copy link"
 msgstr ""
 
@@ -876,7 +881,7 @@ msgstr "Impôts sur le revenu des sociétés"
 msgid "Corrections"
 msgstr "Services correctionnels"
 
-#: src/components/tax-simulator/ComparisonResults.tsx:434
+#: src/components/tax-simulator/ComparisonResults.tsx:442
 msgid "Couldn't copy the link"
 msgstr ""
 
@@ -1060,7 +1065,7 @@ msgstr "Ne discutez pas de votre soumission avec quiconque et ne recherchez pas 
 msgid "Download and install the <0>Tor Browser</0> from the official Tor Project website."
 msgstr "Téléchargez et installez le <0>navigateur Tor</0> depuis le site officiel du projet Tor."
 
-#: src/components/tax-simulator/ComparisonResults.tsx:496
+#: src/components/tax-simulator/ComparisonResults.tsx:504
 msgid "Download image"
 msgstr ""
 
@@ -1233,7 +1238,7 @@ msgstr "Impôt sur le revenu estimé payé au gouvernement provincial"
 msgid "Estimated public service workforce"
 msgstr "Effectifs de la fonction publique estimés"
 
-#: src/components/tax-simulator/ComparisonResults.tsx:380
+#: src/components/tax-simulator/ComparisonResults.tsx:388
 msgid "Estimates assume employment income only and include federal and provincial income tax, the basic personal amount credit, surtaxes, health premiums, CPP/QPP, EI and QPIP. Other credits and deductions (such as RRSP contributions) aren't included. Changing brackets affects income tax only; payroll contributions stay at current rates. This shows the direct effect on individuals, not effects on government revenue or behaviour."
 msgstr ""
 
@@ -2323,7 +2328,7 @@ msgstr "En savoir plus sur la technologie sur <0>globaleaks.org</0>."
 msgid "Line by line"
 msgstr ""
 
-#: src/components/tax-simulator/ComparisonResults.tsx:432
+#: src/components/tax-simulator/ComparisonResults.tsx:440
 msgid "Link copied"
 msgstr ""
 
@@ -3513,7 +3518,7 @@ msgstr ""
 msgid "Share this comparison"
 msgstr ""
 
-#: src/components/tax-simulator/ComparisonResults.tsx:461
+#: src/components/tax-simulator/ComparisonResults.tsx:469
 msgid "Share…"
 msgstr ""
 

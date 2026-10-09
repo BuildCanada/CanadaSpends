@@ -190,7 +190,7 @@ export function TaxChartSection({
 
 function PlanHeaderCell({ label, index }: { label: string; index: number }) {
   return (
-    <th className="pb-2 font-medium text-right align-bottom">
+    <th className="pb-2 pl-4 font-medium text-right align-bottom">
       <span className="inline-flex items-center gap-1.5 justify-end">
         <PlanSwatch index={index} />
         <span className="truncate max-w-32">{label}</span>
@@ -355,19 +355,27 @@ export function LineByLineTable({
             {comparison.plans.map((p, i) => (
               <td key={i} className="py-2 text-right">
                 {formatWholeDollars(p.result.totalTax)}
-                {i > 0 && (
-                  <div
-                    className={cn(
-                      "text-xs font-medium",
-                      deltaClass(p.difference),
-                    )}
-                  >
-                    {signedDollars(p.difference)}
-                  </div>
-                )}
               </td>
             ))}
           </tr>
+          {comparison.plans.length > 1 && (
+            <tr className="text-xs">
+              <td className="pb-2 text-foreground/60">
+                <Trans>Change vs {comparison.reference.label}</Trans>
+              </td>
+              {comparison.plans.map((p, i) => (
+                <td
+                  key={i}
+                  className={cn(
+                    "pb-2 text-right font-medium",
+                    i === 0 ? "text-foreground/40" : deltaClass(p.difference),
+                  )}
+                >
+                  {i === 0 ? "—" : signedDollars(p.difference)}
+                </td>
+              ))}
+            </tr>
+          )}
         </tbody>
       </table>
     </div>
