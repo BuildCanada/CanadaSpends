@@ -386,7 +386,9 @@ export async function GET(request: Request) {
   const subtitle = text.wouldPay(formatWholeDollars(scenario.income), where);
 
   // Fit the chart into the space left below the header, title and stats
-  const TITLE_H = Math.max(48, titleLines * titleSize * 1.05);
+  // Line height leaves room for descenders (the "g" in "Change")
+  const TITLE_LINE_HEIGHT = 1.2;
+  const TITLE_H = Math.max(48, titleLines * titleSize * TITLE_LINE_HEIGHT);
   const SUBTITLE_H = 32;
   const STATS_H = 96;
   const FOOTER_H = LOGO_H;
@@ -432,7 +434,7 @@ export async function GET(request: Request) {
                 alignItems: "center",
                 fontFamily: "Display",
                 fontSize: titleSize,
-                lineHeight: 1.05,
+                lineHeight: TITLE_LINE_HEIGHT,
                 letterSpacing: -1,
                 height: TITLE_H,
                 overflow: "hidden",
