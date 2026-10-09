@@ -12,7 +12,7 @@ import { planColor } from "./planColors";
 const WIDTH = 760;
 const MARGIN = { top: 16, right: 16, bottom: 36, left: 64 };
 const PLOT_W = WIDTH - MARGIN.left - MARGIN.right;
-const HEIGHTS = { total: 320, difference: 220 };
+const HEIGHTS = { total: 320, difference: 220, marginal: 320 };
 
 function signed(amount: number) {
   const rounded = Math.round(amount);
@@ -27,15 +27,16 @@ interface TaxPaidChartProps {
   /**
    * "total": tax paid by each plan. "difference": each plan's tax minus
    * plan A's, so plans that are close in total tax are still easy to tell
-   * apart (plan A is the zero line).
+   * apart (plan A is the zero line). "marginal": each plan's combined
+   * marginal tax rate, drawn as steps.
    */
-  mode?: "total" | "difference";
+  mode?: "total" | "difference" | "marginal";
   /** Show the plan legend above the chart (once per group of charts) */
   showLegend?: boolean;
 }
 
 /**
- * Tax paid (y) by income (x), one line per plan.
+ * Tax paid or marginal rate (y) by income (x), one line per plan.
  */
 export function TaxPaidChart({
   points,
@@ -52,7 +53,13 @@ export function TaxPaidChart({
   const HEIGHT = HEIGHTS[mode];
   const PLOT_H = HEIGHT - MARGIN.top - MARGIN.bottom;
   const value = (p: RateCurvePoint, s: number) =>
-    mode === "total" ? p.taxes[s] : p.taxes[s] - p.taxes[0];
+    mode === "total"
+      ? p.taxes[s]
+      : mode === "marginal"
+        ? p.rates[s]
+        : p.taxes[s] - p.taxes[0];
+  const formatTick = (v: number) =>
+    mode === "marginal" ? formatRate(v, lang, true) : formatDollarTick(v);
 
   const { x, y, yTicks, xTicks, paths } = useMemo(() => {
     const values = points.flatMap((p) =>
@@ -61,17 +68,24 @@ export function TaxPaidChart({
     const yScale =
       mode === "total"
         ? { min: 0, ...niceTicks(Math.max(...values)) }
-        : niceRange(Math.min(...values), Math.max(...values));
+        : mode === "marginal"
+          ? { min: 0, ...niceTicks(Math.max(...values), 6) }
+          : niceRange(Math.min(...values), Math.max(...values));
     const x = (v: number) => MARGIN.left + (v / maxIncome) * PLOT_W;
     const y = (v: number) =>
       MARGIN.top +
       PLOT_H -
       ((v - yScale.min) / (yScale.max - yScale.min)) * PLOT_H;
+    // Marginal rates change in steps: each sample's rate holds until the
+    // next sample
     const paths = Array.from({ length: seriesCount }, (_, s) =>
       points
-        .map(
-          (p, i) =>
-            `${i === 0 ? "M" : "L"}${x(p.income).toFixed(1)},${y(value(p, s)).toFixed(1)}`,
+        .map((p, i) =>
+          i === 0
+            ? `M${x(p.income).toFixed(1)},${y(value(p, s)).toFixed(1)}`
+            : mode === "marginal"
+              ? `H${x(p.income).toFixed(1)} V${y(value(p, s)).toFixed(1)}`
+              : `L${x(p.income).toFixed(1)},${y(value(p, s)).toFixed(1)}`,
         )
         .join(" "),
     );
@@ -79,7 +93,12 @@ export function TaxPaidChart({
       x,
       y,
       yTicks: yScale.ticks,
-      xTicks: [0, 0.25, 0.5, 0.75, 1].map((f) => f * maxIncome),
+      // The marginal chart's range varies (up to past the top bracket), so
+      // its ticks land on round amounts
+      xTicks:
+        mode === "marginal"
+          ? niceTicks(maxIncome).ticks.filter((t) => t <= maxIncome)
+          : [0, 0.25, 0.5, 0.75, 1].map((f) => f * maxIncome),
       paths,
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -110,6 +129,8 @@ export function TaxPaidChart({
         <h4 className="font-display font-bold text-xl text-foreground">
           {mode === "total" ? (
             <Trans>Total annual tax by income</Trans>
+          ) : mode === "marginal" ? (
+            <Trans>Combined marginal tax rate by income</Trans>
           ) : (
             <Trans>Change in annual tax vs {labels[0]}</Trans>
           )}
@@ -118,6 +139,11 @@ export function TaxPaidChart({
           {mode === "total" ? (
             <Trans>
               Income tax, CPP/QPP, EI and premiums, by employment income
+            </Trans>
+          ) : mode === "marginal" ? (
+            <Trans>
+              Federal and provincial income tax on the next dollar of employment
+              income. Excludes CPP/QPP, EI and QPIP contributions.
             </Trans>
           ) : (
             <Trans>
@@ -155,7 +181,9 @@ export function TaxPaidChart({
           aria-label={
             mode === "total"
               ? `Total tax paid by income: ${labels.join(", ")}`
-              : `Difference in tax paid from ${labels[0]} by income: ${labels.slice(1).join(", ")}`
+              : mode === "marginal"
+                ? `Combined marginal tax rate by income: ${labels.join(", ")}`
+                : `Difference in tax paid from ${labels[0]} by income: ${labels.slice(1).join(", ")}`
           }
           onPointerMove={handleMove}
           onPointerLeave={() => setHoverIndex(null)}
@@ -181,7 +209,7 @@ export function TaxPaidChart({
                 textAnchor="end"
                 className="fill-foreground/50 text-[14px] font-mono"
               >
-                {formatDollarTick(tick)}
+                {formatTick(tick)}
               </text>
             </g>
           ))}
@@ -190,7 +218,13 @@ export function TaxPaidChart({
               key={tick}
               x={x(tick)}
               y={HEIGHT - 10}
-              textAnchor={i === 0 ? "start" : i === 4 ? "end" : "middle"}
+              textAnchor={
+                i === 0
+                  ? "start"
+                  : i === xTicks.length - 1 && tick === maxIncome
+                    ? "end"
+                    : "middle"
+              }
               className="fill-foreground/50 text-[14px] font-mono"
             >
               {formatDollarTick(tick)}
@@ -276,17 +310,23 @@ export function TaxPaidChart({
                   />
                   {label}
                 </span>
-                <span className="tabular-nums">
-                  {formatWholeDollars(hovered.taxes[s])}
-                  <span className="text-foreground/50 ml-1">
+                {mode === "marginal" ? (
+                  <span className="tabular-nums">
                     {formatRate(hovered.rates[s], lang)}
                   </span>
-                  {s > 0 && (
+                ) : (
+                  <span className="tabular-nums">
+                    {formatWholeDollars(hovered.taxes[s])}
                     <span className="text-foreground/50 ml-1">
-                      ({signed(hovered.taxes[s] - hovered.taxes[0])})
+                      {formatRate(hovered.rates[s], lang)}
                     </span>
-                  )}
-                </span>
+                    {s > 0 && (
+                      <span className="text-foreground/50 ml-1">
+                        ({signed(hovered.taxes[s] - hovered.taxes[0])})
+                      </span>
+                    )}
+                  </span>
+                )}
               </div>
             ))}
           </div>

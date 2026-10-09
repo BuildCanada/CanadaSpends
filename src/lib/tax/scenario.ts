@@ -555,7 +555,32 @@ export function buildRateCurve(
  * scenario's income.
  */
 export function chartMaxIncome(income: number): number {
-  const target = Math.max(250_000, income * 1.5);
+  return roundChartIncome(Math.max(250_000, income * 1.5));
+}
+
+/**
+ * The marginal rate chart's range: the usual range, extended past every
+ * plan's top bracket threshold (and federal BPA phase-out) so each rate
+ * change is visible, e.g. a new bracket at $1M.
+ */
+export function marginalChartMaxIncome(
+  comparison: Pick<ScenarioComparison, "plans">,
+  income: number,
+): number {
+  const lastChange = Math.max(
+    ...comparison.plans.flatMap(({ config }) =>
+      [config.federal.incomeTax, config.provincial.incomeTax].map((tax) =>
+        Math.max(
+          tax.brackets[tax.brackets.length - 1]?.min ?? 0,
+          tax.credits?.bpaPhaseOut?.end ?? 0,
+        ),
+      ),
+    ),
+  );
+  return Math.max(chartMaxIncome(income), roundChartIncome(lastChange * 1.25));
+}
+
+function roundChartIncome(target: number): number {
   const step = target > 1_000_000 ? 250_000 : 50_000;
   return Math.ceil(target / step) * step;
 }
