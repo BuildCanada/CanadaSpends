@@ -65,6 +65,7 @@ export {
   applyPlan,
   buildRateCurve,
   chartMaxIncome,
+  marginalChartMaxIncome,
   CODE_TO_PROVINCE,
   compareScenario,
   createDefaultScenario,

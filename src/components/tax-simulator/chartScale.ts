@@ -21,8 +21,8 @@ export function niceTicks(max: number, target = 5) {
 export function formatDollarTick(v: number): string {
   if (v < 0) return `−${formatDollarTick(-v)}`;
   if (v >= 1_000_000) {
-    const m = v / 1_000_000;
-    return `$${Number.isInteger(m) ? m : m.toFixed(1)}M`;
+    // Up to two decimals so ticks like $1.25M aren't rounded
+    return `$${Number(Math.round((v / 1_000_000) * 100) / 100)}M`;
   }
   if (v >= 1000) {
     const k = v / 1000;
