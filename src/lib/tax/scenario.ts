@@ -172,11 +172,22 @@ function getParam(params: SearchParamsLike, key: string): string | null {
   return Array.isArray(value) ? (value[0] ?? null) : (value ?? null);
 }
 
+// Limits applied identically when writing and reading URLs, so a link always
+// reproduces exactly the scenario it was made from (and the page's og:image
+// matches the image the share buttons warm).
+function limitAmount(n: number): number {
+  return Math.min(Math.round(n), MAX_SCENARIO_INCOME);
+}
+
+function limitText(text: string, max: number): string {
+  return text.trim().slice(0, max).trim();
+}
+
 function parseAmount(value: string | null): number | null {
   if (value === null || value === "") return null;
   const n = Number(value);
   if (!Number.isFinite(n) || n < 0) return null;
-  return Math.min(Math.round(n), MAX_SCENARIO_INCOME);
+  return limitAmount(n);
 }
 
 function parseProvince(value: string | null): string | null {
@@ -201,7 +212,7 @@ function parsePlan(
 ): TaxPlan {
   const get = (key: string) => getParam(params, `${prefix}${key}`);
   return {
-    name: (get("name") ?? "").trim().slice(0, MAX_PLAN_NAME_LENGTH),
+    name: limitText(get("name") ?? "", MAX_PLAN_NAME_LENGTH),
     province: parseProvince(get("province")) ?? fallback.province,
     year: parseYear(get("year")) ?? fallback.year,
     federalBrackets: decodeBrackets(get("fb")),
@@ -224,9 +235,10 @@ function hasPlanParams(params: SearchParamsLike, key: string): boolean {
 export function parseScenario(params: SearchParamsLike): TaxScenario {
   const scenario = createDefaultScenario();
 
-  scenario.title = (getParam(params, "title") ?? "")
-    .trim()
-    .slice(0, MAX_SCENARIO_TITLE_LENGTH);
+  scenario.title = limitText(
+    getParam(params, "title") ?? "",
+    MAX_SCENARIO_TITLE_LENGTH,
+  );
 
   const income = parseAmount(getParam(params, "income"));
   if (income !== null && income > 0) scenario.income = income;
@@ -256,8 +268,9 @@ export function parseScenario(params: SearchParamsLike): TaxScenario {
  */
 export function serializeScenario(scenario: TaxScenario): URLSearchParams {
   const params = new URLSearchParams();
-  if (scenario.title.trim()) params.set("title", scenario.title.trim());
-  params.set("income", String(Math.round(scenario.income)));
+  const title = limitText(scenario.title, MAX_SCENARIO_TITLE_LENGTH);
+  if (title) params.set("title", title);
+  params.set("income", String(limitAmount(scenario.income)));
 
   scenario.plans.slice(0, MAX_PLANS).forEach((plan, i) => {
     const prefix = `${PLAN_KEYS[i]}.`;
@@ -267,7 +280,8 @@ export function serializeScenario(scenario: TaxScenario): URLSearchParams {
     // Province and year are always written so each plan is present in the URL
     params.set(`${prefix}province`, PROVINCE_TO_CODE[plan.province] ?? "ON");
     params.set(`${prefix}year`, plan.year);
-    if (plan.name.trim()) params.set(`${prefix}name`, plan.name.trim());
+    const name = limitText(plan.name, MAX_PLAN_NAME_LENGTH);
+    if (name) params.set(`${prefix}name`, name);
   });
 
   return params;
@@ -290,7 +304,7 @@ export function planOverrideParams(plan: TaxPlan): Record<string, string> {
     plan.federalBpa !== null &&
     plan.federalBpa !== fed?.basicPersonalAmount
   ) {
-    out.fbpa = String(plan.federalBpa);
+    out.fbpa = String(limitAmount(plan.federalBpa));
   }
   if (
     plan.provincialBrackets &&
@@ -302,7 +316,7 @@ export function planOverrideParams(plan: TaxPlan): Record<string, string> {
     plan.provincialBpa !== null &&
     plan.provincialBpa !== prov?.basicPersonalAmount
   ) {
-    out.pbpa = String(plan.provincialBpa);
+    out.pbpa = String(limitAmount(plan.provincialBpa));
   }
   if (plan.removeSurtax && base?.provincial.surtax) out.nosurtax = "1";
   if (plan.removeHealthPremium && base?.provincial.healthPremium) {

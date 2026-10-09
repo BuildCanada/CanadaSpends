@@ -207,6 +207,7 @@ function BracketEditor({
           ariaLabel={t`${title} basic personal amount`}
           prefix="$"
           value={bpa}
+          max={MAX_SCENARIO_INCOME}
           onCommit={(value) => onBpaChange(Math.round(value))}
         />
       </div>
@@ -297,6 +298,12 @@ function usePresets(): Preset[] {
         !!config.provincial.surtax || !!config.provincial.healthPremium,
     },
   ];
+}
+
+// "Name (copy)", shortening the name so the suffix survives the length limit
+function copyName(name: string, suffix: string): string {
+  const room = MAX_PLAN_NAME_LENGTH - suffix.length - 1;
+  return `${name.trim().slice(0, room).trimEnd()} ${suffix}`;
 }
 
 function clearProvincialOverrides(plan: TaxPlan): TaxPlan {
@@ -836,7 +843,7 @@ export function TaxSimulator() {
                 onDuplicate={() =>
                   addPlan({
                     ...plan,
-                    name: plan.name ? t`${plan.name} (copy)` : "",
+                    name: plan.name ? copyName(plan.name, t`(copy)`) : "",
                   })
                 }
                 canRemove={scenario.plans.length > 1}

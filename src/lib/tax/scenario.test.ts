@@ -124,6 +124,31 @@ describe("scenario URL params", () => {
     expect(serializeScenario(parseScenario(asObject)).toString()).toBe(query);
   });
 
+  it("applies the same limits when writing as when reading links", () => {
+    // Values beyond the URL's limits must be written already limited, or the
+    // shared page (and its og:image) would differ from the editor's link.
+    const scenario: TaxScenario = {
+      title: "x".repeat(70) + "          " + "y".repeat(40),
+      income: 500_000_000,
+      plans: [
+        createPlan("ontario", "2026"),
+        {
+          ...createPlan("ontario", "2026"),
+          name: "a".repeat(39) + " b".repeat(10),
+          federalBpa: 200_000_000,
+        },
+      ],
+    };
+    const query = serializeScenario(scenario).toString();
+    const parsed = parseScenario(new URLSearchParams(query));
+    expect(serializeScenario(parsed).toString()).toBe(query);
+    expect(parsed.income).toBe(100_000_000);
+    expect(parsed.plans[1].federalBpa).toBe(100_000_000);
+    expect(parsed.title.length).toBeLessThanOrEqual(80);
+    expect(parsed.title).toBe(parsed.title.trim());
+    expect(parsed.plans[1].name.length).toBeLessThanOrEqual(40);
+  });
+
   it("reads legacy single-plan links as current law vs. the plan", () => {
     const scenario = parseScenario(
       new URLSearchParams(
