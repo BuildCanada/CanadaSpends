@@ -698,22 +698,28 @@ export function TaxSimulator() {
   // Changing the reference province moves its proposals along with it
   // (keeping federal changes; provincial changes don't carry across) and
   // drops any other-province plan that would now duplicate it.
-  const setReferenceProvince = (province: string) =>
-    setScenario((s) => ({
-      ...s,
-      plans: s.plans
-        .map((p, i) =>
-          i === 0
-            ? createPlan(province)
-            : isProposal(i, s.plans)
-              ? { ...clearProvincialOverrides(p), province }
-              : p,
-        )
-        .filter(
-          (p, i) =>
-            i === 0 || p.province !== province || isProposal(i, s.plans),
-        ),
-    }));
+  const setReferenceProvince = (province: string) => {
+    const plans = scenario.plans;
+    const kept = plans
+      .map((p, i) => ({ p, i }))
+      .filter(
+        ({ p, i }) =>
+          i === 0 || p.province !== province || isProposal(i, plans),
+      );
+    setScenario({
+      ...scenario,
+      plans: kept.map(({ p, i }) =>
+        i === 0
+          ? createPlan(province)
+          : isProposal(i, plans)
+            ? { ...clearProvincialOverrides(p), province }
+            : p,
+      ),
+    });
+    // Keep the same proposal open after plans before it are removed
+    const open = kept.findIndex(({ i }) => i === expanded);
+    setExpanded(open >= 0 ? open : null);
+  };
 
   const canAdd = scenario.plans.length < MAX_PLANS;
 

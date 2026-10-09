@@ -241,7 +241,7 @@ describe("neutral labels and titles", () => {
       { ...createPlan("ontario"), federalBpa: 20000 },
     ];
     expect(plans.map((p, i) => planLabel(p, i, plans))).toEqual([
-      "Current law",
+      `Ontario ${SCENARIO_YEAR}`,
       "Proposed change",
     ]);
   });
@@ -254,9 +254,9 @@ describe("neutral labels and titles", () => {
       { ...createPlan("british-columbia"), provincialBpa: 20000 },
     ];
     expect(plans.map((p, i) => planLabel(p, i, plans))).toEqual([
-      "Current British Columbia",
+      `British Columbia ${SCENARIO_YEAR}`,
       "Proposal 1",
-      "Current Alberta",
+      `Alberta ${SCENARIO_YEAR}`,
       "Proposal 2",
     ]);
   });

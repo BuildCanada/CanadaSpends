@@ -375,9 +375,8 @@ export function scenarioHasChanges(scenario: TaxScenario): boolean {
 
 /**
  * Neutral, generated label for a plan:
- * - plan A: "Current law", or "Current Alberta" when provinces are mixed
+ * - current law (plan A and other provinces): "British Columbia 2026"
  * - proposals: "Proposed change", or "Proposal 1", "Proposal 2", …
- * - other provinces: "Current Alberta"
  */
 export function planLabel(plan: TaxPlan, index: number, plans: TaxPlan[]) {
   const province = PROVINCE_NAMES[plan.province] ?? plan.province;
@@ -389,8 +388,7 @@ export function planLabel(plan: TaxPlan, index: number, plans: TaxPlan[]) {
       ? "Proposed change"
       : `Proposal ${proposals.indexOf(index) + 1}`;
   }
-  const mixedProvinces = plans.some((p) => p.province !== plans[0].province);
-  return index === 0 && !mixedProvinces ? "Current law" : `Current ${province}`;
+  return `${province} ${plan.year}`;
 }
 
 /**
