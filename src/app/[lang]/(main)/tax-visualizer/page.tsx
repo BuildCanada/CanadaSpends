@@ -18,6 +18,7 @@ import {
   calculateSurtax,
   formatCurrency,
   getBracketTaxBreakdown,
+  getDefaultYear,
   getSupportedYears,
   getTaxConfig,
   SupportedYear,
@@ -905,7 +906,7 @@ const PROVINCE_TO_CODE: Record<string, string> = {
 
 const DEFAULT_INCOME = 100000;
 const DEFAULT_PROVINCE = "ontario";
-const DEFAULT_YEAR: SupportedYear = "2025";
+const DEFAULT_YEAR: SupportedYear = getDefaultYear();
 
 export default function TaxCalculatorPage() {
   const { t, i18n } = useLingui();
@@ -1020,6 +1021,29 @@ export default function TaxCalculatorPage() {
                 </svg>
               </a>
             </div>
+
+            <a
+              href={localizedPath(
+                `/tax-visualizer/simulator?income=${income}&province=${PROVINCE_TO_CODE[province] || "ON"}&year=${year}`,
+                i18n.locale,
+              )}
+              className="mt-8 flex flex-col sm:flex-row sm:items-center justify-between gap-3 rounded-lg border border-border bg-card p-5 hover:border-primary transition-colors group"
+            >
+              <div>
+                <div className="font-display font-bold text-lg">
+                  <Trans>What if the tax rules were different?</Trans>
+                </div>
+                <p className="text-sm text-foreground/60 mt-1">
+                  <Trans>
+                    Rewrite the brackets in the Tax Simulator, compare your plan
+                    with current law, and share it.
+                  </Trans>
+                </p>
+              </div>
+              <span className="text-primary font-medium whitespace-nowrap group-hover:underline">
+                <Trans>Try the Tax Simulator →</Trans>
+              </span>
+            </a>
 
             {breakdown ? (
               <>

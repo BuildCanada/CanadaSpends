@@ -1,4 +1,5 @@
 import {
+  getDefaultYear,
   getSpendingConfig,
   SpendingCategoryConfig,
   TaxCalculation,
@@ -261,7 +262,7 @@ const ALL_TRANSFER_NAMES = new Set([
 export function calculatePersonalTaxBreakdown(
   taxCalculation: TaxCalculation,
   province: string = "ontario",
-  year: string = "2024",
+  year: string = getDefaultYear(),
 ): PersonalTaxBreakdown | null {
   // Get spending config from the year-specific configuration
   const spendingConfig = getSpendingConfig(year, province);

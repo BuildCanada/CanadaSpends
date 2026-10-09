@@ -1,6 +1,7 @@
 // Main exports
 export {
   calculateDetailedTax,
+  calculateTaxWithConfig,
   calculateTotalTax,
   formatCurrency,
   formatPercentage,
@@ -52,3 +53,39 @@ export {
   getBracketTaxBreakdown,
 } from "./calculators";
 export type { BracketTaxBreakdown } from "./calculators";
+
+// Scenario (what-if simulator) exports
+export {
+  applyPlan,
+  buildRateCurve,
+  chartMaxIncome,
+  compareScenario,
+  createDefaultScenario,
+  createPlan,
+  decodeBrackets,
+  defaultScenarioTitle,
+  describeComparison,
+  encodeBrackets,
+  formatWholeDollars,
+  MAX_PLAN_NAME_LENGTH,
+  MAX_PLANS,
+  MAX_SCENARIO_BRACKETS,
+  MAX_SCENARIO_TITLE_LENGTH,
+  normalizeBrackets,
+  parseScenario,
+  PLAN_KEYS,
+  planHasChanges,
+  planLabel,
+  plansEquivalent,
+  PROVINCE_NAMES,
+  PROVINCE_TO_CODE,
+  scenarioHasChanges,
+  serializeScenario,
+} from "./scenario";
+export type {
+  PlanResult,
+  RateCurvePoint,
+  ScenarioComparison,
+  TaxPlan,
+  TaxScenario,
+} from "./scenario";
