@@ -42,6 +42,32 @@ export function calculateTaxWithConfig(
   income: number,
   config: TaxYearProvinceConfig,
 ): DetailedTaxCalculation {
+  const result = calculateTaxBreakdown(income, config);
+  // Combined (federal + provincial) marginal rate: income tax on the next
+  // dollar earned. Payroll contributions (CPP/QPP, EI, QPIP) are left out,
+  // as in published combined marginal rate tables.
+  const next = calculateTaxBreakdown(income + 1, config);
+  const marginalTaxRate = (incomeTax(next) - incomeTax(result)) * 100;
+  return { ...result, marginalTaxRate };
+}
+
+/** Federal and provincial income tax, excluding payroll contributions */
+function incomeTax(
+  calculation: Omit<DetailedTaxCalculation, "marginalTaxRate">,
+) {
+  return (
+    calculation.totalTax -
+    calculation.eiContribution -
+    calculation.cppContribution -
+    calculation.cpp2Contribution -
+    calculation.parentalInsuranceContribution
+  );
+}
+
+function calculateTaxBreakdown(
+  income: number,
+  config: TaxYearProvinceConfig,
+): Omit<DetailedTaxCalculation, "marginalTaxRate"> {
   const lineItems: TaxLineItem[] = [];
 
   // Resolve province-level overrides for pension plan and EI
@@ -351,5 +377,6 @@ export function calculateTotalTax(
     totalTax: detailed.totalTax,
     netIncome: detailed.netIncome,
     effectiveTaxRate: detailed.effectiveTaxRate,
+    marginalTaxRate: detailed.marginalTaxRate,
   };
 }

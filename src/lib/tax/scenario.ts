@@ -477,8 +477,8 @@ export interface PlanResult {
   result: DetailedTaxCalculation;
   /** result.totalTax - reference totalTax (negative = pays less) */
   difference: number;
-  /** Change in effective rate vs the reference, in percentage points */
-  effectiveRateChange: number;
+  /** Change in marginal rate vs the reference, in percentage points */
+  marginalRateChange: number;
 }
 
 export interface ScenarioComparison {
@@ -514,21 +514,21 @@ export function compareScenario(
   const plans = computed.map((p) => ({
     ...p,
     difference: p.result.totalTax - ref.totalTax,
-    effectiveRateChange: p.result.effectiveTaxRate - ref.effectiveTaxRate,
+    marginalRateChange: p.result.marginalTaxRate - ref.marginalTaxRate,
   }));
   return { plans, reference: plans[0] };
 }
 
 export interface RateCurvePoint {
   income: number;
-  /** Effective rate per plan, in the same order as the comparison's plans */
+  /** Combined marginal rate per plan, in the same order as the comparison's plans */
   rates: number[];
   /** Total tax per plan */
   taxes: number[];
 }
 
 /**
- * Effective tax rate for each plan across a range of incomes, for charting.
+ * Combined marginal tax rate for each plan across a range of incomes, for charting.
  */
 export function buildRateCurve(
   comparison: Pick<ScenarioComparison, "plans">,
@@ -543,7 +543,7 @@ export function buildRateCurve(
     );
     points.push({
       income,
-      rates: results.map((r) => r.effectiveTaxRate),
+      rates: results.map((r) => r.marginalTaxRate),
       taxes: results.map((r) => r.totalTax),
     });
   }
@@ -563,7 +563,7 @@ export function chartMaxIncome(income: number): number {
 /**
  * Plain-language summary of a comparison, e.g. for link previews:
  * "At $100,000 income. Proposed change: $2,412 less a year than Ontario 2026
- * (24.5% → 22.1% effective)."
+ * (43.4% → 41.1% marginal)."
  */
 export function describeComparison(
   scenario: TaxScenario,
@@ -582,9 +582,9 @@ export function describeComparison(
   const parts = comparison.plans.slice(1).map((p) => {
     const diff = Math.round(p.difference);
     if (diff === 0) return `${p.label}${sep}${text.sameAs(reference.label)}`;
-    const rates = `${pct(reference.result.effectiveTaxRate)} → ${pct(
-      p.result.effectiveTaxRate,
-    )} ${text.effective}`;
+    const rates = `${pct(reference.result.marginalTaxRate)} → ${pct(
+      p.result.marginalTaxRate,
+    )} ${text.marginal}`;
     return `${p.label}${sep}${text.moreOrLess(
       formatWholeDollars(Math.abs(diff)),
       diff > 0,
@@ -597,8 +597,8 @@ export function describeComparison(
       reference.label,
       formatWholeDollars(reference.result.totalTax),
       lang === "fr"
-        ? reference.result.effectiveTaxRate.toFixed(1).replace(".", ",")
-        : reference.result.effectiveTaxRate.toFixed(1),
+        ? reference.result.marginalTaxRate.toFixed(1).replace(".", ",")
+        : reference.result.marginalTaxRate.toFixed(1),
     );
   }
   return `${text.atIncome(income)}. ${parts.join(". ")}.`;

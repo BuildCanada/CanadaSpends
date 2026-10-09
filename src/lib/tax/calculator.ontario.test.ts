@@ -49,6 +49,18 @@ describe("Ontario surtax", () => {
     expect(marginalRate(5_000_000, "ontario", "2026")).toBeCloseTo(53.53, 1);
   });
 
+  it("reports the combined marginal rate, excluding payroll contributions", () => {
+    expect(
+      calculateDetailedTax(5_000_000, "ontario", "2025").marginalTaxRate,
+    ).toBeCloseTo(53.53, 1);
+    // Below the CPP/EI maximums the total-tax slope includes contributions;
+    // the combined marginal rate doesn't
+    const detailed = calculateDetailedTax(60_000, "ontario", "2025");
+    expect(detailed.marginalTaxRate).toBeLessThan(
+      marginalRate(60_000, "ontario", "2025") - 5,
+    );
+  });
+
   it("approaches the top marginal rate for very high incomes", () => {
     const detailed = calculateDetailedTax(1_000_000_000, "ontario", "2025");
     expect(detailed.effectiveTaxRate).toBeGreaterThan(53.4);

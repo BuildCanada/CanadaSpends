@@ -225,6 +225,8 @@ export interface DetailedTaxCalculation {
   totalTax: number;
   netIncome: number;
   effectiveTaxRate: number;
+  // Combined federal + provincial income tax on the next dollar, in %
+  marginalTaxRate: number;
 
   // Line items for accordion breakdown
   lineItems: TaxLineItem[];
@@ -274,6 +276,8 @@ export interface TaxCalculation {
   totalTax: number;
   netIncome: number;
   effectiveTaxRate: number;
+  // Combined federal + provincial income tax on the next dollar, in %
+  marginalTaxRate: number;
 }
 
 // Supported provinces

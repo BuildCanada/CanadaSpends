@@ -128,7 +128,7 @@ export function ResultsSummary({
             </div>
             <div className="text-xs text-foreground/60">
               <Trans>
-                {formatDecimal(p.result.effectiveTaxRate, lang)}% effective
+                {formatDecimal(p.result.marginalTaxRate, lang)}% marginal
               </Trans>
             </div>
             {i > 0 && (

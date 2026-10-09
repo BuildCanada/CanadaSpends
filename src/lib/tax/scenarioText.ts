@@ -62,12 +62,12 @@ export const SCENARIO_TEXT = {
     simulatedChangeN: (n: number) => `Simulated change ${n}`,
     title: (province: string) => `Simulated Tax Change: ${province}`,
     atIncome: (income: string) => `At ${income} income`,
-    effective: "effective",
+    marginal: "marginal",
     sameAs: (label: string) => `same as ${label}`,
     moreOrLess: (amount: string, more: boolean, label: string) =>
       `${amount} ${more ? "more" : "less"} a year than ${label}`,
     referenceOnly: (income: string, label: string, tax: string, rate: string) =>
-      `At ${income} income, ${label} means ${tax} in tax (${rate}% effective).`,
+      `At ${income} income, ${label} means ${tax} in tax (${rate}% marginal).`,
     // Social image
     wouldPay: (income: string, where: string) =>
       `A person earning ${income}${where ? ` ${where}` : ""} would pay…`,
@@ -82,12 +82,12 @@ export const SCENARIO_TEXT = {
     simulatedChangeN: (n: number) => `Changement simulé ${n}`,
     title: (province: string) => `Changement fiscal simulé : ${province}`,
     atIncome: (income: string) => `Pour un revenu de ${income}`,
-    effective: "effectif",
+    marginal: "marginal",
     sameAs: (label: string) => `identique à ${label}`,
     moreOrLess: (amount: string, more: boolean, label: string) =>
       `${amount} de ${more ? "plus" : "moins"} par année que ${label}`,
     referenceOnly: (income: string, label: string, tax: string, rate: string) =>
-      `Pour un revenu de ${income}, ${label} représente ${tax} d'impôt (taux effectif de ${rate} %).`,
+      `Pour un revenu de ${income}, ${label} représente ${tax} d'impôt (taux marginal de ${rate} %).`,
     wouldPay: (income: string, where: string) =>
       `Une personne gagnant ${income}${where ? ` ${where}` : ""} paierait…`,
     differenceFrom: (label: string) =>
