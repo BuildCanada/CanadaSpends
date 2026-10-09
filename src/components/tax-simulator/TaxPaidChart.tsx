@@ -110,26 +110,6 @@ export function TaxPaidChart({
 
   return (
     <figure className="m-0">
-      {showLegend && (
-        <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-foreground/70 mb-3">
-          {labels.map((label, i) => (
-            <span key={i} className="inline-flex items-center gap-2">
-              <svg width="24" height="4" aria-hidden>
-                <line
-                  x1="0"
-                  x2="24"
-                  y1="2"
-                  y2="2"
-                  stroke={planColor(i)}
-                  strokeWidth={i === 0 ? 2 : 3}
-                  strokeDasharray={i === 0 ? "5 4" : undefined}
-                />
-              </svg>
-              {label}
-            </span>
-          ))}
-        </div>
-      )}
       <div className="mb-3">
         <h4 className="font-display font-bold text-xl text-foreground">
           {mode === "total" ? (
@@ -151,6 +131,26 @@ export function TaxPaidChart({
           )}
         </p>
       </div>
+      {showLegend && (
+        <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-foreground/70 mb-3">
+          {labels.map((label, i) => (
+            <span key={i} className="inline-flex items-center gap-2">
+              <svg width="24" height="4" aria-hidden>
+                <line
+                  x1="0"
+                  x2="24"
+                  y1="2"
+                  y2="2"
+                  stroke={planColor(i)}
+                  strokeWidth={i === 0 ? 2 : 3}
+                  strokeDasharray={i === 0 ? "5 4" : undefined}
+                />
+              </svg>
+              {label}
+            </span>
+          ))}
+        </div>
+      )}
       <div className="relative">
         <svg
           viewBox={`0 0 ${WIDTH} ${HEIGHT}`}

@@ -187,7 +187,6 @@ export function TaxChartSection({
         labels={comparison.plans.map((p) => p.label)}
         maxIncome={maxIncome}
         income={income}
-        showLegend={comparison.plans.length <= 1}
       />
       <p className="text-xs text-foreground/50 mt-2">
         <Trans>
