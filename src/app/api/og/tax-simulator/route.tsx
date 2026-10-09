@@ -12,13 +12,13 @@ import {
   buildRateCurve,
   chartMaxIncome,
   compareScenario,
-  defaultScenarioTitle,
   formatWholeDollars,
   parseScenario,
   type PlanResult,
   PROVINCE_NAMES,
   type RateCurvePoint,
   scenarioHasChanges,
+  scenarioTitle,
 } from "@/lib/tax";
 
 export const runtime = "nodejs";
@@ -292,7 +292,7 @@ function PlanStat({
             whiteSpace: "nowrap",
           }}
         >
-          {truncate(plan.label, count > 3 ? 16 : count > 2 ? 22 : 30)}
+          {truncate(plan.label, count > 3 ? 18 : count > 2 ? 26 : 34)}
         </div>
       </div>
       <div
@@ -350,9 +350,7 @@ export async function GET(request: Request) {
   const mode = plans.length > 1 && changed ? "difference" : "total";
   const maxIncome = chartMaxIncome(scenario.income);
   const points = buildRateCurve(comparison, maxIncome, 80);
-  const title =
-    scenario.title ||
-    (changed ? defaultScenarioTitle(scenario) : "What would you change?");
+  const title = scenarioTitle(scenario);
 
   // Title size and estimated line count (Söhne is about 0.52em per char)
   const titleSize = title.length > 60 ? 38 : title.length > 40 ? 44 : 52;
@@ -511,7 +509,7 @@ export async function GET(request: Request) {
             color: COLORS.muted,
           }}
         >
-          Title and plans entered by a Canada Spends Tax Simulator user. Canada
+          Tax changes entered by a Canada Spends Tax Simulator user. Canada
           Spends calculated the results but did not create or endorse them.
         </div>
       </div>

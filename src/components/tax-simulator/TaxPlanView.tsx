@@ -6,13 +6,13 @@ import { Trans, useLingui } from "@lingui/react/macro";
 import { PageContent, Section } from "@/components/Layout";
 import {
   compareScenario,
-  defaultScenarioTitle,
   effectivePlan,
   formatWholeDollars,
   MAX_SCENARIO_INCOME,
   planHasChanges,
   PROVINCE_NAMES,
   rateToPercent,
+  scenarioTitle,
   serializeScenario,
   type TaxScenario,
 } from "@/lib/tax";
@@ -104,7 +104,7 @@ export function TaxPlanView({
   if (!comparison) return null;
 
   const query = serializeScenario(scenario).toString();
-  const title = scenario.title || defaultScenarioTitle(scenario);
+  const title = scenarioTitle(scenario);
   const editorPath = localizedPath("/tax-visualizer/simulator", i18n.locale);
   const viewPath = localizedPath("/tax-visualizer/simulator/view", i18n.locale);
 
@@ -114,9 +114,8 @@ export function TaxPlanView({
         {/* Shared scenarios are user-made: say so before the title */}
         <p className="mb-6 border-l-4 border-border bg-card px-4 py-3 text-sm text-foreground/70">
           <Trans>
-            Title and plans entered by a Canada Spends Tax Simulator user.
-            Canada Spends calculated the results but did not create or endorse
-            them.
+            Tax changes entered by a Canada Spends Tax Simulator user. Canada
+            Spends calculated the results but did not create or endorse them.
           </Trans>
         </p>
         <h1 className="text-4xl sm:text-5xl font-bold tracking-tight font-display max-w-4xl">

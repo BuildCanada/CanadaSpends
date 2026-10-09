@@ -9,15 +9,12 @@ import {
   compareScenario,
   createDefaultScenario,
   createPlan,
-  defaultScenarioTitle,
   formatWholeDollars,
-  getSupportedYears,
   getTaxConfig,
-  MAX_PLAN_NAME_LENGTH,
+  isProposal,
   MAX_SCENARIO_INCOME,
   MAX_PLANS,
   MAX_SCENARIO_BRACKETS,
-  MAX_SCENARIO_TITLE_LENGTH,
   normalizeBrackets,
   parseScenario,
   percentToRate,
@@ -27,8 +24,9 @@ import {
   PROVINCE_NAMES,
   PROVINCE_TO_CODE,
   rateToPercent,
+  SCENARIO_YEAR,
+  scenarioTitle,
   serializeScenario,
-  type SupportedYear,
   type TaxBracket,
   type TaxPlan,
   type TaxScenario,
@@ -241,7 +239,6 @@ function Toggle({
 interface Preset {
   id: string;
   label: string;
-  name: string;
   apply: (p: TaxPlan, config: TaxYearProvinceConfig) => TaxPlan;
   available?: (config: TaxYearProvinceConfig) => boolean;
 }
@@ -252,7 +249,6 @@ function usePresets(): Preset[] {
     {
       id: "flat",
       label: t`Flat 20% federal tax`,
-      name: t`Flat 20% federal tax`,
       apply: (p) => ({
         ...p,
         federalBrackets: normalizeBrackets([{ min: 0, rate: 0.2 }]),
@@ -261,13 +257,11 @@ function usePresets(): Preset[] {
     {
       id: "bpa",
       label: t`Basic personal amounts of $25k`,
-      name: t`$25k tax-free threshold`,
       apply: (p) => ({ ...p, federalBpa: 25000, provincialBpa: 25000 }),
     },
     {
       id: "middle",
       label: t`Cut the 2nd federal bracket by 3 pts`,
-      name: t`Middle-class tax cut`,
       apply: (p, config) => ({
         ...p,
         federalBrackets: (
@@ -280,7 +274,6 @@ function usePresets(): Preset[] {
     {
       id: "top",
       label: t`40% federal rate over $500k`,
-      name: t`40% top federal rate`,
       apply: (p, config) => ({
         ...p,
         federalBrackets: normalizeBrackets([
@@ -292,18 +285,11 @@ function usePresets(): Preset[] {
     {
       id: "premiums",
       label: t`Scrap surtax & health premium`,
-      name: t`No surtax or health premium`,
       apply: (p) => ({ ...p, removeSurtax: true, removeHealthPremium: true }),
       available: (config) =>
         !!config.provincial.surtax || !!config.provincial.healthPremium,
     },
   ];
-}
-
-// "Name (copy)", shortening the name so the suffix survives the length limit
-function copyName(name: string, suffix: string): string {
-  const room = MAX_PLAN_NAME_LENGTH - suffix.length - 1;
-  return `${name.trim().slice(0, room).trimEnd()} ${suffix}`;
 }
 
 function clearProvincialOverrides(plan: TaxPlan): TaxPlan {
@@ -333,10 +319,13 @@ interface PlanCardProps {
   onChange: (plan: TaxPlan) => void;
   onRemove: () => void;
   onDuplicate: () => void;
-  canRemove: boolean;
   canDuplicate: boolean;
 }
 
+/**
+ * A plan in the comparison. Only proposed changes are editable: the
+ * reference and other provinces are current law.
+ */
 function PlanCard({
   plan,
   index,
@@ -346,18 +335,17 @@ function PlanCard({
   onChange,
   onRemove,
   onDuplicate,
-  canRemove,
   canDuplicate,
 }: PlanCardProps) {
   const { t } = useLingui();
   const presets = usePresets();
-  const supportedYears = getSupportedYears();
   const config = getTaxConfig(plan.year, plan.province);
   if (!config) return null;
 
   const set = (patch: Partial<TaxPlan>) => onChange({ ...plan, ...patch });
   const label = planLabel(plan, index, plans);
   const provinceName = PROVINCE_NAMES[plan.province] ?? plan.province;
+  const editable = isProposal(index, plans);
   const changed = planHasChanges(plan);
   const fedConfig = config.federal.incomeTax;
   const provConfig = config.provincial.incomeTax;
@@ -368,6 +356,55 @@ function PlanCard({
     (key) => key in overrides,
   );
   const bodyId = `plan-${index}-body`;
+
+  const header = (
+    <div className="min-w-0">
+      <div className="flex items-center gap-2 flex-wrap">
+        <span className="font-bold truncate">{label}</span>
+        {index === 0 && (
+          <span className="rounded-full bg-foreground/10 px-2 py-0.5 text-xs text-foreground/70">
+            <Trans>Reference</Trans>
+          </span>
+        )}
+        {editable && changed && <ModifiedBadge />}
+      </div>
+      <div className="text-xs text-foreground/50 mt-0.5">
+        {editable ? (
+          changed ? (
+            <Trans>
+              Changes to {provinceName} {plan.year} law
+            </Trans>
+          ) : (
+            <Trans>No changes yet: open to edit</Trans>
+          )
+        ) : (
+          <Trans>
+            {provinceName} {plan.year} law
+          </Trans>
+        )}
+      </div>
+    </div>
+  );
+
+  if (!editable) {
+    return (
+      <div
+        className="bg-card rounded-lg border flex items-center justify-between gap-3 p-4"
+        style={{ borderLeft: `4px solid ${planColor(index)}` }}
+      >
+        {header}
+        {index > 0 && (
+          <button
+            type="button"
+            onClick={onRemove}
+            className="text-sm text-auburn-700 hover:underline whitespace-nowrap"
+          >
+            <Trans>Remove</Trans>
+          </button>
+        )}
+      </div>
+    );
+  }
 
   return (
     <div
@@ -381,31 +418,7 @@ function PlanCard({
         aria-controls={bodyId}
         className="w-full flex items-center justify-between gap-3 p-4 text-left hover:bg-foreground/[0.03]"
       >
-        <div className="min-w-0">
-          <div className="flex items-center gap-2 flex-wrap">
-            <span className="font-mono text-xs text-foreground/50">
-              {String.fromCharCode(65 + index)}
-            </span>
-            <span className="font-bold truncate">{label}</span>
-            {index === 0 && (
-              <span className="rounded-full bg-foreground/10 px-2 py-0.5 text-xs text-foreground/70">
-                <Trans>Reference</Trans>
-              </span>
-            )}
-            {changed && <ModifiedBadge />}
-          </div>
-          <div className="text-xs text-foreground/50 mt-0.5">
-            {changed ? (
-              <Trans>
-                {provinceName} {plan.year}, with changes
-              </Trans>
-            ) : (
-              <Trans>
-                {provinceName} {plan.year} law, unchanged
-              </Trans>
-            )}
-          </div>
-        </div>
+        {header}
         <span
           aria-hidden
           className={cn(
@@ -419,79 +432,6 @@ function PlanCard({
 
       {expanded && (
         <div id={bodyId} className="px-4 pb-4 space-y-4">
-          <div className="grid grid-cols-1 sm:grid-cols-[1.4fr_1fr_0.8fr] gap-3">
-            <div>
-              <label
-                htmlFor={`plan-${index}-name`}
-                className="block text-xs font-medium text-foreground/60 mb-1"
-              >
-                <Trans>Plan name</Trans>
-              </label>
-              <input
-                id={`plan-${index}-name`}
-                type="text"
-                maxLength={MAX_PLAN_NAME_LENGTH}
-                value={plan.name}
-                placeholder={label}
-                onChange={(e) => set({ name: e.target.value })}
-                className={inputClass}
-              />
-            </div>
-            <div>
-              <label
-                htmlFor={`plan-${index}-province`}
-                className="block text-xs font-medium text-foreground/60 mb-1"
-              >
-                <Trans>Province/Territory</Trans>
-              </label>
-              <select
-                id={`plan-${index}-province`}
-                value={plan.province}
-                // Provincial overrides don't carry across provinces
-                onChange={(e) =>
-                  onChange({
-                    ...clearProvincialOverrides(plan),
-                    province: e.target.value,
-                  })
-                }
-                className={inputClass}
-              >
-                {PROVINCES_SORTED.map(([value, name]) => (
-                  <option key={value} value={value}>
-                    {name}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <div>
-              <label
-                htmlFor={`plan-${index}-year`}
-                className="block text-xs font-medium text-foreground/60 mb-1"
-              >
-                <Trans>Tax year</Trans>
-              </label>
-              <select
-                id={`plan-${index}-year`}
-                value={plan.year}
-                // Overrides are copies of one year's thresholds and amounts,
-                // so they don't carry across years
-                onChange={(e) =>
-                  onChange({
-                    ...clearAllOverrides(plan),
-                    year: e.target.value as SupportedYear,
-                  })
-                }
-                className={inputClass}
-              >
-                {supportedYears.map((y) => (
-                  <option key={y} value={y}>
-                    {y}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </div>
-
           <div>
             <div className="text-xs font-medium text-foreground/60 mb-2">
               <Trans>Start from an idea</Trans>
@@ -503,12 +443,7 @@ function PlanCard({
                   <button
                     key={preset.id}
                     type="button"
-                    onClick={() =>
-                      onChange({
-                        ...preset.apply(plan, config),
-                        name: plan.name || preset.name,
-                      })
-                    }
+                    onClick={() => onChange(preset.apply(plan, config))}
                     className="rounded-full border border-border bg-background px-3 py-1 text-sm hover:border-primary hover:text-primary transition-colors"
                   >
                     {preset.label}
@@ -583,15 +518,13 @@ function PlanCard({
                 <Trans>Duplicate</Trans>
               </button>
             )}
-            {canRemove && (
-              <button
-                type="button"
-                onClick={onRemove}
-                className="text-auburn-700 hover:underline"
-              >
-                <Trans>Remove from comparison</Trans>
-              </button>
-            )}
+            <button
+              type="button"
+              onClick={onRemove}
+              className="text-auburn-700 hover:underline"
+            >
+              <Trans>Remove from comparison</Trans>
+            </button>
           </div>
         </div>
       )}
@@ -608,9 +541,9 @@ function AddComparison({
 }) {
   const { t } = useLingui();
   const reference = scenario.plans[0];
-  const used = new Set(
-    scenario.plans.filter((p) => !planHasChanges(p)).map((p) => p.province),
-  );
+  const referenceName =
+    PROVINCE_NAMES[reference.province] ?? reference.province;
+  const used = new Set(scenario.plans.map((p) => p.province));
 
   return (
     <div className="rounded-lg border border-dashed border-border p-4">
@@ -618,6 +551,18 @@ function AddComparison({
         <Trans>Add to the comparison</Trans>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div>
+          <span className="block text-xs text-foreground/60 mb-1">
+            <Trans>A change to {referenceName} law</Trans>
+          </span>
+          <button
+            type="button"
+            onClick={() => onAdd(createPlan(reference.province))}
+            className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm font-medium hover:border-primary hover:text-primary"
+          >
+            + <Trans>Proposed change</Trans>
+          </button>
+        </div>
         <div>
           <label
             htmlFor="add-province"
@@ -629,9 +574,7 @@ function AddComparison({
             id="add-province"
             value=""
             onChange={(e) => {
-              if (e.target.value) {
-                onAdd(createPlan(e.target.value, reference.year));
-              }
+              if (e.target.value) onAdd(createPlan(e.target.value));
             }}
             className={inputClass}
           >
@@ -644,20 +587,6 @@ function AddComparison({
               ),
             )}
           </select>
-        </div>
-        <div>
-          <span className="block text-xs text-foreground/60 mb-1">
-            <Trans>A new plan to edit</Trans>
-          </span>
-          <button
-            type="button"
-            onClick={() =>
-              onAdd(createPlan(reference.province, reference.year))
-            }
-            className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm font-medium hover:border-primary hover:text-primary"
-          >
-            + <Trans>Another plan</Trans>
-          </button>
         </div>
       </div>
     </div>
@@ -675,7 +604,7 @@ function SharePanel({ scenario }: { scenario: TaxScenario }) {
   }, [query]);
 
   const viewPath = localizedPath("/tax-visualizer/simulator/view", i18n.locale);
-  const title = scenario.title || defaultScenarioTitle(scenario);
+  const title = scenarioTitle(scenario);
   const shareText = t`${title}: see how it would change your taxes`;
 
   return (
@@ -724,11 +653,16 @@ export function TaxSimulator() {
   const [scenario, setScenario] = useState<TaxScenario>(() =>
     searchParams ? parseScenario(searchParams) : createDefaultScenario(),
   );
-  // Open the first changed plan (or plan B) for editing
+  // Open the first changed proposal (or the first proposal) for editing
   const [expanded, setExpanded] = useState<number | null>(() => {
-    const changedIndex = scenario.plans.findIndex(planHasChanges);
-    if (changedIndex >= 0) return changedIndex;
-    return scenario.plans.length > 1 ? 1 : 0;
+    const proposals = scenario.plans
+      .map((_, i) => i)
+      .filter((i) => isProposal(i, scenario.plans));
+    return (
+      proposals.find((i) => planHasChanges(scenario.plans[i])) ??
+      proposals[0] ??
+      null
+    );
   });
 
   // Keep every parameter in the URL so the editor can be bookmarked
@@ -743,6 +677,7 @@ export function TaxSimulator() {
   const comparison = useMemo(() => compareScenario(scenario), [scenario]);
   if (!comparison) return null;
 
+  const reference = scenario.plans[0];
   const setPlan = (index: number, plan: TaxPlan) =>
     setScenario((s) => ({
       ...s,
@@ -756,11 +691,30 @@ export function TaxSimulator() {
     setExpanded(null);
   };
   const addPlan = (plan: TaxPlan) => {
+    const index = scenario.plans.length;
     setScenario((s) => ({ ...s, plans: [...s.plans, plan] }));
-    setExpanded(planHasChanges(plan) ? null : scenario.plans.length);
+    setExpanded(plan.province === reference.province ? index : null);
   };
+  // Changing the reference province moves its proposals along with it
+  // (keeping federal changes; provincial changes don't carry across) and
+  // drops any other-province plan that would now duplicate it.
+  const setReferenceProvince = (province: string) =>
+    setScenario((s) => ({
+      ...s,
+      plans: s.plans
+        .map((p, i) =>
+          i === 0
+            ? createPlan(province)
+            : isProposal(i, s.plans)
+              ? { ...clearProvincialOverrides(p), province }
+              : p,
+        )
+        .filter(
+          (p, i) =>
+            i === 0 || p.province !== province || isProposal(i, s.plans),
+        ),
+    }));
 
-  const reference = scenario.plans[0];
   const canAdd = scenario.plans.length < MAX_PLANS;
 
   return (
@@ -768,7 +722,7 @@ export function TaxSimulator() {
       <Section className="max-w-6xl">
         <a
           href={localizedPath(
-            `/tax-visualizer?income=${scenario.income}&province=${PROVINCE_TO_CODE[reference.province]}&year=${reference.year}`,
+            `/tax-visualizer?income=${scenario.income}&province=${PROVINCE_TO_CODE[reference.province]}&year=${SCENARIO_YEAR}`,
             i18n.locale,
           )}
           className="text-sm text-foreground/60 hover:text-foreground"
@@ -778,32 +732,38 @@ export function TaxSimulator() {
         <div className="mt-4 mb-8 max-w-3xl">
           <H1>{t`Tax Simulator`}</H1>
           <p className="text-lg text-foreground/60 mt-4">
-            {t`Rewrite the tax brackets, compare your plan with current law, another province, or another plan, and share the result.`}
+            {t`Propose changes to a province's tax rules, compare them with current law and other provinces, and share the result.`}
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] gap-6 items-start">
           {/* Left: controls */}
           <div className="space-y-4">
-            <div className="bg-card rounded-lg border p-5 grid grid-cols-1 sm:grid-cols-[1fr_11rem] gap-3">
+            <div className="bg-card rounded-lg border p-5 grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
                 <label
-                  htmlFor="scenario-title"
+                  htmlFor="scenario-province"
                   className="block text-sm font-medium text-foreground/70 mb-2"
                 >
-                  <Trans>Title</Trans>
+                  <Trans>Province/Territory</Trans>
                 </label>
-                <input
-                  id="scenario-title"
-                  type="text"
-                  maxLength={MAX_SCENARIO_TITLE_LENGTH}
-                  value={scenario.title}
-                  onChange={(e) =>
-                    setScenario((s) => ({ ...s, title: e.target.value }))
-                  }
-                  placeholder={defaultScenarioTitle(scenario)}
-                  className={cn(inputClass, "font-display")}
-                />
+                <select
+                  id="scenario-province"
+                  value={reference.province}
+                  onChange={(e) => setReferenceProvince(e.target.value)}
+                  className={inputClass}
+                >
+                  {PROVINCES_SORTED.map(([value, name]) => (
+                    <option key={value} value={value}>
+                      {name}
+                    </option>
+                  ))}
+                </select>
+                <p className="text-xs text-foreground/50 mt-1">
+                  <Trans>
+                    Compared with its current law for {SCENARIO_YEAR}
+                  </Trans>
+                </p>
               </div>
               <div>
                 <label
@@ -840,13 +800,7 @@ export function TaxSimulator() {
                 }
                 onChange={(p) => setPlan(index, p)}
                 onRemove={() => removePlan(index)}
-                onDuplicate={() =>
-                  addPlan({
-                    ...plan,
-                    name: plan.name ? copyName(plan.name, t`(copy)`) : "",
-                  })
-                }
-                canRemove={scenario.plans.length > 1}
+                onDuplicate={() => addPlan({ ...plan })}
                 canDuplicate={canAdd}
               />
             ))}
@@ -857,6 +811,9 @@ export function TaxSimulator() {
           {/* Right: results */}
           <div className="space-y-6 lg:sticky lg:top-6">
             <div className="bg-card rounded-lg border p-5 space-y-6">
+              <div className="font-display font-bold text-xl">
+                {scenarioTitle(scenario)}
+              </div>
               <ResultsSummary
                 comparison={comparison}
                 income={scenario.income}

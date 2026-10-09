@@ -8,14 +8,17 @@ import {
   createDefaultScenario,
   createPlan,
   decodeBrackets,
-  defaultScenarioTitle,
   effectivePlan,
   encodeBrackets,
+  isProposal,
+  normalizeScenario,
   parseScenario,
   percentToRate,
   planLabel,
   rateToPercent,
+  SCENARIO_YEAR,
   scenarioHasChanges,
+  scenarioTitle,
   serializeScenario,
   TaxScenario,
 } from "./scenario";
@@ -53,11 +56,59 @@ describe("bracket encoding", () => {
   });
 });
 
+describe("scenario rules", () => {
+  it("always compares against the current year's law", () => {
+    expect(createPlan("alberta").year).toBe(SCENARIO_YEAR);
+    // Years in older links are ignored
+    const scenario = parseScenario(
+      new URLSearchParams(
+        "a.province=BC&a.year=2023&b.province=BC&b.year=2024",
+      ),
+    );
+    expect(scenario.plans.map((p) => p.year)).toEqual([
+      SCENARIO_YEAR,
+      SCENARIO_YEAR,
+    ]);
+  });
+
+  it("forces the reference to current law", () => {
+    const scenario = parseScenario(
+      new URLSearchParams("a.province=ON&a.fbpa=50000&b.province=ON"),
+    );
+    expect(scenario.plans[0]).toEqual(createPlan("ontario"));
+  });
+
+  it("keeps changes only for proposals in the reference province", () => {
+    const scenario = parseScenario(
+      new URLSearchParams(
+        "a.province=BC&b.province=BC&b.pbpa=20000&c.province=AB&c.fbpa=50000",
+      ),
+    );
+    expect(isProposal(1, scenario.plans)).toBe(true);
+    expect(scenario.plans[1].provincialBpa).toBe(20000);
+    // Other provinces are their current law
+    expect(isProposal(2, scenario.plans)).toBe(false);
+    expect(scenario.plans[2]).toEqual(createPlan("alberta"));
+  });
+
+  it("ignores titles and names in older links", () => {
+    const params = serializeScenario(
+      parseScenario(
+        new URLSearchParams(
+          "title=Anything+at+all&a.province=ON&b.province=ON&b.name=Mine&b.fbpa=20000",
+        ),
+      ),
+    );
+    expect(params.has("title")).toBe(false);
+    expect(params.has("b.name")).toBe(false);
+    expect(params.get("b.fbpa")).toBe("20000");
+  });
+});
+
 describe("scenario URL params", () => {
   it("omits overrides that match current law", () => {
     const scenario = createDefaultScenario();
-    const { province, year } = scenario.plans[1];
-    const config = getTaxConfig(year, province)!;
+    const config = getTaxConfig(SCENARIO_YEAR, "ontario")!;
     scenario.plans[1].federalBrackets = config.federal.incomeTax.brackets;
     scenario.plans[1].federalBpa = config.federal.incomeTax.basicPersonalAmount;
 
@@ -69,13 +120,11 @@ describe("scenario URL params", () => {
 
   it("round-trips a multi-plan scenario", () => {
     const scenario: TaxScenario = {
-      title: "Three ways to do it",
       income: 85000,
       plans: [
-        createPlan("ontario", "2025"),
+        createPlan("ontario"),
         {
-          ...createPlan("ontario", "2025"),
-          name: "Flat tax",
+          ...createPlan("ontario"),
           federalBrackets: decodeBrackets("0-20"),
           federalBpa: 25000,
           provincialBrackets: decodeBrackets("0-5_100000-10"),
@@ -83,7 +132,7 @@ describe("scenario URL params", () => {
           removeSurtax: true,
           removeHealthPremium: true,
         },
-        createPlan("alberta", "2026"),
+        createPlan("alberta"),
       ],
     };
 
@@ -98,45 +147,18 @@ describe("scenario URL params", () => {
     // The page's og:image is built from parse(searchParams); the browser
     // warms the cache with serialize(scenario). They must match exactly or
     // crawlers miss the cached image.
-    const config = getTaxConfig("2026", "ontario")!;
     const scenario: TaxScenario = {
-      title: "  A plan  with spaces ",
-      income: 85000.4,
+      income: 500_000_000,
       plans: [
-        createPlan("ontario", "2026"),
+        createPlan("ontario"),
         {
-          ...createPlan("ontario", "2026"),
-          name: " Mine ",
-          // Same as current law: dropped from the URL
-          federalBpa: config.federal.incomeTax.basicPersonalAmount,
+          ...createPlan("ontario"),
+          federalBpa: 200_000_000,
           provincialBrackets: decodeBrackets("0-5_100000-10"),
           removeSurtax: true,
         },
-        createPlan("alberta", "2025"),
-      ],
-    };
-    const query = serializeScenario(scenario).toString();
-    expect(
-      serializeScenario(parseScenario(new URLSearchParams(query))).toString(),
-    ).toBe(query);
-    // Next.js passes searchParams as an object on the server
-    const asObject = Object.fromEntries(new URLSearchParams(query));
-    expect(serializeScenario(parseScenario(asObject)).toString()).toBe(query);
-  });
-
-  it("applies the same limits when writing as when reading links", () => {
-    // Values beyond the URL's limits must be written already limited, or the
-    // shared page (and its og:image) would differ from the editor's link.
-    const scenario: TaxScenario = {
-      title: "x".repeat(70) + "          " + "y".repeat(40),
-      income: 500_000_000,
-      plans: [
-        createPlan("ontario", "2026"),
-        {
-          ...createPlan("ontario", "2026"),
-          name: "a".repeat(39) + " b".repeat(10),
-          federalBpa: 200_000_000,
-        },
+        // A change to another province isn't allowed: dropped
+        { ...createPlan("alberta"), federalBpa: 1 },
       ],
     };
     const query = serializeScenario(scenario).toString();
@@ -144,19 +166,20 @@ describe("scenario URL params", () => {
     expect(serializeScenario(parsed).toString()).toBe(query);
     expect(parsed.income).toBe(100_000_000);
     expect(parsed.plans[1].federalBpa).toBe(100_000_000);
-    expect(parsed.title.length).toBeLessThanOrEqual(80);
-    expect(parsed.title).toBe(parsed.title.trim());
-    expect(parsed.plans[1].name.length).toBeLessThanOrEqual(40);
+    expect(parsed.plans[2]).toEqual(createPlan("alberta"));
+    // Next.js passes searchParams as an object on the server
+    const asObject = Object.fromEntries(new URLSearchParams(query));
+    expect(serializeScenario(parseScenario(asObject)).toString()).toBe(query);
   });
 
-  it("reads legacy single-plan links as current law vs. the plan", () => {
+  it("reads legacy single-plan links as current law vs. a proposal", () => {
     const scenario = parseScenario(
       new URLSearchParams(
         "title=Eby&income=400000&province=BC&year=2026&pb=0-5.6_190405-18.8",
       ),
     );
     expect(scenario.plans).toHaveLength(2);
-    expect(scenario.plans[0]).toEqual(createPlan("british-columbia", "2026"));
+    expect(scenario.plans[0]).toEqual(createPlan("british-columbia"));
     expect(scenario.plans[1].province).toBe("british-columbia");
     expect(scenario.plans[1].provincialBrackets).toEqual(
       decodeBrackets("0-5.6_190405-18.8"),
@@ -165,23 +188,20 @@ describe("scenario URL params", () => {
 
   it("accepts Next.js searchParams objects", () => {
     const scenario = parseScenario({
-      title: ["  Hello  "],
-      income: "50000",
+      income: ["50000"],
       "a.province": "qc",
-      "a.year": "2024",
       "b.province": "on",
     });
-    expect(scenario.title).toBe("Hello");
     expect(scenario.income).toBe(50000);
-    expect(scenario.plans[0].province).toBe("quebec");
-    expect(scenario.plans[0].year).toBe("2024");
-    // Missing year falls back to the reference plan's year
-    expect(scenario.plans[1].year).toBe("2024");
+    expect(scenario.plans.map((p) => p.province)).toEqual([
+      "quebec",
+      "ontario",
+    ]);
   });
 
   it("falls back to defaults for invalid values", () => {
     const scenario = parseScenario(
-      new URLSearchParams("income=-5&a.province=XX&a.year=1999&a.fbpa=nope"),
+      new URLSearchParams("income=-5&a.province=XX&a.fbpa=nope"),
     );
     const defaults = createDefaultScenario();
     expect(scenario.income).toBe(defaults.income);
@@ -199,79 +219,68 @@ describe("scenario URL params", () => {
   });
 
   it("ignores surtax / health premium toggles for provinces without them", () => {
-    const scenario = createDefaultScenario();
-    scenario.plans = scenario.plans.map((p) => ({
-      ...p,
-      province: "alberta",
-      removeSurtax: true,
-      removeHealthPremium: true,
-    }));
+    const scenario = normalizeScenario({
+      income: 100000,
+      plans: [
+        createPlan("alberta"),
+        {
+          ...createPlan("alberta"),
+          removeSurtax: true,
+          removeHealthPremium: true,
+        },
+      ],
+    });
     expect(scenarioHasChanges(scenario)).toBe(false);
   });
 });
 
-describe("plan labels and titles", () => {
-  it("names current-law plans by province and changed plans by letter", () => {
+describe("neutral labels and titles", () => {
+  it("labels current law and a single proposal", () => {
     const plans = [
-      createPlan("ontario", "2025"),
-      { ...createPlan("ontario", "2025"), federalBpa: 20000 },
-      createPlan("alberta", "2025"),
-      { ...createPlan("quebec", "2025"), name: "  Mine " },
+      createPlan("ontario"),
+      { ...createPlan("ontario"), federalBpa: 20000 },
     ];
     expect(plans.map((p, i) => planLabel(p, i, plans))).toEqual([
       "Current law",
-      "Plan B",
-      "Alberta",
-      "Mine",
+      "Proposed change",
     ]);
   });
 
-  it("adds the year only when plans span several years", () => {
+  it("numbers several proposals and names other provinces", () => {
     const plans = [
-      createPlan("ontario", "2025"),
-      createPlan("ontario", "2026"),
+      createPlan("british-columbia"),
+      { ...createPlan("british-columbia"), federalBpa: 20000 },
+      createPlan("alberta"),
+      { ...createPlan("british-columbia"), provincialBpa: 20000 },
     ];
     expect(plans.map((p, i) => planLabel(p, i, plans))).toEqual([
-      "Ontario 2025",
-      "Ontario 2026",
+      "Current British Columbia",
+      "Proposal 1",
+      "Current Alberta",
+      "Proposal 2",
     ]);
   });
 
-  it("calls an unchanged plan 'Current law' when an earlier plan is the changed one", () => {
-    const plans = [
-      { ...createPlan("ontario", "2025"), federalBpa: 20000 },
-      createPlan("ontario", "2025"),
-    ];
-    expect(plans.map((p, i) => planLabel(p, i, plans))).toEqual([
-      "Plan A",
-      "Current law",
-    ]);
-  });
-
-  it("titles a changed plan against the reference's label, not 'current law'", () => {
+  it("titles proposals '<Province> Proposed Tax Change'", () => {
     expect(
-      defaultScenarioTitle({
-        title: "",
+      scenarioTitle({
         income: 1,
         plans: [
-          createPlan("ontario"),
-          {
-            ...createPlan("alberta"),
-            federalBrackets: decodeBrackets("0-20"),
-          },
+          createPlan("british-columbia"),
+          { ...createPlan("british-columbia"), provincialBpa: 20000 },
+          createPlan("alberta"),
         ],
       }),
-    ).toBe("Ontario vs Plan B");
+    ).toBe("British Columbia Proposed Tax Change");
   });
 
-  it("titles a province comparison 'X vs Y'", () => {
+  it("titles a comparison of current law only '<Province> Tax Comparison'", () => {
     expect(
-      defaultScenarioTitle({
-        title: "",
+      scenarioTitle({
         income: 1,
         plans: [createPlan("ontario"), createPlan("alberta")],
       }),
-    ).toBe("Ontario vs Alberta");
+    ).toBe("Ontario Tax Comparison");
   });
 });
 
@@ -284,16 +293,16 @@ describe("rates and effective overrides", () => {
 
   it("drops overrides that don't change anything", () => {
     const plan = {
-      ...createPlan("alberta", "2026"),
+      ...createPlan("alberta"),
       // Alberta has no surtax or health premium
       removeSurtax: true,
       removeHealthPremium: true,
-      federalBpa: getTaxConfig("2026", "alberta")!.federal.incomeTax
+      federalBpa: getTaxConfig(SCENARIO_YEAR, "alberta")!.federal.incomeTax
         .basicPersonalAmount,
       provincialBpa: 30000,
     };
     expect(effectivePlan(plan)).toEqual({
-      ...createPlan("alberta", "2026"),
+      ...createPlan("alberta"),
       provincialBpa: 30000,
     });
   });
@@ -302,7 +311,7 @@ describe("rates and effective overrides", () => {
 describe("compareScenario", () => {
   it("matches the standard calculator when nothing changes", () => {
     const comparison = compareScenario(createDefaultScenario())!;
-    const expected = calculateDetailedTax(100000, "ontario", "2026");
+    const expected = calculateDetailedTax(100000, "ontario", SCENARIO_YEAR);
     for (const plan of comparison.plans) {
       expect(plan.result.totalTax).toBeCloseTo(expected.totalTax, 6);
       expect(plan.difference).toBeCloseTo(0, 6);
@@ -311,12 +320,11 @@ describe("compareScenario", () => {
 
   it("compares provinces against the first plan", () => {
     const comparison = compareScenario({
-      title: "",
       income: 120000,
-      plans: [createPlan("ontario", "2025"), createPlan("alberta", "2025")],
+      plans: [createPlan("ontario"), createPlan("alberta")],
     })!;
-    const on = calculateDetailedTax(120000, "ontario", "2025").totalTax;
-    const ab = calculateDetailedTax(120000, "alberta", "2025").totalTax;
+    const on = calculateDetailedTax(120000, "ontario", SCENARIO_YEAR).totalTax;
+    const ab = calculateDetailedTax(120000, "alberta", SCENARIO_YEAR).totalTax;
     expect(comparison.plans[1].difference).toBeCloseTo(ab - on, 6);
   });
 
@@ -338,11 +346,16 @@ describe("compareScenario", () => {
   });
 
   it("applies custom federal brackets and BPA", () => {
-    const scenario = createDefaultScenario();
-    scenario.plans[1] = {
-      ...createPlan("alberta"),
-      federalBrackets: decodeBrackets("0-20"),
-      federalBpa: 0,
+    const scenario: TaxScenario = {
+      income: 100000,
+      plans: [
+        createPlan("alberta"),
+        {
+          ...createPlan("alberta"),
+          federalBrackets: decodeBrackets("0-20"),
+          federalBpa: 0,
+        },
+      ],
     };
     const plan = compareScenario(scenario)!.plans[1];
     // Flat 20% with no BPA credit, applied to taxable income (after the
@@ -353,7 +366,6 @@ describe("compareScenario", () => {
 
   it("builds one curve value per plan", () => {
     const comparison = compareScenario({
-      title: "",
       income: 100000,
       plans: [
         createPlan("ontario"),

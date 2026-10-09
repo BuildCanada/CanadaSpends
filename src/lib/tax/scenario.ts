@@ -1,7 +1,7 @@
 import { provinceNames } from "../provinceNames";
 
 import { calculateTaxWithConfig } from "./calculator";
-import { getDefaultYear, getSupportedYears, getTaxConfig } from "./configs";
+import { getDefaultYear, getTaxConfig } from "./configs";
 import {
   DetailedTaxCalculation,
   SupportedYear,
@@ -10,15 +10,11 @@ import {
 } from "./types";
 
 /**
- * One set of tax rules: a province and tax year, optionally with
- * user-defined changes. A plan with no overrides is that province's current
- * law, which is how province-to-province comparisons work.
- *
- * Overrides are `null` / `false` when the plan uses current law for that
- * parameter, which keeps shared URLs short.
+ * One set of tax rules for the current tax year: a province's current law,
+ * optionally with proposed changes. Overrides are `null` / `false` when the
+ * plan uses current law for that parameter, which keeps shared URLs short.
  */
 export interface TaxPlan {
-  name: string;
   province: string;
   year: SupportedYear;
   federalBrackets: TaxBracket[] | null;
@@ -30,12 +26,15 @@ export interface TaxPlan {
 }
 
 /**
- * A titled comparison of plans at one income. The first plan is the
- * reference that every other plan is compared against. Every field
- * round-trips through the URL query string so it can be shared as a link.
+ * A comparison of plans at one income, always against current law:
+ * - plan A is the reference: a province's current law for the current year
+ * - plans in the same province are proposed changes to that law
+ * - plans in other provinces are those provinces' current law
+ * There are no user-written titles or names; labels and the title are
+ * generated so shared scenarios stay neutral. Everything round-trips through
+ * the URL query string.
  */
 export interface TaxScenario {
-  title: string;
   income: number;
   plans: TaxPlan[];
 }
@@ -65,22 +64,22 @@ export const CODE_TO_PROVINCE: Record<string, string> = Object.fromEntries(
 
 export const DEFAULT_SCENARIO_INCOME = 100000;
 export const DEFAULT_SCENARIO_PROVINCE = "ontario";
-export const MAX_SCENARIO_TITLE_LENGTH = 80;
-export const MAX_PLAN_NAME_LENGTH = 40;
 export const MAX_SCENARIO_BRACKETS = 10;
 /** URL prefixes for each plan; the length is the maximum number of plans. */
 export const PLAN_KEYS = ["a", "b", "c", "d"] as const;
 export const MAX_PLANS = PLAN_KEYS.length;
 export const MAX_SCENARIO_INCOME = 100_000_000;
 
+/** The tax year every scenario uses: the current year. */
+export const SCENARIO_YEAR: SupportedYear = getDefaultYear();
+
+/** A province's current law for the current year. */
 export function createPlan(
   province: string = DEFAULT_SCENARIO_PROVINCE,
-  year: SupportedYear = getDefaultYear(),
 ): TaxPlan {
   return {
-    name: "",
     province,
-    year,
+    year: SCENARIO_YEAR,
     federalBrackets: null,
     federalBpa: null,
     provincialBrackets: null,
@@ -90,10 +89,9 @@ export function createPlan(
   };
 }
 
-/** Current law vs. an (initially unchanged) plan to edit. */
+/** Current law vs. an (initially unchanged) proposed change. */
 export function createDefaultScenario(): TaxScenario {
   return {
-    title: "",
     income: DEFAULT_SCENARIO_INCOME,
     plans: [createPlan(), createPlan()],
   };
@@ -179,10 +177,6 @@ function limitAmount(n: number): number {
   return Math.min(Math.round(n), MAX_SCENARIO_INCOME);
 }
 
-function limitText(text: string, max: number): string {
-  return text.trim().slice(0, max).trim();
-}
-
 function parseAmount(value: string | null): number | null {
   if (value === null || value === "") return null;
   const n = Number(value);
@@ -195,26 +189,20 @@ function parseProvince(value: string | null): string | null {
   return code && CODE_TO_PROVINCE[code] ? CODE_TO_PROVINCE[code] : null;
 }
 
-function parseYear(value: string | null): SupportedYear | null {
-  return value && getSupportedYears().includes(value as SupportedYear)
-    ? (value as SupportedYear)
-    : null;
-}
-
 /**
  * Read one plan's settings. Keys are `<prefix>province`, `<prefix>fb`, etc.,
  * where the prefix is e.g. `b.` (or empty for legacy single-plan links).
+ * Names, titles and years in older links are ignored.
  */
 function parsePlan(
   params: SearchParamsLike,
   prefix: string,
-  fallback: TaxPlan,
+  fallbackProvince: string,
 ): TaxPlan {
   const get = (key: string) => getParam(params, `${prefix}${key}`);
   return {
-    name: limitText(get("name") ?? "", MAX_PLAN_NAME_LENGTH),
-    province: parseProvince(get("province")) ?? fallback.province,
-    year: parseYear(get("year")) ?? fallback.year,
+    province: parseProvince(get("province")) ?? fallbackProvince,
+    year: SCENARIO_YEAR,
     federalBrackets: decodeBrackets(get("fb")),
     federalBpa: parseAmount(get("fbpa")),
     provincialBrackets: decodeBrackets(get("pb")),
@@ -232,13 +220,34 @@ function hasPlanParams(params: SearchParamsLike, key: string): boolean {
   return Object.keys(params).some((k) => k.startsWith(prefix));
 }
 
+/** Whether a plan is a proposed change to the reference province's law. */
+export function isProposal(index: number, plans: TaxPlan[]): boolean {
+  return index > 0 && plans[index].province === plans[0]?.province;
+}
+
+/**
+ * Enforce the scenario rules: plan A is current law for the current year,
+ * proposals edit the reference province's current-year law, and plans in
+ * other provinces are their current law.
+ */
+export function normalizeScenario(scenario: TaxScenario): TaxScenario {
+  const plans = scenario.plans.slice(0, MAX_PLANS);
+  const reference = plans[0]?.province ?? DEFAULT_SCENARIO_PROVINCE;
+  return {
+    income: Math.max(1, limitAmount(scenario.income)),
+    plans:
+      plans.length === 0
+        ? [createPlan(reference)]
+        : plans.map((plan, i) =>
+            isProposal(i, plans)
+              ? { ...plan, year: SCENARIO_YEAR }
+              : createPlan(plan.province),
+          ),
+  };
+}
+
 export function parseScenario(params: SearchParamsLike): TaxScenario {
   const scenario = createDefaultScenario();
-
-  scenario.title = limitText(
-    getParam(params, "title") ?? "",
-    MAX_SCENARIO_TITLE_LENGTH,
-  );
 
   const income = parseAmount(getParam(params, "income"));
   if (income !== null && income > 0) scenario.income = income;
@@ -248,18 +257,23 @@ export function parseScenario(params: SearchParamsLike): TaxScenario {
     const plans: TaxPlan[] = [];
     for (const key of PLAN_KEYS) {
       if (!hasPlanParams(params, key)) break;
-      plans.push(parsePlan(params, `${key}.`, plans[0] ?? createPlan()));
+      plans.push(
+        parsePlan(
+          params,
+          `${key}.`,
+          plans[0]?.province ?? DEFAULT_SCENARIO_PROVINCE,
+        ),
+      );
     }
     scenario.plans = plans;
   } else {
-    // Legacy single-plan links: unprefixed province/year/overrides describe
-    // a plan compared against current law in the same province and year.
-    const legacy = parsePlan(params, "", createPlan());
-    legacy.name = "";
-    scenario.plans = [createPlan(legacy.province, legacy.year), legacy];
+    // Legacy single-plan links: unprefixed province/overrides describe a
+    // proposal compared against current law in the same province.
+    const legacy = parsePlan(params, "", DEFAULT_SCENARIO_PROVINCE);
+    scenario.plans = [createPlan(legacy.province), legacy];
   }
 
-  return scenario;
+  return normalizeScenario(scenario);
 }
 
 /**
@@ -267,21 +281,17 @@ export function parseScenario(params: SearchParamsLike): TaxScenario {
  * omitted so the link only carries what was actually changed.
  */
 export function serializeScenario(scenario: TaxScenario): URLSearchParams {
+  const { income, plans } = normalizeScenario(scenario);
   const params = new URLSearchParams();
-  const title = limitText(scenario.title, MAX_SCENARIO_TITLE_LENGTH);
-  if (title) params.set("title", title);
-  params.set("income", String(limitAmount(scenario.income)));
+  params.set("income", String(income));
 
-  scenario.plans.slice(0, MAX_PLANS).forEach((plan, i) => {
+  plans.forEach((plan, i) => {
     const prefix = `${PLAN_KEYS[i]}.`;
+    // Province is always written so each plan is present in the URL
+    params.set(`${prefix}province`, PROVINCE_TO_CODE[plan.province] ?? "ON");
     for (const [key, value] of Object.entries(planOverrideParams(plan))) {
       params.set(`${prefix}${key}`, value);
     }
-    // Province and year are always written so each plan is present in the URL
-    params.set(`${prefix}province`, PROVINCE_TO_CODE[plan.province] ?? "ON");
-    params.set(`${prefix}year`, plan.year);
-    const name = limitText(plan.name, MAX_PLAN_NAME_LENGTH);
-    if (name) params.set(`${prefix}name`, name);
   });
 
   return params;
@@ -347,7 +357,7 @@ export function planHasChanges(plan: TaxPlan): boolean {
   return Object.keys(planOverrideParams(plan)).length > 0;
 }
 
-/** Whether two plans describe the same rules (ignoring names). */
+/** Whether two plans describe the same rules. */
 export function plansEquivalent(a: TaxPlan, b: TaxPlan): boolean {
   return (
     a.province === b.province &&
@@ -364,40 +374,39 @@ export function scenarioHasChanges(scenario: TaxScenario): boolean {
 }
 
 /**
- * Display name for a plan. In order of preference:
- * - the user's name for it
- * - "Plan B" for a changed plan, or an unchanged copy of an earlier
- *   unchanged plan with the same rules
- * - "Current law" for unchanged rules that another (changed) plan edits
- * - the province ("Ontario"), plus the year if the plans span several years
+ * Neutral, generated label for a plan:
+ * - plan A: "Current law", or "Current Alberta" when provinces are mixed
+ * - proposals: "Proposed change", or "Proposal 1", "Proposal 2", …
+ * - other provinces: "Current Alberta"
  */
 export function planLabel(plan: TaxPlan, index: number, plans: TaxPlan[]) {
-  if (plan.name.trim()) return plan.name.trim();
-  const sameRules = (other: TaxPlan) =>
-    other.province === plan.province && other.year === plan.year;
-  const letter = `Plan ${PLAN_KEYS[index].toUpperCase()}`;
-  if (planHasChanges(plan)) return letter;
-  const earlierTwin = plans
-    .slice(0, index)
-    .some((other) => sameRules(other) && !planHasChanges(other));
-  if (earlierTwin) return letter;
-  if (
-    plans.some(
-      (other) => other !== plan && sameRules(other) && planHasChanges(other),
-    )
-  ) {
-    return "Current law";
-  }
   const province = PROVINCE_NAMES[plan.province] ?? plan.province;
-  const mixedYears = plans.some((other) => other.year !== plan.year);
-  return mixedYears ? `${province} ${plan.year}` : province;
+  if (isProposal(index, plans)) {
+    const proposals = plans
+      .map((_, i) => i)
+      .filter((i) => isProposal(i, plans));
+    return proposals.length === 1
+      ? "Proposed change"
+      : `Proposal ${proposals.indexOf(index) + 1}`;
+  }
+  const mixedProvinces = plans.some((p) => p.province !== plans[0].province);
+  return index === 0 && !mixedProvinces ? "Current law" : `Current ${province}`;
 }
 
-/** A default title from the plan labels, e.g. "Ontario vs Alberta". */
-export function defaultScenarioTitle(scenario: TaxScenario): string {
-  const labels = scenario.plans.map((p, i) => planLabel(p, i, scenario.plans));
-  if (!scenarioHasChanges(scenario)) return "Build a tax plan";
-  return labels.join(" vs ");
+/**
+ * The scenario's title, generated so shared links stay neutral:
+ * "British Columbia Proposed Tax Change", or "… Tax Comparison" when it only
+ * compares provinces' current law.
+ */
+export function scenarioTitle(scenario: TaxScenario): string {
+  const reference = scenario.plans[0]?.province ?? DEFAULT_SCENARIO_PROVINCE;
+  const province = PROVINCE_NAMES[reference] ?? reference;
+  const hasProposal = scenario.plans.some((_, i) =>
+    isProposal(i, scenario.plans),
+  );
+  return hasProposal
+    ? `${province} Proposed Tax Change`
+    : `${province} Tax Comparison`;
 }
 
 /**

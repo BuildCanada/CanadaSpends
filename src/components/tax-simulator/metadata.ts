@@ -3,10 +3,10 @@ import type { Metadata } from "next";
 import { BASE_URL } from "@/lib/constants";
 import {
   compareScenario,
-  defaultScenarioTitle,
   describeComparison,
   parseScenario,
   scenarioHasChanges,
+  scenarioTitle,
   serializeScenario,
 } from "@/lib/tax";
 import { generateHreflangAlternates } from "@/lib/utils";
@@ -37,9 +37,7 @@ export function buildScenarioMetadata({
   const query = serializeScenario(scenario).toString();
   const hasComparison = scenarioHasChanges(scenario);
 
-  const heading =
-    scenario.title ||
-    (hasComparison ? defaultScenarioTitle(scenario) : fallbackTitle);
+  const heading = hasComparison ? scenarioTitle(scenario) : fallbackTitle;
   const description =
     comparison && hasComparison
       ? describeComparison(scenario, comparison)
