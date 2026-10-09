@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 
 import { calculateDetailedTax } from "./calculator";
-import { calculateSurtax } from "./calculators";
+import { calculateSurtax, getSurtaxBreakdown } from "./calculators";
 import { getSupportedYears } from "./configs";
 
 // These tests verify the Ontario surtax and health premium against the
@@ -79,5 +79,34 @@ describe("Ontario Health Premium", () => {
 describe("supported years", () => {
   it("includes 2026", () => {
     expect(getSupportedYears()).toContain("2026");
+  });
+});
+
+describe("Ontario surtax breakdown", () => {
+  it("shows each tier at its full rate and sums to the surtax", () => {
+    // 2025: 20% of Ontario tax over $5,710 plus 36% over $7,307 (ON428)
+    const config = {
+      type: "surtax" as const,
+      name: "Ontario Surtax",
+      tiers: [
+        { threshold: 5710, rate: 0.2 },
+        { threshold: 7307, rate: 0.36 },
+      ],
+    };
+    const tiers = getSurtaxBreakdown(10000, config);
+    expect(tiers.map((t) => t.rate)).toEqual([0.2, 0.36]);
+    expect(tiers[0].amount).toBeCloseTo(0.2 * (10000 - 5710), 6);
+    expect(tiers[1].amount).toBeCloseTo(0.36 * (10000 - 7307), 6);
+    expect(tiers[0].amount + tiers[1].amount).toBeCloseTo(
+      calculateSurtax(10000, config),
+      6,
+    );
+  });
+
+  it("returns the tiers it charged with the detailed calculation", () => {
+    const detailed = calculateDetailedTax(250000, "ontario", "2025");
+    const sum = detailed.surtaxTiers.reduce((s, t) => s + t.amount, 0);
+    expect(detailed.surtax).toBeGreaterThan(0);
+    expect(sum).toBeCloseTo(detailed.surtax, 6);
   });
 });

@@ -4,10 +4,10 @@ import { useEffect, useMemo, useState } from "react";
 import { Trans, useLingui } from "@lingui/react/macro";
 import { toast } from "sonner";
 
+import { formatWholeDollars } from "@/lib/format";
 import {
   buildRateCurve,
   chartMaxIncome,
-  formatWholeDollars,
   provinceName as localProvinceName,
   formatDecimal,
   inProvince,

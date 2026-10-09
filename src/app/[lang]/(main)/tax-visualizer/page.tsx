@@ -9,17 +9,13 @@ import { JurisdictionComparisonChart } from "@/components/JurisdictionComparison
 import { H1, H2, PageContent, Section } from "@/components/Layout";
 import { StatCard } from "@/components/StatCard";
 import { calculatePersonalTaxBreakdown } from "@/lib/personalTaxBreakdown";
+import { formatCurrency, formatWholeDollars } from "@/lib/format";
 import {
-  calculateCappedContribution,
-  calculateCpp2Contribution,
   calculateDetailedTax,
-  calculateEnhancedContributionPortion,
   type CreditLine,
   type TaxReductionLine,
   type DetailedTaxCalculation,
-  calculateHealthPremium,
   CODE_TO_PROVINCE,
-  formatCurrency,
   getBracketTaxBreakdown,
   getDefaultYear,
   getSupportedYears,
@@ -164,16 +160,6 @@ function TaxSummary({ taxCalculation }: TaxSummaryProps) {
   );
 }
 
-// Helper to format currency amounts
-function formatAmount(amount: number): string {
-  return new Intl.NumberFormat("en-CA", {
-    style: "currency",
-    currency: "CAD",
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  }).format(amount);
-}
-
 // Helper to format percentage
 function formatPercent(rate: number): string {
   return `${(rate * 100).toFixed((rate * 100) % 1 === 0 ? 0 : 2)}%`;
@@ -250,16 +236,16 @@ function IncomeTaxBracketsSection({
             >
               <td className="py-1">
                 {item.bracket.max === null
-                  ? `More than ${formatAmount(item.bracket.min)}`
+                  ? `More than ${formatWholeDollars(item.bracket.min)}`
                   : index === 0
-                    ? `First ${formatAmount(item.bracket.max)}`
-                    : `${formatAmount(item.bracket.min)} - ${formatAmount(item.bracket.max)}`}
+                    ? `First ${formatWholeDollars(item.bracket.max)}`
+                    : `${formatWholeDollars(item.bracket.min)} - ${formatWholeDollars(item.bracket.max)}`}
               </td>
               <td className="py-1 text-right">
                 {formatPercent(item.bracket.rate)}
               </td>
               <td className="py-1 text-right font-medium">
-                {formatAmount(item.taxAmount)}
+                {formatWholeDollars(item.taxAmount)}
               </td>
             </tr>
           ))}
@@ -270,12 +256,12 @@ function IncomeTaxBracketsSection({
             >
               <td className="py-1 text-muted-foreground text-xs" colSpan={2}>
                 <Trans>
-                  {labels.credit(credit)} ({formatAmount(credit.amount)} ×{" "}
+                  {labels.credit(credit)} ({formatWholeDollars(credit.amount)} ×{" "}
                   {formatPercent(creditRate)})
                 </Trans>
               </td>
               <td className="py-1 text-right font-medium text-red-600">
-                -{formatAmount(credit.value)}
+                -{formatWholeDollars(credit.value)}
               </td>
             </tr>
           ))}
@@ -283,7 +269,7 @@ function IncomeTaxBracketsSection({
             <td className="py-1" colSpan={2}>
               <Trans>Total</Trans>
             </td>
-            <td className="py-1 text-right">{formatAmount(tax)}</td>
+            <td className="py-1 text-right">{formatWholeDollars(tax)}</td>
           </tr>
         </tbody>
       </table>
@@ -304,28 +290,19 @@ interface TaxableIncomeBreakdown {
   deductionItems: DeductionItem[];
 }
 
-// Compute the line 22215 CPP/QPP enhanced-contribution deduction for the
-// active province. The deduction reduces taxable income for both federal
-// and provincial brackets, so it's computed once and shared by both cards.
-function computeTaxableIncomeBreakdown(
-  income: number,
+// The line 22215 CPP/QPP enhanced-contribution deduction, from the
+// calculator. It reduces taxable income for both federal and provincial
+// brackets, so it's shown on both cards.
+function getTaxableIncomeBreakdown(
+  calculation: DetailedTaxCalculation,
   config: TaxYearProvinceConfig,
 ): TaxableIncomeBreakdown {
   const pensionConfig =
     config.provincial.pensionPlanOverride ?? config.federal.cpp;
   const pensionAdditionalConfig =
     config.provincial.pensionPlanAdditionalOverride ?? config.federal.cpp2;
-  const pensionAmount = calculateCappedContribution(income, pensionConfig);
-  const pensionAdditionalAmount = calculateCpp2Contribution(
-    income,
-    pensionAdditionalConfig,
-  );
-  const enhancedPortion = calculateEnhancedContributionPortion(
-    pensionAmount,
-    pensionConfig,
-  );
-  const deductionTotal = enhancedPortion + pensionAdditionalAmount;
-  const taxableIncome = Math.max(0, income - deductionTotal);
+  const enhancedPortion = calculation.cppQppEnhancedPortion;
+  const pensionAdditionalAmount = calculation.cpp2Contribution;
 
   const deductionItems: DeductionItem[] = [];
   if (enhancedPortion > 0 && pensionConfig.baseRate !== undefined) {
@@ -342,7 +319,12 @@ function computeTaxableIncomeBreakdown(
     });
   }
 
-  return { grossIncome: income, taxableIncome, deductionTotal, deductionItems };
+  return {
+    grossIncome: calculation.grossIncome,
+    taxableIncome: calculation.taxableIncome,
+    deductionTotal: calculation.cppQppEnhancedDeduction,
+    deductionItems,
+  };
 }
 
 // Taxable income section: shows gross income reduced by the line 22215
@@ -369,16 +351,16 @@ function TaxableIncomeSection({
           <Trans>Total Taxable Income</Trans>
         </h4>
         <span className="font-semibold text-base">
-          {formatAmount(taxableIncome)}
+          {formatWholeDollars(taxableIncome)}
         </span>
       </div>
       {hasDeduction && (
         <details className="mt-2 group">
           <summary className="cursor-pointer text-xs text-muted-foreground hover:text-foreground select-none">
             <Trans>
-              {formatAmount(income)} gross income less{" "}
-              {formatAmount(deductionTotal)} CPP/QPP enhanced deduction (line
-              22215)
+              {formatWholeDollars(income)} gross income less{" "}
+              {formatWholeDollars(deductionTotal)} CPP/QPP enhanced deduction
+              (line 22215)
             </Trans>
           </summary>
           <table className="w-full text-left text-sm mt-2">
@@ -388,7 +370,7 @@ function TaxableIncomeSection({
                   <Trans>Gross employment income</Trans>
                 </td>
                 <td className="py-1 text-right font-medium w-24">
-                  {formatAmount(income)}
+                  {formatWholeDollars(income)}
                 </td>
               </tr>
               {deductionItems.map((item, index) => (
@@ -402,7 +384,7 @@ function TaxableIncomeSection({
                     )}
                   </td>
                   <td className="py-1 text-right font-medium align-top w-24 text-red-600">
-                    -{formatAmount(item.amount)}
+                    -{formatWholeDollars(item.amount)}
                   </td>
                 </tr>
               ))}
@@ -411,7 +393,7 @@ function TaxableIncomeSection({
                   <Trans>Taxable income</Trans>
                 </td>
                 <td className="py-1 text-right w-24">
-                  {formatAmount(taxableIncome)}
+                  {formatWholeDollars(taxableIncome)}
                 </td>
               </tr>
             </tbody>
@@ -426,7 +408,6 @@ function TaxableIncomeSection({
 interface FederalTaxCardProps {
   config: TaxYearProvinceConfig["federal"];
   provincialConfig: TaxYearProvinceConfig["provincial"];
-  income: number;
   taxableBreakdown: TaxableIncomeBreakdown;
   calculation: DetailedTaxCalculation;
 }
@@ -434,19 +415,17 @@ interface FederalTaxCardProps {
 function FederalTaxCard({
   config,
   provincialConfig,
-  income,
   taxableBreakdown,
   calculation,
 }: FederalTaxCardProps) {
+  // Every amount comes from the calculator; the card only displays it.
+  // CPP/CPP2 are federal unless the province runs its own plan (Quebec QPP,
+  // shown on the provincial card).
   const eiConfig = provincialConfig.eiOverride ?? config.ei;
   const hasProvincialPension = !!provincialConfig.pensionPlanOverride;
-  const cppAmount = hasProvincialPension
-    ? 0
-    : calculateCappedContribution(income, config.cpp);
-  const cpp2Amount = hasProvincialPension
-    ? 0
-    : calculateCpp2Contribution(income, config.cpp2);
-  const eiAmount = calculateCappedContribution(income, eiConfig);
+  const cppAmount = hasProvincialPension ? 0 : calculation.cppContribution;
+  const cpp2Amount = hasProvincialPension ? 0 : calculation.cpp2Contribution;
+  const eiAmount = calculation.eiContribution;
   const payrollTotal = cppAmount + cpp2Amount + eiAmount;
 
   // Federal income tax comes from the calculator: brackets on taxable income
@@ -492,7 +471,7 @@ function FederalTaxCard({
                 </Trans>
               </span>
               <span className="font-medium text-red-600">
-                -{formatAmount(federalAbatementAmount)}
+                -{formatWholeDollars(federalAbatementAmount)}
               </span>
             </div>
           </div>
@@ -511,30 +490,30 @@ function FederalTaxCard({
                     <td className="py-1 text-muted-foreground">
                       <div>{config.cpp.shortName}</div>
                       <div className="text-xs text-muted-foreground/70">
-                        {formatAmount(config.cpp.exemption)} -{" "}
-                        {formatAmount(config.cpp.maxEarnings)}
+                        {formatWholeDollars(config.cpp.exemption)} -{" "}
+                        {formatWholeDollars(config.cpp.maxEarnings)}
                       </div>
                     </td>
                     <td className="py-1 text-right align-top w-20">
                       {formatPercent(config.cpp.rate)}
                     </td>
                     <td className="py-1 text-right font-medium align-top w-20">
-                      {formatAmount(cppAmount)}
+                      {formatWholeDollars(cppAmount)}
                     </td>
                   </tr>
                   <tr className={cpp2Amount === 0 ? "opacity-40" : ""}>
                     <td className="py-1 text-muted-foreground">
                       <div>{config.cpp2.shortName}</div>
                       <div className="text-xs text-muted-foreground/70">
-                        {formatAmount(config.cpp2.ympe)} -{" "}
-                        {formatAmount(config.cpp2.yampe)}
+                        {formatWholeDollars(config.cpp2.ympe)} -{" "}
+                        {formatWholeDollars(config.cpp2.yampe)}
                       </div>
                     </td>
                     <td className="py-1 text-right align-top w-20">
                       {formatPercent(config.cpp2.rate)}
                     </td>
                     <td className="py-1 text-right font-medium align-top w-20">
-                      {formatAmount(cpp2Amount)}
+                      {formatWholeDollars(cpp2Amount)}
                     </td>
                   </tr>
                 </>
@@ -543,14 +522,15 @@ function FederalTaxCard({
                 <td className="py-1 text-muted-foreground">
                   <div>{eiConfig.shortName}</div>
                   <div className="text-xs text-muted-foreground/70">
-                    <Trans>First</Trans> {formatAmount(eiConfig.maxEarnings)}
+                    <Trans>First</Trans>{" "}
+                    {formatWholeDollars(eiConfig.maxEarnings)}
                   </div>
                 </td>
                 <td className="py-1 text-right align-top w-20">
                   {formatPercent(eiConfig.rate)}
                 </td>
                 <td className="py-1 text-right font-medium align-top w-20">
-                  {formatAmount(eiAmount)}
+                  {formatWholeDollars(eiAmount)}
                 </td>
               </tr>
               <tr className="font-semibold border-t border-border">
@@ -558,7 +538,7 @@ function FederalTaxCard({
                   <Trans>Total</Trans>
                 </td>
                 <td className="py-1 text-right w-20">
-                  {formatAmount(payrollTotal)}
+                  {formatWholeDollars(payrollTotal)}
                 </td>
               </tr>
             </tbody>
@@ -572,7 +552,7 @@ function FederalTaxCard({
           <span>
             <Trans>Total Federal Tax</Trans>
           </span>
-          <span>{formatAmount(totalFederalTax)}</span>
+          <span>{formatWholeDollars(totalFederalTax)}</span>
         </div>
       </div>
     </div>
@@ -596,17 +576,14 @@ function ProvincialTaxCard({
   calculation,
 }: ProvincialTaxCardProps) {
   const labels = useTaxLabels();
-  const healthPremiumAmount = config.healthPremium
-    ? calculateHealthPremium(income, config.healthPremium)
-    : 0;
-  const parentalInsuranceAmount = config.parentalInsurance
-    ? calculateCappedContribution(income, config.parentalInsurance)
-    : 0;
+  // Every amount comes from the calculator; the card only displays it.
+  const healthPremiumAmount = calculation.healthPremium;
+  const parentalInsuranceAmount = calculation.parentalInsuranceContribution;
   const provincialPensionAmount = config.pensionPlanOverride
-    ? calculateCappedContribution(income, config.pensionPlanOverride)
+    ? calculation.cppContribution
     : 0;
   const provincialPensionAdditionalAmount = config.pensionPlanAdditionalOverride
-    ? calculateCpp2Contribution(income, config.pensionPlanAdditionalOverride)
+    ? calculation.cpp2Contribution
     : 0;
 
   // Provincial income tax comes from the calculator: brackets on provincial
@@ -638,14 +615,14 @@ function ProvincialTaxCard({
                 {labels.workersDeduction}
               </span>
               <span className="font-medium text-red-600">
-                -{formatAmount(employmentDeduction)}
+                -{formatWholeDollars(employmentDeduction)}
               </span>
             </div>
             <div className="flex justify-between font-semibold">
               <span>
                 <Trans>{provinceName} taxable income</Trans>
               </span>
-              <span>{formatAmount(taxableIncome)}</span>
+              <span>{formatWholeDollars(taxableIncome)}</span>
             </div>
           </div>
         )}
@@ -667,43 +644,33 @@ function ProvincialTaxCard({
             </h4>
             <p className="text-xs text-muted-foreground mb-2">
               <Trans>
-                Applied to provincial tax of {formatAmount(provincialTax)}
+                Applied to provincial tax of {formatWholeDollars(provincialTax)}
               </Trans>
             </p>
             <table className="w-full text-left text-sm">
               <tbody>
-                {config.surtax.tiers.map((tier, index) => {
-                  const additionalRate =
-                    tier.rate -
-                    (index > 0 ? config.surtax!.tiers[index - 1].rate : 0);
-                  const taxableAboveThreshold = Math.max(
-                    0,
-                    provincialTax - tier.threshold,
-                  );
-                  const tierAmount = taxableAboveThreshold * additionalRate;
-                  return (
-                    <tr
-                      key={index}
-                      className={tierAmount === 0 ? "opacity-40" : ""}
-                    >
-                      <td className="py-1 text-muted-foreground">
-                        <Trans>Above {formatAmount(tier.threshold)}</Trans>
-                      </td>
-                      <td className="py-1 text-right w-20">
-                        +{formatPercent(additionalRate)}
-                      </td>
-                      <td className="py-1 text-right font-medium w-20">
-                        {formatAmount(tierAmount)}
-                      </td>
-                    </tr>
-                  );
-                })}
+                {calculation.surtaxTiers.map((tier) => (
+                  <tr
+                    key={tier.threshold}
+                    className={tier.amount === 0 ? "opacity-40" : ""}
+                  >
+                    <td className="py-1 text-muted-foreground">
+                      <Trans>Above {formatWholeDollars(tier.threshold)}</Trans>
+                    </td>
+                    <td className="py-1 text-right w-20">
+                      {formatPercent(tier.rate)}
+                    </td>
+                    <td className="py-1 text-right font-medium w-20">
+                      {formatWholeDollars(tier.amount)}
+                    </td>
+                  </tr>
+                ))}
                 <tr className="font-semibold border-t border-border">
                   <td className="py-1" colSpan={2}>
                     <Trans>Total</Trans>
                   </td>
                   <td className="py-1 text-right w-20">
-                    {formatAmount(surtaxAmount)}
+                    {formatWholeDollars(surtaxAmount)}
                   </td>
                 </tr>
               </tbody>
@@ -725,7 +692,7 @@ function ProvincialTaxCard({
                       {labels.reduction(reduction)}
                     </td>
                     <td className="py-1 text-right font-medium text-red-600 w-20">
-                      -{formatAmount(reduction.amount)}
+                      -{formatWholeDollars(reduction.amount)}
                     </td>
                   </tr>
                 ))}
@@ -742,10 +709,10 @@ function ProvincialTaxCard({
             </h4>
             <div className="flex justify-between text-sm">
               <span className="text-muted-foreground">
-                <Trans>Based on income of {formatAmount(income)}</Trans>
+                <Trans>Based on income of {formatWholeDollars(income)}</Trans>
               </span>
               <span className="font-medium">
-                {formatAmount(healthPremiumAmount)}
+                {formatWholeDollars(healthPremiumAmount)}
               </span>
             </div>
           </div>
@@ -763,15 +730,18 @@ function ProvincialTaxCard({
                   <td className="py-1 text-muted-foreground">
                     <div>{config.pensionPlanOverride.shortName}</div>
                     <div className="text-xs text-muted-foreground/70">
-                      {formatAmount(config.pensionPlanOverride.exemption)} -{" "}
-                      {formatAmount(config.pensionPlanOverride.maxEarnings)}
+                      {formatWholeDollars(config.pensionPlanOverride.exemption)}{" "}
+                      -{" "}
+                      {formatWholeDollars(
+                        config.pensionPlanOverride.maxEarnings,
+                      )}
                     </div>
                   </td>
                   <td className="py-1 text-right align-top w-20">
                     {formatPercent(config.pensionPlanOverride.rate)}
                   </td>
                   <td className="py-1 text-right font-medium align-top w-20">
-                    {formatAmount(provincialPensionAmount)}
+                    {formatWholeDollars(provincialPensionAmount)}
                   </td>
                 </tr>
                 {config.pensionPlanAdditionalOverride && (
@@ -787,11 +757,11 @@ function ProvincialTaxCard({
                         {config.pensionPlanAdditionalOverride.shortName}
                       </div>
                       <div className="text-xs text-muted-foreground/70">
-                        {formatAmount(
+                        {formatWholeDollars(
                           config.pensionPlanAdditionalOverride.ympe,
                         )}{" "}
                         -{" "}
-                        {formatAmount(
+                        {formatWholeDollars(
                           config.pensionPlanAdditionalOverride.yampe,
                         )}
                       </div>
@@ -800,7 +770,7 @@ function ProvincialTaxCard({
                       {formatPercent(config.pensionPlanAdditionalOverride.rate)}
                     </td>
                     <td className="py-1 text-right font-medium align-top w-20">
-                      {formatAmount(provincialPensionAdditionalAmount)}
+                      {formatWholeDollars(provincialPensionAdditionalAmount)}
                     </td>
                   </tr>
                 )}
@@ -822,14 +792,14 @@ function ProvincialTaxCard({
                     <div>{config.parentalInsurance.shortName}</div>
                     <div className="text-xs text-muted-foreground/70">
                       <Trans>First</Trans>{" "}
-                      {formatAmount(config.parentalInsurance.maxEarnings)}
+                      {formatWholeDollars(config.parentalInsurance.maxEarnings)}
                     </div>
                   </td>
                   <td className="py-1 text-right align-top w-20">
                     {formatPercent(config.parentalInsurance.rate)}
                   </td>
                   <td className="py-1 text-right font-medium align-top w-20">
-                    {formatAmount(parentalInsuranceAmount)}
+                    {formatWholeDollars(parentalInsuranceAmount)}
                   </td>
                 </tr>
               </tbody>
@@ -844,7 +814,7 @@ function ProvincialTaxCard({
           <span>
             <Trans>Total {provinceName} Tax</Trans>
           </span>
-          <span>{formatAmount(totalProvincialTax)}</span>
+          <span>{formatWholeDollars(totalProvincialTax)}</span>
         </div>
       </div>
     </div>
@@ -871,12 +841,12 @@ function TaxDetails({
   setYear,
 }: TaxDetailsProps) {
   const provinceName = PROVINCE_NAMES[config.province] || config.province;
-  const taxableBreakdown = computeTaxableIncomeBreakdown(income, config);
   const calculation = calculateDetailedTax(
     income,
     config.province,
     config.year,
   );
+  const taxableBreakdown = getTaxableIncomeBreakdown(calculation, config);
 
   return (
     <div id="tax-details" className="mt-16 scroll-mt-8">
@@ -904,7 +874,6 @@ function TaxDetails({
         <FederalTaxCard
           config={config.federal}
           provincialConfig={config.provincial}
-          income={income}
           taxableBreakdown={taxableBreakdown}
           calculation={calculation}
         />

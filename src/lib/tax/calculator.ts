@@ -5,8 +5,8 @@ import {
   calculateFederalAbatement,
   calculateHealthPremium,
   calculateIncomeTax,
-  calculateSurtax,
   calculateTaxReductions,
+  getSurtaxBreakdown,
 } from "./calculators";
 import { getDefaultYear, getTaxConfig } from "./configs";
 import {
@@ -195,9 +195,11 @@ export function calculateTaxWithConfig(
   });
 
   // Provincial surtax (if applicable)
-  let surtax = 0;
+  const surtaxTiers = config.provincial.surtax
+    ? getSurtaxBreakdown(provincialIncomeTax, config.provincial.surtax)
+    : [];
+  const surtax = surtaxTiers.reduce((sum, tier) => sum + tier.amount, 0);
   if (config.provincial.surtax) {
-    surtax = calculateSurtax(provincialIncomeTax, config.provincial.surtax);
     if (surtax > 0) {
       lineItems.push({
         id: "provincial-surtax",
@@ -314,6 +316,9 @@ export function calculateTaxWithConfig(
     healthPremium,
     federalAbatement,
     cppQppEnhancedDeduction,
+    cppQppEnhancedPortion,
+    taxableIncome,
+    surtaxTiers,
     federalIncomeTaxBeforeCredits: federal.taxBeforeCredits,
     provincialIncomeTaxBeforeCredits: provincial.taxBeforeCredits,
     federalCredits: federal.credits,
@@ -347,23 +352,4 @@ export function calculateTotalTax(
     netIncome: detailed.netIncome,
     effectiveTaxRate: detailed.effectiveTaxRate,
   };
-}
-
-/**
- * Format currency in CAD
- */
-export function formatCurrency(amount: number): string {
-  return new Intl.NumberFormat("en-CA", {
-    style: "currency",
-    currency: "CAD",
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  }).format(amount);
-}
-
-/**
- * Format percentage
- */
-export function formatPercentage(rate: number): string {
-  return `${rate.toFixed(1)}%`;
 }

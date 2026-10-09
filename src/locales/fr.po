@@ -41,9 +41,9 @@ msgid "{0}"
 msgstr "{0}"
 
 #. placeholder {0}: labels.credit(credit)
-#. placeholder {1}: formatAmount(credit.amount)
+#. placeholder {1}: formatWholeDollars(credit.amount)
 #. placeholder {2}: formatPercent(creditRate)
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:272
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:258
 msgid "{0} ({1} × {2})"
 msgstr "{0} ({1} × {2})"
 
@@ -78,9 +78,9 @@ msgstr "Dépenses du gouvernement de {0}"
 msgid "{0} Government Workforce"
 msgstr "Effectifs du gouvernement de {0}"
 
-#. placeholder {0}: formatAmount(income)
-#. placeholder {1}: formatAmount(deductionTotal)
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:378
+#. placeholder {0}: formatWholeDollars(income)
+#. placeholder {1}: formatWholeDollars(deductionTotal)
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:360
 msgid "{0} gross income less {1} CPP/QPP enhanced deduction (line 22215)"
 msgstr "Revenu brut de {0}, moins la déduction de {1} pour les cotisations bonifiées au RPC/RRQ (ligne 22215)"
 
@@ -91,7 +91,7 @@ msgid "{0} is a First Nation{1}."
 msgstr "{0} est une Première Nation{1}."
 
 #. placeholder {0}: formatPercent(federalAbatementConfig.rate)
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:489
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:468
 msgid "{0} of federal income tax"
 msgstr "{0} de l'impôt fédéral sur le revenu"
 
@@ -154,16 +154,16 @@ msgstr "{provinceName}, règles de {year} modifiées"
 msgid "{provinceName} income tax"
 msgstr "Impôt sur le revenu ({provinceName})"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:646
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:623
 msgid "{provinceName} taxable income"
 msgstr "Revenu imposable ({provinceName})"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:627
-#: src/components/TaxBreakdownAccordion.tsx:112
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:604
+#: src/components/TaxBreakdownAccordion.tsx:100
 msgid "{provinceName} Taxes"
 msgstr "Impôts de {provinceName}"
 
-#: src/components/TaxBreakdownAccordion.tsx:115
+#: src/components/TaxBreakdownAccordion.tsx:103
 msgid "{provinceName} Total"
 msgstr "Total de {provinceName}"
 
@@ -199,7 +199,7 @@ msgstr "10 ministères gouvernementaux représentaient 73,2 % des dépenses féd
 msgid "10 government departments accounted for 73.2% of federal spending in FY 2024."
 msgstr "10 ministères gouvernementaux représentaient 73,2 % des dépenses fédérales pour l'exercice 2024."
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:83
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:79
 msgid "100,000"
 msgstr "100 000"
 
@@ -290,8 +290,8 @@ msgstr "À propos de GlobaLeaks"
 msgid "About Us"
 msgstr "À propos de nous"
 
-#. placeholder {0}: formatAmount(tier.threshold)
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:690
+#. placeholder {0}: formatWholeDollars(tier.threshold)
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:658
 msgid "Above {0}"
 msgstr "Au-dessus de {0}"
 
@@ -424,7 +424,7 @@ msgstr "Tous les revenus perçus au cours de l'exercice financier, y compris les
 msgid "All the information comes from public databases and reports by the Government of Canada. We show our sources, so you know exactly where it comes from."
 msgstr "Toutes les informations proviennent des bases de données publiques et des rapports du gouvernement du Canada. Nous indiquons nos sources pour que vous sachiez exactement d'où elles proviennent."
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:889
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:859
 msgid "All the taxes that apply to your income"
 msgstr "Tous les impôts qui s'appliquent à votre revenu"
 
@@ -437,7 +437,7 @@ msgstr "Montant/Changement"
 msgid "Annual income"
 msgstr "Revenu annuel"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:70
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:66
 msgid "Annual Income (CAD)"
 msgstr "Revenu annuel (CAD)"
 
@@ -468,8 +468,8 @@ msgstr "Règles actuelles d'une autre province"
 msgid "Application ID"
 msgstr "ID de la demande"
 
-#. placeholder {0}: formatAmount(provincialTax)
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:669
+#. placeholder {0}: formatWholeDollars(provincialTax)
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:646
 msgid "Applied to provincial tax of {0}"
 msgstr "Appliqué à l'impôt provincial de {0}"
 
@@ -540,8 +540,8 @@ msgstr "Banques + Finances"
 msgid "Based on Data"
 msgstr "Basé sur les données"
 
-#. placeholder {0}: formatAmount(income)
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:745
+#. placeholder {0}: formatWholeDollars(income)
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:712
 msgid "Based on income of {0}"
 msgstr "Basé sur un revenu de {0}"
 
@@ -550,7 +550,7 @@ msgstr "Basé sur un revenu de {0}"
 msgid "Basic personal amount"
 msgstr "Montant personnel de base"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:189
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:175
 msgid "Basic personal amount credit"
 msgstr "Crédit pour le montant personnel de base"
 
@@ -558,7 +558,7 @@ msgstr "Crédit pour le montant personnel de base"
 msgid "Basic personal amounts of $25k"
 msgstr "Montants personnels de base de 25 000 $"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:195
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:181
 msgid "BC tax reduction credit"
 msgstr "Crédit de réduction d'impôt de la Colombie-Britannique"
 
@@ -612,11 +612,11 @@ msgid "Build your own"
 msgstr "Créer le vôtre"
 
 #. placeholder {0}: labels[0]
-#: src/components/tax-simulator/TaxPaidChart.tsx:127
+#: src/components/tax-simulator/TaxPaidChart.tsx:123
 msgid "By employment income. Above $0 means paying more than {0}; below means paying less."
 msgstr "Selon le revenu d'emploi. Au-dessus de 0 $, on paie plus qu'avec {0}; en dessous, on paie moins."
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:62
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:58
 msgid "Calculate Your Tax Contribution"
 msgstr "Calculez votre contribution fiscale"
 
@@ -636,7 +636,7 @@ msgstr "Fonds pour la construction communautaire du Canada"
 msgid "Canada Emergency Wage Subsidy"
 msgstr "Subvention salariale d'urgence du Canada"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:191
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:177
 msgid "Canada employment amount credit"
 msgstr "Crédit pour le montant canadien pour emploi"
 
@@ -720,7 +720,7 @@ msgid "Cash, investments, accounts receivable, and other assets that can be conv
 msgstr "Encaisse, placements, comptes débiteurs et autres actifs pouvant être convertis en espèces."
 
 #. placeholder {0}: labels[0]
-#: src/components/tax-simulator/TaxPaidChart.tsx:118
+#: src/components/tax-simulator/TaxPaidChart.tsx:114
 msgid "Change in annual tax vs {0}"
 msgstr "Écart d'impôt annuel par rapport à {0}"
 
@@ -884,7 +884,7 @@ msgstr "Pays"
 msgid "COVID-19 Income Support"
 msgstr "Soutien au revenu COVID-19"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:190
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:176
 msgid "CPP/QPP and EI contributions credit"
 msgstr "Crédit pour les cotisations au RPC/RRQ et à l'AE"
 
@@ -958,7 +958,7 @@ msgstr "Données mises à jour le 20 mars 2025"
 msgid "Data updated March 21, 2025"
 msgstr "Données mises à jour le 21 mars 2025"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:207
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:193
 msgid "Deduction for workers"
 msgstr "Déduction pour travailleur"
 
@@ -1102,11 +1102,11 @@ msgstr "Économie et niveau de vie"
 msgid "Edit a copy"
 msgstr "Modifier une copie"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:159
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:155
 msgid "Effective Rate"
 msgstr "Taux effectif"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:161
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:157
 msgid "Effective tax rate"
 msgstr "Taux d'imposition effectif"
 
@@ -1159,7 +1159,7 @@ msgstr "Date de fin"
 msgid "Energy Taxes"
 msgstr "Taxes sur l'énergie"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:994
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:963
 msgid "Enter your income to see a personalized breakdown of how much you contribute to different government services and programs."
 msgstr "Entrez votre revenu pour voir une répartition personnalisée de votre contribution aux différents services et programmes gouvernementaux."
 
@@ -1219,15 +1219,15 @@ msgstr "Revenus gouvernementaux projetés estimés"
 msgid "Established in 2005, ESDC is a federal department responsible for supporting Canadians through social programs and workforce development. It administers key programs such as Employment Insurance (EI), the Canada Pension Plan (CPP), Old Age Security (OAS), and skills training initiatives. ESDC also oversees Service Canada, which delivers government services directly to the public."
 msgstr "Établi en 2005, EDSC est un ministère fédéral responsable du soutien aux Canadiens par le biais de programmes sociaux et de développement de la main-d'œuvre. Il administre des programmes clés tels que l'assurance-emploi (AE), le Régime de pensions du Canada (RPC), la Sécurité de la vieillesse (SV) et des initiatives de formation professionnelle. EDSC supervise également Service Canada, qui fournit des services gouvernementaux directement au public."
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:156
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:152
 msgid "Estimated combined tax"
 msgstr "Impôt combiné estimé"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:146
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:142
 msgid "Estimated income tax paid to federal government"
 msgstr "Impôt sur le revenu estimé payé au gouvernement fédéral"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:151
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:147
 msgid "Estimated income tax paid to provincial government"
 msgstr "Impôt sur le revenu estimé payé au gouvernement provincial"
 
@@ -1507,16 +1507,16 @@ msgstr "Les dépenses fédérales consacrées aux priorités autochtones peuvent
 msgid "Federal spending on public safety fluctuates based on evolving security threats, emergency events, and changes in government policy. Since 2005 shortly after it was established, Public Safety Canada's expenditures have increased by 69.6%, reflecting heightened investments in counterterrorism, cyber defence, and disaster response capabilities. The department's share of the federal budget has remained relatively flat from 2.6% in 2005 to 2.7% in 2024."
 msgstr "Les dépenses fédérales en matière de sécurité publique fluctuent en fonction de l'évolution des menaces pour la sécurité, des événements d'urgence et des changements dans la politique gouvernementale. Depuis 2005, peu après sa création, les dépenses de Sécurité publique Canada ont augmenté de 69,6 %, reflétant des investissements accrus dans les capacités de lutte contre le terrorisme, de cyberdéfense et d'intervention en cas de catastrophe. La part du ministère dans le budget fédéral est restée relativement stable, passant de 2,6 % en 2005 à 2,7 % en 2024."
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:144
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:140
 msgid "Federal Tax"
 msgstr "Impôt fédéral"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:466
-#: src/components/TaxBreakdownAccordion.tsx:105
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:445
+#: src/components/TaxBreakdownAccordion.tsx:93
 msgid "Federal Taxes"
 msgstr "Impôts fédéraux"
 
-#: src/components/TaxBreakdownAccordion.tsx:108
+#: src/components/TaxBreakdownAccordion.tsx:96
 msgid "Federal Total"
 msgstr "Total fédéral"
 
@@ -1561,8 +1561,8 @@ msgstr "Situation financière {0}"
 msgid "Financial Summary FY {fiscalYear}"
 msgstr "Résumé financier EF {fiscalYear}"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:546
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:824
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:525
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:794
 msgid "First"
 msgstr "Premier"
 
@@ -1643,7 +1643,7 @@ msgstr "Sécurité alimentaire"
 msgid "For example, during the COVID-19 pandemic, federal support programs led to a temporary surge in spending. ESDC expenditures increased from $63.3 billion in 2019 to $169.2 billion in 2021 before stabilizing in recent years."
 msgstr "Par exemple, pendant la pandémie de COVID-19, les programmes de soutien fédéraux ont entraîné une augmentation temporaire des dépenses. Les dépenses d'EDSC sont passées de 63,3 milliards de dollars en 2019 à 169,2 milliards de dollars en 2021 avant de se stabiliser ces dernières années."
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1091
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1060
 msgid "For further breakdowns of spending, see <0>Federal</0> and <1>Provincial</1> spending pages."
 msgstr "Pour des répartitions plus détaillées des dépenses, consultez les pages de dépenses <0>fédérales</0> et <1>provinciales</1>."
 
@@ -1773,7 +1773,7 @@ msgstr "Organisations gouvernementales"
 msgid "Government Spending"
 msgstr "Dépenses gouvernementales"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1088
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1057
 msgid "Government spending is based on 2023-2024 fiscal spending. Attempts have been made to merge similar categories across federal and provincial spending."
 msgstr "Les dépenses gouvernementales sont basées sur les dépenses fiscales de 2023-2024. Des tentatives ont été faites pour fusionner des catégories similaires entre les dépenses fédérales et provinciales."
 
@@ -1803,7 +1803,7 @@ msgstr "Total général"
 msgid "Grants to Support the New Fiscal Relationship with First Nations"
 msgstr "Subventions pour soutenir la nouvelle relation financière avec les Premières Nations"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:388
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:370
 msgid "Gross employment income"
 msgstr "Revenu d'emploi brut"
 
@@ -2096,7 +2096,7 @@ msgid "Income"
 msgstr "Revenu"
 
 #. placeholder {0}: formatWholeDollars(hovered.income)
-#: src/components/tax-simulator/TaxPaidChart.tsx:272
+#: src/components/tax-simulator/TaxPaidChart.tsx:268
 msgid "Income {0}"
 msgstr "Revenu de {0}"
 
@@ -2108,7 +2108,7 @@ msgstr "Revenu au-delà de"
 msgid "Income Tax Revenues"
 msgstr "Revenus de l'impôt sur le revenu"
 
-#: src/components/tax-simulator/TaxPaidChart.tsx:123
+#: src/components/tax-simulator/TaxPaidChart.tsx:119
 msgid "Income tax, CPP/QPP, EI and premiums, by employment income"
 msgstr "Impôt sur le revenu, RPC/RRQ, AE et contributions, selon le revenu d'emploi"
 
@@ -2327,15 +2327,15 @@ msgstr "Emplacement"
 msgid "Look back at what {0}'s government made and spent. {1}"
 msgstr "Regardez en arrière ce que le gouvernement de {0} a gagné et dépensé. {1}"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:197
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:183
 msgid "Low-income Individuals and Families Tax (LIFT) credit"
 msgstr "Crédit d'impôt pour les personnes et les familles à faible revenu (CIPFR)"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:193
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:179
 msgid "Low-income tax reduction"
 msgstr "Réduction d'impôt pour les personnes à faible revenu"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:718
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:685
 msgid "Low-income tax reductions"
 msgstr "Réductions d'impôt pour les personnes à faible revenu"
 
@@ -2789,7 +2789,7 @@ msgstr "TCS Ontario"
 msgid "Ontario STP"
 msgstr "TPS Ontario"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:196
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:182
 msgid "Ontario Tax Reduction"
 msgstr "Réduction d'impôt de l'Ontario"
 
@@ -2964,7 +2964,7 @@ msgstr "Parlement"
 msgid "Payment Amount"
 msgstr "Montant du paiement"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:504
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:483
 msgid "Payroll Contributions"
 msgstr "Cotisations salariales"
 
@@ -3153,7 +3153,7 @@ msgstr "Prov."
 msgid "Province"
 msgstr "Province"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:93
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:89
 #: src/components/tax-simulator/TaxSimulator.tsx:768
 msgid "Province/Territory"
 msgstr "Province/Territoire"
@@ -3169,7 +3169,7 @@ msgstr "Provincial"
 msgid "Provincial surtax"
 msgstr "Surtaxe provinciale"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:149
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:145
 msgid "Provincial Tax"
 msgstr "Impôt provincial"
 
@@ -3276,7 +3276,7 @@ msgstr "Compensation fiscale du Québec"
 msgid "Ranked <0>#{0}</0> of {1} lowest tax"
 msgstr "Classé <0>#{0}</0> sur {1} en termes d'impôt le plus bas"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:238
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:224
 #: src/components/tax-simulator/TaxSimulator.tsx:140
 msgid "Rate"
 msgstr "Taux"
@@ -3418,7 +3418,7 @@ msgstr "Revenus et dépenses EF {fiscalYear}"
 msgid "Revenue Canada"
 msgstr "Revenu Canada"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1053
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1022
 msgid "Rewrite the brackets in the Tax Simulator, compare your plan with current law, and share it."
 msgstr "Modifiez les tranches dans le Simulateur d'impôt, comparez votre scénario aux règles actuelles et partagez-le."
 
@@ -3625,11 +3625,11 @@ msgstr "La spéculation n'atteint pas le niveau d'une information solide."
 msgid "Spending"
 msgstr "Dépenses"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1138
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1107
 msgid "Spending Breakdown Coming Soon"
 msgstr "Répartition des dépenses à venir"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1141
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1110
 msgid "Spending data is not yet available for this province and year combination. The income tax calculation above is still accurate based on {year} tax rates."
 msgstr "Les données de dépenses ne sont pas encore disponibles pour cette combinaison de province et d'année. Le calcul de l'impôt sur le revenu ci-dessus reste exact selon les taux d'imposition de {year}."
 
@@ -3737,15 +3737,15 @@ msgstr "Immobilisations corporelles"
 msgid "Tangible capital assets such as land, buildings, equipment, and infrastructure."
 msgstr "Immobilisations corporelles telles que terrains, bâtiments, équipements et infrastructures."
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:241
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:227
 msgid "Tax"
 msgstr "Impôt"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:235
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:221
 msgid "Tax bracket"
 msgstr "Tranche d'imposition"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1082
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1051
 msgid "Tax calculations are based on {year} federal and provincial tax brackets."
 msgstr "Les calculs d'impôt sont basés sur les tranches d'imposition fédérales et provinciales de {year}."
 
@@ -3759,7 +3759,7 @@ msgid "Tax Comparison Across Provinces at {0} Income"
 msgstr "Comparaison des impôts entre les provinces pour un revenu de {0}"
 
 #. placeholder {0}: config.year
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:884
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:854
 msgid "Tax Details for {provinceName} ({0})"
 msgstr "Détails fiscaux pour {provinceName} ({0})"
 
@@ -3777,11 +3777,11 @@ msgstr "Visualiseur d'impôt"
 msgid "Tax Visualizer | Canada Spends"
 msgstr "Visualiseur d'impôt | Canada Spends"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:114
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:110
 msgid "Tax Year"
 msgstr "Année d'imposition"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:411
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:393
 #: src/components/tax-simulator/PlanChanges.tsx:93
 msgid "Taxable income"
 msgstr "Revenu imposable"
@@ -4002,7 +4002,7 @@ msgstr "Ce tableau a été vérifié."
 msgid "This schedule is unaudited."
 msgstr "Ce tableau n'a pas été vérifié."
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1078
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1047
 msgid "This visualization shows how your income tax contributions are allocated across different government programs and services based on current government spending patterns. Amounts under $20 are grouped into \"Other\" for conciseness."
 msgstr "Cette visualisation montre comment vos contributions d'impôt sur le revenu sont allouées à différents programmes et services gouvernementaux en fonction des modèles de dépenses gouvernementales actuels. Les montants inférieurs à 20 $ sont regroupés dans \"Autre\" pour plus de concision."
 
@@ -4018,9 +4018,9 @@ msgstr "pour nous aider à soutenir notre mission."
 msgid "Tools"
 msgstr "Outils"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:284
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:558
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:703
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:270
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:538
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:670
 #: src/components/first-nations/ClaimsTable.tsx:300
 #: src/components/first-nations/RemunerationOverview.tsx:800
 #: src/components/first-nations/RemunerationTable.tsx:139
@@ -4029,7 +4029,7 @@ msgstr "Outils"
 msgid "Total"
 msgstr "Total"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:845
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:815
 msgid "Total {provinceName} Tax"
 msgstr "Total impôt {provinceName}"
 
@@ -4037,7 +4037,7 @@ msgstr "Total impôt {provinceName}"
 msgid "Total accumulated surplus"
 msgstr "Surplus cumulé total"
 
-#: src/components/tax-simulator/TaxPaidChart.tsx:116
+#: src/components/tax-simulator/TaxPaidChart.tsx:112
 msgid "Total annual tax by income"
 msgstr "Impôt annuel total selon le revenu"
 
@@ -4066,7 +4066,7 @@ msgstr "Dépenses totales"
 msgid "Total expenses in FY {fiscalYear}"
 msgstr "Dépenses totales pour l'exercice {fiscalYear}"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:573
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:553
 msgid "Total Federal Tax"
 msgstr "Total impôt fédéral"
 
@@ -4132,12 +4132,12 @@ msgstr "Dépenses totales divisées par la population. Utile pour comparer l'eff
 msgid "Total spending in {0}"
 msgstr "Dépenses totales en {0}"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:154
-#: src/components/TaxBreakdownAccordion.tsx:120
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:150
+#: src/components/TaxBreakdownAccordion.tsx:108
 msgid "Total Tax"
 msgstr "Impôt total"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:369
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:351
 msgid "Total Taxable Income"
 msgstr "Revenu imposable total"
 
@@ -4231,7 +4231,7 @@ msgstr "Conseil du Trésor"
 msgid "Tribunal Award"
 msgstr "Décision du tribunal"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1060
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1029
 msgid "Try the Tax Simulator →"
 msgstr "Essayer le Simulateur d'impôt →"
 
@@ -4240,7 +4240,7 @@ msgstr "Essayer le Simulateur d'impôt →"
 msgid "Type of Tenure"
 msgstr "Type d'emploi"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1075
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1044
 msgid "Understanding Your Tax Contribution"
 msgstr "Comprendre votre contribution fiscale"
 
@@ -4294,8 +4294,8 @@ msgstr "Anciens Combattants Canada | Canada Dépense"
 msgid "View {year} financial statements for {0}{provinceSuffix}. Includes statement of operations, financial position, and remuneration data from the First Nations Financial Transparency Act annual report."
 msgstr "Consultez les états financiers {year} pour {0}{provinceSuffix}. Comprend l'état des résultats, la situation financière et les données de rémunération du rapport annuel de la Loi sur la transparence financière des Premières Nations."
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1024
-#: src/components/TaxBreakdownAccordion.tsx:100
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:993
+#: src/components/TaxBreakdownAccordion.tsx:88
 msgid "View detailed tax breakdown"
 msgstr "Voir le détail des impôts"
 
@@ -4459,7 +4459,7 @@ msgstr "Quelles sources de données ont été utilisées?"
 msgid "What each plan changes"
 msgstr "Ce que change chaque scénario"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1050
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1019
 msgid "What if the tax rules were different?"
 msgstr "Et si les règles fiscales étaient différentes?"
 
@@ -4483,8 +4483,8 @@ msgstr "Lorsque LGIC a été fondé au cours de l'exercice 2005 en tant que Bure
 msgid "Where do you get the data on your website?"
 msgstr "D'où proviennent les données sur votre site web?"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:992
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1069
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:961
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1038
 msgid "Where Your Tax Dollars Go"
 msgstr "Où vont vos dollars d'impôt"
 
@@ -4588,7 +4588,7 @@ msgstr "Vous méritez les faits"
 msgid "Your annual employment income"
 msgstr "Votre revenu d'emploi annuel"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1081
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1050
 msgid "Your tax contributions are approximated based on employment income. Deductions such as basic personal amount are estimated and included. Other sources of income, such as self-employment, investment income, and capital gains, are not included in the calculations. Deductions such as RRSP and FHSA contributions are also not included."
 msgstr "Vos contributions fiscales sont estimées en fonction de votre revenu d'emploi. Les déductions telles que le montant personnel de base sont estimées et incluses. Les autres sources de revenus, comme le travail autonome, les revenus de placement et les gains en capital, ne sont pas incluses dans les calculs. Les déductions telles que les cotisations au REER et au CELIAPP ne sont pas non plus incluses."
 

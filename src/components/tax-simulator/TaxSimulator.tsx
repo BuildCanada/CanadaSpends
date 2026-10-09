@@ -5,11 +5,11 @@ import { useSearchParams } from "next/navigation";
 import { Trans, useLingui } from "@lingui/react/macro";
 
 import { H1, PageContent, Section } from "@/components/Layout";
+import { formatWholeDollars } from "@/lib/format";
 import {
   compareScenario,
   createDefaultScenario,
   createPlan,
-  formatWholeDollars,
   getTaxConfig,
   isProposal,
   MAX_SCENARIO_INCOME,

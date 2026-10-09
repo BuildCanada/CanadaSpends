@@ -1,3 +1,4 @@
+import { formatPercentage, formatWholeDollars } from "./format";
 import {
   getDefaultYear,
   getSpendingConfig,
@@ -30,19 +31,6 @@ export interface CombinedSpendingItem {
   formattedTotal: string;
 }
 
-function formatCurrency(amount: number): string {
-  return new Intl.NumberFormat("en-CA", {
-    style: "currency",
-    currency: "CAD",
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  }).format(amount);
-}
-
-function formatPercentage(percentage: number): string {
-  return `${percentage.toFixed(1)}%`;
-}
-
 function calculateSpendingByCategory(
   taxAmount: number,
   categories: SpendingCategoryConfig[],
@@ -54,7 +42,7 @@ function calculateSpendingByCategory(
       name: category.name,
       amount,
       percentage: category.percentage,
-      formattedAmount: formatCurrency(amount),
+      formattedAmount: formatWholeDollars(amount),
       formattedPercentage: formatPercentage(category.percentage),
       level,
     };
@@ -93,7 +81,7 @@ function groupSmallAmounts(
       level: existingOther?.level || smallCategories[0]?.level || "federal",
     };
 
-    otherCategory.formattedAmount = formatCurrency(otherCategory.amount);
+    otherCategory.formattedAmount = formatWholeDollars(otherCategory.amount);
     otherCategory.formattedPercentage = formatPercentage(
       otherCategory.percentage,
     );
@@ -159,7 +147,7 @@ function combineFederalAndProvincialForChart(
     federalAmount: amounts.federal,
     provincialAmount: amounts.provincial,
     totalAmount: amounts.federal + amounts.provincial,
-    formattedTotal: formatCurrency(amounts.federal + amounts.provincial),
+    formattedTotal: formatWholeDollars(amounts.federal + amounts.provincial),
   }));
 
   // Sort by total amount (descending) and ensure "Other" is last
@@ -209,7 +197,7 @@ function combineFederalAndProvincial(
       name: "Transfers to Other Provinces",
       amount: otherProvincesTransferAmount,
       percentage: otherProvincesTransferPercentage,
-      formattedAmount: formatCurrency(otherProvincesTransferAmount),
+      formattedAmount: formatWholeDollars(otherProvincesTransferAmount),
       formattedPercentage: formatPercentage(otherProvincesTransferPercentage),
       level: "federal" as const,
     };
@@ -245,7 +233,7 @@ function combineFederalAndProvincial(
     .map((category) => ({
       ...category,
       percentage: totalAmount > 0 ? (category.amount / totalAmount) * 100 : 0,
-      formattedAmount: formatCurrency(category.amount),
+      formattedAmount: formatWholeDollars(category.amount),
       formattedPercentage: formatPercentage(
         totalAmount > 0 ? (category.amount / totalAmount) * 100 : 0,
       ),

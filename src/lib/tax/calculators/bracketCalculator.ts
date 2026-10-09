@@ -1,4 +1,4 @@
-import { BracketTaxConfig, TaxBracket } from "../types";
+import { TaxBracket } from "../types";
 
 /**
  * Per-bracket tax breakdown result
@@ -66,22 +66,4 @@ export function getBracketTaxBreakdown(
   }
 
   return breakdown;
-}
-
-/**
- * Calculate income tax using bracket config with BPA credit
- */
-export function calculateBracketTax(
-  income: number,
-  config: BracketTaxConfig,
-): number {
-  // Step 1: Calculate tax on full income using progressive brackets
-  const taxOnFullIncome = calculateTaxFromBrackets(income, config.brackets);
-
-  // Step 2: Apply BPA as a credit (lowest bracket rate of BPA)
-  const lowestRate = config.brackets[0]?.rate ?? 0;
-  const bpaCredit = config.basicPersonalAmount * lowestRate;
-
-  // Step 3: Subtract the credit from the calculated tax
-  return Math.max(0, taxOnFullIncome - bpaCredit);
 }

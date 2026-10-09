@@ -3,8 +3,6 @@ export {
   calculateDetailedTax,
   calculateTaxWithConfig,
   calculateTotalTax,
-  formatCurrency,
-  formatPercentage,
 } from "./calculator";
 
 // Config exports
@@ -49,7 +47,6 @@ export type {
 // Calculator function exports (for direct use)
 export {
   basicPersonalAmountFor,
-  calculateBracketTax,
   calculateCappedContribution,
   calculateCpp2Contribution,
   calculateEnhancedContributionPortion,
@@ -76,7 +73,6 @@ export {
   describeComparison,
   effectivePlan,
   encodeBrackets,
-  formatWholeDollars,
   isProposal,
   MAX_PLANS,
   MAX_SCENARIO_BRACKETS,

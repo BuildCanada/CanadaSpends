@@ -1,3 +1,4 @@
+import { formatWholeDollars } from "../format";
 import { provinceNames } from "../provinceNames";
 
 import { calculateTaxWithConfig } from "./calculator";
@@ -564,15 +565,6 @@ export function chartMaxIncome(income: number): number {
   const target = Math.max(250_000, income * 1.5);
   const step = target > 1_000_000 ? 250_000 : 50_000;
   return Math.ceil(target / step) * step;
-}
-
-export function formatWholeDollars(amount: number): string {
-  return new Intl.NumberFormat("en-CA", {
-    style: "currency",
-    currency: "CAD",
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  }).format(Math.round(amount));
 }
 
 /**

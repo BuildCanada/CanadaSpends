@@ -2,10 +2,10 @@
 
 import { Trans, useLingui } from "@lingui/react/macro";
 
+import { formatWholeDollars } from "@/lib/format";
 import {
   effectivePlan,
   formatRate,
-  formatWholeDollars,
   getTaxConfig,
   provinceName as localProvinceName,
   toScenarioLang,

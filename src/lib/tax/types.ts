@@ -240,6 +240,13 @@ export interface DetailedTaxCalculation {
   healthPremium: number;
   federalAbatement: number;
   cppQppEnhancedDeduction: number;
+  // The enhanced (first additional) part of base CPP/QPP contributions,
+  // deducted at line 22215 along with CPP2/QPP2
+  cppQppEnhancedPortion: number;
+  // Taxable income for federal purposes (gross less line 22215)
+  taxableIncome: number;
+  // Each surtax tier's amount (e.g. Ontario's 20% and 36% tiers)
+  surtaxTiers: { threshold: number; rate: number; amount: number }[];
 
   // Income tax before non-refundable credits, the credits applied, and
   // provincial low-income reductions (all positive amounts)
