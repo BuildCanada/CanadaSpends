@@ -1009,7 +1009,7 @@ export default function TaxCalculatorPage() {
 
             <a
               href={localizedPath(
-                `/tax-visualizer/simulator?income=${income}&province=${PROVINCE_TO_CODE[province] || "ON"}&year=${year}`,
+                `/tax/simulator?income=${income}&province=${PROVINCE_TO_CODE[province] || "ON"}&year=${year}`,
                 i18n.locale,
               )}
               className="mt-8 flex flex-col sm:flex-row sm:items-center justify-between gap-3 rounded-lg border border-border bg-card p-5 hover:border-primary transition-colors group"

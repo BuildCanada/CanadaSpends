@@ -1,10 +1,10 @@
+import { Suspense } from "react";
 import type { Metadata } from "next";
 import { useLingui } from "@lingui/react/macro";
 
 import { buildScenarioMetadata } from "@/components/tax-simulator/metadata";
-import { TaxPlanView } from "@/components/tax-simulator/TaxPlanView";
+import { TaxSimulator } from "@/components/tax-simulator/TaxSimulator";
 import { initLingui } from "@/initLingui";
-import { parseScenario } from "@/lib/tax";
 
 type Props = {
   params: Promise<{ lang: string }>;
@@ -24,15 +24,16 @@ export async function generateMetadata({
   return buildScenarioMetadata({
     lang,
     searchParams: await searchParams,
-    path: "/tax-visualizer/simulator/view",
+    path: "/tax/simulator",
     fallbackTitle: t`Tax Simulator`,
-    fallbackDescription: t`See how different tax rules would change taxes for Canadians at every income.`,
+    fallbackDescription: t`Simulate changes to a province's tax rules and compare them with current law and other provinces.`,
   });
 }
 
-// Shared, read-only view of a comparison. Rendered on the server from the
-// query string so link previews and first paint show the real numbers.
-export default async function TaxPlanViewPage({ searchParams }: Props) {
-  const scenario = parseScenario(await searchParams);
-  return <TaxPlanView scenario={scenario} />;
+export default function TaxSimulatorPage() {
+  return (
+    <Suspense>
+      <TaxSimulator />
+    </Suspense>
+  );
 }

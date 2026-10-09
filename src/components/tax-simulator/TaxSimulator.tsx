@@ -612,7 +612,7 @@ function SharePanel({ scenario }: { scenario: TaxScenario }) {
     return () => clearTimeout(id);
   }, [query]);
 
-  const viewPath = localizedPath("/tax-visualizer/simulator/view", i18n.locale);
+  const viewPath = localizedPath("/tax/simulator/view", i18n.locale);
   const title = scenarioTitle(scenario, toScenarioLang(i18n.locale));
   const shareText = t`${title}: see how it would change your taxes`;
 
