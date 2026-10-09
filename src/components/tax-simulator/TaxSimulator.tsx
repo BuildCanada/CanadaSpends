@@ -42,6 +42,7 @@ import {
 } from "./ComparisonResults";
 import { inputClass, NumberField } from "./NumberField";
 import { planColor } from "./planColors";
+import { socialImagePath } from "./socialImage";
 
 const PROVINCES_SORTED = Object.entries(PROVINCE_NAMES).sort((a, b) =>
   a[1].localeCompare(b[1]),
@@ -693,7 +694,7 @@ function SharePanel({ scenario }: { scenario: TaxScenario }) {
       </p>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src={`/api/og/tax-simulator?${previewQuery}`}
+        src={socialImagePath(previewQuery)}
         alt={t`Social preview of this comparison`}
         width={1200}
         height={630}

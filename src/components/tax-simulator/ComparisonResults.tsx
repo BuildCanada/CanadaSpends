@@ -16,6 +16,7 @@ import {
 import { cn } from "@/lib/utils";
 
 import { planColor } from "./planColors";
+import { socialImagePath, warmSocialImage } from "./socialImage";
 import { TaxPaidChart } from "./TaxPaidChart";
 
 const SAMPLE_INCOMES = [30000, 50000, 75000, 100000, 150000, 250000, 500000];
@@ -412,11 +413,20 @@ export function ShareActions({
     setCanNativeShare(typeof navigator.share === "function");
   }, []);
 
+  // Warm the social image cache once the scenario settles, so the image is
+  // ready by the time someone shares the link.
+  useEffect(() => {
+    const id = setTimeout(() => warmSocialImage(query), 1000);
+    return () => clearTimeout(id);
+  }, [query]);
+  const warm = () => warmSocialImage(query);
+
   const shareUrl = `${origin}${path}?${query}`;
   const encodedUrl = encodeURIComponent(shareUrl);
   const encodedText = encodeURIComponent(shareText);
 
   const copy = async () => {
+    warm();
     try {
       await navigator.clipboard.writeText(shareUrl);
       toast.success(t`Link copied`);
@@ -426,6 +436,7 @@ export function ShareActions({
   };
 
   const nativeShare = async () => {
+    warm();
     try {
       await navigator.share({ title: shareText, url: shareUrl });
     } catch {
@@ -451,6 +462,7 @@ export function ShareActions({
         </button>
       )}
       <a
+        onClick={warm}
         className={buttonClass}
         target="_blank"
         rel="noopener noreferrer"
@@ -459,6 +471,7 @@ export function ShareActions({
         X
       </a>
       <a
+        onClick={warm}
         className={buttonClass}
         target="_blank"
         rel="noopener noreferrer"
@@ -467,6 +480,7 @@ export function ShareActions({
         Bluesky
       </a>
       <a
+        onClick={warm}
         className={buttonClass}
         target="_blank"
         rel="noopener noreferrer"
@@ -476,7 +490,7 @@ export function ShareActions({
       </a>
       <a
         className={buttonClass}
-        href={`/api/og/tax-simulator?${query}`}
+        href={socialImagePath(query)}
         download="tax-plan.png"
       >
         <Trans>Download image</Trans>

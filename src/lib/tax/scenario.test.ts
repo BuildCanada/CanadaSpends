@@ -91,6 +91,36 @@ describe("scenario URL params", () => {
     expect(parseScenario(params)).toEqual(scenario);
   });
 
+  it("serializes to the same query after a round trip through the URL", () => {
+    // The page's og:image is built from parse(searchParams); the browser
+    // warms the cache with serialize(scenario). They must match exactly or
+    // crawlers miss the cached image.
+    const config = getTaxConfig("2026", "ontario")!;
+    const scenario: TaxScenario = {
+      title: "  A plan  with spaces ",
+      income: 85000.4,
+      plans: [
+        createPlan("ontario", "2026"),
+        {
+          ...createPlan("ontario", "2026"),
+          name: " Mine ",
+          // Same as current law: dropped from the URL
+          federalBpa: config.federal.incomeTax.basicPersonalAmount,
+          provincialBrackets: decodeBrackets("0-5_100000-10"),
+          removeSurtax: true,
+        },
+        createPlan("alberta", "2025"),
+      ],
+    };
+    const query = serializeScenario(scenario).toString();
+    expect(
+      serializeScenario(parseScenario(new URLSearchParams(query))).toString(),
+    ).toBe(query);
+    // Next.js passes searchParams as an object on the server
+    const asObject = Object.fromEntries(new URLSearchParams(query));
+    expect(serializeScenario(parseScenario(asObject)).toString()).toBe(query);
+  });
+
   it("reads legacy single-plan links as current law vs. the plan", () => {
     const scenario = parseScenario(
       new URLSearchParams(

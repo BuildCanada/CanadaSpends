@@ -11,6 +11,8 @@ import {
 } from "@/lib/tax";
 import { generateHreflangAlternates } from "@/lib/utils";
 
+import { socialImagePath } from "./socialImage";
+
 type SearchParams = Record<string, string | string[] | undefined>;
 
 /**
@@ -43,7 +45,7 @@ export function buildScenarioMetadata({
       ? describeComparison(scenario, comparison)
       : fallbackDescription;
   const image = {
-    url: `${BASE_URL}/api/og/tax-simulator?${query}`,
+    url: `${BASE_URL}${socialImagePath(query)}`,
     width: 1200,
     height: 630,
     alt: heading,
