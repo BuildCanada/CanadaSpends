@@ -59,7 +59,7 @@ interface JurisdictionData {
   federalTax: number;
   provincialTax: number;
   totalTax: number;
-  marginalRate: number;
+  effectiveRate: number;
 }
 
 interface JurisdictionComparisonChartProps {
@@ -90,7 +90,7 @@ export function JurisdictionComparisonChart({
           federalTax: calculation.federalTax,
           provincialTax: calculation.provincialTax,
           totalTax: calculation.totalTax,
-          marginalRate: calculation.marginalTaxRate,
+          effectiveRate: calculation.effectiveTaxRate,
         });
       }
     }
@@ -281,10 +281,7 @@ export function JurisdictionComparisonChart({
                             <span className="font-semibold">
                               <Trans>Total</Trans>:{" "}
                               {formatCurrencyNoDecimals(item.totalTax)} (
-                              <Trans>
-                                {item.marginalRate.toFixed(1)}% marginal
-                              </Trans>
-                              )
+                              {item.effectiveRate.toFixed(1)}%)
                             </span>
                           </div>
                         </div>
@@ -328,8 +325,8 @@ export function JurisdictionComparisonChart({
                 <span className="font-semibold text-foreground">
                   {formatCurrencyNoDecimals(selectedProvinceData.totalTax)}
                 </span>{" "}
-                in total tax ({selectedProvinceData.marginalRate.toFixed(1)}%
-                marginal rate)
+                in total tax ({selectedProvinceData.effectiveRate.toFixed(1)}%
+                effective rate)
               </Trans>
             </div>
             <div className="text-foreground/70">
