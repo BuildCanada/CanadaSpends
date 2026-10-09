@@ -15,12 +15,14 @@ export function middleware(request: NextRequest) {
   );
 
   const pathnameIsPostHog = pathname.startsWith("/ph");
+  const pathnameIsApi = pathname.startsWith("/api/");
   const pathnameIsSitemap = pathname === "/sitemap.xml";
   const pathnameIsRobots = pathname === "/robots.txt";
 
   if (
     pathnameHasLocale ||
     pathnameIsPostHog ||
+    pathnameIsApi ||
     pathnameIsSitemap ||
     pathnameIsRobots
   )

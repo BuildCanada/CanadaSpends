@@ -18,32 +18,19 @@ import {
   type TaxReductionLine,
   type DetailedTaxCalculation,
   calculateHealthPremium,
+  CODE_TO_PROVINCE,
   formatCurrency,
   getBracketTaxBreakdown,
+  getDefaultYear,
   getSupportedYears,
   getTaxConfig,
+  PROVINCE_NAMES,
+  PROVINCE_TO_CODE,
   SupportedYear,
   type TaxBracket,
   TaxYearProvinceConfig,
 } from "@/lib/tax";
 import { localizedPath } from "@/lib/utils";
-
-// Province display names (sorted alphabetically)
-const PROVINCE_NAMES: Record<string, string> = {
-  alberta: "Alberta",
-  "british-columbia": "British Columbia",
-  manitoba: "Manitoba",
-  "new-brunswick": "New Brunswick",
-  "newfoundland-and-labrador": "Newfoundland and Labrador",
-  "northwest-territories": "Northwest Territories",
-  "nova-scotia": "Nova Scotia",
-  nunavut: "Nunavut",
-  ontario: "Ontario",
-  "prince-edward-island": "Prince Edward Island",
-  quebec: "Quebec",
-  saskatchewan: "Saskatchewan",
-  yukon: "Yukon",
-};
 
 // Provinces sorted alphabetically for dropdown
 const PROVINCES_SORTED = Object.entries(PROVINCE_NAMES).sort((a, b) =>
@@ -933,42 +920,9 @@ function TaxDetails({
   );
 }
 
-// Province shortcodes mapping (ISO 3166-2:CA codes)
-const PROVINCE_CODES: Record<string, string> = {
-  AB: "alberta",
-  BC: "british-columbia",
-  MB: "manitoba",
-  NB: "new-brunswick",
-  NL: "newfoundland-and-labrador",
-  NS: "nova-scotia",
-  NT: "northwest-territories",
-  NU: "nunavut",
-  ON: "ontario",
-  PE: "prince-edward-island",
-  QC: "quebec",
-  SK: "saskatchewan",
-  YT: "yukon",
-};
-
-const PROVINCE_TO_CODE: Record<string, string> = {
-  alberta: "AB",
-  "british-columbia": "BC",
-  manitoba: "MB",
-  "new-brunswick": "NB",
-  "newfoundland-and-labrador": "NL",
-  "nova-scotia": "NS",
-  "northwest-territories": "NT",
-  nunavut: "NU",
-  ontario: "ON",
-  "prince-edward-island": "PE",
-  quebec: "QC",
-  saskatchewan: "SK",
-  yukon: "YT",
-};
-
 const DEFAULT_INCOME = 100000;
 const DEFAULT_PROVINCE = "ontario";
-const DEFAULT_YEAR: SupportedYear = "2025";
+const DEFAULT_YEAR: SupportedYear = getDefaultYear();
 
 export default function TaxCalculatorPage() {
   const { t, i18n } = useLingui();
@@ -987,8 +941,8 @@ export default function TaxCalculatorPage() {
 
   const initialProvince = (() => {
     const provinceParam = searchParams.get("province")?.toUpperCase();
-    if (provinceParam && PROVINCE_CODES[provinceParam]) {
-      return PROVINCE_CODES[provinceParam];
+    if (provinceParam && CODE_TO_PROVINCE[provinceParam]) {
+      return CODE_TO_PROVINCE[provinceParam];
     }
     return DEFAULT_PROVINCE;
   })();
@@ -1083,6 +1037,29 @@ export default function TaxCalculatorPage() {
                 </svg>
               </a>
             </div>
+
+            <a
+              href={localizedPath(
+                `/tax-visualizer/simulator?income=${income}&province=${PROVINCE_TO_CODE[province] || "ON"}&year=${year}`,
+                i18n.locale,
+              )}
+              className="mt-8 flex flex-col sm:flex-row sm:items-center justify-between gap-3 rounded-lg border border-border bg-card p-5 hover:border-primary transition-colors group"
+            >
+              <div>
+                <div className="font-display font-bold text-lg">
+                  <Trans>What if the tax rules were different?</Trans>
+                </div>
+                <p className="text-sm text-foreground/60 mt-1">
+                  <Trans>
+                    Rewrite the brackets in the Tax Simulator, compare your plan
+                    with current law, and share it.
+                  </Trans>
+                </p>
+              </div>
+              <span className="text-primary font-medium whitespace-nowrap group-hover:underline">
+                <Trans>Try the Tax Simulator →</Trans>
+              </span>
+            </a>
 
             {breakdown ? (
               <>

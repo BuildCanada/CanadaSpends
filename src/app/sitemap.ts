@@ -32,6 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     addUrl(`/${lang}/federal/spending`);
     addUrl(`/${lang}/federal/budget`);
     addUrl(`/${lang}/tax-visualizer`);
+    addUrl(`/${lang}/tax-visualizer/simulator`);
     addUrl(`/${lang}/search`);
     addUrl(`/${lang}/about`);
     addUrl(`/${lang}/contact`);

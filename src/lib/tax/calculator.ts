@@ -8,7 +8,7 @@ import {
   calculateSurtax,
   calculateTaxReductions,
 } from "./calculators";
-import { getTaxConfig } from "./configs";
+import { getDefaultYear, getTaxConfig } from "./configs";
 import {
   DetailedTaxCalculation,
   TaxCalculation,
@@ -22,7 +22,7 @@ import {
 export function calculateDetailedTax(
   income: number,
   province: string = "ontario",
-  year: string = "2024",
+  year: string = getDefaultYear(),
 ): DetailedTaxCalculation {
   const config = getTaxConfig(year, province);
 
@@ -32,13 +32,13 @@ export function calculateDetailedTax(
     );
   }
 
-  return calculateWithConfig(income, config);
+  return calculateTaxWithConfig(income, config);
 }
 
 /**
  * Calculate tax using a specific configuration
  */
-function calculateWithConfig(
+export function calculateTaxWithConfig(
   income: number,
   config: TaxYearProvinceConfig,
 ): DetailedTaxCalculation {
@@ -335,7 +335,7 @@ function calculateWithConfig(
 export function calculateTotalTax(
   income: number,
   province: string = "ontario",
-  year: string = "2024",
+  year: string = getDefaultYear(),
 ): TaxCalculation {
   const detailed = calculateDetailedTax(income, province, year);
 
