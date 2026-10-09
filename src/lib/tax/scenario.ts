@@ -1,3 +1,5 @@
+import { provinceNames } from "../provinceNames";
+
 import { calculateTaxWithConfig } from "./calculator";
 import { getDefaultYear, getSupportedYears, getTaxConfig } from "./configs";
 import {
@@ -38,21 +40,7 @@ export interface TaxScenario {
   plans: TaxPlan[];
 }
 
-export const PROVINCE_NAMES: Record<string, string> = {
-  alberta: "Alberta",
-  "british-columbia": "British Columbia",
-  manitoba: "Manitoba",
-  "new-brunswick": "New Brunswick",
-  "newfoundland-and-labrador": "Newfoundland and Labrador",
-  "northwest-territories": "Northwest Territories",
-  "nova-scotia": "Nova Scotia",
-  nunavut: "Nunavut",
-  ontario: "Ontario",
-  "prince-edward-island": "Prince Edward Island",
-  quebec: "Quebec",
-  saskatchewan: "Saskatchewan",
-  yukon: "Yukon",
-};
+export const PROVINCE_NAMES = provinceNames;
 
 // ISO 3166-2:CA codes, used in URLs
 export const PROVINCE_TO_CODE: Record<string, string> = {
@@ -71,7 +59,7 @@ export const PROVINCE_TO_CODE: Record<string, string> = {
   yukon: "YT",
 };
 
-const CODE_TO_PROVINCE: Record<string, string> = Object.fromEntries(
+export const CODE_TO_PROVINCE: Record<string, string> = Object.fromEntries(
   Object.entries(PROVINCE_TO_CODE).map(([slug, code]) => [code, slug]),
 );
 
@@ -83,7 +71,7 @@ export const MAX_SCENARIO_BRACKETS = 10;
 /** URL prefixes for each plan; the length is the maximum number of plans. */
 export const PLAN_KEYS = ["a", "b", "c", "d"] as const;
 export const MAX_PLANS = PLAN_KEYS.length;
-const MAX_INCOME = 100_000_000;
+export const MAX_SCENARIO_INCOME = 100_000_000;
 
 export function createPlan(
   province: string = DEFAULT_SCENARIO_PROVINCE,
@@ -113,11 +101,11 @@ export function createDefaultScenario(): TaxScenario {
 
 // Round a decimal rate (0.145) to a percentage with at most 3 decimals (14.5),
 // avoiding floating point noise like 14.499999999.
-function rateToPercent(rate: number): number {
+export function rateToPercent(rate: number): number {
   return Math.round(rate * 100 * 1000) / 1000;
 }
 
-function percentToRate(percent: number): number {
+export function percentToRate(percent: number): number {
   return Math.round(percent * 1000) / 100000;
 }
 
@@ -188,7 +176,7 @@ function parseAmount(value: string | null): number | null {
   if (value === null || value === "") return null;
   const n = Number(value);
   if (!Number.isFinite(n) || n < 0) return null;
-  return Math.min(Math.round(n), MAX_INCOME);
+  return Math.min(Math.round(n), MAX_SCENARIO_INCOME);
 }
 
 function parseProvince(value: string | null): string | null {
@@ -286,7 +274,7 @@ export function serializeScenario(scenario: TaxScenario): URLSearchParams {
 }
 
 /** The plan's changes from current law, as URL params (unprefixed). */
-function planOverrideParams(plan: TaxPlan): Record<string, string> {
+export function planOverrideParams(plan: TaxPlan): Record<string, string> {
   const out: Record<string, string> = {};
   const base = getTaxConfig(plan.year, plan.province);
   const fed = base?.federal.incomeTax;
@@ -323,6 +311,23 @@ function planOverrideParams(plan: TaxPlan): Record<string, string> {
   return out;
 }
 
+/**
+ * The plan with only overrides that actually differ from current law (e.g.
+ * a surtax toggle in a province without a surtax is dropped).
+ */
+export function effectivePlan(plan: TaxPlan): TaxPlan {
+  const active = planOverrideParams(plan);
+  return {
+    ...plan,
+    federalBrackets: "fb" in active ? plan.federalBrackets : null,
+    federalBpa: "fbpa" in active ? plan.federalBpa : null,
+    provincialBrackets: "pb" in active ? plan.provincialBrackets : null,
+    provincialBpa: "pbpa" in active ? plan.provincialBpa : null,
+    removeSurtax: "nosurtax" in active,
+    removeHealthPremium: "nohp" in active,
+  };
+}
+
 /** Whether the plan changes anything relative to its current law. */
 export function planHasChanges(plan: TaxPlan): boolean {
   return Object.keys(planOverrideParams(plan)).length > 0;
@@ -347,19 +352,26 @@ export function scenarioHasChanges(scenario: TaxScenario): boolean {
 /**
  * Display name for a plan. In order of preference:
  * - the user's name for it
- * - "Plan B" for a changed plan, or an unedited copy of plan A
- * - "Current law" for unchanged rules that a changed plan is editing
+ * - "Plan B" for a changed plan, or an unchanged copy of an earlier
+ *   unchanged plan with the same rules
+ * - "Current law" for unchanged rules that another (changed) plan edits
  * - the province ("Ontario"), plus the year if the plans span several years
  */
 export function planLabel(plan: TaxPlan, index: number, plans: TaxPlan[]) {
   if (plan.name.trim()) return plan.name.trim();
   const sameRules = (other: TaxPlan) =>
     other.province === plan.province && other.year === plan.year;
-  const changed = planHasChanges(plan);
-  if (changed || (index > 0 && sameRules(plans[0]))) {
-    return `Plan ${PLAN_KEYS[index].toUpperCase()}`;
-  }
-  if (plans.some((other) => other !== plan && sameRules(other))) {
+  const letter = `Plan ${PLAN_KEYS[index].toUpperCase()}`;
+  if (planHasChanges(plan)) return letter;
+  const earlierTwin = plans
+    .slice(0, index)
+    .some((other) => sameRules(other) && !planHasChanges(other));
+  if (earlierTwin) return letter;
+  if (
+    plans.some(
+      (other) => other !== plan && sameRules(other) && planHasChanges(other),
+    )
+  ) {
     return "Current law";
   }
   const province = PROVINCE_NAMES[plan.province] ?? plan.province;
@@ -367,16 +379,11 @@ export function planLabel(plan: TaxPlan, index: number, plans: TaxPlan[]) {
   return mixedYears ? `${province} ${plan.year}` : province;
 }
 
-/** A sensible default title, e.g. "Ontario vs Alberta". */
+/** A default title from the plan labels, e.g. "Ontario vs Alberta". */
 export function defaultScenarioTitle(scenario: TaxScenario): string {
   const labels = scenario.plans.map((p, i) => planLabel(p, i, scenario.plans));
   if (!scenarioHasChanges(scenario)) return "Build a tax plan";
-  if (scenario.plans.every((p) => !planHasChanges(p))) {
-    return labels.join(" vs ");
-  }
-  return labels.length === 2 && !planHasChanges(scenario.plans[0])
-    ? `${labels[1]} vs current law`
-    : labels.join(" vs ");
+  return labels.join(" vs ");
 }
 
 /**

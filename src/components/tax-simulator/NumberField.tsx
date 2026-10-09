@@ -10,7 +10,9 @@ export const inputClass =
 /**
  * Numeric input that keeps the user's raw text while typing and only commits
  * a parsed number upstream. Thresholds commit on blur so rows don't re-sort
- * mid-keystroke.
+ * mid-keystroke. Values below `min` are rejected (the field resets on blur);
+ * values above `max` are clamped. Blurring without a change commits nothing,
+ * so tabbing through fields never creates overrides.
  */
 export function NumberField({
   value,
@@ -22,6 +24,8 @@ export function NumberField({
   ariaLabel,
   disabled,
   id,
+  min = 0,
+  max = Infinity,
 }: {
   value: number;
   onCommit: (value: number) => void;
@@ -32,6 +36,8 @@ export function NumberField({
   ariaLabel: string;
   disabled?: boolean;
   id?: string;
+  min?: number;
+  max?: number;
 }) {
   const format = (v: number) =>
     prefix === "$" ? Math.round(v).toLocaleString("en-CA") : String(v);
@@ -45,12 +51,14 @@ export function NumberField({
 
   const parse = (raw: string) => {
     const n = Number(raw.replace(/[,\s$%]/g, ""));
-    return raw.trim() !== "" && Number.isFinite(n) && n >= 0 ? n : null;
+    if (raw.trim() === "" || !Number.isFinite(n) || n < min) return null;
+    return Math.min(n, max);
   };
 
   const commit = () => {
     const n = parse(text);
-    if (n !== null) onCommit(n);
+    if (n === null) setText(format(value));
+    else if (n !== value) onCommit(n);
     else setText(format(value));
   };
 

@@ -14,15 +14,19 @@ import {
   getSupportedYears,
   getTaxConfig,
   MAX_PLAN_NAME_LENGTH,
+  MAX_SCENARIO_INCOME,
   MAX_PLANS,
   MAX_SCENARIO_BRACKETS,
   MAX_SCENARIO_TITLE_LENGTH,
   normalizeBrackets,
   parseScenario,
+  percentToRate,
   planHasChanges,
   planLabel,
+  planOverrideParams,
   PROVINCE_NAMES,
   PROVINCE_TO_CODE,
+  rateToPercent,
   serializeScenario,
   type SupportedYear,
   type TaxBracket,
@@ -47,10 +51,6 @@ import { socialImagePath } from "./socialImage";
 const PROVINCES_SORTED = Object.entries(PROVINCE_NAMES).sort((a, b) =>
   a[1].localeCompare(b[1]),
 );
-
-function roundPercent(rate: number) {
-  return Math.round(rate * 100 * 1000) / 1000;
-}
 
 function ModifiedBadge() {
   return (
@@ -143,7 +143,7 @@ function BracketEditor({
           const baseline = baselineBrackets[index];
           const rateChanged =
             !baseline ||
-            roundPercent(baseline.rate) !== roundPercent(bracket.rate);
+            rateToPercent(baseline.rate) !== rateToPercent(bracket.rate);
           return (
             <div
               key={`${index}-${brackets.length}`}
@@ -159,15 +159,16 @@ function BracketEditor({
               <NumberField
                 ariaLabel={t`Bracket ${index + 1} rate`}
                 suffix="%"
-                value={roundPercent(bracket.rate)}
+                value={rateToPercent(bracket.rate)}
                 commitOnChange
                 className={cn(
                   rateChanged &&
                     modified &&
                     "[&_input]:border-auburn-400 [&_input]:bg-auburn-50",
                 )}
+                max={100}
                 onCommit={(percent) =>
-                  update(index, { rate: Math.min(100, percent) / 100 })
+                  update(index, { rate: percentToRate(percent) })
                 }
               />
               <button
@@ -353,20 +354,12 @@ function PlanCard({
   const changed = planHasChanges(plan);
   const fedConfig = config.federal.incomeTax;
   const provConfig = config.provincial.incomeTax;
-  const federalModified =
-    (!!plan.federalBrackets &&
-      JSON.stringify(plan.federalBrackets) !==
-        JSON.stringify(fedConfig.brackets)) ||
-    (plan.federalBpa !== null &&
-      plan.federalBpa !== fedConfig.basicPersonalAmount);
-  const provincialModified =
-    (!!plan.provincialBrackets &&
-      JSON.stringify(plan.provincialBrackets) !==
-        JSON.stringify(provConfig.brackets)) ||
-    (plan.provincialBpa !== null &&
-      plan.provincialBpa !== provConfig.basicPersonalAmount) ||
-    (plan.removeSurtax && !!config.provincial.surtax) ||
-    (plan.removeHealthPremium && !!config.provincial.healthPremium);
+  // Same test as the URL uses, so "Modified" matches what gets shared
+  const overrides = planOverrideParams(plan);
+  const federalModified = "fb" in overrides || "fbpa" in overrides;
+  const provincialModified = ["pb", "pbpa", "nosurtax", "nohp"].some(
+    (key) => key in overrides,
+  );
   const bodyId = `plan-${index}-body`;
 
   return (
@@ -473,7 +466,14 @@ function PlanCard({
               <select
                 id={`plan-${index}-year`}
                 value={plan.year}
-                onChange={(e) => set({ year: e.target.value as SupportedYear })}
+                // Overrides are copies of one year's thresholds and amounts,
+                // so they don't carry across years
+                onChange={(e) =>
+                  onChange({
+                    ...clearAllOverrides(plan),
+                    year: e.target.value as SupportedYear,
+                  })
+                }
                 className={inputClass}
               >
                 {supportedYears.map((y) => (
@@ -811,6 +811,8 @@ export function TaxSimulator() {
                   prefix="$"
                   value={scenario.income}
                   commitOnChange
+                  min={1}
+                  max={MAX_SCENARIO_INCOME}
                   onCommit={(income) =>
                     income > 0 &&
                     setScenario((s) => ({ ...s, income: Math.round(income) }))

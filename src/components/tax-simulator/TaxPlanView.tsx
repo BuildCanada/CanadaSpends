@@ -7,9 +7,12 @@ import { PageContent, Section } from "@/components/Layout";
 import {
   compareScenario,
   defaultScenarioTitle,
+  effectivePlan,
   formatWholeDollars,
+  MAX_SCENARIO_INCOME,
   planHasChanges,
   PROVINCE_NAMES,
+  rateToPercent,
   serializeScenario,
   type TaxScenario,
 } from "@/lib/tax";
@@ -29,9 +32,12 @@ import { planColor } from "./planColors";
 /** A plan's changes from current law, in words, for the read-only page. */
 function usePlanChanges() {
   const { t } = useLingui();
-  return (plan: TaxScenario["plans"][number]) => {
+  return (rawPlan: TaxScenario["plans"][number]) => {
+    // Only overrides that differ from current law (e.g. a surtax toggle in a
+    // province without a surtax isn't a change)
+    const plan = effectivePlan(rawPlan);
     const changes: string[] = [];
-    const pct = (rate: number) => `${Math.round(rate * 100 * 1000) / 1000}%`;
+    const pct = (rate: number) => `${rateToPercent(rate)}%`;
     const describeBrackets = (b: { min: number; rate: number }[]) =>
       b
         .map((x, i) =>
@@ -150,6 +156,8 @@ export function TaxPlanView({
               prefix="$"
               value={income}
               commitOnChange
+              min={1}
+              max={MAX_SCENARIO_INCOME}
               onCommit={(value) => value > 0 && setIncome(Math.round(value))}
             />
           </div>

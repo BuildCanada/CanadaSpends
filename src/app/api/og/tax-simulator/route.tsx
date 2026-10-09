@@ -48,7 +48,18 @@ const CARD_PAD = 22;
 const Y_GUTTER = 72;
 const X_AXIS_H = 30;
 
-async function loadAssets() {
+// Fonts and logo are read once per server instance and reused across
+// requests, keeping cold renders fast for social crawlers.
+let assetsPromise: ReturnType<typeof readAssets> | null = null;
+function loadAssets() {
+  assetsPromise ??= readAssets().catch((error) => {
+    assetsPromise = null; // retry on the next request
+    throw error;
+  });
+  return assetsPromise;
+}
+
+async function readAssets() {
   const root = process.cwd();
   const [display, serif, mono, logo] = await Promise.all([
     readFile(join(root, "src/assets/fonts/soehne-kraftig.ttf")),
@@ -329,11 +340,10 @@ export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const scenario = parseScenario(searchParams);
   const comparison = compareScenario(scenario);
-  const { fonts, logo } = await loadAssets();
-
   if (!comparison) {
     return new Response("Unsupported year or province", { status: 400 });
   }
+  const { fonts, logo } = await loadAssets();
 
   const { plans, reference } = comparison;
   const changed = scenarioHasChanges(scenario);

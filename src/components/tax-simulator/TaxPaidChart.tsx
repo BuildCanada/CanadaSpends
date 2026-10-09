@@ -127,7 +127,7 @@ export function TaxPaidChart({
       <div className="relative">
         <svg
           viewBox={`0 0 ${WIDTH} ${HEIGHT}`}
-          className="w-full h-auto touch-none select-none"
+          className="w-full h-auto touch-pan-y select-none"
           role="img"
           aria-label={
             mode === "total"

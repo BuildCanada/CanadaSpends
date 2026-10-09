@@ -9,9 +9,12 @@ import {
   createPlan,
   decodeBrackets,
   defaultScenarioTitle,
+  effectivePlan,
   encodeBrackets,
   parseScenario,
+  percentToRate,
   planLabel,
+  rateToPercent,
   scenarioHasChanges,
   serializeScenario,
   TaxScenario,
@@ -209,6 +212,33 @@ describe("plan labels and titles", () => {
     ]);
   });
 
+  it("calls an unchanged plan 'Current law' when an earlier plan is the changed one", () => {
+    const plans = [
+      { ...createPlan("ontario", "2025"), federalBpa: 20000 },
+      createPlan("ontario", "2025"),
+    ];
+    expect(plans.map((p, i) => planLabel(p, i, plans))).toEqual([
+      "Plan A",
+      "Current law",
+    ]);
+  });
+
+  it("titles a changed plan against the reference's label, not 'current law'", () => {
+    expect(
+      defaultScenarioTitle({
+        title: "",
+        income: 1,
+        plans: [
+          createPlan("ontario"),
+          {
+            ...createPlan("alberta"),
+            federalBrackets: decodeBrackets("0-20"),
+          },
+        ],
+      }),
+    ).toBe("Ontario vs Plan B");
+  });
+
   it("titles a province comparison 'X vs Y'", () => {
     expect(
       defaultScenarioTitle({
@@ -217,6 +247,30 @@ describe("plan labels and titles", () => {
         plans: [createPlan("ontario"), createPlan("alberta")],
       }),
     ).toBe("Ontario vs Alberta");
+  });
+});
+
+describe("rates and effective overrides", () => {
+  it("round-trips percentages typed in the editor exactly", () => {
+    for (const rate of [0.0505, 0.0879, 0.108, 0.1667, 0.0598, 0.1229]) {
+      expect(percentToRate(rateToPercent(rate))).toBe(rate);
+    }
+  });
+
+  it("drops overrides that don't change anything", () => {
+    const plan = {
+      ...createPlan("alberta", "2026"),
+      // Alberta has no surtax or health premium
+      removeSurtax: true,
+      removeHealthPremium: true,
+      federalBpa: getTaxConfig("2026", "alberta")!.federal.incomeTax
+        .basicPersonalAmount,
+      provincialBpa: 30000,
+    };
+    expect(effectivePlan(plan)).toEqual({
+      ...createPlan("alberta", "2026"),
+      provincialBpa: 30000,
+    });
   });
 });
 
