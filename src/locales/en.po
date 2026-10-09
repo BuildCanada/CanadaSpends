@@ -106,10 +106,12 @@ msgstr "{0}'s Revenue and Spending in Financial Year {1}"
 msgid "{0}{provinceSuffix} - No financial data is currently available under the First Nations Financial Transparency Act."
 msgstr "{0}{provinceSuffix} - No financial data is currently available under the First Nations Financial Transparency Act."
 
-#. placeholder {0}: formatDecimal(p.result.effectiveTaxRate, lang)
+#. placeholder {0}: formatDecimal(p.result.marginalTaxRate, lang)
+#. placeholder {0}: item.marginalRate.toFixed(1)
+#: src/components/JurisdictionComparisonChart.tsx:284
 #: src/components/tax-simulator/ComparisonResults.tsx:130
-msgid "{0}% effective"
-msgstr "{0}% effective"
+msgid "{0}% marginal"
+msgstr "{0}% marginal"
 
 #: src/app/[lang]/(main)/municipal/[province]/[municipality]/[year]/departments/[department]/page.tsx:124
 #: src/app/[lang]/(main)/municipal/[province]/[municipality]/[year]/departments/[department]/page.tsx:161
@@ -774,6 +776,10 @@ msgstr "Coastguard Operations"
 msgid "Collaboration Type"
 msgstr "Collaboration Type"
 
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:157
+msgid "Combined federal and provincial marginal tax rate"
+msgstr "Combined federal and provincial marginal tax rate"
+
 #: src/components/Sankey/index.tsx:583
 msgid "Communications Security Establishment"
 msgstr "Communications Security Establishment"
@@ -1101,14 +1107,6 @@ msgstr "Economy and Standard of Living"
 #: src/components/tax-simulator/TaxPlanView.tsx:85
 msgid "Edit a copy"
 msgstr "Edit a copy"
-
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:155
-msgid "Effective Rate"
-msgstr "Effective Rate"
-
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:157
-msgid "Effective tax rate"
-msgstr "Effective tax rate"
 
 #. placeholder {0}: config.provincial.healthPremium.name
 #. placeholder {0}: config.provincial.surtax.name
@@ -2010,10 +2008,10 @@ msgstr "Important Notice"
 
 #. placeholder {0}: selectedProvinceData.provinceName
 #. placeholder {1}: formatCurrencyNoDecimals(selectedProvinceData.totalTax)
-#. placeholder {2}: selectedProvinceData.effectiveRate.toFixed(1)
-#: src/components/JurisdictionComparisonChart.tsx:323
-msgid "In {0}, you pay <0>{1}</0> in total tax ({2}% effective rate)"
-msgstr "In {0}, you pay <0>{1}</0> in total tax ({2}% effective rate)"
+#. placeholder {2}: selectedProvinceData.marginalRate.toFixed(1)
+#: src/components/JurisdictionComparisonChart.tsx:326
+msgid "In {0}, you pay <0>{1}</0> in total tax ({2}% marginal rate)"
+msgstr "In {0}, you pay <0>{1}</0> in total tax ({2}% marginal rate)"
 
 #. placeholder {0}: jurisdiction.financialYear
 #: src/app/[lang]/(main)/municipal/[province]/[municipality]/[year]/departments/[department]/page.tsx:138
@@ -2391,6 +2389,10 @@ msgstr "Manitoba HTP"
 #: src/components/Sankey/index.tsx:450
 msgid "Manitoba STP"
 msgstr "Manitoba STP"
+
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:155
+msgid "Marginal Rate"
+msgstr "Marginal Rate"
 
 #: src/app/[lang]/(main)/search/[database]/[id]/page.tsx:253
 msgid "Maximum Contribution"
@@ -3256,7 +3258,7 @@ msgstr "Quebec Tax Offset"
 
 #. placeholder {0}: jurisdictionData.findIndex( (d) => d.province === selectedProvince, ) + 1
 #. placeholder {1}: jurisdictionData.length
-#: src/components/JurisdictionComparisonChart.tsx:333
+#: src/components/JurisdictionComparisonChart.tsx:336
 msgid "Ranked <0>#{0}</0> of {1} lowest tax"
 msgstr "Ranked <0>#{0}</0> of {1} lowest tax"
 

@@ -152,9 +152,9 @@ function TaxSummary({ taxCalculation }: TaxSummaryProps) {
         subtitle={t`Estimated combined tax`}
       />
       <StatCard
-        title={t`Effective Rate`}
-        value={`${taxCalculation.effectiveTaxRate.toFixed(1)}%`}
-        subtitle={t`Effective tax rate`}
+        title={t`Marginal Rate`}
+        value={`${taxCalculation.marginalTaxRate.toFixed(1)}%`}
+        subtitle={t`Combined federal and provincial marginal tax rate`}
       />
     </div>
   );
