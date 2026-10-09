@@ -137,13 +137,13 @@ msgid "{paragraph}"
 msgstr "{paragraph}"
 
 #. placeholder {0}: p.plan.year
-#: src/components/tax-simulator/TaxPlanView.tsx:208
+#: src/components/tax-simulator/TaxPlanView.tsx:210
 msgid "{provinceName} {0} law with these changes:"
 msgstr "{provinceName} {0} law with these changes:"
 
 #. placeholder {0}: p.plan.year
 #. placeholder {0}: plan.year
-#: src/components/tax-simulator/TaxPlanView.tsx:201
+#: src/components/tax-simulator/TaxPlanView.tsx:203
 #: src/components/tax-simulator/TaxSimulator.tsx:402
 msgid "{provinceName} {0} law, unchanged"
 msgstr "{provinceName} {0} law, unchanged"
@@ -188,7 +188,7 @@ msgstr "{provinceName} Total"
 msgid "{title} basic personal amount"
 msgstr "{title} basic personal amount"
 
-#: src/components/tax-simulator/TaxPlanView.tsx:245
+#: src/components/tax-simulator/TaxPlanView.tsx:247
 #: src/components/tax-simulator/TaxSimulator.tsx:671
 msgid "{title}: see how it would change your taxes"
 msgstr "{title}: see how it would change your taxes"
@@ -634,7 +634,7 @@ msgstr "Budget Impact"
 msgid "Budget Statistics (Projected FY 2025)"
 msgstr "Budget Statistics (Projected FY 2025)"
 
-#: src/components/tax-simulator/TaxPlanView.tsx:147
+#: src/components/tax-simulator/TaxPlanView.tsx:132
 msgid "Build your own"
 msgstr "Build your own"
 
@@ -1100,7 +1100,7 @@ msgstr "Economy + Infrastructure"
 msgid "Economy and Standard of Living"
 msgstr "Economy and Standard of Living"
 
-#: src/components/tax-simulator/TaxPlanView.tsx:141
+#: src/components/tax-simulator/TaxPlanView.tsx:126
 msgid "Edit a copy"
 msgstr "Edit a copy"
 
@@ -1161,7 +1161,7 @@ msgstr "Energy Taxes"
 msgid "Enter your income to see a personalized breakdown of how much you contribute to different government services and programs."
 msgstr "Enter your income to see a personalized breakdown of how much you contribute to different government services and programs."
 
-#: src/components/tax-simulator/TaxPlanView.tsx:152
+#: src/components/tax-simulator/TaxPlanView.tsx:154
 msgid "Enter your income to see what each plan would mean for you."
 msgstr "Enter your income to see what each plan would mean for you."
 
@@ -2100,6 +2100,7 @@ msgid "In-depth analysis and insights about Canadian government spending, budget
 msgstr "In-depth analysis and insights about Canadian government spending, budget policies, and public finance. Our team at Canada Spends breaks down complex financial data to help you understand how government spending impacts your life."
 
 #: src/components/tax-simulator/ComparisonResults.tsx:233
+#: src/components/tax-simulator/TaxPlanView.tsx:140
 #: src/components/tax-simulator/TaxSimulator.tsx:805
 msgid "Income"
 msgstr "Income"
@@ -2811,7 +2812,7 @@ msgstr "Open Tor Browser and wait for it to connect."
 msgid "Operational Spend"
 msgstr "Operational Spend"
 
-#: src/components/tax-simulator/TaxPlanView.tsx:239
+#: src/components/tax-simulator/TaxPlanView.tsx:241
 msgid "Or edit a copy to make your own version."
 msgstr "Or edit a copy to make your own version."
 
@@ -3369,7 +3370,7 @@ msgstr "Research"
 msgid "Research Subject"
 msgstr "Research Subject"
 
-#: src/components/tax-simulator/TaxPlanView.tsx:166
+#: src/components/tax-simulator/TaxPlanView.tsx:168
 #: src/components/tax-simulator/TaxSimulator.tsx:126
 msgid "Reset"
 msgstr "Reset"
@@ -3508,7 +3509,7 @@ msgstr "Settlement Assistance"
 msgid "Share"
 msgstr "Share"
 
-#: src/components/tax-simulator/TaxPlanView.tsx:236
+#: src/components/tax-simulator/TaxPlanView.tsx:238
 msgid "Share this comparison"
 msgstr "Share this comparison"
 
@@ -3538,7 +3539,7 @@ msgid "Showing {0} of {1} results"
 msgstr "Showing {0} of {1} results"
 
 #. placeholder {0}: formatWholeDollars(sharedScenario.income)
-#: src/components/tax-simulator/TaxPlanView.tsx:157
+#: src/components/tax-simulator/TaxPlanView.tsx:159
 msgid "Showing your income. This comparison was shared at {0}."
 msgstr "Showing your income. This comparison was shared at {0}."
 
@@ -4462,7 +4463,7 @@ msgstr "What are the core ideas?"
 msgid "What data sources were used?"
 msgstr "What data sources were used?"
 
-#: src/components/tax-simulator/TaxPlanView.tsx:183
+#: src/components/tax-simulator/TaxPlanView.tsx:185
 msgid "What each plan changes"
 msgstr "What each plan changes"
 
@@ -4595,13 +4596,9 @@ msgstr "You can access our whistleblower platform directly through your web brow
 msgid "You deserve the facts"
 msgstr "You deserve the facts"
 
-#: src/components/tax-simulator/TaxPlanView.tsx:130
+#: src/components/tax-simulator/TaxPlanView.tsx:144
 msgid "Your annual employment income"
 msgstr "Your annual employment income"
-
-#: src/components/tax-simulator/TaxPlanView.tsx:126
-msgid "Your income"
-msgstr "Your income"
 
 #: src/app/[lang]/(main)/tax-visualizer/page.tsx:1065
 msgid "Your tax contributions are approximated based on employment income. Deductions such as basic personal amount are estimated and included. Other sources of income, such as self-employment, investment income, and capital gains, are not included in the calculations. Deductions such as RRSP and FHSA contributions are also not included."

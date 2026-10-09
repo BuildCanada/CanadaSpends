@@ -117,13 +117,27 @@ export function TaxPlanView({
             income
           </Trans>
         </p>
-        <div className="mt-6 flex flex-wrap items-end gap-3">
+        <div className="mt-6 flex flex-wrap items-end justify-between gap-3">
+          <div className="flex flex-wrap gap-3">
+            <a
+              href={`${editorPath}?${query}`}
+              className="inline-flex h-[42px] items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground hover:bg-primary/90"
+            >
+              <Trans>Edit a copy</Trans>
+            </a>
+            <a
+              href={editorPath}
+              className="inline-flex h-[42px] items-center justify-center rounded-md border border-border bg-background px-4 text-sm font-medium hover:bg-accent"
+            >
+              <Trans>Build your own</Trans>
+            </a>
+          </div>
           <div className="w-full sm:w-56">
             <label
               htmlFor="view-income"
               className="block text-sm font-medium mb-2"
             >
-              <Trans>Your income</Trans>
+              <Trans>Income</Trans>
             </label>
             <NumberField
               id="view-income"
@@ -134,20 +148,8 @@ export function TaxPlanView({
               onCommit={(value) => value > 0 && setIncome(Math.round(value))}
             />
           </div>
-          <a
-            href={`${editorPath}?${query}`}
-            className="inline-flex h-[42px] items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground hover:bg-primary/90"
-          >
-            <Trans>Edit a copy</Trans>
-          </a>
-          <a
-            href={editorPath}
-            className="inline-flex h-[42px] items-center justify-center rounded-md border border-border bg-background px-4 text-sm font-medium hover:bg-accent"
-          >
-            <Trans>Build your own</Trans>
-          </a>
         </div>
-        <p className="mt-2 text-sm text-foreground/60">
+        <p className="mt-2 text-sm text-foreground/60 sm:text-right">
           {income === sharedScenario.income ? (
             <Trans>
               Enter your income to see what each plan would mean for you.
