@@ -1,9 +1,11 @@
+import { formatWholeDollars } from "../format";
 import { provinceNames } from "../provinceNames";
 
 import { calculateTaxWithConfig } from "./calculator";
 import { provinceName, SCENARIO_TEXT, type ScenarioLang } from "./scenarioText";
 import { getDefaultYear, getTaxConfig } from "./configs";
 import {
+  BracketTaxConfig,
   DetailedTaxCalculation,
   SupportedYear,
   TaxBracket,
@@ -429,26 +431,47 @@ export function applyPlan(
     ...config,
     federal: {
       ...config.federal,
-      incomeTax: {
-        ...config.federal.incomeTax,
-        brackets: plan.federalBrackets ?? config.federal.incomeTax.brackets,
-        basicPersonalAmount:
-          plan.federalBpa ?? config.federal.incomeTax.basicPersonalAmount,
-      },
+      incomeTax: withBasicPersonalAmount(
+        {
+          ...config.federal.incomeTax,
+          brackets: plan.federalBrackets ?? config.federal.incomeTax.brackets,
+        },
+        plan.federalBpa,
+      ),
     },
     provincial: {
       ...provincialRest,
       ...(surtax && !plan.removeSurtax ? { surtax } : {}),
       ...(healthPremium && !plan.removeHealthPremium ? { healthPremium } : {}),
-      incomeTax: {
-        ...config.provincial.incomeTax,
-        brackets:
-          plan.provincialBrackets ?? config.provincial.incomeTax.brackets,
-        basicPersonalAmount:
-          plan.provincialBpa ?? config.provincial.incomeTax.basicPersonalAmount,
-      },
+      incomeTax: withBasicPersonalAmount(
+        {
+          ...config.provincial.incomeTax,
+          brackets:
+            plan.provincialBrackets ?? config.provincial.incomeTax.brackets,
+        },
+        plan.provincialBpa,
+      ),
     },
   };
+}
+
+/**
+ * A proposed basic personal amount is a flat amount for everyone: it
+ * replaces current law's amount and any income-based phase-down of it.
+ * An amount equal to current law's is no change (it's also left out of
+ * links), so current law, phase-down included, still applies.
+ */
+function withBasicPersonalAmount(
+  incomeTax: BracketTaxConfig,
+  proposed: number | null,
+): BracketTaxConfig {
+  if (proposed === null || proposed === incomeTax.basicPersonalAmount) {
+    return incomeTax;
+  }
+  const credits = incomeTax.credits
+    ? { ...incomeTax.credits, bpaPhaseOut: undefined }
+    : undefined;
+  return { ...incomeTax, basicPersonalAmount: proposed, credits };
 }
 
 export interface PlanResult {
@@ -542,15 +565,6 @@ export function chartMaxIncome(income: number): number {
   const target = Math.max(250_000, income * 1.5);
   const step = target > 1_000_000 ? 250_000 : 50_000;
   return Math.ceil(target / step) * step;
-}
-
-export function formatWholeDollars(amount: number): string {
-  return new Intl.NumberFormat("en-CA", {
-    style: "currency",
-    currency: "CAD",
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  }).format(Math.round(amount));
 }
 
 /**

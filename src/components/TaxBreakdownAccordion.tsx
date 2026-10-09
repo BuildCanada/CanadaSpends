@@ -9,22 +9,10 @@ import {
   AccordionTrigger,
 } from "@/components/Accordion";
 import { DetailedTaxCalculation, TaxLineItem } from "@/lib/tax";
+import { formatPercentage, formatWholeDollars } from "@/lib/format";
 
 interface TaxBreakdownAccordionProps {
   calculation: DetailedTaxCalculation;
-}
-
-function formatCurrency(amount: number): string {
-  return new Intl.NumberFormat("en-CA", {
-    style: "currency",
-    currency: "CAD",
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  }).format(amount);
-}
-
-function formatPercentage(rate: number): string {
-  return `${rate.toFixed(1)}%`;
 }
 
 interface LineItemRowProps {
@@ -37,7 +25,7 @@ function LineItemRow({ item }: LineItemRowProps) {
       <span className="text-foreground/80">{item.name}</span>
       <span className="flex items-center gap-3">
         <span className="text-foreground font-medium">
-          {formatCurrency(item.amount)}
+          {formatWholeDollars(item.amount)}
         </span>
         <span className="text-foreground/50 w-14 text-right">
           ({formatPercentage(item.effectiveRate)})
@@ -69,7 +57,7 @@ function TaxSection({ title, items, total, totalLabel }: TaxSectionProps) {
         <div className="flex justify-between items-center py-1.5 text-sm border-t border-border/50 mt-2 pt-2">
           <span className="text-foreground font-medium">{totalLabel}</span>
           <span className="text-foreground font-semibold">
-            {formatCurrency(total)}
+            {formatWholeDollars(total)}
           </span>
         </div>
       </div>
@@ -120,7 +108,7 @@ export function TaxBreakdownAccordion({
                 <Trans>Total Tax</Trans>
               </span>
               <span className="text-foreground font-bold">
-                {formatCurrency(calculation.totalTax)}
+                {formatWholeDollars(calculation.totalTax)}
               </span>
             </div>
           </div>

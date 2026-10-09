@@ -3,8 +3,6 @@ export {
   calculateDetailedTax,
   calculateTaxWithConfig,
   calculateTotalTax,
-  formatCurrency,
-  formatPercentage,
 } from "./calculator";
 
 // Config exports
@@ -22,12 +20,15 @@ export {
 
 // Type exports
 export type {
+  BpaPhaseOutConfig,
   BracketTaxConfig,
   CappedContributionConfig,
+  CreditLine,
   DetailedTaxCalculation,
   FederalTaxConfig,
   HealthPremiumConfig,
   HealthPremiumTier,
+  IncomeCreditsConfig,
   ProvincialTaxConfig,
   SpendingCategoryConfig,
   SpendingConfig,
@@ -38,18 +39,23 @@ export type {
   TaxBracket,
   TaxCalculation,
   TaxLineItem,
+  TaxReductionConfig,
+  TaxReductionLine,
   TaxYearProvinceConfig,
 } from "./types";
 
 // Calculator function exports (for direct use)
 export {
-  calculateBracketTax,
+  basicPersonalAmountFor,
   calculateCappedContribution,
   calculateCpp2Contribution,
   calculateEnhancedContributionPortion,
   calculateHealthPremium,
+  calculateIncomeCredits,
+  calculateIncomeTax,
   calculateSurtax,
   calculateTaxFromBrackets,
+  calculateTaxReductions,
   getBracketTaxBreakdown,
 } from "./calculators";
 export type { BracketTaxBreakdown } from "./calculators";
@@ -67,7 +73,6 @@ export {
   describeComparison,
   effectivePlan,
   encodeBrackets,
-  formatWholeDollars,
   isProposal,
   MAX_PLANS,
   MAX_SCENARIO_BRACKETS,

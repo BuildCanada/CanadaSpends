@@ -4,10 +4,10 @@ import { useEffect, useMemo, useState } from "react";
 import { Trans, useLingui } from "@lingui/react/macro";
 import { toast } from "sonner";
 
+import { formatWholeDollars } from "@/lib/format";
 import {
   buildRateCurve,
   chartMaxIncome,
-  formatWholeDollars,
   provinceName as localProvinceName,
   formatDecimal,
   inProvince,
@@ -202,13 +202,16 @@ export function ResultsFootnote() {
   return (
     <p className="mt-8 text-sm text-foreground/60 max-w-3xl">
       <Trans>
-        Estimates assume employment income only and include federal and
-        provincial income tax, the basic personal amount credit, surtaxes,
-        health premiums, CPP/QPP, EI and QPIP. Other credits and deductions
-        (such as RRSP contributions) aren&apos;t included. Changing brackets
-        affects income tax only; payroll contributions stay at current rates.
-        This shows the direct effect on individuals, not effects on government
-        revenue or behaviour.
+        Estimates assume employment income only. They include federal and
+        provincial income tax with the non-refundable credits that depend only
+        on income (the basic personal amount, CPP/QPP and EI contributions, and
+        the Canada employment amount), low-income tax reductions, surtaxes,
+        health premiums, CPP/QPP, EI and QPIP. Credits that depend on personal
+        circumstances (such as age, dependants or tuition) and deductions such
+        as RRSP contributions aren&apos;t included. Changing brackets affects
+        income tax only; payroll contributions stay at current rates. This shows
+        the direct effect on individuals, not effects on government revenue or
+        behaviour.
       </Trans>
     </p>
   );

@@ -17,5 +17,9 @@ export const SASKATCHEWAN_TAX_CONFIG: ProvincialTaxConfig = {
       { min: 148734, max: null, rate: 0.145 },
     ],
     basicPersonalAmount: 18491,
+    // Credits base CPP contributions and EI premiums at the lowest rate
+    credits: {
+      payrollContributions: true,
+    },
   },
 };

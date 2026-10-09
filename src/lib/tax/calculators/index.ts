@@ -1,5 +1,4 @@
 export {
-  calculateBracketTax,
   calculateTaxFromBrackets,
   getBracketTaxBreakdown,
 } from "./bracketCalculator";
@@ -11,4 +10,12 @@ export {
 export { calculateCpp2Contribution } from "./cpp2Calculator";
 export { calculateFederalAbatement } from "./federalAbatementCalculator";
 export { calculateHealthPremium } from "./healthPremiumCalculator";
-export { calculateSurtax } from "./surtaxCalculator";
+export { calculateSurtax, getSurtaxBreakdown } from "./surtaxCalculator";
+export type { SurtaxTierAmount } from "./surtaxCalculator";
+export {
+  basicPersonalAmountFor,
+  calculateIncomeCredits,
+  calculateIncomeTax,
+  calculateTaxReductions,
+} from "./creditsCalculator";
+export type { IncomeCreditInputs, IncomeTaxResult } from "./creditsCalculator";

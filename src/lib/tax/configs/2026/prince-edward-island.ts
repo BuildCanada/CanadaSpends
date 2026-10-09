@@ -15,6 +15,22 @@ export const PRINCE_EDWARD_ISLAND_TAX_CONFIG: ProvincialTaxConfig = {
       { min: 200000, max: null, rate: 0.2 },
     ],
     basicPersonalAmount: 15000,
+    // Credits base CPP contributions and EI premiums at the lowest rate
+    credits: {
+      payrollContributions: true,
+    },
   },
+  // Low-income tax reduction: $350 less 5% of net income over $23,000
+  // (PE428), applied after the surtax.
+  taxReductions: [
+    {
+      type: "phaseOut",
+      id: "pe-low-income",
+      name: "Low-Income Tax Reduction",
+      maxCredit: 350,
+      threshold: 23000,
+      reductionRate: 0.05,
+    },
+  ],
   // Note: PEI surtax was eliminated in 2024 and replaced with 5-bracket system
 };

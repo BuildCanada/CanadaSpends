@@ -11,6 +11,41 @@ export interface BracketTaxConfig {
   name: string;
   brackets: TaxBracket[];
   basicPersonalAmount: number;
+  // Non-refundable credits beyond the basic personal amount that depend only
+  // on income. Converted to tax at the lowest bracket rate.
+  credits?: IncomeCreditsConfig;
+}
+
+// Income-tested basic personal amount: the full BPA up to `start`, reduced
+// linearly to `minAmount` at `end` (e.g., the federal enhanced BPA, which is
+// clawed back between the 4th and 5th bracket thresholds).
+export interface BpaPhaseOutConfig {
+  minAmount: number;
+  start: number;
+  end: number;
+}
+
+// Non-refundable credit amounts that can be computed from income alone
+// (a single person under 65 with only employment income).
+export interface IncomeCreditsConfig {
+  // Credit for base CPP/QPP contributions (CRA line 30800) and EI premiums
+  // (line 31200), plus QPIP/PPIP premiums where they apply. The enhanced
+  // CPP/QPP portion and CPP2/QPP2 are deducted at line 22215 instead.
+  payrollContributions?: boolean;
+  // Canada employment amount (line 31260) or a provincial/territorial
+  // equivalent: the lesser of employment income and `maxAmount`.
+  employmentAmount?: { name: string; maxAmount: number };
+  bpaPhaseOut?: BpaPhaseOutConfig;
+}
+
+// A non-refundable credit as applied to one level of government
+export interface CreditLine {
+  id: "basicPersonalAmount" | "payrollContributions" | "employmentAmount";
+  name: string;
+  // The credit amount (e.g., the BPA in dollars)
+  amount: number;
+  // Its value against tax: amount × the lowest bracket rate
+  value: number;
 }
 
 // Capped contribution config (EI, CPP)
@@ -88,12 +123,49 @@ export interface FederalAbatementConfig {
   rate: number; // e.g., 0.165 for 16.5%
 }
 
+// Low-income reduction of provincial tax, applied after non-refundable
+// credits and surtaxes. It can only reduce provincial tax to zero.
+export type TaxReductionConfig =
+  // A maximum credit reduced by a percentage of net income above a
+  // threshold (e.g., the BC tax reduction credit, Ontario LIFT credit).
+  // `maxRateOfEmploymentIncome` caps the credit at a percentage of
+  // employment income (Ontario LIFT: 5.05%).
+  | {
+      type: "phaseOut";
+      id: string;
+      name: string;
+      maxCredit: number;
+      threshold: number;
+      reductionRate: number;
+      maxRateOfEmploymentIncome?: number;
+    }
+  // Ontario Tax Reduction: (multiplier × basic amount) − provincial tax.
+  | {
+      type: "taxOffset";
+      id: string;
+      name: string;
+      basicAmount: number;
+      multiplier: number;
+    };
+
+export interface TaxReductionLine {
+  id: string;
+  name: string;
+  amount: number;
+}
+
 // Provincial tax configuration
 export interface ProvincialTaxConfig {
   incomeTax: BracketTaxConfig;
   surtax?: SurtaxConfig;
   healthPremium?: HealthPremiumConfig;
   federalAbatement?: FederalAbatementConfig;
+  // Low-income tax reductions, applied in order after credits and surtax
+  taxReductions?: TaxReductionConfig[];
+  // A deduction from provincial taxable income only, as a share of
+  // employment income up to a maximum (e.g., Quebec's deduction for
+  // workers: 6% up to an indexed cap)
+  employmentDeduction?: { name: string; rate: number; maxAmount: number };
   // Province-specific pension plan that replaces the federal CPP
   // (e.g., Quebec residents pay QPP instead of CPP).
   pensionPlanOverride?: CappedContributionConfig;
@@ -140,6 +212,7 @@ export interface TaxLineItem {
     | "healthPremium"
     | "incomeTaxProvincial"
     | "federalAbatement"
+    | "taxReduction"
     | "parentalInsurance";
 }
 
@@ -167,6 +240,26 @@ export interface DetailedTaxCalculation {
   healthPremium: number;
   federalAbatement: number;
   cppQppEnhancedDeduction: number;
+  // The enhanced (first additional) part of base CPP/QPP contributions,
+  // deducted at line 22215 along with CPP2/QPP2
+  cppQppEnhancedPortion: number;
+  // Taxable income for federal purposes (gross less line 22215)
+  taxableIncome: number;
+  // Each surtax tier's amount (e.g. Ontario's 20% and 36% tiers)
+  surtaxTiers: { threshold: number; rate: number; amount: number }[];
+
+  // Income tax before non-refundable credits, the credits applied, and
+  // provincial low-income reductions (all positive amounts)
+  federalIncomeTaxBeforeCredits: number;
+  provincialIncomeTaxBeforeCredits: number;
+  federalCredits: CreditLine[];
+  provincialCredits: CreditLine[];
+  // Provincial-only deduction (e.g., Quebec deduction for workers) and the
+  // resulting provincial taxable income
+  provincialEmploymentDeduction: number;
+  provincialTaxableIncome: number;
+  provincialTaxReductions: TaxReductionLine[];
+  provincialTaxReduction: number;
 
   // Metadata
   year: string;

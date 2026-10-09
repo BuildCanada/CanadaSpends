@@ -3,12 +3,8 @@
 import { useMemo, useState } from "react";
 import { Trans, useLingui } from "@lingui/react/macro";
 
-import {
-  formatRate,
-  formatWholeDollars,
-  RateCurvePoint,
-  toScenarioLang,
-} from "@/lib/tax";
+import { formatWholeDollars } from "@/lib/format";
+import { formatRate, RateCurvePoint, toScenarioLang } from "@/lib/tax";
 
 import { formatDollarTick, niceRange, niceTicks } from "./chartScale";
 import { planColor } from "./planColors";

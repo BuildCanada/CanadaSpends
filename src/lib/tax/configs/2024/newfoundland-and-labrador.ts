@@ -22,5 +22,21 @@ export const NEWFOUNDLAND_AND_LABRADOR_TAX_CONFIG: ProvincialTaxConfig = {
       { min: 1103478, max: null, rate: 0.218 },
     ],
     basicPersonalAmount: 10818,
+    // Credits base CPP contributions and EI premiums at the lowest rate
+    credits: {
+      payrollContributions: true,
+    },
   },
+  // Low-income tax reduction: $974 less 16% of net income over $23,390
+  // (NL428).
+  taxReductions: [
+    {
+      type: "phaseOut",
+      id: "nl-low-income",
+      name: "Low-Income Tax Reduction",
+      maxCredit: 974,
+      threshold: 23390,
+      reductionRate: 0.16,
+    },
+  ],
 };

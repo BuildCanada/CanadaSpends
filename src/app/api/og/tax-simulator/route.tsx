@@ -8,11 +8,11 @@ import {
   niceTicks,
 } from "@/components/tax-simulator/chartScale";
 import { planColor } from "@/components/tax-simulator/planColors";
+import { formatWholeDollars } from "@/lib/format";
 import {
   buildRateCurve,
   chartMaxIncome,
   compareScenario,
-  formatWholeDollars,
   parseScenario,
   type PlanResult,
   inProvince,

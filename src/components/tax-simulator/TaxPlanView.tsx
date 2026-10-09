@@ -4,9 +4,9 @@ import { useEffect, useMemo, useState } from "react";
 import { Trans, useLingui } from "@lingui/react/macro";
 
 import { PageContent, Section } from "@/components/Layout";
+import { formatWholeDollars } from "@/lib/format";
 import {
   compareScenario,
-  formatWholeDollars,
   MAX_SCENARIO_INCOME,
   planHasChanges,
   toScenarioLang,

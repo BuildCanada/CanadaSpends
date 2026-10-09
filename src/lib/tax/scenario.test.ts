@@ -358,10 +358,56 @@ describe("compareScenario", () => {
       ],
     };
     const plan = compareScenario(scenario)!.plans[1];
-    // Flat 20% with no BPA credit, applied to taxable income (after the
-    // line 22215 CPP enhanced deduction).
+    // Flat 20% on taxable income (after the line 22215 CPP enhanced
+    // deduction), with no basic personal amount credit
     const taxable = 100000 - plan.result.cppQppEnhancedDeduction;
-    expect(plan.result.federalIncomeTax).toBeCloseTo(taxable * 0.2, 6);
+    expect(plan.result.federalIncomeTaxBeforeCredits).toBeCloseTo(
+      taxable * 0.2,
+      6,
+    );
+    expect(
+      plan.result.federalCredits.find((c) => c.id === "basicPersonalAmount"),
+    ).toBeUndefined();
+  });
+
+  it("doesn't phase down a proposed basic personal amount", () => {
+    // Current law reduces the federal BPA above the 4th bracket threshold;
+    // a proposed amount applies in full at any income.
+    const scenario: TaxScenario = {
+      income: 400000,
+      plans: [
+        createPlan("ontario"),
+        { ...createPlan("ontario"), federalBpa: 20000 },
+      ],
+    };
+    const [current, proposed] = compareScenario(scenario)!.plans;
+    const bpa = (p: typeof current) =>
+      p.result.federalCredits.find((c) => c.id === "basicPersonalAmount")
+        ?.amount;
+    const config = getTaxConfig(SCENARIO_YEAR, "ontario")!;
+    expect(bpa(current)).toBe(
+      config.federal.incomeTax.credits!.bpaPhaseOut!.minAmount,
+    );
+    expect(bpa(proposed)).toBe(20000);
+  });
+
+  it("treats a proposed BPA equal to current law as no change, in the editor and in links", () => {
+    // An equal amount is left out of the URL, so it must also keep current
+    // law's phase-down, or the shared page would show different taxes.
+    const max = getTaxConfig(SCENARIO_YEAR, "ontario")!.federal.incomeTax
+      .basicPersonalAmount;
+    const scenario: TaxScenario = {
+      income: 400000,
+      plans: [
+        createPlan("ontario"),
+        { ...createPlan("ontario"), federalBpa: max },
+      ],
+    };
+    const editor = compareScenario(scenario)!.plans[1].result.totalTax;
+    const shared = compareScenario(parseScenario(serializeScenario(scenario)))!
+      .plans[1].result.totalTax;
+    expect(editor).toBeCloseTo(shared, 6);
+    expect(compareScenario(scenario)!.plans[1].difference).toBeCloseTo(0, 6);
   });
 
   it("builds one curve value per plan", () => {

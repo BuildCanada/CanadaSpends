@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { formatCurrency } from "@/lib/taxCalculator";
+import { formatCurrency } from "@/lib/format";
 export interface CombinedSpendingItem {
   name: string;
   federalAmount: number;

@@ -12,7 +12,33 @@ export const ONTARIO_TAX_CONFIG: ProvincialTaxConfig = {
       { min: 220000, max: null, rate: 0.1316 },
     ],
     basicPersonalAmount: 12747,
+    // Credits base CPP contributions and EI premiums at the lowest rate
+    credits: {
+      payrollContributions: true,
+    },
   },
+  // Applied in order after credits and surtax (ON428 lines 74-85):
+  // Ontario Tax Reduction: 2 × $294 − Ontario tax (incl. surtax), then the
+  // LIFT credit: min($875, 5.05% of employment income) less 5% of net income
+  // over $32,500 (Schedule ON428-A).
+  taxReductions: [
+    {
+      type: "taxOffset",
+      id: "ontario-tax-reduction",
+      name: "Ontario Tax Reduction",
+      basicAmount: 294,
+      multiplier: 2,
+    },
+    {
+      type: "phaseOut",
+      id: "ontario-lift",
+      name: "Low-income Individuals and Families Tax (LIFT) credit",
+      maxCredit: 875,
+      threshold: 32500,
+      reductionRate: 0.05,
+      maxRateOfEmploymentIncome: 0.0505,
+    },
+  ],
   surtax: {
     type: "surtax",
     name: "Ontario Surtax",

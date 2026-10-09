@@ -18,5 +18,21 @@ export const NEW_BRUNSWICK_TAX_CONFIG: ProvincialTaxConfig = {
       { min: 190060, max: null, rate: 0.195 },
     ],
     basicPersonalAmount: 13396,
+    // Credits base CPP contributions and EI premiums at the lowest rate
+    credits: {
+      payrollContributions: true,
+    },
   },
+  // Low-income tax reduction: $802 less 3% of net income over $21,920
+  // (NB428).
+  taxReductions: [
+    {
+      type: "phaseOut",
+      id: "nb-low-income",
+      name: "Low-Income Tax Reduction",
+      maxCredit: 802,
+      threshold: 21920,
+      reductionRate: 0.03,
+    },
+  ],
 };

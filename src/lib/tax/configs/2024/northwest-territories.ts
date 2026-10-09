@@ -18,5 +18,9 @@ export const NORTHWEST_TERRITORIES_TAX_CONFIG: ProvincialTaxConfig = {
       { min: 164525, max: null, rate: 0.1405 },
     ],
     basicPersonalAmount: 17373,
+    // Credits base CPP contributions and EI premiums at the lowest rate
+    credits: {
+      payrollContributions: true,
+    },
   },
 };

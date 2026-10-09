@@ -20,5 +20,21 @@ export const NOVA_SCOTIA_TAX_CONFIG: ProvincialTaxConfig = {
     ],
     // NS raised the BPA to $11,744 for all filers in 2025 (per CRA T4127).
     basicPersonalAmount: 11744,
+    // Credits base CPP contributions and EI premiums at the lowest rate
+    credits: {
+      payrollContributions: true,
+    },
   },
+  // Low-income tax reduction: $300 less 5% of net income over $15,000
+  // (NS428).
+  taxReductions: [
+    {
+      type: "phaseOut",
+      id: "ns-low-income",
+      name: "Low-Income Tax Reduction",
+      maxCredit: 300,
+      threshold: 15000,
+      reductionRate: 0.05,
+    },
+  ],
 };

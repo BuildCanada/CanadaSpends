@@ -11,6 +11,25 @@ export const NOVA_SCOTIA_TAX_CONFIG: ProvincialTaxConfig = {
       { min: 93000, max: 150000, rate: 0.175 },
       { min: 150000, max: null, rate: 0.21 },
     ],
-    basicPersonalAmount: 8481,
+    basicPersonalAmount: 11481, // $8,481 + $3,000 income-tested supplement
+    // Credits base CPP contributions and EI premiums at the lowest rate
+    credits: {
+      payrollContributions: true,
+      // Income-tested supplement: $3,000 on top of $8,481, reduced by 6% of
+      // taxable income over $25,000 (Worksheet NS428). Eliminated in 2025.
+      bpaPhaseOut: { minAmount: 8481, start: 25000, end: 75000 },
+    },
   },
+  // Low-income tax reduction: $300 less 5% of net income over $15,000
+  // (NS428).
+  taxReductions: [
+    {
+      type: "phaseOut",
+      id: "ns-low-income",
+      name: "Low-Income Tax Reduction",
+      maxCredit: 300,
+      threshold: 15000,
+      reductionRate: 0.05,
+    },
+  ],
 };

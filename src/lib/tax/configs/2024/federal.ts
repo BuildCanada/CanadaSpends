@@ -12,6 +12,18 @@ export const FEDERAL_TAX_CONFIG: FederalTaxConfig = {
       { min: 246752, max: null, rate: 0.33 },
     ],
     basicPersonalAmount: 15705,
+    // Non-refundable credits from income alone (Federal Worksheet 5000-D1 (2024)):
+    // - BPA reduced to $14,156 between net incomes $173,205 and $246,752
+    // - Base CPP/QPP (line 30800), EI and QPIP premiums (lines 31200, 31205)
+    // - Canada employment amount (line 31260): up to $1,433
+    // The 2025+ top-up tax credit (line 34990) only applies when credit
+    // amounts exceed the first bracket threshold, never for employment
+    // income alone.
+    credits: {
+      payrollContributions: true,
+      employmentAmount: { name: "Canada employment amount", maxAmount: 1433 },
+      bpaPhaseOut: { minAmount: 14156, start: 173205, end: 246752 },
+    },
   },
   ei: {
     type: "capped",

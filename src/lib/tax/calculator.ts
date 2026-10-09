@@ -1,11 +1,12 @@
 import {
-  calculateBracketTax,
   calculateCappedContribution,
   calculateCpp2Contribution,
   calculateEnhancedContributionPortion,
   calculateFederalAbatement,
   calculateHealthPremium,
-  calculateSurtax,
+  calculateIncomeTax,
+  calculateTaxReductions,
+  getSurtaxBreakdown,
 } from "./calculators";
 import { getDefaultYear, getTaxConfig } from "./configs";
 import {
@@ -121,17 +122,34 @@ export function calculateTaxWithConfig(
   // contributions on employment income. The first-additional enhancement
   // (rate above pre-2019 baseRate) and the entire second-additional
   // contribution (CPP2/QPP2) are deductible from taxable income.
-  const cppQppEnhancedDeduction =
-    calculateEnhancedContributionPortion(cppContribution, pensionConfig) +
-    cpp2Contribution;
+  const cppQppEnhancedPortion = calculateEnhancedContributionPortion(
+    cppContribution,
+    pensionConfig,
+  );
+  const cppQppEnhancedDeduction = cppQppEnhancedPortion + cpp2Contribution;
   const taxableIncome = Math.max(0, income - cppQppEnhancedDeduction);
 
-  // Federal income tax (computed on taxable income after the line 22215
-  // deduction).
-  const federalIncomeTax = calculateBracketTax(
+  // Inputs for non-refundable credits. With only employment income, net
+  // income equals taxable income. The base CPP/QPP portion and EI/QPIP
+  // premiums are credited (lines 30800, 31200, 31205) rather than deducted.
+  const creditInputs = {
+    netIncome: taxableIncome,
+    employmentIncome: income,
+    payrollContributions:
+      cppContribution -
+      cppQppEnhancedPortion +
+      eiContribution +
+      parentalInsuranceContribution,
+  };
+
+  // Federal income tax: brackets on taxable income, less non-refundable
+  // credits.
+  const federal = calculateIncomeTax(
     taxableIncome,
     config.federal.incomeTax,
+    creditInputs,
   );
+  const federalIncomeTax = federal.tax;
   lineItems.push({
     id: "federal-income-tax",
     name: "Federal Income Tax",
@@ -141,11 +159,30 @@ export function calculateTaxWithConfig(
     category: "incomeTax",
   });
 
-  // Provincial income tax (also on taxable income after the deduction).
-  const provincialIncomeTax = calculateBracketTax(
-    taxableIncome,
-    config.provincial.incomeTax,
+  // Provincial income tax: on taxable income less any provincial-only
+  // deduction (e.g., Quebec's deduction for workers), less the province's
+  // own non-refundable credits.
+  const employmentDeductionConfig = config.provincial.employmentDeduction;
+  const provincialEmploymentDeduction = employmentDeductionConfig
+    ? Math.min(
+        employmentDeductionConfig.maxAmount,
+        income * employmentDeductionConfig.rate,
+      )
+    : 0;
+  const provincialTaxableIncome = Math.max(
+    0,
+    taxableIncome - provincialEmploymentDeduction,
   );
+  const provincialCreditInputs = {
+    ...creditInputs,
+    netIncome: provincialTaxableIncome,
+  };
+  const provincial = calculateIncomeTax(
+    provincialTaxableIncome,
+    config.provincial.incomeTax,
+    provincialCreditInputs,
+  );
+  const provincialIncomeTax = provincial.tax;
   const provinceName =
     config.province.charAt(0).toUpperCase() + config.province.slice(1);
   lineItems.push({
@@ -158,9 +195,11 @@ export function calculateTaxWithConfig(
   });
 
   // Provincial surtax (if applicable)
-  let surtax = 0;
+  const surtaxTiers = config.provincial.surtax
+    ? getSurtaxBreakdown(provincialIncomeTax, config.provincial.surtax)
+    : [];
+  const surtax = surtaxTiers.reduce((sum, tier) => sum + tier.amount, 0);
   if (config.provincial.surtax) {
-    surtax = calculateSurtax(provincialIncomeTax, config.provincial.surtax);
     if (surtax > 0) {
       lineItems.push({
         id: "provincial-surtax",
@@ -190,6 +229,29 @@ export function calculateTaxWithConfig(
         category: "healthPremium",
       });
     }
+  }
+
+  // Provincial low-income reductions (e.g., BC tax reduction credit,
+  // Ontario Tax Reduction), applied to provincial tax after credits and
+  // surtax. Non-refundable: they can only reduce provincial tax to zero.
+  const provincialTaxReductions = calculateTaxReductions(
+    provincialIncomeTax + surtax,
+    config.provincial.taxReductions,
+    provincialCreditInputs,
+  );
+  const provincialTaxReduction = provincialTaxReductions.reduce(
+    (sum, r) => sum + r.amount,
+    0,
+  );
+  for (const reduction of provincialTaxReductions) {
+    lineItems.push({
+      id: `provincial-tax-reduction-${reduction.id}`,
+      name: reduction.name,
+      level: "provincial",
+      amount: -reduction.amount, // Negative to show as a tax reduction
+      effectiveRate: income > 0 ? (-reduction.amount / income) * 100 : 0,
+      category: "taxReduction",
+    });
   }
 
   // Federal abatement (Quebec Abatement - reduces federal tax for Quebec residents)
@@ -222,7 +284,8 @@ export function calculateTaxWithConfig(
     federalIncomeTax + eiContribution + pensionFederalAmount - federalAbatement;
   const provincialTax =
     provincialIncomeTax +
-    surtax +
+    surtax -
+    provincialTaxReduction +
     healthPremium +
     parentalInsuranceContribution +
     pensionProvincialAmount;
@@ -253,6 +316,17 @@ export function calculateTaxWithConfig(
     healthPremium,
     federalAbatement,
     cppQppEnhancedDeduction,
+    cppQppEnhancedPortion,
+    taxableIncome,
+    surtaxTiers,
+    federalIncomeTaxBeforeCredits: federal.taxBeforeCredits,
+    provincialIncomeTaxBeforeCredits: provincial.taxBeforeCredits,
+    federalCredits: federal.credits,
+    provincialCredits: provincial.credits,
+    provincialEmploymentDeduction,
+    provincialTaxableIncome,
+    provincialTaxReductions,
+    provincialTaxReduction,
 
     // Metadata
     year: config.year,
@@ -278,23 +352,4 @@ export function calculateTotalTax(
     netIncome: detailed.netIncome,
     effectiveTaxRate: detailed.effectiveTaxRate,
   };
-}
-
-/**
- * Format currency in CAD
- */
-export function formatCurrency(amount: number): string {
-  return new Intl.NumberFormat("en-CA", {
-    style: "currency",
-    currency: "CAD",
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  }).format(amount);
-}
-
-/**
- * Format percentage
- */
-export function formatPercentage(rate: number): string {
-  return `${rate.toFixed(1)}%`;
 }

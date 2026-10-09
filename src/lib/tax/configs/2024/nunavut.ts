@@ -18,5 +18,9 @@ export const NUNAVUT_TAX_CONFIG: ProvincialTaxConfig = {
       { min: 173205, max: null, rate: 0.115 },
     ],
     basicPersonalAmount: 18767,
+    // Credits base CPP contributions and EI premiums at the lowest rate
+    credits: {
+      payrollContributions: true,
+    },
   },
 };

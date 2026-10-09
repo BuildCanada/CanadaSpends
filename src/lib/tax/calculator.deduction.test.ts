@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 
 import { calculateDetailedTax } from "./calculator";
-import { calculateBracketTax } from "./calculators";
+import { calculateTaxFromBrackets } from "./calculators";
 import { getTaxConfig } from "./configs";
 
 // CRA line 22215: deduction for the "enhanced" portion of CPP/QPP
@@ -42,16 +42,20 @@ describe("CPP/QPP enhanced contribution deduction (line 22215)", () => {
   });
 
   it("applies the deduction to taxable income for both federal and provincial brackets", () => {
-    // Ontario 2024 at $80,000 the deduction is $838 (see above), so income
-    // tax at both levels must equal the bracket tax on $79,162.
+    // Ontario 2024 at $80,000 the deduction is $838 (see above), so bracket
+    // tax (before non-refundable credits) at both levels must be the tax on
+    // $79,162.
     const config = getTaxConfig("2024", "ontario")!;
     const detailed = calculateDetailedTax(80000, "ontario", "2024");
-    expect(detailed.federalIncomeTax).toBeCloseTo(
-      calculateBracketTax(80000 - 838, config.federal.incomeTax),
+    expect(detailed.federalIncomeTaxBeforeCredits).toBeCloseTo(
+      calculateTaxFromBrackets(80000 - 838, config.federal.incomeTax.brackets),
       2,
     );
-    expect(detailed.provincialIncomeTax).toBeCloseTo(
-      calculateBracketTax(80000 - 838, config.provincial.incomeTax),
+    expect(detailed.provincialIncomeTaxBeforeCredits).toBeCloseTo(
+      calculateTaxFromBrackets(
+        80000 - 838,
+        config.provincial.incomeTax.brackets,
+      ),
       2,
     );
   });
