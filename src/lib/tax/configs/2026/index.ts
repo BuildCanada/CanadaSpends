@@ -1,5 +1,13 @@
 import { TaxYearProvinceConfig } from "../../types";
-import { FEDERAL_TAX_CONFIG } from "./federal";
+import {
+  ALBERTA_FEDERAL_TRANSFER_NAME,
+  ALBERTA_SPENDING,
+} from "../2025/alberta";
+import {
+  ONTARIO_FEDERAL_TRANSFER_NAME,
+  ONTARIO_SPENDING,
+} from "../2025/ontario";
+import { FEDERAL_SPENDING, FEDERAL_TAX_CONFIG } from "./federal";
 import { ALBERTA_TAX_CONFIG } from "./alberta";
 import { BRITISH_COLUMBIA_TAX_CONFIG } from "./british-columbia";
 import { MANITOBA_TAX_CONFIG } from "./manitoba";
@@ -21,6 +29,13 @@ export const ALBERTA_CONFIG: TaxYearProvinceConfig = {
   province: "alberta",
   federal: FEDERAL_TAX_CONFIG,
   provincial: ALBERTA_TAX_CONFIG,
+  // Provincial spending is the same as 2025 (2023-24 fiscal data) until new
+  // fiscal data is available
+  spending: {
+    federal: FEDERAL_SPENDING,
+    provincial: ALBERTA_SPENDING,
+    federalTransferName: ALBERTA_FEDERAL_TRANSFER_NAME,
+  },
 };
 
 export const BRITISH_COLUMBIA_CONFIG: TaxYearProvinceConfig = {
@@ -77,6 +92,13 @@ export const ONTARIO_CONFIG: TaxYearProvinceConfig = {
   province: "ontario",
   federal: FEDERAL_TAX_CONFIG,
   provincial: ONTARIO_TAX_CONFIG,
+  // Provincial spending is the same as 2025 (2023-24 fiscal data) until new
+  // fiscal data is available
+  spending: {
+    federal: FEDERAL_SPENDING,
+    provincial: ONTARIO_SPENDING,
+    federalTransferName: ONTARIO_FEDERAL_TRANSFER_NAME,
+  },
 };
 
 export const PRINCE_EDWARD_ISLAND_CONFIG: TaxYearProvinceConfig = {

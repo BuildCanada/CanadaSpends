@@ -169,7 +169,7 @@ export function getSupportedProvinces(year: string): SupportedProvince[] {
  * Get the default/latest year
  */
 export function getDefaultYear(): SupportedYear {
-  return "2025";
+  return "2026";
 }
 
 /**
