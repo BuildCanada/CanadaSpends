@@ -15,6 +15,7 @@ import {
   calculateDetailedTax,
   calculateEnhancedContributionPortion,
   type CreditLine,
+  type TaxReductionLine,
   type DetailedTaxCalculation,
   calculateHealthPremium,
   formatCurrency,
@@ -193,6 +194,33 @@ function formatPercent(rate: number): string {
 
 // Income tax brackets section: tax by bracket on taxable income, less the
 // non-refundable credits the calculator applied
+// Credit and reduction names come from the calculator in English; label
+// them by their stable ids so every language gets a translated name.
+function useTaxLabels() {
+  const { t } = useLingui();
+  const credits: Record<CreditLine["id"], string> = {
+    basicPersonalAmount: t`Basic personal amount credit`,
+    payrollContributions: t`CPP/QPP and EI contributions credit`,
+    employmentAmount: t`Canada employment amount credit`,
+  };
+  const lowIncome = t`Low-income tax reduction`;
+  const reductions: Record<string, string> = {
+    "bc-tax-reduction": t`BC tax reduction credit`,
+    "ontario-tax-reduction": t`Ontario Tax Reduction`,
+    "ontario-lift": t`Low-income Individuals and Families Tax (LIFT) credit`,
+    "nb-low-income": lowIncome,
+    "ns-low-income": lowIncome,
+    "pe-low-income": lowIncome,
+    "nl-low-income": lowIncome,
+  };
+  return {
+    credit: (credit: CreditLine) => credits[credit.id] ?? credit.name,
+    reduction: (reduction: TaxReductionLine) =>
+      reductions[reduction.id] ?? reduction.name,
+    workersDeduction: t`Deduction for workers`,
+  };
+}
+
 function IncomeTaxBracketsSection({
   title,
   brackets,
@@ -206,6 +234,7 @@ function IncomeTaxBracketsSection({
   credits: CreditLine[];
   tax: number;
 }) {
+  const labels = useTaxLabels();
   const breakdown = getBracketTaxBreakdown(taxableIncome, brackets);
   const creditRate = brackets[0]?.rate ?? 0;
 
@@ -254,7 +283,7 @@ function IncomeTaxBracketsSection({
             >
               <td className="py-1 text-muted-foreground text-xs" colSpan={2}>
                 <Trans>
-                  {credit.name} credit ({formatAmount(credit.amount)} ×{" "}
+                  {labels.credit(credit)} ({formatAmount(credit.amount)} ×{" "}
                   {formatPercent(creditRate)})
                 </Trans>
               </td>
@@ -579,6 +608,7 @@ function ProvincialTaxCard({
   taxableBreakdown,
   calculation,
 }: ProvincialTaxCardProps) {
+  const labels = useTaxLabels();
   const healthPremiumAmount = config.healthPremium
     ? calculateHealthPremium(income, config.healthPremium)
     : 0;
@@ -618,7 +648,7 @@ function ProvincialTaxCard({
           <div className="-mt-4 mb-6 text-sm">
             <div className="flex justify-between">
               <span className="text-muted-foreground">
-                {config.employmentDeduction.name}
+                {labels.workersDeduction}
               </span>
               <span className="font-medium text-red-600">
                 -{formatAmount(employmentDeduction)}
@@ -705,7 +735,7 @@ function ProvincialTaxCard({
                 {taxReductions.map((reduction) => (
                   <tr key={reduction.id}>
                     <td className="py-1 text-muted-foreground">
-                      {reduction.name}
+                      {labels.reduction(reduction)}
                     </td>
                     <td className="py-1 text-right font-medium text-red-600 w-20">
                       -{formatAmount(reduction.amount)}

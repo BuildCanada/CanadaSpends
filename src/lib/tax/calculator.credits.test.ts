@@ -306,22 +306,30 @@ describe("Low-income tax reductions", () => {
       ).toBeCloseTo(expected, 6);
     });
 
-    it("applies LIFT after the Ontario Tax Reduction", () => {
-      // 2025 at $40,000: LIFT = min($875, 5.05% × $40,000) − 5% × (net −
-      // $32,500)
+    it("phases LIFT out above $32,500 of net income", () => {
+      // 2025 at $40,000: no Ontario Tax Reduction (Ontario tax > 2 × $294),
+      // LIFT = $875 − 5% × (net income − $32,500)
       const detailed = calculateDetailedTax(40000, "ontario", "2025");
-      const netIncome = detailed.provincialTaxableIncome;
-      const lift = 875 - 0.05 * (netIncome - 32500);
-      const ontarioTax = detailed.provincialIncomeTax + detailed.surtax;
-      const otr = Math.max(0, 2 * 294 - ontarioTax);
-      const ids = detailed.provincialTaxReductions.map((l) => l.id);
-      expect(ids.indexOf("ontario-tax-reduction")).toBeLessThan(
-        ids.indexOf("ontario-lift"),
-      );
-      expect(detailed.provincialTaxReduction).toBeCloseTo(
-        Math.min(ontarioTax, otr + lift),
+      const lines = detailed.provincialTaxReductions;
+      expect(lines.map((l) => l.id)).toEqual(["ontario-lift"]);
+      expect(lines[0].amount).toBeCloseTo(
+        875 - 0.05 * (detailed.provincialTaxableIncome - 32500),
         6,
       );
+    });
+
+    it("applies the Ontario Tax Reduction first, then LIFT", () => {
+      // 2026 at $25,000 both apply: the reduction is 2 × $300 − Ontario tax,
+      // then LIFT ($875 here) takes what's left of Ontario tax to zero.
+      const detailed = calculateDetailedTax(25000, "ontario", "2026");
+      const ontarioTax = detailed.provincialIncomeTax + detailed.surtax;
+      const [first, second] = detailed.provincialTaxReductions;
+      expect(first.id).toBe("ontario-tax-reduction");
+      expect(first.amount).toBeCloseTo(2 * 300 - ontarioTax, 6);
+      expect(first.amount).toBeGreaterThan(0);
+      expect(second.id).toBe("ontario-lift");
+      expect(second.amount).toBeCloseTo(ontarioTax - first.amount, 6);
+      expect(detailed.provincialTaxReduction).toBeCloseTo(ontarioTax, 6);
     });
 
     it("caps LIFT at 5.05% of employment income", () => {

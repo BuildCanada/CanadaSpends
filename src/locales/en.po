@@ -40,12 +40,12 @@ msgstr "(inflation-adjusted to 2025 dollars)"
 msgid "{0}"
 msgstr "{0}"
 
-#. placeholder {0}: credit.name
+#. placeholder {0}: labels.credit(credit)
 #. placeholder {1}: formatAmount(credit.amount)
 #. placeholder {2}: formatPercent(creditRate)
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:256
-msgid "{0} credit ({1} × {2})"
-msgstr "{0} credit ({1} × {2})"
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:285
+msgid "{0} ({1} × {2})"
+msgstr "{0} ({1} × {2})"
 
 #. placeholder {0}: firstNations.length
 #: src/components/first-nations/FirstNationsSearch.tsx:222
@@ -74,7 +74,7 @@ msgstr "{0} Government Workforce"
 
 #. placeholder {0}: formatAmount(income)
 #. placeholder {1}: formatAmount(deductionTotal)
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:362
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:391
 msgid "{0} gross income less {1} CPP/QPP enhanced deduction (line 22215)"
 msgstr "{0} gross income less {1} CPP/QPP enhanced deduction (line 22215)"
 
@@ -85,7 +85,7 @@ msgid "{0} is a First Nation{1}."
 msgstr "{0} is a First Nation{1}."
 
 #. placeholder {0}: formatPercent(federalAbatementConfig.rate)
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:473
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:502
 msgid "{0} of federal income tax"
 msgstr "{0} of federal income tax"
 
@@ -121,11 +121,11 @@ msgstr "{0}{provinceSuffix} - No financial data is currently available under the
 msgid "{paragraph}"
 msgstr "{paragraph}"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:629
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:659
 msgid "{provinceName} taxable income"
 msgstr "{provinceName} taxable income"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:610
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:640
 #: src/components/TaxBreakdownAccordion.tsx:112
 msgid "{provinceName} Taxes"
 msgstr "{provinceName} Taxes"
@@ -157,7 +157,7 @@ msgstr "10 government departments accounted for 73.2% of federal spending in FY 
 msgid "10 government departments accounted for 73.2% of federal spending in FY 2024."
 msgstr "10 government departments accounted for 73.2% of federal spending in FY 2024."
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:95
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:96
 msgid "100,000"
 msgstr "100,000"
 
@@ -241,7 +241,7 @@ msgid "About Us"
 msgstr "About Us"
 
 #. placeholder {0}: formatAmount(tier.threshold)
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:673
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:703
 msgid "Above {0}"
 msgstr "Above {0}"
 
@@ -366,7 +366,7 @@ msgstr "All revenue collected during the fiscal year, including transfers, own-s
 msgid "All the information comes from public databases and reports by the Government of Canada. We show our sources, so you know exactly where it comes from."
 msgstr "All the information comes from public databases and reports by the Government of Canada. We show our sources, so you know exactly where it comes from."
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:872
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:902
 msgid "All the taxes that apply to your income"
 msgstr "All the taxes that apply to your income"
 
@@ -375,7 +375,7 @@ msgstr "All the taxes that apply to your income"
 msgid "Amount/Change"
 msgstr "Amount/Change"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:82
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:83
 msgid "Annual Income (CAD)"
 msgstr "Annual Income (CAD)"
 
@@ -403,7 +403,7 @@ msgid "Application ID"
 msgstr "Application ID"
 
 #. placeholder {0}: formatAmount(provincialTax)
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:652
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:682
 msgid "Applied to provincial tax of {0}"
 msgstr "Applied to provincial tax of {0}"
 
@@ -471,9 +471,17 @@ msgid "Based on Data"
 msgstr "Based on Data"
 
 #. placeholder {0}: formatAmount(income)
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:728
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:758
 msgid "Based on income of {0}"
 msgstr "Based on income of {0}"
+
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:202
+msgid "Basic personal amount credit"
+msgstr "Basic personal amount credit"
+
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:208
+msgid "BC tax reduction credit"
+msgstr "BC tax reduction credit"
 
 #: src/components/Sankey/index.tsx:291
 msgid "Border Security"
@@ -510,7 +518,7 @@ msgstr "Budget Impact"
 msgid "Budget Statistics (Projected FY 2025)"
 msgstr "Budget Statistics (Projected FY 2025)"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:74
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:75
 msgid "Calculate Your Tax Contribution"
 msgstr "Calculate Your Tax Contribution"
 
@@ -529,6 +537,10 @@ msgstr "Canada Community-Building Fund"
 #: src/components/Sankey/index.tsx:242
 msgid "Canada Emergency Wage Subsidy"
 msgstr "Canada Emergency Wage Subsidy"
+
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:204
+msgid "Canada employment amount credit"
+msgstr "Canada employment amount credit"
 
 #: src/app/[lang]/(main)/federal/spending/department-of-finance/MiniSankey.tsx:19
 msgid "Canada health transfer"
@@ -744,6 +756,10 @@ msgstr "Countries"
 msgid "COVID-19 Income Support"
 msgstr "COVID-19 Income Support"
 
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:203
+msgid "CPP/QPP and EI contributions credit"
+msgstr "CPP/QPP and EI contributions credit"
+
 #: src/app/[lang]/(main)/federal/spending/canada-revenue-agency/page.tsx:187
 msgid "CRA spending is divided across tax administration, compliance enforcement, benefit program delivery, and intergovernmental agreements with provinces and territories. The largest expenditures in FY 2024 included personal income tax processing, corporate tax audits, and benefit administration."
 msgstr "CRA spending is divided across tax administration, compliance enforcement, benefit program delivery, and intergovernmental agreements with provinces and territories. The largest expenditures in FY 2024 included personal income tax processing, corporate tax audits, and benefit administration."
@@ -800,6 +816,10 @@ msgstr "Data updated March 20, 2025"
 #: src/app/[lang]/(main)/federal/spending/veterans-affairs/page.tsx:66
 msgid "Data updated March 21, 2025"
 msgstr "Data updated March 21, 2025"
+
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:220
+msgid "Deduction for workers"
+msgstr "Deduction for workers"
 
 #: src/components/Sankey/index.tsx:556
 msgid "Defence"
@@ -929,11 +949,11 @@ msgstr "Economy + Infrastructure"
 msgid "Economy and Standard of Living"
 msgstr "Economy and Standard of Living"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:171
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:172
 msgid "Effective Rate"
 msgstr "Effective Rate"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:173
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:174
 msgid "Effective tax rate"
 msgstr "Effective tax rate"
 
@@ -975,7 +995,7 @@ msgstr "End Date"
 msgid "Energy Taxes"
 msgstr "Energy Taxes"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1010
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1040
 msgid "Enter your income to see a personalized breakdown of how much you contribute to different government services and programs."
 msgstr "Enter your income to see a personalized breakdown of how much you contribute to different government services and programs."
 
@@ -1031,15 +1051,15 @@ msgstr "Est. projected government revenue"
 msgid "Established in 2005, ESDC is a federal department responsible for supporting Canadians through social programs and workforce development. It administers key programs such as Employment Insurance (EI), the Canada Pension Plan (CPP), Old Age Security (OAS), and skills training initiatives. ESDC also oversees Service Canada, which delivers government services directly to the public."
 msgstr "Established in 2005, ESDC is a federal department responsible for supporting Canadians through social programs and workforce development. It administers key programs such as Employment Insurance (EI), the Canada Pension Plan (CPP), Old Age Security (OAS), and skills training initiatives. ESDC also oversees Service Canada, which delivers government services directly to the public."
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:168
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:169
 msgid "Estimated combined tax"
 msgstr "Estimated combined tax"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:158
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:159
 msgid "Estimated income tax paid to federal government"
 msgstr "Estimated income tax paid to federal government"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:163
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:164
 msgid "Estimated income tax paid to provincial government"
 msgstr "Estimated income tax paid to provincial government"
 
@@ -1310,11 +1330,11 @@ msgstr "Federal spending on Indigenous priorities may fluctuate over time due to
 msgid "Federal spending on public safety fluctuates based on evolving security threats, emergency events, and changes in government policy. Since 2005 shortly after it was established, Public Safety Canada's expenditures have increased by 69.6%, reflecting heightened investments in counterterrorism, cyber defence, and disaster response capabilities. The department's share of the federal budget has remained relatively flat from 2.6% in 2005 to 2.7% in 2024."
 msgstr "Federal spending on public safety fluctuates based on evolving security threats, emergency events, and changes in government policy. Since 2005 shortly after it was established, Public Safety Canada's expenditures have increased by 69.6%, reflecting heightened investments in counterterrorism, cyber defence, and disaster response capabilities. The department's share of the federal budget has remained relatively flat from 2.6% in 2005 to 2.7% in 2024."
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:156
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:157
 msgid "Federal Tax"
 msgstr "Federal Tax"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:450
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:479
 #: src/components/TaxBreakdownAccordion.tsx:105
 msgid "Federal Taxes"
 msgstr "Federal Taxes"
@@ -1364,8 +1384,8 @@ msgstr "Financial Position {0}"
 msgid "Financial Summary FY {fiscalYear}"
 msgstr "Financial Summary FY {fiscalYear}"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:530
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:807
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:559
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:837
 msgid "First"
 msgstr "First"
 
@@ -1442,7 +1462,7 @@ msgstr "Food Safety"
 msgid "For example, during the COVID-19 pandemic, federal support programs led to a temporary surge in spending. ESDC expenditures increased from $63.3 billion in 2019 to $169.2 billion in 2021 before stabilizing in recent years."
 msgstr "For example, during the COVID-19 pandemic, federal support programs led to a temporary surge in spending. ESDC expenditures increased from $63.3 billion in 2019 to $169.2 billion in 2021 before stabilizing in recent years."
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1084
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1114
 msgid "For further breakdowns of spending, see <0>Federal</0> and <1>Provincial</1> spending pages."
 msgstr "For further breakdowns of spending, see <0>Federal</0> and <1>Provincial</1> spending pages."
 
@@ -1572,7 +1592,7 @@ msgstr "Government organizations"
 msgid "Government Spending"
 msgstr "Government Spending"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1081
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1111
 msgid "Government spending is based on 2023-2024 fiscal spending. Attempts have been made to merge similar categories across federal and provincial spending."
 msgstr "Government spending is based on 2023-2024 fiscal spending. Attempts have been made to merge similar categories across federal and provincial spending."
 
@@ -1602,7 +1622,7 @@ msgstr "Grand Total"
 msgid "Grants to Support the New Fiscal Relationship with First Nations"
 msgstr "Grants to Support the New Fiscal Relationship with First Nations"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:372
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:401
 msgid "Gross employment income"
 msgstr "Gross employment income"
 
@@ -2100,7 +2120,15 @@ msgstr "Location"
 msgid "Look back at what {0}'s government made and spent. {1}"
 msgstr "Look back at what {0}'s government made and spent. {1}"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:701
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:210
+msgid "Low-income Individuals and Families Tax (LIFT) credit"
+msgstr "Low-income Individuals and Families Tax (LIFT) credit"
+
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:206
+msgid "Low-income tax reduction"
+msgstr "Low-income tax reduction"
+
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:731
 msgid "Low-income tax reductions"
 msgstr "Low-income tax reductions"
 
@@ -2546,6 +2574,10 @@ msgstr "Ontario HTP"
 msgid "Ontario STP"
 msgstr "Ontario STP"
 
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:209
+msgid "Ontario Tax Reduction"
+msgstr "Ontario Tax Reduction"
+
 #: src/app/[lang]/(main)/whistleblowers/page.tsx:113
 msgid "Open Tor Browser and wait for it to connect."
 msgstr "Open Tor Browser and wait for it to connect."
@@ -2704,7 +2736,7 @@ msgstr "Parliament"
 msgid "Payment Amount"
 msgstr "Payment Amount"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:488
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:517
 msgid "Payroll Contributions"
 msgstr "Payroll Contributions"
 
@@ -2877,7 +2909,7 @@ msgstr "Prov."
 msgid "Province"
 msgstr "Province"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:105
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:106
 msgid "Province/Territory"
 msgstr "Province/Territory"
 
@@ -2888,7 +2920,7 @@ msgstr "Province/Territory"
 msgid "Provincial"
 msgstr "Provincial"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:161
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:162
 msgid "Provincial Tax"
 msgstr "Provincial Tax"
 
@@ -2995,7 +3027,7 @@ msgstr "Quebec Tax Offset"
 msgid "Ranked <0>#{0}</0> of {1} lowest tax"
 msgstr "Ranked <0>#{0}</0> of {1} lowest tax"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:222
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:251
 msgid "Rate"
 msgstr "Rate"
 
@@ -3279,11 +3311,11 @@ msgstr "Speculation does not meet the level of a strong tip."
 msgid "Spending"
 msgstr "Spending"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1131
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1161
 msgid "Spending Breakdown Coming Soon"
 msgstr "Spending Breakdown Coming Soon"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1134
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1164
 msgid "Spending data is not yet available for this province and year combination. The income tax calculation above is still accurate based on {year} tax rates."
 msgstr "Spending data is not yet available for this province and year combination. The income tax calculation above is still accurate based on {year} tax rates."
 
@@ -3387,15 +3419,15 @@ msgstr "Tangible Capital Assets"
 msgid "Tangible capital assets such as land, buildings, equipment, and infrastructure."
 msgstr "Tangible capital assets such as land, buildings, equipment, and infrastructure."
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:225
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:254
 msgid "Tax"
 msgstr "Tax"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:219
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:248
 msgid "Tax bracket"
 msgstr "Tax bracket"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1075
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1105
 msgid "Tax calculations are based on {year} federal and provincial tax brackets."
 msgstr "Tax calculations are based on {year} federal and provincial tax brackets."
 
@@ -3405,7 +3437,7 @@ msgid "Tax Comparison Across Provinces at {0} Income"
 msgstr "Tax Comparison Across Provinces at {0} Income"
 
 #. placeholder {0}: config.year
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:867
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:897
 msgid "Tax Details for {provinceName} ({0})"
 msgstr "Tax Details for {provinceName} ({0})"
 
@@ -3413,11 +3445,11 @@ msgstr "Tax Details for {provinceName} ({0})"
 msgid "Tax Visualizer | Canada Spends"
 msgstr "Tax Visualizer | Canada Spends"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:126
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:127
 msgid "Tax Year"
 msgstr "Tax Year"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:395
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:424
 msgid "Taxable income"
 msgstr "Taxable income"
 
@@ -3628,7 +3660,7 @@ msgstr "This schedule has been audited."
 msgid "This schedule is unaudited."
 msgstr "This schedule is unaudited."
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1071
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1101
 msgid "This visualization shows how your income tax contributions are allocated across different government programs and services based on current government spending patterns. Amounts under $20 are grouped into \"Other\" for conciseness."
 msgstr "This visualization shows how your income tax contributions are allocated across different government programs and services based on current government spending patterns. Amounts under $20 are grouped into \"Other\" for conciseness."
 
@@ -3644,9 +3676,9 @@ msgstr "to help us support our mission."
 msgid "Tools"
 msgstr "Tools"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:268
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:542
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:686
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:297
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:571
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:716
 #: src/components/first-nations/ClaimsTable.tsx:300
 #: src/components/first-nations/RemunerationOverview.tsx:800
 #: src/components/first-nations/RemunerationTable.tsx:139
@@ -3655,7 +3687,7 @@ msgstr "Tools"
 msgid "Total"
 msgstr "Total"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:828
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:858
 msgid "Total {provinceName} Tax"
 msgstr "Total {provinceName} Tax"
 
@@ -3688,7 +3720,7 @@ msgstr "Total Expenses"
 msgid "Total expenses in FY {fiscalYear}"
 msgstr "Total expenses in FY {fiscalYear}"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:557
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:586
 msgid "Total Federal Tax"
 msgstr "Total Federal Tax"
 
@@ -3754,12 +3786,12 @@ msgstr "Total spending divided by population. Useful for comparing municipal eff
 msgid "Total spending in {0}"
 msgstr "Total spending in {0}"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:166
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:167
 #: src/components/TaxBreakdownAccordion.tsx:120
 msgid "Total Tax"
 msgstr "Total Tax"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:353
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:382
 msgid "Total Taxable Income"
 msgstr "Total Taxable Income"
 
@@ -3858,7 +3890,7 @@ msgstr "Tribunal Award"
 msgid "Type of Tenure"
 msgstr "Type of Tenure"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1068
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1098
 msgid "Understanding Your Tax Contribution"
 msgstr "Understanding Your Tax Contribution"
 
@@ -3912,7 +3944,7 @@ msgstr "Veterans Affairs Canada | Canada Spends"
 msgid "View {year} financial statements for {0}{provinceSuffix}. Includes statement of operations, financial position, and remuneration data from the First Nations Financial Transparency Act annual report."
 msgstr "View {year} financial statements for {0}{provinceSuffix}. Includes statement of operations, financial position, and remuneration data from the First Nations Financial Transparency Act annual report."
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1040
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1070
 #: src/components/TaxBreakdownAccordion.tsx:100
 msgid "View detailed tax breakdown"
 msgstr "View detailed tax breakdown"
@@ -4093,8 +4125,8 @@ msgstr "When HICC was founded in FY 2005 as the Office of Infrastructure Canada,
 msgid "Where do you get the data on your website?"
 msgstr "Where do you get the data on your website?"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1008
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1062
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1038
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1092
 msgid "Where Your Tax Dollars Go"
 msgstr "Where Your Tax Dollars Go"
 
@@ -4194,7 +4226,7 @@ msgstr "You can access our whistleblower platform directly through your web brow
 msgid "You deserve the facts"
 msgstr "You deserve the facts"
 
-#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1074
+#: src/app/[lang]/(main)/tax-visualizer/page.tsx:1104
 msgid "Your tax contributions are approximated based on employment income. Deductions such as basic personal amount are estimated and included. Other sources of income, such as self-employment, investment income, and capital gains, are not included in the calculations. Deductions such as RRSP and FHSA contributions are also not included."
 msgstr "Your tax contributions are approximated based on employment income. Deductions such as basic personal amount are estimated and included. Other sources of income, such as self-employment, investment income, and capital gains, are not included in the calculations. Deductions such as RRSP and FHSA contributions are also not included."
 

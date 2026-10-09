@@ -144,6 +144,35 @@ describe("calculateTaxReductions", () => {
     ).toEqual([]);
   });
 
+  it("depends on order when a reduction is based on remaining tax", () => {
+    // ON428 applies the Ontario Tax Reduction (2 × amount − tax) before
+    // LIFT. Applying LIFT first would shrink the tax the offset is based on
+    // and give a larger total.
+    const offset: TaxReductionConfig = {
+      type: "taxOffset",
+      id: "offset",
+      name: "Offset",
+      basicAmount: 300,
+      multiplier: 2,
+    };
+    const lift: TaxReductionConfig = {
+      ...phaseOut,
+      id: "lift",
+      maxCredit: 400,
+      threshold: 50000,
+    };
+    const inputs = { netIncome: 20000, employmentIncome: 20000 };
+    const total = (order: TaxReductionConfig[]) =>
+      calculateTaxReductions(700, order, inputs).reduce(
+        (sum, l) => sum + l.amount,
+        0,
+      );
+    // Offset first: 2 × $300 − $700 = $0, then LIFT $400
+    expect(total([offset, lift])).toBe(400);
+    // LIFT first: $400, then 2 × $300 − $300 = $300
+    expect(total([lift, offset])).toBe(700);
+  });
+
   it("applies reductions in order and never below zero tax", () => {
     const lines = calculateTaxReductions(
       400,
