@@ -42,14 +42,6 @@ export const Footer = () => {
                       </FooterLink>
                     </li>
                     <li>
-                      <FooterLink
-                        href="https://buildcanada.com/get-involved"
-                        target="_blank"
-                      >
-                        <Trans>Get Involved</Trans>
-                      </FooterLink>
-                    </li>
-                    <li>
                       <FooterLink href="/contact">
                         <Trans>Contact</Trans>
                       </FooterLink>
