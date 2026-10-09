@@ -368,7 +368,7 @@ export async function GET(request: Request) {
   const TITLE_H = Math.max(48, titleLines * titleSize * 1.05);
   const SUBTITLE_H = 32;
   const STATS_H = 96;
-  const FOOTER_H = 20;
+  const FOOTER_H = 44; // two lines of disclosure
   const GAPS = 8 + 18 + 16 + 14;
   const CHART_HEADER_H = 30;
   const chartCardH =
@@ -497,11 +497,13 @@ export async function GET(request: Request) {
             marginTop: 14,
             height: FOOTER_H,
             fontSize: 17,
+            lineHeight: 1.3,
             color: COLORS.muted,
           }}
         >
-          Made by someone using the Canada Spends Tax Simulator. Not endorsed by
-          Canada Spends.
+          The title and tax plans were entered by someone using the Canada
+          Spends Tax Simulator. Canada Spends calculated the results but did not
+          create or endorse this scenario.
         </div>
       </div>
     ),

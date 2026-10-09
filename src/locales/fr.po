@@ -137,13 +137,13 @@ msgid "{paragraph}"
 msgstr "{paragraph}"
 
 #. placeholder {0}: p.plan.year
-#: src/components/tax-simulator/TaxPlanView.tsx:210
+#: src/components/tax-simulator/TaxPlanView.tsx:218
 msgid "{provinceName} {0} law with these changes:"
 msgstr ""
 
 #. placeholder {0}: p.plan.year
 #. placeholder {0}: plan.year
-#: src/components/tax-simulator/TaxPlanView.tsx:203
+#: src/components/tax-simulator/TaxPlanView.tsx:211
 #: src/components/tax-simulator/TaxSimulator.tsx:402
 msgid "{provinceName} {0} law, unchanged"
 msgstr ""
@@ -188,7 +188,7 @@ msgstr "Total de {provinceName}"
 msgid "{title} basic personal amount"
 msgstr ""
 
-#: src/components/tax-simulator/TaxPlanView.tsx:247
+#: src/components/tax-simulator/TaxPlanView.tsx:255
 #: src/components/tax-simulator/TaxSimulator.tsx:671
 msgid "{title}: see how it would change your taxes"
 msgstr ""
@@ -634,7 +634,7 @@ msgstr "Impact budgétaire"
 msgid "Budget Statistics (Projected FY 2025)"
 msgstr "Statistiques budgétaires (exercice 2025 projeté)"
 
-#: src/components/tax-simulator/TaxPlanView.tsx:132
+#: src/components/tax-simulator/TaxPlanView.tsx:140
 msgid "Build your own"
 msgstr ""
 
@@ -811,7 +811,7 @@ msgid "Compare your total tax burden across all Canadian provinces and territori
 msgstr "Comparez votre fardeau fiscal total dans toutes les provinces et territoires canadiens"
 
 #. placeholder {0}: comparison.plans.length
-#: src/components/tax-simulator/TaxPlanView.tsx:115
+#: src/components/tax-simulator/TaxPlanView.tsx:123
 msgid "Comparing {0} sets of tax rules for employment income"
 msgstr ""
 
@@ -1100,7 +1100,7 @@ msgstr "Économie + Infrastructure"
 msgid "Economy and Standard of Living"
 msgstr "Économie et niveau de vie"
 
-#: src/components/tax-simulator/TaxPlanView.tsx:126
+#: src/components/tax-simulator/TaxPlanView.tsx:134
 msgid "Edit a copy"
 msgstr ""
 
@@ -1161,7 +1161,7 @@ msgstr "Taxes sur l'énergie"
 msgid "Enter your income to see a personalized breakdown of how much you contribute to different government services and programs."
 msgstr "Entrez votre revenu pour voir une répartition personnalisée de votre contribution aux différents services et programmes gouvernementaux."
 
-#: src/components/tax-simulator/TaxPlanView.tsx:154
+#: src/components/tax-simulator/TaxPlanView.tsx:162
 msgid "Enter your income to see what each plan would mean for you."
 msgstr ""
 
@@ -2100,7 +2100,7 @@ msgid "In-depth analysis and insights about Canadian government spending, budget
 msgstr "Analyse approfondie et perspectives sur les dépenses gouvernementales canadiennes, les politiques budgétaires et les finances publiques. Notre équipe à Canada Spends décompose les données financières complexes pour vous aider à comprendre comment les dépenses gouvernementales affectent votre vie."
 
 #: src/components/tax-simulator/ComparisonResults.tsx:233
-#: src/components/tax-simulator/TaxPlanView.tsx:140
+#: src/components/tax-simulator/TaxPlanView.tsx:148
 #: src/components/tax-simulator/TaxSimulator.tsx:805
 msgid "Income"
 msgstr ""
@@ -2812,7 +2812,7 @@ msgstr "Ouvrez le navigateur Tor et attendez qu'il se connecte."
 msgid "Operational Spend"
 msgstr "Dépenses opérationnelles"
 
-#: src/components/tax-simulator/TaxPlanView.tsx:241
+#: src/components/tax-simulator/TaxPlanView.tsx:249
 msgid "Or edit a copy to make your own version."
 msgstr ""
 
@@ -3370,7 +3370,7 @@ msgstr "Recherche"
 msgid "Research Subject"
 msgstr "Sujet de recherche"
 
-#: src/components/tax-simulator/TaxPlanView.tsx:168
+#: src/components/tax-simulator/TaxPlanView.tsx:176
 #: src/components/tax-simulator/TaxSimulator.tsx:126
 msgid "Reset"
 msgstr ""
@@ -3509,7 +3509,7 @@ msgstr "Aide à l'établissement"
 msgid "Share"
 msgstr ""
 
-#: src/components/tax-simulator/TaxPlanView.tsx:238
+#: src/components/tax-simulator/TaxPlanView.tsx:246
 msgid "Share this comparison"
 msgstr ""
 
@@ -3539,7 +3539,7 @@ msgid "Showing {0} of {1} results"
 msgstr "Affichage de {0} sur {1} résultats"
 
 #. placeholder {0}: formatWholeDollars(sharedScenario.income)
-#: src/components/tax-simulator/TaxPlanView.tsx:159
+#: src/components/tax-simulator/TaxPlanView.tsx:167
 msgid "Showing your income. This comparison was shared at {0}."
 msgstr ""
 
@@ -3758,7 +3758,7 @@ msgstr "Détails fiscaux pour {provinceName} ({0})"
 
 #: src/app/[lang]/(main)/tax-visualizer/simulator/page.tsx:28
 #: src/app/[lang]/(main)/tax-visualizer/simulator/view/page.tsx:28
-#: src/components/tax-simulator/TaxPlanView.tsx:109
+#: src/components/tax-simulator/TaxPlanView.tsx:117
 #: src/components/tax-simulator/TaxSimulator.tsx:771
 msgid "Tax Simulator"
 msgstr ""
@@ -3961,6 +3961,10 @@ msgstr "Les ministres travaillent aux côtés du sous-ministre des Affaires étr
 #: src/app/[lang]/(main)/federal/spending/public-services-and-procurement-canada/page.tsx:52
 msgid "The Public Services and Procurement Canada (PSPC) is the federal department responsible for providing centralized procurement, real estate management, pay and pension administration for federal employees, and translation services to the Government of Canada. It ensures that government departments have the goods, services, and infrastructure they need to operate efficiently while maintaining transparency, fairness, and value for taxpayers."
 msgstr "Services publics et Approvisionnement Canada (SPAC) est le ministère fédéral responsable de l'approvisionnement centralisé, de la gestion immobilière, de l'administration de la paye et des pensions pour les employés fédéraux, et des services de traduction pour le gouvernement du Canada. Il s'assure que les ministères gouvernementaux disposent des biens, des services et de l'infrastructure dont ils ont besoin pour fonctionner efficacement tout en maintenant la transparence, l'équité et la valeur pour les contribuables."
+
+#: src/components/tax-simulator/TaxPlanView.tsx:110
+msgid "The title and tax plans were entered by someone using the Canada Spends Tax Simulator. Canada Spends calculated the results but did not create or endorse this scenario."
+msgstr ""
 
 #: src/app/[lang]/(main)/federal/budget/page.tsx:196
 msgid "The values you see here are based on the FY 2024 Budget with preliminary updates based on government announcements, memos, and leaks, and are meant to provide a rough idea of the budget. Once the official Fall 2025 Budget is released on November 4th, we will update this page to reflect the official budget."
@@ -4463,7 +4467,7 @@ msgstr "Quelles sont les idées principales?"
 msgid "What data sources were used?"
 msgstr "Quelles sources de données ont été utilisées?"
 
-#: src/components/tax-simulator/TaxPlanView.tsx:185
+#: src/components/tax-simulator/TaxPlanView.tsx:193
 msgid "What each plan changes"
 msgstr ""
 
@@ -4596,7 +4600,7 @@ msgstr "Vous pouvez accéder à notre plateforme de dénonciation directement vi
 msgid "You deserve the facts"
 msgstr "Vous méritez les faits"
 
-#: src/components/tax-simulator/TaxPlanView.tsx:144
+#: src/components/tax-simulator/TaxPlanView.tsx:152
 msgid "Your annual employment income"
 msgstr ""
 

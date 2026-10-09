@@ -105,6 +105,14 @@ export function TaxPlanView({
   return (
     <PageContent>
       <Section className="max-w-6xl">
+        {/* Shared scenarios are user-made: say so before the title */}
+        <p className="mb-6 border-l-4 border-border bg-card px-4 py-3 text-sm text-foreground/70">
+          <Trans>
+            The title and tax plans were entered by someone using the Canada
+            Spends Tax Simulator. Canada Spends calculated the results but did
+            not create or endorse this scenario.
+          </Trans>
+        </p>
         <div className="text-xs font-mono uppercase tracking-widest text-primary">
           <Trans>Tax Simulator</Trans>
         </div>
