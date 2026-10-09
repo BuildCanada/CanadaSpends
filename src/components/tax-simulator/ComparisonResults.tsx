@@ -9,7 +9,10 @@ import {
   calculateTaxWithConfig,
   chartMaxIncome,
   formatWholeDollars,
-  PROVINCE_NAMES,
+  provinceName as localProvinceName,
+  formatDecimal,
+  formatRate,
+  toScenarioLang,
   type DetailedTaxCalculation,
   type ScenarioComparison,
 } from "@/lib/tax";
@@ -59,7 +62,8 @@ function PlanSubtitle({
   year: string;
   changed: boolean;
 }) {
-  const provinceName = PROVINCE_NAMES[province] ?? province;
+  const { i18n } = useLingui();
+  const provinceName = localProvinceName(province, toScenarioLang(i18n.locale));
   return (
     <div className="text-xs text-foreground/50 truncate">
       {changed ? (
@@ -86,6 +90,8 @@ export function ResultsSummary({
   changedFlags: boolean[];
 }) {
   const { plans, reference } = comparison;
+  const { i18n } = useLingui();
+  const lang = toScenarioLang(i18n.locale);
   return (
     <div className="@container">
       <div className="text-sm text-foreground/60 mb-3">
@@ -119,7 +125,9 @@ export function ResultsSummary({
               {formatWholeDollars(p.result.totalTax)}
             </div>
             <div className="text-xs text-foreground/60">
-              <Trans>{p.result.effectiveTaxRate.toFixed(1)}% effective</Trans>
+              <Trans>
+                {formatDecimal(p.result.effectiveTaxRate, lang)}% effective
+              </Trans>
             </div>
             {i > 0 && (
               <div
@@ -159,14 +167,10 @@ export function TaxChartSection({
   );
   return (
     <div>
-      <TaxPaidChart
-        points={curve}
-        labels={comparison.plans.map((p) => p.label)}
-        maxIncome={maxIncome}
-        income={income}
-      />
+      {/* The difference from the reference first: plans that differ by a
+          few thousand dollars are hard to tell apart on the total chart */}
       {comparison.plans.length > 1 && (
-        <div className="mt-6">
+        <div className="mb-6">
           <TaxPaidChart
             mode="difference"
             points={curve}
@@ -176,12 +180,17 @@ export function TaxChartSection({
           />
         </div>
       )}
+      <TaxPaidChart
+        points={curve}
+        labels={comparison.plans.map((p) => p.label)}
+        maxIncome={maxIncome}
+        income={income}
+        showLegend={comparison.plans.length <= 1}
+      />
       <p className="text-xs text-foreground/50 mt-2">
         <Trans>
-          Total tax paid (income tax, CPP/QPP, EI and premiums) by employment
-          income, and how much more or less each plan charges than{" "}
-          {comparison.reference.label}. The dotted line marks the selected
-          income.
+          The dotted line marks the selected income of{" "}
+          {formatWholeDollars(income)}.
         </Trans>
       </p>
     </div>
@@ -205,6 +214,8 @@ export function IncomeTable({
 }: {
   comparison: ScenarioComparison;
 }) {
+  const { i18n } = useLingui();
+  const lang = toScenarioLang(i18n.locale);
   const rows = useMemo(
     () =>
       SAMPLE_INCOMES.map((income) => ({
@@ -249,7 +260,7 @@ export function IncomeTable({
                     <div>
                       {formatWholeDollars(r.totalTax)}
                       <span className="text-foreground/40 text-xs ml-1">
-                        {r.effectiveTaxRate.toFixed(1)}%
+                        {formatRate(r.effectiveTaxRate, lang)}
                       </span>
                     </div>
                     {i > 0 && (
@@ -413,7 +424,7 @@ export function ShareActions({
   shareText: string;
   className?: string;
 }) {
-  const { t } = useLingui();
+  const { t, i18n } = useLingui();
   const [origin, setOrigin] = useState("https://canadaspends.com");
   const [canNativeShare, setCanNativeShare] = useState(false);
   useEffect(() => {
@@ -424,10 +435,10 @@ export function ShareActions({
   // Warm the social image cache once the scenario settles, so the image is
   // ready by the time someone shares the link.
   useEffect(() => {
-    const id = setTimeout(() => warmSocialImage(query), 1000);
+    const id = setTimeout(() => warmSocialImage(query, i18n.locale), 1000);
     return () => clearTimeout(id);
-  }, [query]);
-  const warm = () => warmSocialImage(query);
+  }, [query, i18n.locale]);
+  const warm = () => warmSocialImage(query, i18n.locale);
 
   const shareUrl = `${origin}${path}?${query}`;
   const encodedUrl = encodeURIComponent(shareUrl);
@@ -498,7 +509,7 @@ export function ShareActions({
       </a>
       <a
         className={buttonClass}
-        href={socialImagePath(query)}
+        href={socialImagePath(query, i18n.locale)}
         download="tax-plan.png"
       >
         <Trans>Download image</Trans>

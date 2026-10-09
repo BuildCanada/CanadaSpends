@@ -1,7 +1,8 @@
 // The social preview image for a scenario query. The page metadata (og:image)
 // and the simulator both use this path, so they hit the same cache entry.
-export function socialImagePath(query: string): string {
-  return `/api/og/tax-simulator?${query}`;
+export function socialImagePath(query: string, lang: string = "en"): string {
+  const suffix = lang === "fr" ? "&lang=fr" : "";
+  return `/api/og/tax-simulator?${query}${suffix}`;
 }
 
 const warmed = new Set<string>();
@@ -12,11 +13,12 @@ const warmed = new Set<string>();
  * take long enough for some crawlers to give up and post a link without a
  * card. Same-origin, fire-and-forget, once per query.
  */
-export function warmSocialImage(query: string): void {
-  if (typeof window === "undefined" || warmed.has(query)) return;
-  warmed.add(query);
-  fetch(socialImagePath(query)).catch(() => {
+export function warmSocialImage(query: string, lang: string = "en"): void {
+  const path = socialImagePath(query, lang);
+  if (typeof window === "undefined" || warmed.has(path)) return;
+  warmed.add(path);
+  fetch(path).catch(() => {
     // Let a later attempt retry
-    warmed.delete(query);
+    warmed.delete(path);
   });
 }

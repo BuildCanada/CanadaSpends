@@ -22,6 +22,8 @@ import {
   planLabel,
   planOverrideParams,
   PROVINCE_NAMES,
+  provinceName as localProvinceName,
+  toScenarioLang,
   PROVINCE_TO_CODE,
   rateToPercent,
   SCENARIO_YEAR,
@@ -46,9 +48,14 @@ import { inputClass, NumberField } from "./NumberField";
 import { planColor } from "./planColors";
 import { socialImagePath } from "./socialImage";
 
-const PROVINCES_SORTED = Object.entries(PROVINCE_NAMES).sort((a, b) =>
-  a[1].localeCompare(b[1]),
-);
+// Province options as [slug, localized name], sorted by name
+function useProvinceOptions(): Array<[string, string]> {
+  const { i18n } = useLingui();
+  const lang = toScenarioLang(i18n.locale);
+  return Object.keys(PROVINCE_NAMES)
+    .map((slug): [string, string] => [slug, localProvinceName(slug, lang)])
+    .sort((a, b) => a[1].localeCompare(b[1], lang));
+}
 
 function ModifiedBadge() {
   return (
@@ -337,14 +344,15 @@ function PlanCard({
   onDuplicate,
   canDuplicate,
 }: PlanCardProps) {
-  const { t } = useLingui();
+  const { t, i18n } = useLingui();
   const presets = usePresets();
   const config = getTaxConfig(plan.year, plan.province);
   if (!config) return null;
 
   const set = (patch: Partial<TaxPlan>) => onChange({ ...plan, ...patch });
-  const label = planLabel(plan, index, plans);
-  const provinceName = PROVINCE_NAMES[plan.province] ?? plan.province;
+  const lang = toScenarioLang(i18n.locale);
+  const label = planLabel(plan, index, plans, lang);
+  const provinceName = localProvinceName(plan.province, lang);
   const editable = isProposal(index, plans);
   const changed = planHasChanges(plan);
   const fedConfig = config.federal.incomeTax;
@@ -539,10 +547,13 @@ function AddComparison({
   scenario: TaxScenario;
   onAdd: (plan: TaxPlan) => void;
 }) {
-  const { t } = useLingui();
+  const { t, i18n } = useLingui();
+  const provinceOptions = useProvinceOptions();
   const reference = scenario.plans[0];
-  const referenceName =
-    PROVINCE_NAMES[reference.province] ?? reference.province;
+  const referenceName = localProvinceName(
+    reference.province,
+    toScenarioLang(i18n.locale),
+  );
   const used = new Set(scenario.plans.map((p) => p.province));
 
   return (
@@ -579,13 +590,13 @@ function AddComparison({
             className={inputClass}
           >
             <option value="">{t`Choose a province…`}</option>
-            {PROVINCES_SORTED.filter(([value]) => !used.has(value)).map(
-              ([value, name]) => (
+            {provinceOptions
+              .filter(([value]) => !used.has(value))
+              .map(([value, name]) => (
                 <option key={value} value={value}>
                   {name}
                 </option>
-              ),
-            )}
+              ))}
           </select>
         </div>
       </div>
@@ -604,7 +615,7 @@ function SharePanel({ scenario }: { scenario: TaxScenario }) {
   }, [query]);
 
   const viewPath = localizedPath("/tax-visualizer/simulator/view", i18n.locale);
-  const title = scenarioTitle(scenario);
+  const title = scenarioTitle(scenario, toScenarioLang(i18n.locale));
   const shareText = t`${title}: see how it would change your taxes`;
 
   return (
@@ -630,7 +641,7 @@ function SharePanel({ scenario }: { scenario: TaxScenario }) {
       </p>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src={socialImagePath(previewQuery)}
+        src={socialImagePath(previewQuery, i18n.locale)}
         alt={t`Social preview of this comparison`}
         width={1200}
         height={630}
@@ -674,7 +685,12 @@ export function TaxSimulator() {
     }
   }, [scenario]);
 
-  const comparison = useMemo(() => compareScenario(scenario), [scenario]);
+  const lang = toScenarioLang(i18n.locale);
+  const provinceOptions = useProvinceOptions();
+  const comparison = useMemo(
+    () => compareScenario(scenario, lang),
+    [scenario, lang],
+  );
   if (!comparison) return null;
 
   const reference = scenario.plans[0];
@@ -759,7 +775,7 @@ export function TaxSimulator() {
                   onChange={(e) => setReferenceProvince(e.target.value)}
                   className={inputClass}
                 >
-                  {PROVINCES_SORTED.map(([value, name]) => (
+                  {provinceOptions.map(([value, name]) => (
                     <option key={value} value={value}>
                       {name}
                     </option>
@@ -818,7 +834,7 @@ export function TaxSimulator() {
           <div className="space-y-6 lg:sticky lg:top-6">
             <div className="bg-card rounded-lg border p-5 space-y-6">
               <div className="font-display font-bold text-xl">
-                {scenarioTitle(scenario)}
+                {scenarioTitle(scenario, lang)}
               </div>
               <ResultsSummary
                 comparison={comparison}

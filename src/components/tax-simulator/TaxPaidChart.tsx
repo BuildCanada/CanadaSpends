@@ -1,9 +1,14 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Trans } from "@lingui/react/macro";
+import { Trans, useLingui } from "@lingui/react/macro";
 
-import { formatWholeDollars, RateCurvePoint } from "@/lib/tax";
+import {
+  formatRate,
+  formatWholeDollars,
+  RateCurvePoint,
+  toScenarioLang,
+} from "@/lib/tax";
 
 import { formatDollarTick, niceRange, niceTicks } from "./chartScale";
 import { planColor } from "./planColors";
@@ -29,6 +34,8 @@ interface TaxPaidChartProps {
    * apart (plan A is the zero line).
    */
   mode?: "total" | "difference";
+  /** Show the plan legend above the chart (once per group of charts) */
+  showLegend?: boolean;
 }
 
 /**
@@ -40,8 +47,11 @@ export function TaxPaidChart({
   maxIncome,
   income,
   mode = "total",
+  showLegend = true,
 }: TaxPaidChartProps) {
   const [hoverIndex, setHoverIndex] = useState<number | null>(null);
+  const { i18n } = useLingui();
+  const lang = toScenarioLang(i18n.locale);
   const seriesCount = labels.length;
   const HEIGHT = HEIGHTS[mode];
   const PLOT_H = HEIGHT - MARGIN.top - MARGIN.bottom;
@@ -100,7 +110,7 @@ export function TaxPaidChart({
 
   return (
     <figure className="m-0">
-      {mode === "total" ? (
+      {showLegend && (
         <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-foreground/70 mb-3">
           {labels.map((label, i) => (
             <span key={i} className="inline-flex items-center gap-2">
@@ -119,11 +129,28 @@ export function TaxPaidChart({
             </span>
           ))}
         </div>
-      ) : (
-        <div className="text-sm font-medium text-foreground/70 mb-2">
-          <Trans>Difference from {labels[0]}</Trans>
-        </div>
       )}
+      <div className="mb-3">
+        <h4 className="font-display font-bold text-xl text-foreground">
+          {mode === "total" ? (
+            <Trans>Total annual tax by income</Trans>
+          ) : (
+            <Trans>Change in annual tax vs {labels[0]}</Trans>
+          )}
+        </h4>
+        <p className="text-sm text-foreground/60 mt-1">
+          {mode === "total" ? (
+            <Trans>
+              Income tax, CPP/QPP, EI and premiums, by employment income
+            </Trans>
+          ) : (
+            <Trans>
+              By employment income. Above $0 means paying more than {labels[0]};
+              below means paying less.
+            </Trans>
+          )}
+        </p>
+      </div>
       <div className="relative">
         <svg
           viewBox={`0 0 ${WIDTH} ${HEIGHT}`}
@@ -256,7 +283,7 @@ export function TaxPaidChart({
                 <span className="tabular-nums">
                   {formatWholeDollars(hovered.taxes[s])}
                   <span className="text-foreground/50 ml-1">
-                    {hovered.rates[s].toFixed(1)}%
+                    {formatRate(hovered.rates[s], lang)}
                   </span>
                   {s > 0 && (
                     <span className="text-foreground/50 ml-1">

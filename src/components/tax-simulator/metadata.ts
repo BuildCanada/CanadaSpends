@@ -8,6 +8,7 @@ import {
   scenarioHasChanges,
   scenarioTitle,
   serializeScenario,
+  toScenarioLang,
 } from "@/lib/tax";
 import { generateHreflangAlternates } from "@/lib/utils";
 
@@ -33,17 +34,20 @@ export function buildScenarioMetadata({
   fallbackDescription: string;
 }): Metadata {
   const scenario = parseScenario(searchParams);
-  const comparison = compareScenario(scenario);
+  const textLang = toScenarioLang(lang);
+  const comparison = compareScenario(scenario, textLang);
   const query = serializeScenario(scenario).toString();
   const hasComparison = scenarioHasChanges(scenario);
 
-  const heading = hasComparison ? scenarioTitle(scenario) : fallbackTitle;
+  const heading = hasComparison
+    ? scenarioTitle(scenario, textLang)
+    : fallbackTitle;
   const description =
     comparison && hasComparison
-      ? describeComparison(scenario, comparison)
+      ? describeComparison(scenario, comparison, textLang)
       : fallbackDescription;
   const image = {
-    url: `${BASE_URL}${socialImagePath(query)}`,
+    url: `${BASE_URL}${socialImagePath(query, textLang)}`,
     width: 1200,
     height: 630,
     alt: heading,

@@ -15,10 +15,13 @@ import {
   formatWholeDollars,
   parseScenario,
   type PlanResult,
-  PROVINCE_NAMES,
+  inProvince,
   type RateCurvePoint,
   scenarioHasChanges,
+  SCENARIO_TEXT,
+  type ScenarioLang,
   scenarioTitle,
+  toScenarioLang,
 } from "@/lib/tax";
 
 export const runtime = "nodejs";
@@ -263,10 +266,12 @@ function PlanStat({
   plan,
   index,
   count,
+  noChange,
 }: {
   plan: PlanResult;
   index: number;
   count: number;
+  noChange: string;
 }) {
   const { fg, bg } = deltaColors(plan.difference);
   const diff = Math.round(plan.difference);
@@ -328,7 +333,7 @@ function PlanStat({
               flexShrink: 0,
             }}
           >
-            {diff === 0 ? "No change" : signedDollars(diff)}
+            {diff === 0 ? noChange : signedDollars(diff)}
           </div>
         )}
       </div>
@@ -339,7 +344,11 @@ function PlanStat({
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const scenario = parseScenario(searchParams);
-  const comparison = compareScenario(scenario);
+  const lang: ScenarioLang = toScenarioLang(
+    searchParams.get("lang") ?? undefined,
+  );
+  const text = SCENARIO_TEXT[lang];
+  const comparison = compareScenario(scenario, lang);
   if (!comparison) {
     return new Response("Unsupported year or province", { status: 400 });
   }
@@ -350,7 +359,7 @@ export async function GET(request: Request) {
   const mode = plans.length > 1 && changed ? "difference" : "total";
   const maxIncome = chartMaxIncome(scenario.income);
   const points = buildRateCurve(comparison, maxIncome, 80);
-  const title = scenarioTitle(scenario);
+  const title = scenarioTitle(scenario, lang);
 
   // Title size and estimated line count (Söhne is about 0.52em per char)
   const titleSize = title.length > 60 ? 38 : title.length > 40 ? 44 : 52;
@@ -367,10 +376,8 @@ export async function GET(request: Request) {
   // province is left out when plans span several provinces)
   const provinces = new Set(plans.map((p) => p.plan.province));
   const where =
-    provinces.size === 1
-      ? ` in ${PROVINCE_NAMES[plans[0].plan.province] ?? plans[0].plan.province}`
-      : "";
-  const subtitle = `A person earning ${formatWholeDollars(scenario.income)}${where} would pay…`;
+    provinces.size === 1 ? inProvince(plans[0].plan.province, lang) : "";
+  const subtitle = text.wouldPay(formatWholeDollars(scenario.income), where);
 
   // Fit the chart into the space left below the header, title and stats
   const TITLE_H = Math.max(48, titleLines * titleSize * 1.05);
@@ -455,7 +462,13 @@ export async function GET(request: Request) {
           style={{ display: "flex", gap: 14, marginTop: 18, height: STATS_H }}
         >
           {plans.map((p, i) => (
-            <PlanStat key={i} plan={p} index={i} count={plans.length} />
+            <PlanStat
+              key={i}
+              plan={p}
+              index={i}
+              count={plans.length}
+              noChange={text.noChange}
+            />
           ))}
         </div>
 
@@ -484,8 +497,8 @@ export async function GET(request: Request) {
             }}
           >
             {mode === "difference"
-              ? `Difference from ${truncate(reference.label, 30)} by income`
-              : "Tax paid by income"}
+              ? text.differenceFrom(truncate(reference.label, 30))
+              : text.taxPaidByIncome}
           </div>
           <Chart
             points={points}
@@ -509,8 +522,7 @@ export async function GET(request: Request) {
             color: COLORS.muted,
           }}
         >
-          Tax changes entered by a Canada Spends Tax Simulator user. Canada
-          Spends calculated the results but did not create or endorse them.
+          {text.disclosure}
         </div>
       </div>
     ),

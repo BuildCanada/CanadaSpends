@@ -1,6 +1,7 @@
 import { provinceNames } from "../provinceNames";
 
 import { calculateTaxWithConfig } from "./calculator";
+import { provinceName, SCENARIO_TEXT, type ScenarioLang } from "./scenarioText";
 import { getDefaultYear, getTaxConfig } from "./configs";
 import {
   DetailedTaxCalculation,
@@ -378,17 +379,22 @@ export function scenarioHasChanges(scenario: TaxScenario): boolean {
  * - current law (plan A and other provinces): "British Columbia 2026"
  * - proposals: "Proposed change", or "Proposal 1", "Proposal 2", …
  */
-export function planLabel(plan: TaxPlan, index: number, plans: TaxPlan[]) {
-  const province = PROVINCE_NAMES[plan.province] ?? plan.province;
+export function planLabel(
+  plan: TaxPlan,
+  index: number,
+  plans: TaxPlan[],
+  lang: ScenarioLang = "en",
+) {
+  const text = SCENARIO_TEXT[lang];
   if (isProposal(index, plans)) {
     const proposals = plans
       .map((_, i) => i)
       .filter((i) => isProposal(i, plans));
     return proposals.length === 1
-      ? "Proposed change"
-      : `Proposal ${proposals.indexOf(index) + 1}`;
+      ? text.proposedChange
+      : text.proposal(proposals.indexOf(index) + 1);
   }
-  return `${province} ${plan.year}`;
+  return `${provinceName(plan.province, lang)} ${plan.year}`;
 }
 
 /**
@@ -396,15 +402,18 @@ export function planLabel(plan: TaxPlan, index: number, plans: TaxPlan[]) {
  * "British Columbia Proposed Tax Change", or "… Tax Comparison" when it only
  * compares provinces' current law.
  */
-export function scenarioTitle(scenario: TaxScenario): string {
+export function scenarioTitle(
+  scenario: TaxScenario,
+  lang: ScenarioLang = "en",
+): string {
   const reference = scenario.plans[0]?.province ?? DEFAULT_SCENARIO_PROVINCE;
-  const province = PROVINCE_NAMES[reference] ?? reference;
+  const province = provinceName(reference, lang);
   const hasProposal = scenario.plans.some((_, i) =>
     isProposal(i, scenario.plans),
   );
   return hasProposal
-    ? `${province} Proposed Tax Change`
-    : `${province} Tax Comparison`;
+    ? SCENARIO_TEXT[lang].proposedTitle(province)
+    : SCENARIO_TEXT[lang].comparisonTitle(province);
 }
 
 /**
@@ -467,6 +476,7 @@ export interface ScenarioComparison {
  */
 export function compareScenario(
   scenario: TaxScenario,
+  lang: ScenarioLang = "en",
 ): ScenarioComparison | null {
   const computed = scenario.plans.flatMap((plan, index) => {
     const baseConfig = getTaxConfig(plan.year, plan.province);
@@ -475,7 +485,7 @@ export function compareScenario(
     return [
       {
         plan,
-        label: planLabel(plan, index, scenario.plans),
+        label: planLabel(plan, index, scenario.plans, lang),
         baseConfig,
         config,
         result: calculateTaxWithConfig(scenario.income, config),
@@ -544,30 +554,45 @@ export function formatWholeDollars(amount: number): string {
 }
 
 /**
- * Plain-English summary of a comparison, e.g. for link previews:
- * "At $100,000: Plan B $2,412 less than Ontario 2025 (24.5% → 22.1%)."
+ * Plain-language summary of a comparison, e.g. for link previews:
+ * "At $100,000 income. Proposed change: $2,412 less a year than Ontario 2026
+ * (24.5% → 22.1% effective)."
  */
 export function describeComparison(
   scenario: TaxScenario,
   comparison: ScenarioComparison,
+  lang: ScenarioLang = "en",
 ): string {
+  const text = SCENARIO_TEXT[lang];
+  const pct = (rate: number) =>
+    lang === "fr"
+      ? `${rate.toFixed(1).replace(".", ",")} %`
+      : `${rate.toFixed(1)}%`;
   const { reference } = comparison;
+  const income = formatWholeDollars(scenario.income);
+  // French puts a space before the colon
+  const sep = lang === "fr" ? " : " : ": ";
   const parts = comparison.plans.slice(1).map((p) => {
     const diff = Math.round(p.difference);
-    const rates = `${reference.result.effectiveTaxRate.toFixed(
-      1,
-    )}% → ${p.result.effectiveTaxRate.toFixed(1)}% effective`;
-    if (diff === 0) return `${p.label}: same as ${reference.label}`;
-    return `${p.label}: ${formatWholeDollars(Math.abs(diff))} ${
-      diff < 0 ? "less" : "more"
-    } a year than ${reference.label} (${rates})`;
+    if (diff === 0) return `${p.label}${sep}${text.sameAs(reference.label)}`;
+    const rates = `${pct(reference.result.effectiveTaxRate)} → ${pct(
+      p.result.effectiveTaxRate,
+    )} ${text.effective}`;
+    return `${p.label}${sep}${text.moreOrLess(
+      formatWholeDollars(Math.abs(diff)),
+      diff > 0,
+      reference.label,
+    )} (${rates})`;
   });
   if (parts.length === 0) {
-    return `At ${formatWholeDollars(scenario.income)} income, ${
-      reference.label
-    } means ${formatWholeDollars(reference.result.totalTax)} in tax (${reference.result.effectiveTaxRate.toFixed(1)}% effective).`;
+    return text.referenceOnly(
+      income,
+      reference.label,
+      formatWholeDollars(reference.result.totalTax),
+      lang === "fr"
+        ? reference.result.effectiveTaxRate.toFixed(1).replace(".", ",")
+        : reference.result.effectiveTaxRate.toFixed(1),
+    );
   }
-  return `At ${formatWholeDollars(scenario.income)} income. ${parts.join(
-    ". ",
-  )}.`;
+  return `${text.atIncome(income)}. ${parts.join(". ")}.`;
 }

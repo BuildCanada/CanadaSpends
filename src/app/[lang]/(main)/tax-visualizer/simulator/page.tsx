@@ -26,7 +26,7 @@ export async function generateMetadata({
     searchParams: await searchParams,
     path: "/tax-visualizer/simulator",
     fallbackTitle: t`Tax Simulator`,
-    fallbackDescription: t`Rewrite Canada's tax brackets and compare your plan with current law, another province, or another plan.`,
+    fallbackDescription: t`Propose changes to a province's tax rules and compare them with current law and other provinces.`,
   });
 }
 

@@ -96,3 +96,12 @@ export type {
   TaxPlan,
   TaxScenario,
 } from "./scenario";
+export {
+  formatDecimal,
+  formatRate,
+  inProvince,
+  provinceName,
+  SCENARIO_TEXT,
+  toScenarioLang,
+} from "./scenarioText";
+export type { ScenarioLang } from "./scenarioText";

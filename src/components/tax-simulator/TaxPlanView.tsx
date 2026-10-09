@@ -10,7 +10,8 @@ import {
   formatWholeDollars,
   MAX_SCENARIO_INCOME,
   planHasChanges,
-  PROVINCE_NAMES,
+  provinceName as localProvinceName,
+  toScenarioLang,
   rateToPercent,
   scenarioTitle,
   serializeScenario,
@@ -31,7 +32,8 @@ import { planColor } from "./planColors";
 
 /** A plan's changes from current law, in words, for the read-only page. */
 function usePlanChanges() {
-  const { t } = useLingui();
+  const { t, i18n } = useLingui();
+  const lang = toScenarioLang(i18n.locale);
   return (rawPlan: TaxScenario["plans"][number]) => {
     // Only overrides that differ from current law (e.g. a surtax toggle in a
     // province without a surtax isn't a change)
@@ -46,7 +48,7 @@ function usePlanChanges() {
             : t`${pct(x.rate)} over ${formatWholeDollars(x.min)}`,
         )
         .join(", ");
-    const provinceName = PROVINCE_NAMES[plan.province] ?? plan.province;
+    const provinceName = localProvinceName(plan.province, lang);
     if (plan.federalBrackets) {
       changes.push(
         t`Federal brackets: ${describeBrackets(plan.federalBrackets)}`,
@@ -90,7 +92,11 @@ export function TaxPlanView({
     () => ({ ...sharedScenario, income }),
     [sharedScenario, income],
   );
-  const comparison = useMemo(() => compareScenario(scenario), [scenario]);
+  const lang = toScenarioLang(i18n.locale);
+  const comparison = useMemo(
+    () => compareScenario(scenario, lang),
+    [scenario, lang],
+  );
 
   // Keep the URL in step so a refresh, "Edit a copy" or re-share keeps it
   useEffect(() => {
@@ -104,7 +110,7 @@ export function TaxPlanView({
   if (!comparison) return null;
 
   const query = serializeScenario(scenario).toString();
-  const title = scenarioTitle(scenario);
+  const title = scenarioTitle(scenario, lang);
   const editorPath = localizedPath("/tax-visualizer/simulator", i18n.locale);
   const viewPath = localizedPath("/tax-visualizer/simulator/view", i18n.locale);
 
@@ -199,8 +205,7 @@ export function TaxPlanView({
           <ul className="space-y-4">
             {comparison.plans.map((p, i) => {
               const changes = describeChanges(p.plan);
-              const provinceName =
-                PROVINCE_NAMES[p.plan.province] ?? p.plan.province;
+              const provinceName = localProvinceName(p.plan.province, lang);
               return (
                 <li key={i} className="flex gap-3">
                   <span

@@ -42,7 +42,7 @@ msgstr "{0}"
 
 #. placeholder {0}: signedDollars(p.difference)
 #. placeholder {1}: reference.label
-#: src/components/tax-simulator/ComparisonResults.tsx:134
+#: src/components/tax-simulator/ComparisonResults.tsx:142
 msgid "{0} <0>vs {1}</0>"
 msgstr "{0} <0>vs {1}</0>"
 
@@ -90,7 +90,7 @@ msgstr "{0} of federal income tax"
 
 #. placeholder {0}: pct(x.rate)
 #. placeholder {1}: formatWholeDollars(x.min)
-#: src/components/tax-simulator/TaxPlanView.tsx:46
+#: src/components/tax-simulator/TaxPlanView.tsx:48
 msgid "{0} over {1}"
 msgstr "{0} over {1}"
 
@@ -105,8 +105,8 @@ msgstr "{0}'s Revenue and Spending in Financial Year {1}"
 msgid "{0}{provinceSuffix} - No financial data is currently available under the First Nations Financial Transparency Act."
 msgstr "{0}{provinceSuffix} - No financial data is currently available under the First Nations Financial Transparency Act."
 
-#. placeholder {0}: p.result.effectiveTaxRate.toFixed(1)
-#: src/components/tax-simulator/ComparisonResults.tsx:122
+#. placeholder {0}: formatDecimal(p.result.effectiveTaxRate, lang)
+#: src/components/tax-simulator/ComparisonResults.tsx:128
 msgid "{0}% effective"
 msgstr "{0}% effective"
 
@@ -132,39 +132,39 @@ msgid "{paragraph}"
 msgstr "{paragraph}"
 
 #. placeholder {0}: plan.year
-#: src/components/tax-simulator/TaxSimulator.tsx:381
+#: src/components/tax-simulator/TaxSimulator.tsx:389
 msgid "{provinceName} {0} law"
 msgstr "{provinceName} {0} law"
 
 #. placeholder {0}: p.plan.year
-#: src/components/tax-simulator/TaxPlanView.tsx:222
+#: src/components/tax-simulator/TaxPlanView.tsx:227
 msgid "{provinceName} {0} law with these changes:"
 msgstr "{provinceName} {0} law with these changes:"
 
 #. placeholder {0}: p.plan.year
-#: src/components/tax-simulator/TaxPlanView.tsx:215
+#: src/components/tax-simulator/TaxPlanView.tsx:220
 msgid "{provinceName} {0} law, unchanged"
 msgstr "{provinceName} {0} law, unchanged"
 
-#: src/components/tax-simulator/ComparisonResults.tsx:70
+#: src/components/tax-simulator/ComparisonResults.tsx:74
 msgid "{provinceName} {year} law"
 msgstr "{provinceName} {year} law"
 
-#: src/components/tax-simulator/ComparisonResults.tsx:66
+#: src/components/tax-simulator/ComparisonResults.tsx:70
 msgid "{provinceName} {year}, modified"
 msgstr "{provinceName} {year}, modified"
 
 #. placeholder {0}: formatWholeDollars(plan.provincialBpa)
-#: src/components/tax-simulator/TaxPlanView.tsx:67
+#: src/components/tax-simulator/TaxPlanView.tsx:69
 msgid "{provinceName} basic personal amount: {0}"
 msgstr "{provinceName} basic personal amount: {0}"
 
 #. placeholder {0}: describeBrackets(plan.provincialBrackets)
-#: src/components/tax-simulator/TaxPlanView.tsx:62
+#: src/components/tax-simulator/TaxPlanView.tsx:64
 msgid "{provinceName} brackets: {0}"
 msgstr "{provinceName} brackets: {0}"
 
-#: src/components/tax-simulator/TaxSimulator.tsx:468
+#: src/components/tax-simulator/TaxSimulator.tsx:476
 msgid "{provinceName} income tax"
 msgstr "{provinceName} income tax"
 
@@ -177,12 +177,12 @@ msgstr "{provinceName} Taxes"
 msgid "{provinceName} Total"
 msgstr "{provinceName} Total"
 
-#: src/components/tax-simulator/TaxSimulator.tsx:205
+#: src/components/tax-simulator/TaxSimulator.tsx:212
 msgid "{title} basic personal amount"
 msgstr "{title} basic personal amount"
 
-#: src/components/tax-simulator/TaxPlanView.tsx:259
-#: src/components/tax-simulator/TaxSimulator.tsx:608
+#: src/components/tax-simulator/TaxPlanView.tsx:264
+#: src/components/tax-simulator/TaxSimulator.tsx:619
 msgid "{title}: see how it would change your taxes"
 msgstr "{title}: see how it would change your taxes"
 
@@ -213,7 +213,7 @@ msgstr "10 government departments accounted for 73.2% of federal spending in FY 
 msgid "100,000"
 msgstr "100,000"
 
-#: src/components/tax-simulator/TaxSimulator.tsx:276
+#: src/components/tax-simulator/TaxSimulator.tsx:283
 msgid "40% federal rate over $500k"
 msgstr "40% federal rate over $500k"
 
@@ -222,7 +222,7 @@ msgstr "40% federal rate over $500k"
 msgid "80% of employees are in permanent roles"
 msgstr "80% of employees are in permanent roles"
 
-#: src/components/tax-simulator/TaxSimulator.tsx:556
+#: src/components/tax-simulator/TaxSimulator.tsx:567
 msgid "A change to {referenceName} law"
 msgstr "A change to {referenceName} law"
 
@@ -346,11 +346,11 @@ msgstr "Acquisition of Lands, Buildings and Works"
 msgid "Acquisition of Machinery and Equipment"
 msgstr "Acquisition of Machinery and Equipment"
 
-#: src/components/tax-simulator/TaxSimulator.tsx:191
+#: src/components/tax-simulator/TaxSimulator.tsx:198
 msgid "Add bracket"
 msgstr "Add bracket"
 
-#: src/components/tax-simulator/TaxSimulator.tsx:551
+#: src/components/tax-simulator/TaxSimulator.tsx:562
 msgid "Add to the comparison"
 msgstr "Add to the comparison"
 
@@ -443,7 +443,7 @@ msgstr "All the taxes that apply to your income"
 msgid "Amount/Change"
 msgstr "Amount/Change"
 
-#: src/components/tax-simulator/TaxSimulator.tsx:783
+#: src/components/tax-simulator/TaxSimulator.tsx:799
 msgid "Annual income"
 msgstr "Annual income"
 
@@ -470,7 +470,7 @@ msgstr "Annual municipal spending per {0} resident"
 msgid "Annual payroll"
 msgstr "Annual payroll"
 
-#: src/components/tax-simulator/TaxSimulator.tsx:571
+#: src/components/tax-simulator/TaxSimulator.tsx:582
 msgid "Another province's current law"
 msgstr "Another province's current law"
 
@@ -517,7 +517,7 @@ msgid "Assets, liabilities, and net financial position as of the end of fiscal y
 msgstr "Assets, liabilities, and net financial position as of the end of fiscal year {fiscalYear}."
 
 #. placeholder {0}: formatWholeDollars(income)
-#: src/components/tax-simulator/ComparisonResults.tsx:329
+#: src/components/tax-simulator/ComparisonResults.tsx:340
 msgid "At {0} income"
 msgstr "At {0} income"
 
@@ -556,11 +556,11 @@ msgstr "Based on Data"
 msgid "Based on income of {0}"
 msgstr "Based on income of {0}"
 
-#: src/components/tax-simulator/TaxSimulator.tsx:197
+#: src/components/tax-simulator/TaxSimulator.tsx:204
 msgid "Basic personal amount"
 msgstr "Basic personal amount"
 
-#: src/components/tax-simulator/TaxSimulator.tsx:259
+#: src/components/tax-simulator/TaxSimulator.tsx:266
 msgid "Basic personal amounts of $25k"
 msgstr "Basic personal amounts of $25k"
 
@@ -575,12 +575,12 @@ msgid "BPA credit ({0} × {1})"
 msgstr "BPA credit ({0} × {1})"
 
 #. placeholder {0}: index + 1
-#: src/components/tax-simulator/TaxSimulator.tsx:158
+#: src/components/tax-simulator/TaxSimulator.tsx:165
 msgid "Bracket {0} rate"
 msgstr "Bracket {0} rate"
 
 #. placeholder {0}: index + 1
-#: src/components/tax-simulator/TaxSimulator.tsx:151
+#: src/components/tax-simulator/TaxSimulator.tsx:158
 msgid "Bracket {0} starting income"
 msgstr "Bracket {0} starting income"
 
@@ -615,9 +615,14 @@ msgstr "Budget Impact"
 msgid "Budget Statistics (Projected FY 2025)"
 msgstr "Budget Statistics (Projected FY 2025)"
 
-#: src/components/tax-simulator/TaxPlanView.tsx:142
+#: src/components/tax-simulator/TaxPlanView.tsx:148
 msgid "Build your own"
 msgstr "Build your own"
+
+#. placeholder {0}: labels[0]
+#: src/components/tax-simulator/TaxPaidChart.tsx:147
+msgid "By employment income. Above $0 means paying more than {0}; below means paying less."
+msgstr "By employment income. Above $0 means paying more than {0}; below means paying less."
 
 #: src/app/[lang]/(main)/tax-visualizer/page.tsx:59
 msgid "Calculate Your Tax Contribution"
@@ -718,13 +723,18 @@ msgstr "Carbon Taxes"
 msgid "Cash, investments, accounts receivable, and other assets that can be converted to cash."
 msgstr "Cash, investments, accounts receivable, and other assets that can be converted to cash."
 
+#. placeholder {0}: labels[0]
+#: src/components/tax-simulator/TaxPaidChart.tsx:138
+msgid "Change in annual tax vs {0}"
+msgstr "Change in annual tax vs {0}"
+
 #. placeholder {0}: comparison.reference.label
-#: src/components/tax-simulator/ComparisonResults.tsx:364
+#: src/components/tax-simulator/ComparisonResults.tsx:375
 msgid "Change vs {0}"
 msgstr "Change vs {0}"
 
 #. placeholder {0}: plan.year
-#: src/components/tax-simulator/TaxSimulator.tsx:374
+#: src/components/tax-simulator/TaxSimulator.tsx:382
 msgid "Changes to {provinceName} {0} law"
 msgstr "Changes to {provinceName} {0} law"
 
@@ -741,7 +751,7 @@ msgstr "Childhood Claims Settlement"
 msgid "Children's Benefits"
 msgstr "Children's Benefits"
 
-#: src/components/tax-simulator/TaxSimulator.tsx:581
+#: src/components/tax-simulator/TaxSimulator.tsx:592
 msgid "Choose a province…"
 msgstr "Choose a province…"
 
@@ -801,12 +811,12 @@ msgstr "Compare remuneration data across First Nations. View total compensation,
 msgid "Compare your total tax burden across all Canadian provinces and territories"
 msgstr "Compare your total tax burden across all Canadian provinces and territories"
 
-#: src/components/tax-simulator/TaxSimulator.tsx:769
+#: src/components/tax-simulator/TaxSimulator.tsx:785
 msgid "Compared with its current law for {SCENARIO_YEAR}"
 msgstr "Compared with its current law for {SCENARIO_YEAR}"
 
 #. placeholder {0}: comparison.plans.length
-#: src/components/tax-simulator/TaxPlanView.tsx:125
+#: src/components/tax-simulator/TaxPlanView.tsx:131
 msgid "Comparing {0} sets of tax rules for employment income"
 msgstr "Comparing {0} sets of tax rules for employment income"
 
@@ -855,7 +865,7 @@ msgstr "Contributors / Supporters"
 msgid "Copy and paste the following .onion address into the Tor Browser:"
 msgstr "Copy and paste the following .onion address into the Tor Browser:"
 
-#: src/components/tax-simulator/ComparisonResults.tsx:465
+#: src/components/tax-simulator/ComparisonResults.tsx:476
 msgid "Copy link"
 msgstr "Copy link"
 
@@ -871,7 +881,7 @@ msgstr "Corporate Income Taxes"
 msgid "Corrections"
 msgstr "Corrections"
 
-#: src/components/tax-simulator/ComparisonResults.tsx:442
+#: src/components/tax-simulator/ComparisonResults.tsx:453
 msgid "Couldn't copy the link"
 msgstr "Couldn't copy the link"
 
@@ -884,7 +894,7 @@ msgstr "Countries"
 msgid "COVID-19 Income Support"
 msgstr "COVID-19 Income Support"
 
-#: src/components/tax-simulator/ComparisonResults.tsx:318
+#: src/components/tax-simulator/ComparisonResults.tsx:329
 msgid "CPP/QPP, EI and parental insurance"
 msgstr "CPP/QPP, EI and parental insurance"
 
@@ -918,7 +928,7 @@ msgid "CSIS"
 msgstr "CSIS"
 
 #. placeholder {0}: formatWholeDollars(baselineBpa)
-#: src/components/tax-simulator/TaxSimulator.tsx:200
+#: src/components/tax-simulator/TaxSimulator.tsx:207
 msgid "Currently {0}"
 msgstr "Currently {0}"
 
@@ -930,7 +940,7 @@ msgstr "Customs Duties"
 msgid "Customs Import Duties"
 msgstr "Customs Import Duties"
 
-#: src/components/tax-simulator/TaxSimulator.tsx:264
+#: src/components/tax-simulator/TaxSimulator.tsx:271
 msgid "Cut the 2nd federal bracket by 3 pts"
 msgstr "Cut the 2nd federal bracket by 3 pts"
 
@@ -1022,11 +1032,6 @@ msgstr "Development, Peace + Security Programming"
 msgid "Development, Peace and Security Programming: $5.37B"
 msgstr "Development, Peace and Security Programming: $5.37B"
 
-#. placeholder {0}: labels[0]
-#: src/components/tax-simulator/TaxPaidChart.tsx:124
-msgid "Difference from {0}"
-msgstr "Difference from {0}"
-
 #: src/components/Sankey/BudgetSankey.tsx:433
 msgid "Direct program expenses"
 msgstr "Direct program expenses"
@@ -1055,11 +1060,11 @@ msgstr "Do not discuss your submission with anyone or search for related topics 
 msgid "Download and install the <0>Tor Browser</0> from the official Tor Project website."
 msgstr "Download and install the <0>Tor Browser</0> from the official Tor Project website."
 
-#: src/components/tax-simulator/ComparisonResults.tsx:504
+#: src/components/tax-simulator/ComparisonResults.tsx:515
 msgid "Download image"
 msgstr "Download image"
 
-#: src/components/tax-simulator/TaxSimulator.tsx:518
+#: src/components/tax-simulator/TaxSimulator.tsx:526
 msgid "Duplicate"
 msgstr "Duplicate"
 
@@ -1095,7 +1100,7 @@ msgstr "Economy + Infrastructure"
 msgid "Economy and Standard of Living"
 msgstr "Economy and Standard of Living"
 
-#: src/components/tax-simulator/TaxPlanView.tsx:136
+#: src/components/tax-simulator/TaxPlanView.tsx:142
 msgid "Edit a copy"
 msgstr "Edit a copy"
 
@@ -1109,8 +1114,8 @@ msgstr "Effective tax rate"
 
 #. placeholder {0}: config.provincial.healthPremium.name
 #. placeholder {0}: config.provincial.surtax.name
-#: src/components/tax-simulator/TaxSimulator.tsx:486
-#: src/components/tax-simulator/TaxSimulator.tsx:495
+#: src/components/tax-simulator/TaxSimulator.tsx:494
+#: src/components/tax-simulator/TaxSimulator.tsx:503
 msgid "Eliminate the {0}"
 msgstr "Eliminate the {0}"
 
@@ -1156,7 +1161,7 @@ msgstr "Energy Taxes"
 msgid "Enter your income to see a personalized breakdown of how much you contribute to different government services and programs."
 msgstr "Enter your income to see a personalized breakdown of how much you contribute to different government services and programs."
 
-#: src/components/tax-simulator/TaxPlanView.tsx:166
+#: src/components/tax-simulator/TaxPlanView.tsx:172
 msgid "Enter your income to see what each plan would mean for you."
 msgstr "Enter your income to see what each plan would mean for you."
 
@@ -1228,7 +1233,7 @@ msgstr "Estimated income tax paid to provincial government"
 msgid "Estimated public service workforce"
 msgstr "Estimated public service workforce"
 
-#: src/components/tax-simulator/ComparisonResults.tsx:388
+#: src/components/tax-simulator/ComparisonResults.tsx:399
 msgid "Estimates assume employment income only and include federal and provincial income tax, the basic personal amount credit, surtaxes, health premiums, CPP/QPP, EI and QPIP. Other credits and deductions (such as RRSP contributions) aren't included. Changing brackets affects income tax only; payroll contributions stay at current rates. This shows the direct effect on individuals, not effects on government revenue or behaviour."
 msgstr "Estimates assume employment income only and include federal and provincial income tax, the basic personal amount credit, surtaxes, health premiums, CPP/QPP, EI and QPIP. Other credits and deductions (such as RRSP contributions) aren't included. Changing brackets affects income tax only; payroll contributions stay at current rates. This shows the direct effect on individuals, not effects on government revenue or behaviour."
 
@@ -1368,12 +1373,12 @@ msgid "Federal"
 msgstr "Federal"
 
 #. placeholder {0}: formatWholeDollars(plan.federalBpa)
-#: src/components/tax-simulator/TaxPlanView.tsx:57
+#: src/components/tax-simulator/TaxPlanView.tsx:59
 msgid "Federal basic personal amount: {0}"
 msgstr "Federal basic personal amount: {0}"
 
 #. placeholder {0}: describeBrackets(plan.federalBrackets)
-#: src/components/tax-simulator/TaxPlanView.tsx:52
+#: src/components/tax-simulator/TaxPlanView.tsx:54
 msgid "Federal brackets: {0}"
 msgstr "Federal brackets: {0}"
 
@@ -1444,8 +1449,8 @@ msgstr "Federal government spending in FY 2024"
 msgid "Federal government spending isolated to FY 2024"
 msgstr "Federal government spending isolated to FY 2024"
 
-#: src/components/tax-simulator/ComparisonResults.tsx:298
-#: src/components/tax-simulator/TaxSimulator.tsx:456
+#: src/components/tax-simulator/ComparisonResults.tsx:309
+#: src/components/tax-simulator/TaxSimulator.tsx:464
 msgid "Federal income tax"
 msgstr "Federal income tax"
 
@@ -1628,7 +1633,7 @@ msgstr "Fisheries"
 msgid "Fisheries + Aquatic Ecosystems"
 msgstr "Fisheries + Aquatic Ecosystems"
 
-#: src/components/tax-simulator/TaxSimulator.tsx:251
+#: src/components/tax-simulator/TaxSimulator.tsx:258
 msgid "Flat 20% federal tax"
 msgstr "Flat 20% federal tax"
 
@@ -1860,7 +1865,7 @@ msgstr "Health Canada spent $13.7 billion in fiscal year (FY) 2024. This was 2.7
 msgid "Health Care Systems + Protection"
 msgstr "Health Care Systems + Protection"
 
-#: src/components/tax-simulator/ComparisonResults.tsx:313
+#: src/components/tax-simulator/ComparisonResults.tsx:324
 msgid "Health premium"
 msgstr "Health premium"
 
@@ -2093,24 +2098,28 @@ msgstr "In FY 2024, VAC reported total expenditures of $6.07 billion across two 
 msgid "In-depth analysis and insights about Canadian government spending, budget policies, and public finance. Our team at Canada Spends breaks down complex financial data to help you understand how government spending impacts your life."
 msgstr "In-depth analysis and insights about Canadian government spending, budget policies, and public finance. Our team at Canada Spends breaks down complex financial data to help you understand how government spending impacts your life."
 
-#: src/components/tax-simulator/ComparisonResults.tsx:234
-#: src/components/tax-simulator/TaxPlanView.tsx:150
-#: src/components/tax-simulator/TaxSimulator.tsx:779
+#: src/components/tax-simulator/ComparisonResults.tsx:245
+#: src/components/tax-simulator/TaxPlanView.tsx:156
+#: src/components/tax-simulator/TaxSimulator.tsx:795
 msgid "Income"
 msgstr "Income"
 
 #. placeholder {0}: formatWholeDollars(hovered.income)
-#: src/components/tax-simulator/TaxPaidChart.tsx:245
+#: src/components/tax-simulator/TaxPaidChart.tsx:272
 msgid "Income {0}"
 msgstr "Income {0}"
 
-#: src/components/tax-simulator/TaxSimulator.tsx:132
+#: src/components/tax-simulator/TaxSimulator.tsx:139
 msgid "Income above"
 msgstr "Income above"
 
 #: src/components/Sankey/BudgetSankey.tsx:479
 msgid "Income Tax Revenues"
 msgstr "Income Tax Revenues"
+
+#: src/components/tax-simulator/TaxPaidChart.tsx:143
+msgid "Income tax, CPP/QPP, EI and premiums, by employment income"
+msgstr "Income tax, CPP/QPP, EI and premiums, by employment income"
 
 #: src/app/[lang]/(main)/federal/spending/TenureChart.tsx:8
 msgid "Indeterminate"
@@ -2313,11 +2322,11 @@ msgstr "Latest Budget News & Impact"
 msgid "Learn more about the technology at <0>globaleaks.org</0>."
 msgstr "Learn more about the technology at <0>globaleaks.org</0>."
 
-#: src/components/tax-simulator/ComparisonResults.tsx:326
+#: src/components/tax-simulator/ComparisonResults.tsx:337
 msgid "Line by line"
 msgstr "Line by line"
 
-#: src/components/tax-simulator/ComparisonResults.tsx:440
+#: src/components/tax-simulator/ComparisonResults.tsx:451
 msgid "Link copied"
 msgstr "Link copied"
 
@@ -2404,7 +2413,7 @@ msgstr "Ministry"
 msgid "Miscellaneous revenues"
 msgstr "Miscellaneous revenues"
 
-#: src/components/tax-simulator/TaxSimulator.tsx:56
+#: src/components/tax-simulator/TaxSimulator.tsx:63
 msgid "Modified"
 msgstr "Modified"
 
@@ -2545,7 +2554,7 @@ msgstr "News Source & Date"
 msgid "No articles available yet on Canada Spends. Check back soon!"
 msgstr "No articles available yet on Canada Spends. Check back soon!"
 
-#: src/components/tax-simulator/TaxSimulator.tsx:378
+#: src/components/tax-simulator/TaxSimulator.tsx:386
 msgid "No changes yet: open to edit"
 msgstr "No changes yet: open to edit"
 
@@ -2571,7 +2580,7 @@ msgstr "No First Nations found matching your search."
 msgid "No form of electronic communication can be made 100% secure. While we take every precaution to protect your identity, you use this service at your own risk. We encourage you to take the security precautions outlined above."
 msgstr "No form of electronic communication can be made 100% secure. While we take every precaution to protect your identity, you use this service at your own risk. We encourage you to take the security precautions outlined above."
 
-#: src/components/tax-simulator/TaxPlanView.tsx:71
+#: src/components/tax-simulator/TaxPlanView.tsx:73
 msgid "No health premium"
 msgstr "No health premium"
 
@@ -2584,7 +2593,7 @@ msgstr "No individual entries available."
 msgid "No notes available."
 msgstr "No notes available."
 
-#: src/components/tax-simulator/TaxPlanView.tsx:70
+#: src/components/tax-simulator/TaxPlanView.tsx:72
 msgid "No provincial surtax"
 msgstr "No provincial surtax"
 
@@ -2789,7 +2798,7 @@ msgstr "Ontario HTP"
 msgid "Ontario STP"
 msgstr "Ontario STP"
 
-#: src/components/tax-simulator/TaxSimulator.tsx:622
+#: src/components/tax-simulator/TaxSimulator.tsx:633
 msgid "Open shareable page ↗"
 msgstr "Open shareable page ↗"
 
@@ -2802,7 +2811,7 @@ msgstr "Open Tor Browser and wait for it to connect."
 msgid "Operational Spend"
 msgstr "Operational Spend"
 
-#: src/components/tax-simulator/TaxPlanView.tsx:253
+#: src/components/tax-simulator/TaxPlanView.tsx:258
 msgid "Or edit a copy to make your own version."
 msgstr "Or edit a copy to make your own version."
 
@@ -3118,11 +3127,15 @@ msgstr "Property Tax Per Capita"
 msgid "Property tax revenue per {0} resident"
 msgstr "Property tax revenue per {0} resident"
 
-#: src/components/tax-simulator/TaxSimulator.tsx:741
+#: src/app/[lang]/(main)/tax-visualizer/simulator/page.tsx:29
+msgid "Propose changes to a province's tax rules and compare them with current law and other provinces."
+msgstr "Propose changes to a province's tax rules and compare them with current law and other provinces."
+
+#: src/components/tax-simulator/TaxSimulator.tsx:757
 msgid "Propose changes to a province's tax rules, compare them with current law and other provinces, and share the result."
 msgstr "Propose changes to a province's tax rules, compare them with current law and other provinces, and share the result."
 
-#: src/components/tax-simulator/TaxSimulator.tsx:563
+#: src/components/tax-simulator/TaxSimulator.tsx:574
 msgid "Proposed change"
 msgstr "Proposed change"
 
@@ -3137,7 +3150,7 @@ msgid "Province"
 msgstr "Province"
 
 #: src/app/[lang]/(main)/tax-visualizer/page.tsx:90
-#: src/components/tax-simulator/TaxSimulator.tsx:754
+#: src/components/tax-simulator/TaxSimulator.tsx:770
 msgid "Province/Territory"
 msgstr "Province/Territory"
 
@@ -3148,11 +3161,11 @@ msgstr "Province/Territory"
 msgid "Provincial"
 msgstr "Provincial"
 
-#: src/components/tax-simulator/ComparisonResults.tsx:303
+#: src/components/tax-simulator/ComparisonResults.tsx:314
 msgid "Provincial income tax"
 msgstr "Provincial income tax"
 
-#: src/components/tax-simulator/ComparisonResults.tsx:308
+#: src/components/tax-simulator/ComparisonResults.tsx:319
 msgid "Provincial surtax"
 msgstr "Provincial surtax"
 
@@ -3264,7 +3277,7 @@ msgid "Ranked <0>#{0}</0> of {1} lowest tax"
 msgstr "Ranked <0>#{0}</0> of {1} lowest tax"
 
 #: src/app/[lang]/(main)/tax-visualizer/page.tsx:208
-#: src/components/tax-simulator/TaxSimulator.tsx:135
+#: src/components/tax-simulator/TaxSimulator.tsx:142
 msgid "Rate"
 msgstr "Rate"
 
@@ -3289,7 +3302,7 @@ msgstr "Recipient"
 msgid "Recipient Class"
 msgstr "Recipient Class"
 
-#: src/components/tax-simulator/TaxSimulator.tsx:366
+#: src/components/tax-simulator/TaxSimulator.tsx:374
 msgid "Reference"
 msgstr "Reference"
 
@@ -3297,16 +3310,16 @@ msgstr "Reference"
 msgid "Regions"
 msgstr "Regions"
 
-#: src/components/tax-simulator/TaxSimulator.tsx:402
+#: src/components/tax-simulator/TaxSimulator.tsx:410
 msgid "Remove"
 msgstr "Remove"
 
 #. placeholder {0}: index + 1
-#: src/components/tax-simulator/TaxSimulator.tsx:176
+#: src/components/tax-simulator/TaxSimulator.tsx:183
 msgid "Remove bracket {0}"
 msgstr "Remove bracket {0}"
 
-#: src/components/tax-simulator/TaxSimulator.tsx:526
+#: src/components/tax-simulator/TaxSimulator.tsx:534
 msgid "Remove from comparison"
 msgstr "Remove from comparison"
 
@@ -3368,12 +3381,12 @@ msgstr "Research"
 msgid "Research Subject"
 msgstr "Research Subject"
 
-#: src/components/tax-simulator/TaxPlanView.tsx:180
-#: src/components/tax-simulator/TaxSimulator.tsx:125
+#: src/components/tax-simulator/TaxPlanView.tsx:186
+#: src/components/tax-simulator/TaxSimulator.tsx:132
 msgid "Reset"
 msgstr "Reset"
 
-#: src/components/tax-simulator/TaxSimulator.tsx:509
+#: src/components/tax-simulator/TaxSimulator.tsx:517
 msgid "Reset to current law"
 msgstr "Reset to current law"
 
@@ -3405,10 +3418,6 @@ msgstr "Revenue and Expenses FY {fiscalYear}"
 msgid "Revenue Canada"
 msgstr "Revenue Canada"
 
-#: src/app/[lang]/(main)/tax-visualizer/simulator/page.tsx:29
-msgid "Rewrite Canada's tax brackets and compare your plan with current law, another province, or another plan."
-msgstr "Rewrite Canada's tax brackets and compare your plan with current law, another province, or another plan."
-
 #: src/app/[lang]/(main)/tax-visualizer/page.tsx:990
 msgid "Rewrite the brackets in the Tax Simulator, compare your plan with current law, and share it."
 msgstr "Rewrite the brackets in the Tax Simulator, compare your plan with current law, and share it."
@@ -3439,7 +3448,7 @@ msgid "Sales of Government Goods + Services"
 msgstr "Sales of Government Goods + Services"
 
 #. placeholder {0}: reference.label
-#: src/components/tax-simulator/ComparisonResults.tsx:132
+#: src/components/tax-simulator/ComparisonResults.tsx:140
 msgid "Same as {0}"
 msgstr "Same as {0}"
 
@@ -3459,7 +3468,7 @@ msgstr "Saskatchewan STP"
 msgid "Save your receipt code securely—you will need it to check for responses and communicate with our team."
 msgstr "Save your receipt code securely—you will need it to check for responses and communicate with our team."
 
-#: src/components/tax-simulator/TaxSimulator.tsx:287
+#: src/components/tax-simulator/TaxSimulator.tsx:294
 msgid "Scrap surtax & health premium"
 msgstr "Scrap surtax & health premium"
 
@@ -3499,15 +3508,15 @@ msgstr "Settlement Amount"
 msgid "Settlement Assistance"
 msgstr "Settlement Assistance"
 
-#: src/components/tax-simulator/TaxSimulator.tsx:614
+#: src/components/tax-simulator/TaxSimulator.tsx:625
 msgid "Share"
 msgstr "Share"
 
-#: src/components/tax-simulator/TaxPlanView.tsx:250
+#: src/components/tax-simulator/TaxPlanView.tsx:255
 msgid "Share this comparison"
 msgstr "Share this comparison"
 
-#: src/components/tax-simulator/ComparisonResults.tsx:469
+#: src/components/tax-simulator/ComparisonResults.tsx:480
 msgid "Share…"
 msgstr "Share…"
 
@@ -3533,7 +3542,7 @@ msgid "Showing {0} of {1} results"
 msgstr "Showing {0} of {1} results"
 
 #. placeholder {0}: formatWholeDollars(sharedScenario.income)
-#: src/components/tax-simulator/TaxPlanView.tsx:171
+#: src/components/tax-simulator/TaxPlanView.tsx:177
 msgid "Showing your income. This comparison was shared at {0}."
 msgstr "Showing your income. This comparison was shared at {0}."
 
@@ -3557,7 +3566,7 @@ msgstr "Similarly, PSPC's expenditures experienced notable fluctuations during t
 msgid "Similarly, Transport Canada's expenditures experienced fluctuations during this period, increasing from approximately $3.2 billion​ in 2019 (adjusted for inflation) to $5.1B in 2024."
 msgstr "Similarly, Transport Canada's expenditures experienced fluctuations during this period, increasing from approximately $3.2 billion​ in 2019 (adjusted for inflation) to $5.1B in 2024."
 
-#: src/components/tax-simulator/TaxSimulator.tsx:634
+#: src/components/tax-simulator/TaxSimulator.tsx:645
 msgid "Social preview of this comparison"
 msgstr "Social preview of this comparison"
 
@@ -3642,7 +3651,7 @@ msgstr "Standard of Living and Assistance to Address Inequalities"
 msgid "Start Date"
 msgstr "Start Date"
 
-#: src/components/tax-simulator/TaxSimulator.tsx:437
+#: src/components/tax-simulator/TaxSimulator.tsx:445
 msgid "Start from an idea"
 msgstr "Start from an idea"
 
@@ -3740,7 +3749,7 @@ msgstr "Tax bracket"
 msgid "Tax calculations are based on {year} federal and provincial tax brackets."
 msgstr "Tax calculations are based on {year} federal and provincial tax brackets."
 
-#: src/components/tax-simulator/TaxPlanView.tsx:116
+#: src/components/tax-simulator/TaxPlanView.tsx:122
 msgid "Tax changes entered by a Canada Spends Tax Simulator user. Canada Spends calculated the results but did not create or endorse them."
 msgstr "Tax changes entered by a Canada Spends Tax Simulator user. Canada Spends calculated the results but did not create or endorse them."
 
@@ -3756,11 +3765,11 @@ msgstr "Tax Details for {provinceName} ({0})"
 
 #: src/app/[lang]/(main)/tax-visualizer/simulator/page.tsx:28
 #: src/app/[lang]/(main)/tax-visualizer/simulator/view/page.tsx:28
-#: src/components/tax-simulator/TaxSimulator.tsx:739
+#: src/components/tax-simulator/TaxSimulator.tsx:755
 msgid "Tax Simulator"
 msgstr "Tax Simulator"
 
-#: src/components/tax-simulator/TaxSimulator.tsx:736
+#: src/components/tax-simulator/TaxSimulator.tsx:752
 msgid "Tax Visualizer"
 msgstr "Tax Visualizer"
 
@@ -3907,11 +3916,16 @@ msgstr "The difference between revenue and spending. A surplus indicates revenue
 msgid "The difference between total revenue and total expenses. A surplus indicates revenue exceeded expenses."
 msgstr "The difference between total revenue and total expenses. A surplus indicates revenue exceeded expenses."
 
+#. placeholder {0}: formatWholeDollars(income)
+#: src/components/tax-simulator/ComparisonResults.tsx:191
+msgid "The dotted line marks the selected income of {0}."
+msgstr "The dotted line marks the selected income of {0}."
+
 #: src/app/[lang]/(main)/federal/spending/indigenous-services-and-northern-affairs/page.tsx:193
 msgid "The leadership of ISC and CIRNAC are led by the <0>Minister of Indigenous Services Canada</0> and the <1>Minister of Crown-Indigenous Relations and Northern Affairs Canada</1>, respectively. These Ministers are appointed by the Governor General on the advice of the Prime Minister and then formally sworn into office at Rideau Hall. They take the Oath of Office and the Oath of Allegiance and become a member of the King's Privy Council for Canada."
 msgstr "The leadership of ISC and CIRNAC are led by the <0>Minister of Indigenous Services Canada</0> and the <1>Minister of Crown-Indigenous Relations and Northern Affairs Canada</1>, respectively. These Ministers are appointed by the Governor General on the advice of the Prime Minister and then formally sworn into office at Rideau Hall. They take the Oath of Office and the Oath of Allegiance and become a member of the King's Privy Council for Canada."
 
-#: src/components/tax-simulator/TaxSimulator.tsx:626
+#: src/components/tax-simulator/TaxSimulator.tsx:637
 msgid "The link opens a read-only page with this comparison. Everything is stored in the link itself."
 msgstr "The link opens a read-only page with this comparison. Everything is stored in the link itself."
 
@@ -4011,7 +4025,7 @@ msgstr "Tools"
 #: src/components/first-nations/RemunerationTable.tsx:139
 #: src/components/first-nations/RemunerationTable.tsx:208
 #: src/components/JurisdictionComparisonChart.tsx:282
-#: src/components/tax-simulator/ComparisonResults.tsx:353
+#: src/components/tax-simulator/ComparisonResults.tsx:364
 msgid "Total"
 msgstr "Total"
 
@@ -4022,6 +4036,10 @@ msgstr "Total {provinceName} Tax"
 #: src/components/first-nations/FinancialPositionStats.tsx:323
 msgid "Total accumulated surplus"
 msgstr "Total accumulated surplus"
+
+#: src/components/tax-simulator/TaxPaidChart.tsx:136
+msgid "Total annual tax by income"
+msgstr "Total annual tax by income"
 
 #: src/components/first-nations/FinancialPositionStats.tsx:267
 msgid "Total assets minus total liabilities. This represents the First Nation's overall financial position."
@@ -4120,19 +4138,14 @@ msgid "Total Tax"
 msgstr "Total Tax"
 
 #. placeholder {0}: formatWholeDollars(income)
-#: src/components/tax-simulator/ComparisonResults.tsx:92
+#: src/components/tax-simulator/ComparisonResults.tsx:98
 msgid "Total tax at {0} income"
 msgstr "Total tax at {0} income"
 
 #. placeholder {0}: comparison.reference.label
-#: src/components/tax-simulator/ComparisonResults.tsx:225
+#: src/components/tax-simulator/ComparisonResults.tsx:236
 msgid "Total tax at different incomes, with the change compared to {0}"
 msgstr "Total tax at different incomes, with the change compared to {0}"
-
-#. placeholder {0}: comparison.reference.label
-#: src/components/tax-simulator/ComparisonResults.tsx:180
-msgid "Total tax paid (income tax, CPP/QPP, EI and premiums) by employment income, and how much more or less each plan charges than {0}. The dotted line marks the selected income."
-msgstr "Total tax paid (income tax, CPP/QPP, EI and premiums) by employment income, and how much more or less each plan charges than {0}. The dotted line marks the selected income."
 
 #: src/app/[lang]/(main)/tax-visualizer/page.tsx:336
 msgid "Total Taxable Income"
@@ -4452,7 +4465,7 @@ msgstr "What are the core ideas?"
 msgid "What data sources were used?"
 msgstr "What data sources were used?"
 
-#: src/components/tax-simulator/TaxPlanView.tsx:197
+#: src/components/tax-simulator/TaxPlanView.tsx:203
 msgid "What each plan changes"
 msgstr "What each plan changes"
 
@@ -4560,7 +4573,7 @@ msgstr "Who Leads Transport Canada?"
 msgid "Who Leads Veterans Affairs Canada (VAC)?"
 msgstr "Who Leads Veterans Affairs Canada (VAC)?"
 
-#: src/components/tax-simulator/ComparisonResults.tsx:222
+#: src/components/tax-simulator/ComparisonResults.tsx:233
 msgid "Who pays more, who pays less"
 msgstr "Who pays more, who pays less"
 
@@ -4585,7 +4598,7 @@ msgstr "You can access our whistleblower platform directly through your web brow
 msgid "You deserve the facts"
 msgstr "You deserve the facts"
 
-#: src/components/tax-simulator/TaxPlanView.tsx:154
+#: src/components/tax-simulator/TaxPlanView.tsx:160
 msgid "Your annual employment income"
 msgstr "Your annual employment income"
 
