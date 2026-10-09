@@ -341,12 +341,14 @@ function PlanStat({
   );
 }
 
-export async function GET(request: Request) {
+export async function GET(
+  request: Request,
+  { params }: { params: Promise<{ lang: string }> },
+) {
   const { searchParams } = new URL(request.url);
   const scenario = parseScenario(searchParams);
-  const lang: ScenarioLang = toScenarioLang(
-    searchParams.get("lang") ?? undefined,
-  );
+  // The language comes from the path: /en/tax/simulator/og, /fr/…
+  const lang: ScenarioLang = toScenarioLang((await params).lang);
   const text = SCENARIO_TEXT[lang];
   const comparison = compareScenario(scenario, lang);
   if (!comparison) {
@@ -386,7 +388,9 @@ export async function GET(request: Request) {
   const subtitle = text.wouldPay(formatWholeDollars(scenario.income), where);
 
   // Fit the chart into the space left below the header, title and stats
-  const TITLE_H = Math.max(48, titleLines * titleSize * 1.05);
+  // Line height leaves room for descenders (the "g" in "Change")
+  const TITLE_LINE_HEIGHT = 1.2;
+  const TITLE_H = Math.max(48, titleLines * titleSize * TITLE_LINE_HEIGHT);
   const SUBTITLE_H = 32;
   const STATS_H = 96;
   const FOOTER_H = LOGO_H;
@@ -432,7 +436,7 @@ export async function GET(request: Request) {
                 alignItems: "center",
                 fontFamily: "Display",
                 fontSize: titleSize,
-                lineHeight: 1.05,
+                lineHeight: TITLE_LINE_HEIGHT,
                 letterSpacing: -1,
                 height: TITLE_H,
                 overflow: "hidden",

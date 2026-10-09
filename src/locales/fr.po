@@ -3127,22 +3127,6 @@ msgstr "Impôt foncier par habitant"
 msgid "Property tax revenue per {0} resident"
 msgstr "Revenus de l'impôt foncier par résident de {0}"
 
-#: src/app/[lang]/(main)/tax-visualizer/simulator/page.tsx:29
-msgid "Propose changes to a province's tax rules and compare them with current law and other provinces."
-msgstr "Proposez des changements aux règles fiscales d'une province et comparez-les aux règles actuelles et à d'autres provinces."
-
-#: src/components/tax-simulator/TaxSimulator.tsx:755
-msgid "Propose changes to a province's tax rules, compare them with current law and other provinces, and share the result."
-msgstr "Proposez des changements aux règles fiscales d'une province, comparez-les aux règles actuelles et à d'autres provinces, puis partagez le résultat."
-
-#: src/components/tax-simulator/PlanChanges.tsx:99
-msgid "Proposed"
-msgstr "Proposé"
-
-#: src/components/tax-simulator/TaxSimulator.tsx:572
-msgid "Proposed change"
-msgstr "Changement proposé"
-
 #: src/components/first-nations/FirstNationsSearch.tsx:288
 #: src/components/first-nations/RemunerationOverview.tsx:353
 msgid "Prov."
@@ -3480,7 +3464,7 @@ msgstr "Conseils de sécurité"
 msgid "See how Canada's government spends tax dollars—track workforce data, spending trends, and federal debt with clear, non-partisan insights."
 msgstr "Voyez comment le gouvernement du Canada dépense les dollars des contribuables—suivez les données sur la main-d'œuvre, les tendances des dépenses et la dette fédérale avec des analyses claires et non partisanes."
 
-#: src/app/[lang]/(main)/tax-visualizer/simulator/view/page.tsx:29
+#: src/app/[lang]/(main)/tax/simulator/view/page.tsx:29
 msgid "See how different tax rules would change taxes for Canadians at every income."
 msgstr "Voyez comment d'autres règles fiscales changeraient l'impôt des Canadiens à tous les niveaux de revenu."
 
@@ -3565,6 +3549,22 @@ msgstr "De même, les dépenses de SPAC ont connu des fluctuations notables au c
 #: src/app/[lang]/(main)/federal/spending/transport-canada/page.tsx:128
 msgid "Similarly, Transport Canada's expenditures experienced fluctuations during this period, increasing from approximately $3.2 billion​ in 2019 (adjusted for inflation) to $5.1B in 2024."
 msgstr "De même, les dépenses de Transports Canada ont connu des fluctuations au cours de cette période, passant d'environ 3,2 milliards de dollars en 2019 (ajusté à l'inflation) à 5,1 milliards de dollars en 2024."
+
+#: src/app/[lang]/(main)/tax/simulator/page.tsx:29
+msgid "Simulate changes to a province's tax rules and compare them with current law and other provinces."
+msgstr "Simulez des changements aux règles fiscales d'une province et comparez-les aux règles actuelles et à d'autres provinces."
+
+#: src/components/tax-simulator/TaxSimulator.tsx:755
+msgid "Simulate changes to a province's tax rules, compare them with current law and other provinces, and share the result."
+msgstr "Simulez des changements aux règles fiscales d'une province, comparez-les aux règles actuelles et à d'autres provinces, puis partagez le résultat."
+
+#: src/components/tax-simulator/PlanChanges.tsx:99
+msgid "Simulated"
+msgstr "Simulé"
+
+#: src/components/tax-simulator/TaxSimulator.tsx:572
+msgid "Simulated change"
+msgstr "Changement simulé"
 
 #: src/components/tax-simulator/TaxSimulator.tsx:643
 msgid "Social preview of this comparison"
@@ -3763,8 +3763,8 @@ msgstr "Comparaison des impôts entre les provinces pour un revenu de {0}"
 msgid "Tax Details for {provinceName} ({0})"
 msgstr "Détails fiscaux pour {provinceName} ({0})"
 
-#: src/app/[lang]/(main)/tax-visualizer/simulator/page.tsx:28
-#: src/app/[lang]/(main)/tax-visualizer/simulator/view/page.tsx:28
+#: src/app/[lang]/(main)/tax/simulator/page.tsx:28
+#: src/app/[lang]/(main)/tax/simulator/view/page.tsx:28
 #: src/components/tax-simulator/TaxSimulator.tsx:753
 msgid "Tax Simulator"
 msgstr "Simulateur d'impôt"

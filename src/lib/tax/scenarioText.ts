@@ -58,10 +58,9 @@ export function inProvince(slug: string, lang: ScenarioLang = "en"): string {
 
 export const SCENARIO_TEXT = {
   en: {
-    proposedChange: "Proposed change",
-    proposal: (n: number) => `Proposal ${n}`,
-    proposedTitle: (province: string) => `${province} Proposed Tax Change`,
-    comparisonTitle: (province: string) => `${province} Tax Comparison`,
+    simulatedChange: "Simulated change",
+    simulatedChangeN: (n: number) => `Simulated change ${n}`,
+    title: (province: string) => `Simulated Tax Change: ${province}`,
     atIncome: (income: string) => `At ${income} income`,
     effective: "effective",
     sameAs: (label: string) => `same as ${label}`,
@@ -79,11 +78,9 @@ export const SCENARIO_TEXT = {
       "Tax changes entered by a Canada Spends Tax Simulator user. Canada Spends calculated the results but did not create or endorse them.",
   },
   fr: {
-    proposedChange: "Changement proposé",
-    proposal: (n: number) => `Proposition ${n}`,
-    proposedTitle: (province: string) =>
-      `${province} : changement fiscal proposé`,
-    comparisonTitle: (province: string) => `${province} : comparaison fiscale`,
+    simulatedChange: "Changement simulé",
+    simulatedChangeN: (n: number) => `Changement simulé ${n}`,
+    title: (province: string) => `Changement fiscal simulé : ${province}`,
     atIncome: (income: string) => `Pour un revenu de ${income}`,
     effective: "effectif",
     sameAs: (label: string) => `identique à ${label}`,

@@ -379,7 +379,7 @@ export function scenarioHasChanges(scenario: TaxScenario): boolean {
 /**
  * Neutral, generated label for a plan:
  * - current law (plan A and other provinces): "British Columbia 2026"
- * - proposals: "Proposed change", or "Proposal 1", "Proposal 2", …
+ * - simulated changes: "Simulated change", or "Simulated change 1", …
  */
 export function planLabel(
   plan: TaxPlan,
@@ -393,29 +393,22 @@ export function planLabel(
       .map((_, i) => i)
       .filter((i) => isProposal(i, plans));
     return proposals.length === 1
-      ? text.proposedChange
-      : text.proposal(proposals.indexOf(index) + 1);
+      ? text.simulatedChange
+      : text.simulatedChangeN(proposals.indexOf(index) + 1);
   }
   return `${provinceName(plan.province, lang)} ${plan.year}`;
 }
 
 /**
  * The scenario's title, generated so shared links stay neutral:
- * "British Columbia Proposed Tax Change", or "… Tax Comparison" when it only
- * compares provinces' current law.
+ * "Simulated Tax Change: British Columbia".
  */
 export function scenarioTitle(
   scenario: TaxScenario,
   lang: ScenarioLang = "en",
 ): string {
   const reference = scenario.plans[0]?.province ?? DEFAULT_SCENARIO_PROVINCE;
-  const province = provinceName(reference, lang);
-  const hasProposal = scenario.plans.some((_, i) =>
-    isProposal(i, scenario.plans),
-  );
-  return hasProposal
-    ? SCENARIO_TEXT[lang].proposedTitle(province)
-    : SCENARIO_TEXT[lang].comparisonTitle(province);
+  return SCENARIO_TEXT[lang].title(provinceName(reference, lang));
 }
 
 /**

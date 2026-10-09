@@ -24,7 +24,7 @@ export async function generateMetadata({
   return buildScenarioMetadata({
     lang,
     searchParams: await searchParams,
-    path: "/tax-visualizer/simulator/view",
+    path: "/tax/simulator/view",
     fallbackTitle: t`Tax Simulator`,
     fallbackDescription: t`See how different tax rules would change taxes for Canadians at every income.`,
   });

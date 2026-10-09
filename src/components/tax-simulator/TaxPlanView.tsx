@@ -60,8 +60,8 @@ export function TaxPlanView({
 
   const query = serializeScenario(scenario).toString();
   const title = scenarioTitle(scenario, lang);
-  const editorPath = localizedPath("/tax-visualizer/simulator", i18n.locale);
-  const viewPath = localizedPath("/tax-visualizer/simulator/view", i18n.locale);
+  const editorPath = localizedPath("/tax/simulator", i18n.locale);
+  const viewPath = localizedPath("/tax/simulator/view", i18n.locale);
 
   return (
     <PageContent>

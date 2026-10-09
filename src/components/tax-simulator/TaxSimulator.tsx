@@ -569,7 +569,7 @@ function AddComparison({
             onClick={() => onAdd(createPlan(reference.province))}
             className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm font-medium hover:border-primary hover:text-primary"
           >
-            + <Trans>Proposed change</Trans>
+            + <Trans>Simulated change</Trans>
           </button>
         </div>
         <div>
@@ -612,7 +612,7 @@ function SharePanel({ scenario }: { scenario: TaxScenario }) {
     return () => clearTimeout(id);
   }, [query]);
 
-  const viewPath = localizedPath("/tax-visualizer/simulator/view", i18n.locale);
+  const viewPath = localizedPath("/tax/simulator/view", i18n.locale);
   const title = scenarioTitle(scenario, toScenarioLang(i18n.locale));
   const shareText = t`${title}: see how it would change your taxes`;
 
@@ -752,7 +752,7 @@ export function TaxSimulator() {
         <div className="mt-4 mb-8 max-w-3xl">
           <H1>{t`Tax Simulator`}</H1>
           <p className="text-lg text-foreground/60 mt-4">
-            {t`Propose changes to a province's tax rules, compare them with current law and other provinces, and share the result.`}
+            {t`Simulate changes to a province's tax rules, compare them with current law and other provinces, and share the result.`}
           </p>
         </div>
 
