@@ -267,7 +267,6 @@ function PlanStat({
         flex: 1,
         background: COLORS.card,
         border: `2px solid ${COLORS.border}`,
-        borderRadius: 16,
         padding: "12px 18px",
         minWidth: 0,
       }}
@@ -313,7 +312,6 @@ function PlanStat({
               fontSize: count > 3 ? 16 : 22,
               color: fg,
               background: bg,
-              borderRadius: 999,
               padding: count > 3 ? "4px 9px" : "4px 12px",
               whiteSpace: "nowrap",
               flexShrink: 0,
@@ -407,26 +405,11 @@ export async function GET(request: Request) {
             height: HEADER_H,
           }}
         >
-          <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={logo} width={156} height={48} alt="" />
-            <div style={{ width: 2, height: 30, background: COLORS.border }} />
-            <div
-              style={{
-                display: "flex",
-                fontFamily: "Mono",
-                fontSize: 18,
-                letterSpacing: 3,
-                textTransform: "uppercase",
-                color: COLORS.primary,
-              }}
-            >
-              Tax Simulator
-            </div>
-          </div>
           <div style={{ display: "flex", fontSize: 24, color: COLORS.muted }}>
             {`${formatWholeDollars(scenario.income)} income · ${context}`}
           </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={logo} width={156} height={48} alt="" />
         </div>
 
         {/* Title */}
@@ -463,7 +446,6 @@ export async function GET(request: Request) {
             height: chartCardH,
             background: COLORS.card,
             border: `2px solid ${COLORS.border}`,
-            borderRadius: 20,
             padding: CARD_PAD,
           }}
         >
@@ -494,24 +476,18 @@ export async function GET(request: Request) {
           />
         </div>
 
-        {/* Footer */}
+        {/* Disclosure: scenarios are user-made, not Canada Spends' views */}
         <div
           style={{
             display: "flex",
-            justifyContent: "space-between",
             marginTop: 14,
             height: FOOTER_H,
-            fontFamily: "Mono",
-            fontSize: 15,
-            color: COLORS.subtle,
+            fontSize: 17,
+            color: COLORS.muted,
           }}
         >
-          <div style={{ display: "flex" }}>
-            Total tax: income tax, CPP/QPP, EI and premiums · Employment income
-          </div>
-          <div style={{ display: "flex", color: COLORS.foreground }}>
-            canadaspends.com
-          </div>
+          Made by a person using the Canada Spends tax simulator. Not endorsed
+          by Canada Spends.
         </div>
       </div>
     ),
