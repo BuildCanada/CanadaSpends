@@ -117,63 +117,59 @@ export function TaxPlanView({
             income
           </Trans>
         </p>
-        <div className="mt-6 flex flex-wrap gap-3">
+        <div className="mt-6 flex flex-wrap items-end gap-3">
+          <div className="w-full sm:w-56">
+            <label
+              htmlFor="view-income"
+              className="block text-sm font-medium mb-2"
+            >
+              <Trans>Your income</Trans>
+            </label>
+            <NumberField
+              id="view-income"
+              ariaLabel={t`Your annual employment income`}
+              prefix="$"
+              value={income}
+              commitOnChange
+              onCommit={(value) => value > 0 && setIncome(Math.round(value))}
+            />
+          </div>
           <a
             href={`${editorPath}?${query}`}
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90"
+            className="inline-flex h-[42px] items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground hover:bg-primary/90"
           >
             <Trans>Edit a copy</Trans>
           </a>
           <a
             href={editorPath}
-            className="inline-flex items-center justify-center rounded-md border border-border bg-background px-4 py-2 text-sm font-medium hover:bg-accent"
+            className="inline-flex h-[42px] items-center justify-center rounded-md border border-border bg-background px-4 text-sm font-medium hover:bg-accent"
           >
             <Trans>Build your own</Trans>
           </a>
         </div>
+        <p className="mt-2 text-sm text-foreground/60">
+          {income === sharedScenario.income ? (
+            <Trans>
+              Enter your income to see what each plan would mean for you.
+            </Trans>
+          ) : (
+            <>
+              <Trans>
+                Showing your income. This comparison was shared at{" "}
+                {formatWholeDollars(sharedScenario.income)}.
+              </Trans>{" "}
+              <button
+                type="button"
+                onClick={() => setIncome(sharedScenario.income)}
+                className="text-primary hover:underline"
+              >
+                <Trans>Reset</Trans>
+              </button>
+            </>
+          )}
+        </p>
 
         <div className="mt-10 bg-card rounded-lg border p-5 sm:p-6 space-y-8">
-          <div className="flex flex-col sm:flex-row sm:items-end gap-3 sm:gap-6 rounded-md bg-linen-100/60 border border-border p-4">
-            <div className="sm:w-56">
-              <label
-                htmlFor="view-income"
-                className="block text-sm font-medium mb-2"
-              >
-                <Trans>Your income</Trans>
-              </label>
-              <NumberField
-                id="view-income"
-                ariaLabel={t`Your annual employment income`}
-                prefix="$"
-                value={income}
-                commitOnChange
-                onCommit={(value) => value > 0 && setIncome(Math.round(value))}
-              />
-            </div>
-            <p className="text-sm text-foreground/60 sm:pb-2">
-              {income === sharedScenario.income ? (
-                <Trans>
-                  Enter your own income to see what each plan would mean for
-                  you.
-                </Trans>
-              ) : (
-                <>
-                  <Trans>
-                    Showing your income. This comparison was shared at{" "}
-                    {formatWholeDollars(sharedScenario.income)}.
-                  </Trans>{" "}
-                  <button
-                    type="button"
-                    onClick={() => setIncome(sharedScenario.income)}
-                    className="text-primary hover:underline"
-                  >
-                    <Trans>Reset</Trans>
-                  </button>
-                </>
-              )}
-            </p>
-          </div>
-
           <ResultsSummary
             comparison={comparison}
             income={scenario.income}
