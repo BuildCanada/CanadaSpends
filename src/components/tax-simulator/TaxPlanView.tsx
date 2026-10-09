@@ -17,8 +17,6 @@ import {
 import { localizedPath } from "@/lib/utils";
 
 import {
-  IncomeTable,
-  LineByLineTable,
   TaxChartSection,
   ResultsFootnote,
   ResultsSummary,
@@ -158,11 +156,6 @@ export function TaxPlanView({
       </Section>
 
       <Section className="max-w-6xl mt-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <IncomeTable comparison={comparison} />
-          <LineByLineTable comparison={comparison} income={scenario.income} />
-        </div>
-
         <div className="mt-6 bg-card rounded-lg border p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
             <div className="font-bold text-lg">

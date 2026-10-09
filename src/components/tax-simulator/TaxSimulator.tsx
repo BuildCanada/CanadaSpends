@@ -37,8 +37,6 @@ import {
 import { cn, localizedPath } from "@/lib/utils";
 
 import {
-  IncomeTable,
-  LineByLineTable,
   TaxChartSection,
   ResultsFootnote,
   ResultsSummary,
@@ -853,11 +851,7 @@ export function TaxSimulator() {
         </div>
       </Section>
 
-      <Section className="max-w-6xl mt-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <IncomeTable comparison={comparison} />
-          <LineByLineTable comparison={comparison} income={scenario.income} />
-        </div>
+      <Section className="max-w-6xl">
         <ResultsFootnote />
       </Section>
     </PageContent>

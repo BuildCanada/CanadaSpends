@@ -6,14 +6,11 @@ import { toast } from "sonner";
 
 import {
   buildRateCurve,
-  calculateTaxWithConfig,
   chartMaxIncome,
   formatWholeDollars,
   provinceName as localProvinceName,
   formatDecimal,
-  formatRate,
   toScenarioLang,
-  type DetailedTaxCalculation,
   type ScenarioComparison,
 } from "@/lib/tax";
 import { cn } from "@/lib/utils";
@@ -21,8 +18,6 @@ import { cn } from "@/lib/utils";
 import { planColor } from "./planColors";
 import { socialImagePath, warmSocialImage } from "./socialImage";
 import { TaxPaidChart } from "./TaxPaidChart";
-
-const SAMPLE_INCOMES = [30000, 50000, 75000, 100000, 150000, 250000, 500000];
 
 export function signedDollars(amount: number) {
   const rounded = Math.round(amount);
@@ -193,202 +188,6 @@ export function TaxChartSection({
           {formatWholeDollars(income)}.
         </Trans>
       </p>
-    </div>
-  );
-}
-
-function PlanHeaderCell({ label, index }: { label: string; index: number }) {
-  return (
-    <th className="pb-2 pl-4 font-medium text-right align-bottom">
-      <span className="inline-flex items-center gap-1.5 justify-end">
-        <PlanSwatch index={index} />
-        <span className="truncate max-w-32">{label}</span>
-      </span>
-    </th>
-  );
-}
-
-/** Total tax under each plan at a range of incomes. */
-export function IncomeTable({
-  comparison,
-}: {
-  comparison: ScenarioComparison;
-}) {
-  const { i18n } = useLingui();
-  const lang = toScenarioLang(i18n.locale);
-  const rows = useMemo(
-    () =>
-      SAMPLE_INCOMES.map((income) => ({
-        income,
-        results: comparison.plans.map((p) =>
-          calculateTaxWithConfig(income, p.config),
-        ),
-      })),
-    [comparison],
-  );
-
-  return (
-    <div className="bg-card rounded-lg border p-5 overflow-x-auto">
-      <h3 className="font-bold text-lg mb-1">
-        <Trans>Who pays more, who pays less</Trans>
-      </h3>
-      <p className="text-sm text-foreground/60 mb-4">
-        <Trans>
-          Total tax at different incomes, with the change compared to{" "}
-          {comparison.reference.label}
-        </Trans>
-      </p>
-      <table className="w-full text-sm">
-        <thead>
-          <tr className="text-left text-foreground/50">
-            <th className="pb-2 font-medium">
-              <Trans>Income</Trans>
-            </th>
-            {comparison.plans.map((p, i) => (
-              <PlanHeaderCell key={i} label={p.label} index={i} />
-            ))}
-          </tr>
-        </thead>
-        <tbody className="tabular-nums">
-          {rows.map(({ income, results }) => (
-            <tr key={income} className="border-t border-border">
-              <td className="py-2 align-top">{formatWholeDollars(income)}</td>
-              {results.map((r, i) => {
-                const change = r.totalTax - results[0].totalTax;
-                return (
-                  <td key={i} className="py-2 text-right align-top">
-                    <div>
-                      {formatWholeDollars(r.totalTax)}
-                      <span className="text-foreground/40 text-xs ml-1">
-                        {formatRate(r.effectiveTaxRate, lang)}
-                      </span>
-                    </div>
-                    {i > 0 && (
-                      <div
-                        className={cn(
-                          "text-xs font-medium",
-                          deltaClass(change),
-                        )}
-                      >
-                        {signedDollars(change)}
-                      </div>
-                    )}
-                  </td>
-                );
-              })}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  );
-}
-
-function payroll(calc: DetailedTaxCalculation) {
-  return (
-    calc.cppContribution +
-    calc.cpp2Contribution +
-    calc.eiContribution +
-    calc.parentalInsuranceContribution
-  );
-}
-
-/** Each plan's taxes broken down by component at the selected income. */
-export function LineByLineTable({
-  comparison,
-  income,
-}: {
-  comparison: ScenarioComparison;
-  income: number;
-}) {
-  const { t } = useLingui();
-  const results = comparison.plans.map((p) => p.result);
-  const rows = [
-    {
-      id: "federal",
-      label: t`Federal income tax`,
-      values: results.map((r) => r.federalIncomeTax - r.federalAbatement),
-    },
-    {
-      id: "provincial",
-      label: t`Provincial income tax`,
-      values: results.map((r) => r.provincialIncomeTax),
-    },
-    {
-      id: "surtax",
-      label: t`Provincial surtax`,
-      values: results.map((r) => r.surtax),
-    },
-    {
-      id: "health-premium",
-      label: t`Health premium`,
-      values: results.map((r) => r.healthPremium),
-    },
-    {
-      id: "payroll",
-      label: t`CPP/QPP, EI and parental insurance`,
-      values: results.map(payroll),
-    },
-  ].filter((row) => row.values.some((v) => v !== 0));
-
-  return (
-    <div className="bg-card rounded-lg border p-5 overflow-x-auto">
-      <h3 className="font-bold text-lg mb-1">
-        <Trans>Line by line</Trans>
-      </h3>
-      <p className="text-sm text-foreground/60 mb-4">
-        <Trans>At {formatWholeDollars(income)} income</Trans>
-      </p>
-      <table className="w-full text-sm">
-        <thead>
-          <tr className="text-left text-foreground/50">
-            <th className="pb-2 font-medium" />
-            {comparison.plans.map((p, i) => (
-              <PlanHeaderCell key={i} label={p.label} index={i} />
-            ))}
-          </tr>
-        </thead>
-        <tbody className="tabular-nums">
-          {rows.map((row) => (
-            <tr key={row.id} className="border-t border-border">
-              <td className="py-2 pr-2">{row.label}</td>
-              {row.values.map((v, i) => (
-                <td key={i} className="py-2 text-right">
-                  {formatWholeDollars(v)}
-                </td>
-              ))}
-            </tr>
-          ))}
-          <tr className="border-t-2 border-border font-semibold">
-            <td className="py-2">
-              <Trans>Total</Trans>
-            </td>
-            {comparison.plans.map((p, i) => (
-              <td key={i} className="py-2 text-right">
-                {formatWholeDollars(p.result.totalTax)}
-              </td>
-            ))}
-          </tr>
-          {comparison.plans.length > 1 && (
-            <tr className="text-xs">
-              <td className="pb-2 text-foreground/60">
-                <Trans>Change vs {comparison.reference.label}</Trans>
-              </td>
-              {comparison.plans.map((p, i) => (
-                <td
-                  key={i}
-                  className={cn(
-                    "pb-2 text-right font-medium",
-                    i === 0 ? "text-foreground/40" : deltaClass(p.difference),
-                  )}
-                >
-                  {i === 0 ? "—" : signedDollars(p.difference)}
-                </td>
-              ))}
-            </tr>
-          )}
-        </tbody>
-      </table>
     </div>
   );
 }
