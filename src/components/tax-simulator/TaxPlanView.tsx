@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Trans, useLingui } from "@lingui/react/macro";
 
 import { PageContent, Section } from "@/components/Layout";
@@ -23,6 +23,7 @@ import {
   ResultsSummary,
   ShareActions,
 } from "./ComparisonResults";
+import { NumberField } from "./NumberField";
 import { planColor } from "./planColors";
 
 /** A plan's changes from current law, in words, for the read-only page. */
@@ -70,9 +71,29 @@ function usePlanChanges() {
  * Read-only page for a shared comparison. Everything comes from the URL;
  * "Edit a copy" opens the same comparison in the simulator.
  */
-export function TaxPlanView({ scenario }: { scenario: TaxScenario }) {
+export function TaxPlanView({
+  scenario: sharedScenario,
+}: {
+  scenario: TaxScenario;
+}) {
   const { t, i18n } = useLingui();
+  // Viewers can see the comparison at their own income. The shared plans
+  // stay the same; only the income changes.
+  const [income, setIncome] = useState(sharedScenario.income);
+  const scenario = useMemo(
+    () => ({ ...sharedScenario, income }),
+    [sharedScenario, income],
+  );
   const comparison = useMemo(() => compareScenario(scenario), [scenario]);
+
+  // Keep the URL in step so a refresh, "Edit a copy" or re-share keeps it
+  useEffect(() => {
+    const query = serializeScenario(scenario).toString();
+    const url = `${window.location.pathname}?${query}`;
+    if (url !== `${window.location.pathname}${window.location.search}`) {
+      window.history.replaceState(null, "", url);
+    }
+  }, [scenario]);
   const describeChanges = usePlanChanges();
   if (!comparison) return null;
 
@@ -92,8 +113,8 @@ export function TaxPlanView({ scenario }: { scenario: TaxScenario }) {
         </h1>
         <p className="mt-4 text-lg text-foreground/60">
           <Trans>
-            Comparing {comparison.plans.length} sets of tax rules at{" "}
-            {formatWholeDollars(scenario.income)} of employment income
+            Comparing {comparison.plans.length} sets of tax rules for employment
+            income
           </Trans>
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
@@ -112,6 +133,47 @@ export function TaxPlanView({ scenario }: { scenario: TaxScenario }) {
         </div>
 
         <div className="mt-10 bg-card rounded-lg border p-5 sm:p-6 space-y-8">
+          <div className="flex flex-col sm:flex-row sm:items-end gap-3 sm:gap-6 rounded-md bg-linen-100/60 border border-border p-4">
+            <div className="sm:w-56">
+              <label
+                htmlFor="view-income"
+                className="block text-sm font-medium mb-2"
+              >
+                <Trans>Your income</Trans>
+              </label>
+              <NumberField
+                id="view-income"
+                ariaLabel={t`Your annual employment income`}
+                prefix="$"
+                value={income}
+                commitOnChange
+                onCommit={(value) => value > 0 && setIncome(Math.round(value))}
+              />
+            </div>
+            <p className="text-sm text-foreground/60 sm:pb-2">
+              {income === sharedScenario.income ? (
+                <Trans>
+                  Enter your own income to see what each plan would mean for
+                  you.
+                </Trans>
+              ) : (
+                <>
+                  <Trans>
+                    Showing your income. This comparison was shared at{" "}
+                    {formatWholeDollars(sharedScenario.income)}.
+                  </Trans>{" "}
+                  <button
+                    type="button"
+                    onClick={() => setIncome(sharedScenario.income)}
+                    className="text-primary hover:underline"
+                  >
+                    <Trans>Reset</Trans>
+                  </button>
+                </>
+              )}
+            </p>
+          </div>
+
           <ResultsSummary
             comparison={comparison}
             income={scenario.income}
