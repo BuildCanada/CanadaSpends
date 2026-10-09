@@ -457,12 +457,16 @@ export function applyPlan(
 /**
  * A proposed basic personal amount is a flat amount for everyone: it
  * replaces current law's amount and any income-based phase-down of it.
+ * An amount equal to current law's is no change (it's also left out of
+ * links), so current law, phase-down included, still applies.
  */
 function withBasicPersonalAmount(
   incomeTax: BracketTaxConfig,
   proposed: number | null,
 ): BracketTaxConfig {
-  if (proposed === null) return incomeTax;
+  if (proposed === null || proposed === incomeTax.basicPersonalAmount) {
+    return incomeTax;
+  }
   const credits = incomeTax.credits
     ? { ...incomeTax.credits, bpaPhaseOut: undefined }
     : undefined;

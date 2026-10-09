@@ -391,6 +391,25 @@ describe("compareScenario", () => {
     expect(bpa(proposed)).toBe(20000);
   });
 
+  it("treats a proposed BPA equal to current law as no change, in the editor and in links", () => {
+    // An equal amount is left out of the URL, so it must also keep current
+    // law's phase-down, or the shared page would show different taxes.
+    const max = getTaxConfig(SCENARIO_YEAR, "ontario")!.federal.incomeTax
+      .basicPersonalAmount;
+    const scenario: TaxScenario = {
+      income: 400000,
+      plans: [
+        createPlan("ontario"),
+        { ...createPlan("ontario"), federalBpa: max },
+      ],
+    };
+    const editor = compareScenario(scenario)!.plans[1].result.totalTax;
+    const shared = compareScenario(parseScenario(serializeScenario(scenario)))!
+      .plans[1].result.totalTax;
+    expect(editor).toBeCloseTo(shared, 6);
+    expect(compareScenario(scenario)!.plans[1].difference).toBeCloseTo(0, 6);
+  });
+
   it("builds one curve value per plan", () => {
     const comparison = compareScenario({
       income: 100000,
