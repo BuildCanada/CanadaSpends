@@ -346,7 +346,9 @@ export async function GET(request: Request) {
 
   // Title size and estimated line count (Söhne is about 0.52em per char)
   const titleSize = title.length > 60 ? 38 : title.length > 40 ? 44 : 52;
-  const LOGO_W = 156;
+  // logo-full.svg is 433 × 133
+  const LOGO_W = 196;
+  const LOGO_H = Math.round((LOGO_W * 133) / 433);
   const TITLE_W = CONTENT_W - LOGO_W - 40;
   const titleLines = Math.min(
     2,
@@ -437,7 +439,7 @@ export async function GET(request: Request) {
             </div>
           </div>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={logo} width={LOGO_W} height={48} alt="" />
+          <img src={logo} width={LOGO_W} height={LOGO_H} alt="" />
         </div>
 
         {/* Plan totals */}
