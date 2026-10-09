@@ -15,5 +15,9 @@ export const ALBERTA_TAX_CONFIG: ProvincialTaxConfig = {
       { min: 370220, max: null, rate: 0.15 },
     ],
     basicPersonalAmount: 22769,
+    // Credits base CPP contributions and EI premiums at the lowest rate
+    credits: {
+      payrollContributions: true,
+    },
   },
 };

@@ -19,5 +19,21 @@ export const PRINCE_EDWARD_ISLAND_TAX_CONFIG: ProvincialTaxConfig = {
       { min: 140000, max: null, rate: 0.19 },
     ],
     basicPersonalAmount: 14650,
+    // Credits base CPP contributions and EI premiums at the lowest rate
+    credits: {
+      payrollContributions: true,
+    },
   },
+  // Low-income tax reduction: $350 less 5% of net income over $22,650
+  // (PE428), applied after the surtax.
+  taxReductions: [
+    {
+      type: "phaseOut",
+      id: "pe-low-income",
+      name: "Low-Income Tax Reduction",
+      maxCredit: 350,
+      threshold: 22650,
+      reductionRate: 0.05,
+    },
+  ],
 };

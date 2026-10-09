@@ -17,5 +17,12 @@ export const MANITOBA_TAX_CONFIG: ProvincialTaxConfig = {
       { min: 101200, max: null, rate: 0.174 },
     ],
     basicPersonalAmount: 15780,
+    // Credits base CPP contributions and EI premiums at the lowest rate
+    credits: {
+      payrollContributions: true,
+      // Phased out between net incomes of $200,000 and $400,000 (Worksheet
+      // MB428 2025; T4127 2026)
+      bpaPhaseOut: { minAmount: 0, start: 200000, end: 400000 },
+    },
   },
 };

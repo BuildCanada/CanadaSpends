@@ -592,9 +592,11 @@ function ProvincialTaxCard({
     ? calculateCpp2Contribution(income, config.pensionPlanAdditionalOverride)
     : 0;
 
-  // Provincial income tax comes from the calculator: brackets on taxable
-  // income (after the line 22215 deduction), less non-refundable credits.
-  const { taxableIncome } = taxableBreakdown;
+  // Provincial income tax comes from the calculator: brackets on provincial
+  // taxable income (after the line 22215 deduction and any provincial-only
+  // deduction), less non-refundable credits.
+  const taxableIncome = calculation.provincialTaxableIncome;
+  const employmentDeduction = calculation.provincialEmploymentDeduction;
   const provincialTax = calculation.provincialIncomeTax;
   const surtaxAmount = calculation.surtax;
   const taxReductions = calculation.provincialTaxReductions;
@@ -610,6 +612,26 @@ function ProvincialTaxCard({
 
         {/* Taxable Income (with line 22215 deduction details collapsed) */}
         <TaxableIncomeSection breakdown={taxableBreakdown} />
+
+        {/* Provincial-only deduction (e.g., Quebec deduction for workers) */}
+        {employmentDeduction > 0 && config.employmentDeduction && (
+          <div className="-mt-4 mb-6 text-sm">
+            <div className="flex justify-between">
+              <span className="text-muted-foreground">
+                {config.employmentDeduction.name}
+              </span>
+              <span className="font-medium text-red-600">
+                -{formatAmount(employmentDeduction)}
+              </span>
+            </div>
+            <div className="flex justify-between font-semibold">
+              <span>
+                <Trans>{provinceName} taxable income</Trans>
+              </span>
+              <span>{formatAmount(taxableIncome)}</span>
+            </div>
+          </div>
+        )}
 
         {/* Income Tax Brackets (applied to taxable income) */}
         <IncomeTaxBracketsSection

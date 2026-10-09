@@ -21,5 +21,20 @@ export const BRITISH_COLUMBIA_TAX_CONFIG: ProvincialTaxConfig = {
       { min: 259829, max: null, rate: 0.205 },
     ],
     basicPersonalAmount: 12932,
+    // BC credits base CPP contributions and EI premiums at its lowest rate
+    credits: { payrollContributions: true },
   },
+  // BC tax reduction credit: $562 reduced by 3.56% of net income over
+  // $25,020, applied after non-refundable credits (BC428 Part C).
+  // https://www2.gov.bc.ca/gov/content/taxes/income-taxes/personal/credits/basic
+  taxReductions: [
+    {
+      type: "phaseOut",
+      id: "bc-tax-reduction",
+      name: "BC Tax Reduction Credit",
+      maxCredit: 562,
+      threshold: 25020,
+      reductionRate: 0.0356,
+    },
+  ],
 };

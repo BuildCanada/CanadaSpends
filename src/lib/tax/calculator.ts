@@ -159,12 +159,28 @@ function calculateWithConfig(
     category: "incomeTax",
   });
 
-  // Provincial income tax (also on taxable income, less the province's own
-  // non-refundable credits).
+  // Provincial income tax: on taxable income less any provincial-only
+  // deduction (e.g., Quebec's deduction for workers), less the province's
+  // own non-refundable credits.
+  const employmentDeductionConfig = config.provincial.employmentDeduction;
+  const provincialEmploymentDeduction = employmentDeductionConfig
+    ? Math.min(
+        employmentDeductionConfig.maxAmount,
+        income * employmentDeductionConfig.rate,
+      )
+    : 0;
+  const provincialTaxableIncome = Math.max(
+    0,
+    taxableIncome - provincialEmploymentDeduction,
+  );
+  const provincialCreditInputs = {
+    ...creditInputs,
+    netIncome: provincialTaxableIncome,
+  };
   const provincial = calculateIncomeTax(
-    taxableIncome,
+    provincialTaxableIncome,
     config.provincial.incomeTax,
-    creditInputs,
+    provincialCreditInputs,
   );
   const provincialIncomeTax = provincial.tax;
   const provinceName =
@@ -219,7 +235,7 @@ function calculateWithConfig(
   const provincialTaxReductions = calculateTaxReductions(
     provincialIncomeTax + surtax,
     config.provincial.taxReductions,
-    creditInputs,
+    provincialCreditInputs,
   );
   const provincialTaxReduction = provincialTaxReductions.reduce(
     (sum, r) => sum + r.amount,
@@ -302,6 +318,8 @@ function calculateWithConfig(
     provincialIncomeTaxBeforeCredits: provincial.taxBeforeCredits,
     federalCredits: federal.credits,
     provincialCredits: provincial.credits,
+    provincialEmploymentDeduction,
+    provincialTaxableIncome,
     provincialTaxReductions,
     provincialTaxReduction,
 

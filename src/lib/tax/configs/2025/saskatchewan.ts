@@ -18,5 +18,9 @@ export const SASKATCHEWAN_TAX_CONFIG: ProvincialTaxConfig = {
     ],
     // Includes the Saskatchewan Affordability Act $500 increase (per CRA T4127).
     basicPersonalAmount: 19491,
+    // Credits base CPP contributions and EI premiums at the lowest rate
+    credits: {
+      payrollContributions: true,
+    },
   },
 };

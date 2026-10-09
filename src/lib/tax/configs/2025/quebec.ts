@@ -27,6 +27,15 @@ export const QUEBEC_TAX_CONFIG: ProvincialTaxConfig = {
       { min: 129590, max: null, rate: 0.2575 },
     ],
     basicPersonalAmount: 18571,
+    // No provincial credit for QPP, EI or QPIP: Quebec builds them into
+    // its basic personal amount (TP-1 guide, line 350).
+  },
+  // Deduction for workers (TP-1 line 201): 6% of employment income, up to
+  // $1,420. Quebec tax only. Taxation Act s. 358.0.3, indexed yearly.
+  employmentDeduction: {
+    name: "Deduction for workers",
+    rate: 0.06,
+    maxAmount: 1420,
   },
   federalAbatement: {
     type: "federalAbatement",

@@ -162,6 +162,10 @@ export interface ProvincialTaxConfig {
   federalAbatement?: FederalAbatementConfig;
   // Low-income tax reductions, applied in order after credits and surtax
   taxReductions?: TaxReductionConfig[];
+  // A deduction from provincial taxable income only, as a share of
+  // employment income up to a maximum (e.g., Quebec's deduction for
+  // workers: 6% up to an indexed cap)
+  employmentDeduction?: { name: string; rate: number; maxAmount: number };
   // Province-specific pension plan that replaces the federal CPP
   // (e.g., Quebec residents pay QPP instead of CPP).
   pensionPlanOverride?: CappedContributionConfig;
@@ -243,6 +247,10 @@ export interface DetailedTaxCalculation {
   provincialIncomeTaxBeforeCredits: number;
   federalCredits: CreditLine[];
   provincialCredits: CreditLine[];
+  // Provincial-only deduction (e.g., Quebec deduction for workers) and the
+  // resulting provincial taxable income
+  provincialEmploymentDeduction: number;
+  provincialTaxableIncome: number;
   provincialTaxReductions: TaxReductionLine[];
   provincialTaxReduction: number;
 

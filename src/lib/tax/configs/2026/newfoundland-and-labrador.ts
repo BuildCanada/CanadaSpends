@@ -16,6 +16,24 @@ export const NEWFOUNDLAND_AND_LABRADOR_TAX_CONFIG: ProvincialTaxConfig = {
       { min: 570638, max: 1141275, rate: 0.213 },
       { min: 1141275, max: null, rate: 0.218 },
     ],
-    basicPersonalAmount: 11188,
+    // 2026 tax-year amount per NL Finance: $11,188 rising to $15,000 mid-year
+    basicPersonalAmount: 13094,
+    // Credits base CPP contributions and EI premiums at the lowest rate
+    credits: {
+      payrollContributions: true,
+    },
   },
+  // Low-income tax reduction: $1,008 less 16% of net income over $24,191
+  // (NL428).
+  // 2026: indexed from 2025 (1.1%); the NL428 for 2026 isn't published yet
+  taxReductions: [
+    {
+      type: "phaseOut",
+      id: "nl-low-income",
+      name: "Low-Income Tax Reduction",
+      maxCredit: 1008,
+      threshold: 24191,
+      reductionRate: 0.16,
+    },
+  ],
 };

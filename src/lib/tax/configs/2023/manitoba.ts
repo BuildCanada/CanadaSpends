@@ -10,5 +10,9 @@ export const MANITOBA_TAX_CONFIG: ProvincialTaxConfig = {
       { min: 79625, max: null, rate: 0.174 },
     ],
     basicPersonalAmount: 15000,
+    // Credits base CPP contributions and EI premiums at the lowest rate
+    credits: {
+      payrollContributions: true,
+    },
   },
 };
