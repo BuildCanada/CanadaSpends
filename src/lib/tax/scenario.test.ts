@@ -11,6 +11,7 @@ import {
   effectivePlan,
   encodeBrackets,
   isProposal,
+  marginalChartMaxIncome,
   normalizeScenario,
   parseScenario,
   percentToRate,
@@ -422,5 +423,28 @@ describe("compareScenario", () => {
     const curve = buildRateCurve(comparison, 200000, 4);
     expect(curve).toHaveLength(5);
     expect(curve.every((p) => p.rates.length === 3)).toBe(true);
+  });
+
+  it("extends the marginal rate chart past every plan's top bracket", () => {
+    const current = compareScenario({
+      income: 100000,
+      plans: [createPlan("british-columbia")],
+    })!;
+    // Past the federal and BC top brackets (about $260k)
+    expect(marginalChartMaxIncome(current, 100000)).toBe(350000);
+
+    const withMillionBracket = compareScenario({
+      income: 100000,
+      plans: [
+        createPlan("british-columbia"),
+        {
+          ...createPlan("british-columbia"),
+          provincialBrackets: decodeBrackets("0-5.6_265545-20.5_1000000-24.5"),
+        },
+      ],
+    })!;
+    expect(marginalChartMaxIncome(withMillionBracket, 100000)).toBe(1250000);
+    // Never narrower than the other charts
+    expect(marginalChartMaxIncome(current, 2000000)).toBe(3000000);
   });
 });

@@ -8,6 +8,7 @@ import { formatWholeDollars } from "@/lib/format";
 import {
   buildRateCurve,
   chartMaxIncome,
+  marginalChartMaxIncome,
   provinceName as localProvinceName,
   formatDecimal,
   inProvince,
@@ -167,6 +168,12 @@ export function TaxChartSection({
     () => buildRateCurve(comparison, maxIncome, 100),
     [comparison, maxIncome],
   );
+  // Marginal rates change in steps, so sample them more finely
+  const marginalMaxIncome = marginalChartMaxIncome(comparison, income);
+  const marginalCurve = useMemo(
+    () => buildRateCurve(comparison, marginalMaxIncome, 500),
+    [comparison, marginalMaxIncome],
+  );
   return (
     <div>
       {/* The difference from the reference first: plans that differ by a
@@ -183,9 +190,10 @@ export function TaxChartSection({
         </div>
       )}
       <TaxPaidChart
-        points={curve}
+        mode="marginal"
+        points={marginalCurve}
         labels={comparison.plans.map((p) => p.label)}
-        maxIncome={maxIncome}
+        maxIncome={marginalMaxIncome}
         income={income}
       />
       <p className="text-xs text-foreground/50 mt-2">
