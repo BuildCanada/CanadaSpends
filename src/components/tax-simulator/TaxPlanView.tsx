@@ -76,12 +76,6 @@ export function TaxPlanView({
         <h1 className="text-4xl sm:text-5xl font-bold tracking-tight font-display max-w-4xl">
           {title}
         </h1>
-        <p className="mt-4 text-lg text-foreground/60">
-          <Trans>
-            Comparing {comparison.plans.length} sets of tax rules for employment
-            income
-          </Trans>
-        </p>
         <div className="mt-6 flex flex-wrap items-end justify-between gap-3">
           <div className="flex flex-wrap gap-3">
             <a

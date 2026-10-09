@@ -10,6 +10,8 @@ import {
   formatWholeDollars,
   provinceName as localProvinceName,
   formatDecimal,
+  inProvince,
+  SCENARIO_TEXT,
   toScenarioLang,
   type ScenarioComparison,
 } from "@/lib/tax";
@@ -87,11 +89,16 @@ export function ResultsSummary({
   const { plans, reference } = comparison;
   const { i18n } = useLingui();
   const lang = toScenarioLang(i18n.locale);
+  // Same lead-in as the social preview: "A person earning $X in <province>
+  // would pay…", followed by each plan's total
+  const provinces = new Set(plans.map((p) => p.plan.province));
+  const where =
+    provinces.size === 1 ? inProvince(plans[0].plan.province, lang) : "";
   return (
     <div className="@container">
-      <div className="text-sm text-foreground/60 mb-3">
-        <Trans>Total tax at {formatWholeDollars(income)} income</Trans>
-      </div>
+      <p className="text-lg text-foreground/70 mb-3">
+        {SCENARIO_TEXT[lang].wouldPay(formatWholeDollars(income), where)}
+      </p>
       <div
         className={cn(
           "grid gap-3",
