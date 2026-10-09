@@ -341,12 +341,14 @@ function PlanStat({
   );
 }
 
-export async function GET(request: Request) {
+export async function GET(
+  request: Request,
+  { params }: { params: Promise<{ lang: string }> },
+) {
   const { searchParams } = new URL(request.url);
   const scenario = parseScenario(searchParams);
-  const lang: ScenarioLang = toScenarioLang(
-    searchParams.get("lang") ?? undefined,
-  );
+  // The language comes from the path: /en/tax/simulator/og, /fr/…
+  const lang: ScenarioLang = toScenarioLang((await params).lang);
   const text = SCENARIO_TEXT[lang];
   const comparison = compareScenario(scenario, lang);
   if (!comparison) {

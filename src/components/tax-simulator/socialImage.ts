@@ -1,8 +1,7 @@
 // The social preview image for a scenario query. The page metadata (og:image)
 // and the simulator both use this path, so they hit the same cache entry.
 export function socialImagePath(query: string, lang: string = "en"): string {
-  const suffix = lang === "fr" ? "&lang=fr" : "";
-  return `/api/og/tax-simulator?${query}${suffix}`;
+  return `/${lang === "fr" ? "fr" : "en"}/tax/simulator/og?${query}`;
 }
 
 const warmed = new Set<string>();
