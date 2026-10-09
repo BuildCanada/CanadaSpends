@@ -361,15 +361,21 @@ export async function GET(request: Request) {
   const points = buildRateCurve(comparison, maxIncome, 80);
   const title = scenarioTitle(scenario, lang);
 
-  // Title size and estimated line count (Söhne is about 0.52em per char)
-  const titleSize = title.length > 60 ? 38 : title.length > 40 ? 44 : 52;
-  // logo-full.svg is 433 × 133
-  const LOGO_W = 196;
+  // Small logo in the bottom-right corner (logo-full.svg is 433 × 133), so
+  // the title gets the full width
+  const LOGO_W = 120;
   const LOGO_H = Math.round((LOGO_W * 133) / 433);
-  const TITLE_W = CONTENT_W - LOGO_W - 40;
+  const TITLE_W = CONTENT_W;
+  // Size the title to fit one line (Söhne averages about 0.47em per
+  // character), between 38px and 52px; very long titles wrap to two lines.
+  const EM_PER_CHAR = 0.47;
+  const titleSize = Math.max(
+    38,
+    Math.min(52, Math.floor(TITLE_W / (title.length * EM_PER_CHAR))),
+  );
   const titleLines = Math.min(
     2,
-    Math.ceil((title.length * titleSize * 0.52) / TITLE_W),
+    Math.ceil((title.length * titleSize * EM_PER_CHAR) / TITLE_W),
   );
 
   // "A person earning $400,000 in British Columbia would pay…" (the
@@ -383,7 +389,7 @@ export async function GET(request: Request) {
   const TITLE_H = Math.max(48, titleLines * titleSize * 1.05);
   const SUBTITLE_H = 32;
   const STATS_H = 96;
-  const FOOTER_H = 22;
+  const FOOTER_H = LOGO_H;
   const GAPS = 8 + 18 + 16 + 14;
   const CHART_HEADER_H = 30;
   const chartCardH =
@@ -415,15 +421,8 @@ export async function GET(request: Request) {
           color: COLORS.foreground,
         }}
       >
-        {/* Title and subtitle, logo on the right */}
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "flex-start",
-            gap: 40,
-          }}
-        >
+        {/* Title and subtitle */}
+        <div style={{ display: "flex" }}>
           <div
             style={{ display: "flex", flexDirection: "column", width: TITLE_W }}
           >
@@ -453,8 +452,6 @@ export async function GET(request: Request) {
               {subtitle}
             </div>
           </div>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={logo} width={LOGO_W} height={LOGO_H} alt="" />
         </div>
 
         {/* Plan totals */}
@@ -511,18 +508,29 @@ export async function GET(request: Request) {
           />
         </div>
 
-        {/* Disclosure: scenarios are user-made, not Canada Spends' views */}
+        {/* Disclosure (scenarios are user-made), and the logo bottom-right */}
         <div
           style={{
             display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            gap: 24,
             marginTop: 14,
             height: FOOTER_H,
-            fontSize: 17,
-            whiteSpace: "nowrap",
-            color: COLORS.muted,
           }}
         >
-          {text.disclosure}
+          <div
+            style={{
+              display: "flex",
+              fontSize: 15,
+              lineHeight: 1.25,
+              color: COLORS.muted,
+            }}
+          >
+            {text.disclosure}
+          </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={logo} width={LOGO_W} height={LOGO_H} alt="" />
         </div>
       </div>
     ),
