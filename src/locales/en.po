@@ -536,7 +536,7 @@ msgid "Assets, liabilities, and net financial position as of the end of fiscal y
 msgstr "Assets, liabilities, and net financial position as of the end of fiscal year {fiscalYear}."
 
 #. placeholder {0}: formatWholeDollars(income)
-#: src/components/tax-simulator/ComparisonResults.tsx:315
+#: src/components/tax-simulator/ComparisonResults.tsx:328
 msgid "At {0} income"
 msgstr "At {0} income"
 
@@ -861,7 +861,7 @@ msgstr "Contributors / Supporters"
 msgid "Copy and paste the following .onion address into the Tor Browser:"
 msgstr "Copy and paste the following .onion address into the Tor Browser:"
 
-#: src/components/tax-simulator/ComparisonResults.tsx:433
+#: src/components/tax-simulator/ComparisonResults.tsx:446
 msgid "Copy link"
 msgstr "Copy link"
 
@@ -877,7 +877,7 @@ msgstr "Corporate Income Taxes"
 msgid "Corrections"
 msgstr "Corrections"
 
-#: src/components/tax-simulator/ComparisonResults.tsx:411
+#: src/components/tax-simulator/ComparisonResults.tsx:424
 msgid "Couldn't copy the link"
 msgstr "Couldn't copy the link"
 
@@ -890,7 +890,7 @@ msgstr "Countries"
 msgid "COVID-19 Income Support"
 msgstr "COVID-19 Income Support"
 
-#: src/components/tax-simulator/ComparisonResults.tsx:304
+#: src/components/tax-simulator/ComparisonResults.tsx:317
 msgid "CPP/QPP, EI and parental insurance"
 msgstr "CPP/QPP, EI and parental insurance"
 
@@ -1028,6 +1028,11 @@ msgstr "Development, Peace + Security Programming"
 msgid "Development, Peace and Security Programming: $5.37B"
 msgstr "Development, Peace and Security Programming: $5.37B"
 
+#. placeholder {0}: labels[0]
+#: src/components/tax-simulator/TaxPaidChart.tsx:124
+msgid "Difference from {0}"
+msgstr "Difference from {0}"
+
 #: src/components/Sankey/BudgetSankey.tsx:433
 msgid "Direct program expenses"
 msgstr "Direct program expenses"
@@ -1056,7 +1061,7 @@ msgstr "Do not discuss your submission with anyone or search for related topics 
 msgid "Download and install the <0>Tor Browser</0> from the official Tor Project website."
 msgstr "Download and install the <0>Tor Browser</0> from the official Tor Project website."
 
-#: src/components/tax-simulator/ComparisonResults.tsx:469
+#: src/components/tax-simulator/ComparisonResults.tsx:482
 msgid "Download image"
 msgstr "Download image"
 
@@ -1225,7 +1230,7 @@ msgstr "Estimated income tax paid to provincial government"
 msgid "Estimated public service workforce"
 msgstr "Estimated public service workforce"
 
-#: src/components/tax-simulator/ComparisonResults.tsx:366
+#: src/components/tax-simulator/ComparisonResults.tsx:379
 msgid "Estimates assume employment income only and include federal and provincial income tax, the basic personal amount credit, surtaxes, health premiums, CPP/QPP, EI and QPIP. Other credits and deductions (such as RRSP contributions) aren't included. Changing brackets affects income tax only; payroll contributions stay at current rates. This shows the direct effect on individuals, not effects on government revenue or behaviour."
 msgstr "Estimates assume employment income only and include federal and provincial income tax, the basic personal amount credit, surtaxes, health premiums, CPP/QPP, EI and QPIP. Other credits and deductions (such as RRSP contributions) aren't included. Changing brackets affects income tax only; payroll contributions stay at current rates. This shows the direct effect on individuals, not effects on government revenue or behaviour."
 
@@ -1441,7 +1446,7 @@ msgstr "Federal government spending in FY 2024"
 msgid "Federal government spending isolated to FY 2024"
 msgstr "Federal government spending isolated to FY 2024"
 
-#: src/components/tax-simulator/ComparisonResults.tsx:284
+#: src/components/tax-simulator/ComparisonResults.tsx:297
 #: src/components/tax-simulator/TaxSimulator.tsx:607
 msgid "Federal income tax"
 msgstr "Federal income tax"
@@ -1858,7 +1863,7 @@ msgstr "Health Canada spent $13.7 billion in fiscal year (FY) 2024. This was 2.7
 msgid "Health Care Systems + Protection"
 msgstr "Health Care Systems + Protection"
 
-#: src/components/tax-simulator/ComparisonResults.tsx:299
+#: src/components/tax-simulator/ComparisonResults.tsx:312
 msgid "Health premium"
 msgstr "Health premium"
 
@@ -2091,13 +2096,13 @@ msgstr "In FY 2024, VAC reported total expenditures of $6.07 billion across two 
 msgid "In-depth analysis and insights about Canadian government spending, budget policies, and public finance. Our team at Canada Spends breaks down complex financial data to help you understand how government spending impacts your life."
 msgstr "In-depth analysis and insights about Canadian government spending, budget policies, and public finance. Our team at Canada Spends breaks down complex financial data to help you understand how government spending impacts your life."
 
-#: src/components/tax-simulator/ComparisonResults.tsx:220
+#: src/components/tax-simulator/ComparisonResults.tsx:233
 #: src/components/tax-simulator/TaxSimulator.tsx:899
 msgid "Income"
 msgstr "Income"
 
 #. placeholder {0}: formatWholeDollars(hovered.income)
-#: src/components/tax-simulator/TaxPaidChart.tsx:211
+#: src/components/tax-simulator/TaxPaidChart.tsx:245
 msgid "Income {0}"
 msgstr "Income {0}"
 
@@ -2310,11 +2315,11 @@ msgstr "Latest Budget News & Impact"
 msgid "Learn more about the technology at <0>globaleaks.org</0>."
 msgstr "Learn more about the technology at <0>globaleaks.org</0>."
 
-#: src/components/tax-simulator/ComparisonResults.tsx:312
+#: src/components/tax-simulator/ComparisonResults.tsx:325
 msgid "Line by line"
 msgstr "Line by line"
 
-#: src/components/tax-simulator/ComparisonResults.tsx:409
+#: src/components/tax-simulator/ComparisonResults.tsx:422
 msgid "Link copied"
 msgstr "Link copied"
 
@@ -3145,11 +3150,11 @@ msgstr "Province/Territory"
 msgid "Provincial"
 msgstr "Provincial"
 
-#: src/components/tax-simulator/ComparisonResults.tsx:289
+#: src/components/tax-simulator/ComparisonResults.tsx:302
 msgid "Provincial income tax"
 msgstr "Provincial income tax"
 
-#: src/components/tax-simulator/ComparisonResults.tsx:294
+#: src/components/tax-simulator/ComparisonResults.tsx:307
 msgid "Provincial surtax"
 msgstr "Provincial surtax"
 
@@ -3503,7 +3508,7 @@ msgstr "Share"
 msgid "Share this comparison"
 msgstr "Share this comparison"
 
-#: src/components/tax-simulator/ComparisonResults.tsx:437
+#: src/components/tax-simulator/ComparisonResults.tsx:450
 msgid "Share…"
 msgstr "Share…"
 
@@ -4007,7 +4012,7 @@ msgstr "Tools"
 #: src/components/first-nations/RemunerationTable.tsx:139
 #: src/components/first-nations/RemunerationTable.tsx:208
 #: src/components/JurisdictionComparisonChart.tsx:282
-#: src/components/tax-simulator/ComparisonResults.tsx:339
+#: src/components/tax-simulator/ComparisonResults.tsx:352
 msgid "Total"
 msgstr "Total"
 
@@ -4121,13 +4126,14 @@ msgid "Total tax at {0} income"
 msgstr "Total tax at {0} income"
 
 #. placeholder {0}: comparison.reference.label
-#: src/components/tax-simulator/ComparisonResults.tsx:211
+#: src/components/tax-simulator/ComparisonResults.tsx:224
 msgid "Total tax at different incomes, with the change compared to {0}"
 msgstr "Total tax at different incomes, with the change compared to {0}"
 
-#: src/components/tax-simulator/ComparisonResults.tsx:168
-msgid "Total tax paid (income tax, CPP/QPP, EI and premiums) by employment income. The dotted line marks the selected income."
-msgstr "Total tax paid (income tax, CPP/QPP, EI and premiums) by employment income. The dotted line marks the selected income."
+#. placeholder {0}: comparison.reference.label
+#: src/components/tax-simulator/ComparisonResults.tsx:179
+msgid "Total tax paid (income tax, CPP/QPP, EI and premiums) by employment income, and how much more or less each plan charges than {0}. The dotted line marks the selected income."
+msgstr "Total tax paid (income tax, CPP/QPP, EI and premiums) by employment income, and how much more or less each plan charges than {0}. The dotted line marks the selected income."
 
 #: src/app/[lang]/(main)/tax-visualizer/page.tsx:350
 msgid "Total Taxable Income"
@@ -4555,7 +4561,7 @@ msgstr "Who Leads Transport Canada?"
 msgid "Who Leads Veterans Affairs Canada (VAC)?"
 msgstr "Who Leads Veterans Affairs Canada (VAC)?"
 
-#: src/components/tax-simulator/ComparisonResults.tsx:208
+#: src/components/tax-simulator/ComparisonResults.tsx:221
 msgid "Who pays more, who pays less"
 msgstr "Who pays more, who pays less"
 
