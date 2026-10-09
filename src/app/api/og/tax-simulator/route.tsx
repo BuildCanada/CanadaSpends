@@ -346,33 +346,35 @@ export async function GET(request: Request) {
 
   // Title size and estimated line count (Söhne is about 0.52em per char)
   const titleSize = title.length > 60 ? 38 : title.length > 40 ? 44 : 52;
+  const LOGO_W = 156;
+  const TITLE_W = CONTENT_W - LOGO_W - 40;
   const titleLines = Math.min(
     2,
-    Math.ceil((title.length * titleSize * 0.52) / CONTENT_W),
+    Math.ceil((title.length * titleSize * 0.52) / TITLE_W),
   );
 
-  const sameJurisdiction = plans.every(
-    (p) =>
-      p.plan.province === plans[0].plan.province &&
-      p.plan.year === plans[0].plan.year,
-  );
-  const context = sameJurisdiction
-    ? `${PROVINCE_NAMES[plans[0].plan.province] ?? plans[0].plan.province} · ${plans[0].plan.year}`
-    : `${plans.length} plans compared`;
+  // "Someone earning $400,000 in British Columbia would pay…" (the
+  // province is left out when plans span several provinces)
+  const provinces = new Set(plans.map((p) => p.plan.province));
+  const where =
+    provinces.size === 1
+      ? ` in ${PROVINCE_NAMES[plans[0].plan.province] ?? plans[0].plan.province}`
+      : "";
+  const subtitle = `Someone earning ${formatWholeDollars(scenario.income)}${where} would pay…`;
 
   // Fit the chart into the space left below the header, title and stats
-  const HEADER_H = 48;
-  const TITLE_H = titleLines * titleSize * 1.05;
+  const TITLE_H = Math.max(48, titleLines * titleSize * 1.05);
+  const SUBTITLE_H = 32;
   const STATS_H = 96;
   const FOOTER_H = 20;
-  const GAPS = 20 + 18 + 16 + 14;
+  const GAPS = 8 + 18 + 16 + 14;
   const CHART_HEADER_H = 30;
   const chartCardH =
     HEIGHT -
     PAD.top -
     PAD.bottom -
-    HEADER_H -
     TITLE_H -
+    SUBTITLE_H -
     STATS_H -
     FOOTER_H -
     GAPS;
@@ -396,36 +398,46 @@ export async function GET(request: Request) {
           color: COLORS.foreground,
         }}
       >
-        {/* Header */}
+        {/* Title and subtitle, logo on the right */}
         <div
           style={{
             display: "flex",
-            alignItems: "center",
             justifyContent: "space-between",
-            height: HEADER_H,
+            alignItems: "flex-start",
+            gap: 40,
           }}
         >
-          <div style={{ display: "flex", fontSize: 24, color: COLORS.muted }}>
-            {`${formatWholeDollars(scenario.income)} income · ${context}`}
+          <div
+            style={{ display: "flex", flexDirection: "column", width: TITLE_W }}
+          >
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                fontFamily: "Display",
+                fontSize: titleSize,
+                lineHeight: 1.05,
+                letterSpacing: -1,
+                height: TITLE_H,
+                overflow: "hidden",
+              }}
+            >
+              {title}
+            </div>
+            <div
+              style={{
+                display: "flex",
+                marginTop: 8,
+                height: SUBTITLE_H,
+                fontSize: 26,
+                color: COLORS.muted,
+              }}
+            >
+              {subtitle}
+            </div>
           </div>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={logo} width={156} height={48} alt="" />
-        </div>
-
-        {/* Title */}
-        <div
-          style={{
-            display: "flex",
-            marginTop: 20,
-            fontFamily: "Display",
-            fontSize: titleSize,
-            lineHeight: 1.05,
-            letterSpacing: -1,
-            height: TITLE_H,
-            overflow: "hidden",
-          }}
-        >
-          {title}
+          <img src={logo} width={LOGO_W} height={48} alt="" />
         </div>
 
         {/* Plan totals */}
