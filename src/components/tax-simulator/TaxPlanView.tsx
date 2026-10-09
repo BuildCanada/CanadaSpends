@@ -6,13 +6,10 @@ import { Trans, useLingui } from "@lingui/react/macro";
 import { PageContent, Section } from "@/components/Layout";
 import {
   compareScenario,
-  effectivePlan,
   formatWholeDollars,
   MAX_SCENARIO_INCOME,
   planHasChanges,
-  provinceName as localProvinceName,
   toScenarioLang,
-  rateToPercent,
   scenarioTitle,
   serializeScenario,
   type TaxScenario,
@@ -28,52 +25,7 @@ import {
   ShareActions,
 } from "./ComparisonResults";
 import { NumberField } from "./NumberField";
-import { planColor } from "./planColors";
-
-/** A plan's changes from current law, in words, for the read-only page. */
-function usePlanChanges() {
-  const { t, i18n } = useLingui();
-  const lang = toScenarioLang(i18n.locale);
-  return (rawPlan: TaxScenario["plans"][number]) => {
-    // Only overrides that differ from current law (e.g. a surtax toggle in a
-    // province without a surtax isn't a change)
-    const plan = effectivePlan(rawPlan);
-    const changes: string[] = [];
-    const pct = (rate: number) => `${rateToPercent(rate)}%`;
-    const describeBrackets = (b: { min: number; rate: number }[]) =>
-      b
-        .map((x, i) =>
-          i === 0
-            ? pct(x.rate)
-            : t`${pct(x.rate)} over ${formatWholeDollars(x.min)}`,
-        )
-        .join(", ");
-    const provinceName = localProvinceName(plan.province, lang);
-    if (plan.federalBrackets) {
-      changes.push(
-        t`Federal brackets: ${describeBrackets(plan.federalBrackets)}`,
-      );
-    }
-    if (plan.federalBpa !== null) {
-      changes.push(
-        t`Federal basic personal amount: ${formatWholeDollars(plan.federalBpa)}`,
-      );
-    }
-    if (plan.provincialBrackets) {
-      changes.push(
-        t`${provinceName} brackets: ${describeBrackets(plan.provincialBrackets)}`,
-      );
-    }
-    if (plan.provincialBpa !== null) {
-      changes.push(
-        t`${provinceName} basic personal amount: ${formatWholeDollars(plan.provincialBpa)}`,
-      );
-    }
-    if (plan.removeSurtax) changes.push(t`No provincial surtax`);
-    if (plan.removeHealthPremium) changes.push(t`No health premium`);
-    return changes;
-  };
-}
+import { PlanChanges } from "./PlanChanges";
 
 /**
  * Read-only page for a shared comparison. Everything comes from the URL;
@@ -106,7 +58,6 @@ export function TaxPlanView({
       window.history.replaceState(null, "", url);
     }
   }, [scenario]);
-  const describeChanges = usePlanChanges();
   if (!comparison) return null;
 
   const query = serializeScenario(scenario).toString();
@@ -202,44 +153,7 @@ export function TaxPlanView({
           <h2 className="font-bold text-lg mb-4">
             <Trans>What each plan changes</Trans>
           </h2>
-          <ul className="space-y-4">
-            {comparison.plans.map((p, i) => {
-              const changes = describeChanges(p.plan);
-              const provinceName = localProvinceName(p.plan.province, lang);
-              return (
-                <li key={i} className="flex gap-3">
-                  <span
-                    aria-hidden
-                    className="mt-1.5 inline-block size-2.5 shrink-0 rounded-full"
-                    style={{ background: planColor(i) }}
-                  />
-                  <div>
-                    <div className="font-medium">{p.label}</div>
-                    {changes.length === 0 ? (
-                      <div className="text-sm text-foreground/60">
-                        <Trans>
-                          {provinceName} {p.plan.year} law, unchanged
-                        </Trans>
-                      </div>
-                    ) : (
-                      <>
-                        <div className="text-sm text-foreground/60">
-                          <Trans>
-                            {provinceName} {p.plan.year} law with these changes:
-                          </Trans>
-                        </div>
-                        <ul className="mt-1 list-disc pl-5 text-sm text-foreground/80 space-y-0.5">
-                          {changes.map((c) => (
-                            <li key={c}>{c}</li>
-                          ))}
-                        </ul>
-                      </>
-                    )}
-                  </div>
-                </li>
-              );
-            })}
-          </ul>
+          <PlanChanges plans={comparison.plans} />
         </div>
       </Section>
 

@@ -88,12 +88,6 @@ msgstr "{0} est une Première Nation{1}."
 msgid "{0} of federal income tax"
 msgstr "{0} de l'impôt fédéral sur le revenu"
 
-#. placeholder {0}: pct(x.rate)
-#. placeholder {1}: formatWholeDollars(x.min)
-#: src/components/tax-simulator/TaxPlanView.tsx:48
-msgid "{0} over {1}"
-msgstr "{0} au-delà de {1}"
-
 #. placeholder {0}: jurisdiction.name
 #. placeholder {1}: jurisdiction.financialYear
 #: src/components/JurisdictionPageContent.tsx:357
@@ -136,34 +130,19 @@ msgstr "{paragraph}"
 msgid "{provinceName} {0} law"
 msgstr "{provinceName}, règles de {0}"
 
-#. placeholder {0}: p.plan.year
-#: src/components/tax-simulator/TaxPlanView.tsx:227
-msgid "{provinceName} {0} law with these changes:"
-msgstr "{provinceName}, règles de {0}, avec ces changements :"
-
-#. placeholder {0}: p.plan.year
-#: src/components/tax-simulator/TaxPlanView.tsx:220
-msgid "{provinceName} {0} law, unchanged"
-msgstr "{provinceName}, règles de {0}, sans changement"
-
 #: src/components/tax-simulator/ComparisonResults.tsx:74
 msgid "{provinceName} {year} law"
 msgstr "{provinceName}, règles de {year}"
+
+#: src/components/tax-simulator/PlanChanges.tsx:225
+msgid "{provinceName} {year} law, unchanged"
+msgstr "{provinceName}, règles de {year}, sans changement"
 
 #: src/components/tax-simulator/ComparisonResults.tsx:70
 msgid "{provinceName} {year}, modified"
 msgstr "{provinceName}, règles de {year} modifiées"
 
-#. placeholder {0}: formatWholeDollars(plan.provincialBpa)
-#: src/components/tax-simulator/TaxPlanView.tsx:69
-msgid "{provinceName} basic personal amount: {0}"
-msgstr "Montant personnel de base ({provinceName}) : {0}"
-
-#. placeholder {0}: describeBrackets(plan.provincialBrackets)
-#: src/components/tax-simulator/TaxPlanView.tsx:64
-msgid "{provinceName} brackets: {0}"
-msgstr "Tranches d'imposition ({provinceName}) : {0}"
-
+#: src/components/tax-simulator/PlanChanges.tsx:247
 #: src/components/tax-simulator/TaxSimulator.tsx:476
 msgid "{provinceName} income tax"
 msgstr "Impôt sur le revenu ({provinceName})"
@@ -181,7 +160,7 @@ msgstr "Total de {provinceName}"
 msgid "{title} basic personal amount"
 msgstr "Montant personnel de base – {title}"
 
-#: src/components/tax-simulator/TaxPlanView.tsx:264
+#: src/components/tax-simulator/TaxPlanView.tsx:178
 #: src/components/tax-simulator/TaxSimulator.tsx:619
 msgid "{title}: see how it would change your taxes"
 msgstr "{title} : voyez l'effet sur vos impôts"
@@ -483,6 +462,10 @@ msgstr "ID de la demande"
 msgid "Applied to provincial tax of {0}"
 msgstr "Appliqué à l'impôt provincial de {0}"
 
+#: src/components/tax-simulator/PlanChanges.tsx:193
+msgid "Applies"
+msgstr "S'applique"
+
 #: src/app/[lang]/(main)/about/faq.tsx:109
 msgid "Are you DOGE?"
 msgstr "Êtes-vous DOGE?"
@@ -556,6 +539,7 @@ msgstr "Basé sur les données"
 msgid "Based on income of {0}"
 msgstr "Basé sur un revenu de {0}"
 
+#: src/components/tax-simulator/PlanChanges.tsx:184
 #: src/components/tax-simulator/TaxSimulator.tsx:204
 msgid "Basic personal amount"
 msgstr "Montant personnel de base"
@@ -615,7 +599,7 @@ msgstr "Impact budgétaire"
 msgid "Budget Statistics (Projected FY 2025)"
 msgstr "Statistiques budgétaires (exercice 2025 projeté)"
 
-#: src/components/tax-simulator/TaxPlanView.tsx:148
+#: src/components/tax-simulator/TaxPlanView.tsx:99
 msgid "Build your own"
 msgstr "Créer le vôtre"
 
@@ -738,6 +722,10 @@ msgstr "Écart par rapport à {0}"
 msgid "Changes to {provinceName} {0} law"
 msgstr "Changements aux règles de {0} ({provinceName})"
 
+#: src/components/tax-simulator/PlanChanges.tsx:232
+msgid "Changes to {provinceName} {year} law"
+msgstr "Changements aux règles de {year} ({provinceName})"
+
 #: src/components/first-nations/RemunerationOverview.tsx:401
 msgid "Chief"
 msgstr "Chef"
@@ -816,7 +804,7 @@ msgid "Compared with its current law for {SCENARIO_YEAR}"
 msgstr "Comparé à ses règles actuelles de {SCENARIO_YEAR}"
 
 #. placeholder {0}: comparison.plans.length
-#: src/components/tax-simulator/TaxPlanView.tsx:131
+#: src/components/tax-simulator/TaxPlanView.tsx:82
 msgid "Comparing {0} sets of tax rules for employment income"
 msgstr "Comparaison de {0} ensembles de règles fiscales pour un revenu d'emploi"
 
@@ -926,6 +914,10 @@ msgstr "Relations Couronne-Autochtones"
 #: src/components/Sankey/index.tsx:254
 msgid "CSIS"
 msgstr "SCRS"
+
+#: src/components/tax-simulator/PlanChanges.tsx:96
+msgid "Current"
+msgstr "Actuel"
 
 #. placeholder {0}: formatWholeDollars(baselineBpa)
 #: src/components/tax-simulator/TaxSimulator.tsx:207
@@ -1100,7 +1092,7 @@ msgstr "Économie + Infrastructure"
 msgid "Economy and Standard of Living"
 msgstr "Économie et niveau de vie"
 
-#: src/components/tax-simulator/TaxPlanView.tsx:142
+#: src/components/tax-simulator/TaxPlanView.tsx:93
 msgid "Edit a copy"
 msgstr "Modifier une copie"
 
@@ -1118,6 +1110,10 @@ msgstr "Taux d'imposition effectif"
 #: src/components/tax-simulator/TaxSimulator.tsx:503
 msgid "Eliminate the {0}"
 msgstr "Éliminer : {0}"
+
+#: src/components/tax-simulator/PlanChanges.tsx:194
+msgid "Eliminated"
+msgstr "Éliminée"
 
 #: src/app/[lang]/(main)/contact/page.tsx:44
 msgid "Email us at <0>hi@buildcanada.com</0> or connect with us on X <1>@canada_spends</1> and we'll get back to you as soon as we can."
@@ -1161,7 +1157,7 @@ msgstr "Taxes sur l'énergie"
 msgid "Enter your income to see a personalized breakdown of how much you contribute to different government services and programs."
 msgstr "Entrez votre revenu pour voir une répartition personnalisée de votre contribution aux différents services et programmes gouvernementaux."
 
-#: src/components/tax-simulator/TaxPlanView.tsx:172
+#: src/components/tax-simulator/TaxPlanView.tsx:123
 msgid "Enter your income to see what each plan would mean for you."
 msgstr "Entrez votre revenu pour voir l'effet de chaque scénario sur vous."
 
@@ -1372,16 +1368,6 @@ msgstr "Articles en vedette"
 msgid "Federal"
 msgstr "Fédéral"
 
-#. placeholder {0}: formatWholeDollars(plan.federalBpa)
-#: src/components/tax-simulator/TaxPlanView.tsx:59
-msgid "Federal basic personal amount: {0}"
-msgstr "Montant personnel de base fédéral : {0}"
-
-#. placeholder {0}: describeBrackets(plan.federalBrackets)
-#: src/components/tax-simulator/TaxPlanView.tsx:54
-msgid "Federal brackets: {0}"
-msgstr "Tranches fédérales : {0}"
-
 #: src/app/[lang]/(main)/federal/budget/layout.tsx:16
 msgid "Federal Budget 2025 | Canada Spends"
 msgstr "Budget fédéral 2025 | Canada Spends"
@@ -1450,6 +1436,7 @@ msgid "Federal government spending isolated to FY 2024"
 msgstr "Dépenses du gouvernement fédéral isolées pour l'exercice 2024"
 
 #: src/components/tax-simulator/ComparisonResults.tsx:309
+#: src/components/tax-simulator/PlanChanges.tsx:239
 #: src/components/tax-simulator/TaxSimulator.tsx:464
 msgid "Federal income tax"
 msgstr "Impôt fédéral sur le revenu"
@@ -1866,6 +1853,7 @@ msgid "Health Care Systems + Protection"
 msgstr "Systèmes de soins de santé + Protection"
 
 #: src/components/tax-simulator/ComparisonResults.tsx:324
+#: src/components/tax-simulator/PlanChanges.tsx:202
 msgid "Health premium"
 msgstr "Contribution santé"
 
@@ -2099,7 +2087,7 @@ msgid "In-depth analysis and insights about Canadian government spending, budget
 msgstr "Analyse approfondie et perspectives sur les dépenses gouvernementales canadiennes, les politiques budgétaires et les finances publiques. Notre équipe à Canada Spends décompose les données financières complexes pour vous aider à comprendre comment les dépenses gouvernementales affectent votre vie."
 
 #: src/components/tax-simulator/ComparisonResults.tsx:245
-#: src/components/tax-simulator/TaxPlanView.tsx:156
+#: src/components/tax-simulator/TaxPlanView.tsx:107
 #: src/components/tax-simulator/TaxSimulator.tsx:795
 msgid "Income"
 msgstr "Revenu"
@@ -2580,10 +2568,6 @@ msgstr "Aucune Première Nation trouvée correspondant à votre recherche."
 msgid "No form of electronic communication can be made 100% secure. While we take every precaution to protect your identity, you use this service at your own risk. We encourage you to take the security precautions outlined above."
 msgstr "Aucune forme de communication électronique ne peut être rendue 100% sécurisée. Bien que nous prenions toutes les précautions pour protéger votre identité, vous utilisez ce service à vos propres risques. Nous vous encourageons à prendre les précautions de sécurité décrites ci-dessus."
 
-#: src/components/tax-simulator/TaxPlanView.tsx:73
-msgid "No health premium"
-msgstr "Aucune contribution santé"
-
 #: src/components/first-nations/RemunerationOverview.tsx:664
 #: src/components/first-nations/RemunerationOverview.tsx:836
 msgid "No individual entries available."
@@ -2592,10 +2576,6 @@ msgstr "Aucune entrée individuelle disponible."
 #: src/components/first-nations/FirstNationsNotes.tsx:20
 msgid "No notes available."
 msgstr "Aucune note disponible."
-
-#: src/components/tax-simulator/TaxPlanView.tsx:72
-msgid "No provincial surtax"
-msgstr "Aucune surtaxe provinciale"
 
 #: src/components/first-nations/RemunerationTable.tsx:60
 msgid "No remuneration data available."
@@ -2811,7 +2791,7 @@ msgstr "Ouvrez le navigateur Tor et attendez qu'il se connecte."
 msgid "Operational Spend"
 msgstr "Dépenses opérationnelles"
 
-#: src/components/tax-simulator/TaxPlanView.tsx:258
+#: src/components/tax-simulator/TaxPlanView.tsx:172
 msgid "Or edit a copy to make your own version."
 msgstr "Ou modifiez une copie pour créer votre propre version."
 
@@ -2950,6 +2930,11 @@ msgstr "Notre gouvernement devra faire des choix difficiles concernant les dépe
 #: src/components/Sankey/index.tsx:643
 msgid "Out of Court Settlement"
 msgstr "Règlement hors cour"
+
+#. placeholder {0}: formatWholeDollars(from)
+#: src/components/tax-simulator/PlanChanges.tsx:58
+msgid "Over {0}"
+msgstr "Plus de {0}"
 
 #: src/components/MainLayout/_components/DesktopNav.tsx:202
 #: src/components/MainLayout/_components/MobileMenu.tsx:155
@@ -3135,6 +3120,10 @@ msgstr "Proposez des changements aux règles fiscales d'une province et comparez
 msgid "Propose changes to a province's tax rules, compare them with current law and other provinces, and share the result."
 msgstr "Proposez des changements aux règles fiscales d'une province, comparez-les aux règles actuelles et à d'autres provinces, puis partagez le résultat."
 
+#: src/components/tax-simulator/PlanChanges.tsx:99
+msgid "Proposed"
+msgstr "Proposé"
+
 #: src/components/tax-simulator/TaxSimulator.tsx:574
 msgid "Proposed change"
 msgstr "Changement proposé"
@@ -3166,6 +3155,7 @@ msgid "Provincial income tax"
 msgstr "Impôt provincial sur le revenu"
 
 #: src/components/tax-simulator/ComparisonResults.tsx:319
+#: src/components/tax-simulator/PlanChanges.tsx:201
 msgid "Provincial surtax"
 msgstr "Surtaxe provinciale"
 
@@ -3381,7 +3371,7 @@ msgstr "Recherche"
 msgid "Research Subject"
 msgstr "Sujet de recherche"
 
-#: src/components/tax-simulator/TaxPlanView.tsx:186
+#: src/components/tax-simulator/TaxPlanView.tsx:137
 #: src/components/tax-simulator/TaxSimulator.tsx:132
 msgid "Reset"
 msgstr "Réinitialiser"
@@ -3512,7 +3502,7 @@ msgstr "Aide à l'établissement"
 msgid "Share"
 msgstr "Partager"
 
-#: src/components/tax-simulator/TaxPlanView.tsx:255
+#: src/components/tax-simulator/TaxPlanView.tsx:169
 msgid "Share this comparison"
 msgstr "Partager cette comparaison"
 
@@ -3542,7 +3532,7 @@ msgid "Showing {0} of {1} results"
 msgstr "Affichage de {0} sur {1} résultats"
 
 #. placeholder {0}: formatWholeDollars(sharedScenario.income)
-#: src/components/tax-simulator/TaxPlanView.tsx:177
+#: src/components/tax-simulator/TaxPlanView.tsx:128
 msgid "Showing your income. This comparison was shared at {0}."
 msgstr "Résultats pour votre revenu. Cette comparaison a été partagée pour un revenu de {0}."
 
@@ -3749,7 +3739,7 @@ msgstr "Tranche d'imposition"
 msgid "Tax calculations are based on {year} federal and provincial tax brackets."
 msgstr "Les calculs d'impôt sont basés sur les tranches d'imposition fédérales et provinciales de {year}."
 
-#: src/components/tax-simulator/TaxPlanView.tsx:122
+#: src/components/tax-simulator/TaxPlanView.tsx:73
 msgid "Tax changes entered by a Canada Spends Tax Simulator user. Canada Spends calculated the results but did not create or endorse them."
 msgstr "Changements saisis par un utilisateur du Simulateur d'impôt de Canada Spends. Canada Spends a calculé les résultats, sans les créer ni les approuver."
 
@@ -3782,6 +3772,7 @@ msgid "Tax Year"
 msgstr "Année d'imposition"
 
 #: src/app/[lang]/(main)/tax-visualizer/page.tsx:378
+#: src/components/tax-simulator/PlanChanges.tsx:93
 msgid "Taxable income"
 msgstr "Revenu imposable"
 
@@ -4465,7 +4456,7 @@ msgstr "Quelles sont les idées principales?"
 msgid "What data sources were used?"
 msgstr "Quelles sources de données ont été utilisées?"
 
-#: src/components/tax-simulator/TaxPlanView.tsx:203
+#: src/components/tax-simulator/TaxPlanView.tsx:154
 msgid "What each plan changes"
 msgstr "Ce que change chaque scénario"
 
@@ -4598,7 +4589,7 @@ msgstr "Vous pouvez accéder à notre plateforme de dénonciation directement vi
 msgid "You deserve the facts"
 msgstr "Vous méritez les faits"
 
-#: src/components/tax-simulator/TaxPlanView.tsx:160
+#: src/components/tax-simulator/TaxPlanView.tsx:111
 msgid "Your annual employment income"
 msgstr "Votre revenu d'emploi annuel"
 

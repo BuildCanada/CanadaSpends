@@ -102,11 +102,19 @@ export const SCENARIO_TEXT = {
   },
 } as const;
 
-/** A percentage with one decimal: "41.3%" or, in French, "41,3 %". */
-export function formatRate(rate: number, lang: ScenarioLang = "en"): string {
+/**
+ * A percentage: "41.3%" or, in French, "41,3 %". One decimal by default;
+ * pass `exact` for statutory rates like 12.29% (up to three decimals, no
+ * trailing zeros).
+ */
+export function formatRate(
+  rate: number,
+  lang: ScenarioLang = "en",
+  exact = false,
+): string {
   const n = new Intl.NumberFormat(lang === "fr" ? "fr-CA" : "en-CA", {
-    minimumFractionDigits: 1,
-    maximumFractionDigits: 1,
+    minimumFractionDigits: exact ? 0 : 1,
+    maximumFractionDigits: exact ? 3 : 1,
   }).format(rate);
   return lang === "fr" ? `${n}\u00a0%` : `${n}%`;
 }
