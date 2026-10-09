@@ -355,14 +355,14 @@ export async function GET(request: Request) {
     Math.ceil((title.length * titleSize * 0.52) / TITLE_W),
   );
 
-  // "Someone earning $400,000 in British Columbia would pay…" (the
+  // "A person earning $400,000 in British Columbia would pay…" (the
   // province is left out when plans span several provinces)
   const provinces = new Set(plans.map((p) => p.plan.province));
   const where =
     provinces.size === 1
       ? ` in ${PROVINCE_NAMES[plans[0].plan.province] ?? plans[0].plan.province}`
       : "";
-  const subtitle = `Someone earning ${formatWholeDollars(scenario.income)}${where} would pay…`;
+  const subtitle = `A person earning ${formatWholeDollars(scenario.income)}${where} would pay…`;
 
   // Fit the chart into the space left below the header, title and stats
   const TITLE_H = Math.max(48, titleLines * titleSize * 1.05);
@@ -500,8 +500,8 @@ export async function GET(request: Request) {
             color: COLORS.muted,
           }}
         >
-          Made by a person using the Canada Spends tax simulator. Not endorsed
-          by Canada Spends.
+          Made by someone using the Canada Spends Tax Simulator. Not endorsed by
+          Canada Spends.
         </div>
       </div>
     ),
