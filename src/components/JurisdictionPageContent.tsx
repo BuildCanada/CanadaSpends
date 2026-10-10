@@ -499,6 +499,37 @@ export function JurisdictionPageContent({
             ))}
           </Section>
         )}
+        {jurisdiction.methodology && (
+        <Section>
+          <H2>
+            <Trans>Notes</Trans>
+          </H2>
+          <P>
+            <Trans>
+              Certain government transfers, both federal and provincial, 
+              are locked and exclusively used for target projects, i.e. 
+              Gardiner and DVP construction. Details: {" "}
+              <ExternalLink href="https://news.ontario.ca/en/release/1003888/ontario-and-toronto-reach-a-new-deal">
+                <Trans>
+                  Deal Between Ontario and Toronto
+                </Trans>
+              </ExternalLink>
+            </Trans>
+          </P>
+          <P>
+            <Trans>
+              Certain city revenues are collected into city's reserve funds 
+              for specific city operation expenses. Examples are Toronto Parking 
+              Authority and Toronto Hydro. Details: {" "}
+              <ExternalLink href="https://www.toronto.ca/legdocs/mmis/2025/ex/bgrd/backgroundfile-260557.pdf">
+                <Trans>
+                  Obligatory Reserve Funds and Reserves
+                </Trans>
+              </ExternalLink>
+            </Trans>
+          </P>
+        </Section>
+        )}
         <Section>
           <H2>
             <Trans>Sources</Trans>
