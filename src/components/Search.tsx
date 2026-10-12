@@ -11,7 +11,8 @@ import {
 /* @ts-ignore CSS doesn't export types */
 import "./search.css"; // Make sure this path is correct
 import TypesenseInstantSearchAdapter from "typesense-instantsearch-adapter";
-import { useMemo, useState, useCallback } from "react"; // Ensure useCallback and useState are imported
+import { useMemo, useState, useCallback, useEffect } from "react"; // Ensure useCallback and useState are imported
+import { usePostHog } from "posthog-js/react";
 import { Share } from "lucide-react"; // Added Download and Share icons
 import { cn } from "@/lib/utils"; // Adjust path if necessary
 import { Button } from "@/components/button"; // Adjust path if necessary
@@ -45,6 +46,8 @@ const typesenseAdapter = new TypesenseInstantSearchAdapter({
       { host: "search.canadasbuilding.com", port: 443, protocol: "https" },
     ],
     cacheSearchResultsForSeconds: 120,
+    numRetries: 3,
+    retryIntervalSeconds: 1,
   },
   additionalSearchParameters: {
     query_by: "recipient,program,description",
@@ -56,7 +59,20 @@ export const mainIndexName = "records";
 
 // --- SearchControls Component ---
 function SearchControls() {
-  const { results, indexUiState, setIndexUiState } = useInstantSearch();
+  const { results, indexUiState, setIndexUiState, error, refresh } =
+    useInstantSearch({ catchError: true });
+  const posthog = usePostHog();
+
+  useEffect(() => {
+    if (error) {
+      posthog?.captureException(error);
+    }
+  }, [error, posthog]);
+
+  const handleRetry = useCallback(() => {
+    posthog?.capture("search_retry_clicked");
+    refresh();
+  }, [posthog, refresh]);
 
   const hasFilters = useMemo(() => {
     const refinements = indexUiState.refinementList || {};
@@ -258,6 +274,17 @@ function SearchControls() {
 
       <div className="px-4">
         <div className="flex flex-col gap-2 mt-4">
+          {error && (
+            <div
+              role="alert"
+              className="flex flex-wrap items-center justify-between gap-2 rounded-md border border-charcoal bg-linen px-4 py-3"
+            >
+              <span>Search is unavailable right now.</span>
+              <Button variant="outline" size="sm" onClick={handleRetry}>
+                Retry
+              </Button>
+            </div>
+          )}
           {indexUiState.query || hasFilters ? (
             <>
               {/* --- Results Header Area --- */}
