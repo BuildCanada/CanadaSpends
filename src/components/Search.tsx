@@ -48,7 +48,6 @@ const typesenseAdapter = new TypesenseInstantSearchAdapter({
     cacheSearchResultsForSeconds: 120,
     numRetries: 3,
     retryIntervalSeconds: 1,
-    connectionTimeoutSeconds: 10,
   },
   additionalSearchParameters: {
     query_by: "recipient,program,description",
